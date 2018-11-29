@@ -1,0 +1,1066 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "XCBuildTests"
+provides-nominal:
+- "12XCBuildTestsAAC"
+- "12XCBuildTestsAAC11CredentialsV"
+provides-member:
+- ["12XCBuildTestsAAC", ""]
+- ["12XCBuildTestsAAC11CredentialsV", ""]
+provides-dynamic-lookup:
+- "fixturesDir"
+- "invokeTest"
+- "testArchive_and_Export_using_file_plist"
+- "testArchive_and_Export_using_object_plist"
+- "test_test_action"
+depends-top-level:
+- !private "+"
+- !private "+="
+- !private "=="
+- !private "??"
+- !private "Altool"
+- !private "ArchiveOptions"
+- !private "Array"
+- "AssignmentPrecedence"
+- "CastingPrecedence"
+- !private "Data"
+- !private "Decoder"
+- !private "DecoderMock"
+- !private "Deliver"
+- !private "DestinationProtocolMock"
+- !private "ExportArchiveOptions"
+- !private "ExportArchiveOptionsProtocolMock"
+- !private "ExportOptions"
+- !private "FileProtocolMock"
+- "FileSystemProtocolMock"
+- !private "FloatLiteralType"
+- !private "Folder"
+- !private "FolderProtocolMock"
+- !private "Int"
+- !private "IntegerLiteralType"
+- !private "Keychain"
+- "LocalSystem"
+- !private "ProcessInfo"
+- !private "PropertyListSerialization"
+- "String"
+- "StringLiteralType"
+- !private "SystemExecutableProvider"
+- !private "TestOptionsProtocolMock"
+- "URL"
+- !private "XCBuild"
+- "XCBuildTests"
+- !private "XCTFail"
+- "XCTestCase"
+- !private "print"
+depends-member:
+- !private ["7Deliver6AltoolC", "init"]
+- !private ["7XCBuild14ArchiveOptionsV", "init"]
+- !private ["7XCBuild22ArchiveOptionsProtocolP", "init"]
+- !private ["4Task26ArgumentExecutableProtocolP", "destination"]
+- !private ["4Task26ArgumentExecutableProtocolP", "init"]
+- !private ["4Task26ArgumentExecutableProtocolP", "project"]
+- !private ["4Task26ArgumentExecutableProtocolP", "scheme"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "CodingKeys"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "Local"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "Options"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "archive"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "buildAndTest"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "export"]
+- ["21SourceryAutoProtocols0B16GenerateProtocolP", "init"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "now"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "password"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "searchedUrls"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "CodingKeys"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "archive"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "buildAndTest"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "destination"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "export"]
+- ["21SourceryAutoProtocols0B8MockableP", "init"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "ipa"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "now"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "password"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "project"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "scheme"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "searchedUrls"]
+- ["SK", "init"]
+- ["SK", "init"]
+- !private ["SK", "write"]
+- !private ["Sz", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "Altool"]
+- !private ["s7CVarArgP", "ArchiveOptions"]
+- ["s7CVarArgP", "Credentials"]
+- !private ["s7CVarArgP", "Data"]
+- !private ["s7CVarArgP", "DecoderMock"]
+- !private ["s7CVarArgP", "Deliver"]
+- !private ["s7CVarArgP", "DestinationProtocolMock"]
+- !private ["s7CVarArgP", "ExportArchiveOptions"]
+- !private ["s7CVarArgP", "ExportArchiveOptionsProtocolMock"]
+- !private ["s7CVarArgP", "ExportOptions"]
+- !private ["s7CVarArgP", "FileProtocolMock"]
+- ["s7CVarArgP", "FileSystemProtocolMock"]
+- !private ["s7CVarArgP", "Folder"]
+- !private ["s7CVarArgP", "FolderProtocolMock"]
+- !private ["s7CVarArgP", "Int"]
+- !private ["s7CVarArgP", "Keychain"]
+- ["s7CVarArgP", "LocalSystem"]
+- !private ["s7CVarArgP", "ProcessInfo"]
+- !private ["s7CVarArgP", "PropertyListSerialization"]
+- !private ["s7CVarArgP", "String"]
+- !private ["s7CVarArgP", "SystemExecutableProvider"]
+- !private ["s7CVarArgP", "TestOptionsProtocolMock"]
+- ["s7CVarArgP", "URL"]
+- !private ["s7CVarArgP", "XCBuild"]
+- !private ["s7CVarArgP", "XCTFail"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "credentials"]
+- !private ["s7CVarArgP", "data"]
+- !private ["s7CVarArgP", "environment"]
+- !private ["s7CVarArgP", "fixturesDir"]
+- !private ["s7CVarArgP", "fs"]
+- !private ["s7CVarArgP", "incrementBuildNumber"]
+- ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "invocation"]
+- !private ["s7CVarArgP", "invokeTest"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "processInfo"]
+- !private ["s7CVarArgP", "propertyList"]
+- !private ["s7CVarArgP", "retrieveCredentials"]
+- !private ["s7CVarArgP", "selector"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "system"]
+- ["Sl", "init"]
+- ["Sl", "init"]
+- !private ["Sl", "subscript"]
+- !private ["Sl", "write"]
+- ["SL", "init"]
+- ["SL", "init"]
+- ["12XCBuildTestsAAC11CredentialsV", "String"]
+- ["12XCBuildTestsAAC11CredentialsV", "init"]
+- ["12XCBuildTestsAAC11CredentialsV", "password"]
+- ["12XCBuildTestsAAC11CredentialsV", "username"]
+- !private ["s28CustomDebugStringConvertibleP", "Altool"]
+- !private ["s28CustomDebugStringConvertibleP", "ArchiveOptions"]
+- ["s28CustomDebugStringConvertibleP", "Credentials"]
+- !private ["s28CustomDebugStringConvertibleP", "Data"]
+- !private ["s28CustomDebugStringConvertibleP", "DecoderMock"]
+- !private ["s28CustomDebugStringConvertibleP", "Deliver"]
+- !private ["s28CustomDebugStringConvertibleP", "DestinationProtocolMock"]
+- !private ["s28CustomDebugStringConvertibleP", "ExportArchiveOptions"]
+- !private ["s28CustomDebugStringConvertibleP", "ExportArchiveOptionsProtocolMock"]
+- !private ["s28CustomDebugStringConvertibleP", "ExportOptions"]
+- !private ["s28CustomDebugStringConvertibleP", "FileProtocolMock"]
+- ["s28CustomDebugStringConvertibleP", "FileSystemProtocolMock"]
+- !private ["s28CustomDebugStringConvertibleP", "Folder"]
+- !private ["s28CustomDebugStringConvertibleP", "FolderProtocolMock"]
+- !private ["s28CustomDebugStringConvertibleP", "Int"]
+- !private ["s28CustomDebugStringConvertibleP", "Keychain"]
+- ["s28CustomDebugStringConvertibleP", "LocalSystem"]
+- !private ["s28CustomDebugStringConvertibleP", "ProcessInfo"]
+- !private ["s28CustomDebugStringConvertibleP", "PropertyListSerialization"]
+- !private ["s28CustomDebugStringConvertibleP", "String"]
+- !private ["s28CustomDebugStringConvertibleP", "SystemExecutableProvider"]
+- !private ["s28CustomDebugStringConvertibleP", "TestOptionsProtocolMock"]
+- ["s28CustomDebugStringConvertibleP", "URL"]
+- !private ["s28CustomDebugStringConvertibleP", "XCBuild"]
+- !private ["s28CustomDebugStringConvertibleP", "XCTFail"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "all"]
+- ["s28CustomDebugStringConvertibleP", "appendingPathComponent"]
+- !private ["s28CustomDebugStringConvertibleP", "credentials"]
+- !private ["s28CustomDebugStringConvertibleP", "data"]
+- ["s28CustomDebugStringConvertibleP", "deletingLastPathComponent"]
+- !private ["s28CustomDebugStringConvertibleP", "environment"]
+- !private ["s28CustomDebugStringConvertibleP", "fixturesDir"]
+- !private ["s28CustomDebugStringConvertibleP", "fs"]
+- !private ["s28CustomDebugStringConvertibleP", "incrementBuildNumber"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "invocation"]
+- !private ["s28CustomDebugStringConvertibleP", "invokeTest"]
+- !private ["s28CustomDebugStringConvertibleP", "path"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "processInfo"]
+- !private ["s28CustomDebugStringConvertibleP", "propertyList"]
+- !private ["s28CustomDebugStringConvertibleP", "retrieveCredentials"]
+- !private ["s28CustomDebugStringConvertibleP", "selector"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "system"]
+- !private ["s28CustomDebugStringConvertibleP", "write"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- ["s29CustomPlaygroundQuickLookableP", "appendingPathComponent"]
+- ["s29CustomPlaygroundQuickLookableP", "deletingLastPathComponent"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "path"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "all"]
+- !private ["s17CustomReflectableP", "description"]
+- ["s17CustomReflectableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "write"]
+- !private ["s23CustomStringConvertibleP", "Altool"]
+- !private ["s23CustomStringConvertibleP", "ArchiveOptions"]
+- ["s23CustomStringConvertibleP", "Credentials"]
+- !private ["s23CustomStringConvertibleP", "Data"]
+- !private ["s23CustomStringConvertibleP", "DecoderMock"]
+- !private ["s23CustomStringConvertibleP", "Deliver"]
+- !private ["s23CustomStringConvertibleP", "DestinationProtocolMock"]
+- !private ["s23CustomStringConvertibleP", "ExportArchiveOptions"]
+- !private ["s23CustomStringConvertibleP", "ExportArchiveOptionsProtocolMock"]
+- !private ["s23CustomStringConvertibleP", "ExportOptions"]
+- !private ["s23CustomStringConvertibleP", "FileProtocolMock"]
+- ["s23CustomStringConvertibleP", "FileSystemProtocolMock"]
+- !private ["s23CustomStringConvertibleP", "Folder"]
+- !private ["s23CustomStringConvertibleP", "FolderProtocolMock"]
+- !private ["s23CustomStringConvertibleP", "Int"]
+- !private ["s23CustomStringConvertibleP", "Keychain"]
+- ["s23CustomStringConvertibleP", "LocalSystem"]
+- !private ["s23CustomStringConvertibleP", "ProcessInfo"]
+- !private ["s23CustomStringConvertibleP", "PropertyListSerialization"]
+- !private ["s23CustomStringConvertibleP", "String"]
+- !private ["s23CustomStringConvertibleP", "SystemExecutableProvider"]
+- !private ["s23CustomStringConvertibleP", "TestOptionsProtocolMock"]
+- ["s23CustomStringConvertibleP", "URL"]
+- !private ["s23CustomStringConvertibleP", "XCBuild"]
+- !private ["s23CustomStringConvertibleP", "XCTFail"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s23CustomStringConvertibleP", "appendingPathComponent"]
+- !private ["s23CustomStringConvertibleP", "credentials"]
+- !private ["s23CustomStringConvertibleP", "data"]
+- ["s23CustomStringConvertibleP", "deletingLastPathComponent"]
+- !private ["s23CustomStringConvertibleP", "description"]
+- !private ["s23CustomStringConvertibleP", "environment"]
+- !private ["s23CustomStringConvertibleP", "fixturesDir"]
+- !private ["s23CustomStringConvertibleP", "fs"]
+- !private ["s23CustomStringConvertibleP", "incrementBuildNumber"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "invocation"]
+- !private ["s23CustomStringConvertibleP", "invokeTest"]
+- !private ["s23CustomStringConvertibleP", "path"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "processInfo"]
+- !private ["s23CustomStringConvertibleP", "propertyList"]
+- !private ["s23CustomStringConvertibleP", "retrieveCredentials"]
+- !private ["s23CustomStringConvertibleP", "selector"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "system"]
+- !private ["s23CustomStringConvertibleP", "write"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["10Foundation4DataV", "write"]
+- !private ["Se", "CodingKeys"]
+- !private ["Se", "ProvisioningProfiles"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "addProfile"]
+- !private ["Se", "all"]
+- !private ["Se", "appStore"]
+- ["Se", "appendingPathComponent"]
+- ["Se", "deletingLastPathComponent"]
+- ["Se", "init"]
+- ["Se", "init"]
+- !private ["Se", "method"]
+- !private ["Se", "path"]
+- !private ["Se", "provisioningProfiles"]
+- !private ["Se", "subscript"]
+- !private ["Se", "thinning"]
+- !private ["Se", "write"]
+- !private ["s7DecoderP", "init"]
+- !private ["7XCBuild11DecoderMockC", "init"]
+- !private ["7DeliverAAC", "Local"]
+- !private ["7DeliverAAC", "Options"]
+- !private ["7Deliver0A8ProtocolP", "init"]
+- !private ["7Deliver0A8ProtocolP", "now"]
+- !private ["7XCBuild19DestinationProtocolP", "init"]
+- !private ["13SourceryMocks23DestinationProtocolMockC", "init"]
+- !private ["SD", "subscript"]
+- !private ["SE", "CodingKeys"]
+- !private ["SE", "ProvisioningProfiles"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "addProfile"]
+- !private ["SE", "all"]
+- !private ["SE", "appStore"]
+- ["SE", "appendingPathComponent"]
+- ["SE", "deletingLastPathComponent"]
+- ["SE", "init"]
+- ["SE", "init"]
+- !private ["SE", "method"]
+- !private ["SE", "path"]
+- !private ["SE", "provisioningProfiles"]
+- !private ["SE", "subscript"]
+- !private ["SE", "thinning"]
+- !private ["SE", "write"]
+- !private ["SQ", "Altool"]
+- !private ["SQ", "ArchiveOptions"]
+- ["SQ", "Credentials"]
+- !private ["SQ", "Data"]
+- !private ["SQ", "DecoderMock"]
+- !private ["SQ", "Deliver"]
+- !private ["SQ", "DestinationProtocolMock"]
+- !private ["SQ", "ExportArchiveOptions"]
+- !private ["SQ", "ExportArchiveOptionsProtocolMock"]
+- !private ["SQ", "ExportOptions"]
+- !private ["SQ", "FileProtocolMock"]
+- ["SQ", "FileSystemProtocolMock"]
+- !private ["SQ", "Folder"]
+- !private ["SQ", "FolderProtocolMock"]
+- !private ["SQ", "Int"]
+- !private ["SQ", "Keychain"]
+- ["SQ", "LocalSystem"]
+- !private ["SQ", "ProcessInfo"]
+- !private ["SQ", "PropertyListSerialization"]
+- !private ["SQ", "String"]
+- !private ["SQ", "SystemExecutableProvider"]
+- !private ["SQ", "TestOptionsProtocolMock"]
+- ["SQ", "URL"]
+- !private ["SQ", "XCBuild"]
+- !private ["SQ", "XCTFail"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "all"]
+- !private ["SQ", "appStore"]
+- ["SQ", "appendingPathComponent"]
+- !private ["SQ", "credentials"]
+- !private ["SQ", "data"]
+- ["SQ", "deletingLastPathComponent"]
+- !private ["SQ", "description"]
+- !private ["SQ", "environment"]
+- !private ["SQ", "fixturesDir"]
+- !private ["SQ", "fs"]
+- !private ["SQ", "iOS"]
+- !private ["SQ", "incrementBuildNumber"]
+- ["SQ", "init"]
+- ["SQ", "init"]
+- !private ["SQ", "invocation"]
+- !private ["SQ", "invokeTest"]
+- !private ["SQ", "path"]
+- !private ["SQ", "print"]
+- !private ["SQ", "processInfo"]
+- !private ["SQ", "propertyList"]
+- !private ["SQ", "retrieveCredentials"]
+- !private ["SQ", "selector"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "system"]
+- !private ["SQ", "write"]
+- !private ["SQ", "xml"]
+- ["s5ErrorP", "init"]
+- ["s5ErrorP", "init"]
+- !private ["s5ErrorP", "localizedDescription"]
+- !private ["4Task18ExecutableProtocolP", "destination"]
+- !private ["4Task18ExecutableProtocolP", "init"]
+- !private ["4Task18ExecutableProtocolP", "project"]
+- !private ["4Task18ExecutableProtocolP", "scheme"]
+- !private ["4Task26ExecutableProviderProtocolP", "init"]
+- !private ["4Task26ExecutableProviderProtocolP", "searchedUrls"]
+- !private ["7XCBuild20ExportArchiveOptionsV", "CodingKeys"]
+- !private ["7XCBuild20ExportArchiveOptionsV", "init"]
+- !private ["7XCBuild28ExportArchiveOptionsProtocolP", "CodingKeys"]
+- !private ["7XCBuild28ExportArchiveOptionsProtocolP", "init"]
+- !private ["13SourceryMocks32ExportArchiveOptionsProtocolMockC", "init"]
+- !private ["7XCBuild13ExportOptionsV", "ProvisioningProfiles"]
+- !private ["7XCBuild13ExportOptionsV", "init"]
+- !private ["7XCBuild13ExportOptionsV", "method"]
+- !private ["7XCBuild13ExportOptionsV", "provisioningProfiles"]
+- !private ["7XCBuild13ExportOptionsV", "thinning"]
+- !private ["7XCBuild14ExportProtocolP", "ipa"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "description"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "all"]
+- !private ["s26ExpressibleByStringLiteralP", "description"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "description"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["5ZFile12FileProtocolP", "init"]
+- !private ["13SourceryMocks16FileProtocolMockC", "init"]
+- !private ["5ZFile18FileSystemIterableP", "init"]
+- ["5ZFile18FileSystemProtocolP", "init"]
+- ["13SourceryMocks22FileSystemProtocolMockC", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["5ZFile6FolderC", "init"]
+- !private ["5ZFile14FolderProtocolP", "init"]
+- !private ["13SourceryMocks18FolderProtocolMockC", "init"]
+- !private ["SH", "Altool"]
+- !private ["SH", "ArchiveOptions"]
+- ["SH", "Credentials"]
+- !private ["SH", "Data"]
+- !private ["SH", "DecoderMock"]
+- !private ["SH", "Deliver"]
+- !private ["SH", "DestinationProtocolMock"]
+- !private ["SH", "ExportArchiveOptions"]
+- !private ["SH", "ExportArchiveOptionsProtocolMock"]
+- !private ["SH", "ExportOptions"]
+- !private ["SH", "FileProtocolMock"]
+- ["SH", "FileSystemProtocolMock"]
+- !private ["SH", "Folder"]
+- !private ["SH", "FolderProtocolMock"]
+- !private ["SH", "Int"]
+- !private ["SH", "Keychain"]
+- ["SH", "LocalSystem"]
+- !private ["SH", "ProcessInfo"]
+- !private ["SH", "PropertyListSerialization"]
+- !private ["SH", "String"]
+- !private ["SH", "SystemExecutableProvider"]
+- !private ["SH", "TestOptionsProtocolMock"]
+- ["SH", "URL"]
+- !private ["SH", "XCBuild"]
+- !private ["SH", "XCTFail"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "all"]
+- !private ["SH", "appStore"]
+- ["SH", "appendingPathComponent"]
+- !private ["SH", "credentials"]
+- !private ["SH", "data"]
+- ["SH", "deletingLastPathComponent"]
+- !private ["SH", "description"]
+- !private ["SH", "environment"]
+- !private ["SH", "fixturesDir"]
+- !private ["SH", "fs"]
+- !private ["SH", "iOS"]
+- !private ["SH", "incrementBuildNumber"]
+- ["SH", "init"]
+- ["SH", "init"]
+- !private ["SH", "invocation"]
+- !private ["SH", "invokeTest"]
+- !private ["SH", "path"]
+- !private ["SH", "print"]
+- !private ["SH", "processInfo"]
+- !private ["SH", "propertyList"]
+- !private ["SH", "retrieveCredentials"]
+- !private ["SH", "selector"]
+- !private ["SH", "subscript"]
+- !private ["SH", "system"]
+- !private ["SH", "write"]
+- !private ["SH", "xml"]
+- !private ["Si", "init"]
+- !private ["5ZFile12ItemProtocolP", "init"]
+- ["9Arguments7KeyableP", "init"]
+- ["9Arguments7KeyableP", "init"]
+- !private ["8KeychainAAC", "init"]
+- !private ["8KeychainAAC", "password"]
+- !private ["8Keychain0A8ProtocolP", "init"]
+- !private ["8Keychain0A8ProtocolP", "password"]
+- !private ["7DeliverAAC5LocalC", "init"]
+- !private ["7DeliverAAC5LocalC", "now"]
+- ["4Task11LocalSystemC", "init"]
+- ["10Foundation14LocalizedErrorP", "init"]
+- ["10Foundation14LocalizedErrorP", "init"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s25LosslessStringConvertibleP", "init"]
+- !private ["7XCBuild13ExportOptionsV6MethodO", "appStore"]
+- ["s10MirrorPathP", "init"]
+- ["s10MirrorPathP", "init"]
+- !private ["SM", "init"]
+- !private ["SM", "write"]
+- !private ["So12NSInvocationC", "selector"]
+- !private ["So8NSObjectC", "Altool"]
+- !private ["So8NSObjectC", "ArchiveOptions"]
+- ["So8NSObjectC", "Credentials"]
+- !private ["So8NSObjectC", "Data"]
+- !private ["So8NSObjectC", "Decoder"]
+- !private ["So8NSObjectC", "DecoderMock"]
+- !private ["So8NSObjectC", "Deliver"]
+- !private ["So8NSObjectC", "DestinationProtocolMock"]
+- !private ["So8NSObjectC", "ExportArchiveOptions"]
+- !private ["So8NSObjectC", "ExportArchiveOptionsProtocolMock"]
+- !private ["So8NSObjectC", "ExportOptions"]
+- !private ["So8NSObjectC", "FileProtocolMock"]
+- ["So8NSObjectC", "FileSystemProtocolMock"]
+- !private ["So8NSObjectC", "Folder"]
+- !private ["So8NSObjectC", "FolderProtocolMock"]
+- !private ["So8NSObjectC", "Int"]
+- !private ["So8NSObjectC", "Keychain"]
+- ["So8NSObjectC", "LocalSystem"]
+- !private ["So8NSObjectC", "ProcessInfo"]
+- !private ["So8NSObjectC", "PropertyListSerialization"]
+- ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "SystemExecutableProvider"]
+- !private ["So8NSObjectC", "TestOptionsProtocolMock"]
+- ["So8NSObjectC", "URL"]
+- !private ["So8NSObjectC", "XCBuild"]
+- !private ["So8NSObjectC", "XCTFail"]
+- ["So8NSObjectC", "credentials"]
+- !private ["So8NSObjectC", "data"]
+- !private ["So8NSObjectC", "environment"]
+- ["So8NSObjectC", "fixturesDir"]
+- ["So8NSObjectC", "fs"]
+- ["So8NSObjectC", "incrementBuildNumber"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "invocation"]
+- ["So8NSObjectC", "invokeTest"]
+- !private ["So8NSObjectC", "print"]
+- !private ["So8NSObjectC", "processInfo"]
+- !private ["So8NSObjectC", "propertyList"]
+- ["So8NSObjectC", "retrieveCredentials"]
+- !private ["So8NSObjectC", "selector"]
+- ["So8NSObjectC", "system"]
+- ["So8NSObjectC", "testArchive_and_Export_using_file_plist"]
+- ["So8NSObjectC", "testArchive_and_Export_using_object_plist"]
+- ["So8NSObjectC", "test_test_action"]
+- !private ["So8NSObjectP", "Altool"]
+- !private ["So8NSObjectP", "ArchiveOptions"]
+- ["So8NSObjectP", "Credentials"]
+- !private ["So8NSObjectP", "Data"]
+- !private ["So8NSObjectP", "DecoderMock"]
+- !private ["So8NSObjectP", "Deliver"]
+- !private ["So8NSObjectP", "DestinationProtocolMock"]
+- !private ["So8NSObjectP", "ExportArchiveOptions"]
+- !private ["So8NSObjectP", "ExportArchiveOptionsProtocolMock"]
+- !private ["So8NSObjectP", "ExportOptions"]
+- !private ["So8NSObjectP", "FileProtocolMock"]
+- ["So8NSObjectP", "FileSystemProtocolMock"]
+- !private ["So8NSObjectP", "Folder"]
+- !private ["So8NSObjectP", "FolderProtocolMock"]
+- !private ["So8NSObjectP", "Int"]
+- !private ["So8NSObjectP", "Keychain"]
+- ["So8NSObjectP", "LocalSystem"]
+- !private ["So8NSObjectP", "ProcessInfo"]
+- !private ["So8NSObjectP", "PropertyListSerialization"]
+- !private ["So8NSObjectP", "String"]
+- !private ["So8NSObjectP", "SystemExecutableProvider"]
+- !private ["So8NSObjectP", "TestOptionsProtocolMock"]
+- ["So8NSObjectP", "URL"]
+- !private ["So8NSObjectP", "XCBuild"]
+- !private ["So8NSObjectP", "XCTFail"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "credentials"]
+- !private ["So8NSObjectP", "data"]
+- !private ["So8NSObjectP", "environment"]
+- !private ["So8NSObjectP", "fixturesDir"]
+- !private ["So8NSObjectP", "fs"]
+- !private ["So8NSObjectP", "incrementBuildNumber"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "invocation"]
+- !private ["So8NSObjectP", "invokeTest"]
+- !private ["So8NSObjectP", "print"]
+- !private ["So8NSObjectP", "processInfo"]
+- !private ["So8NSObjectP", "propertyList"]
+- !private ["So8NSObjectP", "retrieveCredentials"]
+- !private ["So8NSObjectP", "selector"]
+- !private ["So8NSObjectP", "system"]
+- !private ["Sj", "init"]
+- !private ["Sq", "all"]
+- !private ["7DeliverAAC7OptionsV", "init"]
+- !private ["7DeliverAAC8PasswordO", "plain"]
+- !private ["8KeychainAAC13PasswordQueryC", "init"]
+- !private ["8KeychainAAC13PasswordQueryC", "init"]
+- !private ["7DeliverAAC8PlatformO", "iOS"]
+- ["8Terminal9PrintableP", "init"]
+- ["8Terminal9PrintableP", "init"]
+- !private ["So13NSProcessInfoC", "environment"]
+- !private ["So13NSProcessInfoC", "processInfo"]
+- !private ["7XCBuild13ExportOptionsV20ProvisioningProfilesV7ProfileO", "named"]
+- !private ["So20NSPropertyListFormatV", "xml"]
+- !private ["So27NSPropertyListSerializationC", "data"]
+- !private ["So27NSPropertyListSerializationC", "propertyList"]
+- !private ["7XCBuild13ExportOptionsV20ProvisioningProfilesV", "addProfile"]
+- !private ["7XCBuild13ExportOptionsV20ProvisioningProfilesV", "init"]
+- !private ["Sk", "init"]
+- !private ["Sk", "write"]
+- ["Sm", "init"]
+- ["Sm", "init"]
+- !private ["Sm", "write"]
+- !private ["SY", "all"]
+- !private ["SY", "appStore"]
+- !private ["SY", "iOS"]
+- !private ["SY", "xml"]
+- ["10Foundation20ReferenceConvertibleP", "appendingPathComponent"]
+- ["10Foundation20ReferenceConvertibleP", "deletingLastPathComponent"]
+- ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "path"]
+- !private ["10Foundation20ReferenceConvertibleP", "write"]
+- !private ["10ObjectiveC8SelectorV", "description"]
+- ["ST", "init"]
+- ["ST", "init"]
+- !private ["ST", "subscript"]
+- !private ["ST", "write"]
+- !private ["SZ", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["Sx", "init"]
+- ["SS", "init"]
+- ["SS", "init"]
+- ["Sy", "init"]
+- ["Sy", "init"]
+- !private ["4Task24SystemExecutableProviderC", "init"]
+- !private ["4Task24SystemExecutableProviderC", "searchedUrls"]
+- ["4Task14SystemProtocolP", "init"]
+- !private ["7XCBuild19TestOptionsProtocolP", "destination"]
+- !private ["7XCBuild19TestOptionsProtocolP", "init"]
+- !private ["7XCBuild19TestOptionsProtocolP", "project"]
+- !private ["7XCBuild19TestOptionsProtocolP", "scheme"]
+- !private ["13SourceryMocks23TestOptionsProtocolMockC", "destination"]
+- !private ["13SourceryMocks23TestOptionsProtocolMockC", "init"]
+- !private ["13SourceryMocks23TestOptionsProtocolMockC", "project"]
+- !private ["13SourceryMocks23TestOptionsProtocolMockC", "scheme"]
+- ["s16TextOutputStreamP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["7XCBuild13ExportOptionsV8ThinningO", "all"]
+- ["10Foundation3URLV", "appendingPathComponent"]
+- ["10Foundation3URLV", "deletingLastPathComponent"]
+- ["10Foundation3URLV", "init"]
+- !private ["10Foundation3URLV", "path"]
+- !private ["7XCBuildAAC", "archive"]
+- !private ["7XCBuildAAC", "buildAndTest"]
+- !private ["7XCBuildAAC", "export"]
+- !private ["7XCBuildAAC", "init"]
+- !private ["7XCBuild0A8ProtocolP", "archive"]
+- !private ["7XCBuild0A8ProtocolP", "buildAndTest"]
+- !private ["7XCBuild0A8ProtocolP", "export"]
+- !private ["7XCBuild0A8ProtocolP", "init"]
+- !private ["12XCBuildTestsAAC", "Altool"]
+- !private ["12XCBuildTestsAAC", "ArchiveOptions"]
+- ["12XCBuildTestsAAC", "Credentials"]
+- !private ["12XCBuildTestsAAC", "Data"]
+- !private ["12XCBuildTestsAAC", "Decoder"]
+- !private ["12XCBuildTestsAAC", "DecoderMock"]
+- !private ["12XCBuildTestsAAC", "Deliver"]
+- !private ["12XCBuildTestsAAC", "DestinationProtocolMock"]
+- !private ["12XCBuildTestsAAC", "ExportArchiveOptions"]
+- !private ["12XCBuildTestsAAC", "ExportArchiveOptionsProtocolMock"]
+- !private ["12XCBuildTestsAAC", "ExportOptions"]
+- !private ["12XCBuildTestsAAC", "FileProtocolMock"]
+- ["12XCBuildTestsAAC", "FileSystemProtocolMock"]
+- !private ["12XCBuildTestsAAC", "Folder"]
+- !private ["12XCBuildTestsAAC", "FolderProtocolMock"]
+- !private ["12XCBuildTestsAAC", "Int"]
+- !private ["12XCBuildTestsAAC", "Keychain"]
+- ["12XCBuildTestsAAC", "LocalSystem"]
+- !private ["12XCBuildTestsAAC", "ProcessInfo"]
+- !private ["12XCBuildTestsAAC", "PropertyListSerialization"]
+- ["12XCBuildTestsAAC", "String"]
+- !private ["12XCBuildTestsAAC", "SystemExecutableProvider"]
+- !private ["12XCBuildTestsAAC", "TestOptionsProtocolMock"]
+- ["12XCBuildTestsAAC", "URL"]
+- !private ["12XCBuildTestsAAC", "XCBuild"]
+- !private ["12XCBuildTestsAAC", "XCTFail"]
+- ["12XCBuildTestsAAC", "credentials"]
+- ["12XCBuildTestsAAC", "fixturesDir"]
+- ["12XCBuildTestsAAC", "fs"]
+- !private ["12XCBuildTestsAAC", "incrementBuildNumber"]
+- ["12XCBuildTestsAAC", "init"]
+- !private ["12XCBuildTestsAAC", "invocation"]
+- ["12XCBuildTestsAAC", "invokeTest"]
+- !private ["12XCBuildTestsAAC", "print"]
+- !private ["12XCBuildTestsAAC", "retrieveCredentials"]
+- ["12XCBuildTestsAAC", "system"]
+- ["12XCBuildTestsAAC", "testArchive_and_Export_using_file_plist"]
+- ["12XCBuildTestsAAC", "testArchive_and_Export_using_object_plist"]
+- ["12XCBuildTestsAAC", "test_test_action"]
+- !private ["So11XCTActivityP", "Altool"]
+- !private ["So11XCTActivityP", "ArchiveOptions"]
+- ["So11XCTActivityP", "Credentials"]
+- !private ["So11XCTActivityP", "Data"]
+- !private ["So11XCTActivityP", "DecoderMock"]
+- !private ["So11XCTActivityP", "Deliver"]
+- !private ["So11XCTActivityP", "DestinationProtocolMock"]
+- !private ["So11XCTActivityP", "ExportArchiveOptions"]
+- !private ["So11XCTActivityP", "ExportArchiveOptionsProtocolMock"]
+- !private ["So11XCTActivityP", "ExportOptions"]
+- !private ["So11XCTActivityP", "FileProtocolMock"]
+- ["So11XCTActivityP", "FileSystemProtocolMock"]
+- !private ["So11XCTActivityP", "Folder"]
+- !private ["So11XCTActivityP", "FolderProtocolMock"]
+- !private ["So11XCTActivityP", "Int"]
+- !private ["So11XCTActivityP", "Keychain"]
+- ["So11XCTActivityP", "LocalSystem"]
+- !private ["So11XCTActivityP", "ProcessInfo"]
+- !private ["So11XCTActivityP", "PropertyListSerialization"]
+- !private ["So11XCTActivityP", "String"]
+- !private ["So11XCTActivityP", "SystemExecutableProvider"]
+- !private ["So11XCTActivityP", "TestOptionsProtocolMock"]
+- ["So11XCTActivityP", "URL"]
+- !private ["So11XCTActivityP", "XCBuild"]
+- !private ["So11XCTActivityP", "XCTFail"]
+- ["So11XCTActivityP", ""]
+- !private ["So11XCTActivityP", "credentials"]
+- !private ["So11XCTActivityP", "fixturesDir"]
+- !private ["So11XCTActivityP", "fs"]
+- !private ["So11XCTActivityP", "incrementBuildNumber"]
+- !private ["So11XCTActivityP", "init"]
+- !private ["So11XCTActivityP", "init"]
+- !private ["So11XCTActivityP", "invocation"]
+- !private ["So11XCTActivityP", "invokeTest"]
+- !private ["So11XCTActivityP", "print"]
+- !private ["So11XCTActivityP", "retrieveCredentials"]
+- !private ["So11XCTActivityP", "system"]
+- !private ["So17XCTWaiterDelegateP", "Altool"]
+- !private ["So17XCTWaiterDelegateP", "ArchiveOptions"]
+- ["So17XCTWaiterDelegateP", "Credentials"]
+- !private ["So17XCTWaiterDelegateP", "Data"]
+- !private ["So17XCTWaiterDelegateP", "DecoderMock"]
+- !private ["So17XCTWaiterDelegateP", "Deliver"]
+- !private ["So17XCTWaiterDelegateP", "DestinationProtocolMock"]
+- !private ["So17XCTWaiterDelegateP", "ExportArchiveOptions"]
+- !private ["So17XCTWaiterDelegateP", "ExportArchiveOptionsProtocolMock"]
+- !private ["So17XCTWaiterDelegateP", "ExportOptions"]
+- !private ["So17XCTWaiterDelegateP", "FileProtocolMock"]
+- ["So17XCTWaiterDelegateP", "FileSystemProtocolMock"]
+- !private ["So17XCTWaiterDelegateP", "Folder"]
+- !private ["So17XCTWaiterDelegateP", "FolderProtocolMock"]
+- !private ["So17XCTWaiterDelegateP", "Int"]
+- !private ["So17XCTWaiterDelegateP", "Keychain"]
+- ["So17XCTWaiterDelegateP", "LocalSystem"]
+- !private ["So17XCTWaiterDelegateP", "ProcessInfo"]
+- !private ["So17XCTWaiterDelegateP", "PropertyListSerialization"]
+- !private ["So17XCTWaiterDelegateP", "String"]
+- !private ["So17XCTWaiterDelegateP", "SystemExecutableProvider"]
+- !private ["So17XCTWaiterDelegateP", "TestOptionsProtocolMock"]
+- ["So17XCTWaiterDelegateP", "URL"]
+- !private ["So17XCTWaiterDelegateP", "XCBuild"]
+- !private ["So17XCTWaiterDelegateP", "XCTFail"]
+- ["So17XCTWaiterDelegateP", ""]
+- !private ["So17XCTWaiterDelegateP", "credentials"]
+- !private ["So17XCTWaiterDelegateP", "fixturesDir"]
+- !private ["So17XCTWaiterDelegateP", "fs"]
+- !private ["So17XCTWaiterDelegateP", "incrementBuildNumber"]
+- !private ["So17XCTWaiterDelegateP", "init"]
+- !private ["So17XCTWaiterDelegateP", "init"]
+- !private ["So17XCTWaiterDelegateP", "invocation"]
+- !private ["So17XCTWaiterDelegateP", "invokeTest"]
+- !private ["So17XCTWaiterDelegateP", "print"]
+- !private ["So17XCTWaiterDelegateP", "retrieveCredentials"]
+- !private ["So17XCTWaiterDelegateP", "system"]
+- !private ["So6XCTestC", "Altool"]
+- !private ["So6XCTestC", "ArchiveOptions"]
+- ["So6XCTestC", "Credentials"]
+- !private ["So6XCTestC", "Data"]
+- !private ["So6XCTestC", "Decoder"]
+- !private ["So6XCTestC", "DecoderMock"]
+- !private ["So6XCTestC", "Deliver"]
+- !private ["So6XCTestC", "DestinationProtocolMock"]
+- !private ["So6XCTestC", "ExportArchiveOptions"]
+- !private ["So6XCTestC", "ExportArchiveOptionsProtocolMock"]
+- !private ["So6XCTestC", "ExportOptions"]
+- !private ["So6XCTestC", "FileProtocolMock"]
+- ["So6XCTestC", "FileSystemProtocolMock"]
+- !private ["So6XCTestC", "Folder"]
+- !private ["So6XCTestC", "FolderProtocolMock"]
+- !private ["So6XCTestC", "Int"]
+- !private ["So6XCTestC", "Keychain"]
+- ["So6XCTestC", "LocalSystem"]
+- !private ["So6XCTestC", "ProcessInfo"]
+- !private ["So6XCTestC", "PropertyListSerialization"]
+- ["So6XCTestC", "String"]
+- !private ["So6XCTestC", "SystemExecutableProvider"]
+- !private ["So6XCTestC", "TestOptionsProtocolMock"]
+- ["So6XCTestC", "URL"]
+- !private ["So6XCTestC", "XCBuild"]
+- !private ["So6XCTestC", "XCTFail"]
+- ["So6XCTestC", "credentials"]
+- ["So6XCTestC", "fixturesDir"]
+- ["So6XCTestC", "fs"]
+- ["So6XCTestC", "incrementBuildNumber"]
+- ["So6XCTestC", "init"]
+- !private ["So6XCTestC", "init"]
+- !private ["So6XCTestC", "invocation"]
+- ["So6XCTestC", "invokeTest"]
+- !private ["So6XCTestC", "print"]
+- ["So6XCTestC", "retrieveCredentials"]
+- ["So6XCTestC", "system"]
+- ["So6XCTestC", "testArchive_and_Export_using_file_plist"]
+- ["So6XCTestC", "testArchive_and_Export_using_object_plist"]
+- ["So6XCTestC", "test_test_action"]
+- !private ["So10XCTestCaseC", "Altool"]
+- !private ["So10XCTestCaseC", "ArchiveOptions"]
+- ["So10XCTestCaseC", "Credentials"]
+- !private ["So10XCTestCaseC", "Data"]
+- !private ["So10XCTestCaseC", "Decoder"]
+- !private ["So10XCTestCaseC", "DecoderMock"]
+- !private ["So10XCTestCaseC", "Deliver"]
+- !private ["So10XCTestCaseC", "DestinationProtocolMock"]
+- !private ["So10XCTestCaseC", "ExportArchiveOptions"]
+- !private ["So10XCTestCaseC", "ExportArchiveOptionsProtocolMock"]
+- !private ["So10XCTestCaseC", "ExportOptions"]
+- !private ["So10XCTestCaseC", "FileProtocolMock"]
+- ["So10XCTestCaseC", "FileSystemProtocolMock"]
+- !private ["So10XCTestCaseC", "Folder"]
+- !private ["So10XCTestCaseC", "FolderProtocolMock"]
+- !private ["So10XCTestCaseC", "Int"]
+- !private ["So10XCTestCaseC", "Keychain"]
+- ["So10XCTestCaseC", "LocalSystem"]
+- !private ["So10XCTestCaseC", "ProcessInfo"]
+- !private ["So10XCTestCaseC", "PropertyListSerialization"]
+- ["So10XCTestCaseC", "String"]
+- !private ["So10XCTestCaseC", "SystemExecutableProvider"]
+- !private ["So10XCTestCaseC", "TestOptionsProtocolMock"]
+- ["So10XCTestCaseC", "URL"]
+- !private ["So10XCTestCaseC", "XCBuild"]
+- !private ["So10XCTestCaseC", "XCTFail"]
+- ["So10XCTestCaseC", ""]
+- ["So10XCTestCaseC", "credentials"]
+- ["So10XCTestCaseC", "fixturesDir"]
+- ["So10XCTestCaseC", "fs"]
+- ["So10XCTestCaseC", "incrementBuildNumber"]
+- ["So10XCTestCaseC", "init"]
+- !private ["So10XCTestCaseC", "init"]
+- !private ["So10XCTestCaseC", "invocation"]
+- ["So10XCTestCaseC", "invokeTest"]
+- !private ["So10XCTestCaseC", "print"]
+- ["So10XCTestCaseC", "retrieveCredentials"]
+- ["So10XCTestCaseC", "system"]
+- ["So10XCTestCaseC", "testArchive_and_Export_using_file_plist"]
+- ["So10XCTestCaseC", "testArchive_and_Export_using_object_plist"]
+- ["So10XCTestCaseC", "test_test_action"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s34_ExpressibleByFileReferenceLiteralP", "appendingPathComponent"]
+- ["s34_ExpressibleByFileReferenceLiteralP", "deletingLastPathComponent"]
+- ["s34_ExpressibleByFileReferenceLiteralP", "init"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "path"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Altool"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ArchiveOptions"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Credentials"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Data"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DecoderMock"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Deliver"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DestinationProtocolMock"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ExportArchiveOptions"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ExportArchiveOptionsProtocolMock"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ExportOptions"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "FileProtocolMock"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "FileSystemProtocolMock"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Folder"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "FolderProtocolMock"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Int"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Keychain"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "LocalSystem"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ProcessInfo"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PropertyListSerialization"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "String"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "SystemExecutableProvider"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "TestOptionsProtocolMock"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "URL"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "XCBuild"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "XCTFail"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "credentials"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "data"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "environment"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fixturesDir"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fs"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "incrementBuildNumber"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "invocation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "invokeTest"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "processInfo"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "propertyList"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "retrieveCredentials"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "selector"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "system"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "all"]
+- ["s21_ObjectiveCBridgeableP", "appendingPathComponent"]
+- ["s21_ObjectiveCBridgeableP", "deletingLastPathComponent"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "path"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "write"]
+- ["s16_SwiftStringViewP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "7Deliver6AltoolC"
+- !private "7XCBuild14ArchiveOptionsV"
+- !private "7XCBuild22ArchiveOptionsProtocolP"
+- !private "4Task26ArgumentExecutableProtocolP"
+- "21SourceryAutoProtocols0B16GenerateProtocolP"
+- "21SourceryAutoProtocols0B8MockableP"
+- "SK"
+- !private "Sz"
+- !private "Sb"
+- "s7CVarArgP"
+- "Sl"
+- "SL"
+- "12XCBuildTestsAAC11CredentialsV"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- "Se"
+- !private "s7DecoderP"
+- !private "7XCBuild11DecoderMockC"
+- !private "7DeliverAAC"
+- !private "7Deliver0A8ProtocolP"
+- !private "7XCBuild19DestinationProtocolP"
+- !private "13SourceryMocks23DestinationProtocolMockC"
+- !private "SD"
+- "SE"
+- "SQ"
+- "s5ErrorP"
+- !private "4Task18ExecutableProtocolP"
+- !private "4Task26ExecutableProviderProtocolP"
+- !private "7XCBuild20ExportArchiveOptionsV"
+- !private "7XCBuild28ExportArchiveOptionsProtocolP"
+- !private "13SourceryMocks32ExportArchiveOptionsProtocolMockC"
+- !private "7XCBuild13ExportOptionsV"
+- !private "7XCBuild14ExportProtocolP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "5ZFile12FileProtocolP"
+- !private "13SourceryMocks16FileProtocolMockC"
+- !private "5ZFile18FileSystemIterableP"
+- "5ZFile18FileSystemProtocolP"
+- "13SourceryMocks22FileSystemProtocolMockC"
+- !private "s17FixedWidthIntegerP"
+- !private "5ZFile6FolderC"
+- !private "5ZFile14FolderProtocolP"
+- !private "13SourceryMocks18FolderProtocolMockC"
+- "SH"
+- !private "Si"
+- !private "5ZFile12ItemProtocolP"
+- "9Arguments7KeyableP"
+- !private "8KeychainAAC"
+- !private "8Keychain0A8ProtocolP"
+- !private "7DeliverAAC5LocalC"
+- "4Task11LocalSystemC"
+- "10Foundation14LocalizedErrorP"
+- "s25LosslessStringConvertibleP"
+- !private "7XCBuild13ExportOptionsV6MethodO"
+- "s10MirrorPathP"
+- !private "SM"
+- !private "So12NSInvocationC"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "Sj"
+- !private "Sq"
+- !private "7DeliverAAC7OptionsV"
+- !private "7DeliverAAC8PasswordO"
+- !private "8KeychainAAC13PasswordQueryC"
+- !private "7DeliverAAC8PlatformO"
+- "8Terminal9PrintableP"
+- !private "So13NSProcessInfoC"
+- !private "7XCBuild13ExportOptionsV20ProvisioningProfilesV7ProfileO"
+- !private "So20NSPropertyListFormatV"
+- !private "So27NSPropertyListSerializationC"
+- !private "7XCBuild13ExportOptionsV20ProvisioningProfilesV"
+- !private "Sk"
+- "Sm"
+- !private "SY"
+- "10Foundation20ReferenceConvertibleP"
+- !private "10ObjectiveC8SelectorV"
+- "ST"
+- !private "SZ"
+- !private "s13SignedNumericP"
+- !private "s12StaticStringV"
+- !private "Sx"
+- "SS"
+- "Sy"
+- !private "4Task24SystemExecutableProviderC"
+- "4Task14SystemProtocolP"
+- !private "7XCBuild19TestOptionsProtocolP"
+- !private "13SourceryMocks23TestOptionsProtocolMockC"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "7XCBuild13ExportOptionsV8ThinningO"
+- "10Foundation3URLV"
+- !private "7XCBuildAAC"
+- !private "7XCBuild0A8ProtocolP"
+- "12XCBuildTestsAAC"
+- "So11XCTActivityP"
+- "So17XCTWaiterDelegateP"
+- "So6XCTestC"
+- "So10XCTestCaseC"
+- !private "s18_BitwiseOperationsP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s34_ExpressibleByFileReferenceLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/os.apinotesc"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/POSIX.framework/Modules/POSIX.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/XCBuild.framework/Modules/XCBuild.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Carthage/Build/Mac/ZFile.framework/Modules/ZFile.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/HighwayCore.framework/Modules/HighwayCore.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Task.framework/Modules/Task.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Terminal.framework/Modules/Terminal.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Url.framework/Modules/Url.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Keychain.framework/Modules/Keychain.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Deliver.framework/Modules/Deliver.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/SourceryMocks.framework/Modules/SourceryMocks.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/SourceryAutoProtocols.framework/Modules/SourceryAutoProtocols.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Errors.framework/Modules/Errors.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Arguments.framework/Modules/Arguments.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Git.framework/Modules/Git.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/HWKit.framework/Modules/HWKit.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Result.framework/Modules/Result.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/os.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XCTest.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "d80defe4dee056dfca6fb10fc046f4e7"

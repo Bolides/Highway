@@ -1,0 +1,6 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "7a6a660b03bcbdf15850d78e4c73e375"
+build_time: [1543511166, 403778000]
+inputs:
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Tests/XCBuildTests/DestinationFactoryTests.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Tests/XCBuildTests/XCBuild_System_Tests.swift": [1532710994, 0]

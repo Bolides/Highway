@@ -1,0 +1,681 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "App"
+provides-nominal:
+- "7highway3AppC"
+provides-member:
+- ["7highway3AppC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "+"
+- !private "==>"
+- "App"
+- "AppHighway"
+- "Arguments"
+- !private "Array"
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- !private "Bootstraper"
+- !private "CommandLineInvocationProvider"
+- !private "Configuration"
+- !private "CurrentVersion"
+- !private "EXIT_FAILURE"
+- !private "EXIT_SUCCESS"
+- !private "FileSystem"
+- !private "FloatLiteralType"
+- "Highway"
+- "HighwayBundle"
+- "HighwayDescription"
+- !private "HighwayProjectTool"
+- "HomeBundle"
+- !private "HomeBundleUpdater"
+- !private "IntegerLiteralType"
+- !private "Line"
+- !private "SelfUpdater"
+- !private "String"
+- !private "StringLiteralType"
+- "Swift"
+- "TernaryPrecedence"
+- !private "Text"
+- !private "XCProjectGenerator"
+- !private "dump"
+- !private "exit"
+depends-member:
+- ["7highway3AppC", "Arguments"]
+- !private ["7highway3AppC", "Bootstraper"]
+- !private ["7highway3AppC", "CommandLineInvocationProvider"]
+- !private ["7highway3AppC", "Configuration"]
+- !private ["7highway3AppC", "CurrentVersion"]
+- !private ["7highway3AppC", "EXIT_FAILURE"]
+- !private ["7highway3AppC", "EXIT_SUCCESS"]
+- !private ["7highway3AppC", "FileSystem"]
+- ["7highway3AppC", "HighwayBundle"]
+- ["7highway3AppC", "HighwayDescription"]
+- !private ["7highway3AppC", "HighwayProjectTool"]
+- ["7highway3AppC", "HomeBundle"]
+- !private ["7highway3AppC", "HomeBundleUpdater"]
+- !private ["7highway3AppC", "Line"]
+- !private ["7highway3AppC", "SelfUpdater"]
+- !private ["7highway3AppC", "String"]
+- ["7highway3AppC", "Swift"]
+- !private ["7highway3AppC", "Text"]
+- !private ["7highway3AppC", "XCProjectGenerator"]
+- !private ["7highway3AppC", "__currentHighwayBundle"]
+- !private ["7highway3AppC", "__customHighways"]
+- !private ["7highway3AppC", "__ensureValidHomeBundle"]
+- !private ["7highway3AppC", "_bootstrap"]
+- !private ["7highway3AppC", "_clean"]
+- !private ["7highway3AppC", "_fallbackCommand"]
+- !private ["7highway3AppC", "_generate"]
+- !private ["7highway3AppC", "_handleError"]
+- !private ["7highway3AppC", "_init"]
+- !private ["7highway3AppC", "_self_update"]
+- !private ["7highway3AppC", "_showHelp"]
+- !private ["7highway3AppC", "_updateDependencies"]
+- !private ["7highway3AppC", "_update_highway"]
+- !private ["7highway3AppC", "_version"]
+- !private ["7highway3AppC", "appInfo"]
+- !private ["7highway3AppC", "context"]
+- !private ["7highway3AppC", "dump"]
+- !private ["7highway3AppC", "exit"]
+- !private ["7highway3AppC", "fileSystem"]
+- !private ["7highway3AppC", "git"]
+- ["7highway3AppC", "init"]
+- !private ["7highway3AppC", "onEmptyCommand"]
+- !private ["7highway3AppC", "onError"]
+- !private ["7highway3AppC", "onUnrecognizedCommand"]
+- ["7highway3AppC", "setupHighways"]
+- !private ["7highway3AppC", "subscript"]
+- !private ["7highway3AppC", "swift"]
+- !private ["7highway3AppC", "ui"]
+- !private ["7highway3AppC", "verbose"]
+- !private ["7highway10AppHighwayO", "bootstrap"]
+- !private ["7highway10AppHighwayO", "clean"]
+- ["7highway10AppHighwayO", "deinit"]
+- !private ["7highway10AppHighwayO", "generate"]
+- !private ["7highway10AppHighwayO", "help"]
+- !private ["7highway10AppHighwayO", "initialize"]
+- !private ["7highway10AppHighwayO", "self_update"]
+- !private ["7highway10AppHighwayO", "version"]
+- !private ["7highway7AppInfoV", "deinit"]
+- !private ["9ArgumentsAAV", "all"]
+- !private ["9ArgumentsAAV", "init"]
+- !private ["9ArgumentsAAV", "text"]
+- !private ["9Arguments0A11ConvertibleP", "text"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "Configuration"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "clean"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "init"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "update"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "url"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "Configuration"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "clean"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "error"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "init"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "message"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "print"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "success"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "update"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "url"]
+- !private ["SK", "elli"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
+- !private ["SK", "newline"]
+- !private ["SK", "text"]
+- !private ["SK", "whitespace"]
+- !private ["SB", "text"]
+- !private ["Sz", "text"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["5HWKit11BootstraperC", "init"]
+- !private ["12CoreGraphics7CGFloatV", "text"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "elli"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "newline"]
+- !private ["s7CVarArgP", "text"]
+- !private ["Sl", "elli"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["Sl", "newline"]
+- !private ["Sl", "text"]
+- !private ["Sl", "whitespace"]
+- !private ["11HighwayCore29CommandLineInvocationProviderV", "init"]
+- !private ["11HighwayCore29CommandLineInvocationProviderV", "invocation"]
+- !private ["SL", "elli"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "newline"]
+- !private ["SL", "text"]
+- !private ["11HighwayCore13ConfigurationV", "directoryName"]
+- !private ["5HWKit10HomeBundleC13ConfigurationV", "directoryName"]
+- !private ["11HighwayCore13ConfigurationV", "standard"]
+- !private ["5HWKit10HomeBundleC13ConfigurationV", "standard"]
+- !private ["s28CustomDebugStringConvertibleP", "createSubfolderIfNeeded"]
+- !private ["s28CustomDebugStringConvertibleP", "elli"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "newline"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "elli"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "newline"]
+- !private ["s29CustomPlaygroundQuickLookableP", "text"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "elli"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "newline"]
+- !private ["s17CustomReflectableP", "text"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "all"]
+- !private ["s23CustomStringConvertibleP", "createSubfolderIfNeeded"]
+- !private ["s23CustomStringConvertibleP", "elli"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "newline"]
+- !private ["s23CustomStringConvertibleP", "text"]
+- !private ["So9NSDecimala", "text"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "elli"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "newline"]
+- !private ["Se", "text"]
+- !private ["8Dispatch0A12TimeIntervalO", "text"]
+- !private ["Sd", "text"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "elli"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "newline"]
+- !private ["SE", "text"]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "all"]
+- !private ["SQ", "arguments"]
+- !private ["SQ", "bootstrap"]
+- !private ["SQ", "clean"]
+- !private ["SQ", "createSubfolderIfNeeded"]
+- !private ["SQ", "elli"]
+- !private ["SQ", "generate"]
+- !private ["SQ", "help"]
+- !private ["SQ", "highway"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "initialize"]
+- !private ["SQ", "newline"]
+- !private ["SQ", "self_update"]
+- !private ["SQ", "text"]
+- !private ["SQ", "version"]
+- !private ["s5ErrorP", "elli"]
+- !private ["s5ErrorP", "init"]
+- !private ["s5ErrorP", "init"]
+- !private ["s5ErrorP", "localizedDescription"]
+- !private ["s5ErrorP", "newline"]
+- !private ["s5ErrorP", "text"]
+- !private ["s25ExpressibleByArrayLiteralP", "all"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "text"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "elli"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "newline"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "text"]
+- !private ["s25ExpressibleByFloatLiteralP", "text"]
+- !private ["s27ExpressibleByIntegerLiteralP", "text"]
+- !private ["s26ExpressibleByStringLiteralP", "elli"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "newline"]
+- !private ["s26ExpressibleByStringLiteralP", "text"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "elli"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "newline"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "text"]
+- !private ["5ZFile10FileSystemC", "currentFolder"]
+- !private ["5ZFile10FileSystemC", "init"]
+- !private ["5ZFile18FileSystemIterableP", "createSubfolderIfNeeded"]
+- !private ["5ZFile18FileSystemProtocolP", "currentFolder"]
+- !private ["5ZFile18FileSystemProtocolP", "init"]
+- !private ["s17FixedWidthIntegerP", "text"]
+- !private ["Sf", "text"]
+- !private ["s7Float80V", "text"]
+- !private ["SF", "text"]
+- !private ["5ZFile6FolderC", "createSubfolderIfNeeded"]
+- !private ["5ZFile14FolderProtocolP", "createSubfolderIfNeeded"]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "bootstrap"]
+- !private ["SH", "clean"]
+- !private ["SH", "elli"]
+- !private ["SH", "generate"]
+- !private ["SH", "help"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "initialize"]
+- !private ["SH", "newline"]
+- !private ["SH", "self_update"]
+- !private ["SH", "text"]
+- !private ["SH", "version"]
+- ["14HighwayProject0A0C", "Arguments"]
+- !private ["14HighwayProject0A0C", "Bootstraper"]
+- !private ["14HighwayProject0A0C", "CommandLineInvocationProvider"]
+- !private ["14HighwayProject0A0C", "Configuration"]
+- !private ["14HighwayProject0A0C", "CurrentVersion"]
+- !private ["14HighwayProject0A0C", "EXIT_FAILURE"]
+- !private ["14HighwayProject0A0C", "EXIT_SUCCESS"]
+- !private ["14HighwayProject0A0C", "FileSystem"]
+- ["14HighwayProject0A0C", "HighwayBundle"]
+- ["14HighwayProject0A0C", "HighwayDescription"]
+- !private ["14HighwayProject0A0C", "HighwayProjectTool"]
+- ["14HighwayProject0A0C", "HomeBundle"]
+- !private ["14HighwayProject0A0C", "HomeBundleUpdater"]
+- !private ["14HighwayProject0A0C", "Line"]
+- !private ["14HighwayProject0A0C", "SelfUpdater"]
+- !private ["14HighwayProject0A0C", "String"]
+- ["14HighwayProject0A0C", "Swift"]
+- !private ["14HighwayProject0A0C", "Text"]
+- !private ["14HighwayProject0A0C", "XCProjectGenerator"]
+- ["14HighwayProject0A0C", ""]
+- ["14HighwayProject0A0C", "__currentHighwayBundle"]
+- ["14HighwayProject0A0C", "__customHighways"]
+- ["14HighwayProject0A0C", "__ensureValidHomeBundle"]
+- ["14HighwayProject0A0C", "_bootstrap"]
+- ["14HighwayProject0A0C", "_clean"]
+- ["14HighwayProject0A0C", "_fallbackCommand"]
+- ["14HighwayProject0A0C", "_generate"]
+- ["14HighwayProject0A0C", "_handleError"]
+- ["14HighwayProject0A0C", "_init"]
+- ["14HighwayProject0A0C", "_self_update"]
+- ["14HighwayProject0A0C", "_showHelp"]
+- ["14HighwayProject0A0C", "_updateDependencies"]
+- ["14HighwayProject0A0C", "_update_highway"]
+- ["14HighwayProject0A0C", "_version"]
+- !private ["14HighwayProject0A0C", "appInfo"]
+- !private ["14HighwayProject0A0C", "context"]
+- !private ["14HighwayProject0A0C", "dump"]
+- !private ["14HighwayProject0A0C", "exit"]
+- !private ["14HighwayProject0A0C", "fileSystem"]
+- !private ["14HighwayProject0A0C", "git"]
+- ["14HighwayProject0A0C", "init"]
+- !private ["14HighwayProject0A0C", "init"]
+- !private ["14HighwayProject0A0C", "onEmptyCommand"]
+- !private ["14HighwayProject0A0C", "onError"]
+- !private ["14HighwayProject0A0C", "onUnrecognizedCommand"]
+- ["14HighwayProject0A0C", "setupHighways"]
+- !private ["14HighwayProject0A0C", "subscript"]
+- !private ["14HighwayProject0A0C", "swift"]
+- !private ["14HighwayProject0A0C", "ui"]
+- !private ["14HighwayProject0A0C", "verbose"]
+- !private ["11HighwayCore0A6BundleC", "clean"]
+- !private ["11HighwayCore0A6BundleC", "init"]
+- !private ["11HighwayCore0A6BundleC", "url"]
+- !private ["11HighwayCore0A14BundleProtocolP", "clean"]
+- !private ["11HighwayCore0A14BundleProtocolP", "init"]
+- !private ["11HighwayCore0A14BundleProtocolP", "url"]
+- !private ["5HWKit18HighwayProjectToolC", "availableHighways"]
+- ["5HWKit18HighwayProjectToolC", "init"]
+- !private ["11HighwayCore0A12TypeProtocolP", "bootstrap"]
+- !private ["11HighwayCore0A12TypeProtocolP", "clean"]
+- !private ["11HighwayCore0A12TypeProtocolP", "generate"]
+- !private ["11HighwayCore0A12TypeProtocolP", "help"]
+- !private ["11HighwayCore0A12TypeProtocolP", "initialize"]
+- !private ["11HighwayCore0A12TypeProtocolP", "self_update"]
+- !private ["11HighwayCore0A12TypeProtocolP", "version"]
+- !private ["5HWKit10HomeBundleC", "Configuration"]
+- !private ["5HWKit18HomeBundleProtocolP", "Configuration"]
+- !private ["5HWKit17HomeBundleUpdaterC", "init"]
+- !private ["5HWKit17HomeBundleUpdaterC", "update"]
+- !private ["10Foundation9IndexPathV", "text"]
+- !private ["Si", "text"]
+- !private ["s5Int16V", "text"]
+- !private ["s5Int32V", "text"]
+- !private ["s5Int64V", "text"]
+- !private ["s4Int8V", "text"]
+- !private ["11HighwayCore10InvocationC", "arguments"]
+- !private ["11HighwayCore10InvocationC", "highway"]
+- !private ["11HighwayCore18InvocationProviderP", "init"]
+- !private ["11HighwayCore18InvocationProviderP", "invocation"]
+- !private ["5ZFile10FileSystemC4ItemC", "createSubfolderIfNeeded"]
+- !private ["5ZFile12ItemProtocolP", "createSubfolderIfNeeded"]
+- !private ["9Arguments7KeyableP", "elli"]
+- !private ["9Arguments7KeyableP", "init"]
+- !private ["9Arguments7KeyableP", "init"]
+- !private ["9Arguments7KeyableP", "newline"]
+- !private ["9Arguments7KeyableP", "text"]
+- !private ["8Terminal4LineV", "init"]
+- !private ["10Foundation14LocalizedErrorP", "elli"]
+- !private ["10Foundation14LocalizedErrorP", "init"]
+- !private ["10Foundation14LocalizedErrorP", "init"]
+- !private ["10Foundation14LocalizedErrorP", "newline"]
+- !private ["10Foundation14LocalizedErrorP", "text"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "elli"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "newline"]
+- !private ["s25LosslessStringConvertibleP", "text"]
+- !private ["s10MirrorPathP", "elli"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "newline"]
+- !private ["s10MirrorPathP", "text"]
+- !private ["SM", "text"]
+- !private ["Sj", "text"]
+- !private ["8Terminal9PrintableP", "elli"]
+- !private ["8Terminal9PrintableP", "init"]
+- !private ["8Terminal9PrintableP", "init"]
+- !private ["8Terminal9PrintableP", "newline"]
+- !private ["8Terminal9PrintableP", "text"]
+- !private ["8Terminal9PrintableP", "whitespace"]
+- !private ["8Terminal6PromptV", "normal"]
+- !private ["Sk", "text"]
+- !private ["Sm", "elli"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
+- !private ["Sm", "newline"]
+- !private ["Sm", "text"]
+- !private ["Sm", "whitespace"]
+- !private ["SY", "bootstrap"]
+- !private ["SY", "clean"]
+- !private ["SY", "generate"]
+- !private ["SY", "help"]
+- !private ["SY", "initialize"]
+- !private ["SY", "self_update"]
+- !private ["SY", "version"]
+- !private ["10Foundation20ReferenceConvertibleP", "text"]
+- ["5HWKit11SelfUpdaterC", "init"]
+- !private ["ST", "elli"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
+- !private ["ST", "newline"]
+- !private ["ST", "text"]
+- !private ["ST", "whitespace"]
+- !private ["SZ", "text"]
+- !private ["s13SignedNumericP", "text"]
+- !private ["Sx", "text"]
+- !private ["SS", "elli"]
+- !private ["SS", "init"]
+- !private ["SS", "init"]
+- !private ["SS", "newline"]
+- !private ["SS", "text"]
+- !private ["Sy", "elli"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "newline"]
+- !private ["Sy", "text"]
+- !private ["8Terminal4TextV", "init"]
+- !private ["8Terminal4TextV", "newline"]
+- !private ["8Terminal4TextV", "text"]
+- !private ["8Terminal4TextV", "whitespace"]
+- !private ["s16TextOutputStreamP", "elli"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "newline"]
+- !private ["s16TextOutputStreamP", "text"]
+- !private ["s20TextOutputStreamableP", "elli"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "newline"]
+- !private ["s20TextOutputStreamableP", "text"]
+- !private ["8Terminal10UIProtocolP", "error"]
+- !private ["8Terminal10UIProtocolP", "message"]
+- !private ["8Terminal10UIProtocolP", "print"]
+- !private ["8Terminal10UIProtocolP", "success"]
+- !private ["Su", "text"]
+- !private ["s6UInt16V", "text"]
+- !private ["s6UInt32V", "text"]
+- !private ["s6UInt64V", "text"]
+- !private ["s5UInt8V", "text"]
+- !private ["SU", "text"]
+- !private ["5HWKit18XCProjectGeneratorC", "generate"]
+- ["5HWKit18XCProjectGeneratorC", "init"]
+- !private ["s18_BitwiseOperationsP", "text"]
+- !private ["s15_CVarArgAlignedP", "text"]
+- !private ["s22_CVarArgPassedAsDoubleP", "text"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "elli"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "newline"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "text"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "text"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "text"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "elli"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "newline"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "text"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "elli"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "newline"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "text"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "elli"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "newline"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "text"]
+- !private ["s33_ExpressibleByStringInterpolationP", "elli"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "newline"]
+- !private ["s33_ExpressibleByStringInterpolationP", "text"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "text"]
+- ["11HighwayCore01_A0C", "Arguments"]
+- !private ["11HighwayCore01_A0C", "Bootstraper"]
+- !private ["11HighwayCore01_A0C", "CommandLineInvocationProvider"]
+- !private ["11HighwayCore01_A0C", "Configuration"]
+- !private ["11HighwayCore01_A0C", "CurrentVersion"]
+- !private ["11HighwayCore01_A0C", "EXIT_FAILURE"]
+- !private ["11HighwayCore01_A0C", "EXIT_SUCCESS"]
+- !private ["11HighwayCore01_A0C", "FileSystem"]
+- ["11HighwayCore01_A0C", "HighwayBundle"]
+- ["11HighwayCore01_A0C", "HighwayDescription"]
+- !private ["11HighwayCore01_A0C", "HighwayProjectTool"]
+- ["11HighwayCore01_A0C", "HomeBundle"]
+- !private ["11HighwayCore01_A0C", "HomeBundleUpdater"]
+- !private ["11HighwayCore01_A0C", "Line"]
+- !private ["11HighwayCore01_A0C", "SelfUpdater"]
+- !private ["11HighwayCore01_A0C", "String"]
+- ["11HighwayCore01_A0C", "Swift"]
+- !private ["11HighwayCore01_A0C", "Text"]
+- !private ["11HighwayCore01_A0C", "XCProjectGenerator"]
+- ["11HighwayCore01_A0C", "__currentHighwayBundle"]
+- ["11HighwayCore01_A0C", "__customHighways"]
+- ["11HighwayCore01_A0C", "__ensureValidHomeBundle"]
+- ["11HighwayCore01_A0C", "_bootstrap"]
+- ["11HighwayCore01_A0C", "_clean"]
+- ["11HighwayCore01_A0C", "_fallbackCommand"]
+- ["11HighwayCore01_A0C", "_generate"]
+- ["11HighwayCore01_A0C", "_handleError"]
+- ["11HighwayCore01_A0C", "_init"]
+- ["11HighwayCore01_A0C", "_self_update"]
+- ["11HighwayCore01_A0C", "_showHelp"]
+- ["11HighwayCore01_A0C", "_updateDependencies"]
+- ["11HighwayCore01_A0C", "_update_highway"]
+- ["11HighwayCore01_A0C", "_version"]
+- !private ["11HighwayCore01_A0C", "appInfo"]
+- !private ["11HighwayCore01_A0C", "context"]
+- !private ["11HighwayCore01_A0C", "dump"]
+- !private ["11HighwayCore01_A0C", "exit"]
+- !private ["11HighwayCore01_A0C", "fileSystem"]
+- !private ["11HighwayCore01_A0C", "git"]
+- ["11HighwayCore01_A0C", "init"]
+- !private ["11HighwayCore01_A0C", "init"]
+- !private ["11HighwayCore01_A0C", "onEmptyCommand"]
+- !private ["11HighwayCore01_A0C", "onError"]
+- !private ["11HighwayCore01_A0C", "onUnrecognizedCommand"]
+- ["11HighwayCore01_A0C", "setupHighways"]
+- !private ["11HighwayCore01_A0C", "subscript"]
+- !private ["11HighwayCore01_A0C", "swift"]
+- !private ["11HighwayCore01_A0C", "ui"]
+- !private ["11HighwayCore01_A0C", "verbose"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "elli"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "newline"]
+- !private ["s21_ObjectiveCBridgeableP", "text"]
+- !private ["s14_StringElementP", "text"]
+- !private ["s16_SwiftStringViewP", "elli"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "newline"]
+- !private ["s16_SwiftStringViewP", "text"]
+depends-nominal:
+- "7highway3AppC"
+- "7highway10AppHighwayO"
+- !private "7highway7AppInfoV"
+- !private "9ArgumentsAAV"
+- !private "9Arguments0A11ConvertibleP"
+- !private "21SourceryAutoProtocols0B16GenerateProtocolP"
+- !private "21SourceryAutoProtocols0B8MockableP"
+- !private "SK"
+- !private "SB"
+- !private "Sz"
+- !private "Sb"
+- "5HWKit11BootstraperC"
+- !private "12CoreGraphics7CGFloatV"
+- !private "s7CVarArgP"
+- !private "Sl"
+- !private "11HighwayCore29CommandLineInvocationProviderV"
+- !private "SL"
+- !private "11HighwayCore13ConfigurationV"
+- !private "5HWKit10HomeBundleC13ConfigurationV"
+- !private "11HighwayCore13ConfigurationV"
+- !private "5HWKit10HomeBundleC13ConfigurationV"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "So9NSDecimala"
+- !private "Se"
+- !private "8Dispatch0A12TimeIntervalO"
+- !private "Sd"
+- !private "SE"
+- !private "SQ"
+- !private "s5ErrorP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "5ZFile10FileSystemC"
+- !private "5ZFile18FileSystemIterableP"
+- !private "5ZFile18FileSystemProtocolP"
+- !private "s17FixedWidthIntegerP"
+- !private "Sf"
+- !private "s7Float80V"
+- !private "SF"
+- !private "5ZFile6FolderC"
+- !private "5ZFile14FolderProtocolP"
+- !private "SH"
+- "14HighwayProject0A0C"
+- !private "11HighwayCore0A6BundleC"
+- !private "11HighwayCore0A14BundleProtocolP"
+- "5HWKit18HighwayProjectToolC"
+- !private "11HighwayCore0A12TypeProtocolP"
+- !private "5HWKit10HomeBundleC"
+- !private "5HWKit18HomeBundleProtocolP"
+- !private "5HWKit17HomeBundleUpdaterC"
+- !private "10Foundation9IndexPathV"
+- !private "Si"
+- !private "s5Int16V"
+- !private "s5Int32V"
+- !private "s5Int64V"
+- !private "s4Int8V"
+- !private "11HighwayCore10InvocationC"
+- !private "11HighwayCore18InvocationProviderP"
+- !private "5ZFile10FileSystemC4ItemC"
+- !private "5ZFile12ItemProtocolP"
+- !private "9Arguments7KeyableP"
+- !private "8Terminal4LineV"
+- !private "10Foundation14LocalizedErrorP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "SM"
+- !private "Sj"
+- !private "8Terminal9PrintableP"
+- !private "8Terminal6PromptV"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
+- !private "10Foundation20ReferenceConvertibleP"
+- "5HWKit11SelfUpdaterC"
+- !private "ST"
+- !private "SZ"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "SS"
+- !private "Sy"
+- !private "8Terminal4TextV"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "8Terminal10UIProtocolP"
+- !private "Su"
+- !private "s6UInt16V"
+- !private "s6UInt32V"
+- !private "s6UInt64V"
+- !private "s5UInt8V"
+- !private "SU"
+- "5HWKit18XCProjectGeneratorC"
+- !private "s18_BitwiseOperationsP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "11HighwayCore01_A0C"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s14_StringElementP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/os.apinotesc"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/POSIX.framework/Modules/POSIX.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/XCBuild.framework/Modules/XCBuild.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Carthage/Build/Mac/ZFile.framework/Modules/ZFile.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/HighwayCore.framework/Modules/HighwayCore.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Task.framework/Modules/Task.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Terminal.framework/Modules/Terminal.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Url.framework/Modules/Url.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Deliver.framework/Modules/Deliver.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/SourceryAutoProtocols.framework/Modules/SourceryAutoProtocols.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Errors.framework/Modules/Errors.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Arguments.framework/Modules/Arguments.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/HighwayProject.framework/Modules/HighwayProject.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Git.framework/Modules/Git.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/HWKit.framework/Modules/HWKit.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Result.framework/Modules/Result.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/os.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "73a32953d644d946a446ccb7b85fcd44"

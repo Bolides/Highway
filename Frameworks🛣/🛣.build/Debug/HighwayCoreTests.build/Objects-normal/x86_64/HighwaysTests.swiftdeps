@@ -1,0 +1,709 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "HighwaysTests"
+- "MockHighway"
+provides-nominal:
+- "16HighwayCoreTests08HighwaysC0C"
+- "SS"
+- "11HighwayCore10InvocationC"
+- "16HighwayCoreTests04MockA0O"
+provides-member:
+- ["16HighwayCoreTests08HighwaysC0C", ""]
+- ["SS", ""]
+- ["11HighwayCore10InvocationC", ""]
+- ["16HighwayCoreTests04MockA0O", ""]
+provides-dynamic-lookup:
+- "setUp"
+- "testAbortIfDependencyFails"
+- "testCommandLineInvocationProvider"
+- "testDependenciesGetCorrectInvocation"
+- "testDirectDependenciesAreCalled"
+- "testEmptyHandler"
+- "testEmptyThrows"
+- "testErrorHandlerIsCalledWhenHighwayNotFound"
+- "testErrorHandlerIsCalledWhenHighwayThrows"
+- "testErrorHandlerIsNotCalledWhenHighwayNotFoundButUnrecgonizedHighwaysAreHandled"
+- "testListHighwaysAsJSON"
+- "testSimplePositiveCase"
+- "testThatArgumentsAreReceivedCorrectly"
+- "testThrowingEmptyHandler"
+depends-top-level:
+- !private "+"
+- "=="
+- !private "==>"
+- !private "Arguments"
+- !private "Array"
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- "CastingPrecedence"
+- !private "CommandLineInvocationProvider"
+- "FloatLiteralType"
+- "HighwayTypeProtocol"
+- "HighwaysTests"
+- "IntegerLiteralType"
+- "Invocation"
+- "InvocationProvider"
+- "MockHighway"
+- "String"
+- "StringLiteralType"
+- !private "UnicodeScalarType"
+- !private "XCTAssertEqual"
+- !private "XCTAssertFalse"
+- !private "XCTAssertNil"
+- !private "XCTAssertThrowsError"
+- !private "XCTAssertTrue"
+- !private "XCTFail"
+- "XCTestCase"
+- "_Highway"
+- !private "_findStringSwitchCase"
+- !private "~="
+depends-member:
+- !private ["SK", "Invocation"]
+- ["SK", "init"]
+- ["SK", "init"]
+- ["SK", "invocation"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "CommandLineInvocationProvider"]
+- !private ["s7CVarArgP", "Invocation"]
+- ["s7CVarArgP", "MockHighway"]
+- !private ["s7CVarArgP", "XCTAssertEqual"]
+- !private ["s7CVarArgP", "XCTAssertFalse"]
+- !private ["s7CVarArgP", "XCTAssertNil"]
+- !private ["s7CVarArgP", "XCTAssertThrowsError"]
+- !private ["s7CVarArgP", "XCTAssertTrue"]
+- !private ["s7CVarArgP", "XCTFail"]
+- ["s7CVarArgP", ""]
+- ["s7CVarArgP", "_Highway"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_useDefaultHighways"]
+- !private ["s7CVarArgP", "assertForOverFulfill"]
+- !private ["s7CVarArgP", "expectation"]
+- !private ["s7CVarArgP", "fulfill"]
+- !private ["s7CVarArgP", "highway"]
+- ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "invocation"]
+- !private ["s7CVarArgP", "setUp"]
+- !private ["s7CVarArgP", "waitForExpectations"]
+- !private ["Sl", "Invocation"]
+- ["Sl", "init"]
+- ["Sl", "init"]
+- ["Sl", "invocation"]
+- !private ["11HighwayCore29CommandLineInvocationProviderV", "init"]
+- !private ["11HighwayCore29CommandLineInvocationProviderV", "invocation"]
+- !private ["SL", "Invocation"]
+- ["SL", "init"]
+- ["SL", "init"]
+- ["SL", "invocation"]
+- !private ["s28CustomDebugStringConvertibleP", "CommandLineInvocationProvider"]
+- !private ["s28CustomDebugStringConvertibleP", "Invocation"]
+- ["s28CustomDebugStringConvertibleP", "MockHighway"]
+- !private ["s28CustomDebugStringConvertibleP", "XCTAssertEqual"]
+- !private ["s28CustomDebugStringConvertibleP", "XCTAssertFalse"]
+- !private ["s28CustomDebugStringConvertibleP", "XCTAssertNil"]
+- !private ["s28CustomDebugStringConvertibleP", "XCTAssertThrowsError"]
+- !private ["s28CustomDebugStringConvertibleP", "XCTAssertTrue"]
+- !private ["s28CustomDebugStringConvertibleP", "XCTFail"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- ["s28CustomDebugStringConvertibleP", "_Highway"]
+- !private ["s28CustomDebugStringConvertibleP", "_useDefaultHighways"]
+- !private ["s28CustomDebugStringConvertibleP", "assertForOverFulfill"]
+- !private ["s28CustomDebugStringConvertibleP", "expectation"]
+- !private ["s28CustomDebugStringConvertibleP", "fulfill"]
+- !private ["s28CustomDebugStringConvertibleP", "highway"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "invocation"]
+- !private ["s28CustomDebugStringConvertibleP", "setUp"]
+- !private ["s28CustomDebugStringConvertibleP", "waitForExpectations"]
+- !private ["s29CustomPlaygroundQuickLookableP", "Invocation"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "invocation"]
+- !private ["s17CustomReflectableP", "Invocation"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- ["s17CustomReflectableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- ["s17CustomReflectableP", "invocation"]
+- !private ["s23CustomStringConvertibleP", "CommandLineInvocationProvider"]
+- !private ["s23CustomStringConvertibleP", "Invocation"]
+- ["s23CustomStringConvertibleP", "MockHighway"]
+- !private ["s23CustomStringConvertibleP", "XCTAssertEqual"]
+- !private ["s23CustomStringConvertibleP", "XCTAssertFalse"]
+- !private ["s23CustomStringConvertibleP", "XCTAssertNil"]
+- !private ["s23CustomStringConvertibleP", "XCTAssertThrowsError"]
+- !private ["s23CustomStringConvertibleP", "XCTAssertTrue"]
+- !private ["s23CustomStringConvertibleP", "XCTFail"]
+- ["s23CustomStringConvertibleP", ""]
+- ["s23CustomStringConvertibleP", "_Highway"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "_useDefaultHighways"]
+- !private ["s23CustomStringConvertibleP", "assertForOverFulfill"]
+- !private ["s23CustomStringConvertibleP", "expectation"]
+- !private ["s23CustomStringConvertibleP", "fulfill"]
+- !private ["s23CustomStringConvertibleP", "highway"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "invocation"]
+- !private ["s23CustomStringConvertibleP", "setUp"]
+- !private ["s23CustomStringConvertibleP", "waitForExpectations"]
+- !private ["Se", "Invocation"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- ["Se", "init"]
+- ["Se", "init"]
+- ["Se", "invocation"]
+- !private ["SE", "Invocation"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- ["SE", "init"]
+- ["SE", "init"]
+- ["SE", "invocation"]
+- !private ["SQ", "CommandLineInvocationProvider"]
+- !private ["SQ", "Invocation"]
+- ["SQ", "MockHighway"]
+- ["SQ", "RawValue"]
+- !private ["SQ", "XCTAssertEqual"]
+- !private ["SQ", "XCTAssertFalse"]
+- !private ["SQ", "XCTAssertNil"]
+- !private ["SQ", "XCTAssertThrowsError"]
+- !private ["SQ", "XCTAssertTrue"]
+- !private ["SQ", "XCTFail"]
+- ["SQ", ""]
+- ["SQ", "_Default_RawValue"]
+- ["SQ", "_Highway"]
+- !private ["SQ", "_findStringSwitchCase"]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "_useDefaultHighways"]
+- !private ["SQ", "arguments"]
+- !private ["SQ", "assertForOverFulfill"]
+- !private ["SQ", "build"]
+- !private ["SQ", "clean"]
+- ["SQ", "examples"]
+- !private ["SQ", "expectation"]
+- !private ["SQ", "fulfill"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- !private ["SQ", "highway"]
+- ["SQ", "init"]
+- ["SQ", "init"]
+- ["SQ", "invocation"]
+- ["SQ", "name"]
+- ["SQ", "rawValue"]
+- !private ["SQ", "release"]
+- !private ["SQ", "setUp"]
+- !private ["SQ", "test"]
+- ["SQ", "usage"]
+- !private ["SQ", "verbose"]
+- !private ["SQ", "waitForExpectations"]
+- !private ["s5ErrorP", "Invocation"]
+- ["s5ErrorP", "init"]
+- ["s5ErrorP", "init"]
+- ["s5ErrorP", "invocation"]
+- !private ["s5ErrorP", "localizedDescription"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "Invocation"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "invocation"]
+- !private ["s26ExpressibleByStringLiteralP", "Invocation"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "invocation"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "Invocation"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "invocation"]
+- !private ["SH", "CommandLineInvocationProvider"]
+- !private ["SH", "Invocation"]
+- ["SH", "MockHighway"]
+- ["SH", "RawValue"]
+- !private ["SH", "XCTAssertEqual"]
+- !private ["SH", "XCTAssertFalse"]
+- !private ["SH", "XCTAssertNil"]
+- !private ["SH", "XCTAssertThrowsError"]
+- !private ["SH", "XCTAssertTrue"]
+- !private ["SH", "XCTFail"]
+- ["SH", ""]
+- ["SH", "_Default_RawValue"]
+- ["SH", "_Highway"]
+- !private ["SH", "_findStringSwitchCase"]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "_useDefaultHighways"]
+- !private ["SH", "assertForOverFulfill"]
+- !private ["SH", "build"]
+- !private ["SH", "clean"]
+- ["SH", "examples"]
+- !private ["SH", "expectation"]
+- !private ["SH", "fulfill"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- !private ["SH", "highway"]
+- ["SH", "init"]
+- ["SH", "init"]
+- ["SH", "invocation"]
+- ["SH", "name"]
+- ["SH", "rawValue"]
+- !private ["SH", "release"]
+- !private ["SH", "setUp"]
+- !private ["SH", "test"]
+- ["SH", "usage"]
+- !private ["SH", "waitForExpectations"]
+- !private ["s6HasherV", "combine"]
+- ["11HighwayCore0A12TypeProtocolP", "RawValue"]
+- ["11HighwayCore0A12TypeProtocolP", ""]
+- ["11HighwayCore0A12TypeProtocolP", "_Default_RawValue"]
+- !private ["11HighwayCore0A12TypeProtocolP", "_findStringSwitchCase"]
+- !private ["11HighwayCore0A12TypeProtocolP", "build"]
+- !private ["11HighwayCore0A12TypeProtocolP", "clean"]
+- ["11HighwayCore0A12TypeProtocolP", "examples"]
+- ["11HighwayCore0A12TypeProtocolP", "hash"]
+- ["11HighwayCore0A12TypeProtocolP", "hashValue"]
+- ["11HighwayCore0A12TypeProtocolP", "init"]
+- ["11HighwayCore0A12TypeProtocolP", "name"]
+- ["11HighwayCore0A12TypeProtocolP", "rawValue"]
+- !private ["11HighwayCore0A12TypeProtocolP", "release"]
+- !private ["11HighwayCore0A12TypeProtocolP", "test"]
+- ["11HighwayCore0A12TypeProtocolP", "usage"]
+- !private ["16HighwayCoreTests08HighwaysC0C", "Arguments"]
+- !private ["16HighwayCoreTests08HighwaysC0C", "CommandLineInvocationProvider"]
+- !private ["16HighwayCoreTests08HighwaysC0C", "Invocation"]
+- ["16HighwayCoreTests08HighwaysC0C", "MockHighway"]
+- !private ["16HighwayCoreTests08HighwaysC0C", "String"]
+- !private ["16HighwayCoreTests08HighwaysC0C", "XCTAssertEqual"]
+- !private ["16HighwayCoreTests08HighwaysC0C", "XCTAssertFalse"]
+- !private ["16HighwayCoreTests08HighwaysC0C", "XCTAssertNil"]
+- !private ["16HighwayCoreTests08HighwaysC0C", "XCTAssertThrowsError"]
+- !private ["16HighwayCoreTests08HighwaysC0C", "XCTAssertTrue"]
+- !private ["16HighwayCoreTests08HighwaysC0C", "XCTFail"]
+- ["16HighwayCoreTests08HighwaysC0C", "_Highway"]
+- !private ["16HighwayCoreTests08HighwaysC0C", "_useDefaultHighways"]
+- !private ["16HighwayCoreTests08HighwaysC0C", "expectation"]
+- !private ["16HighwayCoreTests08HighwaysC0C", "highway"]
+- ["16HighwayCoreTests08HighwaysC0C", "init"]
+- ["16HighwayCoreTests08HighwaysC0C", "setUp"]
+- ["16HighwayCoreTests08HighwaysC0C", "testAbortIfDependencyFails"]
+- ["16HighwayCoreTests08HighwaysC0C", "testCommandLineInvocationProvider"]
+- ["16HighwayCoreTests08HighwaysC0C", "testDependenciesGetCorrectInvocation"]
+- ["16HighwayCoreTests08HighwaysC0C", "testDirectDependenciesAreCalled"]
+- ["16HighwayCoreTests08HighwaysC0C", "testEmptyHandler"]
+- ["16HighwayCoreTests08HighwaysC0C", "testEmptyThrows"]
+- ["16HighwayCoreTests08HighwaysC0C", "testErrorHandlerIsCalledWhenHighwayNotFound"]
+- ["16HighwayCoreTests08HighwaysC0C", "testErrorHandlerIsCalledWhenHighwayThrows"]
+- ["16HighwayCoreTests08HighwaysC0C", "testErrorHandlerIsNotCalledWhenHighwayNotFoundButUnrecgonizedHighwaysAreHandled"]
+- ["16HighwayCoreTests08HighwaysC0C", "testListHighwaysAsJSON"]
+- ["16HighwayCoreTests08HighwaysC0C", "testSimplePositiveCase"]
+- ["16HighwayCoreTests08HighwaysC0C", "testThatArgumentsAreReceivedCorrectly"]
+- ["16HighwayCoreTests08HighwaysC0C", "testThrowingEmptyHandler"]
+- !private ["16HighwayCoreTests08HighwaysC0C", "waitForExpectations"]
+- ["11HighwayCore10InvocationC", "Invocation"]
+- !private ["11HighwayCore10InvocationC", "arguments"]
+- ["11HighwayCore10InvocationC", "deinit"]
+- !private ["11HighwayCore10InvocationC", "highway"]
+- !private ["11HighwayCore10InvocationC", "init"]
+- ["11HighwayCore10InvocationC", "invocation"]
+- !private ["11HighwayCore10InvocationC", "verbose"]
+- !private ["11HighwayCore18InvocationProviderP", "Invocation"]
+- ["11HighwayCore18InvocationProviderP", ""]
+- !private ["11HighwayCore18InvocationProviderP", "arguments"]
+- !private ["11HighwayCore18InvocationProviderP", "highway"]
+- ["11HighwayCore18InvocationProviderP", "init"]
+- ["11HighwayCore18InvocationProviderP", "init"]
+- ["11HighwayCore18InvocationProviderP", "invocation"]
+- !private ["11HighwayCore18InvocationProviderP", "verbose"]
+- !private ["9Arguments7KeyableP", "Invocation"]
+- ["9Arguments7KeyableP", "init"]
+- ["9Arguments7KeyableP", "init"]
+- ["9Arguments7KeyableP", "invocation"]
+- !private ["10Foundation14LocalizedErrorP", "Invocation"]
+- ["10Foundation14LocalizedErrorP", "init"]
+- ["10Foundation14LocalizedErrorP", "init"]
+- ["10Foundation14LocalizedErrorP", "invocation"]
+- !private ["s25LosslessStringConvertibleP", "Invocation"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s25LosslessStringConvertibleP", "invocation"]
+- !private ["s10MirrorPathP", "Invocation"]
+- ["s10MirrorPathP", "init"]
+- ["s10MirrorPathP", "init"]
+- ["s10MirrorPathP", "invocation"]
+- ["16HighwayCoreTests04MockA0O", "RawValue"]
+- ["16HighwayCoreTests04MockA0O", "_Default_RawValue"]
+- !private ["16HighwayCoreTests04MockA0O", "_findStringSwitchCase"]
+- ["16HighwayCoreTests04MockA0O", "build"]
+- ["16HighwayCoreTests04MockA0O", "clean"]
+- ["16HighwayCoreTests04MockA0O", "deinit"]
+- ["16HighwayCoreTests04MockA0O", "examples"]
+- ["16HighwayCoreTests04MockA0O", "hash"]
+- ["16HighwayCoreTests04MockA0O", "hashValue"]
+- ["16HighwayCoreTests04MockA0O", "init"]
+- ["16HighwayCoreTests04MockA0O", "name"]
+- ["16HighwayCoreTests04MockA0O", "rawValue"]
+- ["16HighwayCoreTests04MockA0O", "release"]
+- ["16HighwayCoreTests04MockA0O", "test"]
+- ["16HighwayCoreTests04MockA0O", "usage"]
+- !private ["So8NSObjectC", "Arguments"]
+- !private ["So8NSObjectC", "CommandLineInvocationProvider"]
+- !private ["So8NSObjectC", "Invocation"]
+- ["So8NSObjectC", "MockHighway"]
+- !private ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "XCTAssertEqual"]
+- !private ["So8NSObjectC", "XCTAssertFalse"]
+- !private ["So8NSObjectC", "XCTAssertNil"]
+- !private ["So8NSObjectC", "XCTAssertThrowsError"]
+- !private ["So8NSObjectC", "XCTAssertTrue"]
+- !private ["So8NSObjectC", "XCTFail"]
+- ["So8NSObjectC", "_Highway"]
+- ["So8NSObjectC", "_useDefaultHighways"]
+- !private ["So8NSObjectC", "assertForOverFulfill"]
+- !private ["So8NSObjectC", "expectation"]
+- !private ["So8NSObjectC", "fulfill"]
+- ["So8NSObjectC", "highway"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "setUp"]
+- ["So8NSObjectC", "testAbortIfDependencyFails"]
+- ["So8NSObjectC", "testCommandLineInvocationProvider"]
+- ["So8NSObjectC", "testDependenciesGetCorrectInvocation"]
+- ["So8NSObjectC", "testDirectDependenciesAreCalled"]
+- ["So8NSObjectC", "testEmptyHandler"]
+- ["So8NSObjectC", "testEmptyThrows"]
+- ["So8NSObjectC", "testErrorHandlerIsCalledWhenHighwayNotFound"]
+- ["So8NSObjectC", "testErrorHandlerIsCalledWhenHighwayThrows"]
+- ["So8NSObjectC", "testErrorHandlerIsNotCalledWhenHighwayNotFoundButUnrecgonizedHighwaysAreHandled"]
+- ["So8NSObjectC", "testListHighwaysAsJSON"]
+- ["So8NSObjectC", "testSimplePositiveCase"]
+- ["So8NSObjectC", "testThatArgumentsAreReceivedCorrectly"]
+- ["So8NSObjectC", "testThrowingEmptyHandler"]
+- !private ["So8NSObjectC", "waitForExpectations"]
+- !private ["So8NSObjectP", "CommandLineInvocationProvider"]
+- !private ["So8NSObjectP", "Invocation"]
+- ["So8NSObjectP", "MockHighway"]
+- !private ["So8NSObjectP", "XCTAssertEqual"]
+- !private ["So8NSObjectP", "XCTAssertFalse"]
+- !private ["So8NSObjectP", "XCTAssertNil"]
+- !private ["So8NSObjectP", "XCTAssertThrowsError"]
+- !private ["So8NSObjectP", "XCTAssertTrue"]
+- !private ["So8NSObjectP", "XCTFail"]
+- ["So8NSObjectP", ""]
+- ["So8NSObjectP", "_Highway"]
+- !private ["So8NSObjectP", "_useDefaultHighways"]
+- !private ["So8NSObjectP", "assertForOverFulfill"]
+- !private ["So8NSObjectP", "expectation"]
+- !private ["So8NSObjectP", "fulfill"]
+- !private ["So8NSObjectP", "highway"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "setUp"]
+- !private ["So8NSObjectP", "waitForExpectations"]
+- !private ["8Terminal9PrintableP", "Invocation"]
+- ["8Terminal9PrintableP", "init"]
+- ["8Terminal9PrintableP", "init"]
+- ["8Terminal9PrintableP", "invocation"]
+- !private ["Sm", "Invocation"]
+- ["Sm", "init"]
+- ["Sm", "init"]
+- ["Sm", "invocation"]
+- !private ["11HighwayCore01_A0C3RawC", "depends"]
+- ["SY", "RawValue"]
+- ["SY", ""]
+- ["SY", "_Default_RawValue"]
+- !private ["SY", "_findStringSwitchCase"]
+- !private ["SY", "build"]
+- !private ["SY", "clean"]
+- ["SY", "examples"]
+- ["SY", "hash"]
+- ["SY", "hashValue"]
+- ["SY", "init"]
+- ["SY", "name"]
+- ["SY", "rawValue"]
+- !private ["SY", "release"]
+- !private ["SY", "test"]
+- ["SY", "usage"]
+- !private ["ST", "Invocation"]
+- ["ST", "init"]
+- ["ST", "init"]
+- ["ST", "invocation"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s12StaticStringV", "init"]
+- ["SS", "Invocation"]
+- ["SS", "deinit"]
+- ["SS", "init"]
+- ["SS", "init"]
+- ["SS", "invocation"]
+- !private ["Sy", "Invocation"]
+- ["Sy", "init"]
+- ["Sy", "init"]
+- ["Sy", "invocation"]
+- !private ["s16TextOutputStreamP", "Invocation"]
+- ["s16TextOutputStreamP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s16TextOutputStreamP", "invocation"]
+- !private ["s20TextOutputStreamableP", "Invocation"]
+- ["s20TextOutputStreamableP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- ["s20TextOutputStreamableP", "invocation"]
+- !private ["So11XCTActivityP", "CommandLineInvocationProvider"]
+- !private ["So11XCTActivityP", "Invocation"]
+- ["So11XCTActivityP", "MockHighway"]
+- !private ["So11XCTActivityP", "XCTAssertEqual"]
+- !private ["So11XCTActivityP", "XCTAssertFalse"]
+- !private ["So11XCTActivityP", "XCTAssertNil"]
+- !private ["So11XCTActivityP", "XCTAssertThrowsError"]
+- !private ["So11XCTActivityP", "XCTAssertTrue"]
+- !private ["So11XCTActivityP", "XCTFail"]
+- ["So11XCTActivityP", ""]
+- ["So11XCTActivityP", "_Highway"]
+- !private ["So11XCTActivityP", "_useDefaultHighways"]
+- !private ["So11XCTActivityP", "expectation"]
+- !private ["So11XCTActivityP", "highway"]
+- !private ["So11XCTActivityP", "init"]
+- !private ["So11XCTActivityP", "init"]
+- !private ["So11XCTActivityP", "setUp"]
+- !private ["So11XCTActivityP", "waitForExpectations"]
+- !private ["So17XCTWaiterDelegateP", "CommandLineInvocationProvider"]
+- !private ["So17XCTWaiterDelegateP", "Invocation"]
+- ["So17XCTWaiterDelegateP", "MockHighway"]
+- !private ["So17XCTWaiterDelegateP", "XCTAssertEqual"]
+- !private ["So17XCTWaiterDelegateP", "XCTAssertFalse"]
+- !private ["So17XCTWaiterDelegateP", "XCTAssertNil"]
+- !private ["So17XCTWaiterDelegateP", "XCTAssertThrowsError"]
+- !private ["So17XCTWaiterDelegateP", "XCTAssertTrue"]
+- !private ["So17XCTWaiterDelegateP", "XCTFail"]
+- ["So17XCTWaiterDelegateP", ""]
+- ["So17XCTWaiterDelegateP", "_Highway"]
+- !private ["So17XCTWaiterDelegateP", "_useDefaultHighways"]
+- !private ["So17XCTWaiterDelegateP", "expectation"]
+- !private ["So17XCTWaiterDelegateP", "highway"]
+- !private ["So17XCTWaiterDelegateP", "init"]
+- !private ["So17XCTWaiterDelegateP", "init"]
+- !private ["So17XCTWaiterDelegateP", "setUp"]
+- !private ["So17XCTWaiterDelegateP", "waitForExpectations"]
+- !private ["So6XCTestC", "Arguments"]
+- !private ["So6XCTestC", "CommandLineInvocationProvider"]
+- !private ["So6XCTestC", "Invocation"]
+- ["So6XCTestC", "MockHighway"]
+- !private ["So6XCTestC", "String"]
+- !private ["So6XCTestC", "XCTAssertEqual"]
+- !private ["So6XCTestC", "XCTAssertFalse"]
+- !private ["So6XCTestC", "XCTAssertNil"]
+- !private ["So6XCTestC", "XCTAssertThrowsError"]
+- !private ["So6XCTestC", "XCTAssertTrue"]
+- !private ["So6XCTestC", "XCTFail"]
+- ["So6XCTestC", "_Highway"]
+- ["So6XCTestC", "_useDefaultHighways"]
+- !private ["So6XCTestC", "expectation"]
+- ["So6XCTestC", "highway"]
+- ["So6XCTestC", "init"]
+- !private ["So6XCTestC", "init"]
+- ["So6XCTestC", "setUp"]
+- ["So6XCTestC", "testAbortIfDependencyFails"]
+- ["So6XCTestC", "testCommandLineInvocationProvider"]
+- ["So6XCTestC", "testDependenciesGetCorrectInvocation"]
+- ["So6XCTestC", "testDirectDependenciesAreCalled"]
+- ["So6XCTestC", "testEmptyHandler"]
+- ["So6XCTestC", "testEmptyThrows"]
+- ["So6XCTestC", "testErrorHandlerIsCalledWhenHighwayNotFound"]
+- ["So6XCTestC", "testErrorHandlerIsCalledWhenHighwayThrows"]
+- ["So6XCTestC", "testErrorHandlerIsNotCalledWhenHighwayNotFoundButUnrecgonizedHighwaysAreHandled"]
+- ["So6XCTestC", "testListHighwaysAsJSON"]
+- ["So6XCTestC", "testSimplePositiveCase"]
+- ["So6XCTestC", "testThatArgumentsAreReceivedCorrectly"]
+- ["So6XCTestC", "testThrowingEmptyHandler"]
+- !private ["So6XCTestC", "waitForExpectations"]
+- !private ["So10XCTestCaseC", "Arguments"]
+- !private ["So10XCTestCaseC", "CommandLineInvocationProvider"]
+- !private ["So10XCTestCaseC", "Invocation"]
+- ["So10XCTestCaseC", "MockHighway"]
+- !private ["So10XCTestCaseC", "String"]
+- !private ["So10XCTestCaseC", "XCTAssertEqual"]
+- !private ["So10XCTestCaseC", "XCTAssertFalse"]
+- !private ["So10XCTestCaseC", "XCTAssertNil"]
+- !private ["So10XCTestCaseC", "XCTAssertThrowsError"]
+- !private ["So10XCTestCaseC", "XCTAssertTrue"]
+- !private ["So10XCTestCaseC", "XCTFail"]
+- ["So10XCTestCaseC", ""]
+- ["So10XCTestCaseC", "_Highway"]
+- ["So10XCTestCaseC", "_useDefaultHighways"]
+- !private ["So10XCTestCaseC", "expectation"]
+- ["So10XCTestCaseC", "highway"]
+- ["So10XCTestCaseC", "init"]
+- !private ["So10XCTestCaseC", "init"]
+- ["So10XCTestCaseC", "setUp"]
+- ["So10XCTestCaseC", "testAbortIfDependencyFails"]
+- ["So10XCTestCaseC", "testCommandLineInvocationProvider"]
+- ["So10XCTestCaseC", "testDependenciesGetCorrectInvocation"]
+- ["So10XCTestCaseC", "testDirectDependenciesAreCalled"]
+- ["So10XCTestCaseC", "testEmptyHandler"]
+- ["So10XCTestCaseC", "testEmptyThrows"]
+- ["So10XCTestCaseC", "testErrorHandlerIsCalledWhenHighwayNotFound"]
+- ["So10XCTestCaseC", "testErrorHandlerIsCalledWhenHighwayThrows"]
+- ["So10XCTestCaseC", "testErrorHandlerIsNotCalledWhenHighwayNotFoundButUnrecgonizedHighwaysAreHandled"]
+- ["So10XCTestCaseC", "testListHighwaysAsJSON"]
+- ["So10XCTestCaseC", "testSimplePositiveCase"]
+- ["So10XCTestCaseC", "testThatArgumentsAreReceivedCorrectly"]
+- ["So10XCTestCaseC", "testThrowingEmptyHandler"]
+- !private ["So10XCTestCaseC", "waitForExpectations"]
+- !private ["So17XCTestExpectationC", "assertForOverFulfill"]
+- !private ["So17XCTestExpectationC", "fulfill"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "Invocation"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "invocation"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "Invocation"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "invocation"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "Invocation"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "invocation"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "Invocation"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "invocation"]
+- !private ["s33_ExpressibleByStringInterpolationP", "Invocation"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "invocation"]
+- !private ["11HighwayCore01_A0C", "go"]
+- ["11HighwayCore01_A0C", "init"]
+- !private ["11HighwayCore01_A0C", "onEmptyCommand"]
+- !private ["11HighwayCore01_A0C", "onError"]
+- !private ["11HighwayCore01_A0C", "onUnrecognizedCommand"]
+- !private ["11HighwayCore01_A0C", "result"]
+- !private ["11HighwayCore01_A0C", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CommandLineInvocationProvider"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Invocation"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "MockHighway"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "XCTAssertEqual"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "XCTAssertFalse"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "XCTAssertNil"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "XCTAssertThrowsError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "XCTAssertTrue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "XCTFail"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- ["10Foundation27_KeyValueCodingAndObservingP", "_Highway"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_useDefaultHighways"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "assertForOverFulfill"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "expectation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fulfill"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "highway"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setUp"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "waitForExpectations"]
+- !private ["s21_ObjectiveCBridgeableP", "Invocation"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s21_ObjectiveCBridgeableP", "invocation"]
+- !private ["s16_SwiftStringViewP", "Invocation"]
+- ["s16_SwiftStringViewP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+- ["s16_SwiftStringViewP", "invocation"]
+depends-nominal:
+- "SK"
+- !private "Sb"
+- "s7CVarArgP"
+- "Sl"
+- !private "11HighwayCore29CommandLineInvocationProviderV"
+- "SL"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- "SE"
+- "SQ"
+- "s5ErrorP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "SH"
+- !private "s6HasherV"
+- "11HighwayCore0A12TypeProtocolP"
+- "16HighwayCoreTests08HighwaysC0C"
+- "11HighwayCore10InvocationC"
+- "11HighwayCore18InvocationProviderP"
+- "9Arguments7KeyableP"
+- "10Foundation14LocalizedErrorP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- "16HighwayCoreTests04MockA0O"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "8Terminal9PrintableP"
+- "Sm"
+- !private "11HighwayCore01_A0C3RawC"
+- "SY"
+- "ST"
+- !private "s12StaticStringV"
+- "SS"
+- "Sy"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- "So11XCTActivityP"
+- "So17XCTWaiterDelegateP"
+- "So6XCTestC"
+- "So10XCTestCaseC"
+- !private "So17XCTestExpectationC"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "11HighwayCore01_A0C"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/os.apinotesc"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/POSIX.framework/Modules/POSIX.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Carthage/Build/Mac/ZFile.framework/Modules/ZFile.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/HighwayCore.framework/Modules/HighwayCore.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Task.framework/Modules/Task.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Terminal.framework/Modules/Terminal.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Url.framework/Modules/Url.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/SourceryAutoProtocols.framework/Modules/SourceryAutoProtocols.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Errors.framework/Modules/Errors.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Arguments.framework/Modules/Arguments.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Result.framework/Modules/Result.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/os.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XCTest.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "95002d7349cc0423eb90c96b92139789"

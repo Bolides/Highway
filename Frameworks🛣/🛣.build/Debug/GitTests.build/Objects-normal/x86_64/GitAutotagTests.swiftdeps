@@ -1,0 +1,393 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GitAutotagTests"
+provides-nominal:
+- "8GitTests0a7AutotagB0C"
+provides-member:
+- ["8GitTests0a7AutotagB0C", ""]
+provides-dynamic-lookup:
+- "setUp"
+- "testAutotag"
+depends-top-level:
+- !private "Absolute"
+- "AssignmentPrecedence"
+- !private "Data"
+- !private "FloatLiteralType"
+- !private "GitAutotag"
+- "GitAutotagTests"
+- "InMemoryFileSystem"
+- !private "IntegerLiteralType"
+- "MockSystem"
+- !private "StringLiteralType"
+- !private "XCTAssertNoThrow"
+- !private "XCTAssertThrowsError"
+- !private "XCTFail"
+- "XCTestCase"
+depends-member:
+- !private ["3Url8AbsoluteV", "appending"]
+- !private ["3Url8AbsoluteV", "init"]
+- !private ["3Url8AbsoluteV", "init"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
+- !private ["s7CVarArgP", "Absolute"]
+- !private ["s7CVarArgP", "Data"]
+- !private ["s7CVarArgP", "GitAutotag"]
+- ["s7CVarArgP", "InMemoryFileSystem"]
+- ["s7CVarArgP", "MockSystem"]
+- !private ["s7CVarArgP", "XCTAssertNoThrow"]
+- !private ["s7CVarArgP", "XCTAssertThrowsError"]
+- !private ["s7CVarArgP", "XCTFail"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_makeGitAutotagAvailable"]
+- !private ["s7CVarArgP", "fs"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "setUp"]
+- !private ["s7CVarArgP", "system"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "Absolute"]
+- !private ["s28CustomDebugStringConvertibleP", "Data"]
+- !private ["s28CustomDebugStringConvertibleP", "GitAutotag"]
+- ["s28CustomDebugStringConvertibleP", "InMemoryFileSystem"]
+- ["s28CustomDebugStringConvertibleP", "MockSystem"]
+- !private ["s28CustomDebugStringConvertibleP", "XCTAssertNoThrow"]
+- !private ["s28CustomDebugStringConvertibleP", "XCTAssertThrowsError"]
+- !private ["s28CustomDebugStringConvertibleP", "XCTFail"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "_makeGitAutotagAvailable"]
+- !private ["s28CustomDebugStringConvertibleP", "appending"]
+- !private ["s28CustomDebugStringConvertibleP", "fs"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "setUp"]
+- !private ["s28CustomDebugStringConvertibleP", "system"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "Absolute"]
+- !private ["s23CustomStringConvertibleP", "Data"]
+- !private ["s23CustomStringConvertibleP", "GitAutotag"]
+- ["s23CustomStringConvertibleP", "InMemoryFileSystem"]
+- ["s23CustomStringConvertibleP", "MockSystem"]
+- !private ["s23CustomStringConvertibleP", "XCTAssertNoThrow"]
+- !private ["s23CustomStringConvertibleP", "XCTAssertThrowsError"]
+- !private ["s23CustomStringConvertibleP", "XCTFail"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_makeGitAutotagAvailable"]
+- !private ["s23CustomStringConvertibleP", "appending"]
+- !private ["s23CustomStringConvertibleP", "fs"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "setUp"]
+- !private ["s23CustomStringConvertibleP", "system"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SQ", "Absolute"]
+- !private ["SQ", "Data"]
+- !private ["SQ", "GitAutotag"]
+- ["SQ", "InMemoryFileSystem"]
+- ["SQ", "MockSystem"]
+- !private ["SQ", "XCTAssertNoThrow"]
+- !private ["SQ", "XCTAssertThrowsError"]
+- !private ["SQ", "XCTFail"]
+- ["SQ", ""]
+- !private ["SQ", "_makeGitAutotagAvailable"]
+- !private ["SQ", "appending"]
+- !private ["SQ", "fs"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "setUp"]
+- !private ["SQ", "system"]
+- !private ["s5ErrorP", "init"]
+- !private ["s5ErrorP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "appending"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "appending"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "appending"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["3Git0A7AutotagC", "init"]
+- !private ["8GitTests0a7AutotagB0C", "Absolute"]
+- !private ["8GitTests0a7AutotagB0C", "Data"]
+- !private ["8GitTests0a7AutotagB0C", "GitAutotag"]
+- ["8GitTests0a7AutotagB0C", "InMemoryFileSystem"]
+- ["8GitTests0a7AutotagB0C", "MockSystem"]
+- !private ["8GitTests0a7AutotagB0C", "XCTAssertNoThrow"]
+- !private ["8GitTests0a7AutotagB0C", "XCTAssertThrowsError"]
+- !private ["8GitTests0a7AutotagB0C", "XCTFail"]
+- !private ["8GitTests0a7AutotagB0C", "_makeGitAutotagAvailable"]
+- !private ["8GitTests0a7AutotagB0C", "fs"]
+- ["8GitTests0a7AutotagB0C", "init"]
+- ["8GitTests0a7AutotagB0C", "setUp"]
+- !private ["8GitTests0a7AutotagB0C", "system"]
+- ["8GitTests0a7AutotagB0C", "testAutotag"]
+- !private ["SH", "Absolute"]
+- !private ["SH", "Data"]
+- !private ["SH", "GitAutotag"]
+- ["SH", "InMemoryFileSystem"]
+- ["SH", "MockSystem"]
+- !private ["SH", "XCTAssertNoThrow"]
+- !private ["SH", "XCTAssertThrowsError"]
+- !private ["SH", "XCTFail"]
+- ["SH", ""]
+- !private ["SH", "_makeGitAutotagAvailable"]
+- !private ["SH", "appending"]
+- !private ["SH", "fs"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "setUp"]
+- !private ["SH", "system"]
+- !private ["9Arguments7KeyableP", "init"]
+- !private ["9Arguments7KeyableP", "init"]
+- !private ["10Foundation14LocalizedErrorP", "init"]
+- !private ["10Foundation14LocalizedErrorP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["SM", "init"]
+- !private ["So8NSObjectC", "Absolute"]
+- !private ["So8NSObjectC", "Data"]
+- !private ["So8NSObjectC", "GitAutotag"]
+- ["So8NSObjectC", "InMemoryFileSystem"]
+- ["So8NSObjectC", "MockSystem"]
+- !private ["So8NSObjectC", "XCTAssertNoThrow"]
+- !private ["So8NSObjectC", "XCTAssertThrowsError"]
+- !private ["So8NSObjectC", "XCTFail"]
+- ["So8NSObjectC", "_makeGitAutotagAvailable"]
+- !private ["So8NSObjectC", "fs"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "setUp"]
+- !private ["So8NSObjectC", "system"]
+- ["So8NSObjectC", "testAutotag"]
+- !private ["So8NSObjectP", "Absolute"]
+- !private ["So8NSObjectP", "Data"]
+- !private ["So8NSObjectP", "GitAutotag"]
+- ["So8NSObjectP", "InMemoryFileSystem"]
+- ["So8NSObjectP", "MockSystem"]
+- !private ["So8NSObjectP", "XCTAssertNoThrow"]
+- !private ["So8NSObjectP", "XCTAssertThrowsError"]
+- !private ["So8NSObjectP", "XCTFail"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "_makeGitAutotagAvailable"]
+- !private ["So8NSObjectP", "fs"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "setUp"]
+- !private ["So8NSObjectP", "system"]
+- !private ["8Terminal9PrintableP", "init"]
+- !private ["8Terminal9PrintableP", "init"]
+- !private ["Sk", "init"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["SS", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So11XCTActivityP", "Absolute"]
+- !private ["So11XCTActivityP", "Data"]
+- !private ["So11XCTActivityP", "GitAutotag"]
+- ["So11XCTActivityP", "InMemoryFileSystem"]
+- ["So11XCTActivityP", "MockSystem"]
+- !private ["So11XCTActivityP", "XCTAssertNoThrow"]
+- !private ["So11XCTActivityP", "XCTAssertThrowsError"]
+- !private ["So11XCTActivityP", "XCTFail"]
+- ["So11XCTActivityP", ""]
+- !private ["So11XCTActivityP", "_makeGitAutotagAvailable"]
+- !private ["So11XCTActivityP", "fs"]
+- !private ["So11XCTActivityP", "init"]
+- !private ["So11XCTActivityP", "init"]
+- !private ["So11XCTActivityP", "setUp"]
+- !private ["So11XCTActivityP", "system"]
+- !private ["So17XCTWaiterDelegateP", "Absolute"]
+- !private ["So17XCTWaiterDelegateP", "Data"]
+- !private ["So17XCTWaiterDelegateP", "GitAutotag"]
+- ["So17XCTWaiterDelegateP", "InMemoryFileSystem"]
+- ["So17XCTWaiterDelegateP", "MockSystem"]
+- !private ["So17XCTWaiterDelegateP", "XCTAssertNoThrow"]
+- !private ["So17XCTWaiterDelegateP", "XCTAssertThrowsError"]
+- !private ["So17XCTWaiterDelegateP", "XCTFail"]
+- ["So17XCTWaiterDelegateP", ""]
+- !private ["So17XCTWaiterDelegateP", "_makeGitAutotagAvailable"]
+- !private ["So17XCTWaiterDelegateP", "fs"]
+- !private ["So17XCTWaiterDelegateP", "init"]
+- !private ["So17XCTWaiterDelegateP", "init"]
+- !private ["So17XCTWaiterDelegateP", "setUp"]
+- !private ["So17XCTWaiterDelegateP", "system"]
+- !private ["So6XCTestC", "Absolute"]
+- !private ["So6XCTestC", "Data"]
+- !private ["So6XCTestC", "GitAutotag"]
+- ["So6XCTestC", "InMemoryFileSystem"]
+- ["So6XCTestC", "MockSystem"]
+- !private ["So6XCTestC", "XCTAssertNoThrow"]
+- !private ["So6XCTestC", "XCTAssertThrowsError"]
+- !private ["So6XCTestC", "XCTFail"]
+- ["So6XCTestC", "_makeGitAutotagAvailable"]
+- !private ["So6XCTestC", "fs"]
+- ["So6XCTestC", "init"]
+- !private ["So6XCTestC", "init"]
+- ["So6XCTestC", "setUp"]
+- !private ["So6XCTestC", "system"]
+- ["So6XCTestC", "testAutotag"]
+- !private ["So10XCTestCaseC", "Absolute"]
+- !private ["So10XCTestCaseC", "Data"]
+- !private ["So10XCTestCaseC", "GitAutotag"]
+- ["So10XCTestCaseC", "InMemoryFileSystem"]
+- ["So10XCTestCaseC", "MockSystem"]
+- !private ["So10XCTestCaseC", "XCTAssertNoThrow"]
+- !private ["So10XCTestCaseC", "XCTAssertThrowsError"]
+- !private ["So10XCTestCaseC", "XCTFail"]
+- ["So10XCTestCaseC", ""]
+- ["So10XCTestCaseC", "_makeGitAutotagAvailable"]
+- !private ["So10XCTestCaseC", "fs"]
+- ["So10XCTestCaseC", "init"]
+- !private ["So10XCTestCaseC", "init"]
+- ["So10XCTestCaseC", "setUp"]
+- !private ["So10XCTestCaseC", "system"]
+- ["So10XCTestCaseC", "testAutotag"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Absolute"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Data"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "GitAutotag"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "InMemoryFileSystem"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "MockSystem"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "XCTAssertNoThrow"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "XCTAssertThrowsError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "XCTFail"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_makeGitAutotagAvailable"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fs"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setUp"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "system"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "3Url8AbsoluteV"
+- !private "SK"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- !private "s5ErrorP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "3Git0A7AutotagC"
+- "8GitTests0a7AutotagB0C"
+- "SH"
+- !private "9Arguments7KeyableP"
+- !private "10Foundation14LocalizedErrorP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "SM"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "8Terminal9PrintableP"
+- !private "Sk"
+- !private "Sm"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "ST"
+- !private "s12StaticStringV"
+- !private "SS"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- "So11XCTActivityP"
+- "So17XCTWaiterDelegateP"
+- "So6XCTestC"
+- "So10XCTestCaseC"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/os.apinotesc"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/POSIX.framework/Modules/POSIX.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Carthage/Build/Mac/ZFile.framework/Modules/ZFile.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Task.framework/Modules/Task.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Terminal.framework/Modules/Terminal.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Url.framework/Modules/Url.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/SourceryAutoProtocols.framework/Modules/SourceryAutoProtocols.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Errors.framework/Modules/Errors.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Arguments.framework/Modules/Arguments.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Git.framework/Modules/Git.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Result.framework/Modules/Result.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/os.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XCTest.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "32af87082478cd71d95138e1b785464c"

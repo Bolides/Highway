@@ -1,0 +1,369 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SelfUpdaterProtocol"
+- "SelfUpdater"
+provides-nominal:
+- "5HWKit19SelfUpdaterProtocolP"
+- "5HWKit11SelfUpdaterC"
+provides-member:
+- ["5HWKit19SelfUpdaterProtocolP", ""]
+- ["5HWKit11SelfUpdaterC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "+"
+- !private "=="
+- !private "Arguments"
+- !private "Array"
+- "AssignmentPrecedence"
+- "AutoGenerateProtocol"
+- "AutoMockable"
+- !private "BooleanLiteralType"
+- "Context"
+- "ContextProtocol"
+- !private "Date"
+- !private "DispatchQueue"
+- !private "DispatchSemaphore"
+- !private "EXIT_SUCCESS"
+- !private "FloatLiteralType"
+- !private "Git"
+- "GitTool"
+- "HomeBundle"
+- "HomeBundleProtocol"
+- !private "IntegerLiteralType"
+- "SelfUpdater"
+- "SelfUpdaterProtocol"
+- !private "StringLiteralType"
+- !private "Task"
+- "TernaryPrecedence"
+- !private "exit"
+depends-member:
+- !private ["9ArgumentsAAV", "init"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "Arguments"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "Context"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "Date"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "DispatchQueue"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "DispatchSemaphore"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "EXIT_SUCCESS"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "Git"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "Task"]
+- ["21SourceryAutoProtocols0B16GenerateProtocolP", ""]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "clone"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "context"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "exit"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "git"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "homeBundle"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "init"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "pull"]
+- ["21SourceryAutoProtocols0B8MockableP", "ContextProtocol"]
+- ["21SourceryAutoProtocols0B8MockableP", "GitTool"]
+- ["21SourceryAutoProtocols0B8MockableP", "HomeBundleProtocol"]
+- ["21SourceryAutoProtocols0B8MockableP", ""]
+- !private ["21SourceryAutoProtocols0B8MockableP", "clone"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "executableProvider"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "execute"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "executor"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "fileSystem"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "init"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "localCloneUrl"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "pull"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "asyncAfter"]
+- !private ["s7CVarArgP", "global"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "wait"]
+- !private ["3Git12CloneOptionsV", "init"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "now"]
+- !private ["SL", "timeIntervalSince1970"]
+- !private ["11HighwayCore7ContextC", "init"]
+- !private ["11HighwayCore15ContextProtocolP", "executableProvider"]
+- !private ["11HighwayCore15ContextProtocolP", "executor"]
+- !private ["11HighwayCore15ContextProtocolP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "asyncAfter"]
+- !private ["s28CustomDebugStringConvertibleP", "createSubfolderIfNeeded"]
+- !private ["s28CustomDebugStringConvertibleP", "global"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "timeIntervalSince1970"]
+- !private ["s28CustomDebugStringConvertibleP", "wait"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "timeIntervalSince1970"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "timeIntervalSince1970"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "asyncAfter"]
+- !private ["s23CustomStringConvertibleP", "createSubfolderIfNeeded"]
+- !private ["s23CustomStringConvertibleP", "global"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "timeIntervalSince1970"]
+- !private ["s23CustomStringConvertibleP", "wait"]
+- !private ["10Foundation4DateV", "init"]
+- !private ["10Foundation4DateV", "timeIntervalSince1970"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "timeIntervalSince1970"]
+- !private ["So18OS_dispatch_objectC", "asyncAfter"]
+- !private ["So18OS_dispatch_objectC", "global"]
+- !private ["So18OS_dispatch_objectC", "init"]
+- !private ["So18OS_dispatch_objectC", "wait"]
+- !private ["So17OS_dispatch_queueC", "asyncAfter"]
+- !private ["So17OS_dispatch_queueC", "global"]
+- !private ["So21OS_dispatch_semaphoreC", "init"]
+- !private ["So21OS_dispatch_semaphoreC", "wait"]
+- !private ["8Dispatch0A4TimeV", "now"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "timeIntervalSince1970"]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "asyncAfter"]
+- !private ["SQ", "createSubfolderIfNeeded"]
+- !private ["SQ", "global"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "now"]
+- !private ["SQ", "timeIntervalSince1970"]
+- !private ["SQ", "wait"]
+- !private ["s5ErrorP", "init"]
+- !private ["s5ErrorP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["5ZFile12FileProtocolP", "path"]
+- !private ["5ZFile18FileSystemIterableP", "createFileIfNeeded"]
+- !private ["5ZFile18FileSystemIterableP", "createSubfolderIfNeeded"]
+- !private ["5ZFile18FileSystemIterableP", "path"]
+- !private ["5ZFile18FileSystemProtocolP", "temporaryFolder"]
+- !private ["5ZFile6FolderC", "createSubfolderIfNeeded"]
+- !private ["5ZFile14FolderProtocolP", "createFileIfNeeded"]
+- !private ["5ZFile14FolderProtocolP", "createSubfolderIfNeeded"]
+- !private ["5ZFile14FolderProtocolP", "path"]
+- !private ["3Git0A4ToolV", "clone"]
+- !private ["3Git0A4ToolV", "pull"]
+- !private ["3Git0A12ToolProtocolP", "clone"]
+- !private ["3Git0A12ToolProtocolP", "pull"]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "asyncAfter"]
+- !private ["SH", "global"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "timeIntervalSince1970"]
+- !private ["SH", "wait"]
+- !private ["5HWKit10HomeBundleC", "deinit"]
+- !private ["5HWKit18HomeBundleProtocolP", "fileSystem"]
+- !private ["5HWKit18HomeBundleProtocolP", "localCloneUrl"]
+- !private ["5ZFile10FileSystemC4ItemC", "createSubfolderIfNeeded"]
+- !private ["5ZFile12ItemProtocolP", "createFileIfNeeded"]
+- !private ["5ZFile12ItemProtocolP", "createSubfolderIfNeeded"]
+- !private ["5ZFile12ItemProtocolP", "path"]
+- !private ["9Arguments7KeyableP", "init"]
+- !private ["9Arguments7KeyableP", "init"]
+- !private ["10Foundation14LocalizedErrorP", "init"]
+- !private ["10Foundation14LocalizedErrorP", "init"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["So8NSObjectC", "asyncAfter"]
+- !private ["So8NSObjectC", "global"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "wait"]
+- !private ["So8NSObjectP", "asyncAfter"]
+- !private ["So8NSObjectP", "global"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "wait"]
+- !private ["So9OS_objectC", "asyncAfter"]
+- !private ["So9OS_objectC", "global"]
+- !private ["So9OS_objectC", "init"]
+- !private ["So9OS_objectC", "wait"]
+- !private ["8Terminal9PrintableP", "init"]
+- !private ["8Terminal9PrintableP", "init"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "timeIntervalSince1970"]
+- !private ["5HWKit11SelfUpdaterC", "Arguments"]
+- ["5HWKit11SelfUpdaterC", "Context"]
+- ["5HWKit11SelfUpdaterC", "ContextProtocol"]
+- !private ["5HWKit11SelfUpdaterC", "Date"]
+- !private ["5HWKit11SelfUpdaterC", "DispatchQueue"]
+- !private ["5HWKit11SelfUpdaterC", "DispatchSemaphore"]
+- !private ["5HWKit11SelfUpdaterC", "EXIT_SUCCESS"]
+- !private ["5HWKit11SelfUpdaterC", "Git"]
+- ["5HWKit11SelfUpdaterC", "GitTool"]
+- ["5HWKit11SelfUpdaterC", "HomeBundle"]
+- ["5HWKit11SelfUpdaterC", "HomeBundleProtocol"]
+- !private ["5HWKit11SelfUpdaterC", "Task"]
+- ["5HWKit11SelfUpdaterC", "context"]
+- ["5HWKit11SelfUpdaterC", "deinit"]
+- !private ["5HWKit11SelfUpdaterC", "exit"]
+- ["5HWKit11SelfUpdaterC", "git"]
+- ["5HWKit11SelfUpdaterC", "homeBundle"]
+- ["5HWKit11SelfUpdaterC", "init"]
+- ["5HWKit11SelfUpdaterC", "update"]
+- ["5HWKit19SelfUpdaterProtocolP", "ContextProtocol"]
+- ["5HWKit19SelfUpdaterProtocolP", "GitTool"]
+- ["5HWKit19SelfUpdaterProtocolP", "HomeBundleProtocol"]
+- ["5HWKit19SelfUpdaterProtocolP", "context"]
+- ["5HWKit19SelfUpdaterProtocolP", "git"]
+- ["5HWKit19SelfUpdaterProtocolP", "homeBundle"]
+- ["5HWKit19SelfUpdaterProtocolP", "update"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
+- !private ["SS", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
+- !private ["4TaskAAC", "init"]
+- !private ["4Task0A16ExecutorProtocolP", "execute"]
+- !private ["4Task0A8ProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "asyncAfter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "global"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "wait"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "timeIntervalSince1970"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "9ArgumentsAAV"
+- "21SourceryAutoProtocols0B16GenerateProtocolP"
+- "21SourceryAutoProtocols0B8MockableP"
+- !private "SK"
+- !private "Sb"
+- !private "s7CVarArgP"
+- !private "3Git12CloneOptionsV"
+- !private "Sl"
+- !private "SL"
+- !private "11HighwayCore7ContextC"
+- !private "11HighwayCore15ContextProtocolP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "10Foundation4DateV"
+- !private "Se"
+- !private "So18OS_dispatch_objectC"
+- !private "So17OS_dispatch_queueC"
+- !private "So21OS_dispatch_semaphoreC"
+- !private "8Dispatch0A4TimeV"
+- !private "SE"
+- !private "SQ"
+- !private "s5ErrorP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "5ZFile12FileProtocolP"
+- !private "5ZFile18FileSystemIterableP"
+- !private "5ZFile18FileSystemProtocolP"
+- !private "5ZFile6FolderC"
+- !private "5ZFile14FolderProtocolP"
+- !private "3Git0A4ToolV"
+- !private "3Git0A12ToolProtocolP"
+- !private "SH"
+- !private "5HWKit10HomeBundleC"
+- !private "5HWKit18HomeBundleProtocolP"
+- !private "5ZFile10FileSystemC4ItemC"
+- !private "5ZFile12ItemProtocolP"
+- !private "9Arguments7KeyableP"
+- !private "10Foundation14LocalizedErrorP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "So9OS_objectC"
+- !private "8Terminal9PrintableP"
+- !private "Sm"
+- !private "10Foundation20ReferenceConvertibleP"
+- "5HWKit11SelfUpdaterC"
+- "5HWKit19SelfUpdaterProtocolP"
+- !private "ST"
+- !private "SS"
+- !private "Sy"
+- !private "4TaskAAC"
+- !private "4Task0A16ExecutorProtocolP"
+- !private "4Task0A8ProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/os.apinotesc"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/POSIX.framework/Modules/POSIX.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Carthage/Build/Mac/ZFile.framework/Modules/ZFile.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/HighwayCore.framework/Modules/HighwayCore.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Task.framework/Modules/Task.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Terminal.framework/Modules/Terminal.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Url.framework/Modules/Url.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/SourceryAutoProtocols.framework/Modules/SourceryAutoProtocols.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Errors.framework/Modules/Errors.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Arguments.framework/Modules/Arguments.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Git.framework/Modules/Git.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Result.framework/Modules/Result.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/os.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "a65b9493254ae43aa86431ee61d8275e"

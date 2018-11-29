@@ -1,0 +1,5 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "6776bbd2645eb145730fa34093e848ac"
+build_time: [1543511166, 409929000]
+inputs:
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Tests/ResultTests/test.swift": [1532691693, 0]
