@@ -1,9 +1,0 @@
-version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
-options: "78f7b128827fd119e9cd9fb1b2cdc0e5"
-build_time: [1543511163, 434940000]
-inputs:
-  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/highway/App/App.swift": !dirty [1532691693, 0]
-  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/highway/App/AppHighway.swift": [1532709629, 0]
-  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/highway/App/AppInfo.swift": [1532691693, 0]
-  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/highway/CurrentVersion.swift": [1532691693, 0]
-  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/highway/main.swift": !dirty [1532691693, 0]

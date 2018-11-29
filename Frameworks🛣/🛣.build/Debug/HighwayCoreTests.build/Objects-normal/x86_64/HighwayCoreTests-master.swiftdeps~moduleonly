@@ -1,8 +1,0 @@
-version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
-options: "f676e488abf2f4f3dec014fddb553a10"
-build_time: [1543511166, 401820000]
-inputs:
-  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Tests/HighwayCoreTests/HighwayBundleTests.swift": !dirty [1532691693, 0]
-  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Tests/HighwayCoreTests/HighwaysTests.swift": !dirty [1532709629, 0]
-  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Tests/HighwayCoreTests/Support/FileHandle+Convenience.swift": !dirty [1532691693, 0]
-  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Tests/HighwayCoreTests/SwiftBuildSystemTests.swift": !dirty [1532691693, 0]

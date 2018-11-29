@@ -1,7 +1,0 @@
-version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
-options: "03b2b7ebc31a996e5cfd12ea3365dffa"
-build_time: [1543511161, 612155000]
-inputs:
-  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Git/Git.swift": [1532691693, 0]
-  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Git/GitAutotag.swift": [1532691693, 0]
-  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Git/GitTool.swift": [1532691693, 0]

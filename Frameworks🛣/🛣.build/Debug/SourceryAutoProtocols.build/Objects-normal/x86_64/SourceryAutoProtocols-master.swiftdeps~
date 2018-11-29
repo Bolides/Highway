@@ -1,6 +1,0 @@
-version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
-options: "a77e293fe8610147572bed2f041083fd"
-build_time: [1543509857, 53877000]
-inputs:
-  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/\U0001F9D9\u200D\u2642\uFE0F/AutoProtocols/AutoGenerateProtocol.generated.swift": [1532710590, 0]
-  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/\U0001F9D9\u200D\u2642\uFE0F/AutoProtocols/SourceryAutoProtocols.swift": [1540899241, 0]

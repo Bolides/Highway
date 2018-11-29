@@ -1,6 +1,0 @@
-version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
-options: "c5a9bf107e1d9aa50c0d4e56be1ac393"
-build_time: [1543511161, 612278000]
-inputs:
-  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Tests/UrlTests/AbsoluteURLTests.swift": [1532691693, 0]
-  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Tests/UrlTests/RelativePathTests.swift": [1532691693, 0]
