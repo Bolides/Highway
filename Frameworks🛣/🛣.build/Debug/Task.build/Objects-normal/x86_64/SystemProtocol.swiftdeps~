@@ -1,0 +1,116 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SystemProtocol"
+- "TaskCreationError"
+- "ExecutionError"
+- "=="
+provides-nominal:
+- "4Task14SystemProtocolP"
+- "4Task0A13CreationErrorO"
+- "4Task14ExecutionErrorO"
+provides-member:
+- ["4Task14SystemProtocolP", ""]
+- ["4Task0A13CreationErrorO", ""]
+- ["4Task14ExecutionErrorO", ""]
+- ["4Task14SystemProtocolP", "execute"]
+provides-dynamic-lookup:
+depends-top-level:
+- "=="
+- "AutoMockable"
+- "Bool"
+- !private "BooleanLiteralType"
+- "Equatable"
+- "ExecutionError"
+- "String"
+- "Swift"
+- "SystemProtocol"
+- "Task"
+- "TaskCreationError"
+- "Termination"
+depends-member:
+- ["21SourceryAutoProtocols0B8MockableP", "Bool"]
+- ["21SourceryAutoProtocols0B8MockableP", "String"]
+- ["21SourceryAutoProtocols0B8MockableP", "Task"]
+- ["21SourceryAutoProtocols0B8MockableP", ""]
+- !private ["21SourceryAutoProtocols0B8MockableP", "launch"]
+- ["SQ", ""]
+- ["SQ", "_code"]
+- ["SQ", "_domain"]
+- ["SQ", "_getEmbeddedNSError"]
+- ["SQ", "_userInfo"]
+- ["SQ", "currentDirectoryDoesNotExist"]
+- ["SQ", "invalidStateAfterExecuting"]
+- ["SQ", "taskDidExitWithFailure"]
+- ["s5ErrorP", ""]
+- ["s5ErrorP", "_code"]
+- ["s5ErrorP", "_domain"]
+- ["s5ErrorP", "_getEmbeddedNSError"]
+- ["s5ErrorP", "_userInfo"]
+- ["s5ErrorP", "currentDirectoryDoesNotExist"]
+- ["s5ErrorP", "invalidStateAfterExecuting"]
+- ["s5ErrorP", "taskDidExitWithFailure"]
+- ["4Task14ExecutionErrorO", "=="]
+- ["4Task14ExecutionErrorO", "Bool"]
+- ["4Task14ExecutionErrorO", "ExecutionError"]
+- ["4Task14ExecutionErrorO", "Termination"]
+- ["4Task14ExecutionErrorO", "_code"]
+- ["4Task14ExecutionErrorO", "_domain"]
+- ["4Task14ExecutionErrorO", "_getEmbeddedNSError"]
+- ["4Task14ExecutionErrorO", "_userInfo"]
+- ["4Task14ExecutionErrorO", "currentDirectoryDoesNotExist"]
+- ["4Task14ExecutionErrorO", "deinit"]
+- ["4Task14ExecutionErrorO", "invalidStateAfterExecuting"]
+- ["4Task14ExecutionErrorO", "taskDidExitWithFailure"]
+- ["4Task14SystemProtocolP", "Bool"]
+- ["4Task14SystemProtocolP", "String"]
+- ["4Task14SystemProtocolP", "Task"]
+- ["4Task14SystemProtocolP", "execute"]
+- ["4Task14SystemProtocolP", "launch"]
+- ["4Task14SystemProtocolP", "task"]
+- ["4Task0A13CreationErrorO", "String"]
+- ["4Task0A13CreationErrorO", "_code"]
+- ["4Task0A13CreationErrorO", "_domain"]
+- ["4Task0A13CreationErrorO", "_getEmbeddedNSError"]
+- ["4Task0A13CreationErrorO", "_userInfo"]
+- ["4Task0A13CreationErrorO", "deinit"]
+- ["4Task0A13CreationErrorO", "executableNotFound"]
+- ["4Task11TerminationV", "deinit"]
+depends-nominal:
+- "21SourceryAutoProtocols0B8MockableP"
+- "SQ"
+- "s5ErrorP"
+- "4Task14ExecutionErrorO"
+- "4Task14SystemProtocolP"
+- "4Task0A13CreationErrorO"
+- "4Task11TerminationV"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/os.apinotesc"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/POSIX.framework/Modules/POSIX.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Terminal.framework/Modules/Terminal.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Url.framework/Modules/Url.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/SourceryAutoProtocols.framework/Modules/SourceryAutoProtocols.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Errors.framework/Modules/Errors.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Arguments.framework/Modules/Arguments.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Result.framework/Modules/Result.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/os.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "f5c5d0cc6a8795cd1e419fdd2c0a9e31"

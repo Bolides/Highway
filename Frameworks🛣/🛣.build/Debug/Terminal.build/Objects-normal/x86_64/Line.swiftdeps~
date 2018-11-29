@@ -1,0 +1,70 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Line"
+provides-nominal:
+- "8Terminal4LineV"
+provides-member:
+- ["8Terminal4LineV", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "+"
+- "AssignmentPrecedence"
+- "Line"
+- "Print"
+- "Printable"
+- "Prompt"
+- "String"
+- "Text"
+depends-member:
+- !private ["SK", "terminalString"]
+- !private ["Sl", "terminalString"]
+- ["8Terminal4LineV", "Print"]
+- ["8Terminal4LineV", "Prompt"]
+- ["8Terminal4LineV", "String"]
+- ["8Terminal4LineV", "Text"]
+- ["8Terminal4LineV", "deinit"]
+- ["8Terminal4LineV", "init"]
+- ["8Terminal4LineV", "printableString"]
+- ["8Terminal4LineV", "prompt"]
+- ["8Terminal4LineV", "text"]
+- ["8Terminal5PrintO", "Options"]
+- ["8Terminal9PrintableP", ""]
+- ["8Terminal9PrintableP", "printableString"]
+- !private ["8Terminal9PrintableP", "prompt"]
+- !private ["8Terminal9PrintableP", "terminalString"]
+- !private ["8Terminal9PrintableP", "text"]
+- !private ["8Terminal6PromptV", "terminalString"]
+- !private ["Sm", "terminalString"]
+- !private ["ST", "terminalString"]
+- !private ["8Terminal4TextV", "terminalString"]
+depends-nominal:
+- !private "SK"
+- !private "Sl"
+- "8Terminal4LineV"
+- "8Terminal5PrintO"
+- "8Terminal9PrintableP"
+- !private "8Terminal6PromptV"
+- !private "Sm"
+- !private "ST"
+- !private "8Terminal4TextV"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/SourceryAutoProtocols.framework/Modules/SourceryAutoProtocols.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "dffb6f9215bda3ef2ee33b6fc1c83cc5"

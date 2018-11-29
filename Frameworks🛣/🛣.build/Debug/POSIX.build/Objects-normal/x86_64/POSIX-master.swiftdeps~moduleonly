@@ -1,0 +1,5 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "3750aa5b9876f434c203ac48695daae3"
+build_time: [1543510184, 807772000]
+inputs:
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/POSIX/abscwd.swift": [1532691693, 0]

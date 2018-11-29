@@ -1,0 +1,216 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Channel"
+- "=="
+provides-nominal:
+- "4Task7ChannelC"
+provides-member:
+- ["4Task7ChannelC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "=="
+- !private "??"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- "CastingPrecedence"
+- "Channel"
+- "Data"
+- "Equatable"
+- "FileHandle"
+- "Pipe"
+- "Void"
+depends-member:
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "fileHandleForReading"]
+- !private ["s7CVarArgP", "fileHandleForWriting"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "nullDevice"]
+- !private ["s7CVarArgP", "readabilityHandler"]
+- !private ["s7CVarArgP", "standardInput"]
+- !private ["s7CVarArgP", "standardOutput"]
+- !private ["s7CVarArgP", "writeabilityHandler"]
+- ["4Task7ChannelC", "=="]
+- ["4Task7ChannelC", "Bool"]
+- ["4Task7ChannelC", "Channel"]
+- ["4Task7ChannelC", "Data"]
+- ["4Task7ChannelC", "FileHandle"]
+- ["4Task7ChannelC", "Pipe"]
+- ["4Task7ChannelC", "Reader"]
+- ["4Task7ChannelC", "Void"]
+- ["4Task7ChannelC", "Writer"]
+- !private ["4Task7ChannelC", "_fileHandle"]
+- !private ["4Task7ChannelC", "_pipe"]
+- ["4Task7ChannelC", "asProcessChannel"]
+- ["4Task7ChannelC", "deinit"]
+- ["4Task7ChannelC", "didRead"]
+- ["4Task7ChannelC", "didWrite"]
+- ["4Task7ChannelC", "init"]
+- !private ["4Task7ChannelC", "init"]
+- ["4Task7ChannelC", "pipe"]
+- ["4Task7ChannelC", "readabilityHandler"]
+- !private ["4Task7ChannelC", "reader"]
+- ["4Task7ChannelC", "standardInput"]
+- ["4Task7ChannelC", "standardOutput"]
+- ["4Task7ChannelC", "withPipedFileHandleForWriting"]
+- ["4Task7ChannelC", "writeabilityHandler"]
+- !private ["4Task7ChannelC", "writer"]
+- !private ["s28CustomDebugStringConvertibleP", "fileHandleForReading"]
+- !private ["s28CustomDebugStringConvertibleP", "fileHandleForWriting"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "nullDevice"]
+- !private ["s28CustomDebugStringConvertibleP", "readabilityHandler"]
+- !private ["s28CustomDebugStringConvertibleP", "standardInput"]
+- !private ["s28CustomDebugStringConvertibleP", "standardOutput"]
+- !private ["s28CustomDebugStringConvertibleP", "writeabilityHandler"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "fileHandleForReading"]
+- !private ["s23CustomStringConvertibleP", "fileHandleForWriting"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "nullDevice"]
+- !private ["s23CustomStringConvertibleP", "readabilityHandler"]
+- !private ["s23CustomStringConvertibleP", "standardInput"]
+- !private ["s23CustomStringConvertibleP", "standardOutput"]
+- !private ["s23CustomStringConvertibleP", "writeabilityHandler"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SQ", "Pipe"]
+- !private ["SQ", "Reader"]
+- !private ["SQ", "Writer"]
+- ["SQ", ""]
+- !private ["SQ", "_fileHandle"]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "_pipe"]
+- !private ["SQ", "didRead"]
+- !private ["SQ", "didWrite"]
+- !private ["SQ", "fileHandleForReading"]
+- !private ["SQ", "fileHandleForWriting"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "nullDevice"]
+- !private ["SQ", "readabilityHandler"]
+- !private ["SQ", "reader"]
+- !private ["SQ", "standardInput"]
+- !private ["SQ", "standardOutput"]
+- !private ["SQ", "writeabilityHandler"]
+- !private ["SQ", "writer"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["So12NSFileHandleC", "nullDevice"]
+- !private ["So12NSFileHandleC", "readabilityHandler"]
+- !private ["So12NSFileHandleC", "standardInput"]
+- !private ["So12NSFileHandleC", "standardOutput"]
+- !private ["So12NSFileHandleC", "writeabilityHandler"]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "fileHandleForReading"]
+- !private ["SH", "fileHandleForWriting"]
+- !private ["SH", "init"]
+- !private ["SH", "nullDevice"]
+- !private ["SH", "readabilityHandler"]
+- !private ["SH", "standardInput"]
+- !private ["SH", "standardOutput"]
+- !private ["SH", "writeabilityHandler"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["So8NSCodingP", "nullDevice"]
+- !private ["So8NSCodingP", "readabilityHandler"]
+- !private ["So8NSCodingP", "standardInput"]
+- !private ["So8NSCodingP", "standardOutput"]
+- !private ["So8NSCodingP", "writeabilityHandler"]
+- !private ["So8NSObjectC", "fileHandleForReading"]
+- !private ["So8NSObjectC", "fileHandleForWriting"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "nullDevice"]
+- !private ["So8NSObjectC", "readabilityHandler"]
+- !private ["So8NSObjectC", "standardInput"]
+- !private ["So8NSObjectC", "standardOutput"]
+- !private ["So8NSObjectC", "writeabilityHandler"]
+- !private ["So8NSObjectP", "fileHandleForReading"]
+- !private ["So8NSObjectP", "fileHandleForWriting"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "nullDevice"]
+- !private ["So8NSObjectP", "readabilityHandler"]
+- !private ["So8NSObjectP", "standardInput"]
+- !private ["So8NSObjectP", "standardOutput"]
+- !private ["So8NSObjectP", "writeabilityHandler"]
+- !private ["So14NSSecureCodingP", "nullDevice"]
+- !private ["So14NSSecureCodingP", "readabilityHandler"]
+- !private ["So14NSSecureCodingP", "standardInput"]
+- !private ["So14NSSecureCodingP", "standardOutput"]
+- !private ["So14NSSecureCodingP", "writeabilityHandler"]
+- !private ["So6NSPipeC", "fileHandleForReading"]
+- !private ["So6NSPipeC", "fileHandleForWriting"]
+- !private ["So6NSPipeC", "init"]
+- !private ["So6NSPipeC", "standardInput"]
+- !private ["So6NSPipeC", "standardOutput"]
+- !private ["4Task7ChannelC6ReaderC", "didRead"]
+- !private ["4Task7ChannelC6ReaderC", "init"]
+- !private ["4Task7ChannelC6WriterC", "didWrite"]
+- !private ["4Task7ChannelC6WriterC", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fileHandleForReading"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fileHandleForWriting"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "nullDevice"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "readabilityHandler"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "standardInput"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "standardOutput"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "writeabilityHandler"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+depends-nominal:
+- !private "Sb"
+- !private "s7CVarArgP"
+- "4Task7ChannelC"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "So12NSFileHandleC"
+- !private "SH"
+- !private "s25LosslessStringConvertibleP"
+- !private "So8NSCodingP"
+- !private "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So6NSPipeC"
+- !private "4Task7ChannelC6ReaderC"
+- !private "4Task7ChannelC6WriterC"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/os.apinotesc"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/POSIX.framework/Modules/POSIX.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Terminal.framework/Modules/Terminal.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Url.framework/Modules/Url.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/SourceryAutoProtocols.framework/Modules/SourceryAutoProtocols.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Errors.framework/Modules/Errors.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Arguments.framework/Modules/Arguments.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Result.framework/Modules/Result.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/os.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "bc6fcbb3a2830a4cb686f155bbdc7e91"

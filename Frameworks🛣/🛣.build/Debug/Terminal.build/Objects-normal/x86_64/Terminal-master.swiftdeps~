@@ -1,0 +1,17 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "9e3e4f18a059e547f7b8f93ddcac4f74"
+build_time: [1543509857, 391003000]
+inputs:
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Terminal/FileStream.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Terminal/Printable/Printable.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Terminal/Printable/Printables/Line.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Terminal/Printable/Printables/List.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Terminal/Prompt.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Terminal/String+Convenience.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Terminal/Terminal.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Terminal/Text/Color.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Terminal/Text/SubText.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Terminal/Text/Text.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Terminal/Text/Texts+Operators.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Terminal/Text/Texts+Printable.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Terminal/UI.swift": [1532691693, 0]

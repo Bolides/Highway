@@ -1,0 +1,327 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ErrorMessage"
+provides-nominal:
+- "SS"
+provides-member:
+- ["SS", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "ErrorMessage"
+- "LocalizedError"
+- "String"
+- "Swift"
+depends-member:
+- ["SK", "_code"]
+- ["SK", "_domain"]
+- ["SK", "_getEmbeddedNSError"]
+- ["SK", "_userInfo"]
+- ["SK", "errorDescription"]
+- ["SK", "failureReason"]
+- ["SK", "helpAnchor"]
+- ["SK", "recoverySuggestion"]
+- ["s7CVarArgP", "_code"]
+- ["s7CVarArgP", "_domain"]
+- ["s7CVarArgP", "_getEmbeddedNSError"]
+- ["s7CVarArgP", "_userInfo"]
+- ["s7CVarArgP", "errorDescription"]
+- ["s7CVarArgP", "failureReason"]
+- ["s7CVarArgP", "helpAnchor"]
+- ["s7CVarArgP", "recoverySuggestion"]
+- ["Sl", "_code"]
+- ["Sl", "_domain"]
+- ["Sl", "_getEmbeddedNSError"]
+- ["Sl", "_userInfo"]
+- ["Sl", "errorDescription"]
+- ["Sl", "failureReason"]
+- ["Sl", "helpAnchor"]
+- ["Sl", "recoverySuggestion"]
+- ["SL", "_code"]
+- ["SL", "_domain"]
+- ["SL", "_getEmbeddedNSError"]
+- ["SL", "_userInfo"]
+- ["SL", "errorDescription"]
+- ["SL", "failureReason"]
+- ["SL", "helpAnchor"]
+- ["SL", "recoverySuggestion"]
+- ["s28CustomDebugStringConvertibleP", "_code"]
+- ["s28CustomDebugStringConvertibleP", "_domain"]
+- ["s28CustomDebugStringConvertibleP", "_getEmbeddedNSError"]
+- ["s28CustomDebugStringConvertibleP", "_userInfo"]
+- ["s28CustomDebugStringConvertibleP", "errorDescription"]
+- ["s28CustomDebugStringConvertibleP", "failureReason"]
+- ["s28CustomDebugStringConvertibleP", "helpAnchor"]
+- ["s28CustomDebugStringConvertibleP", "recoverySuggestion"]
+- ["s29CustomPlaygroundQuickLookableP", "_code"]
+- ["s29CustomPlaygroundQuickLookableP", "_domain"]
+- ["s29CustomPlaygroundQuickLookableP", "_getEmbeddedNSError"]
+- ["s29CustomPlaygroundQuickLookableP", "_userInfo"]
+- ["s29CustomPlaygroundQuickLookableP", "errorDescription"]
+- ["s29CustomPlaygroundQuickLookableP", "failureReason"]
+- ["s29CustomPlaygroundQuickLookableP", "helpAnchor"]
+- ["s29CustomPlaygroundQuickLookableP", "recoverySuggestion"]
+- ["s17CustomReflectableP", "_code"]
+- ["s17CustomReflectableP", "_domain"]
+- ["s17CustomReflectableP", "_getEmbeddedNSError"]
+- ["s17CustomReflectableP", "_userInfo"]
+- ["s17CustomReflectableP", "errorDescription"]
+- ["s17CustomReflectableP", "failureReason"]
+- ["s17CustomReflectableP", "helpAnchor"]
+- ["s17CustomReflectableP", "recoverySuggestion"]
+- ["s23CustomStringConvertibleP", "_code"]
+- ["s23CustomStringConvertibleP", "_domain"]
+- ["s23CustomStringConvertibleP", "_getEmbeddedNSError"]
+- ["s23CustomStringConvertibleP", "_userInfo"]
+- ["s23CustomStringConvertibleP", "errorDescription"]
+- ["s23CustomStringConvertibleP", "failureReason"]
+- ["s23CustomStringConvertibleP", "helpAnchor"]
+- ["s23CustomStringConvertibleP", "recoverySuggestion"]
+- ["Se", "_code"]
+- ["Se", "_domain"]
+- ["Se", "_getEmbeddedNSError"]
+- ["Se", "_userInfo"]
+- ["Se", "errorDescription"]
+- ["Se", "failureReason"]
+- ["Se", "helpAnchor"]
+- ["Se", "recoverySuggestion"]
+- ["SE", "_code"]
+- ["SE", "_domain"]
+- ["SE", "_getEmbeddedNSError"]
+- ["SE", "_userInfo"]
+- ["SE", "errorDescription"]
+- ["SE", "failureReason"]
+- ["SE", "helpAnchor"]
+- ["SE", "recoverySuggestion"]
+- ["SQ", "_code"]
+- ["SQ", "_domain"]
+- ["SQ", "_getEmbeddedNSError"]
+- ["SQ", "_userInfo"]
+- ["SQ", "errorDescription"]
+- ["SQ", "failureReason"]
+- ["SQ", "helpAnchor"]
+- ["SQ", "recoverySuggestion"]
+- ["s5ErrorP", ""]
+- ["s5ErrorP", "_code"]
+- ["s5ErrorP", "_domain"]
+- ["s5ErrorP", "_getEmbeddedNSError"]
+- ["s5ErrorP", "_userInfo"]
+- ["s5ErrorP", "errorDescription"]
+- ["s5ErrorP", "failureReason"]
+- ["s5ErrorP", "helpAnchor"]
+- ["s5ErrorP", "recoverySuggestion"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "_code"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "_domain"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "_getEmbeddedNSError"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "_userInfo"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "errorDescription"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "failureReason"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "helpAnchor"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "recoverySuggestion"]
+- ["s26ExpressibleByStringLiteralP", "_code"]
+- ["s26ExpressibleByStringLiteralP", "_domain"]
+- ["s26ExpressibleByStringLiteralP", "_getEmbeddedNSError"]
+- ["s26ExpressibleByStringLiteralP", "_userInfo"]
+- ["s26ExpressibleByStringLiteralP", "errorDescription"]
+- ["s26ExpressibleByStringLiteralP", "failureReason"]
+- ["s26ExpressibleByStringLiteralP", "helpAnchor"]
+- ["s26ExpressibleByStringLiteralP", "recoverySuggestion"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "_code"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "_domain"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "_getEmbeddedNSError"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "_userInfo"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "errorDescription"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "failureReason"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "helpAnchor"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "recoverySuggestion"]
+- ["SH", "_code"]
+- ["SH", "_domain"]
+- ["SH", "_getEmbeddedNSError"]
+- ["SH", "_userInfo"]
+- ["SH", "errorDescription"]
+- ["SH", "failureReason"]
+- ["SH", "helpAnchor"]
+- ["SH", "recoverySuggestion"]
+- ["10Foundation14LocalizedErrorP", ""]
+- ["10Foundation14LocalizedErrorP", "_code"]
+- ["10Foundation14LocalizedErrorP", "_domain"]
+- ["10Foundation14LocalizedErrorP", "_getEmbeddedNSError"]
+- ["10Foundation14LocalizedErrorP", "_userInfo"]
+- ["10Foundation14LocalizedErrorP", "errorDescription"]
+- ["10Foundation14LocalizedErrorP", "failureReason"]
+- ["10Foundation14LocalizedErrorP", "helpAnchor"]
+- ["10Foundation14LocalizedErrorP", "recoverySuggestion"]
+- ["s25LosslessStringConvertibleP", "_code"]
+- ["s25LosslessStringConvertibleP", "_domain"]
+- ["s25LosslessStringConvertibleP", "_getEmbeddedNSError"]
+- ["s25LosslessStringConvertibleP", "_userInfo"]
+- ["s25LosslessStringConvertibleP", "errorDescription"]
+- ["s25LosslessStringConvertibleP", "failureReason"]
+- ["s25LosslessStringConvertibleP", "helpAnchor"]
+- ["s25LosslessStringConvertibleP", "recoverySuggestion"]
+- ["s10MirrorPathP", "_code"]
+- ["s10MirrorPathP", "_domain"]
+- ["s10MirrorPathP", "_getEmbeddedNSError"]
+- ["s10MirrorPathP", "_userInfo"]
+- ["s10MirrorPathP", "errorDescription"]
+- ["s10MirrorPathP", "failureReason"]
+- ["s10MirrorPathP", "helpAnchor"]
+- ["s10MirrorPathP", "recoverySuggestion"]
+- ["Sm", "_code"]
+- ["Sm", "_domain"]
+- ["Sm", "_getEmbeddedNSError"]
+- ["Sm", "_userInfo"]
+- ["Sm", "errorDescription"]
+- ["Sm", "failureReason"]
+- ["Sm", "helpAnchor"]
+- ["Sm", "recoverySuggestion"]
+- ["ST", "_code"]
+- ["ST", "_domain"]
+- ["ST", "_getEmbeddedNSError"]
+- ["ST", "_userInfo"]
+- ["ST", "errorDescription"]
+- ["ST", "failureReason"]
+- ["ST", "helpAnchor"]
+- ["ST", "recoverySuggestion"]
+- ["SS", "String"]
+- ["SS", "_code"]
+- ["SS", "_domain"]
+- ["SS", "_getEmbeddedNSError"]
+- ["SS", "_userInfo"]
+- ["SS", "deinit"]
+- ["SS", "errorDescription"]
+- ["SS", "failureReason"]
+- ["SS", "helpAnchor"]
+- ["SS", "recoverySuggestion"]
+- ["Sy", "_code"]
+- ["Sy", "_domain"]
+- ["Sy", "_getEmbeddedNSError"]
+- ["Sy", "_userInfo"]
+- ["Sy", "errorDescription"]
+- ["Sy", "failureReason"]
+- ["Sy", "helpAnchor"]
+- ["Sy", "recoverySuggestion"]
+- ["s16TextOutputStreamP", "_code"]
+- ["s16TextOutputStreamP", "_domain"]
+- ["s16TextOutputStreamP", "_getEmbeddedNSError"]
+- ["s16TextOutputStreamP", "_userInfo"]
+- ["s16TextOutputStreamP", "errorDescription"]
+- ["s16TextOutputStreamP", "failureReason"]
+- ["s16TextOutputStreamP", "helpAnchor"]
+- ["s16TextOutputStreamP", "recoverySuggestion"]
+- ["s20TextOutputStreamableP", "_code"]
+- ["s20TextOutputStreamableP", "_domain"]
+- ["s20TextOutputStreamableP", "_getEmbeddedNSError"]
+- ["s20TextOutputStreamableP", "_userInfo"]
+- ["s20TextOutputStreamableP", "errorDescription"]
+- ["s20TextOutputStreamableP", "failureReason"]
+- ["s20TextOutputStreamableP", "helpAnchor"]
+- ["s20TextOutputStreamableP", "recoverySuggestion"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "_code"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "_domain"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "_getEmbeddedNSError"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "_userInfo"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "errorDescription"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "failureReason"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "helpAnchor"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "recoverySuggestion"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "_code"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "_domain"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "_getEmbeddedNSError"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "_userInfo"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "errorDescription"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "failureReason"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "helpAnchor"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "recoverySuggestion"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "_code"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "_domain"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "_getEmbeddedNSError"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "_userInfo"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "errorDescription"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "failureReason"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "helpAnchor"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "recoverySuggestion"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "_code"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "_domain"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "_getEmbeddedNSError"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "_userInfo"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "errorDescription"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "failureReason"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "helpAnchor"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "recoverySuggestion"]
+- ["s33_ExpressibleByStringInterpolationP", "_code"]
+- ["s33_ExpressibleByStringInterpolationP", "_domain"]
+- ["s33_ExpressibleByStringInterpolationP", "_getEmbeddedNSError"]
+- ["s33_ExpressibleByStringInterpolationP", "_userInfo"]
+- ["s33_ExpressibleByStringInterpolationP", "errorDescription"]
+- ["s33_ExpressibleByStringInterpolationP", "failureReason"]
+- ["s33_ExpressibleByStringInterpolationP", "helpAnchor"]
+- ["s33_ExpressibleByStringInterpolationP", "recoverySuggestion"]
+- ["s21_ObjectiveCBridgeableP", "_code"]
+- ["s21_ObjectiveCBridgeableP", "_domain"]
+- ["s21_ObjectiveCBridgeableP", "_getEmbeddedNSError"]
+- ["s21_ObjectiveCBridgeableP", "_userInfo"]
+- ["s21_ObjectiveCBridgeableP", "errorDescription"]
+- ["s21_ObjectiveCBridgeableP", "failureReason"]
+- ["s21_ObjectiveCBridgeableP", "helpAnchor"]
+- ["s21_ObjectiveCBridgeableP", "recoverySuggestion"]
+- ["s16_SwiftStringViewP", "_code"]
+- ["s16_SwiftStringViewP", "_domain"]
+- ["s16_SwiftStringViewP", "_getEmbeddedNSError"]
+- ["s16_SwiftStringViewP", "_userInfo"]
+- ["s16_SwiftStringViewP", "errorDescription"]
+- ["s16_SwiftStringViewP", "failureReason"]
+- ["s16_SwiftStringViewP", "helpAnchor"]
+- ["s16_SwiftStringViewP", "recoverySuggestion"]
+depends-nominal:
+- "SK"
+- "s7CVarArgP"
+- "Sl"
+- "SL"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- "SE"
+- "SQ"
+- "s5ErrorP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "SH"
+- "10Foundation14LocalizedErrorP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- "Sm"
+- "ST"
+- "SS"
+- "Sy"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "s21_ObjectiveCBridgeableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "7b9b7d31c5211dada03de0300eecdd29"

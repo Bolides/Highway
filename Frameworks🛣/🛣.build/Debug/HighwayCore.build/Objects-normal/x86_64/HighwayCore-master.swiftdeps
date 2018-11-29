@@ -1,0 +1,20 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "3bf533ea7311a34b78c95d9f02f8946a"
+build_time: [1543510664, 755530000]
+inputs:
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/HighwayCore/Bundle/HighwayBundle.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/HighwayCore/Context/Context.swift": [1532710358, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/HighwayCore/Features/Fastlane.swift": [1532708805, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/HighwayCore/Features/Swift/SwiftBuildSystem.swift": [1532709353, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/HighwayCore/Features/Swift/SwiftOptions.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/HighwayCore/Features/Swift/SwiftPackageTool.swift": [1532708827, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/HighwayCore/Bundle/Configuration.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/HighwayCore/Features/Swift/SwiftRunTool.swift": [1532708827, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/HighwayCore/Global Stuff/Env.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/HighwayCore/Global Stuff/OrderedDictionary.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/HighwayCore/Global Stuff/String+Convenience.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/HighwayCore/Highways/HighwayDescription.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/HighwayCore/Highways/HighwayTypeProtocol.swift": [1532709629, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/HighwayCore/Highways/Invocation/Invocation.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/HighwayCore/Highways/Invocation/InvocationProvider.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/HighwayCore/Highways/_Highway.swift": [1532709716, 0]

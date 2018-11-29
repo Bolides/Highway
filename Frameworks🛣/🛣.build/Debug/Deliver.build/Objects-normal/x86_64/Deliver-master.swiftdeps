@@ -1,0 +1,7 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "de22e29a88078f4e97ae47ec64eb939f"
+build_time: [1543510651, 800265000]
+inputs:
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Deliver/Deliver.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Deliver/altool/Altool-Options.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Deliver/altool/Altool.swift": [1532691693, 0]

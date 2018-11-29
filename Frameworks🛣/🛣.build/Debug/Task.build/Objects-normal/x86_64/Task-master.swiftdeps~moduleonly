@@ -1,0 +1,19 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "e0ce60b593bbd7b68922d5d62354f4f1"
+build_time: [1543510185, 358276000]
+inputs:
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Task/TerminalTasks.swift": [1540993445, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Task/Finding and Executing/PathEnvironmentParser.swift": [1532701886, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Task/Finding and Executing/SystemExecutableProvider.swift": [1532710264, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Task/ExcecutableProtocol.swift": [1533906163, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Task/Finding and Executing/SystemExecutor.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Task/Finding and Executing/TaskExecutorProtocol.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Task/LocalSystem.swift": [1532710900, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Task/Model/Channel+Reader.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Task/Model/Channel+Writer.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Task/Model/Channel.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Task/Model/IO.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Task/Model/State.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Task/Model/Task.swift": [1532701193, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Task/Model/Termination.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Task/SystemProtocol.swift": [1532710695, 0]

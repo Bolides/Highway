@@ -1,0 +1,6 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "dfedd80965eedb7aeaf7081453b46969"
+build_time: [1543510184, 292656000]
+inputs:
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Arguments/Arguments.swift": [1532691693, 0]
+  "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Sources/Arguments/Option.swift": [1532691693, 0]

@@ -1,0 +1,125 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+- "SS"
+- "8Terminal7SubTextV"
+- "8Terminal4TextV"
+provides-member:
+- ["SS", ""]
+- ["8Terminal7SubTextV", ""]
+- ["8Terminal4TextV", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "Print"
+- "Printable"
+- "String"
+- "SubText"
+- "Text"
+depends-member:
+- ["SK", "printableString"]
+- !private ["SK", "terminalString"]
+- ["s7CVarArgP", "printableString"]
+- ["Sl", "printableString"]
+- !private ["Sl", "terminalString"]
+- ["SL", "printableString"]
+- ["s28CustomDebugStringConvertibleP", "printableString"]
+- ["s29CustomPlaygroundQuickLookableP", "printableString"]
+- ["s17CustomReflectableP", "printableString"]
+- ["s23CustomStringConvertibleP", "printableString"]
+- ["Se", "printableString"]
+- ["SE", "printableString"]
+- ["SQ", "printableString"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "printableString"]
+- ["s26ExpressibleByStringLiteralP", "printableString"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "printableString"]
+- ["SH", "printableString"]
+- ["s25LosslessStringConvertibleP", "printableString"]
+- ["s10MirrorPathP", "printableString"]
+- ["8Terminal5PrintO", "Options"]
+- ["8Terminal9PrintableP", ""]
+- ["8Terminal9PrintableP", "printableString"]
+- !private ["8Terminal9PrintableP", "terminalString"]
+- ["Sm", "printableString"]
+- !private ["Sm", "terminalString"]
+- ["ST", "printableString"]
+- !private ["ST", "terminalString"]
+- ["SS", "Print"]
+- ["SS", "String"]
+- ["SS", "deinit"]
+- ["SS", "printableString"]
+- ["Sy", "printableString"]
+- ["8Terminal7SubTextV", "Print"]
+- ["8Terminal7SubTextV", "String"]
+- ["8Terminal7SubTextV", "deinit"]
+- ["8Terminal7SubTextV", "printableString"]
+- !private ["8Terminal7SubTextV", "terminalString"]
+- ["8Terminal4TextV", "Print"]
+- ["8Terminal4TextV", "String"]
+- ["8Terminal4TextV", "deinit"]
+- ["8Terminal4TextV", "printableString"]
+- !private ["8Terminal4TextV", "terminalString"]
+- ["s16TextOutputStreamP", "printableString"]
+- ["s20TextOutputStreamableP", "printableString"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "printableString"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "printableString"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "printableString"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "printableString"]
+- ["s33_ExpressibleByStringInterpolationP", "printableString"]
+- ["s21_ObjectiveCBridgeableP", "printableString"]
+- ["s16_SwiftStringViewP", "printableString"]
+depends-nominal:
+- "SK"
+- "s7CVarArgP"
+- "Sl"
+- "SL"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- "SE"
+- "SQ"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "SH"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- "8Terminal5PrintO"
+- "8Terminal9PrintableP"
+- "Sm"
+- "ST"
+- "SS"
+- "Sy"
+- "8Terminal7SubTextV"
+- "8Terminal4TextV"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "s21_ObjectiveCBridgeableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/SourceryAutoProtocols.framework/Modules/SourceryAutoProtocols.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "efdb4e629f186b28b2f74b6f052bc0b0"

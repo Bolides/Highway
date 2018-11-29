@@ -1,0 +1,260 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Terminal"
+provides-nominal:
+- "8TerminalAAC"
+provides-member:
+- ["8TerminalAAC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "+"
+- "BooleanLiteralType"
+- "DispatchQueue"
+- "FileStream"
+- "Printable"
+- "Printer"
+- "Prompt"
+- "String"
+- "StringLiteralType"
+- "Terminal"
+- "UIProtocol"
+- !private "UnicodeScalarType"
+- "stdout"
+depends-member:
+- ["21SourceryAutoProtocols0B8MockableP", "DispatchQueue"]
+- ["21SourceryAutoProtocols0B8MockableP", "FileStream"]
+- ["21SourceryAutoProtocols0B8MockableP", "Prompt"]
+- ["21SourceryAutoProtocols0B8MockableP", "Terminal"]
+- ["21SourceryAutoProtocols0B8MockableP", ""]
+- !private ["21SourceryAutoProtocols0B8MockableP", "_sync"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "_withPrompt"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "_write"]
+- ["21SourceryAutoProtocols0B8MockableP", "error"]
+- ["21SourceryAutoProtocols0B8MockableP", "init"]
+- ["21SourceryAutoProtocols0B8MockableP", "message"]
+- ["21SourceryAutoProtocols0B8MockableP", "print"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "promptTemplate"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "queue"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "rawLog"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "rawLogNl"]
+- ["21SourceryAutoProtocols0B8MockableP", "stdout"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "stream"]
+- ["21SourceryAutoProtocols0B8MockableP", "success"]
+- ["21SourceryAutoProtocols0B8MockableP", "verbose"]
+- ["21SourceryAutoProtocols0B8MockableP", "verbosePrint"]
+- ["SK", "init"]
+- ["SK", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "sync"]
+- ["Sl", "init"]
+- ["Sl", "init"]
+- ["SL", "init"]
+- ["SL", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "sync"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- ["s17CustomReflectableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "sync"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- ["Se", "init"]
+- ["Se", "init"]
+- ["So18OS_dispatch_objectC", "init"]
+- !private ["So18OS_dispatch_objectC", "sync"]
+- ["So17OS_dispatch_queueC", "init"]
+- !private ["So17OS_dispatch_queueC", "sync"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- ["SE", "init"]
+- ["SE", "init"]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- ["SQ", "init"]
+- ["SQ", "init"]
+- !private ["SQ", "sync"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["8Terminal10FileStreamC", "init"]
+- !private ["8Terminal10FileStreamC", "write"]
+- !private ["SH", "_getBuiltinLogicValue"]
+- ["SH", "init"]
+- ["SH", "init"]
+- !private ["SH", "sync"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- ["s10MirrorPathP", "init"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "sync"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "sync"]
+- ["So9OS_objectC", "init"]
+- !private ["So9OS_objectC", "sync"]
+- !private ["8Terminal5PrintO7OptionsV", "defaultOptions"]
+- ["8Terminal9PrintableP", "init"]
+- ["8Terminal9PrintableP", "init"]
+- !private ["8Terminal9PrintableP", "printableString"]
+- !private ["8Terminal7PrinterP", "string"]
+- ["8Terminal6PromptV", "normal"]
+- !private ["8Terminal6PromptV", "terminalString"]
+- ["Sm", "init"]
+- ["Sm", "init"]
+- ["ST", "init"]
+- ["ST", "init"]
+- ["SS", "init"]
+- ["SS", "init"]
+- ["Sy", "init"]
+- ["Sy", "init"]
+- ["8TerminalAAC", "DispatchQueue"]
+- ["8TerminalAAC", "FileStream"]
+- ["8TerminalAAC", "Printable"]
+- ["8TerminalAAC", "Printer"]
+- ["8TerminalAAC", "Prompt"]
+- ["8TerminalAAC", "String"]
+- ["8TerminalAAC", "Terminal"]
+- !private ["8TerminalAAC", "_sync"]
+- !private ["8TerminalAAC", "_withPrompt"]
+- !private ["8TerminalAAC", "_write"]
+- ["8TerminalAAC", "deinit"]
+- ["8TerminalAAC", "error"]
+- ["8TerminalAAC", "init"]
+- ["8TerminalAAC", "log"]
+- ["8TerminalAAC", "message"]
+- ["8TerminalAAC", "print"]
+- !private ["8TerminalAAC", "promptTemplate"]
+- !private ["8TerminalAAC", "queue"]
+- !private ["8TerminalAAC", "rawLog"]
+- !private ["8TerminalAAC", "rawLogNl"]
+- ["8TerminalAAC", "shared"]
+- ["8TerminalAAC", "stdout"]
+- !private ["8TerminalAAC", "stream"]
+- ["8TerminalAAC", "success"]
+- ["8TerminalAAC", "verbose"]
+- ["8TerminalAAC", "verbosePrint"]
+- ["8TerminalAAC", "write"]
+- ["s16TextOutputStreamP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- ["8Terminal10UIProtocolP", "DispatchQueue"]
+- ["8Terminal10UIProtocolP", "FileStream"]
+- ["8Terminal10UIProtocolP", "Prompt"]
+- ["8Terminal10UIProtocolP", "Terminal"]
+- ["8Terminal10UIProtocolP", ""]
+- !private ["8Terminal10UIProtocolP", "_sync"]
+- !private ["8Terminal10UIProtocolP", "_withPrompt"]
+- !private ["8Terminal10UIProtocolP", "_write"]
+- ["8Terminal10UIProtocolP", "error"]
+- ["8Terminal10UIProtocolP", "init"]
+- ["8Terminal10UIProtocolP", "message"]
+- ["8Terminal10UIProtocolP", "print"]
+- !private ["8Terminal10UIProtocolP", "promptTemplate"]
+- !private ["8Terminal10UIProtocolP", "queue"]
+- !private ["8Terminal10UIProtocolP", "rawLog"]
+- !private ["8Terminal10UIProtocolP", "rawLogNl"]
+- ["8Terminal10UIProtocolP", "stdout"]
+- !private ["8Terminal10UIProtocolP", "stream"]
+- ["8Terminal10UIProtocolP", "success"]
+- ["8Terminal10UIProtocolP", "verbose"]
+- ["8Terminal10UIProtocolP", "verbosePrint"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sync"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- "21SourceryAutoProtocols0B8MockableP"
+- "SK"
+- !private "Sb"
+- "s7CVarArgP"
+- "Sl"
+- "SL"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- "So18OS_dispatch_objectC"
+- "So17OS_dispatch_queueC"
+- "SE"
+- "SQ"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "8Terminal10FileStreamC"
+- "SH"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "So9OS_objectC"
+- !private "8Terminal5PrintO7OptionsV"
+- "8Terminal9PrintableP"
+- !private "8Terminal7PrinterP"
+- "8Terminal6PromptV"
+- "Sm"
+- "ST"
+- "SS"
+- "Sy"
+- "8TerminalAAC"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- "8Terminal10UIProtocolP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/SourceryAutoProtocols.framework/Modules/SourceryAutoProtocols.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "4b84981f72a2e3406ba7a0e8674c612a"

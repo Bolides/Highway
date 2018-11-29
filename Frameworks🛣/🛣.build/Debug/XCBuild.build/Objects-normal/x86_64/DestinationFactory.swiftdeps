@@ -1,0 +1,360 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "DestinationFactoryProtocol"
+- "DestinationFactory"
+provides-nominal:
+- "7XCBuild26DestinationFactoryProtocolP"
+- "7XCBuild18DestinationFactoryV"
+- "7XCBuild18DestinationFactoryV5ErrorO"
+provides-member:
+- ["7XCBuild26DestinationFactoryProtocolP", ""]
+- ["7XCBuild18DestinationFactoryV", ""]
+- ["7XCBuild18DestinationFactoryV5ErrorO", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "=="
+- "AssignmentPrecedence"
+- "AutoGenerateProtocol"
+- "AutoMockable"
+- "Bool"
+- "BooleanLiteralType"
+- "CustomDebugStringConvertible"
+- "Destination"
+- "DestinationFactory"
+- "DestinationFactoryProtocol"
+- !private "Dictionary"
+- "Equatable"
+- "RawRepresentable"
+- "String"
+- !private "StringLiteralType"
+- "Swift"
+- "TernaryPrecedence"
+- !private "UnicodeScalarType"
+- !private "~="
+depends-member:
+- !private ["7XCBuild11DestinationV12ArchitectureO", "deinit"]
+- !private ["7XCBuild11DestinationV12ArchitectureO", "rawValue"]
+- ["21SourceryAutoProtocols0B16GenerateProtocolP", "Architecture"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "Destination"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "DestinationFactory"]
+- ["21SourceryAutoProtocols0B16GenerateProtocolP", "Device"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "Error"]
+- ["21SourceryAutoProtocols0B16GenerateProtocolP", "OS"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "PlatformType"]
+- ["21SourceryAutoProtocols0B16GenerateProtocolP", "Simulator"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "String"]
+- ["21SourceryAutoProtocols0B16GenerateProtocolP", ""]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "init"]
+- ["21SourceryAutoProtocols0B8MockableP", "Architecture"]
+- ["21SourceryAutoProtocols0B8MockableP", "Bool"]
+- ["21SourceryAutoProtocols0B8MockableP", "Destination"]
+- ["21SourceryAutoProtocols0B8MockableP", "Device"]
+- ["21SourceryAutoProtocols0B8MockableP", "OS"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "PlatformType"]
+- ["21SourceryAutoProtocols0B8MockableP", "Simulator"]
+- ["21SourceryAutoProtocols0B8MockableP", "String"]
+- ["21SourceryAutoProtocols0B8MockableP", ""]
+- !private ["21SourceryAutoProtocols0B8MockableP", "init"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["Sl", "subscript"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "DestinationFactory"]
+- ["s28CustomDebugStringConvertibleP", "RawValue"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- ["s28CustomDebugStringConvertibleP", "_code"]
+- ["s28CustomDebugStringConvertibleP", "_domain"]
+- ["s28CustomDebugStringConvertibleP", "_getEmbeddedNSError"]
+- ["s28CustomDebugStringConvertibleP", "_userInfo"]
+- ["s28CustomDebugStringConvertibleP", "debugDescription"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "message"]
+- ["s28CustomDebugStringConvertibleP", "rawValue"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "subscript"]
+- ["7XCBuild11DestinationV", "Architecture"]
+- ["7XCBuild11DestinationV", "Device"]
+- ["7XCBuild11DestinationV", "OS"]
+- !private ["7XCBuild11DestinationV", "PlatformType"]
+- ["7XCBuild11DestinationV", "Simulator"]
+- !private ["7XCBuild11DestinationV", "init"]
+- ["7XCBuild18DestinationFactoryV", "Bool"]
+- ["7XCBuild18DestinationFactoryV", "CustomDebugStringConvertible"]
+- ["7XCBuild18DestinationFactoryV", "Destination"]
+- !private ["7XCBuild18DestinationFactoryV", "DestinationFactory"]
+- ["7XCBuild18DestinationFactoryV", "Equatable"]
+- ["7XCBuild18DestinationFactoryV", "Error"]
+- ["7XCBuild18DestinationFactoryV", "RawRepresentable"]
+- ["7XCBuild18DestinationFactoryV", "String"]
+- ["7XCBuild18DestinationFactoryV", "Swift"]
+- ["7XCBuild18DestinationFactoryV", "deinit"]
+- ["7XCBuild18DestinationFactoryV", "device"]
+- ["7XCBuild18DestinationFactoryV", "init"]
+- ["7XCBuild18DestinationFactoryV", "macOS"]
+- ["7XCBuild18DestinationFactoryV", "simulator"]
+- ["7XCBuild26DestinationFactoryProtocolP", "Bool"]
+- ["7XCBuild26DestinationFactoryProtocolP", "Destination"]
+- ["7XCBuild26DestinationFactoryProtocolP", "String"]
+- ["7XCBuild26DestinationFactoryProtocolP", "device"]
+- ["7XCBuild26DestinationFactoryProtocolP", "macOS"]
+- ["7XCBuild26DestinationFactoryProtocolP", "simulator"]
+- ["7XCBuild19DestinationProtocolP", "Architecture"]
+- ["7XCBuild19DestinationProtocolP", "Device"]
+- ["7XCBuild19DestinationProtocolP", "OS"]
+- !private ["7XCBuild19DestinationProtocolP", "PlatformType"]
+- ["7XCBuild19DestinationProtocolP", "Simulator"]
+- !private ["7XCBuild19DestinationProtocolP", "init"]
+- !private ["7XCBuild11DestinationV6DeviceO", "name"]
+- !private ["SD", "init"]
+- !private ["SD", "subscript"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "subscript"]
+- !private ["SQ", "DestinationFactory"]
+- ["SQ", "RawValue"]
+- ["SQ", ""]
+- ["SQ", "_code"]
+- ["SQ", "_domain"]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- ["SQ", "_getEmbeddedNSError"]
+- ["SQ", "_userInfo"]
+- ["SQ", "debugDescription"]
+- ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "macOS"]
+- ["SQ", "message"]
+- !private ["SQ", "name"]
+- ["SQ", "rawValue"]
+- !private ["SQ", "subscript"]
+- !private ["7XCBuild18DestinationFactoryV5ErrorO", "DestinationFactory"]
+- !private ["s5ErrorP", "DestinationFactory"]
+- ["7XCBuild18DestinationFactoryV5ErrorO", "RawValue"]
+- ["s5ErrorP", "RawValue"]
+- ["7XCBuild18DestinationFactoryV5ErrorO", "String"]
+- ["s5ErrorP", ""]
+- ["7XCBuild18DestinationFactoryV5ErrorO", "_code"]
+- ["s5ErrorP", "_code"]
+- ["7XCBuild18DestinationFactoryV5ErrorO", "_domain"]
+- ["s5ErrorP", "_domain"]
+- ["7XCBuild18DestinationFactoryV5ErrorO", "_getEmbeddedNSError"]
+- ["s5ErrorP", "_getEmbeddedNSError"]
+- ["7XCBuild18DestinationFactoryV5ErrorO", "_userInfo"]
+- ["s5ErrorP", "_userInfo"]
+- ["7XCBuild18DestinationFactoryV5ErrorO", "debugDescription"]
+- ["s5ErrorP", "debugDescription"]
+- ["7XCBuild18DestinationFactoryV5ErrorO", "deinit"]
+- ["7XCBuild18DestinationFactoryV5ErrorO", "init"]
+- ["s5ErrorP", "init"]
+- !private ["s5ErrorP", "init"]
+- ["7XCBuild18DestinationFactoryV5ErrorO", "message"]
+- ["s5ErrorP", "message"]
+- ["7XCBuild18DestinationFactoryV5ErrorO", "rawValue"]
+- ["s5ErrorP", "rawValue"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "macOS"]
+- !private ["SH", "name"]
+- !private ["SH", "rawValue"]
+- !private ["SH", "subscript"]
+- !private ["9Arguments7KeyableP", "init"]
+- !private ["9Arguments7KeyableP", "init"]
+- !private ["10Foundation14LocalizedErrorP", "init"]
+- !private ["10Foundation14LocalizedErrorP", "init"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["7XCBuild11DestinationV2OSO", "name"]
+- !private ["7XCBuild11DestinationV12PlatformTypeO", "deinit"]
+- !private ["7XCBuild11DestinationV12PlatformTypeO", "macOS"]
+- !private ["7XCBuild11DestinationV12PlatformTypeO", "rawValue"]
+- !private ["8Terminal9PrintableP", "init"]
+- !private ["8Terminal9PrintableP", "init"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
+- !private ["SY", "DestinationFactory"]
+- ["SY", "RawValue"]
+- ["SY", ""]
+- ["SY", "_code"]
+- ["SY", "_domain"]
+- ["SY", "_getEmbeddedNSError"]
+- ["SY", "_userInfo"]
+- ["SY", "debugDescription"]
+- ["SY", "init"]
+- !private ["SY", "macOS"]
+- ["SY", "message"]
+- !private ["SY", "name"]
+- ["SY", "rawValue"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
+- !private ["ST", "subscript"]
+- !private ["7XCBuild11DestinationV9SimulatorO", "name"]
+- !private ["SS", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "7XCBuild11DestinationV12ArchitectureO"
+- "21SourceryAutoProtocols0B16GenerateProtocolP"
+- "21SourceryAutoProtocols0B8MockableP"
+- !private "SK"
+- !private "Sb"
+- !private "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "Se"
+- "7XCBuild11DestinationV"
+- "7XCBuild18DestinationFactoryV"
+- "7XCBuild26DestinationFactoryProtocolP"
+- "7XCBuild19DestinationProtocolP"
+- !private "7XCBuild11DestinationV6DeviceO"
+- !private "SD"
+- !private "SE"
+- "SQ"
+- !private "7XCBuild18DestinationFactoryV5ErrorO"
+- !private "s5ErrorP"
+- "7XCBuild18DestinationFactoryV5ErrorO"
+- "s5ErrorP"
+- "7XCBuild18DestinationFactoryV5ErrorO"
+- "s5ErrorP"
+- "7XCBuild18DestinationFactoryV5ErrorO"
+- "s5ErrorP"
+- "7XCBuild18DestinationFactoryV5ErrorO"
+- "s5ErrorP"
+- "7XCBuild18DestinationFactoryV5ErrorO"
+- "s5ErrorP"
+- "7XCBuild18DestinationFactoryV5ErrorO"
+- "s5ErrorP"
+- "7XCBuild18DestinationFactoryV5ErrorO"
+- "s5ErrorP"
+- "7XCBuild18DestinationFactoryV5ErrorO"
+- "s5ErrorP"
+- "7XCBuild18DestinationFactoryV5ErrorO"
+- "s5ErrorP"
+- "7XCBuild18DestinationFactoryV5ErrorO"
+- "s5ErrorP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "SH"
+- !private "9Arguments7KeyableP"
+- !private "10Foundation14LocalizedErrorP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "7XCBuild11DestinationV2OSO"
+- !private "7XCBuild11DestinationV12PlatformTypeO"
+- !private "8Terminal9PrintableP"
+- !private "Sm"
+- "SY"
+- !private "ST"
+- !private "7XCBuild11DestinationV9SimulatorO"
+- !private "SS"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/os.apinotesc"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/POSIX.framework/Modules/POSIX.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Carthage/Build/Mac/ZFile.framework/Modules/ZFile.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Task.framework/Modules/Task.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Terminal.framework/Modules/Terminal.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Url.framework/Modules/Url.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/SourceryAutoProtocols.framework/Modules/SourceryAutoProtocols.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Errors.framework/Modules/Errors.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Arguments.framework/Modules/Arguments.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Result.framework/Modules/Result.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/os.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "b7b8e1a86e152043f943abcca54a369a"

@@ -1,0 +1,226 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ExecutableProviderProtocol"
+- "SystemExecutableProvider"
+provides-nominal:
+- "4Task26ExecutableProviderProtocolP"
+- "4Task24SystemExecutableProviderC"
+- "4Task24SystemExecutableProviderC5ErrorO"
+provides-member:
+- ["4Task26ExecutableProviderProtocolP", ""]
+- ["4Task24SystemExecutableProviderC", ""]
+- ["4Task24SystemExecutableProviderC5ErrorO", ""]
+- ["4Task24SystemExecutableProviderC", "executable"]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "Absolute"
+- "AssignmentPrecedence"
+- "AutoGenerateProtocol"
+- "AutoMockable"
+- "ExecutableProviderProtocol"
+- !private "File"
+- "FileProtocol"
+- !private "FileSystem"
+- "FileSystemProtocol"
+- "FolderProtocol"
+- !private "PathEnvironmentParser"
+- "String"
+- "Swift"
+- "SystemExecutableProvider"
+depends-member:
+- !private ["3Url8AbsoluteV", "appending"]
+- !private ["3Url8AbsoluteV", "init"]
+- !private ["3Url8AbsoluteV", "path"]
+- ["Sa", "init"]
+- ["s13ArrayProtocolP", "init"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "Absolute"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "Error"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "File"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "FileSystem"]
+- ["21SourceryAutoProtocols0B16GenerateProtocolP", "FolderProtocol"]
+- !private ["21SourceryAutoProtocols0B16GenerateProtocolP", "PathEnvironmentParser"]
+- ["21SourceryAutoProtocols0B16GenerateProtocolP", ""]
+- ["21SourceryAutoProtocols0B16GenerateProtocolP", "executable"]
+- ["21SourceryAutoProtocols0B16GenerateProtocolP", "fileSystem"]
+- ["21SourceryAutoProtocols0B16GenerateProtocolP", "searchedUrls"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "Absolute"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "Error"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "File"]
+- ["21SourceryAutoProtocols0B8MockableP", "FileProtocol"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "FileSystem"]
+- ["21SourceryAutoProtocols0B8MockableP", "FileSystemProtocol"]
+- ["21SourceryAutoProtocols0B8MockableP", "FolderProtocol"]
+- !private ["21SourceryAutoProtocols0B8MockableP", "PathEnvironmentParser"]
+- ["21SourceryAutoProtocols0B8MockableP", "String"]
+- ["21SourceryAutoProtocols0B8MockableP", ""]
+- ["21SourceryAutoProtocols0B8MockableP", "executable"]
+- ["21SourceryAutoProtocols0B8MockableP", "fileSystem"]
+- ["21SourceryAutoProtocols0B8MockableP", "searchedUrls"]
+- ["SK", "init"]
+- ["s7CVarArgP", "init"]
+- ["Sl", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "appending"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "path"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "appending"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "path"]
+- ["Se", "init"]
+- ["SE", "init"]
+- !private ["SQ", "appending"]
+- ["SQ", "init"]
+- !private ["SQ", "path"]
+- ["4Task24SystemExecutableProviderC5ErrorO", "String"]
+- ["s5ErrorP", ""]
+- ["4Task24SystemExecutableProviderC5ErrorO", "_code"]
+- ["s5ErrorP", "_code"]
+- ["4Task24SystemExecutableProviderC5ErrorO", "_domain"]
+- ["s5ErrorP", "_domain"]
+- ["4Task24SystemExecutableProviderC5ErrorO", "_getEmbeddedNSError"]
+- ["s5ErrorP", "_getEmbeddedNSError"]
+- ["4Task24SystemExecutableProviderC5ErrorO", "_userInfo"]
+- ["s5ErrorP", "_userInfo"]
+- ["4Task24SystemExecutableProviderC5ErrorO", "deinit"]
+- ["4Task24SystemExecutableProviderC5ErrorO", "executableNotFoundFor"]
+- !private ["s5ErrorP", "executableNotFoundFor"]
+- !private ["4Task26ExecutableProviderProtocolP", "Absolute"]
+- !private ["4Task26ExecutableProviderProtocolP", "Error"]
+- !private ["4Task26ExecutableProviderProtocolP", "File"]
+- ["4Task26ExecutableProviderProtocolP", "FileProtocol"]
+- !private ["4Task26ExecutableProviderProtocolP", "FileSystem"]
+- ["4Task26ExecutableProviderProtocolP", "FileSystemProtocol"]
+- ["4Task26ExecutableProviderProtocolP", "FolderProtocol"]
+- !private ["4Task26ExecutableProviderProtocolP", "PathEnvironmentParser"]
+- ["4Task26ExecutableProviderProtocolP", "String"]
+- ["4Task26ExecutableProviderProtocolP", ""]
+- ["4Task26ExecutableProviderProtocolP", "executable"]
+- ["4Task26ExecutableProviderProtocolP", "fileSystem"]
+- ["4Task26ExecutableProviderProtocolP", "searchedUrls"]
+- ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "appending"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "path"]
+- !private ["s26ExpressibleByStringLiteralP", "appending"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "path"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "appending"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "path"]
+- !private ["5ZFile4FileC", "init"]
+- !private ["5ZFile12FileProtocolP", "init"]
+- !private ["5ZFile10FileSystemC", "init"]
+- !private ["5ZFile18FileSystemIterableP", "init"]
+- !private ["5ZFile18FileSystemIterableP", "path"]
+- !private ["5ZFile18FileSystemProtocolP", "init"]
+- !private ["5ZFile14FolderProtocolP", "path"]
+- !private ["SH", "appending"]
+- ["SH", "init"]
+- !private ["SH", "path"]
+- !private ["5ZFile12ItemProtocolP", "init"]
+- !private ["5ZFile12ItemProtocolP", "path"]
+- ["SM", "init"]
+- !private ["4Task21PathEnvironmentParserV", "local"]
+- !private ["4Task21PathEnvironmentParserV", "urls"]
+- ["Sk", "init"]
+- ["Sm", "init"]
+- ["ST", "init"]
+- !private ["4Task24SystemExecutableProviderC", "Absolute"]
+- ["4Task24SystemExecutableProviderC", "Error"]
+- !private ["4Task24SystemExecutableProviderC", "File"]
+- ["4Task24SystemExecutableProviderC", "FileProtocol"]
+- !private ["4Task24SystemExecutableProviderC", "FileSystem"]
+- ["4Task24SystemExecutableProviderC", "FileSystemProtocol"]
+- ["4Task24SystemExecutableProviderC", "FolderProtocol"]
+- !private ["4Task24SystemExecutableProviderC", "PathEnvironmentParser"]
+- ["4Task24SystemExecutableProviderC", "String"]
+- ["4Task24SystemExecutableProviderC", "Swift"]
+- ["4Task24SystemExecutableProviderC", "deinit"]
+- ["4Task24SystemExecutableProviderC", "executable"]
+- ["4Task24SystemExecutableProviderC", "fileSystem"]
+- ["4Task24SystemExecutableProviderC", "init"]
+- ["4Task24SystemExecutableProviderC", "searchedUrls"]
+- ["s24_DestructorSafeContainerP", "init"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+depends-nominal:
+- !private "3Url8AbsoluteV"
+- "Sa"
+- "s13ArrayProtocolP"
+- "21SourceryAutoProtocols0B16GenerateProtocolP"
+- "21SourceryAutoProtocols0B8MockableP"
+- "SK"
+- "s7CVarArgP"
+- "Sl"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- "SE"
+- "SQ"
+- "4Task24SystemExecutableProviderC5ErrorO"
+- "s5ErrorP"
+- "4Task24SystemExecutableProviderC5ErrorO"
+- "s5ErrorP"
+- "4Task24SystemExecutableProviderC5ErrorO"
+- "s5ErrorP"
+- "4Task24SystemExecutableProviderC5ErrorO"
+- "s5ErrorP"
+- "4Task24SystemExecutableProviderC5ErrorO"
+- "s5ErrorP"
+- "4Task24SystemExecutableProviderC5ErrorO"
+- !private "s5ErrorP"
+- "4Task26ExecutableProviderProtocolP"
+- "s25ExpressibleByArrayLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "5ZFile4FileC"
+- !private "5ZFile12FileProtocolP"
+- !private "5ZFile10FileSystemC"
+- !private "5ZFile18FileSystemIterableP"
+- !private "5ZFile18FileSystemProtocolP"
+- !private "5ZFile14FolderProtocolP"
+- "SH"
+- !private "5ZFile12ItemProtocolP"
+- "SM"
+- !private "4Task21PathEnvironmentParserV"
+- "Sk"
+- "Sm"
+- "ST"
+- "4Task24SystemExecutableProviderC"
+- "s24_DestructorSafeContainerP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/os.apinotesc"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/POSIX.framework/Modules/POSIX.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Carthage/Build/Mac/ZFile.framework/Modules/ZFile.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Terminal.framework/Modules/Terminal.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Url.framework/Modules/Url.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/SourceryAutoProtocols.framework/Modules/SourceryAutoProtocols.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Errors.framework/Modules/Errors.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Arguments.framework/Modules/Arguments.swiftmodule/x86_64.swiftmodule"
+- "/Users/doozmen/Documents/dooz/Open/\U0001F916/\U0001F916sources/\U0001F6E3/Frameworks\U0001F6E3/Debug/Result.framework/Modules/Result.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/os.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "974c90c38f30889f8aebe82d52a514fa"
