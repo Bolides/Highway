@@ -5,9 +5,6 @@
 .Spotlight-V100
 *.swp
 
-# xcode project files
-highway.xcodeproj/
-_highway.xcodeproj/
 
 ## Xcode build files
 DerivedData/
@@ -42,16 +39,3 @@ xcuserdata/
 
 ## Carthage
 Carthage/Build
-
-# fastlane
-# https://github.com/fastlane/fastlane/blob/master/docs/Gitignore.md
-
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots
-fastlane/test_output
-
-## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
-Package.resolved

@@ -1,0 +1,3 @@
+[submodule "Carthage/Checkouts/ios-zfile"]
+	path = Carthage/Checkouts/ios-zfile
+	url = https://github.com/doozMen/ios-zfile.git
