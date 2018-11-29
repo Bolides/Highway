@@ -5606,10 +5606,6 @@
 		OBJ_1022 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/highway_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
@@ -5627,10 +5623,6 @@
 		OBJ_1023 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/highway_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
@@ -5695,10 +5687,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/Arguments_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -5719,10 +5707,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/Arguments_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -5743,10 +5727,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/ArgumentsTests_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
@@ -5763,10 +5743,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/ArgumentsTests_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
@@ -5783,10 +5759,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/Deliver_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -5807,10 +5779,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/Deliver_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -5855,7 +5823,10 @@
 				ENABLE_NS_ASSERTIONS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/Mac";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SYMROOT)/$(CONFIGURATION)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -5872,7 +5843,7 @@
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SYMROOT = "$(PROJECT_DIR)/Frameworks🛣";
+				SYMROOT = "$(PROJECT_DIR)/🛣Products/$(SUPPORTED_PLATFORMS)";
 				USE_HEADERMAP = NO;
 			};
 			name = Debug;
@@ -5881,10 +5852,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/DeliverTests_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
@@ -5901,10 +5868,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/DeliverTests_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
@@ -5921,10 +5884,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/Errors_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -5945,10 +5904,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/Errors_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -5969,10 +5924,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/Git_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -5993,10 +5944,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/Git_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6017,10 +5964,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/GitTests_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
@@ -6037,10 +5980,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/GitTests_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
@@ -6079,7 +6018,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/Mac";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SYMROOT)/$(CONFIGURATION)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -6095,7 +6037,7 @@
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SYMROOT = "$(PROJECT_DIR)/Frameworks🛣";
+				SYMROOT = "$(PROJECT_DIR)/🛣Products/$(SUPPORTED_PLATFORMS)";
 				USE_HEADERMAP = NO;
 			};
 			name = Release;
@@ -6104,10 +6046,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/HWKit_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6128,10 +6066,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/HWKit_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6152,10 +6086,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/HWKitTests_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
@@ -6172,10 +6102,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/HWKitTests_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
@@ -6192,10 +6118,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/HighwayCore_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6216,10 +6138,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/HighwayCore_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6240,10 +6158,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/HighwayCoreTests_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
@@ -6260,10 +6174,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/HighwayCoreTests_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
@@ -6280,10 +6190,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/HighwayProject_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6304,10 +6210,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/HighwayProject_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6328,10 +6230,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/Keychain_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6352,10 +6250,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/Keychain_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6376,10 +6270,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/POSIX_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6400,10 +6290,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/POSIX_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6424,10 +6310,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/POSIXTests_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
@@ -6444,10 +6326,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/POSIXTests_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
@@ -6464,10 +6342,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/Result_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6488,10 +6362,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/Result_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6512,10 +6382,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/ResultTests_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
@@ -6532,10 +6398,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/ResultTests_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
@@ -6552,10 +6414,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/SourceryAutoProtocols_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6576,10 +6434,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/SourceryAutoProtocols_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6600,10 +6454,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/SourceryMocks_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6624,10 +6474,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/SourceryMocks_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6648,10 +6494,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/Task_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6673,10 +6515,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/Task_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6698,10 +6536,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/TaskTests_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
@@ -6718,10 +6552,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/TaskTests_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
@@ -6738,10 +6568,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/Terminal_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6762,10 +6588,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/Terminal_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6786,10 +6608,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/TerminalTests_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
@@ -6806,10 +6624,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/TerminalTests_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
@@ -6826,10 +6640,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/Url_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6850,10 +6660,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/Url_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6874,10 +6680,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/UrlTests_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
@@ -6894,10 +6696,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/UrlTests_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
@@ -6914,10 +6712,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/XCBuild_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6938,10 +6732,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/XCBuild_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
@@ -6962,10 +6752,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/XCBuildTests_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
@@ -6982,10 +6768,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "🛣.xcodeproj/XCBuildTests_Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
