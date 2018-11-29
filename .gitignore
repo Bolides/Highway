@@ -1,3 +1,6 @@
 /Carthage/Build
 /Frameworks🛣/XCBuildData
 .DS_Store
+/🛣Products/macosx/XCBuildData
+/🛣Products/macosx/🛣.build
+/🛣.xcodeproj/project.xcworkspace/xcuserdata
