@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0940"
+   LastUpgradeVersion = "1010"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "highway::SourceryMocks"
-               BuildableName = "SourceryMocks.framework"
-               BlueprintName = "SourceryMocks"
+               BlueprintIdentifier = "FDC156DA21C5347C00E04B44"
+               BuildableName = "SourceryWorker.framework"
+               BlueprintName = "SourceryWorker"
                ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "highway::SourceryMocks"
-            BuildableName = "SourceryMocks.framework"
-            BlueprintName = "SourceryMocks"
+            BlueprintIdentifier = "FDC156DA21C5347C00E04B44"
+            BuildableName = "SourceryWorker.framework"
+            BlueprintName = "SourceryWorker"
             ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "highway::SourceryMocks"
-            BuildableName = "SourceryMocks.framework"
-            BlueprintName = "SourceryMocks"
+            BlueprintIdentifier = "FDC156DA21C5347C00E04B44"
+            BuildableName = "SourceryWorker.framework"
+            BlueprintName = "SourceryWorker"
             ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

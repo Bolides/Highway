@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0940"
+   LastUpgradeVersion = "1010"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "highway::SwiftPMPackageDescription"
-               BuildableName = "highwayPackageDescription"
-               BlueprintName = "highwayPackageDescription"
+               BlueprintIdentifier = "highway::Terminal"
+               BuildableName = "Terminal.framework"
+               BlueprintName = "Terminal"
                ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "highway::SwiftPMPackageDescription"
-            BuildableName = "highwayPackageDescription"
-            BlueprintName = "highwayPackageDescription"
+            BlueprintIdentifier = "highway::Terminal"
+            BuildableName = "Terminal.framework"
+            BlueprintName = "Terminal"
             ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "highway::SwiftPMPackageDescription"
-            BuildableName = "highwayPackageDescription"
-            BlueprintName = "highwayPackageDescription"
+            BlueprintIdentifier = "highway::Terminal"
+            BuildableName = "Terminal.framework"
+            BlueprintName = "Terminal"
             ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
