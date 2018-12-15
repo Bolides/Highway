@@ -1,59 +1,41 @@
+# Frameworks to help Automate build scripts written in Swift
+
+... Currently exploring how to use this. Very experimental state.
+
+## GOAL of highway
+
+This changed from the original project
+
+1. Build frameworks you can use to write a script in swift that runs Terminal commands
+2. Building with xcbuild from swift code
+3. Optimize git workflow from Swift
+4. Generate reliable code using sourcery with a swift command
+
+
 # Usage
 
 First resolve some dependencies from the xcode project
 
 1. `carthage update --no-build --use-submodules`
-2. `carthage build`
+2. `open Carthage/Checkouts/zfile/sources/ZFile.xcodeproj`
+	2.1 `build zfile for macos`// This will output the framework in derived data build folder
+	2.2 (optional) `build zfile for iOS` // Not used in this project
 3. `open 🛣.xcodeproj`
+4. `build Task framework`
 
 ## Integrate in your project
 
 Use [Carthage](https://www.github.com/Carthage/Carthage)
 
-1. Add Cartfile with
-> `github "doozMen/highway" "master"` // ⚠️ change master to a tag to fix on a version
+1. Add Cartfile with > `github "doozMen/highway" "master"` // ⚠️ change master to a tag to fix on a version
 2. `carthage update --no-build --use-submodules`
 3. Build the frameworks via xcode or `carthage build``
-4. Set the **framework search path** to where you build the frameworks
-(optional) 5. If you build an app make sure to embed the framework.
+4. Set the **framework search path** to `$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)` in the project settings, ⚠️ so not in the target. In the target(s) use `$inherited`
 
-**Want to do it easiar?**
-1. `cd 🛣Products`
-2. You will find Debug and Release builds of the frameworks. Copy them and add dependencies to your project
+The goal is not to provide an out of the box script. You use the different frameworks to automate your workflow.
 
-> 💁🏻‍♂️ You can use the variables of xcode to make it easiar to use the correct framework for release or Debug. See tip below!
+# Example use cases
 
----
+Run sourcery to generate protocols.
 
-## What can you do?
-
-1. Run terminal commands from Swift
-2. Use XCBuild in Swift
-
-... Currently exploring how to use this. Very experimental state.
-
----
-
-⚠️
-
-## Dependency TYP
-
-* Use a known build output directory
-* Set the framework search path dependend on the platform and configuration that is being build
-
-**Known build output**
-
-With XCode I always struggle with the dependencies. So I made an explanation that helps me understand. I hope it helps you.
-
-![](Images/GeneralBuildOutput.png)
-
-In this screenshot you can see 2 important things that are not apparent at first.
-
-1. Upper left select the overall project settings
-1.1 ⚠️ Targets below inherit the settings from the above so you do not have to do the same thing for all targets. Just add ` $(inherited)`
-2. The build output can be set in settings. To make it different for different configurations and platforms use xcode globals that expand to the correct folder when you wrap them in `$(<xcode global>)`
-2.1 In this case it is wanted that the build output of any target goes into the project folder. `$(PROJECT_DIR)/🛣Products/$(SUPPORTED_PLATFORMS)` expand when building to the 🛣Products directory you can find in this repo.
-
-**Framework Search Path**
-
-3. Just add `$(PROJECT_DIR)/🛣Products/$(SUPPORTED_PLATFORMS)/$(CONFIGURATION)` to the global framework search path and `$(inherited)` to all the targets.
+1. Add an Macos application to your project
