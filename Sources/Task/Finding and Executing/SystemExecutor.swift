@@ -1,6 +1,5 @@
 import Foundation
 import Arguments
-import Terminal
 
 public final class SystemExecutor: TaskExecutorProtocol {
     public var ui: UIProtocol

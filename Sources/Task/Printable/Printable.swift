@@ -11,7 +11,7 @@ public protocol Printer {
 public enum Print {
     public struct Options {
         public let width: Int
-        static func defaultOptions() -> Options {
+        public static func defaultOptions() -> Options {
             return self.init(width: terminal_width())
         }
     }

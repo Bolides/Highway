@@ -1,7 +1,6 @@
 import Foundation
 import ZFile
 import Result
-import Terminal
 import SourceryAutoProtocols
 
 public final class LocalSystem: SystemProtocol, AutoGenerateProtocol {
@@ -20,8 +19,8 @@ public final class LocalSystem: SystemProtocol, AutoGenerateProtocol {
     }
 
     /// Local System
-    public init(executableProvider: SystemExecutableProvider? = nil) throws {
-        self.executor = SystemExecutor(ui: Terminal.shared)
+    public init(executableProvider: SystemExecutableProvider? = nil, terminalUI: UIProtocol) throws {
+        self.executor = SystemExecutor(ui: terminalUI)
         self.executableProvider = (executableProvider == nil) ? try SystemExecutableProvider() : executableProvider!
         self.fileSystem = FileSystem()
     }

@@ -5,7 +5,7 @@ extension String {
 }
 
 extension String {
-    enum Ansi {
+    public enum Ansi {
         static let CSI = "\u{001B}["
         static let BOLD = CSI + "1m"
         static let RESET = CSI + "0m"
@@ -13,7 +13,7 @@ extension String {
 }
 
 extension String {
-    func indented(width: Int, using indentationString: String = " ") -> String {
+    public func indented(width: Int, using indentationString: String = " ") -> String {
         let indent = String(repeating: indentationString, count: width)
         return indent + self
     }

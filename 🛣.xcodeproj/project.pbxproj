@@ -32,6 +32,17 @@
 		FDC156F621C5355400E04B44 /* SourceryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC156F321C5355400E04B44 /* SourceryWorker.swift */; };
 		FDC156F721C5355400E04B44 /* Sourcery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC156F421C5355400E04B44 /* Sourcery.swift */; };
 		FDC156FA21C535A400E04B44 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
+		FDC1571521C549C200E04B44 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_124 /* UI.swift */; };
+		FDC1571721C54A5F00E04B44 /* Printable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* Printable.swift */; };
+		FDC1571821C54A7B00E04B44 /* Texts+Printable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_123 /* Texts+Printable.swift */; };
+		FDC1571A21C54A7F00E04B44 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_119 /* Color.swift */; };
+		FDC1571B21C54A7F00E04B44 /* SubText.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_120 /* SubText.swift */; };
+		FDC1571C21C54A7F00E04B44 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_121 /* Text.swift */; };
+		FDC1571D21C54A7F00E04B44 /* Texts+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_122 /* Texts+Operators.swift */; };
+		FDC1572021C54A8900E04B44 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_113 /* Line.swift */; };
+		FDC1572121C54A8900E04B44 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_114 /* List.swift */; };
+		FDC1572221C54A8900E04B44 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_115 /* Prompt.swift */; };
+		FDC1572321C54B1200E04B44 /* String+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_116 /* String+Convenience.swift */; };
 		OBJ_269 /* Arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* Arguments.swift */; };
 		OBJ_270 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* Option.swift */; };
 		OBJ_272 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
@@ -245,7 +256,6 @@
 		OBJ_753 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Result::Product" /* Result.framework */; };
 		OBJ_754 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
 		OBJ_756 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
-		OBJ_757 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
 		OBJ_758 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_771 /* PathEnvironmentParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_153 /* PathEnvironmentParserTests.swift */; };
 		OBJ_772 /* SystemExecutableProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_154 /* SystemExecutableProviderTests.swift */; };
@@ -267,18 +277,7 @@
 		OBJ_791 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
 		OBJ_792 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_813 /* FileStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_109 /* FileStream.swift */; };
-		OBJ_814 /* Printable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* Printable.swift */; };
-		OBJ_815 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_113 /* Line.swift */; };
-		OBJ_816 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_114 /* List.swift */; };
-		OBJ_817 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_115 /* Prompt.swift */; };
-		OBJ_818 /* String+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_116 /* String+Convenience.swift */; };
 		OBJ_819 /* Terminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_117 /* Terminal.swift */; };
-		OBJ_820 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_119 /* Color.swift */; };
-		OBJ_821 /* SubText.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_120 /* SubText.swift */; };
-		OBJ_822 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_121 /* Text.swift */; };
-		OBJ_823 /* Texts+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_122 /* Texts+Operators.swift */; };
-		OBJ_824 /* Texts+Printable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_123 /* Texts+Printable.swift */; };
-		OBJ_825 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_124 /* UI.swift */; };
 		OBJ_827 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_834 /* TerminalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_177 /* TerminalTests.swift */; };
 		OBJ_837 /* SourceryMocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryMocks::Product" /* SourceryMocks.framework */; };
@@ -436,13 +435,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = "highway::SourceryAutoProtocols";
 			remoteInfo = SourceryAutoProtocols;
-		};
-		FD326C832109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Terminal";
-			remoteInfo = Terminal;
 		};
 		FD326C842109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -2234,7 +2226,6 @@
 				OBJ_753 /* Result.framework in Frameworks */,
 				OBJ_754 /* Errors.framework in Frameworks */,
 				OBJ_756 /* Url.framework in Frameworks */,
-				OBJ_757 /* Terminal.framework in Frameworks */,
 				OBJ_758 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2418,12 +2409,7 @@
 				FDAC9350210B7D4A00B0D045 /* TerminalTasks.swift */,
 				FD34F42621BEE8CA0052222C /* TerminalWorker.swift */,
 				OBJ_109 /* FileStream.swift */,
-				OBJ_110 /* Printable */,
-				OBJ_115 /* Prompt.swift */,
-				OBJ_116 /* String+Convenience.swift */,
 				OBJ_117 /* Terminal.swift */,
-				OBJ_118 /* Text */,
-				OBJ_124 /* UI.swift */,
 			);
 			name = Terminal;
 			path = Sources/Terminal;
@@ -2434,6 +2420,8 @@
 			children = (
 				OBJ_111 /* Printable.swift */,
 				OBJ_112 /* Printables */,
+				OBJ_115 /* Prompt.swift */,
+				OBJ_124 /* UI.swift */,
 			);
 			path = Printable;
 			sourceTree = "<group>";
@@ -2451,6 +2439,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_119 /* Color.swift */,
+				OBJ_116 /* String+Convenience.swift */,
 				OBJ_120 /* SubText.swift */,
 				OBJ_121 /* Text.swift */,
 				OBJ_122 /* Texts+Operators.swift */,
@@ -2472,6 +2461,8 @@
 		OBJ_132 /* Task */ = {
 			isa = PBXGroup;
 			children = (
+				OBJ_110 /* Printable */,
+				OBJ_118 /* Text */,
 				OBJ_133 /* Finding and Executing */,
 				OBJ_139 /* LocalSystem.swift */,
 				OBJ_140 /* Model */,
@@ -3512,7 +3503,6 @@
 				OBJ_760 /* PBXTargetDependency */,
 				OBJ_761 /* PBXTargetDependency */,
 				OBJ_763 /* PBXTargetDependency */,
-				OBJ_764 /* PBXTargetDependency */,
 				OBJ_765 /* PBXTargetDependency */,
 			);
 			name = Task;
@@ -4061,18 +4051,29 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_738 /* PathEnvironmentParser.swift in Sources */,
+				FDC1571521C549C200E04B44 /* UI.swift in Sources */,
+				FDC1572321C54B1200E04B44 /* String+Convenience.swift in Sources */,
+				FDC1571D21C54A7F00E04B44 /* Texts+Operators.swift in Sources */,
 				OBJ_739 /* SystemExecutableProvider.swift in Sources */,
+				FDC1571B21C54A7F00E04B44 /* SubText.swift in Sources */,
 				OBJ_740 /* SystemExecutor.swift in Sources */,
+				FDC1571A21C54A7F00E04B44 /* Color.swift in Sources */,
+				FDC1571C21C54A7F00E04B44 /* Text.swift in Sources */,
+				FDC1571821C54A7B00E04B44 /* Texts+Printable.swift in Sources */,
 				OBJ_741 /* TaskExecutorProtocol.swift in Sources */,
 				OBJ_742 /* LocalSystem.swift in Sources */,
 				OBJ_743 /* Channel+Reader.swift in Sources */,
+				FDC1572021C54A8900E04B44 /* Line.swift in Sources */,
 				OBJ_744 /* Channel+Writer.swift in Sources */,
 				OBJ_745 /* Channel.swift in Sources */,
 				OBJ_746 /* IO.swift in Sources */,
 				OBJ_747 /* State.swift in Sources */,
+				FDC1572121C54A8900E04B44 /* List.swift in Sources */,
 				OBJ_748 /* Task.swift in Sources */,
 				OBJ_749 /* Termination.swift in Sources */,
 				OBJ_750 /* SystemProtocol.swift in Sources */,
+				FDC1571721C54A5F00E04B44 /* Printable.swift in Sources */,
+				FDC1572221C54A8900E04B44 /* Prompt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4095,23 +4096,12 @@
 				FD34F43121BEE9EB0052222C /* GitExecutables.swift in Sources */,
 				OBJ_813 /* FileStream.swift in Sources */,
 				FD34F42B21BEE91C0052222C /* ExcecutableProtocol.swift in Sources */,
-				OBJ_814 /* Printable.swift in Sources */,
-				OBJ_815 /* Line.swift in Sources */,
-				OBJ_816 /* List.swift in Sources */,
 				FD34F42F21BEE9EB0052222C /* CDToFolderExecutable.swift in Sources */,
 				FD34F42A21BEE8E20052222C /* TerminalSysExitCode.swift in Sources */,
-				OBJ_817 /* Prompt.swift in Sources */,
-				OBJ_818 /* String+Convenience.swift in Sources */,
 				FD34F42821BEE8D50052222C /* TerminalTasks.swift in Sources */,
 				FD34F43021BEE9EB0052222C /* CatExecutable.swift in Sources */,
 				OBJ_819 /* Terminal.swift in Sources */,
 				FD34F42721BEE8CA0052222C /* TerminalWorker.swift in Sources */,
-				OBJ_820 /* Color.swift in Sources */,
-				OBJ_821 /* SubText.swift in Sources */,
-				OBJ_822 /* Text.swift in Sources */,
-				OBJ_823 /* Texts+Operators.swift in Sources */,
-				OBJ_824 /* Texts+Printable.swift in Sources */,
-				OBJ_825 /* UI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4936,11 +4926,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::Url" /* Url */;
 			targetProxy = FD326C812109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_764 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Terminal" /* Terminal */;
-			targetProxy = FD326C832109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_765 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

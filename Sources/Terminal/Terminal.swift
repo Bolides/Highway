@@ -1,4 +1,5 @@
 import Foundation
+import Task
 
 // TODO: Read http://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html
 // TODO: Then rewrite this class.

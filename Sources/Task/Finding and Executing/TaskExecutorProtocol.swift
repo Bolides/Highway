@@ -1,5 +1,4 @@
 import Foundation
-import Terminal
 import SourceryAutoProtocols
 
 public protocol TaskExecutorProtocol: AutoMockable {
