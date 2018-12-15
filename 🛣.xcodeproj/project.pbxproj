@@ -1794,6 +1794,7 @@
 		FDC156F221C5355400E04B44 /* SourceryExecutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceryExecutor.swift; sourceTree = "<group>"; };
 		FDC156F321C5355400E04B44 /* SourceryWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceryWorker.swift; sourceTree = "<group>"; };
 		FDC156F421C5355400E04B44 /* Sourcery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sourcery.swift; sourceTree = "<group>"; };
+		FDC1571421C5485900E04B44 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_10 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
 		OBJ_100 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		OBJ_102 /* Highway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highway.swift; sourceTree = "<group>"; };
@@ -2804,6 +2805,7 @@
 		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
+				FDC1571421C5485900E04B44 /* README.md */,
 				OBJ_7 /* Sources */,
 				OBJ_151 /* Tests */,
 				OBJ_194 /* Products */,
