@@ -31,7 +31,7 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol {
         let message: String
     }
     
-    init(sourcery: SourceryProtocol, terminalWorker: TerminalWorkerProtocol = TerminalWorker()) {
+    public init(sourcery: SourceryProtocol, terminalWorker: TerminalWorkerProtocol = TerminalWorker()) {
         self.sourcery = sourcery
         self.terminalWorker = terminalWorker
     }
