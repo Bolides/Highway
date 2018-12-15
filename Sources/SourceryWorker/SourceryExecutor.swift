@@ -26,9 +26,7 @@ struct SourceryExecutor: ArgumentExecutableProtocol {
     // sourcery:skipProtocol
     public func arguments() throws -> Arguments {
         return Arguments(arrayLiteral:
-                "--templates", self.sourcery.templateFolder.path,
-                "--output", self.sourcery.outputFolder.path,
-                "--sources", self.sourcery.sourceFolder.path
+                "--config", self.sourcery.sourceryYMLFile.path
         )
     }
 }

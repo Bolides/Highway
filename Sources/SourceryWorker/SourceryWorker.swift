@@ -37,7 +37,7 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol {
         self.terminalWorker = terminalWorker
         // generate .sourcery file
         
-        let sourceryYMLFile = try sourcery.outputFolder.createFileIfNeeded(named: ".sourcery.yml")
+        sourceryYMLFile = try sourcery.outputFolder.createFileIfNeeded(named: ".sourcery.yml")
         try sourceryYMLFile.write(
             string: """
                 sources:
