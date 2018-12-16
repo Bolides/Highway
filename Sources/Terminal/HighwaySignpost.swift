@@ -1,11 +1,28 @@
 import Foundation
 import Task
+import SourceryAutoProtocols
 
-// TODO: Read http://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html
-// TODO: Then rewrite this class.
-public class Terminal {
+protocol HighwaySignpostProtocol: AutoMockable {
+    /// sourcery:inline:HighwaySignpost.AutoGenerateProtocol
+    static var shared: HighwaySignpost { get }
+    var verbose: Bool { get set }
+
+    func log(_ text: String)
+    func write(_ printer: Printer)
+    func write(_ printable: Printable)
+    func error(_ text: String)
+    func success(_ text: String)
+    func message(_ text: String)
+    func verbose(_ text: String)
+    func print(_ printable: Printable)
+    func verbosePrint(_ printable: Printable)
+    /// sourcery:end
+}
+
+// Use this class to delivers logs to the user.
+public class HighwaySignpost: AutoGenerateProtocol {
     // MARK: - Global
-    public static let shared = Terminal()
+    public static let shared = HighwaySignpost()
     
     // MARK: - Init
     public init() { }
@@ -60,13 +77,13 @@ public class Terminal {
     }
 }
 
-fileprivate extension Terminal {
+fileprivate extension HighwaySignpost {
     func _withPrompt(_ text: String) -> String {
         return promptTemplate.terminalString + text
     }
 }
 
-extension Terminal: UIProtocol {
+extension HighwaySignpost: UIProtocol {
     
     public func error(_ text: String) {
         rawLogNl(_withPrompt(text))

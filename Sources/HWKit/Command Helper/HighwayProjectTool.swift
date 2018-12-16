@@ -53,7 +53,7 @@ public class HighwayProjectTool {
                             arguments: arguments,
                             currentDirectoryUrl: try bundle.url.parentFolder()
         )
-        Terminal.shared.log("Launching: \(_highway.executable)")
+        HighwaySignpost.shared.log("Launching: \(_highway.executable)")
 
         _highway.enableReadableOutputDataCapturing()
 
