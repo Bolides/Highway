@@ -49,6 +49,8 @@
 		FDEC118E21C65D9400CB7DAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDEC118D21C65D9400CB7DAD /* Assets.xcassets */; };
 		FDEC119121C65D9400CB7DAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDEC118F21C65D9400CB7DAD /* Main.storyboard */; };
 		FDEC119D21C65D9400CB7DAD /* AutomateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC119C21C65D9400CB7DAD /* AutomateTests.swift */; };
+		FDEC11C021C664BF00CB7DAD /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
+		FDEC11C121C664CC00CB7DAD /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F42221BEE5340052222C /* ZFile.framework */; };
 		OBJ_269 /* Arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* Arguments.swift */; };
 		OBJ_270 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* Option.swift */; };
 		OBJ_272 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
@@ -1772,47 +1774,12 @@
 			remoteGlobalIDString = FDEC118621C65D9200CB7DAD;
 			remoteInfo = Automate;
 		};
-		FDEC11AD21C661DF00CB7DAD /* PBXContainerItemProxy */ = {
+		FDEC11BE21C664B200CB7DAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FDEC11A521C661DE00CB7DAD /* Sourcery.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CD754C8B1D853F000082B512;
-			remoteInfo = Sourcery;
-		};
-		FDEC11AF21C661DF00CB7DAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDEC11A521C661DE00CB7DAD /* Sourcery.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CD754C9A1D853F000082B512;
-			remoteInfo = SourceryTests;
-		};
-		FDEC11B121C661DF00CB7DAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDEC11A521C661DE00CB7DAD /* Sourcery.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 64E201A31EAE8FBF00EAD8A2;
-			remoteInfo = SourceryRuntime;
-		};
-		FDEC11B321C661DF00CB7DAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDEC11A521C661DE00CB7DAD /* Sourcery.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6393BC692019F58D0044E8CC;
-			remoteInfo = SourceryJS;
-		};
-		FDEC11B521C661DF00CB7DAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDEC11A521C661DE00CB7DAD /* Sourcery.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 635AB26A201F2E5300342C13;
-			remoteInfo = SourcerySwift;
-		};
-		FDEC11B721C661F200CB7DAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDEC11A521C661DE00CB7DAD /* Sourcery.xcodeproj */;
+			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CD754C8A1D853F000082B512;
-			remoteInfo = Sourcery;
+			remoteGlobalIDString = FDC156DA21C5347C00E04B44;
+			remoteInfo = SourceryWorker;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -1853,7 +1820,6 @@
 		FDEC119821C65D9400CB7DAD /* AutomateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutomateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDEC119C21C65D9400CB7DAD /* AutomateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomateTests.swift; sourceTree = "<group>"; };
 		FDEC119E21C65D9400CB7DAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDEC11A521C661DE00CB7DAD /* Sourcery.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sourcery.xcodeproj; path = Carthage/Checkouts/Sourcery/Sourcery.xcodeproj; sourceTree = "<group>"; };
 		OBJ_10 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
 		OBJ_100 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		OBJ_102 /* Highway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highway.swift; sourceTree = "<group>"; };
@@ -2022,6 +1988,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDEC11C021C664BF00CB7DAD /* SourceryWorker.framework in Frameworks */,
+				FDEC11C121C664CC00CB7DAD /* ZFile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2480,18 +2448,6 @@
 			path = AutomateTests;
 			sourceTree = "<group>";
 		};
-		FDEC11A621C661DE00CB7DAD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FDEC11AE21C661DF00CB7DAD /* Sourcery.app */,
-				FDEC11B021C661DF00CB7DAD /* SourceryTests.xctest */,
-				FDEC11B221C661DF00CB7DAD /* SourceryRuntime.framework */,
-				FDEC11B421C661DF00CB7DAD /* SourceryJS.framework */,
-				FDEC11B621C661DF00CB7DAD /* SourcerySwift.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		OBJ_101 /* HighwayProject */ = {
 			isa = PBXGroup;
 			children = (
@@ -2921,7 +2877,6 @@
 		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
-				FDEC11A521C661DE00CB7DAD /* Sourcery.xcodeproj */,
 				FDC1571421C5485900E04B44 /* README.md */,
 				FDEC118821C65D9200CB7DAD /* Automate */,
 				FDEC119B21C65D9400CB7DAD /* AutomateTests */,
@@ -3154,7 +3109,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FDEC11B821C661F200CB7DAD /* PBXTargetDependency */,
 				FDC156F921C5359C00E04B44 /* PBXTargetDependency */,
 			);
 			name = SourceryWorker;
@@ -3209,6 +3163,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FDEC11BF21C664B200CB7DAD /* PBXTargetDependency */,
 			);
 			name = Automate;
 			productName = Automate;
@@ -3964,12 +3919,6 @@
 			mainGroup = OBJ_5;
 			productRefGroup = OBJ_194 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = FDEC11A621C661DE00CB7DAD /* Products */;
-					ProjectRef = FDEC11A521C661DE00CB7DAD /* Sourcery.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				"highway::Arguments" /* Arguments */,
@@ -4007,44 +3956,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		FDEC11AE21C661DF00CB7DAD /* Sourcery.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Sourcery.app;
-			remoteRef = FDEC11AD21C661DF00CB7DAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDEC11B021C661DF00CB7DAD /* SourceryTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SourceryTests.xctest;
-			remoteRef = FDEC11AF21C661DF00CB7DAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDEC11B221C661DF00CB7DAD /* SourceryRuntime.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SourceryRuntime.framework;
-			remoteRef = FDEC11B121C661DF00CB7DAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDEC11B421C661DF00CB7DAD /* SourceryJS.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SourceryJS.framework;
-			remoteRef = FDEC11B321C661DF00CB7DAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDEC11B621C661DF00CB7DAD /* SourcerySwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SourcerySwift.framework;
-			remoteRef = FDEC11B521C661DF00CB7DAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FDC156D921C5347C00E04B44 /* Resources */ = {
@@ -4497,10 +4408,10 @@
 			target = FDEC118621C65D9200CB7DAD /* Automate */;
 			targetProxy = FDEC119921C65D9400CB7DAD /* PBXContainerItemProxy */;
 		};
-		FDEC11B821C661F200CB7DAD /* PBXTargetDependency */ = {
+		FDEC11BF21C664B200CB7DAD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Sourcery;
-			targetProxy = FDEC11B721C661F200CB7DAD /* PBXContainerItemProxy */;
+			target = FDC156DA21C5347C00E04B44 /* SourceryWorker */;
+			targetProxy = FDEC11BE21C664B200CB7DAD /* PBXContainerItemProxy */;
 		};
 		OBJ_1000 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

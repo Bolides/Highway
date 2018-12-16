@@ -1,2 +1,7 @@
+# Persistence
 github "doozMen/zfile" "master"
+
+# Auto generate Code
+
 github "krzysztofzablocki/Sourcery" "0.15.0"
+github "doozMen/template-sourcery" "master"
