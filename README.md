@@ -42,7 +42,41 @@ Run sourcery to generate protocols.
     > The project Highway contains a Automate target setup like we explan in this use case
 
 2.  I can not work, to my knowledge, in a sandboxed way. So you need to do 2 things:
-    2.1 Automate has a .entitlements file. Set sandbox to no
-    2.3 In build settings set inject base entitlements to no.
+    2.1 Automate has a .entitlements file. Set sandbox to no 
+    ```xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+    <false/>
+    </plist>
+    ```
+    2.3 In build settings set inject base entitlements to no. `CODE_SIGN_INJECT_BASE_ENTITLEMENTS=NO`
+4. Build output should be in project folder so the current folder is more convenient
+```bash
+# Go to build settings and adjust build locations like below
+//:configuration = Debug
+SYMROOT = $(SRCROOT)/.build.nosync/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+OBJROOT = $(SRCROOT)/.build.nosync/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+CONFIGURATION_BUILD_DIR = $(SRCROOT)/.build.nosync/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+CONFIGURATION_TEMP_DIR = $(SRCROOT)/.build.nosync/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+
+//:configuration = Release
+SYMROOT = $(SRCROOT)/.build.nosync/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+OBJROOT = $(SRCROOT)/.build.nosync/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+CONFIGURATION_BUILD_DIR = $(SRCROOT)/.build.nosync/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+CONFIGURATION_TEMP_DIR = $(SRCROOT)/.build.nosync/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+
+//:completeSettings = some
+SYMROOT
+OBJROOT
+CONFIGURATION_BUILD_DIR
+CONFIGURATION_TEMP_DIR
+SHARED_PRECOMPS_DIR
+
+```
+4.1 Run automate and see the `.build.nosync` in project root
+4.2 Add `.build.nosync` to your `.ignore` (the .nosync is for when you would use icloud to prevent the folder from syncing)
+4.3 
+
 3. Add button to run sourcery
     
