@@ -38,4 +38,11 @@ The goal is not to provide an out of the box script. You use the different frame
 
 Run sourcery to generate protocols.
 
-1. Add an Macos application to your project
+1. Add an Macos application to your project named `Automate` 
+    > The project Highway contains a Automate target setup like we explan in this use case
+
+2.  I can not work, to my knowledge, in a sandboxed way. So you need to do 2 things:
+    2.1 Automate has a .entitlements file. Set sandbox to no
+    2.3 In build settings set inject base entitlements to no.
+3. Add button to run sourcery
+    

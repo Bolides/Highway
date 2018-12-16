@@ -44,6 +44,11 @@
 		FDC1572221C54A8900E04B44 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_115 /* Prompt.swift */; };
 		FDC1572321C54B1200E04B44 /* String+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_116 /* String+Convenience.swift */; };
 		FDE9B70E21C58F2900D1F50A /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* SourceryAutoProtocols.swift */; };
+		FDEC118A21C65D9200CB7DAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC118921C65D9200CB7DAD /* AppDelegate.swift */; };
+		FDEC118C21C65D9200CB7DAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC118B21C65D9200CB7DAD /* ViewController.swift */; };
+		FDEC118E21C65D9400CB7DAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDEC118D21C65D9400CB7DAD /* Assets.xcassets */; };
+		FDEC119121C65D9400CB7DAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDEC118F21C65D9400CB7DAD /* Main.storyboard */; };
+		FDEC119D21C65D9400CB7DAD /* AutomateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC119C21C65D9400CB7DAD /* AutomateTests.swift */; };
 		OBJ_269 /* Arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* Arguments.swift */; };
 		OBJ_270 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* Option.swift */; };
 		OBJ_272 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
@@ -1760,6 +1765,13 @@
 			remoteGlobalIDString = "highway::Task";
 			remoteInfo = Task;
 		};
+		FDEC119921C65D9400CB7DAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDEC118621C65D9200CB7DAD;
+			remoteInfo = Automate;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -1789,6 +1801,16 @@
 		FDC156F421C5355400E04B44 /* Sourcery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sourcery.swift; sourceTree = "<group>"; };
 		FDC1571421C5485900E04B44 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FDE9B6F721C58ED400D1F50A /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDEC118721C65D9200CB7DAD /* Automate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Automate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDEC118921C65D9200CB7DAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FDEC118B21C65D9200CB7DAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FDEC118D21C65D9400CB7DAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDEC119021C65D9400CB7DAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FDEC119221C65D9400CB7DAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDEC119321C65D9400CB7DAD /* Automate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Automate.entitlements; sourceTree = "<group>"; };
+		FDEC119821C65D9400CB7DAD /* AutomateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutomateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDEC119C21C65D9400CB7DAD /* AutomateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomateTests.swift; sourceTree = "<group>"; };
+		FDEC119E21C65D9400CB7DAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		OBJ_10 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
 		OBJ_100 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		OBJ_102 /* Highway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highway.swift; sourceTree = "<group>"; };
@@ -1947,6 +1969,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FDE9B6F421C58ED400D1F50A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDEC118421C65D9200CB7DAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDEC119521C65D9400CB7DAD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2379,6 +2415,28 @@
 			path = Tests/SourceryWorkerTests;
 			sourceTree = "<group>";
 		};
+		FDEC118821C65D9200CB7DAD /* Automate */ = {
+			isa = PBXGroup;
+			children = (
+				FDEC118921C65D9200CB7DAD /* AppDelegate.swift */,
+				FDEC118B21C65D9200CB7DAD /* ViewController.swift */,
+				FDEC118D21C65D9400CB7DAD /* Assets.xcassets */,
+				FDEC118F21C65D9400CB7DAD /* Main.storyboard */,
+				FDEC119221C65D9400CB7DAD /* Info.plist */,
+				FDEC119321C65D9400CB7DAD /* Automate.entitlements */,
+			);
+			path = Automate;
+			sourceTree = "<group>";
+		};
+		FDEC119B21C65D9400CB7DAD /* AutomateTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDEC119C21C65D9400CB7DAD /* AutomateTests.swift */,
+				FDEC119E21C65D9400CB7DAD /* Info.plist */,
+			);
+			path = AutomateTests;
+			sourceTree = "<group>";
+		};
 		OBJ_101 /* HighwayProject */ = {
 			isa = PBXGroup;
 			children = (
@@ -2698,6 +2756,8 @@
 				FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */,
 				FDC156E321C5347D00E04B44 /* SourceryWorkerTests.xctest */,
 				FDE9B6F721C58ED400D1F50A /* SourceryAutoProtocols.framework */,
+				FDEC118721C65D9200CB7DAD /* Automate.app */,
+				FDEC119821C65D9400CB7DAD /* AutomateTests.xctest */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -2806,9 +2866,11 @@
 		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
+				FDC1571421C5485900E04B44 /* README.md */,
+				FDEC118821C65D9200CB7DAD /* Automate */,
+				FDEC119B21C65D9400CB7DAD /* AutomateTests */,
 				FD326D9E210A0F5F00AE3A98 /* Frameworks */,
 				OBJ_194 /* Products */,
-				FDC1571421C5485900E04B44 /* README.md */,
 				OBJ_7 /* Sources */,
 				OBJ_151 /* Tests */,
 			);
@@ -3078,6 +3140,41 @@
 			productName = SourceryAutoGenerateProtocols;
 			productReference = FDE9B6F721C58ED400D1F50A /* SourceryAutoProtocols.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		FDEC118621C65D9200CB7DAD /* Automate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDEC11A321C65D9400CB7DAD /* Build configuration list for PBXNativeTarget "Automate" */;
+			buildPhases = (
+				FDEC118321C65D9200CB7DAD /* Sources */,
+				FDEC118421C65D9200CB7DAD /* Frameworks */,
+				FDEC118521C65D9200CB7DAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Automate;
+			productName = Automate;
+			productReference = FDEC118721C65D9200CB7DAD /* Automate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FDEC119721C65D9400CB7DAD /* AutomateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDEC11A421C65D9400CB7DAD /* Build configuration list for PBXNativeTarget "AutomateTests" */;
+			buildPhases = (
+				FDEC119421C65D9400CB7DAD /* Sources */,
+				FDEC119521C65D9400CB7DAD /* Frameworks */,
+				FDEC119621C65D9400CB7DAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDEC119A21C65D9400CB7DAD /* PBXTargetDependency */,
+			);
+			name = AutomateTests;
+			productName = AutomateTests;
+			productReference = FDEC119821C65D9400CB7DAD /* AutomateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		"highway::Arguments" /* Arguments */ = {
 			isa = PBXNativeTarget;
@@ -3738,6 +3835,17 @@
 						DevelopmentTeam = WWFDRU947Q;
 						ProvisioningStyle = Automatic;
 					};
+					FDEC118621C65D9200CB7DAD = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = WWFDRU947Q;
+						ProvisioningStyle = Automatic;
+					};
+					FDEC119721C65D9400CB7DAD = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = WWFDRU947Q;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FDEC118621C65D9200CB7DAD;
+					};
 					"highway::Arguments" = {
 						LastSwiftMigration = 1000;
 					};
@@ -3831,6 +3939,8 @@
 				FDC156DA21C5347C00E04B44 /* SourceryWorker */,
 				FDC156E221C5347D00E04B44 /* SourceryWorkerTests */,
 				FDE9B6F621C58ED400D1F50A /* SourceryAutoProtocols-iOS */,
+				FDEC118621C65D9200CB7DAD /* Automate */,
+				FDEC119721C65D9400CB7DAD /* AutomateTests */,
 			);
 		};
 /* End PBXProject section */
@@ -3851,6 +3961,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FDE9B6F521C58ED400D1F50A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDEC118521C65D9200CB7DAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDEC118E21C65D9400CB7DAD /* Assets.xcassets in Resources */,
+				FDEC119121C65D9400CB7DAD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDEC119621C65D9400CB7DAD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3904,6 +4030,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDE9B70E21C58F2900D1F50A /* SourceryAutoProtocols.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDEC118321C65D9200CB7DAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDEC118C21C65D9200CB7DAD /* ViewController.swift in Sources */,
+				FDEC118A21C65D9200CB7DAD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDEC119421C65D9400CB7DAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDEC119D21C65D9400CB7DAD /* AutomateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4247,6 +4390,11 @@
 			isa = PBXTargetDependency;
 			target = "highway::Task" /* Task */;
 			targetProxy = FDC156FB21C5363C00E04B44 /* PBXContainerItemProxy */;
+		};
+		FDEC119A21C65D9400CB7DAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDEC118621C65D9200CB7DAD /* Automate */;
+			targetProxy = FDEC119921C65D9400CB7DAD /* PBXContainerItemProxy */;
 		};
 		OBJ_1000 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -5235,6 +5383,17 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		FDEC118F21C65D9400CB7DAD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDEC119021C65D9400CB7DAD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		FDC156ED21C5347D00E04B44 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5499,6 +5658,160 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FDEC119F21C65D9400CB7DAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = Automate/Automate.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = WWFDRU947Q;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Automate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.Automate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		FDEC11A021C65D9400CB7DAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = Automate/Automate.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = WWFDRU947Q;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Automate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.Automate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		FDEC11A121C65D9400CB7DAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = WWFDRU947Q;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = AutomateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.AutomateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Automate.app/Contents/MacOS/Automate";
+			};
+			name = Debug;
+		};
+		FDEC11A221C65D9400CB7DAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = WWFDRU947Q;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = AutomateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.AutomateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Automate.app/Contents/MacOS/Automate";
 			};
 			name = Release;
 		};
@@ -6673,6 +6986,24 @@
 			buildConfigurations = (
 				FDE9B70921C58ED500D1F50A /* Debug */,
 				FDE9B70A21C58ED500D1F50A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDEC11A321C65D9400CB7DAD /* Build configuration list for PBXNativeTarget "Automate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDEC119F21C65D9400CB7DAD /* Debug */,
+				FDEC11A021C65D9400CB7DAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDEC11A421C65D9400CB7DAD /* Build configuration list for PBXNativeTarget "AutomateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDEC11A121C65D9400CB7DAD /* Debug */,
+				FDEC11A221C65D9400CB7DAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
