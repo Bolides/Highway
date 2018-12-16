@@ -31,7 +31,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             signPost.log("💁🏻‍♂️ Starting without arguments.\nYou can provice arguments prefixed with * \(Worker.commandPrefix) and possible workers\n\(Worker.allCases())")
         } catch {
             signPost.error("❌ running command caused error:\n\(error)\n")
-            fatalError()
+            NSApplication.shared.terminate(self)
         }
     }
     
@@ -51,7 +51,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             throw Error.noWorkerCommandFoundInArguments
         }
         
-        signPost.log("loaded with arguments prefixed with <🤖command:>\n \(workers.map { $0.rawValue }.joined(separator: "\n"))\n")
+        signPost.log("💁🏻‍♂️ loaded with arguments prefixed with <🤖command:>\n \(workers.map { $0.rawValue }.joined(separator: "\n"))\n")
 
         // 3. Find worker for the task
         
@@ -61,12 +61,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             // 4. execute the task as if button was pressed
             case .sourcery:
                let worker = try AutomateSourceryWorker()
-               let output = try worker.attempt()
-               signPost.log("💁🏻‍♂️ Sourcery ran with output:\n \(output.joined(separator: "\n"))")
+               _ = try worker.attempt()
+               signPost.log("💁🏻‍♂️ Sourcery finished ✅.")
             }
             
         }
-        
+        NSApplication.shared.terminate(self)
     }
 
 }
