@@ -15,7 +15,6 @@
 		FD326D9C210A094300AE3A98 /* BuildResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326D9B210A094300AE3A98 /* BuildResult.swift */; };
 		FD326D9F210A0F5F00AE3A98 /* HighwayCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayCore::Product" /* HighwayCore.framework */; };
 		FD326DA1210A134000AE3A98 /* DestinationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326DA0210A134000AE3A98 /* DestinationFactory.swift */; };
-		FD326DA3210B125200AE3A98 /* DecoderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326DA2210B125200AE3A98 /* DecoderMock.swift */; };
 		FD34F42321BEE5340052222C /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F42221BEE5340052222C /* ZFile.framework */; };
 		FD34F42721BEE8CA0052222C /* TerminalWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34F42621BEE8CA0052222C /* TerminalWorker.swift */; };
 		FD34F42821BEE8D50052222C /* TerminalTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAC9350210B7D4A00B0D045 /* TerminalTasks.swift */; };
@@ -50,9 +49,11 @@
 		FDEC119D21C65D9400CB7DAD /* AutomateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC119C21C65D9400CB7DAD /* AutomateTests.swift */; };
 		FDEC11C021C664BF00CB7DAD /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
 		FDEC11C121C664CC00CB7DAD /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F42221BEE5340052222C /* ZFile.framework */; };
-		FDEC11C421C66FB000CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11C221C66FA900CB7DAD /* SourceryAutoProtocols.swift */; };
-		FDEC11C521C66FB400CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11C221C66FA900CB7DAD /* SourceryAutoProtocols.swift */; };
-		FDEC11C621C66FC400CB7DAD /* DecoderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11C321C66FA900CB7DAD /* DecoderMock.swift */; };
+		FDEC11E521C679C800CB7DAD /* DecoderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E121C679B600CB7DAD /* DecoderMock.swift */; };
+		FDEC11E621C679D400CB7DAD /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E321C679B600CB7DAD /* AutoMockable.generated.swift */; };
+		FDEC11E721C679DF00CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */; };
+		FDEC11E821C679E200CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */; };
+		FDEC11EF21C67ACE00CB7DAD /* Terminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11EB21C67ACE00CB7DAD /* Terminal.swift */; };
 		OBJ_269 /* Arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* Arguments.swift */; };
 		OBJ_270 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* Option.swift */; };
 		OBJ_272 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
@@ -233,7 +234,6 @@
 		OBJ_673 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
 		OBJ_674 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Result::Product" /* Result.framework */; };
 		OBJ_675 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
-		OBJ_703 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* AutoMockable.generated.swift */; };
 		OBJ_705 /* HighwayProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayProject::Product" /* HighwayProject.framework */; };
 		OBJ_706 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
 		OBJ_707 /* HighwayCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayCore::Product" /* HighwayCore.framework */; };
@@ -285,7 +285,6 @@
 		OBJ_791 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
 		OBJ_792 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_813 /* FileStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_109 /* FileStream.swift */; };
-		OBJ_819 /* Terminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_117 /* Terminal.swift */; };
 		OBJ_827 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_834 /* TerminalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_177 /* TerminalTests.swift */; };
 		OBJ_837 /* SourceryMocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryMocks::Product" /* SourceryMocks.framework */; };
@@ -1824,7 +1823,6 @@
 		FD326D982109FB8200AE3A98 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		FD326D9B210A094300AE3A98 /* BuildResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildResult.swift; sourceTree = "<group>"; };
 		FD326DA0210A134000AE3A98 /* DestinationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationFactory.swift; sourceTree = "<group>"; };
-		FD326DA2210B125200AE3A98 /* DecoderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderMock.swift; sourceTree = "<group>"; };
 		FD34F42221BEE5340052222C /* ZFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD34F42621BEE8CA0052222C /* TerminalWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminalWorker.swift; sourceTree = "<group>"; };
 		FD34F42921BEE8E20052222C /* TerminalSysExitCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminalSysExitCode.swift; sourceTree = "<group>"; };
@@ -1855,11 +1853,13 @@
 		FDEC119821C65D9400CB7DAD /* AutomateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutomateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDEC119C21C65D9400CB7DAD /* AutomateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomateTests.swift; sourceTree = "<group>"; };
 		FDEC119E21C65D9400CB7DAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDEC11C221C66FA900CB7DAD /* SourceryAutoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SourceryAutoProtocols.swift; path = Sources/AutoGeneratedCode/SourceryAutoProtocols.swift; sourceTree = SOURCE_ROOT; };
-		FDEC11C321C66FA900CB7DAD /* DecoderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DecoderMock.swift; path = Sources/AutoGeneratedCode/DecoderMock.swift; sourceTree = SOURCE_ROOT; };
 		FDEC11C721C6717600CB7DAD /* ZFile.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZFile.xcodeproj; path = Carthage/Checkouts/zfile/sources/ZFile.xcodeproj; sourceTree = "<group>"; };
+		FDEC11E121C679B600CB7DAD /* DecoderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderMock.swift; sourceTree = "<group>"; };
+		FDEC11E221C679B600CB7DAD /* AutoGenerateProtocol.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoGenerateProtocol.generated.swift; sourceTree = "<group>"; };
+		FDEC11E321C679B600CB7DAD /* AutoMockable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryAutoProtocols.swift; sourceTree = "<group>"; };
+		FDEC11EB21C67ACE00CB7DAD /* Terminal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Terminal.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
-		OBJ_100 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		OBJ_102 /* Highway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highway.swift; sourceTree = "<group>"; };
 		OBJ_104 /* Deliver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deliver.swift; sourceTree = "<group>"; };
 		OBJ_106 /* Altool-Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Altool-Options.swift"; sourceTree = "<group>"; };
@@ -1871,7 +1871,6 @@
 		OBJ_114 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		OBJ_115 /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
 		OBJ_116 /* String+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Convenience.swift"; sourceTree = "<group>"; };
-		OBJ_117 /* Terminal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Terminal.swift; sourceTree = "<group>"; };
 		OBJ_119 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		OBJ_12 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		OBJ_120 /* SubText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubText.swift; sourceTree = "<group>"; };
@@ -2495,6 +2494,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		FDEC11E021C679B600CB7DAD /* AutoGeneratedCode */ = {
+			isa = PBXGroup;
+			children = (
+				FDEC11E121C679B600CB7DAD /* DecoderMock.swift */,
+				FDEC11E221C679B600CB7DAD /* AutoGenerateProtocol.generated.swift */,
+				FDEC11E321C679B600CB7DAD /* AutoMockable.generated.swift */,
+				FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */,
+			);
+			name = AutoGeneratedCode;
+			path = Sources/AutoGeneratedCode;
+			sourceTree = SOURCE_ROOT;
+		};
 		OBJ_101 /* HighwayProject */ = {
 			isa = PBXGroup;
 			children = (
@@ -2526,6 +2537,7 @@
 		OBJ_108 /* Terminal */ = {
 			isa = PBXGroup;
 			children = (
+				FDEC11EB21C67ACE00CB7DAD /* Terminal.swift */,
 				FD34F42C21BEE9EB0052222C /* CDToFolderExecutable.swift */,
 				FD34F42D21BEE9EB0052222C /* CatExecutable.swift */,
 				FD34F42E21BEE9EB0052222C /* GitExecutables.swift */,
@@ -2534,7 +2546,6 @@
 				FDAC9350210B7D4A00B0D045 /* TerminalTasks.swift */,
 				FD34F42621BEE8CA0052222C /* TerminalWorker.swift */,
 				OBJ_109 /* FileStream.swift */,
-				OBJ_117 /* Terminal.swift */,
 			);
 			name = Terminal;
 			path = Sources/Terminal;
@@ -2900,16 +2911,6 @@
 			path = Invocation;
 			sourceTree = "<group>";
 		};
-		OBJ_45 /* AutoGeneratedCode */ = {
-			isa = PBXGroup;
-			children = (
-				FDEC11C321C66FA900CB7DAD /* DecoderMock.swift */,
-				FDEC11C221C66FA900CB7DAD /* SourceryAutoProtocols.swift */,
-			);
-			name = AutoGeneratedCode;
-			path = "Sources/🧙‍♂️/AutoProtocols";
-			sourceTree = SOURCE_ROOT;
-		};
 		OBJ_48 /* Git */ = {
 			isa = PBXGroup;
 			children = (
@@ -3022,6 +3023,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_83 /* Arguments */,
+				FDEC11E021C679B600CB7DAD /* AutoGeneratedCode */,
 				OBJ_103 /* Deliver */,
 				OBJ_95 /* Errors */,
 				OBJ_48 /* Git */,
@@ -3032,8 +3034,6 @@
 				OBJ_97 /* Keychain */,
 				OBJ_149 /* POSIX */,
 				OBJ_52 /* Result */,
-				OBJ_45 /* AutoGeneratedCode */,
-				OBJ_99 /* SourceryMocks */,
 				FDC156DC21C5347C00E04B44 /* SourceryWorker */,
 				OBJ_132 /* Task */,
 				OBJ_108 /* Terminal */,
@@ -3112,16 +3112,6 @@
 			);
 			name = Keychain;
 			path = Sources/Keychain;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_99 /* SourceryMocks */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_100 /* AutoMockable.generated.swift */,
-				FD326DA2210B125200AE3A98 /* DecoderMock.swift */,
-			);
-			name = SourceryMocks;
-			path = "Sources/🧙‍♂️/Mocks";
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -4127,7 +4117,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDEC11C421C66FB000CB7DAD /* SourceryAutoProtocols.swift in Sources */,
+				FDEC11E721C679DF00CB7DAD /* SourceryAutoProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4330,7 +4320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FDEC11C521C66FB400CB7DAD /* SourceryAutoProtocols.swift in Sources */,
+				FDEC11E821C679E200CB7DAD /* SourceryAutoProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4338,8 +4328,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FDEC11C621C66FC400CB7DAD /* DecoderMock.swift in Sources */,
-				OBJ_703 /* AutoMockable.generated.swift in Sources */,
+				FDEC11E521C679C800CB7DAD /* DecoderMock.swift in Sources */,
+				FDEC11E621C679D400CB7DAD /* AutoMockable.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4396,8 +4386,8 @@
 				FD34F42F21BEE9EB0052222C /* CDToFolderExecutable.swift in Sources */,
 				FD34F42A21BEE8E20052222C /* TerminalSysExitCode.swift in Sources */,
 				FD34F42821BEE8D50052222C /* TerminalTasks.swift in Sources */,
+				FDEC11EF21C67ACE00CB7DAD /* Terminal.swift in Sources */,
 				FD34F43021BEE9EB0052222C /* CatExecutable.swift in Sources */,
-				OBJ_819 /* Terminal.swift in Sources */,
 				FD34F42721BEE8CA0052222C /* TerminalWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4440,7 +4430,6 @@
 				OBJ_940 /* ExportArchiveOptions.swift in Sources */,
 				FD326D942109E3C600AE3A98 /* ArchivePlist.swift in Sources */,
 				OBJ_941 /* ExportOptions.swift in Sources */,
-				FD326DA3210B125200AE3A98 /* DecoderMock.swift in Sources */,
 				OBJ_943 /* TestOptions.swift in Sources */,
 				OBJ_944 /* TestReport.swift in Sources */,
 				OBJ_945 /* XCBuild.swift in Sources */,

@@ -1,5 +1,6 @@
 import Foundation
 import Terminal
+import Task
 
 /// Describes a Highway.
 public struct HighwayDescription: Codable {

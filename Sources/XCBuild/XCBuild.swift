@@ -5,6 +5,7 @@ import Url
 import Arguments
 import Result
 import SourceryAutoProtocols
+import Terminal
 
 public protocol XCBuildProtocol: AutoMockable {
     

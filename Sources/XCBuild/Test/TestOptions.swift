@@ -2,6 +2,7 @@ import Foundation
 import SourceryAutoProtocols
 import ZFile
 import Arguments
+import Terminal
 import Task
 
 public protocol TestOptionsProtocol: ArgumentExecutableProtocol {
