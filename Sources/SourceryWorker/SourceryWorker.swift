@@ -30,33 +30,10 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol {
     struct Error: Swift.Error {
         let message: String
     }
-    public let sourceryYMLFile: FileProtocol
     
     public init(sourcery: SourceryProtocol, terminalWorker: TerminalWorkerProtocol = TerminalWorker()) throws {
         self.sourcery = sourcery
         self.terminalWorker = terminalWorker
-        // generate .sourcery file
-        
-        sourceryYMLFile = try sourcery.outputFolder.createFileIfNeeded(named: ".sourcery.yml")
-        try sourceryYMLFile.write(
-            string: """
-                sources:
-                  - <sources path>
-                  - <sources path>
-                templates:
-                  - <templates path>
-                  - <templates path>
-                force-parse:
-                  - <string value>
-                  - <string value>
-                output:
-                  <output path>
-                args:
-                  <name>: <value>
-                """,
-              encoding:  .utf8
-        )
-        os_log("Sourcery YML file can be found at path: %@", type:.debug, sourceryYMLFile.path)
     }
     
     public func executor() throws -> ArgumentExecutableProtocol {

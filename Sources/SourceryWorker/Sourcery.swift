@@ -74,12 +74,12 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol {
         try sourceryYMLFile.write(
             string: """
             sources:
-            - \(sourceFolder.path)
-            - \(sourceryAutoProtocolsFile.path)
+            - "\(sourceFolder.path)"
+            - "\(sourceryAutoProtocolsFile.path)"
             templates:
-            - \(templateFolder.path)
+            - "\(templateFolder.path)"
             output:
-             \(outputFolder.path)
+             "\(outputFolder.path)"
             """,
             encoding:  .utf8
         )
