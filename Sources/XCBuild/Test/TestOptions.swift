@@ -11,7 +11,10 @@ public protocol TestOptionsProtocol: ArgumentExecutableProtocol {
     var project: String { get }
     var destination: DestinationProtocol { get }
     var resultBundlePath: String { get }
-    var derivedDataPath: FolderProtocol? { get } // if set it will not build just run tests
+    var derivedDataPath: FolderProtocol? { get }
+
+    func arguments() throws -> Arguments
+    func executableFile() throws -> FileProtocol
     /// sourcery:end
 }
 

@@ -10,7 +10,7 @@ public protocol ContextProtocol: AutoMockable {
     /// sourcery:inline:Context.AutoGenerateProtocol
     var fileSystem: FileSystemProtocol { get }
     var executableProvider: ExecutableProviderProtocol { get }
-    var executor: TaskExecutorProtocol { get }
+    var executor: TaskExecutorProtocol {  get}
     
     /// sourcery:end
 }

@@ -28,6 +28,8 @@ public protocol ExportArchiveOptionsProtocol: Codable, AutoMockable {
     /// sourcery:inline:ExportArchiveOptions.AutoGenerateProtocol
     var archivePath: FolderProtocol { get }
     var exportPath: String { get }
+
+    func encode(to encoder: Encoder) throws 
    
     /// sourcery:end
 }

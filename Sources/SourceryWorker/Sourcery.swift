@@ -61,16 +61,17 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol {
         templateFolder: FolderProtocol,
         outputFolder: FolderProtocol,
         sourceFolder: FolderProtocol,
-        sourceryAutoProtocolsFile: FileProtocol
+        sourceryAutoProtocolsFile: FileProtocol,
+        sourceryYMLFile: FileProtocol
     ) throws  {
         self.templateFolder = templateFolder
         self.outputFolder = outputFolder
         self.sourceFolder = sourceFolder
         self.sourceryAutoProtocolsFile = sourceryAutoProtocolsFile
-        
+        self.sourceryYMLFile = sourceryYMLFile
+       
         // generate .sourcery file
         
-        sourceryYMLFile = try outputFolder.createFileIfNeeded(named: ".sourcery.yml")
         try sourceryYMLFile.write(
             string: """
             sources:
