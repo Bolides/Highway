@@ -1607,11 +1607,7 @@ open class SourceryProtocolMock: SourceryProtocol {
       set(value) { underlyingOutputFolder = value }
   }
   public  var underlyingOutputFolder: FolderProtocol!
-  public  var sourceFolder: FolderProtocol {
-      get { return underlyingSourceFolder }
-      set(value) { underlyingSourceFolder = value }
-  }
-  public  var underlyingSourceFolder: FolderProtocol!
+  public var sourcesFolders: [FolderProtocol] = []
   public  var sourceryAutoProtocolsFile: FileProtocol {
       get { return underlyingSourceryAutoProtocolsFile }
       set(value) { underlyingSourceryAutoProtocolsFile = value }

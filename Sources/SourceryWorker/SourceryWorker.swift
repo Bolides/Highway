@@ -49,20 +49,26 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol {
         
         // 1. Find all files in sourceFolder
         
-        let allSwiftFiles = sourcery.sourceFolder.makeFileSequence(recursive: true, includeHidden: false)
+        var fileSequences = [FileSystemSequence<File>]()
         
-        // 2. Replace occurances
-        
-        try allSwiftFiles.forEach { file in
+        for folder in sourcery.sourcesFolders {
+            let fileSequence = folder.makeFileSequence(recursive: true, includeHidden: false)
             
-            guard file.extension == "swift", file.path != #file else { return }
+            // 2. Replace occurances
             
-            let content = try file.readAsString()
-                .replacingOccurrences(of: "/// sourcery:inline:", with: "// sourcery:inline:")
-                .replacingOccurrences(of: "/// sourcery:end", with: "// sourcery:end")
-            try file.write(string: content)
+            try fileSequence.forEach { file in
+                
+                guard file.extension == "swift", file.path != #file else { return }
+                
+                let content = try file.readAsString()
+                    .replacingOccurrences(of: "/// sourcery:inline:", with: "// sourcery:inline:")
+                    .replacingOccurrences(of: "/// sourcery:end", with: "// sourcery:end")
+                try file.write(string: content)
+            }
+            
+            fileSequences.append(fileSequence)
         }
-        
+       
         // 3. Run sourcery to generate the protocols
 
         let output = try terminalWorker.terminal(task: .sourcery(try executor()))
@@ -73,14 +79,17 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol {
 
         // 4. Replace occurances
 
-        try allSwiftFiles.forEach { file in
+        try fileSequences.forEach { fileSequence in
 
-            guard file.extension == "swift", file.path != #file else { return }
-
-            let content = try file.readAsString()
-                .replacingOccurrences(of: "// sourcery:inline:", with: "/// sourcery:inline:")
-                .replacingOccurrences(of: "// sourcery:end", with: "/// sourcery:end")
-            try file.write(string: content)
+            try fileSequence.forEach { file in
+                guard file.extension == "swift", file.path != #file else { return }
+                
+                let content = try file.readAsString()
+                    .replacingOccurrences(of: "// sourcery:inline:", with: "/// sourcery:inline:")
+                    .replacingOccurrences(of: "// sourcery:end", with: "/// sourcery:end")
+                try file.write(string: content)
+            }
+           
         }
 
         // 5. Run sourcery to generate the mocks
