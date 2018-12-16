@@ -8,22 +8,30 @@
 import Cocoa
 import os
 import Arguments
+import Terminal
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
+    lazy var signPost: HighwaySignpostProtocol = HighwaySignpost.shared
+
+    // MARK: - ERROR
+    
     enum Error: Swift.Error {
         case noWorkerCommandFoundInArguments
     }
+    
+    // MARK: - APPLIATION LIFECYCLE
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
         do {
             try determineIfRunFromCommandLine()
         } catch Error.noWorkerCommandFoundInArguments {
-            os_log("%@", type:.debug, "💁🏻‍♂️ Starting without arguments.\nYou can provice arguments prefixed with * \(Worker.commandPrefix) and possible workers\n\(Worker.allCases())")
+            signPost.log("💁🏻‍♂️ Starting without arguments.\nYou can provice arguments prefixed with * \(Worker.commandPrefix) and possible workers\n\(Worker.allCases())")
         } catch {
-            os_log("%@", type:.error, "command line caused error \(error)")
+            signPost.error("❌ running command caused error:\n\(error)\n")
+            fatalError()
         }
     }
     
@@ -34,7 +42,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // 1. Check if run from command line
         
-        
         let workers: [Worker] = CommandLine.arguments
             .filter { $0.hasPrefix(Worker.commandPrefix) }
             .map { $0.replacingOccurrences(of: Worker.commandPrefix, with: "")}
@@ -44,21 +51,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             throw Error.noWorkerCommandFoundInArguments
         }
         
-        os_log("%@", type:.debug, "loaded with arguments prefixed with <🤖command:>\n \(workers.map { $0.rawValue }.joined(separator: "\n"))\n")
+        signPost.log("loaded with arguments prefixed with <🤖command:>\n \(workers.map { $0.rawValue }.joined(separator: "\n"))\n")
 
         // 3. Find worker for the task
         
         for worker in workers {
             
             switch worker {
+            // 4. execute the task as if button was pressed
             case .sourcery:
                let worker = try AutomateSourceryWorker()
                let output = try worker.attempt()
-               os_log("%@", type:.debug, "Sourcery ran with output:\n \(output.joined(separator: "\n"))")
+               signPost.log("💁🏻‍♂️ Sourcery ran with output:\n \(output.joined(separator: "\n"))")
             }
+            
         }
         
-        // 4. execute the task as if button was pressed
     }
 
 }
