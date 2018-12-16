@@ -136,5 +136,7 @@ SHARED_PRECOMPS_DIR
 5. Try running automate from command line
 
 ```bash
-cd 
+cd <Project root>
+.build.nosync/Debug/Automate.app/Contents/MacOS/Automate 🤖command:sourcery
 ```
+> This should output sourcery succes and quit the app. 
