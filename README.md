@@ -132,3 +132,5 @@ SHARED_PRECOMPS_DIR
     }
 ```
 4. Set sourcery paths to your liking. Use output in console to guide you if you used the example code above.
+
+5. Try running automate from command line 

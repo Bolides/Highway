@@ -37,7 +37,7 @@ public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol {
     // MARK: - Archiving
     @discardableResult
     public func archive(using options: ArchiveOptionsProtocol) throws -> ArchiveProtocol {
-        try system.execute( try _archiveTask(using: options))
+        _ = try system.execute( try _archiveTask(using: options))
         
         return try Archive(archiveFolder: try Folder(path: options.archivePath), fileSystem: fileSystem)
     }
@@ -75,10 +75,10 @@ public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol {
             xcbuild.output = .pipe()
             xcbuild.environment["NSUnbufferedIO"] = "YES" // otherwise xcpretty might not get everything
             xcpretty.input = xcbuild.output
-            try system.launch(xcbuild, wait: false)
-            try system.execute(xcpretty)
+            _ = try system.launch(xcbuild, wait: false)
+            _ = try system.execute(xcpretty)
         } catch {
-            try system.execute(xcbuild)
+            _ = try system.execute(xcbuild)
         }
         
         return TestReport()

@@ -17,6 +17,7 @@ public protocol SourceryWorkerProtocol {
     
     /// sourcery:inline:SourceryWorker.AutoGenerateProtocol
     func executor() throws -> ArgumentExecutableProtocol
+    func attempt() throws -> [String]
    /// sourcery:end
     
 }

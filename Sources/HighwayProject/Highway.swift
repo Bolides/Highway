@@ -7,6 +7,7 @@ import Terminal
 import Deliver
 import POSIX
 import Git
+import Terminal
 
 open class Highway<T: HighwayTypeProtocol>: _Highway<T> {
     public let fileSystem: FileSystemProtocol = FileSystem()
@@ -18,7 +19,7 @@ open class Highway<T: HighwayTypeProtocol>: _Highway<T> {
     public override init(_ highwayType: T.Type) throws  {
         context = try Context()
         cwd = FileSystem().currentFolder
-        system = try LocalSystem()
+        system = try LocalSystem(terminalUI: Terminal.shared)
         
         try super.init(highwayType)
     }

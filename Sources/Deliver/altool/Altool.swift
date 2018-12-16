@@ -57,7 +57,7 @@ private class AltoolProvider {
             let xcrun = try system.task(named: "xcrun")
             xcrun.arguments.append(contentsOf: ["xcode-select", "-p"])
             xcrun.enableReadableOutputDataCapturing()
-            try system.execute(xcrun)
+            _ = try system.execute(xcrun)
             guard let developerDirectory = xcrun.trimmedOutput else {
                 return defaultDir
             }

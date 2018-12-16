@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		FD0F7C74218885D500F84604 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Keychain::Product" /* Keychain.framework */; };
 		FD0F7C8F2188870400F84604 /* HWKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HWKit::Product" /* HWKit.framework */; };
+		FD11266821C6899D0072607D /* HighwayProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayProject::Product" /* HighwayProject.framework */; };
+		FD11266921C6899D0072607D /* HighwayProject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayProject::Product" /* HighwayProject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD11266C21C6899D0072607D /* HighwayCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayCore::Product" /* HighwayCore.framework */; };
+		FD11266D21C6899D0072607D /* HighwayCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayCore::Product" /* HighwayCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD11267321C689AF0072607D /* HWKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HWKit::Product" /* HWKit.framework */; };
+		FD11267421C689AF0072607D /* HWKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HWKit::Product" /* HWKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD11267721C689AF0072607D /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Keychain::Product" /* Keychain.framework */; };
+		FD11267821C689AF0072607D /* Keychain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Keychain::Product" /* Keychain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD11267B21C689AF0072607D /* Deliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Deliver::Product" /* Deliver.framework */; };
+		FD11267C21C689AF0072607D /* Deliver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Deliver::Product" /* Deliver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD326D942109E3C600AE3A98 /* ArchivePlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326D932109E3C600AE3A98 /* ArchivePlist.swift */; };
 		FD326D972109F2B800AE3A98 /* GitTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326D952109F2AC00AE3A98 /* GitTool.swift */; };
 		FD326D9A2109FB8F00AE3A98 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326D982109FB8200AE3A98 /* Configuration.swift */; };
@@ -47,13 +57,33 @@
 		FDEC118E21C65D9400CB7DAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDEC118D21C65D9400CB7DAD /* Assets.xcassets */; };
 		FDEC119121C65D9400CB7DAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDEC118F21C65D9400CB7DAD /* Main.storyboard */; };
 		FDEC119D21C65D9400CB7DAD /* AutomateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC119C21C65D9400CB7DAD /* AutomateTests.swift */; };
-		FDEC11C021C664BF00CB7DAD /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
-		FDEC11C121C664CC00CB7DAD /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F42221BEE5340052222C /* ZFile.framework */; };
 		FDEC11E521C679C800CB7DAD /* DecoderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E121C679B600CB7DAD /* DecoderMock.swift */; };
 		FDEC11E621C679D400CB7DAD /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E321C679B600CB7DAD /* AutoMockable.generated.swift */; };
 		FDEC11E721C679DF00CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */; };
 		FDEC11E821C679E200CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */; };
 		FDEC11EF21C67ACE00CB7DAD /* Terminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11EB21C67ACE00CB7DAD /* Terminal.swift */; };
+		FDEC11F421C67ED700CB7DAD /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11F221C67EAD00CB7DAD /* Worker.swift */; };
+		FDEC11F921C682E600CB7DAD /* HighwaySourceryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11F821C682E600CB7DAD /* HighwaySourceryWorker.swift */; };
+		FDEC11FE21C6869C00CB7DAD /* ZFile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDEC11D321C6717600CB7DAD /* ZFile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDEC120321C686AF00CB7DAD /* Arguments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDEC120521C686B700CB7DAD /* SourceryWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDEC120721C686E200CB7DAD /* SourceryAutoProtocols.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDEC120821C6871900CB7DAD /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
+		FDEC120921C6871900CB7DAD /* Terminal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDEC120E21C6876B00CB7DAD /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
+		FDEC120F21C6876B00CB7DAD /* Task.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDEC121021C687E600CB7DAD /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
+		FDEC121121C687E600CB7DAD /* Errors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDEC121421C688B600CB7DAD /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
+		FDEC121521C688B600CB7DAD /* POSIX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDEC121821C688D600CB7DAD /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Result::Product" /* Result.framework */; };
+		FDEC121921C688D600CB7DAD /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Result::Product" /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDEC121C21C688EE00CB7DAD /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
+		FDEC121D21C688EE00CB7DAD /* Url.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDEC122021C688F900CB7DAD /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
+		FDEC122121C688F900CB7DAD /* XCBuild.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDEC122421C6890500CB7DAD /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; };
+		FDEC122521C6890500CB7DAD /* Git.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		OBJ_269 /* Arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* Arguments.swift */; };
 		OBJ_270 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* Option.swift */; };
 		OBJ_272 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
@@ -365,6 +395,41 @@
 			proxyType = 1;
 			remoteGlobalIDString = "highway::HWKit";
 			remoteInfo = HWKit;
+		};
+		FD11266A21C6899D0072607D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::HighwayProject";
+			remoteInfo = HighwayProject;
+		};
+		FD11266E21C6899D0072607D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::HighwayCore";
+			remoteInfo = HighwayCore;
+		};
+		FD11267521C689AF0072607D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::HWKit";
+			remoteInfo = HWKit;
+		};
+		FD11267921C689AF0072607D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Keychain";
+			remoteInfo = Keychain;
+		};
+		FD11267D21C689AF0072607D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Deliver";
+			remoteInfo = Deliver;
 		};
 		FD326C762109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1815,7 +1880,114 @@
 			remoteGlobalIDString = FD737DBF21B03D25001BB507;
 			remoteInfo = "ZFile-macos";
 		};
+		FDEC11F521C67FE700CB7DAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Arguments";
+			remoteInfo = Arguments;
+		};
+		FDEC11FA21C682FC00CB7DAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::SourceryAutoProtocols";
+			remoteInfo = SourceryAutoProtocols;
+		};
+		FDEC11FF21C6869C00CB7DAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDEC11C721C6717600CB7DAD /* ZFile.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FD737DBF21B03D25001BB507;
+			remoteInfo = "ZFile-macos";
+		};
+		FDEC120A21C6871900CB7DAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Terminal";
+			remoteInfo = Terminal;
+		};
+		FDEC120C21C6876300CB7DAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Task";
+			remoteInfo = Task;
+		};
+		FDEC121221C687E600CB7DAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Errors";
+			remoteInfo = Errors;
+		};
+		FDEC121621C688B600CB7DAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::POSIX";
+			remoteInfo = POSIX;
+		};
+		FDEC121A21C688D600CB7DAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Result";
+			remoteInfo = Result;
+		};
+		FDEC121E21C688EE00CB7DAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Url";
+			remoteInfo = Url;
+		};
+		FDEC122221C688F900CB7DAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::XCBuild";
+			remoteInfo = XCBuild;
+		};
+		FDEC122621C6890500CB7DAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Git";
+			remoteInfo = Git;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FDEC120121C6869C00CB7DAD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FDEC121121C687E600CB7DAD /* Errors.framework in Embed Frameworks */,
+				FD11266D21C6899D0072607D /* HighwayCore.framework in Embed Frameworks */,
+				FD11267C21C689AF0072607D /* Deliver.framework in Embed Frameworks */,
+				FDEC120521C686B700CB7DAD /* SourceryWorker.framework in Embed Frameworks */,
+				FDEC121D21C688EE00CB7DAD /* Url.framework in Embed Frameworks */,
+				FD11266921C6899D0072607D /* HighwayProject.framework in Embed Frameworks */,
+				FDEC120721C686E200CB7DAD /* SourceryAutoProtocols.framework in Embed Frameworks */,
+				FD11267421C689AF0072607D /* HWKit.framework in Embed Frameworks */,
+				FDEC121921C688D600CB7DAD /* Result.framework in Embed Frameworks */,
+				FDEC11FE21C6869C00CB7DAD /* ZFile.framework in Embed Frameworks */,
+				FDEC120921C6871900CB7DAD /* Terminal.framework in Embed Frameworks */,
+				FD11267821C689AF0072607D /* Keychain.framework in Embed Frameworks */,
+				FDEC120321C686AF00CB7DAD /* Arguments.framework in Embed Frameworks */,
+				FDEC122121C688F900CB7DAD /* XCBuild.framework in Embed Frameworks */,
+				FDEC122521C6890500CB7DAD /* Git.framework in Embed Frameworks */,
+				FDEC121521C688B600CB7DAD /* POSIX.framework in Embed Frameworks */,
+				FDEC120F21C6876B00CB7DAD /* Task.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FD326D932109E3C600AE3A98 /* ArchivePlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchivePlist.swift; sourceTree = "<group>"; };
@@ -1859,6 +2031,8 @@
 		FDEC11E321C679B600CB7DAD /* AutoMockable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryAutoProtocols.swift; sourceTree = "<group>"; };
 		FDEC11EB21C67ACE00CB7DAD /* Terminal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Terminal.swift; sourceTree = "<group>"; };
+		FDEC11F221C67EAD00CB7DAD /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
+		FDEC11F821C682E600CB7DAD /* HighwaySourceryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighwaySourceryWorker.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
 		OBJ_102 /* Highway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highway.swift; sourceTree = "<group>"; };
 		OBJ_104 /* Deliver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deliver.swift; sourceTree = "<group>"; };
@@ -2023,8 +2197,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDEC11C021C664BF00CB7DAD /* SourceryWorker.framework in Frameworks */,
-				FDEC11C121C664CC00CB7DAD /* ZFile.framework in Frameworks */,
+				FD11267B21C689AF0072607D /* Deliver.framework in Frameworks */,
+				FD11266821C6899D0072607D /* HighwayProject.framework in Frameworks */,
+				FDEC120821C6871900CB7DAD /* Terminal.framework in Frameworks */,
+				FDEC120E21C6876B00CB7DAD /* Task.framework in Frameworks */,
+				FDEC121821C688D600CB7DAD /* Result.framework in Frameworks */,
+				FDEC121421C688B600CB7DAD /* POSIX.framework in Frameworks */,
+				FDEC121C21C688EE00CB7DAD /* Url.framework in Frameworks */,
+				FD11267721C689AF0072607D /* Keychain.framework in Frameworks */,
+				FDEC122421C6890500CB7DAD /* Git.framework in Frameworks */,
+				FD11267321C689AF0072607D /* HWKit.framework in Frameworks */,
+				FDEC122021C688F900CB7DAD /* XCBuild.framework in Frameworks */,
+				FDEC121021C687E600CB7DAD /* Errors.framework in Frameworks */,
+				FD11266C21C6899D0072607D /* HighwayCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2466,6 +2651,7 @@
 			children = (
 				FDEC118921C65D9200CB7DAD /* AppDelegate.swift */,
 				FDEC118B21C65D9200CB7DAD /* ViewController.swift */,
+				FDEC11F821C682E600CB7DAD /* HighwaySourceryWorker.swift */,
 				FDEC118D21C65D9400CB7DAD /* Assets.xcassets */,
 				FDEC118F21C65D9400CB7DAD /* Main.storyboard */,
 				FDEC119221C65D9400CB7DAD /* Info.plist */,
@@ -3079,6 +3265,7 @@
 		OBJ_83 /* Arguments */ = {
 			isa = PBXGroup;
 			children = (
+				FDEC11F221C67EAD00CB7DAD /* Worker.swift */,
 				OBJ_84 /* Arguments.swift */,
 				OBJ_85 /* Option.swift */,
 			);
@@ -3197,12 +3384,29 @@
 				FDEC118321C65D9200CB7DAD /* Sources */,
 				FDEC118421C65D9200CB7DAD /* Frameworks */,
 				FDEC118521C65D9200CB7DAD /* Resources */,
+				FDEC120121C6869C00CB7DAD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FDEC120D21C6876300CB7DAD /* PBXTargetDependency */,
+				FDEC11FB21C682FC00CB7DAD /* PBXTargetDependency */,
+				FDEC11F621C67FE700CB7DAD /* PBXTargetDependency */,
+				FDEC121321C687E600CB7DAD /* PBXTargetDependency */,
 				FDEC11D921C671EA00CB7DAD /* PBXTargetDependency */,
 				FDEC11BF21C664B200CB7DAD /* PBXTargetDependency */,
+				FDEC120021C6869C00CB7DAD /* PBXTargetDependency */,
+				FDEC120B21C6871900CB7DAD /* PBXTargetDependency */,
+				FDEC121721C688B600CB7DAD /* PBXTargetDependency */,
+				FDEC121B21C688D600CB7DAD /* PBXTargetDependency */,
+				FDEC121F21C688EE00CB7DAD /* PBXTargetDependency */,
+				FDEC122321C688F900CB7DAD /* PBXTargetDependency */,
+				FDEC122721C6890500CB7DAD /* PBXTargetDependency */,
+				FD11266B21C6899D0072607D /* PBXTargetDependency */,
+				FD11266F21C6899D0072607D /* PBXTargetDependency */,
+				FD11267621C689AF0072607D /* PBXTargetDependency */,
+				FD11267A21C689AF0072607D /* PBXTargetDependency */,
+				FD11267E21C689AF0072607D /* PBXTargetDependency */,
 			);
 			name = Automate;
 			productName = Automate;
@@ -3898,51 +4102,66 @@
 						TestTargetID = FDEC118621C65D9200CB7DAD;
 					};
 					"highway::Arguments" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 					};
 					"highway::Deliver" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 					};
 					"highway::Errors" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 					};
 					"highway::Git" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 					};
 					"highway::HWKit" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 					};
 					"highway::HighwayCore" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 					};
 					"highway::HighwayProject" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 					};
 					"highway::Keychain" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 					};
 					"highway::POSIX" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 					};
 					"highway::Result" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 					};
 					"highway::SourceryAutoProtocols" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 					};
 					"highway::SourceryMocks" = {
 						LastSwiftMigration = 1000;
 					};
 					"highway::Task" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 					};
 					"highway::Terminal" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 					};
 					"highway::Url" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 					};
 					"highway::XCBuild" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 					};
 				};
@@ -3966,38 +4185,38 @@
 			);
 			projectRoot = "";
 			targets = (
-				"highway::Arguments" /* Arguments */,
-				"highway::ArgumentsTests" /* ArgumentsTests */,
-				"highway::Deliver" /* Deliver */,
-				"highway::DeliverTests" /* DeliverTests */,
-				"highway::Errors" /* Errors */,
-				"highway::Git" /* Git */,
-				"highway::GitTests" /* GitTests */,
-				"highway::HWKit" /* HWKit */,
-				"highway::HWKitTests" /* HWKitTests */,
-				"highway::HighwayCore" /* HighwayCore */,
-				"highway::HighwayCoreTests" /* HighwayCoreTests */,
-				"highway::HighwayProject" /* HighwayProject */,
-				"highway::Keychain" /* Keychain */,
-				"highway::POSIX" /* POSIX */,
-				"highway::POSIXTests" /* POSIXTests */,
-				"highway::Result" /* Result */,
-				"highway::ResultTests" /* ResultTests */,
-				"highway::SourceryAutoProtocols" /* SourceryAutoProtocols */,
-				"highway::SourceryMocks" /* SourceryMocks */,
-				"highway::Task" /* Task */,
-				"highway::TaskTests" /* TaskTests */,
-				"highway::Terminal" /* Terminal */,
-				"highway::TerminalTests" /* TerminalTests */,
-				"highway::Url" /* Url */,
-				"highway::UrlTests" /* UrlTests */,
-				"highway::XCBuild" /* XCBuild */,
-				"highway::XCBuildTests" /* XCBuildTests */,
-				FDC156DA21C5347C00E04B44 /* SourceryWorker */,
-				FDC156E221C5347D00E04B44 /* SourceryWorkerTests */,
-				FDE9B6F621C58ED400D1F50A /* SourceryAutoProtocols-iOS */,
 				FDEC118621C65D9200CB7DAD /* Automate */,
+				"highway::Arguments" /* Arguments */,
+				"highway::Terminal" /* Terminal */,
+				"highway::Task" /* Task */,
+				"highway::SourceryAutoProtocols" /* SourceryAutoProtocols */,
+				FDC156DA21C5347C00E04B44 /* SourceryWorker */,
+				"highway::POSIX" /* POSIX */,
+				"highway::Errors" /* Errors */,
+				"highway::XCBuild" /* XCBuild */,
+				"highway::Url" /* Url */,
+				"highway::Deliver" /* Deliver */,
+				"highway::Keychain" /* Keychain */,
+				"highway::Result" /* Result */,
+				"highway::SourceryMocks" /* SourceryMocks */,
+				"highway::Git" /* Git */,
+				"highway::HWKit" /* HWKit */,
+				"highway::HighwayCore" /* HighwayCore */,
+				"highway::HighwayProject" /* HighwayProject */,
+				FDE9B6F621C58ED400D1F50A /* SourceryAutoProtocols-iOS */,
 				FDEC119721C65D9400CB7DAD /* AutomateTests */,
+				"highway::ArgumentsTests" /* ArgumentsTests */,
+				"highway::DeliverTests" /* DeliverTests */,
+				"highway::GitTests" /* GitTests */,
+				"highway::HWKitTests" /* HWKitTests */,
+				"highway::HighwayCoreTests" /* HighwayCoreTests */,
+				"highway::POSIXTests" /* POSIXTests */,
+				"highway::ResultTests" /* ResultTests */,
+				"highway::TaskTests" /* TaskTests */,
+				"highway::TerminalTests" /* TerminalTests */,
+				"highway::UrlTests" /* UrlTests */,
+				"highway::XCBuildTests" /* XCBuildTests */,
+				FDC156E221C5347D00E04B44 /* SourceryWorkerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -4127,6 +4346,7 @@
 			files = (
 				FDEC118C21C65D9200CB7DAD /* ViewController.swift in Sources */,
 				FDEC118A21C65D9200CB7DAD /* AppDelegate.swift in Sources */,
+				FDEC11F921C682E600CB7DAD /* HighwaySourceryWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4144,6 +4364,7 @@
 			files = (
 				OBJ_269 /* Arguments.swift in Sources */,
 				OBJ_270 /* Option.swift in Sources */,
+				FDEC11F421C67ED700CB7DAD /* Worker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4463,6 +4684,31 @@
 			target = "highway::HWKit" /* HWKit */;
 			targetProxy = FD0F7C902188870E00F84604 /* PBXContainerItemProxy */;
 		};
+		FD11266B21C6899D0072607D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::HighwayProject" /* HighwayProject */;
+			targetProxy = FD11266A21C6899D0072607D /* PBXContainerItemProxy */;
+		};
+		FD11266F21C6899D0072607D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::HighwayCore" /* HighwayCore */;
+			targetProxy = FD11266E21C6899D0072607D /* PBXContainerItemProxy */;
+		};
+		FD11267621C689AF0072607D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::HWKit" /* HWKit */;
+			targetProxy = FD11267521C689AF0072607D /* PBXContainerItemProxy */;
+		};
+		FD11267A21C689AF0072607D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::Keychain" /* Keychain */;
+			targetProxy = FD11267921C689AF0072607D /* PBXContainerItemProxy */;
+		};
+		FD11267E21C689AF0072607D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::Deliver" /* Deliver */;
+			targetProxy = FD11267D21C689AF0072607D /* PBXContainerItemProxy */;
+		};
 		FDC156E621C5347D00E04B44 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FDC156DA21C5347C00E04B44 /* SourceryWorker */;
@@ -4492,6 +4738,61 @@
 			isa = PBXTargetDependency;
 			name = "ZFile-macos";
 			targetProxy = FDEC11D821C671EA00CB7DAD /* PBXContainerItemProxy */;
+		};
+		FDEC11F621C67FE700CB7DAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::Arguments" /* Arguments */;
+			targetProxy = FDEC11F521C67FE700CB7DAD /* PBXContainerItemProxy */;
+		};
+		FDEC11FB21C682FC00CB7DAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			targetProxy = FDEC11FA21C682FC00CB7DAD /* PBXContainerItemProxy */;
+		};
+		FDEC120021C6869C00CB7DAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ZFile-macos";
+			targetProxy = FDEC11FF21C6869C00CB7DAD /* PBXContainerItemProxy */;
+		};
+		FDEC120B21C6871900CB7DAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::Terminal" /* Terminal */;
+			targetProxy = FDEC120A21C6871900CB7DAD /* PBXContainerItemProxy */;
+		};
+		FDEC120D21C6876300CB7DAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::Task" /* Task */;
+			targetProxy = FDEC120C21C6876300CB7DAD /* PBXContainerItemProxy */;
+		};
+		FDEC121321C687E600CB7DAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::Errors" /* Errors */;
+			targetProxy = FDEC121221C687E600CB7DAD /* PBXContainerItemProxy */;
+		};
+		FDEC121721C688B600CB7DAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::POSIX" /* POSIX */;
+			targetProxy = FDEC121621C688B600CB7DAD /* PBXContainerItemProxy */;
+		};
+		FDEC121B21C688D600CB7DAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::Result" /* Result */;
+			targetProxy = FDEC121A21C688D600CB7DAD /* PBXContainerItemProxy */;
+		};
+		FDEC121F21C688EE00CB7DAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::Url" /* Url */;
+			targetProxy = FDEC121E21C688EE00CB7DAD /* PBXContainerItemProxy */;
+		};
+		FDEC122321C688F900CB7DAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::XCBuild" /* XCBuild */;
+			targetProxy = FDEC122221C688F900CB7DAD /* PBXContainerItemProxy */;
+		};
+		FDEC122721C6890500CB7DAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::Git" /* Git */;
+			targetProxy = FDEC122621C6890500CB7DAD /* PBXContainerItemProxy */;
 		};
 		OBJ_1000 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -5506,7 +5807,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -5556,7 +5857,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -5761,6 +6062,7 @@
 		FDEC119F21C65D9400CB7DAD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -5806,6 +6108,7 @@
 		FDEC11A021C65D9400CB7DAD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -5925,6 +6228,8 @@
 		OBJ_266 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5946,6 +6251,8 @@
 		OBJ_267 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6001,6 +6308,8 @@
 		OBJ_290 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6022,6 +6331,8 @@
 		OBJ_291 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6127,6 +6438,8 @@
 		OBJ_331 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6148,6 +6461,8 @@
 		OBJ_332 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6169,6 +6484,8 @@
 		OBJ_339 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6190,6 +6507,8 @@
 		OBJ_340 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6292,6 +6611,8 @@
 		OBJ_404 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6313,6 +6634,8 @@
 		OBJ_405 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6368,6 +6691,8 @@
 		OBJ_489 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6389,6 +6714,8 @@
 		OBJ_490 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6444,6 +6771,8 @@
 		OBJ_569 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6465,6 +6794,8 @@
 		OBJ_570 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6486,6 +6817,8 @@
 		OBJ_601 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6507,6 +6840,8 @@
 		OBJ_602 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6528,6 +6863,8 @@
 		OBJ_623 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6549,6 +6886,8 @@
 		OBJ_624 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6604,6 +6943,8 @@
 		OBJ_646 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6625,6 +6966,8 @@
 		OBJ_647 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6680,6 +7023,8 @@
 		OBJ_693 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6701,6 +7046,8 @@
 		OBJ_694 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6764,6 +7111,8 @@
 		OBJ_734 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6786,6 +7135,8 @@
 		OBJ_735 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6842,6 +7193,8 @@
 		OBJ_810 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6863,6 +7216,8 @@
 		OBJ_811 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6918,6 +7273,8 @@
 		OBJ_912 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6939,6 +7296,8 @@
 		OBJ_913 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -6994,6 +7353,8 @@
 		OBJ_933 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -7015,6 +7376,8 @@
 		OBJ_934 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";

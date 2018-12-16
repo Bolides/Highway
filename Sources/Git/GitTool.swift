@@ -24,29 +24,29 @@ public struct GitTool: AutoGenerateProtocol {
 
 extension GitTool: GitToolProtocol {
     public func addAll(at url: FolderProtocol) throws {
-        try system.execute(try _git(with: ["add", "."], at: url))
+        _ = try system.execute(try _git(with: ["add", "."], at: url))
     }
     
     public func commit(at url: FolderProtocol, message: String) throws {
-        try system.execute(try _git(with: ["commit", "-m", message], at: url))
+        _ = try system.execute(try _git(with: ["commit", "-m", message], at: url))
     }
     
     public func pushToMaster(at url: FolderProtocol) throws {
-        try system.execute(try _git(with: ["push", "origin", "master"], at: url))
+        _ = try system.execute(try _git(with: ["push", "origin", "master"], at: url))
     }
     
     public func pushTagsToMaster(at url: FolderProtocol) throws {
-        try system.execute(try _git(with: ["push", "--tags"], at: url))
+        _ = try system.execute(try _git(with: ["push", "--tags"], at: url))
     }
     
     public func pull(at url: FolderProtocol) throws {
-        try system.execute(try _git(with: ["pull"], at: url))
+        _ = try system.execute(try _git(with: ["pull"], at: url))
     }
     
     public func currentTag(at url: FolderProtocol) throws -> String {
         let task = try _git(with: ["describe", "--tags"], at: url)
         task.enableReadableOutputDataCapturing()
-        try system.execute(task)
+        _ = try system.execute(task)
         
         guard let rawTag = task.trimmedOutput else {
             throw "Failed to get current tag."
@@ -69,7 +69,7 @@ extension GitTool: GitToolProtocol {
     public func clone(with options: CloneOptions) throws {
         let input: [String] = ["clone"] + (options.performMirror ? ["--mirror"] : []) + [options.remoteUrl, options.localPath.path]
         let arguments = Arguments(input)
-        try system.execute(try _git(with: arguments, at: try Folder(path: "/")))
+        _ = try system.execute(try _git(with: arguments, at: try Folder(path: "/")))
     }
 }
 

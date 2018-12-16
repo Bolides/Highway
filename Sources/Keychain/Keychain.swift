@@ -27,7 +27,7 @@ public class Keychain: KeychainProtocol, AutoGenerateProtocol {
         let task = try system.task(named: "security")
         task.arguments = query.processArguments
         task.enableReadableOutputDataCapturing()
-        try system.execute(task)
+        _ = try system.execute(task)
 
         guard let password = task.trimmedOutput, password.isEmpty == false else {
             throw "Failed to get password from keychain: No Output found."

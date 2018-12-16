@@ -12,9 +12,10 @@ import SourceryAutoProtocols
 public protocol SystemProtocol: AutoMockable {
     
     /// sourcery:inline:LocalSystem.AutoGenerateProtocol
-    @discardableResult func task(named name: String) throws -> Task
-    @discardableResult func execute(_ task: Task) throws -> Bool
-    @discardableResult func launch(_ task: Task, wait: Bool) throws -> Bool
+
+    func task(named name: String) throws -> Task
+    func execute(_ task: Task) throws -> Bool
+    func launch(_ task: Task, wait: Bool) throws -> Bool
     /// sourcery:end
 }
 

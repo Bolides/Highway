@@ -21,7 +21,7 @@ public final class GitAutotag {
         task.arguments = arguments
         task.currentDirectoryUrl = url
         task.enableReadableOutputDataCapturing()
-        try system.execute(task)
+        _ = try system.execute(task)
         guard let rawTag = task.trimmedOutput else {
             throw "Failed to get current tag."
         }
