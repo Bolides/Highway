@@ -319,20 +319,17 @@ open class DestinationFactoryProtocolMock: DestinationFactoryProtocol {
     return macOSArchitectureCallsCount > 0
   }
   public var macOSArchitectureReceivedArchitecture: Destination.Architecture?
-  public var macOSArchitectureReturnValue: Destination
-    func device(_ device: Destination.Device, name: String?, isGeneric: Bool = true, id: String?)-> Destination?
+  public var macOSArchitectureReturnValue: Destination?
 
   // MARK: - <macOS> - closure mocks
 
-  public var macOSArchitectureClosure: ((Destination.Architecture) -> Destination
-    func device(_ device: Destination.Device, name: String?, isGeneric: Bool = true, id: String?)-> Destination)? = nil
+  public var macOSArchitectureClosure: ((Destination.Architecture) -> Destination)? = nil
 
 
 
   // MARK: - <macOS> - method mocked
 
-  open func macOS(architecture: Destination.Architecture) -> Destination
-    func device(_ device: Destination.Device, name: String?, isGeneric: Bool = true, id: String?)-> Destination {
+  open func macOS(architecture: Destination.Architecture) -> Destination {
 
       macOSArchitectureCallsCount += 1
       macOSArchitectureReceivedArchitecture = architecture
@@ -356,6 +353,49 @@ open class DestinationFactoryProtocolMock: DestinationFactoryProtocol {
       }
 
       return closureReturn(architecture)
+  }
+
+  // MARK: - <device> - parameters
+
+  public var deviceNameIsGenericIdCallsCount = 0
+  public var deviceNameIsGenericIdCalled: Bool {
+    return deviceNameIsGenericIdCallsCount > 0
+  }
+  public var deviceNameIsGenericIdReceivedArguments: (device: (Destination.Device), name: (String)?, isGeneric: (Bool), id: (String)?)?
+  public var deviceNameIsGenericIdReturnValue: Destination?
+
+  // MARK: - <device> - closure mocks
+
+  public var deviceNameIsGenericIdClosure: ((Destination.Device, String?, Bool, String?) -> Destination)? = nil
+
+
+
+  // MARK: - <device> - method mocked
+
+  open func device(_ device: Destination.Device, name: String?, isGeneric: Bool, id: String?) -> Destination {
+
+      deviceNameIsGenericIdCallsCount += 1
+      deviceNameIsGenericIdReceivedArguments = (device: device, name: name, isGeneric: isGeneric, id: id)
+
+      // <device> - Return Value mock implementation
+
+      guard let closureReturn = deviceNameIsGenericIdClosure else {
+          guard let returnValue = deviceNameIsGenericIdReturnValue else {
+              let message = """
+                🧙‍♂️ 🔥asked to return a value for name parameters:
+                    deviceNameIsGenericId
+                    but this case(s) is(are) not implemented in
+                    DestinationFactoryProtocol for method deviceNameIsGenericIdClosure.
+                """
+              let error = SourceryMockError.implementErrorCaseFor(message)
+              os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
+
+              return deviceNameIsGenericIdReturnValue!
+          }
+          return returnValue
+      }
+
+      return closureReturn(device, name, isGeneric, id)
   }
 
   // MARK: - <simulator> - parameters
@@ -1603,6 +1643,63 @@ open class HighwaySignpostProtocolMock: HighwaySignpostProtocol {
 }
 
 
+// MARK: - HighwaySourceryWorkerProtocolMock
+
+open class HighwaySourceryWorkerProtocolMock: HighwaySourceryWorkerProtocol {
+
+    public init() {}
+
+
+
+  // MARK: - <attempt> - parameters
+
+  public var attemptThrowableError: Error?
+  public var attemptCallsCount = 0
+  public var attemptCalled: Bool {
+    return attemptCallsCount > 0
+  }
+  public var attemptReturnValue: [String]?
+
+  // MARK: - <attempt> - closure mocks
+
+  public var attemptClosure: (() throws -> [String])? = nil
+
+
+
+  // MARK: - <attempt> - method mocked
+
+  open func attempt() throws -> [String] {
+
+
+      // <attempt> - Throwable method implementation
+
+    if let error = attemptThrowableError {
+        throw error
+    }
+
+      attemptCallsCount += 1
+
+      // <attempt> - Return Value mock implementation
+
+      guard let closureReturn = attemptClosure else {
+          guard let returnValue = attemptReturnValue else {
+              let message = """
+                🧙‍♂️ 🔥asked to return a value for name parameters:
+                    attempt
+                    but this case(s) is(are) not implemented in
+                    HighwaySourceryWorkerProtocol for method attemptClosure.
+                """
+              let error = SourceryMockError.implementErrorCaseFor(message)
+                 throw error
+          }
+          return returnValue
+      }
+
+      return try closureReturn()
+  }
+}
+
+
 // MARK: - HomeBundleProtocolMock
 
 open class HomeBundleProtocolMock: HomeBundleProtocol {
@@ -1619,11 +1716,11 @@ open class HomeBundleProtocolMock: HomeBundleProtocol {
       set(value) { underlyingFileSystem = value }
   }
   public  var underlyingFileSystem: FileSystemProtocol!
-  public  var configuration: Configuration {
+  public  var configuration: HomeBundle.Configuration {
       get { return underlyingConfiguration }
       set(value) { underlyingConfiguration = value }
   }
-  public  var underlyingConfiguration: Configuration!
+  public  var underlyingConfiguration: HomeBundle.Configuration!
   public  var localCloneUrl: FolderProtocol {
       get { return underlyingLocalCloneUrl }
       set(value) { underlyingLocalCloneUrl = value }
@@ -1637,17 +1734,17 @@ open class HomeBundleProtocolMock: HomeBundleProtocol {
   public var missingComponentsCalled: Bool {
     return missingComponentsCallsCount > 0
   }
-  public var missingComponentsReturnValue: Set<Component>?
+  public var missingComponentsReturnValue: Set<HomeBundle.Component>?
 
   // MARK: - <missingComponents> - closure mocks
 
-  public var missingComponentsClosure: (() -> Set<Component>)? = nil
+  public var missingComponentsClosure: (() -> Set<HomeBundle.Component>)? = nil
 
 
 
   // MARK: - <missingComponents> - method mocked
 
-  open func missingComponents() -> Set<Component> {
+  open func missingComponents() -> Set<HomeBundle.Component> {
 
       missingComponentsCallsCount += 1
 
@@ -1752,18 +1849,18 @@ open class KeychainProtocolMock: KeychainProtocol {
   public var passwordMatchingCalled: Bool {
     return passwordMatchingCallsCount > 0
   }
-  public var passwordMatchingReceivedQuery: PasswordQuery?
+  public var passwordMatchingReceivedQuery: Keychain.PasswordQuery?
   public var passwordMatchingReturnValue: String?
 
   // MARK: - <password> - closure mocks
 
-  public var passwordMatchingClosure: ((PasswordQuery) throws -> String)? = nil
+  public var passwordMatchingClosure: ((Keychain.PasswordQuery) throws -> String)? = nil
 
 
 
   // MARK: - <password> - method mocked
 
-  open func password(matching query: PasswordQuery) throws -> String {
+  open func password(matching query: Keychain.PasswordQuery) throws -> String {
 
 
       // <password> - Throwable method implementation

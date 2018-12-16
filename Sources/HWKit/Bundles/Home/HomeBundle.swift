@@ -31,7 +31,7 @@ public final class HomeBundle: HomeBundleProtocol, AutoGenerateProtocol {
     // MARK: - Properties
     public let url: FolderProtocol
     public let fileSystem: FileSystemProtocol
-    public let configuration: Configuration
+    public let configuration: HomeBundle.Configuration
     public var localCloneUrl: FolderProtocol {
         do { return try url.subfolder(atPath: Component.clone.path.asString) } catch {
             os_log("🔥 %@", type: .error, "failing cot clone local, defaulting to temp directory")
@@ -39,7 +39,7 @@ public final class HomeBundle: HomeBundleProtocol, AutoGenerateProtocol {
         }
     }
     
-    public func missingComponents() -> Set<Component> {
+    public func missingComponents() -> Set<HomeBundle.Component> {
         let all = Component.all
         let missing = all.filter { component in
 

@@ -16,7 +16,7 @@ public protocol DestinationFactoryProtocol: AutoMockable {
     /// sourcery:inline:DestinationFactory.AutoGenerateProtocol
 
     func macOS(architecture: Destination.Architecture)-> Destination
-    func device(_ device: Destination.Device, name: String?, isGeneric: Bool , id: String?)-> Destination
+    func device(_ device: Destination.Device, name: String?, isGeneric: Bool, id: String?)-> Destination
     func simulator(_ simulator: Destination.Simulator, name: String, os: Destination.OS, id: String?)-> Destination
     
     /// sourcery:end
@@ -36,7 +36,7 @@ public struct DestinationFactory: AutoGenerateProtocol {
         )
     }
     
-    public func device(_ device: Destination.Device, name: String?, isGeneric: Bool = true, id: String?) -> Destination {
+    public func device(_ device: Destination.Device, name: String?, isGeneric: Bool, id: String?) -> Destination {
         var properties = [String: String]()
         properties["\(isGeneric ? "generic/" : "")platform"] = device.name
         if let name = name {

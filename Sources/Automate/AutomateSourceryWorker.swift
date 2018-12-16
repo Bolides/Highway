@@ -12,8 +12,10 @@ import os
 import ZFile
 
 protocol HighwaySourceryWorkerProtocol: AutoMockable {
-    // sourcery:inline:HighwaySourceryWorker.AutoGenerateProtocol
-    // sourcery:end
+    /// sourcery:inline:AutomateSourceryWorker.AutoGenerateProtocol
+
+    func attempt() throws -> [String]
+    /// sourcery:end
 }
 
 struct AutomateSourceryWorker: AutoGenerateProtocol {

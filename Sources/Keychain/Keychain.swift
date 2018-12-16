@@ -23,7 +23,7 @@ public class Keychain: KeychainProtocol, AutoGenerateProtocol {
     public let system: SystemProtocol
 
     // MARK: - Working with the Keychain
-    public func password(matching query: PasswordQuery) throws -> String  {
+    public func password(matching query: Keychain.PasswordQuery) throws -> String  {
         let task = try system.task(named: "security")
         task.arguments = query.processArguments
         task.enableReadableOutputDataCapturing()
