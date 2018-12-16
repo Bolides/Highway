@@ -12,7 +12,7 @@ class ViewController: NSViewController {
 
     @IBAction func runSourcery(_ sender: NSButton) {
         do {
-            let worker = try HighwaySourceryWorker()
+            let worker = try AutomateSourceryWorker()
             let output = try worker.attempt()
             os_log("%@", type:.debug, "Sourcery ran with output:\n \(output.joined(separator: "\n"))")
         } catch {

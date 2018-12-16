@@ -19,6 +19,7 @@
 		FD11267821C689AF0072607D /* Keychain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Keychain::Product" /* Keychain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD11267B21C689AF0072607D /* Deliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Deliver::Product" /* Deliver.framework */; };
 		FD11267C21C689AF0072607D /* Deliver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Deliver::Product" /* Deliver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD11267F21C6924C0072607D /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
 		FD326D942109E3C600AE3A98 /* ArchivePlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326D932109E3C600AE3A98 /* ArchivePlist.swift */; };
 		FD326D972109F2B800AE3A98 /* GitTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326D952109F2AC00AE3A98 /* GitTool.swift */; };
 		FD326D9A2109FB8F00AE3A98 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326D982109FB8200AE3A98 /* Configuration.swift */; };
@@ -61,9 +62,9 @@
 		FDEC11E621C679D400CB7DAD /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E321C679B600CB7DAD /* AutoMockable.generated.swift */; };
 		FDEC11E721C679DF00CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */; };
 		FDEC11E821C679E200CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */; };
-		FDEC11EF21C67ACE00CB7DAD /* Terminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11EB21C67ACE00CB7DAD /* Terminal.swift */; };
+		FDEC11EF21C67ACE00CB7DAD /* HighwaySignpost.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11EB21C67ACE00CB7DAD /* HighwaySignpost.swift */; };
 		FDEC11F421C67ED700CB7DAD /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11F221C67EAD00CB7DAD /* Worker.swift */; };
-		FDEC11F921C682E600CB7DAD /* HighwaySourceryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11F821C682E600CB7DAD /* HighwaySourceryWorker.swift */; };
+		FDEC11F921C682E600CB7DAD /* AutomateSourceryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11F821C682E600CB7DAD /* AutomateSourceryWorker.swift */; };
 		FDEC11FE21C6869C00CB7DAD /* ZFile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDEC11D321C6717600CB7DAD /* ZFile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDEC120321C686AF00CB7DAD /* Arguments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDEC120521C686B700CB7DAD /* SourceryWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -2030,9 +2031,9 @@
 		FDEC11E221C679B600CB7DAD /* AutoGenerateProtocol.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoGenerateProtocol.generated.swift; sourceTree = "<group>"; };
 		FDEC11E321C679B600CB7DAD /* AutoMockable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryAutoProtocols.swift; sourceTree = "<group>"; };
-		FDEC11EB21C67ACE00CB7DAD /* Terminal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Terminal.swift; sourceTree = "<group>"; };
+		FDEC11EB21C67ACE00CB7DAD /* HighwaySignpost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighwaySignpost.swift; sourceTree = "<group>"; };
 		FDEC11F221C67EAD00CB7DAD /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
-		FDEC11F821C682E600CB7DAD /* HighwaySourceryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighwaySourceryWorker.swift; sourceTree = "<group>"; };
+		FDEC11F821C682E600CB7DAD /* AutomateSourceryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomateSourceryWorker.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
 		OBJ_102 /* Highway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highway.swift; sourceTree = "<group>"; };
 		OBJ_104 /* Deliver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deliver.swift; sourceTree = "<group>"; };
@@ -2531,6 +2532,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				FD11267F21C6924C0072607D /* Task.framework in Frameworks */,
 				OBJ_827 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2651,7 +2653,7 @@
 			children = (
 				FDEC118921C65D9200CB7DAD /* AppDelegate.swift */,
 				FDEC118B21C65D9200CB7DAD /* ViewController.swift */,
-				FDEC11F821C682E600CB7DAD /* HighwaySourceryWorker.swift */,
+				FDEC11F821C682E600CB7DAD /* AutomateSourceryWorker.swift */,
 				FDEC118D21C65D9400CB7DAD /* Assets.xcassets */,
 				FDEC118F21C65D9400CB7DAD /* Main.storyboard */,
 				FDEC119221C65D9400CB7DAD /* Info.plist */,
@@ -2723,7 +2725,7 @@
 		OBJ_108 /* Terminal */ = {
 			isa = PBXGroup;
 			children = (
-				FDEC11EB21C67ACE00CB7DAD /* Terminal.swift */,
+				FDEC11EB21C67ACE00CB7DAD /* HighwaySignpost.swift */,
 				FD34F42C21BEE9EB0052222C /* CDToFolderExecutable.swift */,
 				FD34F42D21BEE9EB0052222C /* CatExecutable.swift */,
 				FD34F42E21BEE9EB0052222C /* GitExecutables.swift */,
@@ -4346,7 +4348,7 @@
 			files = (
 				FDEC118C21C65D9200CB7DAD /* ViewController.swift in Sources */,
 				FDEC118A21C65D9200CB7DAD /* AppDelegate.swift in Sources */,
-				FDEC11F921C682E600CB7DAD /* HighwaySourceryWorker.swift in Sources */,
+				FDEC11F921C682E600CB7DAD /* AutomateSourceryWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4607,7 +4609,7 @@
 				FD34F42F21BEE9EB0052222C /* CDToFolderExecutable.swift in Sources */,
 				FD34F42A21BEE8E20052222C /* TerminalSysExitCode.swift in Sources */,
 				FD34F42821BEE8D50052222C /* TerminalTasks.swift in Sources */,
-				FDEC11EF21C67ACE00CB7DAD /* Terminal.swift in Sources */,
+				FDEC11EF21C67ACE00CB7DAD /* HighwaySignpost.swift in Sources */,
 				FD34F43021BEE9EB0052222C /* CatExecutable.swift in Sources */,
 				FD34F42721BEE8CA0052222C /* TerminalWorker.swift in Sources */,
 			);

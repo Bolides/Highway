@@ -52,7 +52,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             
             switch worker {
             case .sourcery:
-               let worker = try HighwaySourceryWorker()
+               let worker = try AutomateSourceryWorker()
                let output = try worker.attempt()
                os_log("%@", type:.debug, "Sourcery ran with output:\n \(output.joined(separator: "\n"))")
             }

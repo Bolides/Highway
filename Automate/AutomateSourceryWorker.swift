@@ -16,7 +16,7 @@ protocol HighwaySourceryWorkerProtocol: AutoMockable {
     // sourcery:end
 }
 
-struct HighwaySourceryWorker: AutoGenerateProtocol {
+struct AutomateSourceryWorker: AutoGenerateProtocol {
     
     private let worker: SourceryWorkerProtocol
     
