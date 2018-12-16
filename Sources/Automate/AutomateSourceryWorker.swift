@@ -10,33 +10,36 @@ import SourceryAutoProtocols
 import SourceryWorker
 import os
 import ZFile
+import Terminal
 
-protocol HighwaySourceryWorkerProtocol: AutoMockable {
+protocol AutomateSourceryWorkerProtocol: AutoMockable {
     /// sourcery:inline:AutomateSourceryWorker.AutoGenerateProtocol
 
     func attempt() throws -> [String]
     /// sourcery:end
 }
 
-struct AutomateSourceryWorker: AutoGenerateProtocol {
+struct AutomateSourceryWorker: AutomateSourceryWorkerProtocol, AutoGenerateProtocol {
     
     private let worker: SourceryWorkerProtocol
+    private let signpost: HighwaySignpostProtocol
     
-    init(worker: SourceryWorkerProtocol? = nil) throws {
+    init(worker: SourceryWorkerProtocol? = nil, signpost: HighwaySignpostProtocol = HighwaySignpost.shared) throws {
+        self.signpost = signpost
+        
         guard worker == nil else {
             self.worker = worker!
             return
         }
         
         let currentFolder = FileSystem().currentFolder
-        os_log(.debug, "💁🏻‍♂️ Running in folder\n %@\n", "\(currentFolder)")
+        signpost.log("💁🏻‍♂️ Running in folder\n \(currentFolder)\n")
         
         let projectFolder = try currentFolder.parentFolder().parentFolder()
         let carthageFolder = try projectFolder.subfolder(named: "Carthage")
-        os_log(.debug, "💁🏻‍♂️ Carthage in folder\n %@\n", "\(carthageFolder)")
         
         let sourcesFolders = try projectFolder.subfolder(named: "Sources")
-        os_log(.debug, "💁🏻‍♂️ Sources are in folder\n %@\n", "\(sourcesFolders)")
+        signpost.log("💁🏻‍♂️ Sources are in folder\n \(sourcesFolders)\n")
         
         let sourcery = try Sourcery(
             sourcesFolders: sourcesFolders,

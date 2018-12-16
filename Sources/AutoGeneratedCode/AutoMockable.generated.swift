@@ -200,6 +200,63 @@ open class ArgumentExecutableProtocolMock: ArgumentExecutableProtocol {
 }
 
 
+// MARK: - AutomateSourceryWorkerProtocolMock
+
+open class AutomateSourceryWorkerProtocolMock: AutomateSourceryWorkerProtocol {
+
+    public init() {}
+
+
+
+  // MARK: - <attempt> - parameters
+
+  public var attemptThrowableError: Error?
+  public var attemptCallsCount = 0
+  public var attemptCalled: Bool {
+    return attemptCallsCount > 0
+  }
+  public var attemptReturnValue: [String]?
+
+  // MARK: - <attempt> - closure mocks
+
+  public var attemptClosure: (() throws -> [String])? = nil
+
+
+
+  // MARK: - <attempt> - method mocked
+
+  open func attempt() throws -> [String] {
+
+
+      // <attempt> - Throwable method implementation
+
+    if let error = attemptThrowableError {
+        throw error
+    }
+
+      attemptCallsCount += 1
+
+      // <attempt> - Return Value mock implementation
+
+      guard let closureReturn = attemptClosure else {
+          guard let returnValue = attemptReturnValue else {
+              let message = """
+                🧙‍♂️ 🔥asked to return a value for name parameters:
+                    attempt
+                    but this case(s) is(are) not implemented in
+                    AutomateSourceryWorkerProtocol for method attemptClosure.
+                """
+              let error = SourceryMockError.implementErrorCaseFor(message)
+                 throw error
+          }
+          return returnValue
+      }
+
+      return try closureReturn()
+  }
+}
+
+
 // MARK: - BuildResultProtocolMock
 
 open class BuildResultProtocolMock: BuildResultProtocol {
@@ -1639,63 +1696,6 @@ open class HighwaySignpostProtocolMock: HighwaySignpostProtocol {
 
       verbosePrintClosure?(printable)
 
-  }
-}
-
-
-// MARK: - HighwaySourceryWorkerProtocolMock
-
-open class HighwaySourceryWorkerProtocolMock: HighwaySourceryWorkerProtocol {
-
-    public init() {}
-
-
-
-  // MARK: - <attempt> - parameters
-
-  public var attemptThrowableError: Error?
-  public var attemptCallsCount = 0
-  public var attemptCalled: Bool {
-    return attemptCallsCount > 0
-  }
-  public var attemptReturnValue: [String]?
-
-  // MARK: - <attempt> - closure mocks
-
-  public var attemptClosure: (() throws -> [String])? = nil
-
-
-
-  // MARK: - <attempt> - method mocked
-
-  open func attempt() throws -> [String] {
-
-
-      // <attempt> - Throwable method implementation
-
-    if let error = attemptThrowableError {
-        throw error
-    }
-
-      attemptCallsCount += 1
-
-      // <attempt> - Return Value mock implementation
-
-      guard let closureReturn = attemptClosure else {
-          guard let returnValue = attemptReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    attempt
-                    but this case(s) is(are) not implemented in
-                    HighwaySourceryWorkerProtocol for method attemptClosure.
-                """
-              let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
-          }
-          return returnValue
-      }
-
-      return try closureReturn()
   }
 }
 

@@ -2,7 +2,7 @@ import Foundation
 import Task
 import SourceryAutoProtocols
 
-protocol HighwaySignpostProtocol: AutoMockable {
+public protocol HighwaySignpostProtocol: AutoMockable {
     /// sourcery:inline:HighwaySignpost.AutoGenerateProtocol
     static var shared: HighwaySignpost { get }
     var verbose: Bool { get set }
@@ -20,7 +20,7 @@ protocol HighwaySignpostProtocol: AutoMockable {
 }
 
 // Use this class to delivers logs to the user.
-public class HighwaySignpost: AutoGenerateProtocol {
+public class HighwaySignpost: HighwaySignpostProtocol, AutoGenerateProtocol {
     // MARK: - Global
     public static let shared = HighwaySignpost()
     
