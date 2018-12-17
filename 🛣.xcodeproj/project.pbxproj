@@ -65,7 +65,6 @@
 		FDEC11E821C679E200CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */; };
 		FDEC11F421C67ED700CB7DAD /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11F221C67EAD00CB7DAD /* Worker.swift */; };
 		FDEC11F921C682E600CB7DAD /* AutomateSourceryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11F821C682E600CB7DAD /* AutomateSourceryWorker.swift */; };
-		FDEC11FE21C6869C00CB7DAD /* ZFile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDEC11D321C6717600CB7DAD /* ZFile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDEC120321C686AF00CB7DAD /* Arguments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDEC120521C686B700CB7DAD /* SourceryWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDEC120721C686E200CB7DAD /* SourceryAutoProtocols.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -1252,41 +1251,6 @@
 			remoteGlobalIDString = FDC156DA21C5347C00E04B44;
 			remoteInfo = SourceryWorker;
 		};
-		FDEC11CE21C6717600CB7DAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDEC11C721C6717600CB7DAD /* ZFile.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FD737D9221B03BD3001BB507;
-			remoteInfo = "ZFile-iOS";
-		};
-		FDEC11D021C6717600CB7DAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDEC11C721C6717600CB7DAD /* ZFile.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FD737D9B21B03BD3001BB507;
-			remoteInfo = ZFileTests;
-		};
-		FDEC11D221C6717600CB7DAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDEC11C721C6717600CB7DAD /* ZFile.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FD737DC021B03D25001BB507;
-			remoteInfo = "ZFile-macos";
-		};
-		FDEC11D421C6717600CB7DAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDEC11C721C6717600CB7DAD /* ZFile.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FD737DD221B03DC4001BB507;
-			remoteInfo = ZFile_macosTests;
-		};
-		FDEC11D821C671EA00CB7DAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDEC11C721C6717600CB7DAD /* ZFile.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = FD737DBF21B03D25001BB507;
-			remoteInfo = "ZFile-macos";
-		};
 		FDEC11F521C67FE700CB7DAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1300,13 +1264,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = "highway::SourceryAutoProtocols";
 			remoteInfo = SourceryAutoProtocols;
-		};
-		FDEC11FF21C6869C00CB7DAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDEC11C721C6717600CB7DAD /* ZFile.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = FD737DBF21B03D25001BB507;
-			remoteInfo = "ZFile-macos";
 		};
 		FDEC120A21C6871900CB7DAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1379,7 +1336,6 @@
 				FDEC121D21C688EE00CB7DAD /* Url.framework in Embed Frameworks */,
 				FDEC120721C686E200CB7DAD /* SourceryAutoProtocols.framework in Embed Frameworks */,
 				FDEC121921C688D600CB7DAD /* Result.framework in Embed Frameworks */,
-				FDEC11FE21C6869C00CB7DAD /* ZFile.framework in Embed Frameworks */,
 				FDEC120921C6871900CB7DAD /* Terminal.framework in Embed Frameworks */,
 				FD11267821C689AF0072607D /* Keychain.framework in Embed Frameworks */,
 				FDEC120321C686AF00CB7DAD /* Arguments.framework in Embed Frameworks */,
@@ -1436,7 +1392,6 @@
 		FDEC119821C65D9400CB7DAD /* AutomateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutomateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDEC119C21C65D9400CB7DAD /* AutomateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomateTests.swift; sourceTree = "<group>"; };
 		FDEC119E21C65D9400CB7DAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDEC11C721C6717600CB7DAD /* ZFile.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZFile.xcodeproj; path = Carthage/Checkouts/zfile/sources/ZFile.xcodeproj; sourceTree = "<group>"; };
 		FDEC11E121C679B600CB7DAD /* DecoderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderMock.swift; sourceTree = "<group>"; };
 		FDEC11E221C679B600CB7DAD /* AutoGenerateProtocol.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoGenerateProtocol.generated.swift; sourceTree = "<group>"; };
 		FDEC11E321C679B600CB7DAD /* AutoMockable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
@@ -1983,17 +1938,6 @@
 			path = Tests/AutomateTests;
 			sourceTree = "<group>";
 		};
-		FDEC11C821C6717600CB7DAD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FDEC11CF21C6717600CB7DAD /* ZFile.framework */,
-				FDEC11D121C6717600CB7DAD /* ZFileTests.xctest */,
-				FDEC11D321C6717600CB7DAD /* ZFile.framework */,
-				FDEC11D521C6717600CB7DAD /* ZFile_macosTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		FDEC11E021C679B600CB7DAD /* AutoGeneratedCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -2298,7 +2242,6 @@
 			isa = PBXGroup;
 			children = (
 				FDC1571421C5485900E04B44 /* README.md */,
-				FDEC11C721C6717600CB7DAD /* ZFile.xcodeproj */,
 				FD326D9E210A0F5F00AE3A98 /* Frameworks */,
 				OBJ_194 /* Products */,
 				OBJ_7 /* Sources */,
@@ -2540,9 +2483,7 @@
 				FDEC11FB21C682FC00CB7DAD /* PBXTargetDependency */,
 				FDEC11F621C67FE700CB7DAD /* PBXTargetDependency */,
 				FDEC121321C687E600CB7DAD /* PBXTargetDependency */,
-				FDEC11D921C671EA00CB7DAD /* PBXTargetDependency */,
 				FDEC11BF21C664B200CB7DAD /* PBXTargetDependency */,
-				FDEC120021C6869C00CB7DAD /* PBXTargetDependency */,
 				FDEC120B21C6871900CB7DAD /* PBXTargetDependency */,
 				FDEC121721C688B600CB7DAD /* PBXTargetDependency */,
 				FDEC121B21C688D600CB7DAD /* PBXTargetDependency */,
@@ -3170,12 +3111,6 @@
 			mainGroup = OBJ_5;
 			productRefGroup = OBJ_194 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = FDEC11C821C6717600CB7DAD /* Products */;
-					ProjectRef = FDEC11C721C6717600CB7DAD /* ZFile.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				FDEC118621C65D9200CB7DAD /* Automate */,
@@ -3210,37 +3145,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		FDEC11CF21C6717600CB7DAD /* ZFile.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ZFile.framework;
-			remoteRef = FDEC11CE21C6717600CB7DAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDEC11D121C6717600CB7DAD /* ZFileTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ZFileTests.xctest;
-			remoteRef = FDEC11D021C6717600CB7DAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDEC11D321C6717600CB7DAD /* ZFile.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ZFile.framework;
-			remoteRef = FDEC11D221C6717600CB7DAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDEC11D521C6717600CB7DAD /* ZFile_macosTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ZFile_macosTests.xctest;
-			remoteRef = FDEC11D421C6717600CB7DAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FD1126CA21C77F050072607D /* Resources */ = {
@@ -3688,11 +3592,6 @@
 			target = FDC156DA21C5347C00E04B44 /* SourceryWorker */;
 			targetProxy = FDEC11BE21C664B200CB7DAD /* PBXContainerItemProxy */;
 		};
-		FDEC11D921C671EA00CB7DAD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ZFile-macos";
-			targetProxy = FDEC11D821C671EA00CB7DAD /* PBXContainerItemProxy */;
-		};
 		FDEC11F621C67FE700CB7DAD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::Arguments" /* Arguments */;
@@ -3702,11 +3601,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
 			targetProxy = FDEC11FA21C682FC00CB7DAD /* PBXContainerItemProxy */;
-		};
-		FDEC120021C6869C00CB7DAD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ZFile-macos";
-			targetProxy = FDEC11FF21C6869C00CB7DAD /* PBXContainerItemProxy */;
 		};
 		FDEC120B21C6871900CB7DAD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
