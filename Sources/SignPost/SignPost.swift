@@ -1,15 +1,28 @@
 import Foundation
 import SourceryAutoProtocols
 
-public protocol SignpostProtocol: AutoMockable {
-    /// sourcery:inline:HighwaySignpost.AutoGenerateProtocol
+public protocol SignPostProtocol: AutoMockable {
+    /// sourcery:inline:SignPost.AutoGenerateProtocol
+    static var shared: SignPost { get }
+    var verbose: Bool { get set }
+
+    func write(_ printer: Printer)
+    func write(_ printable: Printable)
+    // sourcery:"Always printed as error"
+    func error(_ text: String)
+    func success(_ text: String)
+    func message(_ text: String)
+    // sourcery:"Prints text only if --verbose is set."
+    func verbose(_ text: String)
+    func print(_ printable: Printable)
+    func verbosePrint(_ printable: Printable)
     
     /// sourcery:end
 }
 
 /// Use this class to delivers messages to the user.
-public class Signpost: SignpostProtocol, AutoGenerateProtocol {
-    public static let shared = Signpost()
+public class SignPost: SignPostProtocol, AutoGenerateProtocol {
+    public static let shared = SignPost()
 
     public var verbose = false
 
@@ -66,13 +79,13 @@ public class Signpost: SignpostProtocol, AutoGenerateProtocol {
     }
 }
 
-fileprivate extension Signpost {
+fileprivate extension SignPost {
     func _withPrompt(_ text: String) -> String {
         return promptTemplate.terminalString + text
     }
 }
 
-extension Signpost: UIProtocol {
+extension SignPost {
     
     // sourcery:"Always printed as error"
     public func error(_ text: String) {

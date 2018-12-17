@@ -268,51 +268,6 @@ open class AutomateSourceryWorkerProtocolMock: AutomateSourceryWorkerProtocol {
 }
 
 
-// MARK: - BuildResultProtocolMock
-
-open class BuildResultProtocolMock: BuildResultProtocol {
-
-    public init() {}
-
-  public  var executableUrl: FileProtocol {
-      get { return underlyingExecutableUrl }
-      set(value) { underlyingExecutableUrl = value }
-  }
-  public  var underlyingExecutableUrl: FileProtocol!
-  public  var artifact: SwiftBuildSystem.Artifact {
-      get { return underlyingArtifact }
-      set(value) { underlyingArtifact = value }
-  }
-  public  var underlyingArtifact: SwiftBuildSystem.Artifact!
-
-}
-
-
-// MARK: - ContextProtocolMock
-
-open class ContextProtocolMock: ContextProtocol {
-
-    public init() {}
-
-  public  var fileSystem: FileSystemProtocol {
-      get { return underlyingFileSystem }
-      set(value) { underlyingFileSystem = value }
-  }
-  public  var underlyingFileSystem: FileSystemProtocol!
-  public  var executableProvider: ExecutableProviderProtocol {
-      get { return underlyingExecutableProvider }
-      set(value) { underlyingExecutableProvider = value }
-  }
-  public  var underlyingExecutableProvider: ExecutableProviderProtocol!
-  public  var executor: TaskExecutorProtocol {
-      get { return underlyingExecutor }
-      set(value) { underlyingExecutor = value }
-  }
-  public  var underlyingExecutor: TaskExecutorProtocol!
-
-}
-
-
 // MARK: - DeliverProtocolMock
 
 open class DeliverProtocolMock: DeliverProtocol {
@@ -993,590 +948,6 @@ open class GitToolProtocolMock: GitToolProtocol {
 }
 
 
-// MARK: - HighwayBundleProtocolMock
-
-open class HighwayBundleProtocolMock: HighwayBundleProtocol {
-
-    public init() {}
-
-  public  var url: FolderProtocol {
-      get { return underlyingUrl }
-      set(value) { underlyingUrl = value }
-  }
-  public  var underlyingUrl: FolderProtocol!
-  public  var fileSystem: FileSystemProtocol {
-      get { return underlyingFileSystem }
-      set(value) { underlyingFileSystem = value }
-  }
-  public  var underlyingFileSystem: FileSystemProtocol!
-  public  var configuration: Configuration {
-      get { return underlyingConfiguration }
-      set(value) { underlyingConfiguration = value }
-  }
-  public  var underlyingConfiguration: Configuration!
-  public  var xcodeprojectParent: FolderProtocol {
-      get { return underlyingXcodeprojectParent }
-      set(value) { underlyingXcodeprojectParent = value }
-  }
-  public  var underlyingXcodeprojectParent: FolderProtocol!
-
-
-  // MARK: - <xcodeprojectUrl> - parameters
-
-  public var xcodeprojectUrlThrowableError: Error?
-  public var xcodeprojectUrlCallsCount = 0
-  public var xcodeprojectUrlCalled: Bool {
-    return xcodeprojectUrlCallsCount > 0
-  }
-  public var xcodeprojectUrlReturnValue: FolderProtocol?
-
-  // MARK: - <xcodeprojectUrl> - closure mocks
-
-  public var xcodeprojectUrlClosure: (() throws -> FolderProtocol)? = nil
-
-
-
-  // MARK: - <xcodeprojectUrl> - method mocked
-
-  open func xcodeprojectUrl() throws -> FolderProtocol {
-
-
-      // <xcodeprojectUrl> - Throwable method implementation
-
-    if let error = xcodeprojectUrlThrowableError {
-        throw error
-    }
-
-      xcodeprojectUrlCallsCount += 1
-
-      // <xcodeprojectUrl> - Return Value mock implementation
-
-      guard let closureReturn = xcodeprojectUrlClosure else {
-          guard let returnValue = xcodeprojectUrlReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    xcodeprojectUrl
-                    but this case(s) is(are) not implemented in
-                    HighwayBundleProtocol for method xcodeprojectUrlClosure.
-                """
-              let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
-          }
-          return returnValue
-      }
-
-      return try closureReturn()
-  }
-
-  // MARK: - <xcconfigFile> - parameters
-
-  public var xcconfigFileThrowableError: Error?
-  public var xcconfigFileCallsCount = 0
-  public var xcconfigFileCalled: Bool {
-    return xcconfigFileCallsCount > 0
-  }
-  public var xcconfigFileReturnValue: FileProtocol?
-
-  // MARK: - <xcconfigFile> - closure mocks
-
-  public var xcconfigFileClosure: (() throws -> FileProtocol)? = nil
-
-
-
-  // MARK: - <xcconfigFile> - method mocked
-
-  open func xcconfigFile() throws -> FileProtocol {
-
-
-      // <xcconfigFile> - Throwable method implementation
-
-    if let error = xcconfigFileThrowableError {
-        throw error
-    }
-
-      xcconfigFileCallsCount += 1
-
-      // <xcconfigFile> - Return Value mock implementation
-
-      guard let closureReturn = xcconfigFileClosure else {
-          guard let returnValue = xcconfigFileReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    xcconfigFile
-                    but this case(s) is(are) not implemented in
-                    HighwayBundleProtocol for method xcconfigFileClosure.
-                """
-              let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
-          }
-          return returnValue
-      }
-
-      return try closureReturn()
-  }
-
-  // MARK: - <gitignore> - parameters
-
-  public var gitignoreThrowableError: Error?
-  public var gitignoreCallsCount = 0
-  public var gitignoreCalled: Bool {
-    return gitignoreCallsCount > 0
-  }
-  public var gitignoreReturnValue: FileProtocol?
-
-  // MARK: - <gitignore> - closure mocks
-
-  public var gitignoreClosure: (() throws -> FileProtocol)? = nil
-
-
-
-  // MARK: - <gitignore> - method mocked
-
-  open func gitignore() throws -> FileProtocol {
-
-
-      // <gitignore> - Throwable method implementation
-
-    if let error = gitignoreThrowableError {
-        throw error
-    }
-
-      gitignoreCallsCount += 1
-
-      // <gitignore> - Return Value mock implementation
-
-      guard let closureReturn = gitignoreClosure else {
-          guard let returnValue = gitignoreReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    gitignore
-                    but this case(s) is(are) not implemented in
-                    HighwayBundleProtocol for method gitignoreClosure.
-                """
-              let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
-          }
-          return returnValue
-      }
-
-      return try closureReturn()
-  }
-
-  // MARK: - <mainSwiftFile> - parameters
-
-  public var mainSwiftFileThrowableError: Error?
-  public var mainSwiftFileCallsCount = 0
-  public var mainSwiftFileCalled: Bool {
-    return mainSwiftFileCallsCount > 0
-  }
-  public var mainSwiftFileReturnValue: FileProtocol?
-
-  // MARK: - <mainSwiftFile> - closure mocks
-
-  public var mainSwiftFileClosure: (() throws -> FileProtocol)? = nil
-
-
-
-  // MARK: - <mainSwiftFile> - method mocked
-
-  open func mainSwiftFile() throws -> FileProtocol {
-
-
-      // <mainSwiftFile> - Throwable method implementation
-
-    if let error = mainSwiftFileThrowableError {
-        throw error
-    }
-
-      mainSwiftFileCallsCount += 1
-
-      // <mainSwiftFile> - Return Value mock implementation
-
-      guard let closureReturn = mainSwiftFileClosure else {
-          guard let returnValue = mainSwiftFileReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    mainSwiftFile
-                    but this case(s) is(are) not implemented in
-                    HighwayBundleProtocol for method mainSwiftFileClosure.
-                """
-              let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
-          }
-          return returnValue
-      }
-
-      return try closureReturn()
-  }
-
-  // MARK: - <package> - parameters
-
-  public var packageThrowableError: Error?
-  public var packageCallsCount = 0
-  public var packageCalled: Bool {
-    return packageCallsCount > 0
-  }
-  public var packageReturnValue: FileProtocol?
-
-  // MARK: - <package> - closure mocks
-
-  public var packageClosure: (() throws -> FileProtocol)? = nil
-
-
-
-  // MARK: - <package> - method mocked
-
-  open func package() throws -> FileProtocol {
-
-
-      // <package> - Throwable method implementation
-
-    if let error = packageThrowableError {
-        throw error
-    }
-
-      packageCallsCount += 1
-
-      // <package> - Return Value mock implementation
-
-      guard let closureReturn = packageClosure else {
-          guard let returnValue = packageReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    package
-                    but this case(s) is(are) not implemented in
-                    HighwayBundleProtocol for method packageClosure.
-                """
-              let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
-          }
-          return returnValue
-      }
-
-      return try closureReturn()
-  }
-
-  // MARK: - <pinsFileUrl> - parameters
-
-  public var pinsFileUrlThrowableError: Error?
-  public var pinsFileUrlCallsCount = 0
-  public var pinsFileUrlCalled: Bool {
-    return pinsFileUrlCallsCount > 0
-  }
-  public var pinsFileUrlReturnValue: FileProtocol?
-
-  // MARK: - <pinsFileUrl> - closure mocks
-
-  public var pinsFileUrlClosure: (() throws -> FileProtocol)? = nil
-
-
-
-  // MARK: - <pinsFileUrl> - method mocked
-
-  open func pinsFileUrl() throws -> FileProtocol {
-
-
-      // <pinsFileUrl> - Throwable method implementation
-
-    if let error = pinsFileUrlThrowableError {
-        throw error
-    }
-
-      pinsFileUrlCallsCount += 1
-
-      // <pinsFileUrl> - Return Value mock implementation
-
-      guard let closureReturn = pinsFileUrlClosure else {
-          guard let returnValue = pinsFileUrlReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    pinsFileUrl
-                    but this case(s) is(are) not implemented in
-                    HighwayBundleProtocol for method pinsFileUrlClosure.
-                """
-              let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
-          }
-          return returnValue
-      }
-
-      return try closureReturn()
-  }
-
-  // MARK: - <buildDirectory> - parameters
-
-  public var buildDirectoryThrowableError: Error?
-  public var buildDirectoryCallsCount = 0
-  public var buildDirectoryCalled: Bool {
-    return buildDirectoryCallsCount > 0
-  }
-  public var buildDirectoryReturnValue: FolderProtocol?
-
-  // MARK: - <buildDirectory> - closure mocks
-
-  public var buildDirectoryClosure: (() throws -> FolderProtocol)? = nil
-
-
-
-  // MARK: - <buildDirectory> - method mocked
-
-  open func buildDirectory() throws -> FolderProtocol {
-
-
-      // <buildDirectory> - Throwable method implementation
-
-    if let error = buildDirectoryThrowableError {
-        throw error
-    }
-
-      buildDirectoryCallsCount += 1
-
-      // <buildDirectory> - Return Value mock implementation
-
-      guard let closureReturn = buildDirectoryClosure else {
-          guard let returnValue = buildDirectoryReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    buildDirectory
-                    but this case(s) is(are) not implemented in
-                    HighwayBundleProtocol for method buildDirectoryClosure.
-                """
-              let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
-          }
-          return returnValue
-      }
-
-      return try closureReturn()
-  }
-
-  // MARK: - <clean> - parameters
-
-  public var cleanThrowableError: Error?
-  public var cleanCallsCount = 0
-  public var cleanCalled: Bool {
-    return cleanCallsCount > 0
-  }
-  public var cleanReturnValue: Bool?
-
-  // MARK: - <clean> - closure mocks
-
-  public var cleanClosure: (() throws -> Bool)? = nil
-
-
-
-  // MARK: - <clean> - method mocked
-
-  open func clean() throws -> Bool {
-
-
-      // <clean> - Throwable method implementation
-
-    if let error = cleanThrowableError {
-        throw error
-    }
-
-      cleanCallsCount += 1
-
-      // <clean> - Return Value mock implementation
-
-      guard let closureReturn = cleanClosure else {
-          guard let returnValue = cleanReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    clean
-                    but this case(s) is(are) not implemented in
-                    HighwayBundleProtocol for method cleanClosure.
-                """
-              let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
-          }
-          return returnValue
-      }
-
-      return try closureReturn()
-  }
-
-  // MARK: - <executableUrl> - parameters
-
-  public var executableUrlSwiftBinUrlThrowableError: Error?
-  public var executableUrlSwiftBinUrlCallsCount = 0
-  public var executableUrlSwiftBinUrlCalled: Bool {
-    return executableUrlSwiftBinUrlCallsCount > 0
-  }
-  public var executableUrlSwiftBinUrlReceivedSwiftBinUrl: FolderProtocol?
-  public var executableUrlSwiftBinUrlReturnValue: FileProtocol?
-
-  // MARK: - <executableUrl> - closure mocks
-
-  public var executableUrlSwiftBinUrlClosure: ((FolderProtocol) throws -> FileProtocol)? = nil
-
-
-
-  // MARK: - <executableUrl> - method mocked
-
-  open func executableUrl(swiftBinUrl: FolderProtocol) throws -> FileProtocol {
-
-
-      // <executableUrl> - Throwable method implementation
-
-    if let error = executableUrlSwiftBinUrlThrowableError {
-        throw error
-    }
-
-      executableUrlSwiftBinUrlCallsCount += 1
-      executableUrlSwiftBinUrlReceivedSwiftBinUrl = swiftBinUrl
-
-      // <executableUrl> - Return Value mock implementation
-
-      guard let closureReturn = executableUrlSwiftBinUrlClosure else {
-          guard let returnValue = executableUrlSwiftBinUrlReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    executableUrlSwiftBinUrl
-                    but this case(s) is(are) not implemented in
-                    HighwayBundleProtocol for method executableUrlSwiftBinUrlClosure.
-                """
-              let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
-          }
-          return returnValue
-      }
-
-      return try closureReturn(swiftBinUrl)
-  }
-}
-
-
-// MARK: - HomeBundleProtocolMock
-
-open class HomeBundleProtocolMock: HomeBundleProtocol {
-
-    public init() {}
-
-  public  var url: FolderProtocol {
-      get { return underlyingUrl }
-      set(value) { underlyingUrl = value }
-  }
-  public  var underlyingUrl: FolderProtocol!
-  public  var fileSystem: FileSystemProtocol {
-      get { return underlyingFileSystem }
-      set(value) { underlyingFileSystem = value }
-  }
-  public  var underlyingFileSystem: FileSystemProtocol!
-  public  var configuration: HomeBundle.Configuration {
-      get { return underlyingConfiguration }
-      set(value) { underlyingConfiguration = value }
-  }
-  public  var underlyingConfiguration: HomeBundle.Configuration!
-  public  var localCloneUrl: FolderProtocol {
-      get { return underlyingLocalCloneUrl }
-      set(value) { underlyingLocalCloneUrl = value }
-  }
-  public  var underlyingLocalCloneUrl: FolderProtocol!
-
-
-  // MARK: - <missingComponents> - parameters
-
-  public var missingComponentsCallsCount = 0
-  public var missingComponentsCalled: Bool {
-    return missingComponentsCallsCount > 0
-  }
-  public var missingComponentsReturnValue: Set<HomeBundle.Component>?
-
-  // MARK: - <missingComponents> - closure mocks
-
-  public var missingComponentsClosure: (() -> Set<HomeBundle.Component>)? = nil
-
-
-
-  // MARK: - <missingComponents> - method mocked
-
-  open func missingComponents() -> Set<HomeBundle.Component> {
-
-      missingComponentsCallsCount += 1
-
-      // <missingComponents> - Return Value mock implementation
-
-      guard let closureReturn = missingComponentsClosure else {
-          guard let returnValue = missingComponentsReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    missingComponents
-                    but this case(s) is(are) not implemented in
-                    HomeBundleProtocol for method missingComponentsClosure.
-                """
-              let error = SourceryMockError.implementErrorCaseFor(message)
-              os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
-
-              return missingComponentsReturnValue!
-          }
-          return returnValue
-      }
-
-      return closureReturn()
-  }
-}
-
-
-// MARK: - HomeBundleUpdaterProtocolMock
-
-open class HomeBundleUpdaterProtocolMock: HomeBundleUpdaterProtocol {
-
-    public init() {}
-
-  public  var homeBundle: HomeBundleProtocol {
-      get { return underlyingHomeBundle }
-      set(value) { underlyingHomeBundle = value }
-  }
-  public  var underlyingHomeBundle: HomeBundleProtocol!
-  public  var context: ContextProtocol {
-      get { return underlyingContext }
-      set(value) { underlyingContext = value }
-  }
-  public  var underlyingContext: ContextProtocol!
-  public  var git: GitToolProtocol {
-      get { return underlyingGit }
-      set(value) { underlyingGit = value }
-  }
-  public  var underlyingGit: GitToolProtocol!
-
-
-  // MARK: - <update> - parameters
-
-  public var updateThrowableError: Error?
-  public var updateCallsCount = 0
-  public var updateCalled: Bool {
-    return updateCallsCount > 0
-  }
-
-  // MARK: - <update> - closure mocks
-
-  public var updateClosure: (() throws -> Void)? = nil
-
-
-
-  // MARK: - <update> - method mocked
-
-  open func update() throws {
-
-
-      // <update> - Throwable method implementation
-
-    if let error = updateThrowableError {
-        throw error
-    }
-
-      updateCallsCount += 1
-
-      // <update> - Void return mock implementation
-
-      try updateClosure?()
-
-  }
-}
-
-
 // MARK: - KeychainProtocolMock
 
 open class KeychainProtocolMock: KeychainProtocol {
@@ -1641,71 +1012,239 @@ open class KeychainProtocolMock: KeychainProtocol {
 }
 
 
-// MARK: - SelfUpdaterProtocolMock
+// MARK: - SignPostProtocolMock
 
-open class SelfUpdaterProtocolMock: SelfUpdaterProtocol {
-
-    public init() {}
-
-  public  var homeBundle: HomeBundleProtocol {
-      get { return underlyingHomeBundle }
-      set(value) { underlyingHomeBundle = value }
-  }
-  public  var underlyingHomeBundle: HomeBundleProtocol!
-  public  var context: ContextProtocol {
-      get { return underlyingContext }
-      set(value) { underlyingContext = value }
-  }
-  public  var underlyingContext: ContextProtocol!
-  public  var git: GitTool {
-      get { return underlyingGit }
-      set(value) { underlyingGit = value }
-  }
-  public  var underlyingGit: GitTool!
-
-
-  // MARK: - <update> - parameters
-
-  public var updateThrowableError: Error?
-  public var updateCallsCount = 0
-  public var updateCalled: Bool {
-    return updateCallsCount > 0
-  }
-
-  // MARK: - <update> - closure mocks
-
-  public var updateClosure: (() throws -> Void)? = nil
-
-
-
-  // MARK: - <update> - method mocked
-
-  open func update() throws {
-
-
-      // <update> - Throwable method implementation
-
-    if let error = updateThrowableError {
-        throw error
-    }
-
-      updateCallsCount += 1
-
-      // <update> - Void return mock implementation
-
-      try updateClosure?()
-
-  }
-}
-
-
-// MARK: - SignpostProtocolMock
-
-open class SignpostProtocolMock: SignpostProtocol {
+open class SignPostProtocolMock: SignPostProtocol {
 
     public init() {}
 
+  public static var shared: SignPost {
+      get { return underlyingShared }
+      set(value) { underlyingShared = value }
+  }
+  public static var underlyingShared: SignPost!
+  public  var verbose: Bool {
+      get { return underlyingVerbose }
+      set(value) { underlyingVerbose = value }
+  }
+  public  var underlyingVerbose: Bool = false
 
+
+  // MARK: - <write> - parameters
+
+  public var writeCallsCount = 0
+  public var writeCalled: Bool {
+    return writeCallsCount > 0
+  }
+  public var writeReceivedPrinter: Printer?
+
+  // MARK: - <write> - closure mocks
+
+  public var writeClosure: ((Printer) -> Void)? = nil
+
+
+
+  // MARK: - <write> - method mocked
+
+  open func write(_ printer: Printer) {
+
+      writeCallsCount += 1
+      writeReceivedPrinter = printer
+
+      // <write> - Void return mock implementation
+
+      writeClosure?(printer)
+
+  }
+
+  // MARK: - <write> - parameters
+
+  public var writeCallsCount = 0
+  public var writeCalled: Bool {
+    return writeCallsCount > 0
+  }
+  public var writeReceivedPrintable: Printable?
+
+  // MARK: - <write> - closure mocks
+
+  public var writeClosure: ((Printable) -> Void)? = nil
+
+
+
+  // MARK: - <write> - method mocked
+
+  open func write(_ printable: Printable) {
+
+      writeCallsCount += 1
+      writeReceivedPrintable = printable
+
+      // <write> - Void return mock implementation
+
+      writeClosure?(printable)
+
+  }
+
+  // MARK: - <error> - parameters
+
+  public var errorCallsCount = 0
+  public var errorCalled: Bool {
+    return errorCallsCount > 0
+  }
+  public var errorReceivedText: String?
+
+  // MARK: - <error> - closure mocks
+
+  public var errorClosure: ((String) -> Void)? = nil
+
+
+
+  // MARK: - <error> - method mocked
+
+  open func error(_ text: String) {
+
+      errorCallsCount += 1
+      errorReceivedText = text
+
+      // <error> - Void return mock implementation
+
+      errorClosure?(text)
+
+  }
+
+  // MARK: - <success> - parameters
+
+  public var successCallsCount = 0
+  public var successCalled: Bool {
+    return successCallsCount > 0
+  }
+  public var successReceivedText: String?
+
+  // MARK: - <success> - closure mocks
+
+  public var successClosure: ((String) -> Void)? = nil
+
+
+
+  // MARK: - <success> - method mocked
+
+  open func success(_ text: String) {
+
+      successCallsCount += 1
+      successReceivedText = text
+
+      // <success> - Void return mock implementation
+
+      successClosure?(text)
+
+  }
+
+  // MARK: - <message> - parameters
+
+  public var messageCallsCount = 0
+  public var messageCalled: Bool {
+    return messageCallsCount > 0
+  }
+  public var messageReceivedText: String?
+
+  // MARK: - <message> - closure mocks
+
+  public var messageClosure: ((String) -> Void)? = nil
+
+
+
+  // MARK: - <message> - method mocked
+
+  open func message(_ text: String) {
+
+      messageCallsCount += 1
+      messageReceivedText = text
+
+      // <message> - Void return mock implementation
+
+      messageClosure?(text)
+
+  }
+
+  // MARK: - <verbose> - parameters
+
+  public var verboseCallsCount = 0
+  public var verboseCalled: Bool {
+    return verboseCallsCount > 0
+  }
+  public var verboseReceivedText: String?
+
+  // MARK: - <verbose> - closure mocks
+
+  public var verboseClosure: ((String) -> Void)? = nil
+
+
+
+  // MARK: - <verbose> - method mocked
+
+  open func verbose(_ text: String) {
+
+      verboseCallsCount += 1
+      verboseReceivedText = text
+
+      // <verbose> - Void return mock implementation
+
+      verboseClosure?(text)
+
+  }
+
+  // MARK: - <print> - parameters
+
+  public var printCallsCount = 0
+  public var printCalled: Bool {
+    return printCallsCount > 0
+  }
+  public var printReceivedPrintable: Printable?
+
+  // MARK: - <print> - closure mocks
+
+  public var printClosure: ((Printable) -> Void)? = nil
+
+
+
+  // MARK: - <print> - method mocked
+
+  open func print(_ printable: Printable) {
+
+      printCallsCount += 1
+      printReceivedPrintable = printable
+
+      // <print> - Void return mock implementation
+
+      printClosure?(printable)
+
+  }
+
+  // MARK: - <verbosePrint> - parameters
+
+  public var verbosePrintCallsCount = 0
+  public var verbosePrintCalled: Bool {
+    return verbosePrintCallsCount > 0
+  }
+  public var verbosePrintReceivedPrintable: Printable?
+
+  // MARK: - <verbosePrint> - closure mocks
+
+  public var verbosePrintClosure: ((Printable) -> Void)? = nil
+
+
+
+  // MARK: - <verbosePrint> - method mocked
+
+  open func verbosePrint(_ printable: Printable) {
+
+      verbosePrintCallsCount += 1
+      verbosePrintReceivedPrintable = printable
+
+      // <verbosePrint> - Void return mock implementation
+
+      verbosePrintClosure?(printable)
+
+  }
 }
 
 
@@ -1793,6 +1332,56 @@ open class SourceryProtocolMock: SourceryProtocol {
       }
 
       return try closureReturn()
+  }
+}
+
+
+// MARK: - SystemExecutorProtocolMock
+
+open class SystemExecutorProtocolMock: SystemExecutorProtocol {
+
+    public init() {}
+
+  public  var signPost: SignPostProtocol {
+      get { return underlyingSignPost }
+      set(value) { underlyingSignPost = value }
+  }
+  public  var underlyingSignPost: SignPostProtocol!
+
+
+  // MARK: - <launch> - parameters
+
+  public var launchTaskWaitThrowableError: Error?
+  public var launchTaskWaitCallsCount = 0
+  public var launchTaskWaitCalled: Bool {
+    return launchTaskWaitCallsCount > 0
+  }
+  public var launchTaskWaitReceivedArguments: (task: (Task), wait: (Bool))?
+
+  // MARK: - <launch> - closure mocks
+
+  public var launchTaskWaitClosure: ((Task, Bool) throws -> Void)? = nil
+
+
+
+  // MARK: - <launch> - method mocked
+
+  open func launch(task: Task, wait: Bool) throws {
+
+
+      // <launch> - Throwable method implementation
+
+    if let error = launchTaskWaitThrowableError {
+        throw error
+    }
+
+      launchTaskWaitCallsCount += 1
+      launchTaskWaitReceivedArguments = (task: task, wait: wait)
+
+      // <launch> - Void return mock implementation
+
+      try launchTaskWaitClosure?(task, wait)
+
   }
 }
 
@@ -1950,91 +1539,6 @@ open class SystemProtocolMock: SystemProtocol {
       }
 
       return try closureReturn(task, wait)
-  }
-}
-
-
-// MARK: - TaskExecutorProtocolMock
-
-open class TaskExecutorProtocolMock: TaskExecutorProtocol {
-
-    public init() {}
-
-  public  var ui: UIProtocol {
-      get { return underlyingUi }
-      set(value) { underlyingUi = value }
-  }
-  public  var underlyingUi: UIProtocol!
-
-
-  // MARK: - <execute> - parameters
-
-  public var executeTaskThrowableError: Error?
-  public var executeTaskCallsCount = 0
-  public var executeTaskCalled: Bool {
-    return executeTaskCallsCount > 0
-  }
-  public var executeTaskReceivedTask: Task?
-
-  // MARK: - <execute> - closure mocks
-
-  public var executeTaskClosure: ((Task) throws -> Void)? = nil
-
-
-
-  // MARK: - <execute> - method mocked
-
-  open func execute(task: Task) throws {
-
-
-      // <execute> - Throwable method implementation
-
-    if let error = executeTaskThrowableError {
-        throw error
-    }
-
-      executeTaskCallsCount += 1
-      executeTaskReceivedTask = task
-
-      // <execute> - Void return mock implementation
-
-      try executeTaskClosure?(task)
-
-  }
-
-  // MARK: - <launch> - parameters
-
-  public var launchTaskWaitThrowableError: Error?
-  public var launchTaskWaitCallsCount = 0
-  public var launchTaskWaitCalled: Bool {
-    return launchTaskWaitCallsCount > 0
-  }
-  public var launchTaskWaitReceivedArguments: (task: (Task), wait: (Bool))?
-
-  // MARK: - <launch> - closure mocks
-
-  public var launchTaskWaitClosure: ((Task, Bool) throws -> Void)? = nil
-
-
-
-  // MARK: - <launch> - method mocked
-
-  open func launch(task: Task, wait: Bool) throws {
-
-
-      // <launch> - Throwable method implementation
-
-    if let error = launchTaskWaitThrowableError {
-        throw error
-    }
-
-      launchTaskWaitCallsCount += 1
-      launchTaskWaitReceivedArguments = (task: task, wait: wait)
-
-      // <launch> - Void return mock implementation
-
-      try launchTaskWaitClosure?(task, wait)
-
   }
 }
 

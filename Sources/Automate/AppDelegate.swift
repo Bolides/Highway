@@ -9,11 +9,12 @@ import Cocoa
 import os
 import Arguments
 import Terminal
+import SignPost
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-    lazy var signPost: SignpostProtocol = Signpost.shared
+    lazy var signPost: SignPostProtocol = SignPost.shared
 
     // MARK: - Application LifeCycle
     
@@ -22,7 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         do {
             try determineIfRunFromCommandLine()
         } catch ArgumentsWorker.Error.noWorkerCommandFoundInArguments {
-            signPost.log("💁🏻‍♂️ Starting without arguments.\nYou can provice arguments prefixed with * \(Worker.commandPrefix) and possible workers\n\(Worker.allCases())")
+            signPost.message("💁🏻‍♂️ Starting without arguments.\nYou can provice arguments prefixed with * \(Worker.commandPrefix) and possible workers\n\(Worker.allCases())")
         } catch {
             signPost.error("❌ running command caused error:\n\(error)\n")
             NSApplication.shared.terminate(self)
@@ -37,7 +38,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // 1. Check if run from command line
         
         let argumentsWorker = try ArgumentsWorker()
-        signPost.log("💁🏻‍♂️ loaded with arguments prefixed with <🤖command:>\n \(argumentsWorker.workers.map { $0.rawValue }.joined(separator: "\n"))\n")
+        signPost.message("💁🏻‍♂️ loaded with arguments prefixed with <🤖command:>\n \(argumentsWorker.workers.map { $0.rawValue }.joined(separator: "\n"))\n")
 
         // 3. Find worker for the task
         
@@ -48,7 +49,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             case .sourcery:
                let worker = try AutomateSourceryWorker()
                _ = try worker.attempt()
-               signPost.log("💁🏻‍♂️ Sourcery finished ✅.")
+               signPost.success("💁🏻‍♂️ Sourcery finished ✅.")
             }
             
         }

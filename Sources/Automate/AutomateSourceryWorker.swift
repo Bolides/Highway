@@ -11,6 +11,7 @@ import SourceryWorker
 import os
 import ZFile
 import Terminal
+import SignPost
 
 protocol AutomateSourceryWorkerProtocol: AutoMockable {
     /// sourcery:inline:AutomateSourceryWorker.AutoGenerateProtocol
@@ -22,10 +23,9 @@ protocol AutomateSourceryWorkerProtocol: AutoMockable {
 struct AutomateSourceryWorker: AutomateSourceryWorkerProtocol, AutoGenerateProtocol {
     
     private let worker: SourceryWorkerProtocol
-    private let signpost: SignpostProtocol
+    private let signpost: SignPostProtocol
    
-    
-    init(worker: SourceryWorkerProtocol? = nil, signpost: SignpostProtocol = Signpost.shared) throws {
+    init(worker: SourceryWorkerProtocol? = nil, signpost: SignPostProtocol = SignPost.shared) throws {
         self.signpost = signpost
         
         guard worker == nil else {
@@ -34,7 +34,7 @@ struct AutomateSourceryWorker: AutomateSourceryWorkerProtocol, AutoGenerateProto
         }
         
         let currentFolder = FileSystem().currentFolder
-        signpost.log("💁🏻‍♂️ Attempting Sourcery in folder\n \(currentFolder)\n")
+        signpost.message("💁🏻‍♂️ Attempting Sourcery in folder\n \(currentFolder)\n")
         
         var sourcery: SourceryProtocol!
         
@@ -42,11 +42,11 @@ struct AutomateSourceryWorker: AutomateSourceryWorkerProtocol, AutoGenerateProto
             let projectFolder = try currentFolder.parentFolder().parentFolder()
             sourcery = try AutomateSourceryWorker.sourceryFromFolders(projectFolder, signpost,  try projectFolder.subfolder(named: "Carthage"))
         } catch {
-            signpost.log("💁🏻‍♂️ Not running in .build.nosync/Debug folder, trying to run from current folder.")
+            signpost.message("💁🏻‍♂️ Not running in .build.nosync/Debug folder, trying to run from current folder.")
             sourcery = try AutomateSourceryWorker.sourceryFromFolders(currentFolder, signpost,  try currentFolder.subfolder(named: "Carthage"))
         }
         
-        signpost.log("""
+        signpost.message("""
         🧙‍♂️ Sourcery will run from config file
         > \(sourcery.sourceryYMLFile.path)
             
@@ -67,7 +67,7 @@ struct AutomateSourceryWorker: AutomateSourceryWorkerProtocol, AutoGenerateProto
     
     // MARK: - PRIVATE
     
-    private static func sourceryFromFolders(_ projectFolder: FolderProtocol, _ signpost: SignpostProtocol, _ carthageFolder: FolderProtocol) throws -> Sourcery {
+    private static func sourceryFromFolders(_ projectFolder: FolderProtocol, _ signpost: SignPostProtocol, _ carthageFolder: FolderProtocol) throws -> Sourcery {
         let sourcesFolders = try projectFolder.subfolder(named: "Sources")
         
         return try Sourcery(

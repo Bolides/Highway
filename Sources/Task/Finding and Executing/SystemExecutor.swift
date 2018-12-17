@@ -1,27 +1,43 @@
 import Foundation
 import Arguments
+import SourceryAutoProtocols
+import SignPost
 
-public final class SystemExecutor: TaskExecutorProtocol {
-    public var ui: UIProtocol
+public protocol SystemExecutorProtocol: AutoMockable {
+    /// sourcery:inline:SystemExecutor.AutoGenerateProtocol
+    var signPost: SignPostProtocol { get set }
+
+    func launch(task: Task, wait: Bool) throws 
+    /// sourcery:end
+}
+
+public extension SystemExecutorProtocol {
+    public func execute(task: Task) throws {
+        try launch(task: task, wait: true)
+    }
+}
+
+public final class SystemExecutor: SystemExecutorProtocol, AutoGenerateProtocol {
+    public var signPost: SignPostProtocol
     
     // MARK: - Init
-    public init(ui: UIProtocol) {
-        self.ui = ui
+    public init(signPost: SignPostProtocol = SignPost.shared) {
+        self.signPost = signPost
     }
    
     // MARK: - Working with the Executor
-    public func launch(task: Task, wait: Bool) {
+    public func launch(task: Task, wait: Bool) throws {
         let process = task.toProcess
-        ui.verbose(task.description)
+        signPost.verbose(task.description)
         task.state = .executing
         process.launch()
         if wait {
             process.waitUntilExit()
         }
         if task.successfullyFinished == false {
-            ui.error(task.state.description)
+            signPost.error(task.state.description)
         } else {
-            ui.verbose(task.state.description)
+            signPost.verbose(task.state.description)
         }
     }
 }

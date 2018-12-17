@@ -8,15 +8,16 @@
 import Cocoa
 import os
 import Terminal
+import SignPost
 
 class ViewController: NSViewController {
 
-    lazy var signPost: SignpostProtocol = Signpost.shared
+    lazy var signPost: SignPostProtocol = SignPost.shared
     
     @IBAction func runSourcery(_ sender: NSButton) {
         do {
             _ = try AutomateSourceryWorker().attempt()
-            signPost.log("💁🏻‍♂️ Sourcery finished ✅.")
+            signPost.success("💁🏻‍♂️ Sourcery finished ✅.")
         } catch {
             signPost.error( "❌\n \(error)\n")
         }

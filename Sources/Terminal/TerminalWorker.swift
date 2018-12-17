@@ -2,6 +2,7 @@ import Foundation
 import os
 import SourceryAutoProtocols
 import ZFile
+import SignPost
 
 // MARK: - TerminalWorker
 
@@ -12,9 +13,9 @@ public protocol TerminalWorkerProtocol: AutoMockable {
 
 public struct TerminalWorker: TerminalWorkerProtocol {
     
-    public let signPost: SignpostProtocol
+    public let signPost: SignPostProtocol
     
-    public init(signPost: SignpostProtocol = Signpost.shared) {
+    public init(signPost: SignPostProtocol = SignPost.shared) {
         self.signPost = signPost
     }
     

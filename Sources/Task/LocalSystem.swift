@@ -2,25 +2,25 @@ import Foundation
 import ZFile
 import Result
 import SourceryAutoProtocols
+import SignPost
 
 public final class LocalSystem: SystemProtocol, AutoGenerateProtocol {
     
-    
     // MARK: - Properties
-    private let executor: TaskExecutorProtocol
+    private let executor: SystemExecutorProtocol
     private let executableProvider: ExecutableProviderProtocol
     private let fileSystem: FileSystemProtocol
 
     // MARK: - Init
-    public init(executor: TaskExecutorProtocol, executableProvider: ExecutableProviderProtocol, fileSystem: FileSystemProtocol) {
+    public init(executor: SystemExecutorProtocol, executableProvider: ExecutableProviderProtocol, fileSystem: FileSystemProtocol) {
         self.executor = executor
         self.executableProvider = executableProvider
         self.fileSystem = fileSystem
     }
 
     /// Local System
-    public init(executableProvider: SystemExecutableProvider? = nil, terminalUI: UIProtocol) throws {
-        self.executor = SystemExecutor(ui: terminalUI)
+    public init(executableProvider: SystemExecutableProvider? = nil, signPost: SignPostProtocol) throws {
+        self.executor = SystemExecutor(signPost: signPost)
         self.executableProvider = (executableProvider == nil) ? try SystemExecutableProvider() : executableProvider!
         self.fileSystem = FileSystem()
     }
