@@ -135,8 +135,40 @@ SHARED_PRECOMPS_DIR
 
 5. Try running automate from command line
 
-```bash
-cd <Project root>
-.build.nosync/Debug/Automate.app/Contents/MacOS/Automate 🤖command:sourcery
-```
-> This should output sourcery succes and quit the app. 
+	5.1 Before this can work all dependencies should be embedded in the application. Go to Automate target and verify that the following list is embedded
+	*List of frameworks to embed*
+	```
+	/* Begin PBXCopyFilesBuildPhase section */
+			FDEC120121C6869C00CB7DAD /* Embed Frameworks */ = {
+				isa = PBXCopyFilesBuildPhase;
+				buildActionMask = 2147483647;
+				dstPath = "";
+				dstSubfolderSpec = 10;
+				files = (
+					FDEC121121C687E600CB7DAD /* Errors.framework in Embed Frameworks */,
+					FD11267C21C689AF0072607D /* Deliver.framework in Embed Frameworks */,
+					FDEC120521C686B700CB7DAD /* SourceryWorker.framework in Embed Frameworks */,
+					FDEC121D21C688EE00CB7DAD /* Url.framework in Embed Frameworks */,
+					FDEC120721C686E200CB7DAD /* SourceryAutoProtocols.framework in Embed Frameworks */,
+					FDEC121921C688D600CB7DAD /* Result.framework in Embed Frameworks */,
+					FDEC120921C6871900CB7DAD /* Terminal.framework in Embed Frameworks */,
+					FD11267821C689AF0072607D /* Keychain.framework in Embed Frameworks */,
+					FDEC120321C686AF00CB7DAD /* Arguments.framework in Embed Frameworks */,
+					FDEC122121C688F900CB7DAD /* XCBuild.framework in Embed Frameworks */,
+					FDEC122521C6890500CB7DAD /* Git.framework in Embed Frameworks */,
+					FD1126E221C77F060072607D /* SignPost.framework in Embed Frameworks */,
+					FDEC121521C688B600CB7DAD /* POSIX.framework in Embed Frameworks */,
+					FDEC120F21C6876B00CB7DAD /* Task.framework in Embed Frameworks */,
+				);
+				name = "Embed Frameworks";
+				runOnlyForDeploymentPostprocessing = 0;
+			};
+	/* End PBXCopyFilesBuildPhase section */
+	```
+	5.2 Run from command Line
+
+	```bash
+	cd <Project root>
+	.build.nosync/Debug/Automate.app/Contents/MacOS/Automate 🤖command:sourcery
+	```
+> This should output sourcery succes and quit the app.
