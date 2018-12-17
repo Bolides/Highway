@@ -12,7 +12,11 @@ public protocol TerminalWorkerProtocol: AutoMockable {
 
 public struct TerminalWorker: TerminalWorkerProtocol {
     
-    public init() {}
+    public let signPost: SignpostProtocol
+    
+    public init(signPost: SignpostProtocol = Signpost.shared) {
+        self.signPost = signPost
+    }
     
     @discardableResult
     public func terminal(task: TerminalTask) throws -> [String] {
@@ -22,22 +26,9 @@ public struct TerminalWorker: TerminalWorkerProtocol {
         processTask.arguments = try task.executable.arguments().all
         try processTask.executable(set: try task.executable.executableFile())
         
-        let message = """
+        let message = "👾  \(task.rawValue): \(processTask.executableFile)\n"
         
-        👾 Terminal is performing task \(task.rawValue) with executable:
-        
-        💁🏻‍♂️ copiable
-        
-        \(processTask.executableFile.name) \(processTask.arguments!.map { "\($0)"}.joined(separator: " "))
-        
-        💁🏻‍♂️ readable executable \(processTask.executableFile.name):
-        
-        \(processTask.arguments!.map { "    • \($0)"}.joined(separator: "\n"))
-        
-        """
-        
-        os_log("%@", type: .info, message)
-        
+        signPost.message(message)
         
         let pipe = Pipe()
         processTask.standardOutput = pipe

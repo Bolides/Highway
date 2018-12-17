@@ -13,21 +13,15 @@ import Terminal
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-    lazy var signPost: HighwaySignpostProtocol = HighwaySignpost.shared
+    lazy var signPost: SignpostProtocol = Signpost.shared
 
-    // MARK: - ERROR
-    
-    enum Error: Swift.Error {
-        case noWorkerCommandFoundInArguments
-    }
-    
-    // MARK: - APPLIATION LIFECYCLE
+    // MARK: - Application LifeCycle
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
         do {
             try determineIfRunFromCommandLine()
-        } catch Error.noWorkerCommandFoundInArguments {
+        } catch ArgumentsWorker.Error.noWorkerCommandFoundInArguments {
             signPost.log("💁🏻‍♂️ Starting without arguments.\nYou can provice arguments prefixed with * \(Worker.commandPrefix) and possible workers\n\(Worker.allCases())")
         } catch {
             signPost.error("❌ running command caused error:\n\(error)\n")
@@ -42,22 +36,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // 1. Check if run from command line
         
-        let workers: [Worker] = CommandLine.arguments
-            .filter { $0.hasPrefix(Worker.commandPrefix) }
-            .map { $0.replacingOccurrences(of: Worker.commandPrefix, with: "")}
-            .compactMap { Worker(rawValue: $0) }
-        
-        guard workers.count > 0 else {
-            throw Error.noWorkerCommandFoundInArguments
-        }
-        
-        signPost.log("💁🏻‍♂️ loaded with arguments prefixed with <🤖command:>\n \(workers.map { $0.rawValue }.joined(separator: "\n"))\n")
+        let argumentsWorker = try ArgumentsWorker()
+        signPost.log("💁🏻‍♂️ loaded with arguments prefixed with <🤖command:>\n \(argumentsWorker.workers.map { $0.rawValue }.joined(separator: "\n"))\n")
 
         // 3. Find worker for the task
         
-        for worker in workers {
+        try argumentsWorker.workers.forEach {
             
-            switch worker {
+            switch $0 {
             // 4. execute the task as if button was pressed
             case .sourcery:
                let worker = try AutomateSourceryWorker()
@@ -66,6 +52,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
             
         }
+        
+        // 5. Terminate After success
+
         NSApplication.shared.terminate(self)
     }
 

@@ -36,7 +36,7 @@ public final class HomeBundleUpdater: AutoMockable, AutoGenerateProtocol {
     
     // MARK: - Command
     public func update() throws {
-        HighwaySignpost.shared.log("Updating highway\(String.elli)")
+        Signpost.shared.log("Updating highway\(String.elli)")
 
         func __currentTag(at url: FolderProtocol) throws -> String {
             return try git.currentTag(at: url)
@@ -52,7 +52,7 @@ public final class HomeBundleUpdater: AutoMockable, AutoGenerateProtocol {
         
         guard task.state.successfullyFinished else {
             let error = "Failed to update highway: \(task.state.debugDescription)"
-            HighwaySignpost.shared.log(error)
+            Signpost.shared.log(error)
             throw error
         }
 
@@ -63,7 +63,7 @@ public final class HomeBundleUpdater: AutoMockable, AutoGenerateProtocol {
             bumpInfo = ""
         }
 
-        HighwaySignpost.shared.log("OK. \n" + bumpInfo)
+        Signpost.shared.log("OK. \n" + bumpInfo)
     }
 }
 

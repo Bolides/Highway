@@ -20,6 +20,8 @@
 		FD11267B21C689AF0072607D /* Deliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Deliver::Product" /* Deliver.framework */; };
 		FD11267C21C689AF0072607D /* Deliver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Deliver::Product" /* Deliver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD11267F21C6924C0072607D /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
+		FD1126C121C771970072607D /* ArgumentsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1126C021C771970072607D /* ArgumentsWorker.swift */; };
+		FD1126C621C7756A0072607D /* SourceryExecutableFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1126C521C7756A0072607D /* SourceryExecutableFile.swift */; };
 		FD326D942109E3C600AE3A98 /* ArchivePlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326D932109E3C600AE3A98 /* ArchivePlist.swift */; };
 		FD326D972109F2B800AE3A98 /* GitTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326D952109F2AC00AE3A98 /* GitTool.swift */; };
 		FD326D9A2109FB8F00AE3A98 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326D982109FB8200AE3A98 /* Configuration.swift */; };
@@ -1991,6 +1993,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FD1126C021C771970072607D /* ArgumentsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentsWorker.swift; sourceTree = "<group>"; };
+		FD1126C521C7756A0072607D /* SourceryExecutableFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryExecutableFile.swift; sourceTree = "<group>"; };
 		FD326D932109E3C600AE3A98 /* ArchivePlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchivePlist.swift; sourceTree = "<group>"; };
 		FD326D952109F2AC00AE3A98 /* GitTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitTool.swift; sourceTree = "<group>"; };
 		FD326D982109FB8200AE3A98 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
@@ -2631,6 +2635,7 @@
 				FDC156DE21C5347C00E04B44 /* Info.plist */,
 				FDC156F421C5355400E04B44 /* Sourcery.swift */,
 				FDC156F221C5355400E04B44 /* SourceryExecutor.swift */,
+				FD1126C521C7756A0072607D /* SourceryExecutableFile.swift */,
 				FDC156DD21C5347C00E04B44 /* SourceryWorker.h */,
 				FDC156F321C5355400E04B44 /* SourceryWorker.swift */,
 			);
@@ -3271,6 +3276,7 @@
 			children = (
 				FDEC11F221C67EAD00CB7DAD /* Worker.swift */,
 				OBJ_84 /* Arguments.swift */,
+				FD1126C021C771970072607D /* ArgumentsWorker.swift */,
 				OBJ_85 /* Option.swift */,
 			);
 			name = Arguments;
@@ -4323,6 +4329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDC156F521C5355400E04B44 /* SourceryExecutor.swift in Sources */,
+				FD1126C621C7756A0072607D /* SourceryExecutableFile.swift in Sources */,
 				FDC156F721C5355400E04B44 /* Sourcery.swift in Sources */,
 				FDC156F621C5355400E04B44 /* SourceryWorker.swift in Sources */,
 			);
@@ -4366,6 +4373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				FD1126C121C771970072607D /* ArgumentsWorker.swift in Sources */,
 				OBJ_269 /* Arguments.swift in Sources */,
 				OBJ_270 /* Option.swift in Sources */,
 				FDEC11F421C67ED700CB7DAD /* Worker.swift in Sources */,

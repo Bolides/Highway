@@ -11,11 +11,12 @@ import Terminal
 
 class ViewController: NSViewController {
 
-    lazy var signPost: HighwaySignpostProtocol = HighwaySignpost.shared
+    lazy var signPost: SignpostProtocol = Signpost.shared
     
     @IBAction func runSourcery(_ sender: NSButton) {
         do {
-            signPost.log("Sourcery ran with output:\n \(try AutomateSourceryWorker().attempt().joined(separator: "\n"))")
+            _ = try AutomateSourceryWorker().attempt()
+            signPost.log("💁🏻‍♂️ Sourcery finished ✅.")
         } catch {
             signPost.error( "❌\n \(error)\n")
         }

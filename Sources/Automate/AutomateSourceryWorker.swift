@@ -22,10 +22,10 @@ protocol AutomateSourceryWorkerProtocol: AutoMockable {
 struct AutomateSourceryWorker: AutomateSourceryWorkerProtocol, AutoGenerateProtocol {
     
     private let worker: SourceryWorkerProtocol
-    private let signpost: HighwaySignpostProtocol
+    private let signpost: SignpostProtocol
    
     
-    init(worker: SourceryWorkerProtocol? = nil, signpost: HighwaySignpostProtocol = HighwaySignpost.shared) throws {
+    init(worker: SourceryWorkerProtocol? = nil, signpost: SignpostProtocol = Signpost.shared) throws {
         self.signpost = signpost
         
         guard worker == nil else {
@@ -67,7 +67,7 @@ struct AutomateSourceryWorker: AutomateSourceryWorkerProtocol, AutoGenerateProto
     
     // MARK: - PRIVATE
     
-    private static func sourceryFromFolders(_ projectFolder: FolderProtocol, _ signpost: HighwaySignpostProtocol, _ carthageFolder: FolderProtocol) throws -> Sourcery {
+    private static func sourceryFromFolders(_ projectFolder: FolderProtocol, _ signpost: SignpostProtocol, _ carthageFolder: FolderProtocol) throws -> Sourcery {
         let sourcesFolders = try projectFolder.subfolder(named: "Sources")
         
         return try Sourcery(

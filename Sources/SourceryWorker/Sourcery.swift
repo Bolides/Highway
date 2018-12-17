@@ -90,10 +90,11 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol {
     // sourcery:skipProtocol
     public func executableFile() throws -> FileProtocol {
         do {
-            return try File(path: "/Applications/Sourcery.app/Contents/MacOS/Sourcery")
+            return try SourceryExecutableFile()
         } catch {
             throw ExecutableNotFoundError(error)
         }
     }
     
 }
+

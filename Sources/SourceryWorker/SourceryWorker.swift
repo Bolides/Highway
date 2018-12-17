@@ -25,16 +25,17 @@ public protocol SourceryWorkerProtocol {
 public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol {
     
     private let sourcery: SourceryProtocol
-
+    private let signPost: SignpostProtocol
     private let terminalWorker: TerminalWorkerProtocol
     
     struct Error: Swift.Error {
         let message: String
     }
     
-    public init(sourcery: SourceryProtocol, terminalWorker: TerminalWorkerProtocol = TerminalWorker()) throws {
+    public init(sourcery: SourceryProtocol, terminalWorker: TerminalWorkerProtocol = TerminalWorker(), signPost: SignpostProtocol = HighwaySignpost.shared) throws {
         self.sourcery = sourcery
         self.terminalWorker = terminalWorker
+        self.signPost = signPost
     }
     
     public func executor() throws -> ArgumentExecutableProtocol {
@@ -48,6 +49,7 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol {
         // Replace /// sourcery:inline: with /// sourcery:inline:
         // Replace /// sourcery:end with /// sourcery:end
         
+        signPost.log("🧙‍♂️ All files in sources folders will be scanned for occurrences of `/// sourcery:` and replaced with `/// sourcery:` to be able generate protocols.")
         // 1. Find all files in sourceFolder
         
         var fileSequences = [FileSystemSequence<File>]()
@@ -71,15 +73,17 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol {
         }
        
         // 3. Run sourcery to generate the protocols
-
+        signPost.log("🧙‍♂️ Generating protocols")
+        
         let output = try terminalWorker.terminal(task: .sourcery(try executor()))
-        os_log("%@", type:.debug, output.joined(separator: "\n"))
+        signPost.verbose("🧙‍♂️ \(output.joined(separator: "\n"))")
 
-        // Replace /// sourcery:inline: with /// sourcery:inline:
-        // Replace /// sourcery:end with /// sourcery:end
+        // Replace // sourcery:inline: with /// sourcery:inline:
+        // Replace // sourcery:end with /// sourcery:end
 
-        // 4. Replace occurances
-
+        // 4. Revert Replace occurances
+        signPost.log("🧙‍♂️ All files in sources folders are reverted to status before generating protocols.")
+        
         try fileSequences.forEach { fileSequence in
 
             try fileSequence.forEach { file in
@@ -94,7 +98,8 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol {
         }
 
         // 5. Run sourcery to generate the mocks
-
+        signPost.log("🧙‍♂️ Generating Mocks for newly generated protocols and refreshing old mocks.")
+        
         return try terminalWorker.terminal(task: .sourcery(try executor()))
     }
     

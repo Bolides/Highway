@@ -1,40 +1,29 @@
 import Foundation
-import Task
 import SourceryAutoProtocols
 
-public protocol HighwaySignpostProtocol: AutoMockable {
+public protocol SignpostProtocol: AutoMockable {
     /// sourcery:inline:HighwaySignpost.AutoGenerateProtocol
-    static var shared: HighwaySignpost { get }
-    var verbose: Bool { get set }
-
-    func log(_ text: String)
-    func write(_ printer: Printer)
-    func write(_ printable: Printable)
-    func error(_ text: String)
-    func success(_ text: String)
-    func message(_ text: String)
-    func verbose(_ text: String)
-    func print(_ printable: Printable)
-    func verbosePrint(_ printable: Printable)
+    
     /// sourcery:end
 }
 
-// Use this class to delivers logs to the user.
-public class HighwaySignpost: HighwaySignpostProtocol, AutoGenerateProtocol {
-    // MARK: - Global
-    public static let shared = HighwaySignpost()
-    
+/// Use this class to delivers messages to the user.
+public class Signpost: SignpostProtocol, AutoGenerateProtocol {
+    public static let shared = Signpost()
+
+    public var verbose = false
+
     // MARK: - Init
     public init() { }
     
-    // MARK: - Properties
+    // MARK: - Private
+    
     private let queue = DispatchQueue(label: "de.christian-kienle.highway.terminal")
     private var promptTemplate = Prompt.normal
     private let stream = FileStream(fd: stdout)
-    public var verbose = false
     
-    public func log(_ text: String) {
-        rawLog("\r" + self.promptTemplate.terminalString + text + "\n")
+    private func log(_ text: String) {
+        rawLog("\n\r" + self.promptTemplate.terminalString + text + "\n")
     }
     private func rawLog(_ text: String) {
         _sync {
@@ -77,14 +66,15 @@ public class HighwaySignpost: HighwaySignpostProtocol, AutoGenerateProtocol {
     }
 }
 
-fileprivate extension HighwaySignpost {
+fileprivate extension Signpost {
     func _withPrompt(_ text: String) -> String {
         return promptTemplate.terminalString + text
     }
 }
 
-extension HighwaySignpost: UIProtocol {
+extension Signpost: UIProtocol {
     
+    // sourcery:"Always printed as error"
     public func error(_ text: String) {
         rawLogNl(_withPrompt(text))
     }
@@ -96,14 +86,17 @@ extension HighwaySignpost: UIProtocol {
         rawLogNl(_withPrompt(text))
     }
     
+    // sourcery:"Prints text only if --verbose is set."
     public func verbose(_ text: String) {
         guard self.verbose else { return }
         rawLogNl(_withPrompt(text))
     }
+    
     public func print(_ printable: Printable) {
         rawLog(printable.printableString(with: .defaultOptions()))
     }
     
+    /// Prints printable only if --verbose is set.
     public func verbosePrint(_ printable: Printable) {
         guard self.verbose else { return }
         rawLog(printable.printableString(with: .defaultOptions()))

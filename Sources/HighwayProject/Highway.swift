@@ -14,12 +14,12 @@ open class Highway<T: HighwayTypeProtocol>: _Highway<T> {
     public let context: ContextProtocol
     public let cwd: FolderProtocol
     public let system: SystemProtocol
-    public let ui: UIProtocol = HighwaySignpost.shared
+    public let ui: UIProtocol = Signpost.shared
     
     public override init(_ highwayType: T.Type) throws  {
         context = try Context()
         cwd = FileSystem().currentFolder
-        system = try LocalSystem(terminalUI: HighwaySignpost.shared)
+        system = try LocalSystem(terminalUI: Signpost.shared)
         
         try super.init(highwayType)
     }

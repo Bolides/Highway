@@ -74,7 +74,7 @@ open class _Highway<T: HighwayTypeProtocol> {
     /// - Parameter error: An error to be passed to the error handler
     private func _reportError(_ error: Error) {
         guard let errorHandler = onError else {
-            HighwaySignpost.shared.log("ERROR: \(error.localizedDescription)")
+            Signpost.shared.log("ERROR: \(error.localizedDescription)")
             return
         }
         errorHandler(error)

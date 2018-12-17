@@ -21,7 +21,7 @@ open class Context: ContextProtocol, AutoGenerateProtocol {
     public init() throws {
         self.fileSystem = FileSystem()
         self.executableProvider = try SystemExecutableProvider()
-        self.executor = SystemExecutor(ui: HighwaySignpost.shared)
+        self.executor = SystemExecutor(ui: Signpost.shared)
     }
     
     // MARK: - Init
