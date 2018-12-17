@@ -8,13 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FD0F7C74218885D500F84604 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Keychain::Product" /* Keychain.framework */; };
-		FD0F7C8F2188870400F84604 /* HWKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HWKit::Product" /* HWKit.framework */; };
-		FD11266821C6899D0072607D /* HighwayProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayProject::Product" /* HighwayProject.framework */; };
-		FD11266921C6899D0072607D /* HighwayProject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayProject::Product" /* HighwayProject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FD11266C21C6899D0072607D /* HighwayCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayCore::Product" /* HighwayCore.framework */; };
-		FD11266D21C6899D0072607D /* HighwayCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayCore::Product" /* HighwayCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FD11267321C689AF0072607D /* HWKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HWKit::Product" /* HWKit.framework */; };
-		FD11267421C689AF0072607D /* HWKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HWKit::Product" /* HWKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD11267721C689AF0072607D /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Keychain::Product" /* Keychain.framework */; };
 		FD11267821C689AF0072607D /* Keychain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Keychain::Product" /* Keychain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD11267B21C689AF0072607D /* Deliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Deliver::Product" /* Deliver.framework */; };
@@ -22,11 +15,28 @@
 		FD11267F21C6924C0072607D /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
 		FD1126C121C771970072607D /* ArgumentsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1126C021C771970072607D /* ArgumentsWorker.swift */; };
 		FD1126C621C7756A0072607D /* SourceryExecutableFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1126C521C7756A0072607D /* SourceryExecutableFile.swift */; };
+		FD1126D521C77F050072607D /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
+		FD1126DC21C77F060072607D /* SignPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1126DB21C77F060072607D /* SignPostTests.swift */; };
+		FD1126DE21C77F060072607D /* SignPost.h in Headers */ = {isa = PBXBuildFile; fileRef = FD1126CE21C77F050072607D /* SignPost.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD1126E121C77F060072607D /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
+		FD1126E221C77F060072607D /* SignPost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD1126E921C77F7E0072607D /* SignPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11EB21C67ACE00CB7DAD /* SignPost.swift */; };
+		FD1126EA21C77F8B0072607D /* Printable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* Printable.swift */; };
+		FD1126EB21C77F8F0072607D /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_113 /* Line.swift */; };
+		FD1126EC21C77F920072607D /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_114 /* List.swift */; };
+		FD1126ED21C77F970072607D /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_115 /* Prompt.swift */; };
+		FD1126EE21C77FAA0072607D /* SubText.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_120 /* SubText.swift */; };
+		FD1126EF21C77FAA0072607D /* String+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_116 /* String+Convenience.swift */; };
+		FD1126F021C77FAA0072607D /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_121 /* Text.swift */; };
+		FD1126F121C77FAA0072607D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_119 /* Color.swift */; };
+		FD1126F221C77FAA0072607D /* Texts+Printable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_123 /* Texts+Printable.swift */; };
+		FD1126F321C77FAA0072607D /* Texts+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_122 /* Texts+Operators.swift */; };
+		FD1126F421C77FE60072607D /* FileStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_109 /* FileStream.swift */; };
+		FD1126F721C780E40072607D /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
+		FD1126FA21C781050072607D /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
+		FD1126FD21C783130072607D /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
 		FD326D942109E3C600AE3A98 /* ArchivePlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326D932109E3C600AE3A98 /* ArchivePlist.swift */; };
 		FD326D972109F2B800AE3A98 /* GitTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326D952109F2AC00AE3A98 /* GitTool.swift */; };
-		FD326D9A2109FB8F00AE3A98 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326D982109FB8200AE3A98 /* Configuration.swift */; };
-		FD326D9C210A094300AE3A98 /* BuildResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326D9B210A094300AE3A98 /* BuildResult.swift */; };
-		FD326D9F210A0F5F00AE3A98 /* HighwayCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayCore::Product" /* HighwayCore.framework */; };
 		FD326DA1210A134000AE3A98 /* DestinationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326DA0210A134000AE3A98 /* DestinationFactory.swift */; };
 		FD34F42321BEE5340052222C /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F42221BEE5340052222C /* ZFile.framework */; };
 		FD34F42721BEE8CA0052222C /* TerminalWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34F42621BEE8CA0052222C /* TerminalWorker.swift */; };
@@ -44,17 +54,6 @@
 		FDC156F621C5355400E04B44 /* SourceryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC156F321C5355400E04B44 /* SourceryWorker.swift */; };
 		FDC156F721C5355400E04B44 /* Sourcery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC156F421C5355400E04B44 /* Sourcery.swift */; };
 		FDC156FA21C535A400E04B44 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
-		FDC1571521C549C200E04B44 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_124 /* UI.swift */; };
-		FDC1571721C54A5F00E04B44 /* Printable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* Printable.swift */; };
-		FDC1571821C54A7B00E04B44 /* Texts+Printable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_123 /* Texts+Printable.swift */; };
-		FDC1571A21C54A7F00E04B44 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_119 /* Color.swift */; };
-		FDC1571B21C54A7F00E04B44 /* SubText.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_120 /* SubText.swift */; };
-		FDC1571C21C54A7F00E04B44 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_121 /* Text.swift */; };
-		FDC1571D21C54A7F00E04B44 /* Texts+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_122 /* Texts+Operators.swift */; };
-		FDC1572021C54A8900E04B44 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_113 /* Line.swift */; };
-		FDC1572121C54A8900E04B44 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_114 /* List.swift */; };
-		FDC1572221C54A8900E04B44 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_115 /* Prompt.swift */; };
-		FDC1572321C54B1200E04B44 /* String+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_116 /* String+Convenience.swift */; };
 		FDEC118A21C65D9200CB7DAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC118921C65D9200CB7DAD /* AppDelegate.swift */; };
 		FDEC118C21C65D9200CB7DAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC118B21C65D9200CB7DAD /* ViewController.swift */; };
 		FDEC118E21C65D9400CB7DAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDEC118D21C65D9400CB7DAD /* Assets.xcassets */; };
@@ -64,7 +63,6 @@
 		FDEC11E621C679D400CB7DAD /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E321C679B600CB7DAD /* AutoMockable.generated.swift */; };
 		FDEC11E721C679DF00CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */; };
 		FDEC11E821C679E200CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */; };
-		FDEC11EF21C67ACE00CB7DAD /* HighwaySignpost.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11EB21C67ACE00CB7DAD /* HighwaySignpost.swift */; };
 		FDEC11F421C67ED700CB7DAD /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11F221C67EAD00CB7DAD /* Worker.swift */; };
 		FDEC11F921C682E600CB7DAD /* AutomateSourceryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11F821C682E600CB7DAD /* AutomateSourceryWorker.swift */; };
 		FDEC11FE21C6869C00CB7DAD /* ZFile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDEC11D321C6717600CB7DAD /* ZFile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -125,10 +123,8 @@
 		OBJ_368 /* GitToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_186 /* GitToolTests.swift */; };
 		OBJ_369 /* git.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_187 /* git.swift */; };
 		OBJ_372 /* SourceryMocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryMocks::Product" /* SourceryMocks.framework */; };
-		OBJ_373 /* HighwayProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayProject::Product" /* HighwayProject.framework */; };
 		OBJ_374 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
 		OBJ_375 /* Deliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Deliver::Product" /* Deliver.framework */; };
-		OBJ_376 /* HighwayCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayCore::Product" /* HighwayCore.framework */; };
 		OBJ_377 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		OBJ_378 /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; };
 		OBJ_379 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
@@ -138,103 +134,6 @@
 		OBJ_384 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		OBJ_385 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
 		OBJ_386 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
-		OBJ_407 /* Bootstraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* Bootstraper.swift */; };
-		OBJ_408 /* HomeBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* HomeBundle.swift */; };
-		OBJ_409 /* HighwayBundle+Creating.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* HighwayBundle+Creating.swift */; };
-		OBJ_410 /* HighwayProjectTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* HighwayProjectTool.swift */; };
-		OBJ_411 /* HomeBundleUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* HomeBundleUpdater.swift */; };
-		OBJ_412 /* SelfUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* SelfUpdater.swift */; };
-		OBJ_413 /* SwiftBuildSystem-Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* SwiftBuildSystem-Bundle.swift */; };
-		OBJ_414 /* XCProjectGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* XCProjectGenerator.swift */; };
-		OBJ_415 /* InitOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* InitOptions.swift */; };
-		OBJ_416 /* gitignore_template.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* gitignore_template.swift */; };
-		OBJ_417 /* main_swift_subtype_xcode_template.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* main_swift_subtype_xcode_template.swift */; };
-		OBJ_418 /* package_swift_template.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* package_swift_template.swift */; };
-		OBJ_419 /* xcconfig_template.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* xcconfig_template.swift */; };
-		OBJ_421 /* HighwayCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayCore::Product" /* HighwayCore.framework */; };
-		OBJ_422 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
-		OBJ_423 /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; };
-		OBJ_424 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
-		OBJ_425 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Result::Product" /* Result.framework */; };
-		OBJ_427 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
-		OBJ_428 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
-		OBJ_429 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
-		OBJ_430 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
-		OBJ_431 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
-		OBJ_448 /* BootstraperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_179 /* BootstraperTests.swift */; };
-		OBJ_449 /* HighwayBundleCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_180 /* HighwayBundleCreatorTests.swift */; };
-		OBJ_450 /* HomeBundleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_181 /* HomeBundleTests.swift */; };
-		OBJ_451 /* InitOptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_182 /* InitOptionsTests.swift */; };
-		OBJ_452 /* SwiftBuildSystem_HighwayBundleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_183 /* SwiftBuildSystem_HighwayBundleTests.swift */; };
-		OBJ_455 /* SourceryMocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryMocks::Product" /* SourceryMocks.framework */; };
-		OBJ_456 /* HighwayProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayProject::Product" /* HighwayProject.framework */; };
-		OBJ_457 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
-		OBJ_458 /* Deliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Deliver::Product" /* Deliver.framework */; };
-		OBJ_459 /* HWKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HWKit::Product" /* HWKit.framework */; };
-		OBJ_460 /* HighwayCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayCore::Product" /* HighwayCore.framework */; };
-		OBJ_461 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
-		OBJ_462 /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; };
-		OBJ_463 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
-		OBJ_464 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Result::Product" /* Result.framework */; };
-		OBJ_466 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
-		OBJ_467 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
-		OBJ_468 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
-		OBJ_469 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
-		OBJ_470 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
-		OBJ_492 /* HighwayBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* HighwayBundle.swift */; };
-		OBJ_493 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Context.swift */; };
-		OBJ_494 /* Fastlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* Fastlane.swift */; };
-		OBJ_495 /* SwiftBuildSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* SwiftBuildSystem.swift */; };
-		OBJ_496 /* SwiftOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* SwiftOptions.swift */; };
-		OBJ_497 /* SwiftPackageTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* SwiftPackageTool.swift */; };
-		OBJ_498 /* SwiftRunTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* SwiftRunTool.swift */; };
-		OBJ_499 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* Env.swift */; };
-		OBJ_500 /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* OrderedDictionary.swift */; };
-		OBJ_501 /* String+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* String+Convenience.swift */; };
-		OBJ_502 /* HighwayDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* HighwayDescription.swift */; };
-		OBJ_503 /* HighwayTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* HighwayTypeProtocol.swift */; };
-		OBJ_504 /* Invocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Invocation.swift */; };
-		OBJ_505 /* InvocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* InvocationProvider.swift */; };
-		OBJ_506 /* _Highway.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* _Highway.swift */; };
-		OBJ_508 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
-		OBJ_509 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
-		OBJ_510 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Result::Product" /* Result.framework */; };
-		OBJ_511 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
-		OBJ_513 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
-		OBJ_514 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
-		OBJ_515 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
-		OBJ_516 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
-		OBJ_531 /* HighwayBundleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_171 /* HighwayBundleTests.swift */; };
-		OBJ_532 /* HighwaysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_172 /* HighwaysTests.swift */; };
-		OBJ_533 /* FileHandle+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_174 /* FileHandle+Convenience.swift */; };
-		OBJ_534 /* SwiftBuildSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_175 /* SwiftBuildSystemTests.swift */; };
-		OBJ_537 /* SourceryMocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryMocks::Product" /* SourceryMocks.framework */; };
-		OBJ_538 /* HighwayProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayProject::Product" /* HighwayProject.framework */; };
-		OBJ_539 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
-		OBJ_540 /* Deliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Deliver::Product" /* Deliver.framework */; };
-		OBJ_541 /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; };
-		OBJ_542 /* HighwayCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayCore::Product" /* HighwayCore.framework */; };
-		OBJ_543 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
-		OBJ_544 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
-		OBJ_545 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Result::Product" /* Result.framework */; };
-		OBJ_546 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
-		OBJ_548 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
-		OBJ_549 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
-		OBJ_550 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
-		OBJ_551 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
-		OBJ_572 /* Highway.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_102 /* Highway.swift */; };
-		OBJ_574 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
-		OBJ_575 /* HighwayCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayCore::Product" /* HighwayCore.framework */; };
-		OBJ_576 /* Deliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Deliver::Product" /* Deliver.framework */; };
-		OBJ_577 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
-		OBJ_578 /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; };
-		OBJ_579 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
-		OBJ_580 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Result::Product" /* Result.framework */; };
-		OBJ_582 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
-		OBJ_583 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
-		OBJ_584 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
-		OBJ_585 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
-		OBJ_586 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_604 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_98 /* Keychain.swift */; };
 		OBJ_606 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
 		OBJ_607 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
@@ -254,10 +153,8 @@
 		OBJ_651 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_658 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_162 /* test.swift */; };
 		OBJ_661 /* SourceryMocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryMocks::Product" /* SourceryMocks.framework */; };
-		OBJ_662 /* HighwayProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayProject::Product" /* HighwayProject.framework */; };
 		OBJ_663 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
 		OBJ_664 /* Deliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Deliver::Product" /* Deliver.framework */; };
-		OBJ_665 /* HighwayCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayCore::Product" /* HighwayCore.framework */; };
 		OBJ_666 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		OBJ_667 /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; };
 		OBJ_668 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
@@ -267,9 +164,7 @@
 		OBJ_673 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
 		OBJ_674 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Result::Product" /* Result.framework */; };
 		OBJ_675 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
-		OBJ_705 /* HighwayProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayProject::Product" /* HighwayProject.framework */; };
 		OBJ_706 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
-		OBJ_707 /* HighwayCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayCore::Product" /* HighwayCore.framework */; };
 		OBJ_708 /* Deliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Deliver::Product" /* Deliver.framework */; };
 		OBJ_709 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		OBJ_710 /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; };
@@ -283,7 +178,6 @@
 		OBJ_738 /* PathEnvironmentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_135 /* PathEnvironmentParser.swift */; };
 		OBJ_739 /* SystemExecutableProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_136 /* SystemExecutableProvider.swift */; };
 		OBJ_740 /* SystemExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_137 /* SystemExecutor.swift */; };
-		OBJ_741 /* TaskExecutorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_138 /* TaskExecutorProtocol.swift */; };
 		OBJ_742 /* LocalSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_139 /* LocalSystem.swift */; };
 		OBJ_743 /* Channel+Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_141 /* Channel+Reader.swift */; };
 		OBJ_744 /* Channel+Writer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_142 /* Channel+Writer.swift */; };
@@ -304,10 +198,8 @@
 		OBJ_774 /* TaskExecutorSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_156 /* TaskExecutorSystemTests.swift */; };
 		OBJ_775 /* TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_157 /* TaskTests.swift */; };
 		OBJ_778 /* SourceryMocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryMocks::Product" /* SourceryMocks.framework */; };
-		OBJ_779 /* HighwayProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayProject::Product" /* HighwayProject.framework */; };
 		OBJ_780 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
 		OBJ_781 /* Deliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Deliver::Product" /* Deliver.framework */; };
-		OBJ_782 /* HighwayCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayCore::Product" /* HighwayCore.framework */; };
 		OBJ_783 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		OBJ_784 /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; };
 		OBJ_785 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
@@ -317,14 +209,11 @@
 		OBJ_790 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
 		OBJ_791 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
 		OBJ_792 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
-		OBJ_813 /* FileStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_109 /* FileStream.swift */; };
 		OBJ_827 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_834 /* TerminalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_177 /* TerminalTests.swift */; };
 		OBJ_837 /* SourceryMocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryMocks::Product" /* SourceryMocks.framework */; };
-		OBJ_838 /* HighwayProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayProject::Product" /* HighwayProject.framework */; };
 		OBJ_839 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
 		OBJ_840 /* Deliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Deliver::Product" /* Deliver.framework */; };
-		OBJ_841 /* HighwayCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayCore::Product" /* HighwayCore.framework */; };
 		OBJ_842 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		OBJ_843 /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; };
 		OBJ_844 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
@@ -362,10 +251,8 @@
 		OBJ_971 /* XCBuild_System_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_165 /* XCBuild_System_Tests.swift */; };
 		OBJ_973 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Keychain::Product" /* Keychain.framework */; };
 		OBJ_975 /* SourceryMocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryMocks::Product" /* SourceryMocks.framework */; };
-		OBJ_976 /* HighwayProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayProject::Product" /* HighwayProject.framework */; };
 		OBJ_977 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
 		OBJ_978 /* Deliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Deliver::Product" /* Deliver.framework */; };
-		OBJ_979 /* HighwayCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::HighwayCore::Product" /* HighwayCore.framework */; };
 		OBJ_980 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		OBJ_981 /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; };
 		OBJ_982 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
@@ -392,34 +279,6 @@
 			remoteGlobalIDString = "highway::Keychain";
 			remoteInfo = Keychain;
 		};
-		FD0F7C902188870E00F84604 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::HWKit";
-			remoteInfo = HWKit;
-		};
-		FD11266A21C6899D0072607D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::HighwayProject";
-			remoteInfo = HighwayProject;
-		};
-		FD11266E21C6899D0072607D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::HighwayCore";
-			remoteInfo = HighwayCore;
-		};
-		FD11267521C689AF0072607D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::HWKit";
-			remoteInfo = HWKit;
-		};
 		FD11267921C689AF0072607D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -434,19 +293,47 @@
 			remoteGlobalIDString = "highway::Deliver";
 			remoteInfo = Deliver;
 		};
-		FD326C762109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
+		FD1126D621C77F050072607D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "highway::HighwayCore";
-			remoteInfo = HighwayCore;
+			remoteGlobalIDString = FD1126CB21C77F050072607D;
+			remoteInfo = SignPost;
 		};
-		FD326C772109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
+		FD1126D821C77F060072607D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "highway::Task";
-			remoteInfo = Task;
+			remoteGlobalIDString = FDEC118621C65D9200CB7DAD;
+			remoteInfo = Automate;
+		};
+		FD1126DF21C77F060072607D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD1126CB21C77F050072607D;
+			remoteInfo = SignPost;
+		};
+		FD1126F521C780DA0072607D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::SourceryAutoProtocols";
+			remoteInfo = SourceryAutoProtocols;
+		};
+		FD1126F821C780FD0072607D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD1126CB21C77F050072607D;
+			remoteInfo = SignPost;
+		};
+		FD1126FB21C7830B0072607D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD1126CB21C77F050072607D;
+			remoteInfo = SignPost;
 		};
 		FD326C782109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -525,41 +412,6 @@
 			remoteGlobalIDString = "highway::SourceryAutoProtocols";
 			remoteInfo = SourceryAutoProtocols;
 		};
-		FD326C862109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Arguments";
-			remoteInfo = Arguments;
-		};
-		FD326C872109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Result";
-			remoteInfo = Result;
-		};
-		FD326C882109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Errors";
-			remoteInfo = Errors;
-		};
-		FD326C8A2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Terminal";
-			remoteInfo = Terminal;
-		};
-		FD326C8B2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::POSIX";
-			remoteInfo = POSIX;
-		};
 		FD326C8C2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -573,34 +425,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = "highway::SourceryAutoProtocols";
 			remoteInfo = SourceryAutoProtocols;
-		};
-		FD326C8E2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Url";
-			remoteInfo = Url;
-		};
-		FD326C8F2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
-		};
-		FD326C902109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::POSIX";
-			remoteInfo = POSIX;
-		};
-		FD326C912109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Git";
-			remoteInfo = Git;
 		};
 		FD326C922109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -645,55 +469,6 @@
 			remoteInfo = Errors;
 		};
 		FD326C992109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
-		};
-		FD326C9A2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Task";
-			remoteInfo = Task;
-		};
-		FD326C9B2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Result";
-			remoteInfo = Result;
-		};
-		FD326C9D2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Terminal";
-			remoteInfo = Terminal;
-		};
-		FD326C9E2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Url";
-			remoteInfo = Url;
-		};
-		FD326C9F2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Arguments";
-			remoteInfo = Arguments;
-		};
-		FD326CA02109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Errors";
-			remoteInfo = Errors;
-		};
-		FD326CA12109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -805,34 +580,6 @@
 			remoteGlobalIDString = "highway::SourceryAutoProtocols";
 			remoteInfo = SourceryAutoProtocols;
 		};
-		FD326CB42109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::HighwayProject";
-			remoteInfo = HighwayProject;
-		};
-		FD326CB52109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::XCBuild";
-			remoteInfo = XCBuild;
-		};
-		FD326CB62109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::HighwayCore";
-			remoteInfo = HighwayCore;
-		};
-		FD326CB72109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Deliver";
-			remoteInfo = Deliver;
-		};
 		FD326CB82109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -889,82 +636,12 @@
 			remoteGlobalIDString = "highway::SourceryAutoProtocols";
 			remoteInfo = SourceryAutoProtocols;
 		};
-		FD326CC12109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::POSIX";
-			remoteInfo = POSIX;
-		};
-		FD326CC22109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Git";
-			remoteInfo = Git;
-		};
-		FD326CC32109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Task";
-			remoteInfo = Task;
-		};
-		FD326CC42109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Result";
-			remoteInfo = Result;
-		};
-		FD326CC62109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Terminal";
-			remoteInfo = Terminal;
-		};
-		FD326CC72109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Url";
-			remoteInfo = Url;
-		};
-		FD326CC82109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Arguments";
-			remoteInfo = Arguments;
-		};
-		FD326CC92109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Errors";
-			remoteInfo = Errors;
-		};
-		FD326CCA2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
-		};
 		FD326CCB2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "highway::XCBuild";
 			remoteInfo = XCBuild;
-		};
-		FD326CCC2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::HighwayCore";
-			remoteInfo = HighwayCore;
 		};
 		FD326CCD2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1057,117 +734,12 @@
 			remoteGlobalIDString = "highway::SourceryAutoProtocols";
 			remoteInfo = SourceryAutoProtocols;
 		};
-		FD326CF92109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryMocks";
-			remoteInfo = SourceryMocks;
-		};
-		FD326CFA2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::HighwayProject";
-			remoteInfo = HighwayProject;
-		};
-		FD326CFB2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::XCBuild";
-			remoteInfo = XCBuild;
-		};
-		FD326CFC2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Deliver";
-			remoteInfo = Deliver;
-		};
-		FD326CFD2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Git";
-			remoteInfo = Git;
-		};
-		FD326CFE2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::HighwayCore";
-			remoteInfo = HighwayCore;
-		};
-		FD326CFF2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Task";
-			remoteInfo = Task;
-		};
-		FD326D002109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Arguments";
-			remoteInfo = Arguments;
-		};
-		FD326D012109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Result";
-			remoteInfo = Result;
-		};
-		FD326D022109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Errors";
-			remoteInfo = Errors;
-		};
-		FD326D042109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Terminal";
-			remoteInfo = Terminal;
-		};
-		FD326D052109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::POSIX";
-			remoteInfo = POSIX;
-		};
-		FD326D062109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Url";
-			remoteInfo = Url;
-		};
-		FD326D072109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
-		};
 		FD326D092109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "highway::SourceryMocks";
 			remoteInfo = SourceryMocks;
-		};
-		FD326D0A2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::HighwayProject";
-			remoteInfo = HighwayProject;
 		};
 		FD326D0B2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1182,13 +754,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = "highway::Deliver";
 			remoteInfo = Deliver;
-		};
-		FD326D0D2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::HighwayCore";
-			remoteInfo = HighwayCore;
 		};
 		FD326D0E2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1288,13 +853,6 @@
 			remoteGlobalIDString = "highway::SourceryMocks";
 			remoteInfo = SourceryMocks;
 		};
-		FD326D1E2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::HighwayProject";
-			remoteInfo = HighwayProject;
-		};
 		FD326D1F2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1308,13 +866,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = "highway::Deliver";
 			remoteInfo = Deliver;
-		};
-		FD326D212109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::HighwayCore";
-			remoteInfo = HighwayCore;
 		};
 		FD326D222109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1386,13 +937,6 @@
 			remoteGlobalIDString = "highway::SourceryMocks";
 			remoteInfo = SourceryMocks;
 		};
-		FD326D2E2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::HighwayProject";
-			remoteInfo = HighwayProject;
-		};
 		FD326D2F2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1406,13 +950,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = "highway::Deliver";
 			remoteInfo = Deliver;
-		};
-		FD326D312109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::HighwayCore";
-			remoteInfo = HighwayCore;
 		};
 		FD326D322109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1498,124 +1035,12 @@
 			remoteGlobalIDString = "highway::SourceryAutoProtocols";
 			remoteInfo = SourceryAutoProtocols;
 		};
-		FD326D412109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryMocks";
-			remoteInfo = SourceryMocks;
-		};
-		FD326D422109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::HighwayProject";
-			remoteInfo = HighwayProject;
-		};
-		FD326D432109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::XCBuild";
-			remoteInfo = XCBuild;
-		};
-		FD326D442109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Deliver";
-			remoteInfo = Deliver;
-		};
-		FD326D452109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::HWKit";
-			remoteInfo = HWKit;
-		};
-		FD326D462109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::HighwayCore";
-			remoteInfo = HighwayCore;
-		};
-		FD326D472109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::POSIX";
-			remoteInfo = POSIX;
-		};
-		FD326D482109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Git";
-			remoteInfo = Git;
-		};
-		FD326D492109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Task";
-			remoteInfo = Task;
-		};
-		FD326D4A2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Result";
-			remoteInfo = Result;
-		};
-		FD326D4C2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Terminal";
-			remoteInfo = Terminal;
-		};
-		FD326D4D2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Url";
-			remoteInfo = Url;
-		};
-		FD326D4E2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Arguments";
-			remoteInfo = Arguments;
-		};
-		FD326D4F2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Errors";
-			remoteInfo = Errors;
-		};
-		FD326D502109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
-		};
 		FD326D522109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "highway::SourceryMocks";
 			remoteInfo = SourceryMocks;
-		};
-		FD326D532109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::HighwayProject";
-			remoteInfo = HighwayProject;
 		};
 		FD326D542109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1630,13 +1055,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = "highway::Deliver";
 			remoteInfo = Deliver;
-		};
-		FD326D562109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::HighwayCore";
-			remoteInfo = HighwayCore;
 		};
 		FD326D572109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1708,13 +1126,6 @@
 			remoteGlobalIDString = "highway::SourceryMocks";
 			remoteInfo = SourceryMocks;
 		};
-		FD326D632109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::HighwayProject";
-			remoteInfo = HighwayProject;
-		};
 		FD326D642109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1728,13 +1139,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = "highway::Deliver";
 			remoteInfo = Deliver;
-		};
-		FD326D662109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::HighwayCore";
-			remoteInfo = HighwayCore;
 		};
 		FD326D672109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1970,13 +1374,10 @@
 			dstSubfolderSpec = 10;
 			files = (
 				FDEC121121C687E600CB7DAD /* Errors.framework in Embed Frameworks */,
-				FD11266D21C6899D0072607D /* HighwayCore.framework in Embed Frameworks */,
 				FD11267C21C689AF0072607D /* Deliver.framework in Embed Frameworks */,
 				FDEC120521C686B700CB7DAD /* SourceryWorker.framework in Embed Frameworks */,
 				FDEC121D21C688EE00CB7DAD /* Url.framework in Embed Frameworks */,
-				FD11266921C6899D0072607D /* HighwayProject.framework in Embed Frameworks */,
 				FDEC120721C686E200CB7DAD /* SourceryAutoProtocols.framework in Embed Frameworks */,
-				FD11267421C689AF0072607D /* HWKit.framework in Embed Frameworks */,
 				FDEC121921C688D600CB7DAD /* Result.framework in Embed Frameworks */,
 				FDEC11FE21C6869C00CB7DAD /* ZFile.framework in Embed Frameworks */,
 				FDEC120921C6871900CB7DAD /* Terminal.framework in Embed Frameworks */,
@@ -1984,6 +1385,7 @@
 				FDEC120321C686AF00CB7DAD /* Arguments.framework in Embed Frameworks */,
 				FDEC122121C688F900CB7DAD /* XCBuild.framework in Embed Frameworks */,
 				FDEC122521C6890500CB7DAD /* Git.framework in Embed Frameworks */,
+				FD1126E221C77F060072607D /* SignPost.framework in Embed Frameworks */,
 				FDEC121521C688B600CB7DAD /* POSIX.framework in Embed Frameworks */,
 				FDEC120F21C6876B00CB7DAD /* Task.framework in Embed Frameworks */,
 			);
@@ -1995,10 +1397,14 @@
 /* Begin PBXFileReference section */
 		FD1126C021C771970072607D /* ArgumentsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentsWorker.swift; sourceTree = "<group>"; };
 		FD1126C521C7756A0072607D /* SourceryExecutableFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryExecutableFile.swift; sourceTree = "<group>"; };
+		FD1126CC21C77F050072607D /* SignPost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SignPost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD1126CE21C77F050072607D /* SignPost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignPost.h; sourceTree = "<group>"; };
+		FD1126CF21C77F050072607D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD1126D421C77F050072607D /* SignPostTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignPostTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD1126DB21C77F060072607D /* SignPostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignPostTests.swift; sourceTree = "<group>"; };
+		FD1126DD21C77F060072607D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD326D932109E3C600AE3A98 /* ArchivePlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchivePlist.swift; sourceTree = "<group>"; };
 		FD326D952109F2AC00AE3A98 /* GitTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitTool.swift; sourceTree = "<group>"; };
-		FD326D982109FB8200AE3A98 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		FD326D9B210A094300AE3A98 /* BuildResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildResult.swift; sourceTree = "<group>"; };
 		FD326DA0210A134000AE3A98 /* DestinationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationFactory.swift; sourceTree = "<group>"; };
 		FD34F42221BEE5340052222C /* ZFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD34F42621BEE8CA0052222C /* TerminalWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminalWorker.swift; sourceTree = "<group>"; };
@@ -2035,11 +1441,10 @@
 		FDEC11E221C679B600CB7DAD /* AutoGenerateProtocol.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoGenerateProtocol.generated.swift; sourceTree = "<group>"; };
 		FDEC11E321C679B600CB7DAD /* AutoMockable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryAutoProtocols.swift; sourceTree = "<group>"; };
-		FDEC11EB21C67ACE00CB7DAD /* HighwaySignpost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighwaySignpost.swift; sourceTree = "<group>"; };
+		FDEC11EB21C67ACE00CB7DAD /* SignPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignPost.swift; sourceTree = "<group>"; };
 		FDEC11F221C67EAD00CB7DAD /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 		FDEC11F821C682E600CB7DAD /* AutomateSourceryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomateSourceryWorker.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
-		OBJ_102 /* Highway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highway.swift; sourceTree = "<group>"; };
 		OBJ_104 /* Deliver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deliver.swift; sourceTree = "<group>"; };
 		OBJ_106 /* Altool-Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Altool-Options.swift"; sourceTree = "<group>"; };
 		OBJ_107 /* Altool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Altool.swift; sourceTree = "<group>"; };
@@ -2056,11 +1461,9 @@
 		OBJ_121 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		OBJ_122 /* Texts+Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Texts+Operators.swift"; sourceTree = "<group>"; };
 		OBJ_123 /* Texts+Printable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Texts+Printable.swift"; sourceTree = "<group>"; };
-		OBJ_124 /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		OBJ_135 /* PathEnvironmentParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathEnvironmentParser.swift; sourceTree = "<group>"; };
 		OBJ_136 /* SystemExecutableProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemExecutableProvider.swift; sourceTree = "<group>"; };
 		OBJ_137 /* SystemExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemExecutor.swift; sourceTree = "<group>"; };
-		OBJ_138 /* TaskExecutorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskExecutorProtocol.swift; sourceTree = "<group>"; };
 		OBJ_139 /* LocalSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSystem.swift; sourceTree = "<group>"; };
 		OBJ_14 /* Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Export.swift; sourceTree = "<group>"; };
 		OBJ_141 /* Channel+Reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Channel+Reader.swift"; sourceTree = "<group>"; };
@@ -2103,44 +1506,11 @@
 		OBJ_19 /* TestOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOptions.swift; sourceTree = "<group>"; };
 		OBJ_20 /* TestReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestReport.swift; sourceTree = "<group>"; };
 		OBJ_21 /* XCBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCBuild.swift; sourceTree = "<group>"; };
-		OBJ_24 /* HighwayBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighwayBundle.swift; sourceTree = "<group>"; };
-		OBJ_26 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
-		OBJ_28 /* Fastlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fastlane.swift; sourceTree = "<group>"; };
-		OBJ_30 /* SwiftBuildSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBuildSystem.swift; sourceTree = "<group>"; };
-		OBJ_31 /* SwiftOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftOptions.swift; sourceTree = "<group>"; };
-		OBJ_32 /* SwiftPackageTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPackageTool.swift; sourceTree = "<group>"; };
-		OBJ_33 /* SwiftRunTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRunTool.swift; sourceTree = "<group>"; };
-		OBJ_35 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
-		OBJ_36 /* OrderedDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedDictionary.swift; sourceTree = "<group>"; };
-		OBJ_37 /* String+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Convenience.swift"; sourceTree = "<group>"; };
-		OBJ_39 /* HighwayDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighwayDescription.swift; sourceTree = "<group>"; };
-		OBJ_40 /* HighwayTypeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighwayTypeProtocol.swift; sourceTree = "<group>"; };
-		OBJ_42 /* Invocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invocation.swift; sourceTree = "<group>"; };
-		OBJ_43 /* InvocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvocationProvider.swift; sourceTree = "<group>"; };
-		OBJ_44 /* _Highway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _Highway.swift; sourceTree = "<group>"; };
 		OBJ_49 /* Git.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Git.swift; sourceTree = "<group>"; };
 		OBJ_50 /* GitAutotag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitAutotag.swift; sourceTree = "<group>"; };
 		OBJ_53 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		OBJ_55 /* Absolute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Absolute.swift; sourceTree = "<group>"; };
 		OBJ_56 /* Relative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relative.swift; sourceTree = "<group>"; };
-		OBJ_59 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		OBJ_60 /* AppHighway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHighway.swift; sourceTree = "<group>"; };
-		OBJ_61 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
-		OBJ_62 /* CurrentVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentVersion.swift; sourceTree = "<group>"; };
-		OBJ_63 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		OBJ_67 /* Bootstraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bootstraper.swift; sourceTree = "<group>"; };
-		OBJ_68 /* HomeBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBundle.swift; sourceTree = "<group>"; };
-		OBJ_70 /* HighwayBundle+Creating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HighwayBundle+Creating.swift"; sourceTree = "<group>"; };
-		OBJ_71 /* HighwayProjectTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighwayProjectTool.swift; sourceTree = "<group>"; };
-		OBJ_72 /* HomeBundleUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBundleUpdater.swift; sourceTree = "<group>"; };
-		OBJ_73 /* SelfUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfUpdater.swift; sourceTree = "<group>"; };
-		OBJ_74 /* SwiftBuildSystem-Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftBuildSystem-Bundle.swift"; sourceTree = "<group>"; };
-		OBJ_75 /* XCProjectGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCProjectGenerator.swift; sourceTree = "<group>"; };
-		OBJ_77 /* InitOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitOptions.swift; sourceTree = "<group>"; };
-		OBJ_79 /* gitignore_template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignore_template.swift; sourceTree = "<group>"; };
-		OBJ_80 /* main_swift_subtype_xcode_template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main_swift_subtype_xcode_template.swift; sourceTree = "<group>"; };
-		OBJ_81 /* package_swift_template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = package_swift_template.swift; sourceTree = "<group>"; };
-		OBJ_82 /* xcconfig_template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xcconfig_template.swift; sourceTree = "<group>"; };
 		OBJ_84 /* Arguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arguments.swift; sourceTree = "<group>"; };
 		OBJ_85 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		OBJ_96 /* String+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Error.swift"; sourceTree = "<group>"; };
@@ -2152,11 +1522,6 @@
 		"highway::Errors::Product" /* Errors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Errors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::Git::Product" /* Git.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Git.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::GitTests::Product" /* GitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = GitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		"highway::HWKit::Product" /* HWKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HWKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"highway::HWKitTests::Product" /* HWKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = HWKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		"highway::HighwayCore::Product" /* HighwayCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HighwayCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"highway::HighwayCoreTests::Product" /* HighwayCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = HighwayCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		"highway::HighwayProject::Product" /* HighwayProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HighwayProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::Keychain::Product" /* Keychain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Keychain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::POSIX::Product" /* POSIX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = POSIX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::POSIXTests::Product" /* POSIXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = POSIXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2175,10 +1540,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FD1126C921C77F050072607D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD1126F721C780E40072607D /* SourceryAutoProtocols.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD1126D121C77F050072607D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD1126D521C77F050072607D /* SignPost.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDC156D821C5347C00E04B44 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD1126FA21C781050072607D /* SignPost.framework in Frameworks */,
 				FDC156FA21C535A400E04B44 /* Terminal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2203,7 +1585,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD11267B21C689AF0072607D /* Deliver.framework in Frameworks */,
-				FD11266821C6899D0072607D /* HighwayProject.framework in Frameworks */,
 				FDEC120821C6871900CB7DAD /* Terminal.framework in Frameworks */,
 				FDEC120E21C6876B00CB7DAD /* Task.framework in Frameworks */,
 				FDEC121821C688D600CB7DAD /* Result.framework in Frameworks */,
@@ -2211,10 +1592,9 @@
 				FDEC121C21C688EE00CB7DAD /* Url.framework in Frameworks */,
 				FD11267721C689AF0072607D /* Keychain.framework in Frameworks */,
 				FDEC122421C6890500CB7DAD /* Git.framework in Frameworks */,
-				FD11267321C689AF0072607D /* HWKit.framework in Frameworks */,
 				FDEC122021C688F900CB7DAD /* XCBuild.framework in Frameworks */,
+				FD1126E121C77F060072607D /* SignPost.framework in Frameworks */,
 				FDEC121021C687E600CB7DAD /* Errors.framework in Frameworks */,
-				FD11266C21C6899D0072607D /* HighwayCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2296,10 +1676,8 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_372 /* SourceryMocks.framework in Frameworks */,
-				OBJ_373 /* HighwayProject.framework in Frameworks */,
 				OBJ_374 /* XCBuild.framework in Frameworks */,
 				OBJ_375 /* Deliver.framework in Frameworks */,
-				OBJ_376 /* HighwayCore.framework in Frameworks */,
 				OBJ_377 /* POSIX.framework in Frameworks */,
 				OBJ_378 /* Git.framework in Frameworks */,
 				OBJ_379 /* Task.framework in Frameworks */,
@@ -2309,100 +1687,6 @@
 				OBJ_384 /* Arguments.framework in Frameworks */,
 				OBJ_385 /* Errors.framework in Frameworks */,
 				OBJ_386 /* SourceryAutoProtocols.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_420 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_421 /* HighwayCore.framework in Frameworks */,
-				OBJ_422 /* POSIX.framework in Frameworks */,
-				OBJ_423 /* Git.framework in Frameworks */,
-				OBJ_424 /* Task.framework in Frameworks */,
-				OBJ_425 /* Result.framework in Frameworks */,
-				OBJ_427 /* Terminal.framework in Frameworks */,
-				OBJ_428 /* Url.framework in Frameworks */,
-				OBJ_429 /* Arguments.framework in Frameworks */,
-				OBJ_430 /* Errors.framework in Frameworks */,
-				OBJ_431 /* SourceryAutoProtocols.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_453 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_455 /* SourceryMocks.framework in Frameworks */,
-				OBJ_456 /* HighwayProject.framework in Frameworks */,
-				OBJ_457 /* XCBuild.framework in Frameworks */,
-				OBJ_458 /* Deliver.framework in Frameworks */,
-				OBJ_459 /* HWKit.framework in Frameworks */,
-				OBJ_460 /* HighwayCore.framework in Frameworks */,
-				OBJ_461 /* POSIX.framework in Frameworks */,
-				OBJ_462 /* Git.framework in Frameworks */,
-				OBJ_463 /* Task.framework in Frameworks */,
-				OBJ_464 /* Result.framework in Frameworks */,
-				OBJ_466 /* Terminal.framework in Frameworks */,
-				OBJ_467 /* Url.framework in Frameworks */,
-				OBJ_468 /* Arguments.framework in Frameworks */,
-				OBJ_469 /* Errors.framework in Frameworks */,
-				OBJ_470 /* SourceryAutoProtocols.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_507 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_508 /* Task.framework in Frameworks */,
-				OBJ_509 /* Arguments.framework in Frameworks */,
-				OBJ_510 /* Result.framework in Frameworks */,
-				OBJ_511 /* Errors.framework in Frameworks */,
-				OBJ_513 /* Terminal.framework in Frameworks */,
-				OBJ_514 /* POSIX.framework in Frameworks */,
-				OBJ_515 /* Url.framework in Frameworks */,
-				OBJ_516 /* SourceryAutoProtocols.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_535 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_537 /* SourceryMocks.framework in Frameworks */,
-				OBJ_538 /* HighwayProject.framework in Frameworks */,
-				OBJ_539 /* XCBuild.framework in Frameworks */,
-				OBJ_540 /* Deliver.framework in Frameworks */,
-				OBJ_541 /* Git.framework in Frameworks */,
-				OBJ_542 /* HighwayCore.framework in Frameworks */,
-				OBJ_543 /* Task.framework in Frameworks */,
-				OBJ_544 /* Arguments.framework in Frameworks */,
-				OBJ_545 /* Result.framework in Frameworks */,
-				OBJ_546 /* Errors.framework in Frameworks */,
-				OBJ_548 /* Terminal.framework in Frameworks */,
-				OBJ_549 /* POSIX.framework in Frameworks */,
-				OBJ_550 /* Url.framework in Frameworks */,
-				OBJ_551 /* SourceryAutoProtocols.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_573 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_574 /* XCBuild.framework in Frameworks */,
-				OBJ_575 /* HighwayCore.framework in Frameworks */,
-				OBJ_576 /* Deliver.framework in Frameworks */,
-				OBJ_577 /* POSIX.framework in Frameworks */,
-				OBJ_578 /* Git.framework in Frameworks */,
-				OBJ_579 /* Task.framework in Frameworks */,
-				OBJ_580 /* Result.framework in Frameworks */,
-				OBJ_582 /* Terminal.framework in Frameworks */,
-				OBJ_583 /* Url.framework in Frameworks */,
-				OBJ_584 /* Arguments.framework in Frameworks */,
-				OBJ_585 /* Errors.framework in Frameworks */,
-				OBJ_586 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2452,10 +1736,8 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_661 /* SourceryMocks.framework in Frameworks */,
-				OBJ_662 /* HighwayProject.framework in Frameworks */,
 				OBJ_663 /* XCBuild.framework in Frameworks */,
 				OBJ_664 /* Deliver.framework in Frameworks */,
-				OBJ_665 /* HighwayCore.framework in Frameworks */,
 				OBJ_666 /* POSIX.framework in Frameworks */,
 				OBJ_667 /* Git.framework in Frameworks */,
 				OBJ_668 /* Task.framework in Frameworks */,
@@ -2479,11 +1761,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FD0F7C8F2188870400F84604 /* HWKit.framework in Frameworks */,
 				FD0F7C74218885D500F84604 /* Keychain.framework in Frameworks */,
-				OBJ_705 /* HighwayProject.framework in Frameworks */,
 				OBJ_706 /* XCBuild.framework in Frameworks */,
-				OBJ_707 /* HighwayCore.framework in Frameworks */,
 				OBJ_708 /* Deliver.framework in Frameworks */,
 				OBJ_709 /* POSIX.framework in Frameworks */,
 				OBJ_710 /* Git.framework in Frameworks */,
@@ -2501,6 +1780,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				FD1126FD21C783130072607D /* SignPost.framework in Frameworks */,
 				FDAC932A210B595100B0D045 /* POSIX.framework in Frameworks */,
 				OBJ_752 /* Arguments.framework in Frameworks */,
 				FD34F42321BEE5340052222C /* ZFile.framework in Frameworks */,
@@ -2516,10 +1796,8 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_778 /* SourceryMocks.framework in Frameworks */,
-				OBJ_779 /* HighwayProject.framework in Frameworks */,
 				OBJ_780 /* XCBuild.framework in Frameworks */,
 				OBJ_781 /* Deliver.framework in Frameworks */,
-				OBJ_782 /* HighwayCore.framework in Frameworks */,
 				OBJ_783 /* POSIX.framework in Frameworks */,
 				OBJ_784 /* Git.framework in Frameworks */,
 				OBJ_785 /* Task.framework in Frameworks */,
@@ -2546,10 +1824,8 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_837 /* SourceryMocks.framework in Frameworks */,
-				OBJ_838 /* HighwayProject.framework in Frameworks */,
 				OBJ_839 /* XCBuild.framework in Frameworks */,
 				OBJ_840 /* Deliver.framework in Frameworks */,
-				OBJ_841 /* HighwayCore.framework in Frameworks */,
 				OBJ_842 /* POSIX.framework in Frameworks */,
 				OBJ_843 /* Git.framework in Frameworks */,
 				OBJ_844 /* Task.framework in Frameworks */,
@@ -2583,7 +1859,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FD326D9F210A0F5F00AE3A98 /* HighwayCore.framework in Frameworks */,
 				OBJ_947 /* Task.framework in Frameworks */,
 				OBJ_948 /* Arguments.framework in Frameworks */,
 				OBJ_949 /* Result.framework in Frameworks */,
@@ -2601,10 +1876,8 @@
 			files = (
 				OBJ_973 /* Keychain.framework in Frameworks */,
 				OBJ_975 /* SourceryMocks.framework in Frameworks */,
-				OBJ_976 /* HighwayProject.framework in Frameworks */,
 				OBJ_977 /* XCBuild.framework in Frameworks */,
 				OBJ_978 /* Deliver.framework in Frameworks */,
-				OBJ_979 /* HighwayCore.framework in Frameworks */,
 				OBJ_980 /* POSIX.framework in Frameworks */,
 				OBJ_981 /* Git.framework in Frameworks */,
 				OBJ_982 /* Task.framework in Frameworks */,
@@ -2620,6 +1893,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD1126CD21C77F050072607D /* SignPost */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_119 /* Color.swift */,
+				OBJ_109 /* FileStream.swift */,
+				FD1126CF21C77F050072607D /* Info.plist */,
+				OBJ_113 /* Line.swift */,
+				OBJ_114 /* List.swift */,
+				OBJ_111 /* Printable.swift */,
+				OBJ_115 /* Prompt.swift */,
+				FD1126CE21C77F050072607D /* SignPost.h */,
+				FDEC11EB21C67ACE00CB7DAD /* SignPost.swift */,
+				OBJ_116 /* String+Convenience.swift */,
+				OBJ_120 /* SubText.swift */,
+				OBJ_121 /* Text.swift */,
+				OBJ_122 /* Texts+Operators.swift */,
+				OBJ_123 /* Texts+Printable.swift */,
+			);
+			name = SignPost;
+			path = Sources/SignPost;
+			sourceTree = "<group>";
+		};
+		FD1126DA21C77F060072607D /* SignPostTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD1126DB21C77F060072607D /* SignPostTests.swift */,
+				FD1126DD21C77F060072607D /* Info.plist */,
+			);
+			name = SignPostTests;
+			path = Tests/SignPostTests;
+			sourceTree = "<group>";
+		};
 		FD326D9E210A0F5F00AE3A98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2701,15 +2006,6 @@
 			path = Sources/AutoGeneratedCode;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_101 /* HighwayProject */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_102 /* Highway.swift */,
-			);
-			name = HighwayProject;
-			path = Sources/HighwayProject;
-			sourceTree = SOURCE_ROOT;
-		};
 		OBJ_103 /* Deliver */ = {
 			isa = PBXGroup;
 			children = (
@@ -2732,7 +2028,6 @@
 		OBJ_108 /* Terminal */ = {
 			isa = PBXGroup;
 			children = (
-				FDEC11EB21C67ACE00CB7DAD /* HighwaySignpost.swift */,
 				FD34F42C21BEE9EB0052222C /* CDToFolderExecutable.swift */,
 				FD34F42D21BEE9EB0052222C /* CatExecutable.swift */,
 				FD34F42E21BEE9EB0052222C /* GitExecutables.swift */,
@@ -2740,44 +2035,10 @@
 				FD34F42921BEE8E20052222C /* TerminalSysExitCode.swift */,
 				FDAC9350210B7D4A00B0D045 /* TerminalTasks.swift */,
 				FD34F42621BEE8CA0052222C /* TerminalWorker.swift */,
-				OBJ_109 /* FileStream.swift */,
 			);
 			name = Terminal;
 			path = Sources/Terminal;
 			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_110 /* Printable */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_111 /* Printable.swift */,
-				OBJ_112 /* Printables */,
-				OBJ_115 /* Prompt.swift */,
-				OBJ_124 /* UI.swift */,
-			);
-			path = Printable;
-			sourceTree = "<group>";
-		};
-		OBJ_112 /* Printables */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_113 /* Line.swift */,
-				OBJ_114 /* List.swift */,
-			);
-			path = Printables;
-			sourceTree = "<group>";
-		};
-		OBJ_118 /* Text */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_119 /* Color.swift */,
-				OBJ_116 /* String+Convenience.swift */,
-				OBJ_120 /* SubText.swift */,
-				OBJ_121 /* Text.swift */,
-				OBJ_122 /* Texts+Operators.swift */,
-				OBJ_123 /* Texts+Printable.swift */,
-			);
-			path = Text;
-			sourceTree = "<group>";
 		};
 		OBJ_13 /* Export */ = {
 			isa = PBXGroup;
@@ -2792,8 +2053,6 @@
 		OBJ_132 /* Task */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_110 /* Printable */,
-				OBJ_118 /* Text */,
 				OBJ_133 /* Finding and Executing */,
 				OBJ_139 /* LocalSystem.swift */,
 				OBJ_140 /* Model */,
@@ -2809,7 +2068,6 @@
 				OBJ_135 /* PathEnvironmentParser.swift */,
 				OBJ_136 /* SystemExecutableProvider.swift */,
 				OBJ_137 /* SystemExecutor.swift */,
-				OBJ_138 /* TaskExecutorProtocol.swift */,
 			);
 			path = "Finding and Executing";
 			sourceTree = "<group>";
@@ -2840,14 +2098,15 @@
 		OBJ_151 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				FDEC119B21C65D9400CB7DAD /* AutomateTests */,
 				OBJ_168 /* ArgumentsTests */,
+				FDEC119B21C65D9400CB7DAD /* AutomateTests */,
 				OBJ_188 /* DeliverTests */,
 				OBJ_184 /* GitTests */,
 				OBJ_170 /* HighwayCoreTests */,
 				OBJ_178 /* HWKitTests */,
 				OBJ_166 /* POSIXTests */,
 				OBJ_161 /* ResultTests */,
+				FD1126DA21C77F060072607D /* SignPostTests */,
 				FDC156E721C5347D00E04B44 /* SourceryWorkerTests */,
 				OBJ_152 /* TaskTests */,
 				OBJ_176 /* TerminalTests */,
@@ -2992,8 +2251,6 @@
 			isa = PBXGroup;
 			children = (
 				"highway::POSIXTests::Product" /* POSIXTests.xctest */,
-				"highway::HighwayCoreTests::Product" /* HighwayCoreTests.xctest */,
-				"highway::HWKit::Product" /* HWKit.framework */,
 				"highway::Arguments::Product" /* Arguments.framework */,
 				"highway::Keychain::Product" /* Keychain.framework */,
 				"highway::GitTests::Product" /* GitTests.xctest */,
@@ -3005,12 +2262,9 @@
 				"highway::Result::Product" /* Result.framework */,
 				"highway::ResultTests::Product" /* ResultTests.xctest */,
 				"highway::DeliverTests::Product" /* DeliverTests.xctest */,
-				"highway::HighwayProject::Product" /* HighwayProject.framework */,
 				"highway::Errors::Product" /* Errors.framework */,
-				"highway::HighwayCore::Product" /* HighwayCore.framework */,
 				"highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */,
 				"highway::Git::Product" /* Git.framework */,
-				"highway::HWKitTests::Product" /* HWKitTests.xctest */,
 				"highway::TaskTests::Product" /* TaskTests.xctest */,
 				"highway::Deliver::Product" /* Deliver.framework */,
 				"highway::Task::Product" /* Task.framework */,
@@ -3023,89 +2277,11 @@
 				FDE9B6F721C58ED400D1F50A /* SourceryAutoProtocols.framework */,
 				FDEC118721C65D9200CB7DAD /* Automate.app */,
 				FDEC119821C65D9400CB7DAD /* AutomateTests.xctest */,
+				FD1126CC21C77F050072607D /* SignPost.framework */,
+				FD1126D421C77F050072607D /* SignPostTests.xctest */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		OBJ_22 /* HighwayCore */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_23 /* Bundle */,
-				OBJ_25 /* Context */,
-				OBJ_27 /* Features */,
-				OBJ_34 /* Global Stuff */,
-				OBJ_38 /* Highways */,
-			);
-			name = HighwayCore;
-			path = Sources/HighwayCore;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_23 /* Bundle */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_24 /* HighwayBundle.swift */,
-				FD326D982109FB8200AE3A98 /* Configuration.swift */,
-			);
-			path = Bundle;
-			sourceTree = "<group>";
-		};
-		OBJ_25 /* Context */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_26 /* Context.swift */,
-			);
-			path = Context;
-			sourceTree = "<group>";
-		};
-		OBJ_27 /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_28 /* Fastlane.swift */,
-				OBJ_29 /* Swift */,
-			);
-			path = Features;
-			sourceTree = "<group>";
-		};
-		OBJ_29 /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_30 /* SwiftBuildSystem.swift */,
-				OBJ_31 /* SwiftOptions.swift */,
-				OBJ_32 /* SwiftPackageTool.swift */,
-				OBJ_33 /* SwiftRunTool.swift */,
-			);
-			path = Swift;
-			sourceTree = "<group>";
-		};
-		OBJ_34 /* Global Stuff */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_35 /* Env.swift */,
-				OBJ_36 /* OrderedDictionary.swift */,
-				OBJ_37 /* String+Convenience.swift */,
-			);
-			path = "Global Stuff";
-			sourceTree = "<group>";
-		};
-		OBJ_38 /* Highways */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_39 /* HighwayDescription.swift */,
-				OBJ_40 /* HighwayTypeProtocol.swift */,
-				OBJ_41 /* Invocation */,
-				OBJ_44 /* _Highway.swift */,
-			);
-			path = Highways;
-			sourceTree = "<group>";
-		};
-		OBJ_41 /* Invocation */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_42 /* Invocation.swift */,
-				OBJ_43 /* InvocationProvider.swift */,
-			);
-			path = Invocation;
-			sourceTree = "<group>";
 		};
 		OBJ_48 /* Git */ = {
 			isa = PBXGroup;
@@ -3149,86 +2325,19 @@
 			path = Sources/Url;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_57 /* highway */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_58 /* App */,
-				OBJ_62 /* CurrentVersion.swift */,
-				OBJ_63 /* main.swift */,
-			);
-			name = highway;
-			path = Sources/highway;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_58 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_59 /* App.swift */,
-				OBJ_60 /* AppHighway.swift */,
-				OBJ_61 /* AppInfo.swift */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
-		OBJ_64 /* HWKit */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_65 /* Bundles */,
-				OBJ_69 /* Command Helper */,
-				OBJ_78 /* Templates */,
-			);
-			name = HWKit;
-			path = Sources/HWKit;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_65 /* Bundles */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_66 /* Home */,
-			);
-			path = Bundles;
-			sourceTree = "<group>";
-		};
-		OBJ_66 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_67 /* Bootstraper.swift */,
-				OBJ_68 /* HomeBundle.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		OBJ_69 /* Command Helper */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_70 /* HighwayBundle+Creating.swift */,
-				OBJ_71 /* HighwayProjectTool.swift */,
-				FD326D9B210A094300AE3A98 /* BuildResult.swift */,
-				OBJ_72 /* HomeBundleUpdater.swift */,
-				OBJ_73 /* SelfUpdater.swift */,
-				OBJ_74 /* SwiftBuildSystem-Bundle.swift */,
-				OBJ_75 /* XCProjectGenerator.swift */,
-				OBJ_76 /* init */,
-			);
-			path = "Command Helper";
-			sourceTree = "<group>";
-		};
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				FDEC118821C65D9200CB7DAD /* Automate */,
 				OBJ_83 /* Arguments */,
 				FDEC11E021C679B600CB7DAD /* AutoGeneratedCode */,
+				FDEC118821C65D9200CB7DAD /* Automate */,
 				OBJ_103 /* Deliver */,
 				OBJ_95 /* Errors */,
 				OBJ_48 /* Git */,
-				OBJ_57 /* highway */,
-				OBJ_22 /* HighwayCore */,
-				OBJ_101 /* HighwayProject */,
-				OBJ_64 /* HWKit */,
 				OBJ_97 /* Keychain */,
 				OBJ_149 /* POSIX */,
 				OBJ_52 /* Result */,
+				FD1126CD21C77F050072607D /* SignPost */,
 				FDC156DC21C5347C00E04B44 /* SourceryWorker */,
 				OBJ_132 /* Task */,
 				OBJ_108 /* Terminal */,
@@ -3237,25 +2346,6 @@
 			);
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_76 /* init */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_77 /* InitOptions.swift */,
-			);
-			path = init;
-			sourceTree = "<group>";
-		};
-		OBJ_78 /* Templates */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_79 /* gitignore_template.swift */,
-				OBJ_80 /* main_swift_subtype_xcode_template.swift */,
-				OBJ_81 /* package_swift_template.swift */,
-				OBJ_82 /* xcconfig_template.swift */,
-			);
-			path = Templates;
-			sourceTree = "<group>";
 		};
 		OBJ_8 /* XCBuild */ = {
 			isa = PBXGroup;
@@ -3314,6 +2404,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		FD1126C721C77F050072607D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD1126DE21C77F060072607D /* SignPost.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDC156D621C5347C00E04B44 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -3332,6 +2430,44 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		FD1126CB21C77F050072607D /* SignPost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD1126E321C77F060072607D /* Build configuration list for PBXNativeTarget "SignPost" */;
+			buildPhases = (
+				FD1126C721C77F050072607D /* Headers */,
+				FD1126C821C77F050072607D /* Sources */,
+				FD1126C921C77F050072607D /* Frameworks */,
+				FD1126CA21C77F050072607D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD1126F621C780DA0072607D /* PBXTargetDependency */,
+			);
+			name = SignPost;
+			productName = SignPost;
+			productReference = FD1126CC21C77F050072607D /* SignPost.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FD1126D321C77F050072607D /* SignPostTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD1126E621C77F060072607D /* Build configuration list for PBXNativeTarget "SignPostTests" */;
+			buildPhases = (
+				FD1126D021C77F050072607D /* Sources */,
+				FD1126D121C77F050072607D /* Frameworks */,
+				FD1126D221C77F050072607D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD1126D721C77F050072607D /* PBXTargetDependency */,
+				FD1126D921C77F060072607D /* PBXTargetDependency */,
+			);
+			name = SignPostTests;
+			productName = SignPostTests;
+			productReference = FD1126D421C77F050072607D /* SignPostTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FDC156DA21C5347C00E04B44 /* SourceryWorker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDC156EC21C5347D00E04B44 /* Build configuration list for PBXNativeTarget "SourceryWorker" */;
@@ -3344,6 +2480,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD1126F921C780FD0072607D /* PBXTargetDependency */,
 				FDC156F921C5359C00E04B44 /* PBXTargetDependency */,
 			);
 			name = SourceryWorker;
@@ -3412,11 +2549,9 @@
 				FDEC121F21C688EE00CB7DAD /* PBXTargetDependency */,
 				FDEC122321C688F900CB7DAD /* PBXTargetDependency */,
 				FDEC122721C6890500CB7DAD /* PBXTargetDependency */,
-				FD11266B21C6899D0072607D /* PBXTargetDependency */,
-				FD11266F21C6899D0072607D /* PBXTargetDependency */,
-				FD11267621C689AF0072607D /* PBXTargetDependency */,
 				FD11267A21C689AF0072607D /* PBXTargetDependency */,
 				FD11267E21C689AF0072607D /* PBXTargetDependency */,
+				FD1126E021C77F060072607D /* PBXTargetDependency */,
 			);
 			name = Automate;
 			productName = Automate;
@@ -3572,10 +2707,8 @@
 			);
 			dependencies = (
 				OBJ_388 /* PBXTargetDependency */,
-				OBJ_389 /* PBXTargetDependency */,
 				OBJ_390 /* PBXTargetDependency */,
 				OBJ_391 /* PBXTargetDependency */,
-				OBJ_392 /* PBXTargetDependency */,
 				OBJ_393 /* PBXTargetDependency */,
 				OBJ_394 /* PBXTargetDependency */,
 				OBJ_395 /* PBXTargetDependency */,
@@ -3590,145 +2723,6 @@
 			productName = GitTests;
 			productReference = "highway::GitTests::Product" /* GitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		"highway::HWKit" /* HWKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_403 /* Build configuration list for PBXNativeTarget "HWKit" */;
-			buildPhases = (
-				OBJ_406 /* Sources */,
-				OBJ_420 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_432 /* PBXTargetDependency */,
-				OBJ_433 /* PBXTargetDependency */,
-				OBJ_434 /* PBXTargetDependency */,
-				OBJ_435 /* PBXTargetDependency */,
-				OBJ_436 /* PBXTargetDependency */,
-				OBJ_438 /* PBXTargetDependency */,
-				OBJ_439 /* PBXTargetDependency */,
-				OBJ_440 /* PBXTargetDependency */,
-				OBJ_441 /* PBXTargetDependency */,
-				OBJ_442 /* PBXTargetDependency */,
-			);
-			name = HWKit;
-			productName = HWKit;
-			productReference = "highway::HWKit::Product" /* HWKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		"highway::HWKitTests" /* HWKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_444 /* Build configuration list for PBXNativeTarget "HWKitTests" */;
-			buildPhases = (
-				OBJ_447 /* Sources */,
-				OBJ_453 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_472 /* PBXTargetDependency */,
-				OBJ_473 /* PBXTargetDependency */,
-				OBJ_474 /* PBXTargetDependency */,
-				OBJ_475 /* PBXTargetDependency */,
-				OBJ_476 /* PBXTargetDependency */,
-				OBJ_477 /* PBXTargetDependency */,
-				OBJ_478 /* PBXTargetDependency */,
-				OBJ_479 /* PBXTargetDependency */,
-				OBJ_480 /* PBXTargetDependency */,
-				OBJ_481 /* PBXTargetDependency */,
-				OBJ_483 /* PBXTargetDependency */,
-				OBJ_484 /* PBXTargetDependency */,
-				OBJ_485 /* PBXTargetDependency */,
-				OBJ_486 /* PBXTargetDependency */,
-				OBJ_487 /* PBXTargetDependency */,
-			);
-			name = HWKitTests;
-			productName = HWKitTests;
-			productReference = "highway::HWKitTests::Product" /* HWKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		"highway::HighwayCore" /* HighwayCore */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_488 /* Build configuration list for PBXNativeTarget "HighwayCore" */;
-			buildPhases = (
-				OBJ_491 /* Sources */,
-				OBJ_507 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_517 /* PBXTargetDependency */,
-				OBJ_518 /* PBXTargetDependency */,
-				OBJ_519 /* PBXTargetDependency */,
-				OBJ_520 /* PBXTargetDependency */,
-				OBJ_522 /* PBXTargetDependency */,
-				OBJ_523 /* PBXTargetDependency */,
-				OBJ_524 /* PBXTargetDependency */,
-				OBJ_525 /* PBXTargetDependency */,
-			);
-			name = HighwayCore;
-			productName = HighwayCore;
-			productReference = "highway::HighwayCore::Product" /* HighwayCore.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		"highway::HighwayCoreTests" /* HighwayCoreTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_527 /* Build configuration list for PBXNativeTarget "HighwayCoreTests" */;
-			buildPhases = (
-				OBJ_530 /* Sources */,
-				OBJ_535 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_553 /* PBXTargetDependency */,
-				OBJ_554 /* PBXTargetDependency */,
-				OBJ_555 /* PBXTargetDependency */,
-				OBJ_556 /* PBXTargetDependency */,
-				OBJ_557 /* PBXTargetDependency */,
-				OBJ_558 /* PBXTargetDependency */,
-				OBJ_559 /* PBXTargetDependency */,
-				OBJ_560 /* PBXTargetDependency */,
-				OBJ_561 /* PBXTargetDependency */,
-				OBJ_562 /* PBXTargetDependency */,
-				OBJ_564 /* PBXTargetDependency */,
-				OBJ_565 /* PBXTargetDependency */,
-				OBJ_566 /* PBXTargetDependency */,
-				OBJ_567 /* PBXTargetDependency */,
-			);
-			name = HighwayCoreTests;
-			productName = HighwayCoreTests;
-			productReference = "highway::HighwayCoreTests::Product" /* HighwayCoreTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		"highway::HighwayProject" /* HighwayProject */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_568 /* Build configuration list for PBXNativeTarget "HighwayProject" */;
-			buildPhases = (
-				OBJ_571 /* Sources */,
-				OBJ_573 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_587 /* PBXTargetDependency */,
-				OBJ_588 /* PBXTargetDependency */,
-				OBJ_589 /* PBXTargetDependency */,
-				OBJ_590 /* PBXTargetDependency */,
-				OBJ_591 /* PBXTargetDependency */,
-				OBJ_592 /* PBXTargetDependency */,
-				OBJ_593 /* PBXTargetDependency */,
-				OBJ_595 /* PBXTargetDependency */,
-				OBJ_596 /* PBXTargetDependency */,
-				OBJ_597 /* PBXTargetDependency */,
-				OBJ_598 /* PBXTargetDependency */,
-				OBJ_599 /* PBXTargetDependency */,
-			);
-			name = HighwayProject;
-			productName = HighwayProject;
-			productReference = "highway::HighwayProject::Product" /* HighwayProject.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 		"highway::Keychain" /* Keychain */ = {
 			isa = PBXNativeTarget;
@@ -3818,10 +2812,8 @@
 			);
 			dependencies = (
 				OBJ_677 /* PBXTargetDependency */,
-				OBJ_678 /* PBXTargetDependency */,
 				OBJ_679 /* PBXTargetDependency */,
 				OBJ_680 /* PBXTargetDependency */,
-				OBJ_681 /* PBXTargetDependency */,
 				OBJ_682 /* PBXTargetDependency */,
 				OBJ_683 /* PBXTargetDependency */,
 				OBJ_684 /* PBXTargetDependency */,
@@ -3863,11 +2855,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				FD0F7C912188870E00F84604 /* PBXTargetDependency */,
 				FD0F7C73218885C000F84604 /* PBXTargetDependency */,
-				OBJ_719 /* PBXTargetDependency */,
 				OBJ_720 /* PBXTargetDependency */,
-				OBJ_721 /* PBXTargetDependency */,
 				OBJ_722 /* PBXTargetDependency */,
 				OBJ_723 /* PBXTargetDependency */,
 				OBJ_724 /* PBXTargetDependency */,
@@ -3895,6 +2884,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD1126FC21C7830B0072607D /* PBXTargetDependency */,
 				FD0F7C712188859900F84604 /* PBXTargetDependency */,
 				OBJ_759 /* PBXTargetDependency */,
 				OBJ_760 /* PBXTargetDependency */,
@@ -3918,10 +2908,8 @@
 			);
 			dependencies = (
 				OBJ_794 /* PBXTargetDependency */,
-				OBJ_795 /* PBXTargetDependency */,
 				OBJ_796 /* PBXTargetDependency */,
 				OBJ_797 /* PBXTargetDependency */,
-				OBJ_798 /* PBXTargetDependency */,
 				OBJ_799 /* PBXTargetDependency */,
 				OBJ_800 /* PBXTargetDependency */,
 				OBJ_801 /* PBXTargetDependency */,
@@ -3966,10 +2954,8 @@
 			);
 			dependencies = (
 				OBJ_853 /* PBXTargetDependency */,
-				OBJ_854 /* PBXTargetDependency */,
 				OBJ_855 /* PBXTargetDependency */,
 				OBJ_856 /* PBXTargetDependency */,
-				OBJ_857 /* PBXTargetDependency */,
 				OBJ_858 /* PBXTargetDependency */,
 				OBJ_859 /* PBXTargetDependency */,
 				OBJ_860 /* PBXTargetDependency */,
@@ -4056,10 +3042,8 @@
 			dependencies = (
 				OBJ_990 /* PBXTargetDependency */,
 				OBJ_992 /* PBXTargetDependency */,
-				OBJ_993 /* PBXTargetDependency */,
 				OBJ_994 /* PBXTargetDependency */,
 				OBJ_995 /* PBXTargetDependency */,
-				OBJ_996 /* PBXTargetDependency */,
 				OBJ_997 /* PBXTargetDependency */,
 				OBJ_998 /* PBXTargetDependency */,
 				OBJ_999 /* PBXTargetDependency */,
@@ -4084,6 +3068,17 @@
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				TargetAttributes = {
+					FD1126CB21C77F050072607D = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = WWFDRU947Q;
+						ProvisioningStyle = Automatic;
+					};
+					FD1126D321C77F050072607D = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = WWFDRU947Q;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FDEC118621C65D9200CB7DAD;
+					};
 					FDC156DA21C5347C00E04B44 = {
 						CreatedOnToolsVersion = 10.1;
 						DevelopmentTeam = WWFDRU947Q;
@@ -4124,18 +3119,6 @@
 						LastSwiftMigration = 1000;
 					};
 					"highway::Git" = {
-						DevelopmentTeam = WWFDRU947Q;
-						LastSwiftMigration = 1000;
-					};
-					"highway::HWKit" = {
-						DevelopmentTeam = WWFDRU947Q;
-						LastSwiftMigration = 1000;
-					};
-					"highway::HighwayCore" = {
-						DevelopmentTeam = WWFDRU947Q;
-						LastSwiftMigration = 1000;
-					};
-					"highway::HighwayProject" = {
 						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 					};
@@ -4197,6 +3180,7 @@
 			targets = (
 				FDEC118621C65D9200CB7DAD /* Automate */,
 				"highway::Arguments" /* Arguments */,
+				FD1126CB21C77F050072607D /* SignPost */,
 				"highway::Terminal" /* Terminal */,
 				"highway::Task" /* Task */,
 				"highway::SourceryAutoProtocols" /* SourceryAutoProtocols */,
@@ -4210,16 +3194,11 @@
 				"highway::Result" /* Result */,
 				"highway::SourceryMocks" /* SourceryMocks */,
 				"highway::Git" /* Git */,
-				"highway::HWKit" /* HWKit */,
-				"highway::HighwayCore" /* HighwayCore */,
-				"highway::HighwayProject" /* HighwayProject */,
 				FDE9B6F621C58ED400D1F50A /* SourceryAutoProtocols-iOS */,
 				FDEC119721C65D9400CB7DAD /* AutomateTests */,
 				"highway::ArgumentsTests" /* ArgumentsTests */,
 				"highway::DeliverTests" /* DeliverTests */,
 				"highway::GitTests" /* GitTests */,
-				"highway::HWKitTests" /* HWKitTests */,
-				"highway::HighwayCoreTests" /* HighwayCoreTests */,
 				"highway::POSIXTests" /* POSIXTests */,
 				"highway::ResultTests" /* ResultTests */,
 				"highway::TaskTests" /* TaskTests */,
@@ -4227,6 +3206,7 @@
 				"highway::UrlTests" /* UrlTests */,
 				"highway::XCBuildTests" /* XCBuildTests */,
 				FDC156E221C5347D00E04B44 /* SourceryWorkerTests */,
+				FD1126D321C77F050072607D /* SignPostTests */,
 			);
 		};
 /* End PBXProject section */
@@ -4263,6 +3243,20 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FD1126CA21C77F050072607D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD1126D221C77F050072607D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDC156D921C5347C00E04B44 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -4324,6 +3318,33 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FD1126C821C77F050072607D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD1126EB21C77F8F0072607D /* Line.swift in Sources */,
+				FD1126EC21C77F920072607D /* List.swift in Sources */,
+				FD1126F021C77FAA0072607D /* Text.swift in Sources */,
+				FD1126F321C77FAA0072607D /* Texts+Operators.swift in Sources */,
+				FD1126E921C77F7E0072607D /* SignPost.swift in Sources */,
+				FD1126EE21C77FAA0072607D /* SubText.swift in Sources */,
+				FD1126EA21C77F8B0072607D /* Printable.swift in Sources */,
+				FD1126F421C77FE60072607D /* FileStream.swift in Sources */,
+				FD1126EF21C77FAA0072607D /* String+Convenience.swift in Sources */,
+				FD1126ED21C77F970072607D /* Prompt.swift in Sources */,
+				FD1126F221C77FAA0072607D /* Texts+Printable.swift in Sources */,
+				FD1126F121C77FAA0072607D /* Color.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD1126D021C77F050072607D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD1126DC21C77F060072607D /* SignPostTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDC156D721C5347C00E04B44 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -4434,81 +3455,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_406 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_407 /* Bootstraper.swift in Sources */,
-				OBJ_408 /* HomeBundle.swift in Sources */,
-				OBJ_409 /* HighwayBundle+Creating.swift in Sources */,
-				FD326D9C210A094300AE3A98 /* BuildResult.swift in Sources */,
-				OBJ_410 /* HighwayProjectTool.swift in Sources */,
-				OBJ_411 /* HomeBundleUpdater.swift in Sources */,
-				OBJ_412 /* SelfUpdater.swift in Sources */,
-				OBJ_413 /* SwiftBuildSystem-Bundle.swift in Sources */,
-				OBJ_414 /* XCProjectGenerator.swift in Sources */,
-				OBJ_415 /* InitOptions.swift in Sources */,
-				OBJ_416 /* gitignore_template.swift in Sources */,
-				OBJ_417 /* main_swift_subtype_xcode_template.swift in Sources */,
-				OBJ_418 /* package_swift_template.swift in Sources */,
-				OBJ_419 /* xcconfig_template.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_447 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_448 /* BootstraperTests.swift in Sources */,
-				OBJ_449 /* HighwayBundleCreatorTests.swift in Sources */,
-				OBJ_450 /* HomeBundleTests.swift in Sources */,
-				OBJ_451 /* InitOptionsTests.swift in Sources */,
-				OBJ_452 /* SwiftBuildSystem_HighwayBundleTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_491 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_492 /* HighwayBundle.swift in Sources */,
-				OBJ_493 /* Context.swift in Sources */,
-				OBJ_494 /* Fastlane.swift in Sources */,
-				OBJ_495 /* SwiftBuildSystem.swift in Sources */,
-				OBJ_496 /* SwiftOptions.swift in Sources */,
-				OBJ_497 /* SwiftPackageTool.swift in Sources */,
-				FD326D9A2109FB8F00AE3A98 /* Configuration.swift in Sources */,
-				OBJ_498 /* SwiftRunTool.swift in Sources */,
-				OBJ_499 /* Env.swift in Sources */,
-				OBJ_500 /* OrderedDictionary.swift in Sources */,
-				OBJ_501 /* String+Convenience.swift in Sources */,
-				OBJ_502 /* HighwayDescription.swift in Sources */,
-				OBJ_503 /* HighwayTypeProtocol.swift in Sources */,
-				OBJ_504 /* Invocation.swift in Sources */,
-				OBJ_505 /* InvocationProvider.swift in Sources */,
-				OBJ_506 /* _Highway.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_530 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_531 /* HighwayBundleTests.swift in Sources */,
-				OBJ_532 /* HighwaysTests.swift in Sources */,
-				OBJ_533 /* FileHandle+Convenience.swift in Sources */,
-				OBJ_534 /* SwiftBuildSystemTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_571 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_572 /* Highway.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		OBJ_603 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
@@ -4571,29 +3517,17 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_738 /* PathEnvironmentParser.swift in Sources */,
-				FDC1571521C549C200E04B44 /* UI.swift in Sources */,
-				FDC1572321C54B1200E04B44 /* String+Convenience.swift in Sources */,
-				FDC1571D21C54A7F00E04B44 /* Texts+Operators.swift in Sources */,
 				OBJ_739 /* SystemExecutableProvider.swift in Sources */,
-				FDC1571B21C54A7F00E04B44 /* SubText.swift in Sources */,
 				OBJ_740 /* SystemExecutor.swift in Sources */,
-				FDC1571A21C54A7F00E04B44 /* Color.swift in Sources */,
-				FDC1571C21C54A7F00E04B44 /* Text.swift in Sources */,
-				FDC1571821C54A7B00E04B44 /* Texts+Printable.swift in Sources */,
-				OBJ_741 /* TaskExecutorProtocol.swift in Sources */,
 				OBJ_742 /* LocalSystem.swift in Sources */,
 				OBJ_743 /* Channel+Reader.swift in Sources */,
-				FDC1572021C54A8900E04B44 /* Line.swift in Sources */,
 				OBJ_744 /* Channel+Writer.swift in Sources */,
 				OBJ_745 /* Channel.swift in Sources */,
 				OBJ_746 /* IO.swift in Sources */,
 				OBJ_747 /* State.swift in Sources */,
-				FDC1572121C54A8900E04B44 /* List.swift in Sources */,
 				OBJ_748 /* Task.swift in Sources */,
 				OBJ_749 /* Termination.swift in Sources */,
 				OBJ_750 /* SystemProtocol.swift in Sources */,
-				FDC1571721C54A5F00E04B44 /* Printable.swift in Sources */,
-				FDC1572221C54A8900E04B44 /* Prompt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4614,12 +3548,10 @@
 			buildActionMask = 0;
 			files = (
 				FD34F43121BEE9EB0052222C /* GitExecutables.swift in Sources */,
-				OBJ_813 /* FileStream.swift in Sources */,
 				FD34F42B21BEE91C0052222C /* ExcecutableProtocol.swift in Sources */,
 				FD34F42F21BEE9EB0052222C /* CDToFolderExecutable.swift in Sources */,
 				FD34F42A21BEE8E20052222C /* TerminalSysExitCode.swift in Sources */,
 				FD34F42821BEE8D50052222C /* TerminalTasks.swift in Sources */,
-				FDEC11EF21C67ACE00CB7DAD /* HighwaySignpost.swift in Sources */,
 				FD34F43021BEE9EB0052222C /* CatExecutable.swift in Sources */,
 				FD34F42721BEE8CA0052222C /* TerminalWorker.swift in Sources */,
 			);
@@ -4691,26 +3623,6 @@
 			target = "highway::Keychain" /* Keychain */;
 			targetProxy = FD0F7C72218885C000F84604 /* PBXContainerItemProxy */;
 		};
-		FD0F7C912188870E00F84604 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HWKit" /* HWKit */;
-			targetProxy = FD0F7C902188870E00F84604 /* PBXContainerItemProxy */;
-		};
-		FD11266B21C6899D0072607D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HighwayProject" /* HighwayProject */;
-			targetProxy = FD11266A21C6899D0072607D /* PBXContainerItemProxy */;
-		};
-		FD11266F21C6899D0072607D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HighwayCore" /* HighwayCore */;
-			targetProxy = FD11266E21C6899D0072607D /* PBXContainerItemProxy */;
-		};
-		FD11267621C689AF0072607D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HWKit" /* HWKit */;
-			targetProxy = FD11267521C689AF0072607D /* PBXContainerItemProxy */;
-		};
 		FD11267A21C689AF0072607D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::Keychain" /* Keychain */;
@@ -4720,6 +3632,36 @@
 			isa = PBXTargetDependency;
 			target = "highway::Deliver" /* Deliver */;
 			targetProxy = FD11267D21C689AF0072607D /* PBXContainerItemProxy */;
+		};
+		FD1126D721C77F050072607D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD1126CB21C77F050072607D /* SignPost */;
+			targetProxy = FD1126D621C77F050072607D /* PBXContainerItemProxy */;
+		};
+		FD1126D921C77F060072607D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDEC118621C65D9200CB7DAD /* Automate */;
+			targetProxy = FD1126D821C77F060072607D /* PBXContainerItemProxy */;
+		};
+		FD1126E021C77F060072607D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD1126CB21C77F050072607D /* SignPost */;
+			targetProxy = FD1126DF21C77F060072607D /* PBXContainerItemProxy */;
+		};
+		FD1126F621C780DA0072607D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			targetProxy = FD1126F521C780DA0072607D /* PBXContainerItemProxy */;
+		};
+		FD1126F921C780FD0072607D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD1126CB21C77F050072607D /* SignPost */;
+			targetProxy = FD1126F821C780FD0072607D /* PBXContainerItemProxy */;
+		};
+		FD1126FC21C7830B0072607D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD1126CB21C77F050072607D /* SignPost */;
+			targetProxy = FD1126FB21C7830B0072607D /* PBXContainerItemProxy */;
 		};
 		FDC156E621C5347D00E04B44 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4961,11 +3903,6 @@
 			target = "highway::SourceryMocks" /* SourceryMocks */;
 			targetProxy = FD326D092109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
-		OBJ_389 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HighwayProject" /* HighwayProject */;
-			targetProxy = FD326D0A2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
 		OBJ_390 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::XCBuild" /* XCBuild */;
@@ -4975,11 +3912,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::Deliver" /* Deliver */;
 			targetProxy = FD326D0C2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_392 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HighwayCore" /* HighwayCore */;
-			targetProxy = FD326D0D2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_393 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -5025,301 +3957,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
 			targetProxy = FD326D172109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_432 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HighwayCore" /* HighwayCore */;
-			targetProxy = FD326C762109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_433 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::POSIX" /* POSIX */;
-			targetProxy = FD326C902109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_434 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Git" /* Git */;
-			targetProxy = FD326C912109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_435 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Task" /* Task */;
-			targetProxy = FD326C9A2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_436 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Result" /* Result */;
-			targetProxy = FD326C9B2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_438 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Terminal" /* Terminal */;
-			targetProxy = FD326C9D2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_439 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Url" /* Url */;
-			targetProxy = FD326C9E2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_440 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Arguments" /* Arguments */;
-			targetProxy = FD326C9F2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_441 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Errors" /* Errors */;
-			targetProxy = FD326CA02109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_442 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
-			targetProxy = FD326CA12109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_472 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryMocks" /* SourceryMocks */;
-			targetProxy = FD326D412109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_473 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HighwayProject" /* HighwayProject */;
-			targetProxy = FD326D422109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_474 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::XCBuild" /* XCBuild */;
-			targetProxy = FD326D432109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_475 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Deliver" /* Deliver */;
-			targetProxy = FD326D442109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_476 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HWKit" /* HWKit */;
-			targetProxy = FD326D452109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_477 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HighwayCore" /* HighwayCore */;
-			targetProxy = FD326D462109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_478 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::POSIX" /* POSIX */;
-			targetProxy = FD326D472109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_479 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Git" /* Git */;
-			targetProxy = FD326D482109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_480 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Task" /* Task */;
-			targetProxy = FD326D492109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_481 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Result" /* Result */;
-			targetProxy = FD326D4A2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_483 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Terminal" /* Terminal */;
-			targetProxy = FD326D4C2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_484 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Url" /* Url */;
-			targetProxy = FD326D4D2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_485 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Arguments" /* Arguments */;
-			targetProxy = FD326D4E2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_486 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Errors" /* Errors */;
-			targetProxy = FD326D4F2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_487 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
-			targetProxy = FD326D502109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_517 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Task" /* Task */;
-			targetProxy = FD326C772109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_518 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Arguments" /* Arguments */;
-			targetProxy = FD326C862109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_519 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Result" /* Result */;
-			targetProxy = FD326C872109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_520 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Errors" /* Errors */;
-			targetProxy = FD326C882109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_522 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Terminal" /* Terminal */;
-			targetProxy = FD326C8A2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_523 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::POSIX" /* POSIX */;
-			targetProxy = FD326C8B2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_524 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Url" /* Url */;
-			targetProxy = FD326C8E2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_525 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
-			targetProxy = FD326C8F2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_553 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryMocks" /* SourceryMocks */;
-			targetProxy = FD326CF92109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_554 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HighwayProject" /* HighwayProject */;
-			targetProxy = FD326CFA2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_555 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::XCBuild" /* XCBuild */;
-			targetProxy = FD326CFB2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_556 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Deliver" /* Deliver */;
-			targetProxy = FD326CFC2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_557 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Git" /* Git */;
-			targetProxy = FD326CFD2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_558 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HighwayCore" /* HighwayCore */;
-			targetProxy = FD326CFE2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_559 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Task" /* Task */;
-			targetProxy = FD326CFF2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_560 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Arguments" /* Arguments */;
-			targetProxy = FD326D002109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_561 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Result" /* Result */;
-			targetProxy = FD326D012109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_562 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Errors" /* Errors */;
-			targetProxy = FD326D022109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_564 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Terminal" /* Terminal */;
-			targetProxy = FD326D042109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_565 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::POSIX" /* POSIX */;
-			targetProxy = FD326D052109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_566 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Url" /* Url */;
-			targetProxy = FD326D062109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_567 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
-			targetProxy = FD326D072109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_587 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::XCBuild" /* XCBuild */;
-			targetProxy = FD326CB52109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_588 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HighwayCore" /* HighwayCore */;
-			targetProxy = FD326CB62109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_589 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Deliver" /* Deliver */;
-			targetProxy = FD326CB72109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_590 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::POSIX" /* POSIX */;
-			targetProxy = FD326CC12109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_591 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Git" /* Git */;
-			targetProxy = FD326CC22109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_592 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Task" /* Task */;
-			targetProxy = FD326CC32109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_593 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Result" /* Result */;
-			targetProxy = FD326CC42109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_595 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Terminal" /* Terminal */;
-			targetProxy = FD326CC62109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_596 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Url" /* Url */;
-			targetProxy = FD326CC72109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_597 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Arguments" /* Arguments */;
-			targetProxy = FD326CC82109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_598 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Errors" /* Errors */;
-			targetProxy = FD326CC92109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_599 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
-			targetProxy = FD326CCA2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_614 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -5391,11 +4028,6 @@
 			target = "highway::SourceryMocks" /* SourceryMocks */;
 			targetProxy = FD326D2D2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
-		OBJ_678 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HighwayProject" /* HighwayProject */;
-			targetProxy = FD326D2E2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
 		OBJ_679 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::XCBuild" /* XCBuild */;
@@ -5405,11 +4037,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::Deliver" /* Deliver */;
 			targetProxy = FD326D302109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_681 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HighwayCore" /* HighwayCore */;
-			targetProxy = FD326D312109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_682 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -5456,20 +4083,10 @@
 			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
 			targetProxy = FD326D3B2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
-		OBJ_719 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HighwayProject" /* HighwayProject */;
-			targetProxy = FD326CB42109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
 		OBJ_720 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::XCBuild" /* XCBuild */;
 			targetProxy = FD326CCB2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_721 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HighwayCore" /* HighwayCore */;
-			targetProxy = FD326CCC2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_722 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -5551,11 +4168,6 @@
 			target = "highway::SourceryMocks" /* SourceryMocks */;
 			targetProxy = FD326D522109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
-		OBJ_795 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HighwayProject" /* HighwayProject */;
-			targetProxy = FD326D532109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
 		OBJ_796 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::XCBuild" /* XCBuild */;
@@ -5565,11 +4177,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::Deliver" /* Deliver */;
 			targetProxy = FD326D552109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_798 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HighwayCore" /* HighwayCore */;
-			targetProxy = FD326D562109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_799 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -5626,11 +4233,6 @@
 			target = "highway::SourceryMocks" /* SourceryMocks */;
 			targetProxy = FD326D622109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
-		OBJ_854 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HighwayProject" /* HighwayProject */;
-			targetProxy = FD326D632109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
 		OBJ_855 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::XCBuild" /* XCBuild */;
@@ -5640,11 +4242,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::Deliver" /* Deliver */;
 			targetProxy = FD326D652109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_857 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HighwayCore" /* HighwayCore */;
-			targetProxy = FD326D662109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_858 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -5756,11 +4353,6 @@
 			target = "highway::SourceryMocks" /* SourceryMocks */;
 			targetProxy = FD326D1D2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
-		OBJ_993 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HighwayProject" /* HighwayProject */;
-			targetProxy = FD326D1E2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
 		OBJ_994 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::XCBuild" /* XCBuild */;
@@ -5770,11 +4362,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::Deliver" /* Deliver */;
 			targetProxy = FD326D202109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_996 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::HighwayCore" /* HighwayCore */;
-			targetProxy = FD326D212109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_997 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -5805,6 +4392,172 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FD1126E421C77F060072607D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WWFDRU947Q;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Sources/SignPost/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SignPost;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FD1126E521C77F060072607D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WWFDRU947Q;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Sources/SignPost/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SignPost;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FD1126E721C77F060072607D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = WWFDRU947Q;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Tests/SignPostTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SignPostTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Automate.app/Contents/MacOS/Automate";
+			};
+			name = Debug;
+		};
+		FD1126E821C77F060072607D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = WWFDRU947Q;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Tests/SignPostTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SignPostTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Automate.app/Contents/MacOS/Automate";
+			};
+			name = Release;
+		};
 		FDC156ED21C5347D00E04B44 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -6542,7 +5295,6 @@
 		OBJ_364 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = $inherited;
@@ -6559,7 +5311,6 @@
 		OBJ_365 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = $inherited;
@@ -6617,212 +5368,6 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				USE_HEADERMAP = NO;
-			};
-			name = Release;
-		};
-		OBJ_404 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = HWKit;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = HWKit;
-			};
-			name = Debug;
-		};
-		OBJ_405 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = HWKit;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = HWKit;
-			};
-			name = Release;
-		};
-		OBJ_445 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = HWKitTests;
-			};
-			name = Debug;
-		};
-		OBJ_446 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = HWKitTests;
-			};
-			name = Release;
-		};
-		OBJ_489 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = HighwayCore;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = HighwayCore;
-			};
-			name = Debug;
-		};
-		OBJ_490 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = HighwayCore;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = HighwayCore;
-			};
-			name = Release;
-		};
-		OBJ_528 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = HighwayCoreTests;
-			};
-			name = Debug;
-		};
-		OBJ_529 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = HighwayCoreTests;
-			};
-			name = Release;
-		};
-		OBJ_569 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = HighwayProject;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = HighwayProject;
-			};
-			name = Debug;
-		};
-		OBJ_570 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = HighwayProject;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = HighwayProject;
 			};
 			name = Release;
 		};
@@ -7001,7 +5546,6 @@
 		OBJ_655 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = $inherited;
@@ -7018,7 +5562,6 @@
 		OBJ_656 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = $inherited;
@@ -7171,7 +5714,6 @@
 		OBJ_768 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = $inherited;
@@ -7188,7 +5730,6 @@
 		OBJ_769 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = $inherited;
@@ -7251,7 +5792,6 @@
 		OBJ_831 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = $inherited;
@@ -7268,7 +5808,6 @@
 		OBJ_832 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = $inherited;
@@ -7411,7 +5950,6 @@
 		OBJ_967 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = $inherited;
@@ -7428,7 +5966,6 @@
 		OBJ_968 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = $inherited;
@@ -7445,6 +5982,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FD1126E321C77F060072607D /* Build configuration list for PBXNativeTarget "SignPost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD1126E421C77F060072607D /* Debug */,
+				FD1126E521C77F060072607D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD1126E621C77F060072607D /* Build configuration list for PBXNativeTarget "SignPostTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD1126E721C77F060072607D /* Debug */,
+				FD1126E821C77F060072607D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FDC156EC21C5347D00E04B44 /* Build configuration list for PBXNativeTarget "SourceryWorker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -7558,51 +6113,6 @@
 			buildConfigurations = (
 				OBJ_364 /* Debug */,
 				OBJ_365 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_403 /* Build configuration list for PBXNativeTarget "HWKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_404 /* Debug */,
-				OBJ_405 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_444 /* Build configuration list for PBXNativeTarget "HWKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_445 /* Debug */,
-				OBJ_446 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_488 /* Build configuration list for PBXNativeTarget "HighwayCore" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_489 /* Debug */,
-				OBJ_490 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_527 /* Build configuration list for PBXNativeTarget "HighwayCoreTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_528 /* Debug */,
-				OBJ_529 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_568 /* Build configuration list for PBXNativeTarget "HighwayProject" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_569 /* Debug */,
-				OBJ_570 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
