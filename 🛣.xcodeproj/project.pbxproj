@@ -46,6 +46,9 @@
 		FD34F42F21BEE9EB0052222C /* CDToFolderExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34F42C21BEE9EB0052222C /* CDToFolderExecutable.swift */; };
 		FD34F43021BEE9EB0052222C /* CatExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34F42D21BEE9EB0052222C /* CatExecutable.swift */; };
 		FD34F43121BEE9EB0052222C /* GitExecutables.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34F42E21BEE9EB0052222C /* GitExecutables.swift */; };
+		FD3E948821C79E4000EA791C /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3E948521C79E3200EA791C /* ZFile.framework */; };
+		FD3E948921C79E4000EA791C /* ZFile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3E948521C79E3200EA791C /* ZFile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD3E949821C79F7200EA791C /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3E948521C79E3200EA791C /* ZFile.framework */; };
 		FDAC932A210B595100B0D045 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		FDC156E421C5347D00E04B44 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
 		FDC156E921C5347D00E04B44 /* SourceryWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC156E821C5347D00E04B44 /* SourceryWorkerTests.swift */; };
@@ -1216,6 +1219,83 @@
 			remoteGlobalIDString = "highway::SourceryAutoProtocols";
 			remoteInfo = SourceryAutoProtocols;
 		};
+		FD3E948021C79E3200EA791C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD3E947921C79E3200EA791C /* ZFile.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD737D9221B03BD3001BB507;
+			remoteInfo = "ZFile-iOS";
+		};
+		FD3E948221C79E3200EA791C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD3E947921C79E3200EA791C /* ZFile.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD737D9B21B03BD3001BB507;
+			remoteInfo = ZFileTests;
+		};
+		FD3E948421C79E3200EA791C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD3E947921C79E3200EA791C /* ZFile.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD737DC021B03D25001BB507;
+			remoteInfo = "ZFile-macos";
+		};
+		FD3E948621C79E3200EA791C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD3E947921C79E3200EA791C /* ZFile.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD737DD221B03DC4001BB507;
+			remoteInfo = ZFile_macosTests;
+		};
+		FD3E948A21C79E4000EA791C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD3E947921C79E3200EA791C /* ZFile.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FD737DBF21B03D25001BB507;
+			remoteInfo = "ZFile-macos";
+		};
+		FD3E948C21C79E9A00EA791C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD3E947921C79E3200EA791C /* ZFile.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FD737DBF21B03D25001BB507;
+			remoteInfo = "ZFile-macos";
+		};
+		FD3E948E21C79EAD00EA791C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD3E947921C79E3200EA791C /* ZFile.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FD737DBF21B03D25001BB507;
+			remoteInfo = "ZFile-macos";
+		};
+		FD3E949021C79EBF00EA791C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD3E947921C79E3200EA791C /* ZFile.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FD737DBF21B03D25001BB507;
+			remoteInfo = "ZFile-macos";
+		};
+		FD3E949221C79EEC00EA791C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD3E947921C79E3200EA791C /* ZFile.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FD737DBF21B03D25001BB507;
+			remoteInfo = "ZFile-macos";
+		};
+		FD3E949421C79F1700EA791C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD3E947921C79E3200EA791C /* ZFile.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FD737DBF21B03D25001BB507;
+			remoteInfo = "ZFile-macos";
+		};
+		FD3E949621C79F6500EA791C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD3E947921C79E3200EA791C /* ZFile.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FD737DBF21B03D25001BB507;
+			remoteInfo = "ZFile-macos";
+		};
 		FDC156E521C5347D00E04B44 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1339,6 +1419,7 @@
 				FDEC120921C6871900CB7DAD /* Terminal.framework in Embed Frameworks */,
 				FD11267821C689AF0072607D /* Keychain.framework in Embed Frameworks */,
 				FDEC120321C686AF00CB7DAD /* Arguments.framework in Embed Frameworks */,
+				FD3E948921C79E4000EA791C /* ZFile.framework in Embed Frameworks */,
 				FDEC122121C688F900CB7DAD /* XCBuild.framework in Embed Frameworks */,
 				FDEC122521C6890500CB7DAD /* Git.framework in Embed Frameworks */,
 				FD1126E221C77F060072607D /* SignPost.framework in Embed Frameworks */,
@@ -1368,6 +1449,7 @@
 		FD34F42C21BEE9EB0052222C /* CDToFolderExecutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDToFolderExecutable.swift; sourceTree = "<group>"; };
 		FD34F42D21BEE9EB0052222C /* CatExecutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatExecutable.swift; sourceTree = "<group>"; };
 		FD34F42E21BEE9EB0052222C /* GitExecutables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitExecutables.swift; sourceTree = "<group>"; };
+		FD3E947921C79E3200EA791C /* ZFile.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZFile.xcodeproj; path = Carthage/Checkouts/zfile/sources/ZFile.xcodeproj; sourceTree = "<group>"; };
 		FDAC932C210B5C4500B0D045 /* ExcecutableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcecutableProtocol.swift; sourceTree = "<group>"; };
 		FDAC9350210B7D4A00B0D045 /* TerminalTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminalTasks.swift; sourceTree = "<group>"; };
 		FDC156B621C52EE800E04B44 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -1548,6 +1630,7 @@
 				FD11267721C689AF0072607D /* Keychain.framework in Frameworks */,
 				FDEC122421C6890500CB7DAD /* Git.framework in Frameworks */,
 				FDEC122021C688F900CB7DAD /* XCBuild.framework in Frameworks */,
+				FD3E948821C79E4000EA791C /* ZFile.framework in Frameworks */,
 				FD1126E121C77F060072607D /* SignPost.framework in Frameworks */,
 				FDEC121021C687E600CB7DAD /* Errors.framework in Frameworks */,
 			);
@@ -1814,6 +1897,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				FD3E949821C79F7200EA791C /* ZFile.framework in Frameworks */,
 				OBJ_947 /* Task.framework in Frameworks */,
 				OBJ_948 /* Arguments.framework in Frameworks */,
 				OBJ_949 /* Result.framework in Frameworks */,
@@ -1887,6 +1971,17 @@
 				FD34F42221BEE5340052222C /* ZFile.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD3E947A21C79E3200EA791C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD3E948121C79E3200EA791C /* ZFile.framework */,
+				FD3E948321C79E3200EA791C /* ZFileTests.xctest */,
+				FD3E948521C79E3200EA791C /* ZFile.framework */,
+				FD3E948721C79E3200EA791C /* ZFile_macosTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		FDC156DC21C5347C00E04B44 /* SourceryWorker */ = {
@@ -2241,6 +2336,7 @@
 		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
+				FD3E947921C79E3200EA791C /* ZFile.xcodeproj */,
 				FDC1571421C5485900E04B44 /* README.md */,
 				FD326D9E210A0F5F00AE3A98 /* Frameworks */,
 				OBJ_194 /* Products */,
@@ -2423,6 +2519,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD3E949121C79EBF00EA791C /* PBXTargetDependency */,
 				FD1126F921C780FD0072607D /* PBXTargetDependency */,
 				FDC156F921C5359C00E04B44 /* PBXTargetDependency */,
 			);
@@ -2493,6 +2590,7 @@
 				FD11267A21C689AF0072607D /* PBXTargetDependency */,
 				FD11267E21C689AF0072607D /* PBXTargetDependency */,
 				FD1126E021C77F060072607D /* PBXTargetDependency */,
+				FD3E948B21C79E4000EA791C /* PBXTargetDependency */,
 			);
 			name = Automate;
 			productName = Automate;
@@ -2564,6 +2662,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD3E948D21C79E9A00EA791C /* PBXTargetDependency */,
 				OBJ_306 /* PBXTargetDependency */,
 				OBJ_307 /* PBXTargetDependency */,
 				OBJ_308 /* PBXTargetDependency */,
@@ -2624,6 +2723,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD3E948F21C79EAD00EA791C /* PBXTargetDependency */,
 				OBJ_354 /* PBXTargetDependency */,
 				OBJ_355 /* PBXTargetDependency */,
 				OBJ_357 /* PBXTargetDependency */,
@@ -2825,6 +2925,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD3E949321C79EEC00EA791C /* PBXTargetDependency */,
 				FD1126FC21C7830B0072607D /* PBXTargetDependency */,
 				FD0F7C712188859900F84604 /* PBXTargetDependency */,
 				OBJ_759 /* PBXTargetDependency */,
@@ -2876,6 +2977,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD3E949521C79F1700EA791C /* PBXTargetDependency */,
 				FDC156FC21C5363C00E04B44 /* PBXTargetDependency */,
 				OBJ_828 /* PBXTargetDependency */,
 			);
@@ -2957,6 +3059,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD3E949721C79F6500EA791C /* PBXTargetDependency */,
 				OBJ_956 /* PBXTargetDependency */,
 				OBJ_957 /* PBXTargetDependency */,
 				OBJ_958 /* PBXTargetDependency */,
@@ -3111,6 +3214,12 @@
 			mainGroup = OBJ_5;
 			productRefGroup = OBJ_194 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FD3E947A21C79E3200EA791C /* Products */;
+					ProjectRef = FD3E947921C79E3200EA791C /* ZFile.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				FDEC118621C65D9200CB7DAD /* Automate */,
@@ -3145,6 +3254,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		FD3E948121C79E3200EA791C /* ZFile.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ZFile.framework;
+			remoteRef = FD3E948021C79E3200EA791C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3E948321C79E3200EA791C /* ZFileTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ZFileTests.xctest;
+			remoteRef = FD3E948221C79E3200EA791C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3E948521C79E3200EA791C /* ZFile.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ZFile.framework;
+			remoteRef = FD3E948421C79E3200EA791C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3E948721C79E3200EA791C /* ZFile_macosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ZFile_macosTests.xctest;
+			remoteRef = FD3E948621C79E3200EA791C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FD1126CA21C77F050072607D /* Resources */ = {
@@ -3566,6 +3706,41 @@
 			isa = PBXTargetDependency;
 			target = FD1126CB21C77F050072607D /* SignPost */;
 			targetProxy = FD1126FB21C7830B0072607D /* PBXContainerItemProxy */;
+		};
+		FD3E948B21C79E4000EA791C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ZFile-macos";
+			targetProxy = FD3E948A21C79E4000EA791C /* PBXContainerItemProxy */;
+		};
+		FD3E948D21C79E9A00EA791C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ZFile-macos";
+			targetProxy = FD3E948C21C79E9A00EA791C /* PBXContainerItemProxy */;
+		};
+		FD3E948F21C79EAD00EA791C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ZFile-macos";
+			targetProxy = FD3E948E21C79EAD00EA791C /* PBXContainerItemProxy */;
+		};
+		FD3E949121C79EBF00EA791C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ZFile-macos";
+			targetProxy = FD3E949021C79EBF00EA791C /* PBXContainerItemProxy */;
+		};
+		FD3E949321C79EEC00EA791C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ZFile-macos";
+			targetProxy = FD3E949221C79EEC00EA791C /* PBXContainerItemProxy */;
+		};
+		FD3E949521C79F1700EA791C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ZFile-macos";
+			targetProxy = FD3E949421C79F1700EA791C /* PBXContainerItemProxy */;
+		};
+		FD3E949721C79F6500EA791C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ZFile-macos";
+			targetProxy = FD3E949621C79F6500EA791C /* PBXContainerItemProxy */;
 		};
 		FDC156E621C5347D00E04B44 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

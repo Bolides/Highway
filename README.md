@@ -17,11 +17,9 @@ This changed from the original project
 First resolve some dependencies from the xcode project
 
 1. `carthage update --no-build --use-submodules`
-2. `open Carthage/Checkouts/zfile/sources/ZFile.xcodeproj`
-	2.1 `build zfile for macos`// This will output the framework in derived data build folder
-	2.2 (optional) `build zfile for iOS` // Not used in this project
 3. `open 🛣.xcodeproj`
-4. `build Task framework`
+4. `run Automate`
+5. open terminal and run `.build.nosync/Debug/Automate.app/Contents/MacOS/Automate 🤖command:sourcery`
 
 ## Integrate in your project
 
