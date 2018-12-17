@@ -10,7 +10,6 @@ import Task
 import Arguments
 import ZFile
 
-
 public struct GitBranchName: ArgumentExecutableProtocol {
     
     public init() {}
