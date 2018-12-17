@@ -58,7 +58,7 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol {
     }
     
     public init (
-        sourcesFolders: FolderProtocol ...,
+        sourcesFolders: [FolderProtocol],
         templateFolder: FolderProtocol,
         outputFolder: FolderProtocol,
         sourceryAutoProtocolsFile: FileProtocol,
