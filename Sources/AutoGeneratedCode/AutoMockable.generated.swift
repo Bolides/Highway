@@ -1,3 +1,6 @@
+import SourceryWorker
+
+
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
@@ -948,6 +951,26 @@ open class GitToolProtocolMock: GitToolProtocol {
 }
 
 
+// MARK: - ImportProtocolMock
+
+open class ImportProtocolMock: ImportProtocol {
+
+    public init() {}
+
+  public  var name: Set<String> {
+      get { return underlyingName }
+      set(value) { underlyingName = value }
+  }
+  public  var underlyingName: Set<String>!
+  public  var template: String {
+      get { return underlyingTemplate }
+      set(value) { underlyingTemplate = value }
+  }
+  public  var underlyingTemplate: String = "AutoMockable filled value"
+
+}
+
+
 // MARK: - KeychainProtocolMock
 
 open class KeychainProtocolMock: KeychainProtocol {
@@ -1285,6 +1308,11 @@ open class SourceryProtocolMock: SourceryProtocol {
       set(value) { underlyingSourceryYMLFile = value }
   }
   public  var underlyingSourceryYMLFile: FileProtocol!
+  public  var imports: Set<Import> {
+      get { return underlyingImports }
+      set(value) { underlyingImports = value }
+  }
+  public  var underlyingImports: Set<Import>!
 
 
   // MARK: - <executableFile> - parameters

@@ -49,6 +49,7 @@
 		FD3E948821C79E4000EA791C /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3E948521C79E3200EA791C /* ZFile.framework */; };
 		FD3E948921C79E4000EA791C /* ZFile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3E948521C79E3200EA791C /* ZFile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD3E949821C79F7200EA791C /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3E948521C79E3200EA791C /* ZFile.framework */; };
+		FD3E94CF21C8117B00EA791C /* Import.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3E94CE21C8117B00EA791C /* Import.swift */; };
 		FDAC932A210B595100B0D045 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		FDC156E421C5347D00E04B44 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
 		FDC156E921C5347D00E04B44 /* SourceryWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC156E821C5347D00E04B44 /* SourceryWorkerTests.swift */; };
@@ -1450,6 +1451,7 @@
 		FD34F42D21BEE9EB0052222C /* CatExecutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatExecutable.swift; sourceTree = "<group>"; };
 		FD34F42E21BEE9EB0052222C /* GitExecutables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitExecutables.swift; sourceTree = "<group>"; };
 		FD3E947921C79E3200EA791C /* ZFile.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZFile.xcodeproj; path = Carthage/Checkouts/zfile/sources/ZFile.xcodeproj; sourceTree = "<group>"; };
+		FD3E94CE21C8117B00EA791C /* Import.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Import.swift; sourceTree = "<group>"; };
 		FDAC932C210B5C4500B0D045 /* ExcecutableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcecutableProtocol.swift; sourceTree = "<group>"; };
 		FDAC9350210B7D4A00B0D045 /* TerminalTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminalTasks.swift; sourceTree = "<group>"; };
 		FDC156B621C52EE800E04B44 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -1989,6 +1991,7 @@
 			children = (
 				FDC156DE21C5347C00E04B44 /* Info.plist */,
 				FDC156F421C5355400E04B44 /* Sourcery.swift */,
+				FD3E94CE21C8117B00EA791C /* Import.swift */,
 				FDC156F221C5355400E04B44 /* SourceryExecutor.swift */,
 				FD1126C521C7756A0072607D /* SourceryExecutableFile.swift */,
 				FDC156DD21C5347C00E04B44 /* SourceryWorker.h */,
@@ -3397,6 +3400,7 @@
 				FD1126C621C7756A0072607D /* SourceryExecutableFile.swift in Sources */,
 				FDC156F721C5355400E04B44 /* Sourcery.swift in Sources */,
 				FDC156F621C5355400E04B44 /* SourceryWorker.swift in Sources */,
+				FD3E94CF21C8117B00EA791C /* Import.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

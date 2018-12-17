@@ -75,8 +75,7 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol {
         // 3. Run sourcery to generate the protocols
         signPost.message("🧙‍♂️ Generating protocols")
         
-        let output = try terminalWorker.terminal(task: .sourcery(try executor()))
-        signPost.verbose("🧙‍♂️ \(output.joined(separator: "\n"))")
+        signPost.verbose("🧙‍♂️ \(try terminalWorker.terminal(task: .sourcery(try executor())).joined(separator: "\n"))")
 
         // Replace // sourcery:inline: with /// sourcery:inline:
         // Replace // sourcery:end with /// sourcery:end
@@ -99,8 +98,33 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol {
 
         // 5. Run sourcery to generate the mocks
         signPost.message("🧙‍♂️ Generating Mocks for newly generated protocols and refreshing old mocks.")
+        let output = try terminalWorker.terminal(task: .sourcery(try executor()))
         
-        return try terminalWorker.terminal(task: .sourcery(try executor()))
+        // 6. Add imports to templates
+        
+        try sourcery.sourcesFolders.forEach { folder in
+            
+            try folder.makeFileSequence(recursive: true, includeHidden: false).forEach { file in
+                
+                guard let _import = (sourcery.imports.first { file.name.hasPrefix($0.template) }) else { return }
+                
+                var allLines = try file.readAllLines()
+                
+                var importStatements = _import.name.map { "import \($0)"}
+                importStatements.append("\n")
+                
+                allLines = importStatements + allLines
+                
+                guard let data = (allLines.joined(separator: "\n").data(using: .utf8)) else { return }
+                
+                try file.write(data: data)
+                
+            }
+            
+        }
+
+        
+        return output
     }
     
 }
