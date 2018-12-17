@@ -100,30 +100,25 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol {
         signPost.message("🧙‍♂️ Generating Mocks for newly generated protocols and refreshing old mocks.")
         let output = try terminalWorker.terminal(task: .sourcery(try executor()))
         
-        // 6. Add imports to templates
+        // 6. Add imports to output
         
-        try sourcery.sourcesFolders.forEach { folder in
+        try sourcery.outputFolder.makeFileSequence(recursive: true, includeHidden: false).forEach { file in
             
-            try folder.makeFileSequence(recursive: true, includeHidden: false).forEach { file in
-                
-                guard let _import = (sourcery.imports.first { file.name.hasPrefix($0.template) }) else { return }
-                
-                var allLines = try file.readAllLines()
-                
-                var importStatements = _import.name.map { "import \($0)"}
-                importStatements.append("\n")
-                
-                allLines = importStatements + allLines
-                
-                guard let data = (allLines.joined(separator: "\n").data(using: .utf8)) else { return }
-                
-                try file.write(data: data)
-                
-            }
+            guard let _import = (sourcery.imports.first { file.name.hasPrefix($0.template) }) else { return }
+            
+            var allLines = try file.readAllLines()
+            
+            var importStatements = _import.names.map { $0.testable ? "@testable import \($0.name)": "import \($0.name)"}
+            importStatements.append("\n")
+            
+            allLines = importStatements + allLines
+            
+            guard let data = (allLines.joined(separator: "\n").data(using: .utf8)) else { return }
+            
+            try file.write(data: data)
             
         }
 
-        
         return output
     }
     

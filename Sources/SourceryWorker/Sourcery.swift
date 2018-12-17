@@ -20,7 +20,7 @@ public protocol SourceryProtocol: ExecutableProtocol {
     var sourcesFolders: [FolderProtocol] { get }
     var sourceryAutoProtocolsFile: FileProtocol { get }
     var sourceryYMLFile: FileProtocol { get }
-    var imports: Set<Import> { get }
+    var imports: Set<TemplatePrepend> { get }
 
    /// sourcery:end
     
@@ -32,7 +32,7 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol {
     public let sourcesFolders: [FolderProtocol]
     public let sourceryAutoProtocolsFile: FileProtocol
     public let sourceryYMLFile: FileProtocol
-    public let imports: Set<Import>
+    public let imports: Set<TemplatePrepend>
 
     public struct ExecutableNotFoundError: Swift.Error, CustomDebugStringConvertible {
         let message: String
@@ -65,7 +65,7 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol {
         outputFolder: FolderProtocol,
         sourceryAutoProtocolsFile: FileProtocol,
         sourceryYMLFile: FileProtocol,
-        imports: Set<Import>
+        imports: Set<TemplatePrepend>
     ) throws  {
         self.templateFolder = templateFolder
         self.outputFolder = outputFolder
