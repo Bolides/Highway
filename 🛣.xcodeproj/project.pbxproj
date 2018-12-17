@@ -2336,8 +2336,8 @@
 		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
-				FD3E947921C79E3200EA791C /* ZFile.xcodeproj */,
 				FDC1571421C5485900E04B44 /* README.md */,
+				FD3E947921C79E3200EA791C /* ZFile.xcodeproj */,
 				FD326D9E210A0F5F00AE3A98 /* Frameworks */,
 				OBJ_194 /* Products */,
 				OBJ_7 /* Sources */,

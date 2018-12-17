@@ -11,15 +11,15 @@ This changed from the original project
 3. Optimize git workflow from Swift
 4. Generate reliable code using sourcery with a swift command
 
-
 # Usage
 
 First resolve some dependencies from the xcode project
 
 1. `carthage update --no-build --use-submodules`
 3. `open 🛣.xcodeproj`
-4. `run Automate`
+4. `run Automate` (Debug & Release config)
 5. open terminal and run `.build.nosync/Debug/Automate.app/Contents/MacOS/Automate 🤖command:sourcery`
+6. open terminal and run `.build.nosync/Release/Automate.app/Contents/MacOS/Automate 🤖command:sourcery`
 
 ## Integrate in your project
 
@@ -27,10 +27,21 @@ Use [Carthage](https://www.github.com/Carthage/Carthage)
 
 1. Add Cartfile with > `github "doozMen/highway" "master"` // ⚠️ change master to a tag to fix on a version
 2. `carthage update --no-build --use-submodules`
-3. Build the frameworks via xcode or `carthage build``
-4. Set the **framework search path** to `$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)` in the project settings, ⚠️ so not in the target. In the target(s) use `$inherited`
+3. Embed the  `🛣.xcodeproj` file in your project like ZFile.xcodeProj is embeded in `🛣.xcodeproj
+4. Set the **framework search path** to `$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)` in the **GENERAL** project settings,
+
+    > ⚠️ so not in the target. In the target(s) use `$inherited`
+5. Add **macos** `Automate` target
+6. Embed all frameworks from  Highway except the iOS versions
+7. Open the hihway project and drag the ZFile.framework to the frameworks folder in your project
+
+    ![](Assets/ZFileProjectLink.png)
+
+    > 💁🏻‍♂️ By doing an embed of the project folder the dependencies and builds are signed correctly while distributing or debugging
 
 The goal is not to provide an out of the box script. You use the different frameworks to automate your workflow.
+
+Below is an example use case of how the Automate.app is made for the highway project.
 
 # Example use cases
 
