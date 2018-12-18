@@ -39,7 +39,12 @@ struct AutomateSourceryWorker: AutomateSourceryWorkerProtocol, AutoGenerateProto
         var sourcery: SourceryProtocol!
         
         do {
-            let projectFolder = try currentFolder.parentFolder().parentFolder()
+            var projectFolder = try currentFolder.parentFolder().parentFolder()
+
+            if projectFolder.name == "EmbedHighWay" {
+                projectFolder = try projectFolder.parentFolder()
+            }
+            
             sourcery = try AutomateSourceryWorker.sourceryFromFolders(projectFolder, signpost,  try projectFolder.subfolder(named: "Carthage"))
         } catch {
             signpost.message("💁🏻‍♂️ Not running in .build.nosync/Debug folder, trying to run from current folder.")
