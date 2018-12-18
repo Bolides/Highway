@@ -22,11 +22,24 @@ public protocol SourceryWorkerProtocol {
     
 }
 
+/// To generate mocks correctly we have to do a text replacement and run sourcery twice.
+/// This worker will perform the following tasks
+/// 1. Find all files in sourceFolder
+/// 1.1 (Optional) Replace also in individual files
+/// 2. Run sourcery to generate the protocols
+/// 3. Revert Replace occurances
+/// 4. Run sourcery to generate the mocks
+/// 6. Add imports to output
 public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol {
     
     private let sourcery: SourceryProtocol
     private let signPost: SignPostProtocol
     private let terminalWorker: TerminalWorkerProtocol
+    
+    private let mockableInline =  "/// sourcery:inline:"
+    private let mockableEnd = "/// sourcery:end"
+    private let protocolGeneratableInline = "// sourcery:inline:"
+    private let protocolGeneratalbeEnd = "// sourcery:end"
     
     struct Error: Swift.Error {
         let message: String
@@ -44,59 +57,61 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol {
     
     public func attempt() throws -> [String] {
 
-        // To generate mocks correctly we have to do a text replacement and run sourcery twice
-        
-        // Replace /// sourcery:inline: with /// sourcery:inline:
-        // Replace /// sourcery:end with /// sourcery:end
-        
         signPost.message("🧙‍♂️ All files in sources folders will be scanned for occurrences of `/// sourcery:` and replaced with `/// sourcery:` to be able generate protocols.")
-        // 1. Find all files in sourceFolder
         
-        var fileSequences = [FileSystemSequence<File>]()
+        // 1. Find all files in sourceFolder and Replace occurances of inline with 3 slashes
+        
+        var fileSequences = [AnySequence<File>]()
         
         for folder in sourcery.sourcesFolders {
             let fileSequence = folder.makeFileSequence(recursive: true, includeHidden: false)
             
-            // 2. Replace occurances
+            try replace(
+                in: AnySequence(fileSequence),
+                inline: (current: mockableInline, replace: protocolGeneratableInline),
+                end: (current: mockableEnd, replace: protocolGeneratalbeEnd)
+            )
             
-            try fileSequence.forEach { file in
-                
-                guard file.extension == "swift", file.path != #file else { return }
-                
-                let content = try file.readAsString()
-                    .replacingOccurrences(of: "/// sourcery:inline:", with: "// sourcery:inline:")
-                    .replacingOccurrences(of: "/// sourcery:end", with: "// sourcery:end")
-                try file.write(string: content)
-            }
+            fileSequences.append(AnySequence(fileSequence))
+        }
+        
+        // 1.1 (Optional) Replace also in individual files
+        
+        if let individualFiles = sourcery.individualSourceFiles {
             
-            fileSequences.append(fileSequence)
+            let individualFileSequence = AnySequence(individualFiles)
+            
+            try replace(
+                in: individualFileSequence,
+                inline: (current: mockableInline, replace: protocolGeneratableInline),
+                end: (current: mockableEnd, replace: protocolGeneratalbeEnd)
+            )
+            
+            fileSequences.append(individualFileSequence)
         }
        
-        // 3. Run sourcery to generate the protocols
+        // 2. Run sourcery to generate the protocols
+        
         signPost.message("🧙‍♂️ Generating protocols")
         
         signPost.verbose("🧙‍♂️ \(try terminalWorker.terminal(task: .sourcery(try executor())).joined(separator: "\n"))")
 
-        // Replace // sourcery:inline: with /// sourcery:inline:
-        // Replace // sourcery:end with /// sourcery:end
-
-        // 4. Revert Replace occurances
+        // 3. Revert Replace occurances
+        
         signPost.message("🧙‍♂️ All files in sources folders are reverted to status before generating protocols.")
         
         try fileSequences.forEach { fileSequence in
 
-            try fileSequence.forEach { file in
-                guard file.extension == "swift", file.path != #file else { return }
-                
-                let content = try file.readAsString()
-                    .replacingOccurrences(of: "// sourcery:inline:", with: "/// sourcery:inline:")
-                    .replacingOccurrences(of: "// sourcery:end", with: "/// sourcery:end")
-                try file.write(string: content)
-            }
+            try replace(
+                in: fileSequence,
+                inline: (current: protocolGeneratableInline, replace: mockableInline),
+                end: (current: protocolGeneratalbeEnd, replace: mockableEnd)
+            )
            
         }
 
-        // 5. Run sourcery to generate the mocks
+        // 4. Run sourcery to generate the mocks
+        
         signPost.message("🧙‍♂️ Generating Mocks for newly generated protocols and refreshing old mocks.")
         let output = try terminalWorker.terminal(task: .sourcery(try executor()))
         
@@ -120,6 +135,21 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol {
         }
 
         return output
+    }
+    
+    // MARK: - Private
+    
+    private func replace(in fileSequence: AnySequence<File>, inline: (current: String, replace: String), end: (current: String, replace: String)) throws {
+        
+        try fileSequence.forEach { file in
+            
+            guard file.extension == "swift", file.path != #file else { return }
+            
+            let content = try file.readAsString()
+                .replacingOccurrences(of: inline.current, with: inline.replace)
+                .replacingOccurrences(of: end.current, with: end.replace)
+            try file.write(string: content, encoding: .utf8)
+        }
     }
     
 }

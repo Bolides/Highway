@@ -18,6 +18,7 @@ public protocol SourceryProtocol: ExecutableProtocol {
     var templateFolder: FolderProtocol { get }
     var outputFolder: FolderProtocol { get }
     var sourcesFolders: [FolderProtocol] { get }
+    var individualSourceFiles: [File]? { get }
     var sourceryAutoProtocolsFile: FileProtocol { get }
     var sourceryYMLFile: FileProtocol { get }
     var imports: Set<TemplatePrepend> { get }
@@ -30,6 +31,7 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol {
     public let templateFolder: FolderProtocol
     public let outputFolder: FolderProtocol
     public let sourcesFolders: [FolderProtocol]
+    public let individualSourceFiles: [File]?
     public let sourceryAutoProtocolsFile: FileProtocol
     public let sourceryYMLFile: FileProtocol
     public let imports: Set<TemplatePrepend>
@@ -61,6 +63,7 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol {
     
     public init (
         sourcesFolders: [FolderProtocol],
+        individualSourceFiles: [File]? = nil,
         templateFolder: FolderProtocol,
         outputFolder: FolderProtocol,
         sourceryAutoProtocolsFile: FileProtocol,
@@ -70,6 +73,7 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol {
         self.templateFolder = templateFolder
         self.outputFolder = outputFolder
         self.sourcesFolders = sourcesFolders
+        self.individualSourceFiles = individualSourceFiles
         self.sourceryAutoProtocolsFile = sourceryAutoProtocolsFile
         self.sourceryYMLFile = sourceryYMLFile
         self.imports = imports
@@ -81,6 +85,7 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol {
             sources:
             \(sourcesFolders.map { "- \"\($0.path)\""}.joined(separator: "\n"))
             - "\(sourceryAutoProtocolsFile.path)"
+            \(individualSourceFiles == nil ? "" : individualSourceFiles!.map { "- \($0.path)" }.joined(separator: "\n"))
             templates:
             - "\(templateFolder.path)"
             output:

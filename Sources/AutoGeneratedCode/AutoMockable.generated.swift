@@ -1299,6 +1299,7 @@ open class SourceryProtocolMock: SourceryProtocol {
   }
   public  var underlyingOutputFolder: FolderProtocol!
   public var sourcesFolders: [FolderProtocol] = []
+  public var individualSourceFiles: [File]?
   public  var sourceryAutoProtocolsFile: FileProtocol {
       get { return underlyingSourceryAutoProtocolsFile }
       set(value) { underlyingSourceryAutoProtocolsFile = value }
