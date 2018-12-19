@@ -63,6 +63,7 @@ public protocol AutoCases {
 
 public enum SourceryMockError: Swift.Error, CustomDebugStringConvertible {
     case implementErrorCaseFor(String)
+    case subclassMockBeforeUsing(String)
     
     public var debugDescription: String {
         switch self {
@@ -70,6 +71,14 @@ public enum SourceryMockError: Swift.Error, CustomDebugStringConvertible {
             return  """
             \n
             🧙‍♂️ \(SourceryMockError.self) Implement a case for:
+            \n
+            \(message)
+            \n
+            """
+        case .subclassMockBeforeUsing(let message):
+            return  """
+            \n
+            🧙‍♂️ \(SourceryMockError.self) Subclass the mock before using it:
             \n
             \(message)
             \n
