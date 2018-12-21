@@ -11,7 +11,6 @@
 		FDB7A8A421CD51610045DDA8 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDEE0F821CD4CC80007D4EB /* Nimble.framework */; };
 		FDB7A8A821CD51870045DDA8 /* AutomateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A8A621CD51870045DDA8 /* AutomateTests.swift */; };
 		FDB7A8AA21CD524D0045DDA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDEE02721CD4B820007D4EB /* Main.storyboard */; };
-		FDB7A90821CD61940045DDA8 /* TestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A90521CD617B0045DDA8 /* TestKit.framework */; };
 		FDDEE12521CD4DC90007D4EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEE02421CD4B820007D4EB /* ViewController.swift */; };
 		FDDEE12621CD4DCB0007D4EB /* AutomateSourceryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEE02521CD4B820007D4EB /* AutomateSourceryWorker.swift */; };
 		FDDEE12721CD4DD30007D4EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEE02921CD4B820007D4EB /* AppDelegate.swift */; };
@@ -68,13 +67,6 @@
 			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = FDB7A8B921CD5EA10045DDA8;
-			remoteInfo = TestKit;
-		};
-		FDB7A90621CD618D0045DDA8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = FDB7A8B821CD5EA10045DDA8;
 			remoteInfo = TestKit;
 		};
 		FDDEE04E21CD4BC40007D4EB /* PBXContainerItemProxy */ = {
@@ -644,7 +636,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDB7A90821CD61940045DDA8 /* TestKit.framework in Frameworks */,
 				FDB7A8A421CD51610045DDA8 /* Nimble.framework in Frameworks */,
 				FDB7A8A321CD515B0045DDA8 /* Quick.framework in Frameworks */,
 			);
@@ -847,7 +838,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FDB7A90721CD618D0045DDA8 /* PBXTargetDependency */,
 				FDB7A8A121CD51530045DDA8 /* PBXTargetDependency */,
 				FDB7A87521CD514D0045DDA8 /* PBXTargetDependency */,
 				FDDEE11A21CD4D230007D4EB /* PBXTargetDependency */,
@@ -1356,11 +1346,6 @@
 			name = "Nimble-macOS";
 			targetProxy = FDB7A8A021CD51530045DDA8 /* PBXContainerItemProxy */;
 		};
-		FDB7A90721CD618D0045DDA8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TestKit;
-			targetProxy = FDB7A90621CD618D0045DDA8 /* PBXContainerItemProxy */;
-		};
 		FDDEE11A21CD4D230007D4EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FDDEE10621CD4D220007D4EB /* AutomateHighway */;
@@ -1488,11 +1473,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/.build.nosync/Products/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1550,11 +1536,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/.build.nosync/Products/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1578,6 +1565,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sources/AutomateHighway/AutomateHighway.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1600,6 +1588,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sources/AutomateHighway/AutomateHighway.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1621,6 +1610,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WWFDRU947Q;
@@ -1632,6 +1622,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.AutomateHighwayTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutomateHighway.app/Contents/MacOS/AutomateHighway";
 			};
@@ -1642,6 +1633,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WWFDRU947Q;
@@ -1653,6 +1645,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.AutomateHighwayTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutomateHighway.app/Contents/MacOS/AutomateHighway";
 			};
