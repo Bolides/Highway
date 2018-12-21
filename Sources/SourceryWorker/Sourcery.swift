@@ -11,6 +11,7 @@ import Task
 import ZFile
 import Terminal
 import os
+import SignPost
 
 public protocol SourceryProtocol: ExecutableProtocol {
     
@@ -60,6 +61,7 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol {
             return message
         }
     }
+    private let signPost: SignPostProtocol
     
     public init (
         sourcesFolders: [FolderProtocol],
@@ -68,7 +70,8 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol {
         outputFolder: FolderProtocol,
         sourceryAutoProtocolsFile: FileProtocol,
         sourceryYMLFile: FileProtocol,
-        imports: Set<TemplatePrepend>
+        imports: Set<TemplatePrepend>,
+        signPost: SignPostProtocol = SignPost.shared
     ) throws  {
         self.templateFolder = templateFolder
         self.outputFolder = outputFolder
@@ -93,7 +96,9 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol {
             """,
             encoding:  .utf8
         )
-        os_log("🧙‍♂️ Sourcery YML file can be found at path:\n %@\n", type:.debug, sourceryYMLFile.path)
+        
+        self.signPost = signPost
+        signPost.verbose("🧙‍♂️ Sourcery YML file can be found at path:\n \(sourceryYMLFile.path)\n")
     }
     
     // sourcery:skipProtocol

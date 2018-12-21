@@ -57,7 +57,7 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol {
     
     public func attempt() throws -> [String] {
 
-        signPost.message("🧙‍♂️ All files in sources folders will be scanned for occurrences of `/// sourcery:` and replaced with `/// sourcery:` to be able generate protocols.")
+        signPost.verbose("🧙‍♂️ All files in sources folders will be scanned for occurrences of `/// sourcery:` and replaced with `/// sourcery:` to be able generate protocols.")
         
         // 1. Find all files in sourceFolder and Replace occurances of inline with 3 slashes
         
@@ -92,13 +92,13 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol {
        
         // 2. Run sourcery to generate the protocols
         
-        signPost.message("🧙‍♂️ Generating protocols")
+        signPost.verbose("🧙‍♂️ Generating protocols")
         
         signPost.verbose("🧙‍♂️ \(try terminalWorker.terminal(task: .sourcery(try executor())).joined(separator: "\n"))")
 
         // 3. Revert Replace occurances
         
-        signPost.message("🧙‍♂️ All files in sources folders are reverted to status before generating protocols.")
+        signPost.verbose("🧙‍♂️ All files in sources folders are reverted to status before generating protocols.")
         
         try fileSequences.forEach { fileSequence in
 
@@ -112,7 +112,7 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol {
 
         // 4. Run sourcery to generate the mocks
         
-        signPost.message("🧙‍♂️ Generating Mocks for newly generated protocols and refreshing old mocks.")
+        signPost.verbose("🧙‍♂️ Generating Mocks for newly generated protocols and refreshing old mocks.")
         let output = try terminalWorker.terminal(task: .sourcery(try executor()))
         
         // 6. Add imports to output

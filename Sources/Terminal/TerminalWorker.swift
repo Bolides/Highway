@@ -29,7 +29,7 @@ public struct TerminalWorker: TerminalWorkerProtocol {
         
         let message = "👾  \(task.rawValue): \(processTask.executableFile)\n"
         
-        signPost.message(message)
+        signPost.verbose(message)
         
         let pipe = Pipe()
         processTask.standardOutput = pipe

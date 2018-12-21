@@ -54,6 +54,12 @@ struct AutomateHighwaySourceryWorker: DemoSourceryWorkerProtocol, AutoGeneratePr
 
             // If not the default, add a case and insert imports into importNames
             switch self {
+            case .Task:
+                importNames.insert(TemplatePrepend.Import(name: Target.Arguments.rawValue))
+                importNames.insert(TemplatePrepend.Import(name: VendorFramework.ZFile.rawValue))
+                importNames.insert(TemplatePrepend.Import(name: Target.SignPost.rawValue))
+                
+                return Set([TemplatePrepend(name: importNames, template: Template.AutoMockable.rawValue)])
             case .Terminal:
                 importNames.insert(TemplatePrepend.Import(name: Target.Arguments.rawValue))
                 importNames.insert(TemplatePrepend.Import(name: VendorFramework.ZFile.rawValue))
@@ -82,16 +88,16 @@ struct AutomateHighwaySourceryWorker: DemoSourceryWorkerProtocol, AutoGeneratePr
         }
         
         let currentFolder = FileSystem().currentFolder
-        signPost.message("💁🏻‍♂️ Running in folder\n \(currentFolder)\n")
+        signPost.verbose("💁🏻‍♂️ Running in folder\n \(currentFolder)\n")
         
         var carthageFolder: FolderProtocol!
         var projectFolder = try currentFolder.parentFolder().parentFolder().parentFolder()
         
         do {
-            signPost.message("💁🏻‍♂️ Project in folder\n \(projectFolder.path)\n")
+            signPost.verbose("💁🏻‍♂️ Project in folder\n \(projectFolder.path)\n")
             carthageFolder = try projectFolder.subfolder(named: "Carthage")
         } catch {
-            signPost.message("💁🏻‍♂️ Not running in .build.nosync/Debug folder, trying to run from current folder.")
+            signPost.verbose("💁🏻‍♂️ Not running in .build.nosync/Debug folder, trying to run from current folder.")
             projectFolder = currentFolder
             carthageFolder = try currentFolder.subfolder(named: "Carthage")
         }
@@ -113,9 +119,9 @@ struct AutomateHighwaySourceryWorker: DemoSourceryWorkerProtocol, AutoGeneratePr
             )
         }
         
+        signPost.message("🧙‍♂️ Sourcery will run from config files ...")
         try sourcerySequence.forEach {
-            signPost.message("""
-                🧙‍♂️ Sourcery will run from config file
+            signPost.verbose("""
                 > \($0.sourceryYMLFile.path)
                 
                 ```yml
