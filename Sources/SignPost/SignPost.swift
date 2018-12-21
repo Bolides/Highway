@@ -3,7 +3,7 @@ import SourceryAutoProtocols
 
 public protocol SignPostProtocol: AutoMockable {
     /// sourcery:inline:SignPost.AutoGenerateProtocol
-    static var shared: SignPost { get }
+    static var shared: SignPostProtocol { get }
     var verbose: Bool { get set }
 
     func write(_ printer: Printer)
@@ -22,7 +22,7 @@ public protocol SignPostProtocol: AutoMockable {
 
 /// Use this class to delivers messages to the user.
 public class SignPost: SignPostProtocol, AutoGenerateProtocol {
-    public static let shared = SignPost()
+    public static let shared: SignPostProtocol = SignPost()
 
     public var verbose = false
 

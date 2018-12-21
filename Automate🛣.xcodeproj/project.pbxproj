@@ -11,6 +11,7 @@
 		FDB7A8A421CD51610045DDA8 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDEE0F821CD4CC80007D4EB /* Nimble.framework */; };
 		FDB7A8A821CD51870045DDA8 /* AutomateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A8A621CD51870045DDA8 /* AutomateTests.swift */; };
 		FDB7A8AA21CD524D0045DDA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDEE02721CD4B820007D4EB /* Main.storyboard */; };
+		FDB7A90821CD61940045DDA8 /* TestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A90521CD617B0045DDA8 /* TestKit.framework */; };
 		FDDEE12521CD4DC90007D4EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEE02421CD4B820007D4EB /* ViewController.swift */; };
 		FDDEE12621CD4DCB0007D4EB /* AutomateSourceryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEE02521CD4B820007D4EB /* AutomateSourceryWorker.swift */; };
 		FDDEE12721CD4DD30007D4EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEE02921CD4B820007D4EB /* AppDelegate.swift */; };
@@ -61,6 +62,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1F925EAC195C0D6300ED456B;
 			remoteInfo = "Nimble-macOS";
+		};
+		FDB7A90421CD617B0045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDB7A8B921CD5EA10045DDA8;
+			remoteInfo = TestKit;
+		};
+		FDB7A90621CD618D0045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FDB7A8B821CD5EA10045DDA8;
+			remoteInfo = TestKit;
 		};
 		FDDEE04E21CD4BC40007D4EB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -629,6 +644,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDB7A90821CD61940045DDA8 /* TestKit.framework in Frameworks */,
 				FDB7A8A421CD51610045DDA8 /* Nimble.framework in Frameworks */,
 				FDB7A8A321CD515B0045DDA8 /* Quick.framework in Frameworks */,
 			);
@@ -710,6 +726,7 @@
 				FDDEE06321CD4BC40007D4EB /* Deliver.framework */,
 				FDDEE06521CD4BC40007D4EB /* Keychain.framework */,
 				FDDEE06721CD4BC40007D4EB /* Result.framework */,
+				FDB7A90521CD617B0045DDA8 /* TestKit.framework */,
 				FDDEE06921CD4BC40007D4EB /* SourceryMocks.framework */,
 				FDDEE06B21CD4BC40007D4EB /* Git.framework */,
 				FDDEE06D21CD4BC40007D4EB /* SourceryAutoProtocols.framework */,
@@ -830,6 +847,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FDB7A90721CD618D0045DDA8 /* PBXTargetDependency */,
 				FDB7A8A121CD51530045DDA8 /* PBXTargetDependency */,
 				FDB7A87521CD514D0045DDA8 /* PBXTargetDependency */,
 				FDDEE11A21CD4D230007D4EB /* PBXTargetDependency */,
@@ -900,6 +918,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		FDB7A90521CD617B0045DDA8 /* TestKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TestKit.framework;
+			remoteRef = FDB7A90421CD617B0045DDA8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		FDDEE04F21CD4BC40007D4EB /* Arguments.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -1330,6 +1355,11 @@
 			isa = PBXTargetDependency;
 			name = "Nimble-macOS";
 			targetProxy = FDB7A8A021CD51530045DDA8 /* PBXContainerItemProxy */;
+		};
+		FDB7A90721CD618D0045DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TestKit;
+			targetProxy = FDB7A90621CD618D0045DDA8 /* PBXContainerItemProxy */;
 		};
 		FDDEE11A21CD4D230007D4EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
