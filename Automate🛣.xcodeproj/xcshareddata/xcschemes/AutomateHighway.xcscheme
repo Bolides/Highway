@@ -90,6 +90,104 @@
                ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "highway::ResultTests"
+               BuildableName = "ResultTests.xctest"
+               BlueprintName = "ResultTests"
+               ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FD1126D321C77F050072607D"
+               BuildableName = "SignPostTests.xctest"
+               BlueprintName = "SignPostTests"
+               ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FDC156E221C5347D00E04B44"
+               BuildableName = "SourceryWorkerTests.xctest"
+               BlueprintName = "SourceryWorkerTests"
+               ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "highway::TaskTests"
+               BuildableName = "TaskTests.xctest"
+               BlueprintName = "TaskTests"
+               ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "highway::TerminalTests"
+               BuildableName = "TerminalTests.xctest"
+               BlueprintName = "TerminalTests"
+               ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "highway::UrlTests"
+               BuildableName = "UrlTests.xctest"
+               BlueprintName = "UrlTests"
+               ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "highway::XCBuildTests"
+               BuildableName = "XCBuildTests.xctest"
+               BlueprintName = "XCBuildTests"
+               ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -145,6 +243,76 @@
                BlueprintIdentifier = "highway::POSIXTests"
                BuildableName = "POSIXTests.xctest"
                BlueprintName = "POSIXTests"
+               ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "highway::ResultTests"
+               BuildableName = "ResultTests.xctest"
+               BlueprintName = "ResultTests"
+               ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FD1126D321C77F050072607D"
+               BuildableName = "SignPostTests.xctest"
+               BlueprintName = "SignPostTests"
+               ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FDC156E221C5347D00E04B44"
+               BuildableName = "SourceryWorkerTests.xctest"
+               BlueprintName = "SourceryWorkerTests"
+               ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "highway::TaskTests"
+               BuildableName = "TaskTests.xctest"
+               BlueprintName = "TaskTests"
+               ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "highway::TerminalTests"
+               BuildableName = "TerminalTests.xctest"
+               BlueprintName = "TerminalTests"
+               ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "highway::UrlTests"
+               BuildableName = "UrlTests.xctest"
+               BlueprintName = "UrlTests"
+               ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "highway::XCBuildTests"
+               BuildableName = "XCBuildTests.xctest"
+               BlueprintName = "XCBuildTests"
                ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
             </BuildableReference>
          </TestableReference>

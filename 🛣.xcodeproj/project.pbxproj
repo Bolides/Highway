@@ -62,6 +62,18 @@
 		FDB7A93321CD666E0045DDA8 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
 		FDB7A93421CD666E0045DDA8 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
 		FDB7A93721CD67CC0045DDA8 /* TestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A8B921CD5EA10045DDA8 /* TestKit.framework */; };
+		FDB7A98721CD6B5D0045DDA8 /* ArgumentsMock.h in Headers */ = {isa = PBXBuildFile; fileRef = FDB7A98521CD6B5D0045DDA8 /* ArgumentsMock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDB7A98B21CD6B950045DDA8 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A95221CD6A790045DDA8 /* AutoMockable.generated.swift */; };
+		FDB7A9BB21CD6BCC0045DDA8 /* ArgumentsMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A98321CD6B5D0045DDA8 /* ArgumentsMock.framework */; };
+		FDB7A9BE21CD6C620045DDA8 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
+		FDB7A9C121CD6CAB0045DDA8 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
+		FDB7A9CB21CD6F7F0045DDA8 /* SignPostMock.h in Headers */ = {isa = PBXBuildFile; fileRef = FDB7A9C921CD6F7F0045DDA8 /* SignPostMock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDB7A9D121CD70020045DDA8 /* SignPostMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9C721CD6F7F0045DDA8 /* SignPostMock.framework */; };
+		FDB7A9D221CD70140045DDA8 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A93D21CD6A780045DDA8 /* AutoMockable.generated.swift */; };
+		FDB7A9D421CD704F0045DDA8 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D321CD704F0045DDA8 /* Quick.framework */; };
+		FDB7A9D621CD70580045DDA8 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D521CD70580045DDA8 /* Nimble.framework */; };
+		FDB7A9D921CD719F0045DDA8 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
+		FDB7A9DC21CD71AF0045DDA8 /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
 		FDC156E421C5347D00E04B44 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
 		FDC156E921C5347D00E04B44 /* SourceryWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC156E821C5347D00E04B44 /* SourceryWorkerTests.swift */; };
 		FDC156EB21C5347D00E04B44 /* SourceryWorker.h in Headers */ = {isa = PBXBuildFile; fileRef = FDC156DD21C5347C00E04B44 /* SourceryWorker.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1292,6 +1304,48 @@
 			remoteGlobalIDString = FDB7A8B821CD5EA10045DDA8;
 			remoteInfo = TestKit;
 		};
+		FDB7A9B921CD6BBE0045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDB7A98221CD6B5D0045DDA8;
+			remoteInfo = ArgumentsMock;
+		};
+		FDB7A9BC21CD6C590045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::SourceryAutoProtocols";
+			remoteInfo = SourceryAutoProtocols;
+		};
+		FDB7A9BF21CD6CA50045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Arguments";
+			remoteInfo = Arguments;
+		};
+		FDB7A9CF21CD6FFA0045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDB7A9C621CD6F7F0045DDA8;
+			remoteInfo = SignPostMock;
+		};
+		FDB7A9D721CD71960045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::SourceryAutoProtocols";
+			remoteInfo = SourceryAutoProtocols;
+		};
+		FDB7A9DA21CD71A60045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD1126CB21C77F050072607D;
+			remoteInfo = SignPost;
+		};
 		FDC156E521C5347D00E04B44 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1353,6 +1407,14 @@
 		FDB7A95821CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDB7A95B21CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDB7A95E21CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		FDB7A98321CD6B5D0045DDA8 /* ArgumentsMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArgumentsMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDB7A98521CD6B5D0045DDA8 /* ArgumentsMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArgumentsMock.h; sourceTree = "<group>"; };
+		FDB7A98621CD6B5D0045DDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDB7A9C721CD6F7F0045DDA8 /* SignPostMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SignPostMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDB7A9C921CD6F7F0045DDA8 /* SignPostMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignPostMock.h; sourceTree = "<group>"; };
+		FDB7A9CA21CD6F7F0045DDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDB7A9D321CD704F0045DDA8 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDB7A9D521CD70580045DDA8 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC156B621C52EE800E04B44 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SourceryWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC156DD21C5347C00E04B44 /* SourceryWorker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceryWorker.h; sourceTree = "<group>"; };
@@ -1466,7 +1528,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDB7A9D621CD70580045DDA8 /* Nimble.framework in Frameworks */,
+				FDB7A9D421CD704F0045DDA8 /* Quick.framework in Frameworks */,
 				FD1126D521C77F050072607D /* SignPost.framework in Frameworks */,
+				FDB7A9D121CD70020045DDA8 /* SignPostMock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1489,6 +1554,24 @@
 				FDB7A93421CD666E0045DDA8 /* XCBuild.framework in Frameworks */,
 				FDB7A8D921CD603B0045DDA8 /* SignPost.framework in Frameworks */,
 				FDB7A8D621CD5FE40045DDA8 /* ZFile.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDB7A98021CD6B5D0045DDA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDB7A9BE21CD6C620045DDA8 /* SourceryAutoProtocols.framework in Frameworks */,
+				FDB7A9C121CD6CAB0045DDA8 /* Arguments.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDB7A9C421CD6F7F0045DDA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDB7A9D921CD719F0045DDA8 /* SourceryAutoProtocols.framework in Frameworks */,
+				FDB7A9DC21CD71AF0045DDA8 /* SignPost.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1529,9 +1612,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				OBJ_285 /* SourceryAutoProtocols.framework in Frameworks */,
+				FDB7A9BB21CD6BCC0045DDA8 /* ArgumentsMock.framework in Frameworks */,
 				OBJ_283 /* Arguments.framework in Frameworks */,
 				OBJ_284 /* Errors.framework in Frameworks */,
-				OBJ_285 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1840,6 +1924,8 @@
 		FD326D9E210A0F5F00AE3A98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FDB7A9D521CD70580045DDA8 /* Nimble.framework */,
+				FDB7A9D321CD704F0045DDA8 /* Quick.framework */,
 				FDC156B621C52EE800E04B44 /* UIKit.framework */,
 				FD34F42221BEE5340052222C /* ZFile.framework */,
 			);
@@ -1958,6 +2044,24 @@
 				FDB7A95E21CD6A790045DDA8 /* AutoMockable.generated.swift */,
 			);
 			path = XCBuild;
+			sourceTree = "<group>";
+		};
+		FDB7A98421CD6B5D0045DDA8 /* ArgumentsMock */ = {
+			isa = PBXGroup;
+			children = (
+				FDB7A98521CD6B5D0045DDA8 /* ArgumentsMock.h */,
+				FDB7A98621CD6B5D0045DDA8 /* Info.plist */,
+			);
+			path = ArgumentsMock;
+			sourceTree = "<group>";
+		};
+		FDB7A9C821CD6F7F0045DDA8 /* SignPostMock */ = {
+			isa = PBXGroup;
+			children = (
+				FDB7A9C921CD6F7F0045DDA8 /* SignPostMock.h */,
+				FDB7A9CA21CD6F7F0045DDA8 /* Info.plist */,
+			);
+			path = SignPostMock;
 			sourceTree = "<group>";
 		};
 		FDC156DC21C5347C00E04B44 /* SourceryWorker */ = {
@@ -2096,11 +2200,13 @@
 		OBJ_151 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				FDB7A98421CD6B5D0045DDA8 /* ArgumentsMock */,
 				OBJ_168 /* ArgumentsTests */,
 				OBJ_188 /* DeliverTests */,
 				OBJ_184 /* GitTests */,
 				OBJ_166 /* POSIXTests */,
 				OBJ_161 /* ResultTests */,
+				FDB7A9C821CD6F7F0045DDA8 /* SignPostMock */,
 				FD1126DA21C77F060072607D /* SignPostTests */,
 				FDC156E721C5347D00E04B44 /* SourceryWorkerTests */,
 				OBJ_152 /* TaskTests */,
@@ -2231,6 +2337,8 @@
 				FD1126CC21C77F050072607D /* SignPost.framework */,
 				FD1126D421C77F050072607D /* SignPostTests.xctest */,
 				FDB7A8B921CD5EA10045DDA8 /* TestKit.framework */,
+				FDB7A98321CD6B5D0045DDA8 /* ArgumentsMock.framework */,
+				FDB7A9C721CD6F7F0045DDA8 /* SignPostMock.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -2364,6 +2472,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDB7A97E21CD6B5D0045DDA8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDB7A98721CD6B5D0045DDA8 /* ArgumentsMock.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDB7A9C221CD6F7F0045DDA8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDB7A9CB21CD6F7F0045DDA8 /* SignPostMock.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDC156D621C5347C00E04B44 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2413,6 +2537,7 @@
 			);
 			dependencies = (
 				FD1126D721C77F050072607D /* PBXTargetDependency */,
+				FDB7A9D021CD6FFA0045DDA8 /* PBXTargetDependency */,
 			);
 			name = SignPostTests;
 			productName = SignPostTests;
@@ -2450,6 +2575,46 @@
 			name = TestKit;
 			productName = TestKit;
 			productReference = FDB7A8B921CD5EA10045DDA8 /* TestKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FDB7A98221CD6B5D0045DDA8 /* ArgumentsMock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDB7A98A21CD6B5D0045DDA8 /* Build configuration list for PBXNativeTarget "ArgumentsMock" */;
+			buildPhases = (
+				FDB7A97E21CD6B5D0045DDA8 /* Headers */,
+				FDB7A97F21CD6B5D0045DDA8 /* Sources */,
+				FDB7A98021CD6B5D0045DDA8 /* Frameworks */,
+				FDB7A98121CD6B5D0045DDA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDB7A9BD21CD6C590045DDA8 /* PBXTargetDependency */,
+				FDB7A9C021CD6CA50045DDA8 /* PBXTargetDependency */,
+			);
+			name = ArgumentsMock;
+			productName = ArgumentsMock;
+			productReference = FDB7A98321CD6B5D0045DDA8 /* ArgumentsMock.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FDB7A9C621CD6F7F0045DDA8 /* SignPostMock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDB7A9CC21CD6F7F0045DDA8 /* Build configuration list for PBXNativeTarget "SignPostMock" */;
+			buildPhases = (
+				FDB7A9C221CD6F7F0045DDA8 /* Headers */,
+				FDB7A9C321CD6F7F0045DDA8 /* Sources */,
+				FDB7A9C421CD6F7F0045DDA8 /* Frameworks */,
+				FDB7A9C521CD6F7F0045DDA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDB7A9D821CD71960045DDA8 /* PBXTargetDependency */,
+				FDB7A9DB21CD71A60045DDA8 /* PBXTargetDependency */,
+			);
+			name = SignPostMock;
+			productName = SignPostMock;
+			productReference = FDB7A9C721CD6F7F0045DDA8 /* SignPostMock.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		FDC156DA21C5347C00E04B44 /* SourceryWorker */ = {
@@ -2537,6 +2702,7 @@
 			);
 			dependencies = (
 				OBJ_288 /* PBXTargetDependency */,
+				FDB7A9BA21CD6BBE0045DDA8 /* PBXTargetDependency */,
 				OBJ_286 /* PBXTargetDependency */,
 				OBJ_287 /* PBXTargetDependency */,
 			);
@@ -3004,82 +3170,150 @@
 				TargetAttributes = {
 					FD1126CB21C77F050072607D = {
 						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = WWFDRU947Q;
 						ProvisioningStyle = Manual;
 					};
 					FD1126D321C77F050072607D = {
 						CreatedOnToolsVersion = 10.1;
 						DevelopmentTeam = WWFDRU947Q;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = FDEC118621C65D9200CB7DAD;
 					};
 					FDB7A8B821CD5EA10045DDA8 = {
 						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1010;
+						ProvisioningStyle = Manual;
+					};
+					FDB7A98221CD6B5D0045DDA8 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = WWFDRU947Q;
+						ProvisioningStyle = Manual;
+					};
+					FDB7A9C621CD6F7F0045DDA8 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = WWFDRU947Q;
 						ProvisioningStyle = Manual;
 					};
 					FDC156DA21C5347C00E04B44 = {
 						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1010;
 						ProvisioningStyle = Manual;
 					};
 					FDC156E221C5347D00E04B44 = {
 						CreatedOnToolsVersion = 10.1;
 						DevelopmentTeam = WWFDRU947Q;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					FDE9B6F621C58ED400D1F50A = {
 						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = WWFDRU947Q;
 						ProvisioningStyle = Manual;
 					};
 					"highway::Arguments" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
+						ProvisioningStyle = Manual;
+					};
+					"highway::ArgumentsTests" = {
+						DevelopmentTeam = WWFDRU947Q;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Manual;
 					};
 					"highway::Deliver" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
 					};
+					"highway::DeliverTests" = {
+						DevelopmentTeam = WWFDRU947Q;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Manual;
+					};
 					"highway::Errors" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
 					};
 					"highway::Git" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
 					};
+					"highway::GitTests" = {
+						DevelopmentTeam = WWFDRU947Q;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Manual;
+					};
 					"highway::Keychain" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
 					};
 					"highway::POSIX" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
+						ProvisioningStyle = Manual;
+					};
+					"highway::POSIXTests" = {
+						DevelopmentTeam = WWFDRU947Q;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Manual;
 					};
 					"highway::Result" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
 					};
+					"highway::ResultTests" = {
+						DevelopmentTeam = WWFDRU947Q;
+						ProvisioningStyle = Manual;
+					};
 					"highway::SourceryAutoProtocols" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
 					};
 					"highway::SourceryMocks" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
+						ProvisioningStyle = Manual;
 					};
 					"highway::Task" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
+						ProvisioningStyle = Manual;
+					};
+					"highway::TaskTests" = {
+						DevelopmentTeam = WWFDRU947Q;
 						ProvisioningStyle = Manual;
 					};
 					"highway::Terminal" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
+						ProvisioningStyle = Manual;
+					};
+					"highway::TerminalTests" = {
+						DevelopmentTeam = WWFDRU947Q;
 						ProvisioningStyle = Manual;
 					};
 					"highway::Url" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
 					};
+					"highway::UrlTests" = {
+						DevelopmentTeam = WWFDRU947Q;
+						ProvisioningStyle = Manual;
+					};
 					"highway::XCBuild" = {
+						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
+						ProvisioningStyle = Manual;
+					};
+					"highway::XCBuildTests" = {
+						DevelopmentTeam = WWFDRU947Q;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -3098,7 +3332,9 @@
 			projectRoot = "";
 			targets = (
 				"highway::Arguments" /* Arguments */,
+				FDB7A98221CD6B5D0045DDA8 /* ArgumentsMock */,
 				FD1126CB21C77F050072607D /* SignPost */,
+				FDB7A9C621CD6F7F0045DDA8 /* SignPostMock */,
 				"highway::Terminal" /* Terminal */,
 				"highway::Task" /* Task */,
 				"highway::SourceryAutoProtocols" /* SourceryAutoProtocols */,
@@ -3145,6 +3381,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FDB7A8B721CD5EA10045DDA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDB7A98121CD6B5D0045DDA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDB7A9C521CD6F7F0045DDA8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3228,6 +3478,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDB7A8D021CD5FBE0045DDA8 /* Data+Convenience.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDB7A97F21CD6B5D0045DDA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDB7A98B21CD6B950045DDA8 /* AutoMockable.generated.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDB7A9C321CD6F7F0045DDA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDB7A9D221CD70140045DDA8 /* AutoMockable.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3597,6 +3863,36 @@
 			isa = PBXTargetDependency;
 			target = FDB7A8B821CD5EA10045DDA8 /* TestKit */;
 			targetProxy = FDB7A93521CD67C50045DDA8 /* PBXContainerItemProxy */;
+		};
+		FDB7A9BA21CD6BBE0045DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDB7A98221CD6B5D0045DDA8 /* ArgumentsMock */;
+			targetProxy = FDB7A9B921CD6BBE0045DDA8 /* PBXContainerItemProxy */;
+		};
+		FDB7A9BD21CD6C590045DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			targetProxy = FDB7A9BC21CD6C590045DDA8 /* PBXContainerItemProxy */;
+		};
+		FDB7A9C021CD6CA50045DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::Arguments" /* Arguments */;
+			targetProxy = FDB7A9BF21CD6CA50045DDA8 /* PBXContainerItemProxy */;
+		};
+		FDB7A9D021CD6FFA0045DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDB7A9C621CD6F7F0045DDA8 /* SignPostMock */;
+			targetProxy = FDB7A9CF21CD6FFA0045DDA8 /* PBXContainerItemProxy */;
+		};
+		FDB7A9D821CD71960045DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			targetProxy = FDB7A9D721CD71960045DDA8 /* PBXContainerItemProxy */;
+		};
+		FDB7A9DB21CD71A60045DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD1126CB21C77F050072607D /* SignPost */;
+			targetProxy = FDB7A9DA21CD71A60045DDA8 /* PBXContainerItemProxy */;
 		};
 		FDC156E621C5347D00E04B44 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4255,14 +4551,9 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -4303,15 +4594,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_VERSION = A;
@@ -4348,10 +4634,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -4369,7 +4652,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Automate.app/Contents/MacOS/Automate";
 			};
 			name = Debug;
 		};
@@ -4388,11 +4670,8 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -4405,7 +4684,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SignPostTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Automate.app/Contents/MacOS/Automate";
 			};
 			name = Release;
 		};
@@ -4423,14 +4701,9 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -4472,15 +4745,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_VERSION = A;
@@ -4502,6 +4770,174 @@
 			};
 			name = Release;
 		};
+		FDB7A98821CD6B5D0045DDA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Tests/ArgumentsMock/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.ArgumentsMock;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FDB7A98921CD6B5D0045DDA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Tests/ArgumentsMock/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.ArgumentsMock;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FDB7A9CD21CD6F7F0045DDA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WWFDRU947Q;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Tests/SignPostMock/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SignPostMock;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FDB7A9CE21CD6F7F0045DDA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WWFDRU947Q;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Tests/SignPostMock/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SignPostMock;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		FDC156ED21C5347D00E04B44 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -4516,14 +4952,9 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				FRAMEWORK_VERSION = A;
@@ -4566,15 +4997,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
@@ -4612,10 +5038,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -4652,11 +5075,8 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -4687,13 +5107,8 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -4736,14 +5151,9 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -4771,9 +5181,6 @@
 		OBJ_266 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -4796,9 +5203,6 @@
 		OBJ_267 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -4830,7 +5234,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = ArgumentsTests;
 			};
 			name = Debug;
@@ -4847,7 +5251,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = ArgumentsTests;
 			};
 			name = Release;
@@ -4855,9 +5259,6 @@
 		OBJ_290 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -4880,9 +5281,6 @@
 		OBJ_291 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -4924,9 +5322,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -4966,7 +5366,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = DeliverTests;
 			};
 			name = Debug;
@@ -4983,7 +5383,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = DeliverTests;
 			};
 			name = Release;
@@ -4991,9 +5391,6 @@
 		OBJ_331 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5016,9 +5413,6 @@
 		OBJ_332 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5041,9 +5435,6 @@
 		OBJ_339 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5066,9 +5457,6 @@
 		OBJ_340 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5099,7 +5487,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = GitTests;
 			};
 			name = Debug;
@@ -5115,7 +5503,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = GitTests;
 			};
 			name = Release;
@@ -5142,9 +5530,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = WWFDRU947Q;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -5172,9 +5562,6 @@
 		OBJ_601 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5197,9 +5584,6 @@
 		OBJ_602 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5222,9 +5606,6 @@
 		OBJ_623 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5247,9 +5628,6 @@
 		OBJ_624 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5281,7 +5659,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = POSIXTests;
 			};
 			name = Debug;
@@ -5298,7 +5676,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = POSIXTests;
 			};
 			name = Release;
@@ -5306,9 +5684,6 @@
 		OBJ_646 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5331,9 +5706,6 @@
 		OBJ_647 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5388,9 +5760,6 @@
 		OBJ_693 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5413,9 +5782,6 @@
 		OBJ_694 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5480,9 +5846,6 @@
 		OBJ_734 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5506,9 +5869,6 @@
 		OBJ_735 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5564,9 +5924,6 @@
 		OBJ_810 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5589,9 +5946,6 @@
 		OBJ_811 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5646,9 +6000,6 @@
 		OBJ_912 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5671,9 +6022,6 @@
 		OBJ_913 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5730,9 +6078,6 @@
 		OBJ_933 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5755,9 +6100,6 @@
 		OBJ_934 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5835,6 +6177,24 @@
 			buildConfigurations = (
 				FDB7A8BE21CD5EA10045DDA8 /* Debug */,
 				FDB7A8BF21CD5EA10045DDA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDB7A98A21CD6B5D0045DDA8 /* Build configuration list for PBXNativeTarget "ArgumentsMock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDB7A98821CD6B5D0045DDA8 /* Debug */,
+				FDB7A98921CD6B5D0045DDA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDB7A9CC21CD6F7F0045DDA8 /* Build configuration list for PBXNativeTarget "SignPostMock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDB7A9CD21CD6F7F0045DDA8 /* Debug */,
+				FDB7A9CE21CD6F7F0045DDA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,7 +1,7 @@
-import Result
 import SourceryAutoProtocols
-import Foundation
+import Result
 import os
+import Foundation
 
 
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery

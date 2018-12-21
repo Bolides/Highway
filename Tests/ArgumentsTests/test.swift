@@ -1,5 +1,6 @@
 import XCTest
 import Arguments
+import ArgumentsMock
 
 private class Person {
     var firstName: String?

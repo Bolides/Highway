@@ -1,7 +1,7 @@
 import SourceryAutoProtocols
-import Keychain
-import Foundation
 import os
+import Foundation
+import Keychain
 
 
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery

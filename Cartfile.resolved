@@ -1,5 +1,5 @@
-github "doozMen/Nimble" "19c9ee4ddecac840666435b6def109ebe08493de"
-github "doozMen/Quick" "a8581649432984a4551764354520bb60380907c8"
+github "doozMen/Nimble" "b16461853dc33d80da32330d57db93ddce485dd1"
+github "doozMen/Quick" "12d12de3ca4faf17642a4b017657c553a7011e5e"
 github "doozMen/template-sourcery" "e5e469eb374b7c4182e22a948811b63fc24f407f"
 github "doozMen/zfile" "c57b11998cfaa7d09e36bedcbaf26deabfc6d617"
 github "krzysztofzablocki/Sourcery" "0.15.0"

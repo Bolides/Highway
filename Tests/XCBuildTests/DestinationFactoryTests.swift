@@ -9,8 +9,8 @@ final class DestinationFactoryTests: XCTestCase {
         _assert(destinationFactory.macOS(architecture: .i386), equals: ["arch" : "i386", "platform" : "macOS"])
         _assert(destinationFactory.macOS(architecture: .x86_64), equals: ["arch" : "x86_64", "platform" : "macOS"])
         
-        _assert(destinationFactory.device(.iOS, name: "Chris", id: nil), equals: ["name" : "Chris", "generic/platform" : "iOS"])
-        _assert(destinationFactory.device(.iOS, name: "Chris", id: "123"), equals: ["id" : "123", "name" : "Chris", "generic/platform" : "iOS"])
+        _assert(destinationFactory.device(.iOS, name: "Chris", isGeneric: false, id: nil), equals: ["name" : "Chris", "generic/platform" : "iOS"])
+        _assert(destinationFactory.device(.iOS, name: "Chris", isGeneric: false, id: "123"), equals: ["id" : "123", "name" : "Chris", "generic/platform" : "iOS"])
         
         _assert(destinationFactory.simulator(.iOS, name: "Hello", os: .iOS(version: "10.1"), id: nil),
                 equals: ["name" : "Hello", "OS" : "10.1", "platform" : "iOS Simulator"])

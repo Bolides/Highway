@@ -69,6 +69,13 @@
 			remoteGlobalIDString = FDB7A8B921CD5EA10045DDA8;
 			remoteInfo = TestKit;
 		};
+		FDB7A9B721CD6BA40045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDB7A98321CD6B5D0045DDA8;
+			remoteInfo = ArgumentsMock;
+		};
 		FDDEE04E21CD4BC40007D4EB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
@@ -705,6 +712,7 @@
 			isa = PBXGroup;
 			children = (
 				FDDEE04F21CD4BC40007D4EB /* Arguments.framework */,
+				FDB7A9B821CD6BA40045DDA8 /* ArgumentsMock.framework */,
 				FDDEE05121CD4BC40007D4EB /* SignPost.framework */,
 				FDDEE05321CD4BC40007D4EB /* Terminal.framework */,
 				FDDEE05521CD4BC40007D4EB /* Task.framework */,
@@ -913,6 +921,13 @@
 			fileType = wrapper.framework;
 			path = TestKit.framework;
 			remoteRef = FDB7A90421CD617B0045DDA8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDB7A9B821CD6BA40045DDA8 /* ArgumentsMock.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ArgumentsMock.framework;
+			remoteRef = FDB7A9B721CD6BA40045DDA8 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		FDDEE04F21CD4BC40007D4EB /* Arguments.framework */ = {

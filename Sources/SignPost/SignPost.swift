@@ -6,8 +6,8 @@ public protocol SignPostProtocol: AutoMockable {
     static var shared: SignPostProtocol { get }
     var verbose: Bool { get set }
 
-    func write(_ printer: Printer)
-    func write(_ printable: Printable)
+    func write(printer: Printer)
+    func write(printable: Printable)
     // sourcery:"Always printed as error"
     func error(_ text: String)
     func success(_ text: String)
@@ -49,23 +49,23 @@ public class SignPost: SignPostProtocol, AutoGenerateProtocol {
         }
     }
     // MARK: - Write Stuff
-    public func write(_ printer: Printer) {
+    public func write(printer: Printer) {
         _sync {
-            self._write(printer)
+            self._write(printer: printer)
         }
     }
-    private func _write(_ printer: Printer) {
+    private func _write(printer: Printer) {
         let string = printer.string(with: .defaultOptions())
         stream.write(string)
     }
     
-    public func write(_ printable: Printable) {
+    public func write(printable: Printable) {
         _sync {
-            self._write(printable)
+            self._write(printable: printable)
         }
     }
     
-    private func _write(_ printable: Printable) {
+    private func _write(printable: Printable) {
         let string = printable.printableString(with: .defaultOptions())
         stream.write(string)
     }

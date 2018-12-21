@@ -1,7 +1,7 @@
 import SourceryAutoProtocols
 import SignPost
-import Foundation
 import os
+import Foundation
 
 
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
@@ -43,55 +43,55 @@ open class SignPostProtocolMock: SignPostProtocol {
 
   // MARK: - <write> - parameters
 
-  public var writeCallsCount = 0
-  public var writeCalled: Bool {
-    return writeCallsCount > 0
+  public var writePrinterCallsCount = 0
+  public var writePrinterCalled: Bool {
+    return writePrinterCallsCount > 0
   }
-  public var writeReceivedPrinter: Printer?
+  public var writePrinterReceivedPrinter: Printer?
 
   // MARK: - <write> - closure mocks
 
-  public var writeClosure: ((Printer)  -> Void)? = nil
+  public var writePrinterClosure: ((Printer)  -> Void)? = nil
 
 
 
   // MARK: - <write> - method mocked
 
-  open func write(_ printer: Printer) {
+  open func write(printer: Printer) {
 
-      writeCallsCount += 1
-      writeReceivedPrinter = printer
+      writePrinterCallsCount += 1
+      writePrinterReceivedPrinter = printer
 
       // <write> - Void return mock implementation
 
-      writeClosure?(printer)
+      writePrinterClosure?(printer)
 
   }
 
   // MARK: - <write> - parameters
 
-  public var writeCallsCount = 0
-  public var writeCalled: Bool {
-    return writeCallsCount > 0
+  public var writePrintableCallsCount = 0
+  public var writePrintableCalled: Bool {
+    return writePrintableCallsCount > 0
   }
-  public var writeReceivedPrintable: Printable?
+  public var writePrintableReceivedPrintable: Printable?
 
   // MARK: - <write> - closure mocks
 
-  public var writeClosure: ((Printable)  -> Void)? = nil
+  public var writePrintableClosure: ((Printable)  -> Void)? = nil
 
 
 
   // MARK: - <write> - method mocked
 
-  open func write(_ printable: Printable) {
+  open func write(printable: Printable) {
 
-      writeCallsCount += 1
-      writeReceivedPrintable = printable
+      writePrintableCallsCount += 1
+      writePrintableReceivedPrintable = printable
 
       // <write> - Void return mock implementation
 
-      writeClosure?(printable)
+      writePrintableClosure?(printable)
 
   }
 
