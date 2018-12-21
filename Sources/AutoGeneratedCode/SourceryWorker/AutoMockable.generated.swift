@@ -1,7 +1,7 @@
-@testable import SourceryWorker
-import Foundation
 import SourceryAutoProtocols
+import Foundation
 import os
+import SourceryWorker
 
 
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery

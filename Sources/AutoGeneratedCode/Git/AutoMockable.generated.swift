@@ -1,6 +1,6 @@
-import Foundation
 import SourceryAutoProtocols
-@testable import Git
+import Foundation
+import Git
 import os
 
 

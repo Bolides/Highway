@@ -110,7 +110,7 @@ private func sourceryForFolders(target: String, _ projectFolder: FolderProtocol,
         imports: Set([
             TemplatePrepend(
                 name: Set([
-                    TemplatePrepend.Import(name: target, testable: true),
+                    TemplatePrepend.Import(name: target, testable: false),
                     TemplatePrepend.Import(name: "SourceryAutoProtocols"),
                     TemplatePrepend.Import(name: "Foundation"),
                     TemplatePrepend.Import(name: "os"),

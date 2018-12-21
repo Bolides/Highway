@@ -1,7 +1,7 @@
-import Foundation
 import SourceryAutoProtocols
+import Foundation
 import os
-@testable import Url
+import Url
 
 
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery

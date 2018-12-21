@@ -1,6 +1,6 @@
-import Foundation
-@testable import Keychain
 import SourceryAutoProtocols
+import Keychain
+import Foundation
 import os
 
 

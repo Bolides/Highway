@@ -1340,6 +1340,19 @@
 		FDB7A8BB21CD5EA10045DDA8 /* TestKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestKit.h; sourceTree = "<group>"; };
 		FDB7A8BC21CD5EA10045DDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDB7A8C821CD5FBE0045DDA8 /* Data+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Data+Convenience.swift"; path = "../../../../../../Desktop/TestKit/Data+Convenience.swift"; sourceTree = "<group>"; };
+		FDB7A93A21CD6A780045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		FDB7A93D21CD6A780045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		FDB7A94021CD6A780045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		FDB7A94321CD6A780045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		FDB7A94621CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		FDB7A94921CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		FDB7A94C21CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		FDB7A94F21CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		FDB7A95221CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		FDB7A95521CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		FDB7A95821CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		FDB7A95B21CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		FDB7A95E21CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDC156B621C52EE800E04B44 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SourceryWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC156DD21C5347C00E04B44 /* SourceryWorker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceryWorker.h; sourceTree = "<group>"; };
@@ -1843,6 +1856,110 @@
 			path = TestKit;
 			sourceTree = "<group>";
 		};
+		FDB7A93821CD6A780045DDA8 /* Url */ = {
+			isa = PBXGroup;
+			children = (
+				FDB7A93A21CD6A780045DDA8 /* AutoMockable.generated.swift */,
+			);
+			path = Url;
+			sourceTree = "<group>";
+		};
+		FDB7A93B21CD6A780045DDA8 /* SignPost */ = {
+			isa = PBXGroup;
+			children = (
+				FDB7A93D21CD6A780045DDA8 /* AutoMockable.generated.swift */,
+			);
+			path = SignPost;
+			sourceTree = "<group>";
+		};
+		FDB7A93E21CD6A780045DDA8 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				FDB7A94021CD6A780045DDA8 /* AutoMockable.generated.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		FDB7A94121CD6A780045DDA8 /* SourceryWorker */ = {
+			isa = PBXGroup;
+			children = (
+				FDB7A94321CD6A780045DDA8 /* AutoMockable.generated.swift */,
+			);
+			path = SourceryWorker;
+			sourceTree = "<group>";
+		};
+		FDB7A94421CD6A790045DDA8 /* Deliver */ = {
+			isa = PBXGroup;
+			children = (
+				FDB7A94621CD6A790045DDA8 /* AutoMockable.generated.swift */,
+			);
+			path = Deliver;
+			sourceTree = "<group>";
+		};
+		FDB7A94721CD6A790045DDA8 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				FDB7A94921CD6A790045DDA8 /* AutoMockable.generated.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		FDB7A94A21CD6A790045DDA8 /* Terminal */ = {
+			isa = PBXGroup;
+			children = (
+				FDB7A94C21CD6A790045DDA8 /* AutoMockable.generated.swift */,
+			);
+			path = Terminal;
+			sourceTree = "<group>";
+		};
+		FDB7A94D21CD6A790045DDA8 /* POSIX */ = {
+			isa = PBXGroup;
+			children = (
+				FDB7A94F21CD6A790045DDA8 /* AutoMockable.generated.swift */,
+			);
+			path = POSIX;
+			sourceTree = "<group>";
+		};
+		FDB7A95021CD6A790045DDA8 /* Arguments */ = {
+			isa = PBXGroup;
+			children = (
+				FDB7A95221CD6A790045DDA8 /* AutoMockable.generated.swift */,
+			);
+			path = Arguments;
+			sourceTree = "<group>";
+		};
+		FDB7A95321CD6A790045DDA8 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				FDB7A95521CD6A790045DDA8 /* AutoMockable.generated.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		FDB7A95621CD6A790045DDA8 /* Git */ = {
+			isa = PBXGroup;
+			children = (
+				FDB7A95821CD6A790045DDA8 /* AutoMockable.generated.swift */,
+			);
+			path = Git;
+			sourceTree = "<group>";
+		};
+		FDB7A95921CD6A790045DDA8 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				FDB7A95B21CD6A790045DDA8 /* AutoMockable.generated.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		FDB7A95C21CD6A790045DDA8 /* XCBuild */ = {
+			isa = PBXGroup;
+			children = (
+				FDB7A95E21CD6A790045DDA8 /* AutoMockable.generated.swift */,
+			);
+			path = XCBuild;
+			sourceTree = "<group>";
+		};
 		FDC156DC21C5347C00E04B44 /* SourceryWorker */ = {
 			isa = PBXGroup;
 			children = (
@@ -1870,6 +1987,19 @@
 		FDEC11E021C679B600CB7DAD /* AutoGeneratedCode */ = {
 			isa = PBXGroup;
 			children = (
+				FDB7A95021CD6A790045DDA8 /* Arguments */,
+				FDB7A94421CD6A790045DDA8 /* Deliver */,
+				FDB7A95321CD6A790045DDA8 /* Errors */,
+				FDB7A95621CD6A790045DDA8 /* Git */,
+				FDB7A94721CD6A790045DDA8 /* Keychain */,
+				FDB7A94D21CD6A790045DDA8 /* POSIX */,
+				FDB7A95921CD6A790045DDA8 /* Result */,
+				FDB7A93B21CD6A780045DDA8 /* SignPost */,
+				FDB7A94121CD6A780045DDA8 /* SourceryWorker */,
+				FDB7A93E21CD6A780045DDA8 /* Task */,
+				FDB7A94A21CD6A790045DDA8 /* Terminal */,
+				FDB7A93821CD6A780045DDA8 /* Url */,
+				FDB7A95C21CD6A790045DDA8 /* XCBuild */,
 				FDEC11E121C679B600CB7DAD /* DecoderMock.swift */,
 				FDEC11E221C679B600CB7DAD /* AutoGenerateProtocol.generated.swift */,
 				FDEC11E321C679B600CB7DAD /* AutoMockable.generated.swift */,

@@ -1,6 +1,6 @@
-import Foundation
 import SourceryAutoProtocols
-@testable import POSIX
+import POSIX
+import Foundation
 import os
 
 

@@ -1,6 +1,6 @@
-@testable import XCBuild
-import Foundation
+import XCBuild
 import SourceryAutoProtocols
+import Foundation
 import os
 
 
