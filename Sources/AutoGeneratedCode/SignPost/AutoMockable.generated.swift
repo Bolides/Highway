@@ -1,7 +1,7 @@
-import SourceryAutoProtocols
-import SignPost
-import os
 import Foundation
+import SignPost
+import SourceryAutoProtocols
+import os
 
 
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery

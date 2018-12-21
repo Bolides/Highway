@@ -1,7 +1,7 @@
-import SourceryAutoProtocols
-import os
 import Foundation
 import Task
+import SourceryAutoProtocols
+import os
 
 
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
