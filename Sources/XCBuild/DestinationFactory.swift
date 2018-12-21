@@ -15,9 +15,9 @@ public protocol DestinationFactoryProtocol: AutoMockable {
     
     /// sourcery:inline:DestinationFactory.AutoGenerateProtocol
 
-    func macOS(architecture: Destination.Architecture)-> Destination
-    func device(_ device: Destination.Device, name: String?, isGeneric: Bool, id: String?)-> Destination
-    func simulator(_ simulator: Destination.Simulator, name: String, os: Destination.OS, id: String?)-> Destination
+    func macOS(architecture: Destination.Architecture) -> Destination
+    func device(_ device: Destination.Device, name: String?, isGeneric: Bool, id: String?) -> Destination
+    func simulator(_ simulator: Destination.Simulator, name: String, os: Destination.OS, id: String?) -> Destination
     
     /// sourcery:end
     

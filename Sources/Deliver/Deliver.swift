@@ -7,7 +7,7 @@ public protocol DeliverProtocol: AutoMockable {
     
     /// sourcery:inline:Deliver.Local.AutoGenerateProtocol
 
-    func now(with options: Deliver.Options) throws -> Bool
+    func now(with options: Deliver.Options) throws  -> Bool
     /// sourcery:end
 }
 

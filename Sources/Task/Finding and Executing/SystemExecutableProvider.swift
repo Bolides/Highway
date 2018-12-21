@@ -10,7 +10,7 @@ public protocol ExecutableProviderProtocol: AutoMockable {
     var searchedUrls: [FolderProtocol] { get set }
     var fileSystem: FileSystemProtocol { get }
 
-    func executable(with executableName: String) throws -> FileProtocol
+    func executable(with executableName: String) throws  -> FileProtocol
     /// sourcery:end
 }
 
