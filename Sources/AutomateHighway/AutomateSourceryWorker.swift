@@ -83,6 +83,7 @@ struct AutomateHighwaySourceryWorker: DemoSourceryWorkerProtocol, AutoGeneratePr
         case AutoMockable
     }
     
+    
     init(signPost: SignPostProtocol = SignPost.shared, workers: [SourceryWorkerProtocol]? = nil) throws {
         self.signPost = signPost
         
@@ -93,6 +94,10 @@ struct AutomateHighwaySourceryWorker: DemoSourceryWorkerProtocol, AutoGeneratePr
         
         let currentFolder = FileSystem().currentFolder
         signPost.verbose("💁🏻‍♂️ Running in folder\n \(currentFolder)\n")
+        
+        guard !currentFolder.path.contains("DerivedData") else {
+            throw Error.runningInDerivedDataFolder
+        }
         
         var carthageFolder: FolderProtocol!
         var projectFolder = try currentFolder.parentFolder().parentFolder().parentFolder()
@@ -141,9 +146,16 @@ struct AutomateHighwaySourceryWorker: DemoSourceryWorkerProtocol, AutoGeneratePr
         
     }
     
+    // MARK: - Error
+    
+    enum Error: Swift.Error, CustomStringConvertible {
+        var description: String { return "⚠️ You are running in derived data folder. See README of project on github doozMen/highway to change your project settings!"}
+        
+        case runningInDerivedDataFolder
+        
+    }
+    
     // MARK: - Sourcery Setup
-    
-    
     
     func attempt() throws {
         return try workers.forEach {
