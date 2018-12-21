@@ -44,17 +44,24 @@
 		FDAC932A210B595100B0D045 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		FDB7A8AD21CD58600045DDA8 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
 		FDB7A8BD21CD5EA10045DDA8 /* TestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FDB7A8BB21CD5EA10045DDA8 /* TestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FDB7A8CE21CD5FBE0045DDA8 /* MockUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A8C621CD5FBE0045DDA8 /* MockUI.swift */; };
-		FDB7A8CF21CD5FBE0045DDA8 /* MockLocalSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A8C721CD5FBE0045DDA8 /* MockLocalSystem.swift */; };
 		FDB7A8D021CD5FBE0045DDA8 /* Data+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A8C821CD5FBE0045DDA8 /* Data+Convenience.swift */; };
-		FDB7A8D121CD5FBE0045DDA8 /* GitMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A8C921CD5FBE0045DDA8 /* GitMock.swift */; };
-		FDB7A8D221CD5FBE0045DDA8 /* ExecutorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A8CA21CD5FBE0045DDA8 /* ExecutorMock.swift */; };
-		FDB7A8D321CD5FBE0045DDA8 /* MockSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A8CB21CD5FBE0045DDA8 /* MockSystem.swift */; };
-		FDB7A8D421CD5FBE0045DDA8 /* ExecutableProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A8CC21CD5FBE0045DDA8 /* ExecutableProviderMock.swift */; };
-		FDB7A8D521CD5FBE0045DDA8 /* ContextMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A8CD21CD5FBE0045DDA8 /* ContextMock.swift */; };
 		FDB7A8D621CD5FE40045DDA8 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F42221BEE5340052222C /* ZFile.framework */; };
 		FDB7A8D921CD603B0045DDA8 /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
 		FDB7A90B21CD62400045DDA8 /* TestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A8B921CD5EA10045DDA8 /* TestKit.framework */; };
+		FDB7A92821CD666E0045DDA8 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
+		FDB7A92921CD666E0045DDA8 /* Deliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Deliver::Product" /* Deliver.framework */; };
+		FDB7A92A21CD666E0045DDA8 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
+		FDB7A92B21CD666E0045DDA8 /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; };
+		FDB7A92C21CD666E0045DDA8 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Keychain::Product" /* Keychain.framework */; };
+		FDB7A92D21CD666E0045DDA8 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
+		FDB7A92E21CD666E0045DDA8 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Result::Product" /* Result.framework */; };
+		FDB7A92F21CD666E0045DDA8 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
+		FDB7A93021CD666E0045DDA8 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
+		FDB7A93121CD666E0045DDA8 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
+		FDB7A93221CD666E0045DDA8 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
+		FDB7A93321CD666E0045DDA8 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
+		FDB7A93421CD666E0045DDA8 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
+		FDB7A93721CD67CC0045DDA8 /* TestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A8B921CD5EA10045DDA8 /* TestKit.framework */; };
 		FDC156E421C5347D00E04B44 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
 		FDC156E921C5347D00E04B44 /* SourceryWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC156E821C5347D00E04B44 /* SourceryWorkerTests.swift */; };
 		FDC156EB21C5347D00E04B44 /* SourceryWorker.h in Headers */ = {isa = PBXBuildFile; fileRef = FDC156DD21C5347C00E04B44 /* SourceryWorker.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -104,7 +111,6 @@
 		OBJ_367 /* GitAutotagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_185 /* GitAutotagTests.swift */; };
 		OBJ_368 /* GitToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_186 /* GitToolTests.swift */; };
 		OBJ_369 /* git.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_187 /* git.swift */; };
-		OBJ_372 /* SourceryMocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryMocks::Product" /* SourceryMocks.framework */; };
 		OBJ_374 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
 		OBJ_375 /* Deliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Deliver::Product" /* Deliver.framework */; };
 		OBJ_377 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
@@ -684,13 +690,6 @@
 			remoteGlobalIDString = "highway::SourceryAutoProtocols";
 			remoteInfo = SourceryAutoProtocols;
 		};
-		FD326D092109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryMocks";
-			remoteInfo = SourceryMocks;
-		};
 		FD326D0B2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1188,6 +1187,111 @@
 			remoteGlobalIDString = FDB7A8B821CD5EA10045DDA8;
 			remoteInfo = TestKit;
 		};
+		FDB7A90C21CD665A0045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Arguments";
+			remoteInfo = Arguments;
+		};
+		FDB7A90E21CD665A0045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Terminal";
+			remoteInfo = Terminal;
+		};
+		FDB7A91021CD665A0045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Task";
+			remoteInfo = Task;
+		};
+		FDB7A91221CD665A0045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::SourceryAutoProtocols";
+			remoteInfo = SourceryAutoProtocols;
+		};
+		FDB7A91421CD665A0045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDC156DA21C5347C00E04B44;
+			remoteInfo = SourceryWorker;
+		};
+		FDB7A91621CD665A0045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::POSIX";
+			remoteInfo = POSIX;
+		};
+		FDB7A91821CD665A0045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Errors";
+			remoteInfo = Errors;
+		};
+		FDB7A91A21CD665A0045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::XCBuild";
+			remoteInfo = XCBuild;
+		};
+		FDB7A91C21CD665A0045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Url";
+			remoteInfo = Url;
+		};
+		FDB7A91E21CD665A0045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Deliver";
+			remoteInfo = Deliver;
+		};
+		FDB7A92021CD665A0045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Keychain";
+			remoteInfo = Keychain;
+		};
+		FDB7A92221CD665A0045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Result";
+			remoteInfo = Result;
+		};
+		FDB7A92421CD665A0045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::SourceryMocks";
+			remoteInfo = SourceryMocks;
+		};
+		FDB7A92621CD665A0045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Git";
+			remoteInfo = Git;
+		};
+		FDB7A93521CD67C50045DDA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDB7A8B821CD5EA10045DDA8;
+			remoteInfo = TestKit;
+		};
 		FDC156E521C5347D00E04B44 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1235,14 +1339,7 @@
 		FDB7A8B921CD5EA10045DDA8 /* TestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB7A8BB21CD5EA10045DDA8 /* TestKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestKit.h; sourceTree = "<group>"; };
 		FDB7A8BC21CD5EA10045DDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDB7A8C621CD5FBE0045DDA8 /* MockUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockUI.swift; path = ../../../../../../Desktop/TestKit/MockUI.swift; sourceTree = "<group>"; };
-		FDB7A8C721CD5FBE0045DDA8 /* MockLocalSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockLocalSystem.swift; path = ../../../../../../Desktop/TestKit/MockLocalSystem.swift; sourceTree = "<group>"; };
 		FDB7A8C821CD5FBE0045DDA8 /* Data+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Data+Convenience.swift"; path = "../../../../../../Desktop/TestKit/Data+Convenience.swift"; sourceTree = "<group>"; };
-		FDB7A8C921CD5FBE0045DDA8 /* GitMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GitMock.swift; path = ../../../../../../Desktop/TestKit/GitMock.swift; sourceTree = "<group>"; };
-		FDB7A8CA21CD5FBE0045DDA8 /* ExecutorMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExecutorMock.swift; path = ../../../../../../Desktop/TestKit/ExecutorMock.swift; sourceTree = "<group>"; };
-		FDB7A8CB21CD5FBE0045DDA8 /* MockSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockSystem.swift; path = ../../../../../../Desktop/TestKit/MockSystem.swift; sourceTree = "<group>"; };
-		FDB7A8CC21CD5FBE0045DDA8 /* ExecutableProviderMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExecutableProviderMock.swift; path = ../../../../../../Desktop/TestKit/ExecutableProviderMock.swift; sourceTree = "<group>"; };
-		FDB7A8CD21CD5FBE0045DDA8 /* ContextMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContextMock.swift; path = ../../../../../../Desktop/TestKit/ContextMock.swift; sourceTree = "<group>"; };
 		FDC156B621C52EE800E04B44 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SourceryWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC156DD21C5347C00E04B44 /* SourceryWorker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceryWorker.h; sourceTree = "<group>"; };
@@ -1364,6 +1461,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDB7A92F21CD666E0045DDA8 /* SourceryAutoProtocols.framework in Frameworks */,
+				FDB7A93121CD666E0045DDA8 /* Task.framework in Frameworks */,
+				FDB7A92821CD666E0045DDA8 /* Arguments.framework in Frameworks */,
+				FDB7A92921CD666E0045DDA8 /* Deliver.framework in Frameworks */,
+				FDB7A92A21CD666E0045DDA8 /* Errors.framework in Frameworks */,
+				FDB7A92B21CD666E0045DDA8 /* Git.framework in Frameworks */,
+				FDB7A92C21CD666E0045DDA8 /* Keychain.framework in Frameworks */,
+				FDB7A92D21CD666E0045DDA8 /* POSIX.framework in Frameworks */,
+				FDB7A92E21CD666E0045DDA8 /* Result.framework in Frameworks */,
+				FDB7A93021CD666E0045DDA8 /* SourceryWorker.framework in Frameworks */,
+				FDB7A93221CD666E0045DDA8 /* Terminal.framework in Frameworks */,
+				FDB7A93321CD666E0045DDA8 /* Url.framework in Frameworks */,
+				FDB7A93421CD666E0045DDA8 /* XCBuild.framework in Frameworks */,
 				FDB7A8D921CD603B0045DDA8 /* SignPost.framework in Frameworks */,
 				FDB7A8D621CD5FE40045DDA8 /* ZFile.framework in Frameworks */,
 			);
@@ -1464,8 +1574,8 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_386 /* SourceryAutoProtocols.framework in Frameworks */,
+				FDB7A93721CD67CC0045DDA8 /* TestKit.framework in Frameworks */,
 				FDB7A8AD21CD58600045DDA8 /* SourceryWorker.framework in Frameworks */,
-				OBJ_372 /* SourceryMocks.framework in Frameworks */,
 				OBJ_374 /* XCBuild.framework in Frameworks */,
 				OBJ_375 /* Deliver.framework in Frameworks */,
 				OBJ_377 /* POSIX.framework in Frameworks */,
@@ -1726,14 +1836,7 @@
 		FDB7A8BA21CD5EA10045DDA8 /* TestKit */ = {
 			isa = PBXGroup;
 			children = (
-				FDB7A8CD21CD5FBE0045DDA8 /* ContextMock.swift */,
 				FDB7A8C821CD5FBE0045DDA8 /* Data+Convenience.swift */,
-				FDB7A8CC21CD5FBE0045DDA8 /* ExecutableProviderMock.swift */,
-				FDB7A8CA21CD5FBE0045DDA8 /* ExecutorMock.swift */,
-				FDB7A8C921CD5FBE0045DDA8 /* GitMock.swift */,
-				FDB7A8C721CD5FBE0045DDA8 /* MockLocalSystem.swift */,
-				FDB7A8CB21CD5FBE0045DDA8 /* MockSystem.swift */,
-				FDB7A8C621CD5FBE0045DDA8 /* MockUI.swift */,
 				FDB7A8BB21CD5EA10045DDA8 /* TestKit.h */,
 				FDB7A8BC21CD5EA10045DDA8 /* Info.plist */,
 			);
@@ -2198,6 +2301,20 @@
 			buildRules = (
 			);
 			dependencies = (
+				FDB7A91321CD665A0045DDA8 /* PBXTargetDependency */,
+				FDB7A91121CD665A0045DDA8 /* PBXTargetDependency */,
+				FDB7A90D21CD665A0045DDA8 /* PBXTargetDependency */,
+				FDB7A90F21CD665A0045DDA8 /* PBXTargetDependency */,
+				FDB7A91521CD665A0045DDA8 /* PBXTargetDependency */,
+				FDB7A91721CD665A0045DDA8 /* PBXTargetDependency */,
+				FDB7A91921CD665A0045DDA8 /* PBXTargetDependency */,
+				FDB7A91B21CD665A0045DDA8 /* PBXTargetDependency */,
+				FDB7A91D21CD665A0045DDA8 /* PBXTargetDependency */,
+				FDB7A91F21CD665A0045DDA8 /* PBXTargetDependency */,
+				FDB7A92121CD665A0045DDA8 /* PBXTargetDependency */,
+				FDB7A92321CD665A0045DDA8 /* PBXTargetDependency */,
+				FDB7A92521CD665A0045DDA8 /* PBXTargetDependency */,
+				FDB7A92721CD665A0045DDA8 /* PBXTargetDependency */,
 				FDB7A8D821CD60350045DDA8 /* PBXTargetDependency */,
 			);
 			name = TestKit;
@@ -2385,15 +2502,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_363 /* Build configuration list for PBXNativeTarget "GitTests" */;
 			buildPhases = (
-				OBJ_366 /* Sources */,
 				OBJ_370 /* Frameworks */,
+				OBJ_366 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FDB7A93621CD67C50045DDA8 /* PBXTargetDependency */,
 				OBJ_402 /* PBXTargetDependency */,
 				FDB7A8AC21CD58540045DDA8 /* PBXTargetDependency */,
-				OBJ_388 /* PBXTargetDependency */,
 				OBJ_390 /* PBXTargetDependency */,
 				OBJ_391 /* PBXTargetDependency */,
 				OBJ_393 /* PBXTargetDependency */,
@@ -2593,6 +2710,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				OBJ_808 /* PBXTargetDependency */,
 				FDB7A90A21CD62390045DDA8 /* PBXTargetDependency */,
 				OBJ_794 /* PBXTargetDependency */,
 				OBJ_796 /* PBXTargetDependency */,
@@ -2605,7 +2723,6 @@
 				OBJ_804 /* PBXTargetDependency */,
 				OBJ_806 /* PBXTargetDependency */,
 				OBJ_807 /* PBXTargetDependency */,
-				OBJ_808 /* PBXTargetDependency */,
 			);
 			name = TaskTests;
 			productName = TaskTests;
@@ -2757,8 +2874,7 @@
 				TargetAttributes = {
 					FD1126CB21C77F050072607D = {
 						CreatedOnToolsVersion = 10.1;
-						DevelopmentTeam = WWFDRU947Q;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					FD1126D321C77F050072607D = {
 						CreatedOnToolsVersion = 10.1;
@@ -2768,15 +2884,13 @@
 					};
 					FDB7A8B821CD5EA10045DDA8 = {
 						CreatedOnToolsVersion = 10.1;
-						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1010;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					FDC156DA21C5347C00E04B44 = {
 						CreatedOnToolsVersion = 10.1;
-						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1010;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					FDC156E221C5347D00E04B44 = {
 						CreatedOnToolsVersion = 10.1;
@@ -2785,59 +2899,58 @@
 					};
 					FDE9B6F621C58ED400D1F50A = {
 						CreatedOnToolsVersion = 10.1;
-						DevelopmentTeam = WWFDRU947Q;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					"highway::Arguments" = {
-						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
+						ProvisioningStyle = Manual;
 					};
 					"highway::Deliver" = {
-						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
+						ProvisioningStyle = Manual;
 					};
 					"highway::Errors" = {
-						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
+						ProvisioningStyle = Manual;
 					};
 					"highway::Git" = {
-						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
+						ProvisioningStyle = Manual;
 					};
 					"highway::Keychain" = {
-						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
+						ProvisioningStyle = Manual;
 					};
 					"highway::POSIX" = {
-						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
+						ProvisioningStyle = Manual;
 					};
 					"highway::Result" = {
-						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
+						ProvisioningStyle = Manual;
 					};
 					"highway::SourceryAutoProtocols" = {
-						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
+						ProvisioningStyle = Manual;
 					};
 					"highway::SourceryMocks" = {
 						LastSwiftMigration = 1000;
 					};
 					"highway::Task" = {
-						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
+						ProvisioningStyle = Manual;
 					};
 					"highway::Terminal" = {
-						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
+						ProvisioningStyle = Manual;
 					};
 					"highway::Url" = {
-						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
+						ProvisioningStyle = Manual;
 					};
 					"highway::XCBuild" = {
-						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -2985,13 +3098,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDB7A8D021CD5FBE0045DDA8 /* Data+Convenience.swift in Sources */,
-				FDB7A8D421CD5FBE0045DDA8 /* ExecutableProviderMock.swift in Sources */,
-				FDB7A8CF21CD5FBE0045DDA8 /* MockLocalSystem.swift in Sources */,
-				FDB7A8D521CD5FBE0045DDA8 /* ContextMock.swift in Sources */,
-				FDB7A8D321CD5FBE0045DDA8 /* MockSystem.swift in Sources */,
-				FDB7A8D121CD5FBE0045DDA8 /* GitMock.swift in Sources */,
-				FDB7A8D221CD5FBE0045DDA8 /* ExecutorMock.swift in Sources */,
-				FDB7A8CE21CD5FBE0045DDA8 /* MockUI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3287,6 +3393,81 @@
 			target = FDB7A8B821CD5EA10045DDA8 /* TestKit */;
 			targetProxy = FDB7A90921CD62390045DDA8 /* PBXContainerItemProxy */;
 		};
+		FDB7A90D21CD665A0045DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::Arguments" /* Arguments */;
+			targetProxy = FDB7A90C21CD665A0045DDA8 /* PBXContainerItemProxy */;
+		};
+		FDB7A90F21CD665A0045DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::Terminal" /* Terminal */;
+			targetProxy = FDB7A90E21CD665A0045DDA8 /* PBXContainerItemProxy */;
+		};
+		FDB7A91121CD665A0045DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::Task" /* Task */;
+			targetProxy = FDB7A91021CD665A0045DDA8 /* PBXContainerItemProxy */;
+		};
+		FDB7A91321CD665A0045DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			targetProxy = FDB7A91221CD665A0045DDA8 /* PBXContainerItemProxy */;
+		};
+		FDB7A91521CD665A0045DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDC156DA21C5347C00E04B44 /* SourceryWorker */;
+			targetProxy = FDB7A91421CD665A0045DDA8 /* PBXContainerItemProxy */;
+		};
+		FDB7A91721CD665A0045DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::POSIX" /* POSIX */;
+			targetProxy = FDB7A91621CD665A0045DDA8 /* PBXContainerItemProxy */;
+		};
+		FDB7A91921CD665A0045DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::Errors" /* Errors */;
+			targetProxy = FDB7A91821CD665A0045DDA8 /* PBXContainerItemProxy */;
+		};
+		FDB7A91B21CD665A0045DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::XCBuild" /* XCBuild */;
+			targetProxy = FDB7A91A21CD665A0045DDA8 /* PBXContainerItemProxy */;
+		};
+		FDB7A91D21CD665A0045DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::Url" /* Url */;
+			targetProxy = FDB7A91C21CD665A0045DDA8 /* PBXContainerItemProxy */;
+		};
+		FDB7A91F21CD665A0045DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::Deliver" /* Deliver */;
+			targetProxy = FDB7A91E21CD665A0045DDA8 /* PBXContainerItemProxy */;
+		};
+		FDB7A92121CD665A0045DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::Keychain" /* Keychain */;
+			targetProxy = FDB7A92021CD665A0045DDA8 /* PBXContainerItemProxy */;
+		};
+		FDB7A92321CD665A0045DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::Result" /* Result */;
+			targetProxy = FDB7A92221CD665A0045DDA8 /* PBXContainerItemProxy */;
+		};
+		FDB7A92521CD665A0045DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::SourceryMocks" /* SourceryMocks */;
+			targetProxy = FDB7A92421CD665A0045DDA8 /* PBXContainerItemProxy */;
+		};
+		FDB7A92721CD665A0045DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::Git" /* Git */;
+			targetProxy = FDB7A92621CD665A0045DDA8 /* PBXContainerItemProxy */;
+		};
+		FDB7A93621CD67C50045DDA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDB7A8B821CD5EA10045DDA8 /* TestKit */;
+			targetProxy = FDB7A93521CD67C50045DDA8 /* PBXContainerItemProxy */;
+		};
 		FDC156E621C5347D00E04B44 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FDC156DA21C5347C00E04B44 /* SourceryWorker */;
@@ -3451,11 +3632,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
 			targetProxy = FD326C992109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_388 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryMocks" /* SourceryMocks */;
-			targetProxy = FD326D092109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_390 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3950,11 +4126,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -3974,6 +4150,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SignPost;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 4.2;
@@ -3997,12 +4174,12 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -4018,6 +4195,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SignPost;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -4116,11 +4294,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -4140,6 +4318,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.TestKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -4164,12 +4343,12 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -4185,6 +4364,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.TestKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -4207,11 +4387,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -4232,6 +4412,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SourceryWorker;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -4256,12 +4437,12 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -4278,6 +4459,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SourceryWorker;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -4376,10 +4558,10 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -4398,6 +4580,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SourceryAutoGenerateProtocols;
 				PRODUCT_NAME = SourceryAutoProtocols;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
@@ -4424,11 +4607,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -4443,6 +4626,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SourceryAutoGenerateProtocols;
 				PRODUCT_NAME = SourceryAutoProtocols;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
@@ -4458,7 +4642,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -4470,6 +4655,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Arguments;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
@@ -4481,7 +4667,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -4493,6 +4680,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Arguments;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
@@ -4538,7 +4726,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -4550,6 +4739,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Deliver;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
@@ -4561,7 +4751,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -4573,6 +4764,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Deliver;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
@@ -4601,6 +4793,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -4669,7 +4862,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -4681,6 +4875,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Errors;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
@@ -4692,7 +4887,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -4704,6 +4900,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Errors;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
@@ -4715,7 +4912,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -4727,6 +4925,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Git;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
@@ -4738,7 +4937,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -4750,6 +4950,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Git;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
@@ -4810,6 +5011,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -4841,7 +5043,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -4853,6 +5056,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Keychain;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
@@ -4864,7 +5068,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -4876,6 +5081,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Keychain;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
@@ -4887,7 +5093,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -4899,6 +5106,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = POSIX;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
@@ -4910,7 +5118,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -4922,6 +5131,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = POSIX;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
@@ -4967,7 +5177,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -4979,6 +5190,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Result;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
@@ -4990,7 +5202,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5002,6 +5215,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Result;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
@@ -5045,7 +5259,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5057,6 +5272,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = SourceryAutoProtocols;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
@@ -5068,7 +5284,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5080,6 +5297,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = SourceryAutoProtocols;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
@@ -5133,7 +5351,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5145,6 +5364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Task;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SWIFT_PACKAGE HighwayTask";
@@ -5157,7 +5377,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5169,6 +5390,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Task;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SWIFT_PACKAGE HighwayTask";
@@ -5213,7 +5435,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5225,6 +5448,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Terminal;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
@@ -5236,7 +5460,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5248,6 +5473,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Terminal;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
@@ -5291,7 +5517,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5303,6 +5530,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Url;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
@@ -5314,7 +5542,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5326,6 +5555,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Url;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
@@ -5371,7 +5601,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5383,6 +5614,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = XCBuild;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
@@ -5394,7 +5626,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = WWFDRU947Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -5406,6 +5639,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = XCBuild;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
