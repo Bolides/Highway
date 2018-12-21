@@ -1,7 +1,8 @@
 import Foundation
-import SourceryWorker
-import os
 import SourceryAutoProtocols
+import os
+import SourceryWorker
+import ZFile
 
 
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery

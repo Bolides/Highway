@@ -54,6 +54,10 @@ struct AutomateHighwaySourceryWorker: DemoSourceryWorkerProtocol, AutoGeneratePr
 
             // If not the default, add a case and insert imports into importNames
             switch self {
+            case .SourceryWorker:
+                importNames.insert(TemplatePrepend.Import(name: VendorFramework.ZFile.rawValue))
+                
+                return Set([TemplatePrepend(name: importNames, template: Template.AutoMockable.rawValue)])
             case .Task:
                 importNames.insert(TemplatePrepend.Import(name: Target.Arguments.rawValue))
                 importNames.insert(TemplatePrepend.Import(name: VendorFramework.ZFile.rawValue))

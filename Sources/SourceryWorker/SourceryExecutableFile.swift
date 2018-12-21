@@ -9,12 +9,12 @@ import Foundation
 import ZFile
 import SourceryAutoProtocols
 
-protocol SourceryExecutableFileProtocol: FileProtocol, AutoMockable {
+public protocol SourceryExecutableFileProtocol: FileProtocol, AutoMockable {
     /// sourcery:inline:SourceryExecutableFile.AutoGenerateProtocol
     /// sourcery:end
 }
 
-public class SourceryExecutableFile: File, AutoGenerateProtocol {
+public class SourceryExecutableFile: File, SourceryExecutableFileProtocol, AutoGenerateProtocol {
     
     required init(path: String) throws {
        try super.init(path: path)
