@@ -57,7 +57,7 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol {
     
     public func attempt() throws -> [String] {
 
-        signPost.verbose("🧙‍♂️ All files in sources folders will be scanned for occurrences of `/// sourcery:` and replaced with `/// sourcery:` to be able generate protocols.")
+        signPost.verbose("🧙‍♂️ All files in Sources folders will be scanned for occurrences of `/// sourcery:` and replaced with `/// sourcery:` to be able generate protocols.")
         
         // 1. Find all files in sourceFolder and Replace occurances of inline with 3 slashes
         
@@ -98,7 +98,7 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol {
 
         // 3. Revert Replace occurances
         
-        signPost.verbose("🧙‍♂️ All files in sources folders are reverted to status before generating protocols.")
+        signPost.verbose("🧙‍♂️ All files in Sources folders are reverted to status before generating protocols.")
         
         try fileSequences.forEach { fileSequence in
 
