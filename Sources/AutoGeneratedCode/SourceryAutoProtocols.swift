@@ -61,7 +61,7 @@ public protocol AutoCases {
 
 // MARK: - Sourcery Errors
 
-public enum SourceryMockError: Swift.Error, CustomDebugStringConvertible {
+public enum SourceryMockError: Swift.Error, Hashable {
     case implementErrorCaseFor(String)
     case subclassMockBeforeUsing(String)
     
@@ -69,19 +69,14 @@ public enum SourceryMockError: Swift.Error, CustomDebugStringConvertible {
         switch self {
         case let .implementErrorCaseFor(message):
             return  """
-            \n
-            🧙‍♂️ \(SourceryMockError.self) Implement a case for:
-            \n
-            \(message)
-            \n
+            🧙‍♂️ SourceryMockError.implementErrorCaseFor:
+            message: \(message)
             """
         case .subclassMockBeforeUsing(let message):
             return  """
             \n
-            🧙‍♂️ \(SourceryMockError.self) Subclass the mock before using it:
-            \n
-            \(message)
-            \n
+            🧙‍♂️ SourceryMockError.subclassMockBeforeUsing:
+            message: \(message)
             """
         }
     }
