@@ -1,6 +1,6 @@
 github "doozMen/Nimble" "b16461853dc33d80da32330d57db93ddce485dd1"
 github "doozMen/Quick" "12d12de3ca4faf17642a4b017657c553a7011e5e"
-github "doozMen/template-sourcery" "e5e469eb374b7c4182e22a948811b63fc24f407f"
-github "doozMen/zfile" "8278e0818a4b243d4e807953132e279e43a394e6"
+github "doozMen/template-sourcery" "v1.0"
+github "doozMen/zfile" "v1.1"
 github "krzysztofzablocki/Sourcery" "0.15.0"
 github "mokacoding/TestAppDelegateExample" "0f01de2b28e2c316b1fe5251fa980e8df6d6eb5a"
