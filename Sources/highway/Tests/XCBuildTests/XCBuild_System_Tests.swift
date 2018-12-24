@@ -7,7 +7,6 @@ import Url
 @testable import Task
 import Deliver
 import Keychain
-import SourceryMocks
 
 final class XCBuildTests: QuickSpec {
     // TODO: enable with new mocking system

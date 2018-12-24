@@ -1,8 +1,9 @@
-import os
 import SourceryWorker
 import SourceryAutoProtocols
 import ZFile
+import os
 import Foundation
+import ZFileMock
 
 
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
@@ -46,9 +47,8 @@ open class ImportProtocolMock: ImportProtocol {
 
 // MARK: - SourceryExecutableFileProtocolMock
 
-open class SourceryExecutableFileProtocolMock: SourceryExecutableFileProtocol {
+open class SourceryExecutableFileProtocolMock: FileProtocolMock, SourceryExecutableFileProtocol {
 
-    public init() {}
 
 
 }

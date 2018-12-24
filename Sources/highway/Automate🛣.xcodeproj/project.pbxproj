@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD0553F421D1370D00E9B0D0 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD05539D21D1282C00E9B0D0 /* ZFile.framework */; };
+		FD0553F521D1370D00E9B0D0 /* ZFile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD05539D21D1282C00E9B0D0 /* ZFile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD0553FA21D1373C00E9B0D0 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD05539D21D1282C00E9B0D0 /* ZFile.framework */; };
+		FD0553FB21D1375F00E9B0D0 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD05539F21D1282C00E9B0D0 /* ZFileMock.framework */; };
+		FD05540221D137A300E9B0D0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4E54F921D1272700B5A776 /* Quick.framework */; };
+		FD05540321D137A900E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4E54DE21D1271900B5A776 /* Nimble.framework */; };
 		FDB7A8A821CD51870045DDA8 /* AutomateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A8A621CD51870045DDA8 /* AutomateTests.swift */; };
 		FDB7A8AA21CD524D0045DDA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDEE02721CD4B820007D4EB /* Main.storyboard */; };
-		FDDEE12521CD4DC90007D4EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEE02421CD4B820007D4EB /* ViewController.swift */; };
+		FDDEE12521CD4DC90007D4EB /* AutomateHighwayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEE02421CD4B820007D4EB /* AutomateHighwayViewController.swift */; };
 		FDDEE12621CD4DCB0007D4EB /* AutomateSourceryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEE02521CD4B820007D4EB /* AutomateSourceryWorker.swift */; };
 		FDDEE12721CD4DD30007D4EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEE02921CD4B820007D4EB /* AppDelegate.swift */; };
 		FDDEE12821CD4E040007D4EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDDEE02621CD4B820007D4EB /* Assets.xcassets */; };
@@ -85,6 +91,48 @@
 			proxyType = 2;
 			remoteGlobalIDString = FD1B88B421CE27D80055C2C1;
 			remoteInfo = "FoundationGenericHelper-macos";
+		};
+		FD0553F021D136F900E9B0D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEE08721CD4C010007D4EB /* ZFile.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FD737DBF21B03D25001BB507;
+			remoteInfo = "ZFile-macos";
+		};
+		FD0553F621D1370D00E9B0D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEE08721CD4C010007D4EB /* ZFile.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FD737DBF21B03D25001BB507;
+			remoteInfo = "ZFile-macos";
+		};
+		FD0553F821D1373100E9B0D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEE08721CD4C010007D4EB /* ZFile.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FDDB92FC21CD953400B6D5E9;
+			remoteInfo = "ZFileMock-macos";
+		};
+		FD0553FC21D1376900E9B0D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEE08721CD4C010007D4EB /* ZFile.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FD737DBF21B03D25001BB507;
+			remoteInfo = "ZFile-macos";
+		};
+		FD0553FE21D1379400E9B0D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEE0ED21CD4CC80007D4EB /* Quick.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DAEB6B8D1943873100289F44;
+			remoteInfo = "Quick-macOS";
+		};
+		FD05540021D1379D00E9B0D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEE0C521CD4CBF0007D4EB /* Nimble.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F925EAC195C0D6300ED456B;
+			remoteInfo = "Nimble-macOS";
 		};
 		FD4E54AD21D126E300B5A776 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -594,6 +642,7 @@
 				FDDEE15721CD4E6D0007D4EB /* Task.framework in Embed Frameworks */,
 				FDDEE13321CD4E6D0007D4EB /* Keychain.framework in Embed Frameworks */,
 				FDDEE14B21CD4E6D0007D4EB /* SourceryAutoProtocols.framework in Embed Frameworks */,
+				FD0553F521D1370D00E9B0D0 /* ZFile.framework in Embed Frameworks */,
 				FDDEE15B21CD4E6D0007D4EB /* Url.framework in Embed Frameworks */,
 				FDDEE15F21CD4E6D0007D4EB /* SourceryWorker.framework in Embed Frameworks */,
 				FDDEE14F21CD4E6D0007D4EB /* Git.framework in Embed Frameworks */,
@@ -611,7 +660,7 @@
 		FDB7A8A621CD51870045DDA8 /* AutomateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomateTests.swift; sourceTree = "<group>"; };
 		FDB7A8A721CD51870045DDA8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "🛣.xcodeproj"; sourceTree = "<group>"; };
-		FDDEE02421CD4B820007D4EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FDDEE02421CD4B820007D4EB /* AutomateHighwayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomateHighwayViewController.swift; sourceTree = "<group>"; };
 		FDDEE02521CD4B820007D4EB /* AutomateSourceryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomateSourceryWorker.swift; sourceTree = "<group>"; };
 		FDDEE02621CD4B820007D4EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDDEE02821CD4B820007D4EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -641,6 +690,7 @@
 				FDDEE15621CD4E6D0007D4EB /* Task.framework in Frameworks */,
 				FDDEE13221CD4E6D0007D4EB /* Keychain.framework in Frameworks */,
 				FDDEE14A21CD4E6D0007D4EB /* SourceryAutoProtocols.framework in Frameworks */,
+				FD0553F421D1370D00E9B0D0 /* ZFile.framework in Frameworks */,
 				FDDEE15A21CD4E6D0007D4EB /* Url.framework in Frameworks */,
 				FDDEE15E21CD4E6D0007D4EB /* SourceryWorker.framework in Frameworks */,
 				FDDEE14E21CD4E6D0007D4EB /* Git.framework in Frameworks */,
@@ -653,6 +703,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD05540321D137A900E9B0D0 /* Nimble.framework in Frameworks */,
+				FD05540221D137A300E9B0D0 /* Quick.framework in Frameworks */,
+				FD0553FA21D1373C00E9B0D0 /* ZFile.framework in Frameworks */,
+				FD0553FB21D1375F00E9B0D0 /* ZFileMock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +724,14 @@
 				FD0553A321D1282C00E9B0D0 /* FoundationGenericHelper.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FD05542F21D13F2300E9B0D0 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FDB7A8A521CD51870045DDA8 /* AutomateHighwayTests */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		FD4E54C321D1270800B5A776 /* Products */ = {
@@ -729,17 +791,16 @@
 				FDB7A8A621CD51870045DDA8 /* AutomateTests.swift */,
 				FDB7A8A721CD51870045DDA8 /* Info.plist */,
 			);
-			name = AutomateHighwayTests;
-			path = Tests/AutomateHighwayTests;
+			path = AutomateHighwayTests;
 			sourceTree = "<group>";
 		};
 		FDDEDFAF21CD4B490007D4EB = {
 			isa = PBXGroup;
 			children = (
+				FD05542F21D13F2300E9B0D0 /* Tests */,
 				FD0553E621D1347700E9B0D0 /* README.md */,
 				FD0553B421D1347600E9B0D0 /* CHANGELOG.md */,
 				FDDEE02321CD4B820007D4EB /* AutomateHighway */,
-				FDB7A8A521CD51870045DDA8 /* AutomateHighwayTests */,
 				FDDEDFB921CD4B490007D4EB /* Products */,
 				FDDEE0ED21CD4CC80007D4EB /* Quick.xcodeproj */,
 				FDDEE0C521CD4CBF0007D4EB /* Nimble.xcodeproj */,
@@ -763,7 +824,7 @@
 		FDDEE02321CD4B820007D4EB /* AutomateHighway */ = {
 			isa = PBXGroup;
 			children = (
-				FDDEE02421CD4B820007D4EB /* ViewController.swift */,
+				FDDEE02421CD4B820007D4EB /* AutomateHighwayViewController.swift */,
 				FDDEE02521CD4B820007D4EB /* AutomateSourceryWorker.swift */,
 				FDDEE02621CD4B820007D4EB /* Assets.xcassets */,
 				FDDEE02721CD4B820007D4EB /* Main.storyboard */,
@@ -829,6 +890,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD0553F121D136F900E9B0D0 /* PBXTargetDependency */,
 				FDDEE14D21CD4E6D0007D4EB /* PBXTargetDependency */,
 				FDDEE13121CD4E6D0007D4EB /* PBXTargetDependency */,
 				FDDEE13521CD4E6D0007D4EB /* PBXTargetDependency */,
@@ -843,6 +905,7 @@
 				FDDEE15D21CD4E6D0007D4EB /* PBXTargetDependency */,
 				FDDEE16121CD4E6D0007D4EB /* PBXTargetDependency */,
 				FDDEE16921CD4E6D0007D4EB /* PBXTargetDependency */,
+				FD0553F721D1370D00E9B0D0 /* PBXTargetDependency */,
 			);
 			name = AutomateHighway;
 			productName = AutomateHighway;
@@ -860,6 +923,10 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD05540121D1379D00E9B0D0 /* PBXTargetDependency */,
+				FD0553FF21D1379400E9B0D0 /* PBXTargetDependency */,
+				FD0553FD21D1376900E9B0D0 /* PBXTargetDependency */,
+				FD0553F921D1373100E9B0D0 /* PBXTargetDependency */,
 				FDDEE11A21CD4D230007D4EB /* PBXTargetDependency */,
 			);
 			name = AutomateHighwayTests;
@@ -1381,7 +1448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDDEE12521CD4DC90007D4EB /* ViewController.swift in Sources */,
+				FDDEE12521CD4DC90007D4EB /* AutomateHighwayViewController.swift in Sources */,
 				FDDEE12621CD4DCB0007D4EB /* AutomateSourceryWorker.swift in Sources */,
 				FDDEE12721CD4DD30007D4EB /* AppDelegate.swift in Sources */,
 			);
@@ -1398,6 +1465,36 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FD0553F121D136F900E9B0D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ZFile-macos";
+			targetProxy = FD0553F021D136F900E9B0D0 /* PBXContainerItemProxy */;
+		};
+		FD0553F721D1370D00E9B0D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ZFile-macos";
+			targetProxy = FD0553F621D1370D00E9B0D0 /* PBXContainerItemProxy */;
+		};
+		FD0553F921D1373100E9B0D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ZFileMock-macos";
+			targetProxy = FD0553F821D1373100E9B0D0 /* PBXContainerItemProxy */;
+		};
+		FD0553FD21D1376900E9B0D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ZFile-macos";
+			targetProxy = FD0553FC21D1376900E9B0D0 /* PBXContainerItemProxy */;
+		};
+		FD0553FF21D1379400E9B0D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Quick-macOS";
+			targetProxy = FD0553FE21D1379400E9B0D0 /* PBXContainerItemProxy */;
+		};
+		FD05540121D1379D00E9B0D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Nimble-macOS";
+			targetProxy = FD05540021D1379D00E9B0D0 /* PBXContainerItemProxy */;
+		};
 		FDDEE11A21CD4D230007D4EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FDDEE10621CD4D220007D4EB /* AutomateHighway */;

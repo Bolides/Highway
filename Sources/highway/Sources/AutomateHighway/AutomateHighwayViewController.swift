@@ -11,7 +11,7 @@ import Terminal
 import SignPost
 import SourceryWorker
 
-class ViewController: NSViewController {
+class AutomateHighwayViewController: NSViewController {
 
     lazy var signPost: SignPostProtocol = SignPost.shared
     

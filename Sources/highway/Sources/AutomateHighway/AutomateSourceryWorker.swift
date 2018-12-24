@@ -51,22 +51,18 @@ struct AutomateHighwaySourceryWorker: DemoSourceryWorkerProtocol, AutoGeneratePr
             // Insert the target itself
             var importNames = AutomateHighwaySourceryWorker.commonImportAutoMockable
             importNames.insert(TemplatePrepend.Import(name: self.rawValue))
+            importNames.insert(TemplatePrepend.Import(name: VendorFramework.ZFile.rawValue))
+            importNames.insert(TemplatePrepend.Import(name: VendorFramework.ZFileMock.rawValue))
 
             // If not the default, add a case and insert imports into importNames
             switch self {
-            case .SourceryWorker:
-                importNames.insert(TemplatePrepend.Import(name: VendorFramework.ZFile.rawValue))
-                
-                return Set([TemplatePrepend(name: importNames, template: Template.AutoMockable.rawValue)])
             case .Task:
                 importNames.insert(TemplatePrepend.Import(name: Target.Arguments.rawValue))
-                importNames.insert(TemplatePrepend.Import(name: VendorFramework.ZFile.rawValue))
                 importNames.insert(TemplatePrepend.Import(name: Target.SignPost.rawValue))
                 
                 return Set([TemplatePrepend(name: importNames, template: Template.AutoMockable.rawValue)])
             case .Terminal:
                 importNames.insert(TemplatePrepend.Import(name: Target.Arguments.rawValue))
-                importNames.insert(TemplatePrepend.Import(name: VendorFramework.ZFile.rawValue))
                 
                 return Set([TemplatePrepend(name: importNames, template: Template.AutoMockable.rawValue)])
             default:
@@ -77,6 +73,7 @@ struct AutomateHighwaySourceryWorker: DemoSourceryWorkerProtocol, AutoGeneratePr
     
     enum VendorFramework: String, CaseIterable {
         case ZFile
+        case ZFileMock
     }
     
     enum Template: String {

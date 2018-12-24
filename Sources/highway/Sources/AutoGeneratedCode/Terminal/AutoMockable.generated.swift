@@ -1,9 +1,10 @@
-import Terminal
-import os
-import Arguments
-import SourceryAutoProtocols
 import ZFile
+import os
+import Terminal
 import Foundation
+import Arguments
+import ZFileMock
+import SourceryAutoProtocols
 
 
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery

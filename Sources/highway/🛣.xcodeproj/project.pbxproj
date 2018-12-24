@@ -7,8 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FD0553A921D1291400E9B0D0 /* TestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0553A721D1291400E9B0D0 /* TestKit.h */; };
+		FD0553A921D1291400E9B0D0 /* TestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0553A721D1291400E9B0D0 /* TestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD0553AE21D12A2C00E9B0D0 /* SourceryFolderWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0553AD21D12A2C00E9B0D0 /* SourceryFolderWorker.swift */; };
+		FD0553E821D136A700E9B0D0 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0553E721D136A700E9B0D0 /* ZFileMock.framework */; };
+		FD0553EA21D136B600E9B0D0 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0553E921D136B600E9B0D0 /* ZFileMock.framework */; };
+		FD0553EC21D136C200E9B0D0 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0553EB21D136C200E9B0D0 /* ZFileMock.framework */; };
+		FD0553EE21D136CB00E9B0D0 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0553ED21D136CB00E9B0D0 /* ZFileMock.framework */; };
+		FD0553EF21D136D500E9B0D0 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F42221BEE5340052222C /* ZFile.framework */; };
+		FD05540421D138F700E9B0D0 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0553ED21D136CB00E9B0D0 /* ZFileMock.framework */; };
+		FD05540521D1395400E9B0D0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D321CD704F0045DDA8 /* Quick.framework */; };
+		FD05540621D1395C00E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D521CD70580045DDA8 /* Nimble.framework */; };
+		FD05540721D1396500E9B0D0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D321CD704F0045DDA8 /* Quick.framework */; };
+		FD05540821D1396D00E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D521CD70580045DDA8 /* Nimble.framework */; };
+		FD05540921D1397A00E9B0D0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D321CD704F0045DDA8 /* Quick.framework */; };
+		FD05540A21D1398100E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D521CD70580045DDA8 /* Nimble.framework */; };
+		FD05540B21D1398D00E9B0D0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D321CD704F0045DDA8 /* Quick.framework */; };
+		FD05540C21D1399500E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D521CD70580045DDA8 /* Nimble.framework */; };
+		FD05540D21D1399E00E9B0D0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D321CD704F0045DDA8 /* Quick.framework */; };
+		FD05540E21D139A400E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D521CD70580045DDA8 /* Nimble.framework */; };
+		FD05540F21D139AE00E9B0D0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D321CD704F0045DDA8 /* Quick.framework */; };
+		FD05541021D139B500E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D521CD70580045DDA8 /* Nimble.framework */; };
+		FD05541121D139BE00E9B0D0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D321CD704F0045DDA8 /* Quick.framework */; };
+		FD05541221D139C500E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D521CD70580045DDA8 /* Nimble.framework */; };
+		FD05541321D139CD00E9B0D0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D321CD704F0045DDA8 /* Quick.framework */; };
+		FD05541421D139D400E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D521CD70580045DDA8 /* Nimble.framework */; };
+		FD05541521D139DD00E9B0D0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D321CD704F0045DDA8 /* Quick.framework */; };
+		FD05541621D139E400E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D521CD70580045DDA8 /* Nimble.framework */; };
+		FD05541721D139EC00E9B0D0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D321CD704F0045DDA8 /* Quick.framework */; };
+		FD05541821D139F300E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D521CD70580045DDA8 /* Nimble.framework */; };
 		FD11267F21C6924C0072607D /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
 		FD1126C121C771970072607D /* ArgumentsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1126C021C771970072607D /* ArgumentsWorker.swift */; };
 		FD1126C621C7756A0072607D /* SourceryExecutableFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1126C521C7756A0072607D /* SourceryExecutableFile.swift */; };
@@ -1298,6 +1324,10 @@
 		FD0553A721D1291400E9B0D0 /* TestKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestKit.h; sourceTree = "<group>"; };
 		FD0553A821D1291400E9B0D0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD0553AD21D12A2C00E9B0D0 /* SourceryFolderWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceryFolderWorker.swift; sourceTree = "<group>"; };
+		FD0553E721D136A700E9B0D0 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD0553E921D136B600E9B0D0 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD0553EB21D136C200E9B0D0 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD0553ED21D136CB00E9B0D0 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1126C021C771970072607D /* ArgumentsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentsWorker.swift; sourceTree = "<group>"; };
 		FD1126C521C7756A0072607D /* SourceryExecutableFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryExecutableFile.swift; sourceTree = "<group>"; };
 		FD1126CC21C77F050072607D /* SignPost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SignPost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1494,6 +1524,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD0553E821D136A700E9B0D0 /* ZFileMock.framework in Frameworks */,
 				FDB7A9BE21CD6C620045DDA8 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDB7A9C121CD6CAB0045DDA8 /* Arguments.framework in Frameworks */,
 			);
@@ -1503,6 +1534,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD0553EA21D136B600E9B0D0 /* ZFileMock.framework in Frameworks */,
 				FDB7A9D921CD719F0045DDA8 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDB7A9DC21CD71AF0045DDA8 /* SignPost.framework in Frameworks */,
 			);
@@ -1512,6 +1544,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD0553EC21D136C200E9B0D0 /* ZFileMock.framework in Frameworks */,
 				FDB7A9F621CD75040045DDA8 /* ZFile.framework in Frameworks */,
 				FDB7A9F521CD74D40045DDA8 /* Arguments.framework in Frameworks */,
 				FDB7A9F221CD74B00045DDA8 /* Task.framework in Frameworks */,
@@ -1523,6 +1556,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD0553EE21D136CB00E9B0D0 /* ZFileMock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1530,6 +1564,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD0553EF21D136D500E9B0D0 /* ZFile.framework in Frameworks */,
 				FDB7AA1721CD81FD0045DDA8 /* SourceryWorker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1547,6 +1582,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD05541821D139F300E9B0D0 /* Nimble.framework in Frameworks */,
+				FD05541721D139EC00E9B0D0 /* Quick.framework in Frameworks */,
 				FDB7AA1B21CD82DD0045DDA8 /* SourceryWorkerMock.framework in Frameworks */,
 				FDC156E421C5347D00E04B44 /* SourceryWorker.framework in Frameworks */,
 			);
@@ -1572,6 +1609,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				FD05540621D1395C00E9B0D0 /* Nimble.framework in Frameworks */,
+				FD05540521D1395400E9B0D0 /* Quick.framework in Frameworks */,
 				OBJ_285 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDB7A9BB21CD6BCC0045DDA8 /* ArgumentsMock.framework in Frameworks */,
 				OBJ_283 /* Arguments.framework in Frameworks */,
@@ -1598,6 +1637,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				FD05540821D1396D00E9B0D0 /* Nimble.framework in Frameworks */,
+				FD05540721D1396500E9B0D0 /* Quick.framework in Frameworks */,
 				OBJ_322 /* Arguments.framework in Frameworks */,
 				OBJ_323 /* Errors.framework in Frameworks */,
 				OBJ_325 /* SourceryAutoProtocols.framework in Frameworks */,
@@ -1630,6 +1671,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				FD05540A21D1398100E9B0D0 /* Nimble.framework in Frameworks */,
+				FD05540921D1397A00E9B0D0 /* Quick.framework in Frameworks */,
 				OBJ_386 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDB7A93721CD67CC0045DDA8 /* TestKit.framework in Frameworks */,
 				FDB7A8AD21CD58600045DDA8 /* SourceryWorker.framework in Frameworks */,
@@ -1673,6 +1716,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				FD05540C21D1399500E9B0D0 /* Nimble.framework in Frameworks */,
+				FD05540B21D1398D00E9B0D0 /* Quick.framework in Frameworks */,
 				OBJ_639 /* POSIX.framework in Frameworks */,
 				OBJ_640 /* Url.framework in Frameworks */,
 				OBJ_641 /* SourceryAutoProtocols.framework in Frameworks */,
@@ -1691,6 +1736,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				FD05540E21D139A400E9B0D0 /* Nimble.framework in Frameworks */,
+				FD05540D21D1399E00E9B0D0 /* Quick.framework in Frameworks */,
 				OBJ_663 /* XCBuild.framework in Frameworks */,
 				OBJ_664 /* Deliver.framework in Frameworks */,
 				OBJ_666 /* POSIX.framework in Frameworks */,
@@ -1731,6 +1778,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				FD05541021D139B500E9B0D0 /* Nimble.framework in Frameworks */,
+				FD05540F21D139AE00E9B0D0 /* Quick.framework in Frameworks */,
 				FDB7AA0621CD7EF50045DDA8 /* TaskMock.framework in Frameworks */,
 				FDB7A90B21CD62400045DDA8 /* TestKit.framework in Frameworks */,
 				OBJ_780 /* XCBuild.framework in Frameworks */,
@@ -1760,6 +1809,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				FD05541221D139C500E9B0D0 /* Nimble.framework in Frameworks */,
+				FD05541121D139BE00E9B0D0 /* Quick.framework in Frameworks */,
 				OBJ_851 /* SourceryAutoProtocols.framework in Frameworks */,
 				OBJ_839 /* XCBuild.framework in Frameworks */,
 				OBJ_840 /* Deliver.framework in Frameworks */,
@@ -1786,6 +1837,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				FD05541421D139D400E9B0D0 /* Nimble.framework in Frameworks */,
+				FD05541321D139CD00E9B0D0 /* Quick.framework in Frameworks */,
 				OBJ_928 /* Url.framework in Frameworks */,
 				OBJ_929 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
@@ -1810,6 +1863,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				FD05541621D139E400E9B0D0 /* Nimble.framework in Frameworks */,
+				FD05541521D139DD00E9B0D0 /* Quick.framework in Frameworks */,
+				FD05540421D138F700E9B0D0 /* ZFileMock.framework in Frameworks */,
 				OBJ_973 /* Keychain.framework in Frameworks */,
 				OBJ_977 /* XCBuild.framework in Frameworks */,
 				OBJ_978 /* Deliver.framework in Frameworks */,
@@ -1871,6 +1927,10 @@
 		FD326D9E210A0F5F00AE3A98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD0553ED21D136CB00E9B0D0 /* ZFileMock.framework */,
+				FD0553EB21D136C200E9B0D0 /* ZFileMock.framework */,
+				FD0553E921D136B600E9B0D0 /* ZFileMock.framework */,
+				FD0553E721D136A700E9B0D0 /* ZFileMock.framework */,
 				FDB7A9D521CD70580045DDA8 /* Nimble.framework */,
 				FDB7A9D321CD704F0045DDA8 /* Quick.framework */,
 				FDC156B621C52EE800E04B44 /* UIKit.framework */,

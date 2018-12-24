@@ -9,7 +9,10 @@ import Foundation
 import ZFile
 import SourceryAutoProtocols
 
-public protocol SourceryExecutableFileProtocol: FileProtocol, AutoMockable {
+// sourcery:AutoMockable
+// sourcery:mockInherit = FileProtocolMock
+// sourcery:skipPublicInit
+public protocol SourceryExecutableFileProtocol: FileProtocol {
     /// sourcery:inline:SourceryExecutableFile.AutoGenerateProtocol
     /// sourcery:end
 }
