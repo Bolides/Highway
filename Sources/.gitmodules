@@ -6,3 +6,7 @@
 	url = https://github.com/doozMen/Nimble.git
 [submodule "Carthage/Checkouts/zfile"]
 	url = https://github.com/doozMen/zfile.git
+[submodule "Carthage/Checkouts/TestAppDelegateExample"]
+	url = https://github.com/mokacoding/TestAppDelegateExample.git
+[submodule "Carthage/Checkouts/template-sourcery"]
+	url = https://github.com/doozMen/template-sourcery.git
