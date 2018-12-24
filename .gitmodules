@@ -13,3 +13,6 @@
 [submodule "Sources/Carthage/Checkouts/TestAppDelegateExample"]
 	path = Sources/Carthage/Checkouts/TestAppDelegateExample
 	url = https://github.com/mokacoding/TestAppDelegateExample.git
+[submodule "Carthage/Checkouts/ZFile"]
+	path = Sources/Carthage/Checkouts/ZFile
+	url = https://github.com/doozMen/ZFile.git
