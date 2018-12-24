@@ -15,11 +15,15 @@ This changed from the original project
 
 First resolve some dependencies from the xcode project
 
-1. `carthage update --no-build --use-submodules`
-3. `open 🛣.xcodeproj`
-4. `run Automate` (Debug & Release config)
-5. open terminal and run `.build.nosync/Debug/Automate.app/Contents/MacOS/Automate 🤖command:sourcery`
-6. open terminal and run `.build.nosync/Release/Automate.app/Contents/MacOS/Automate 🤖command:sourcery`
+```bash
+carthage update --no-build --use-submodules`
+xcodebuild -project Sources/highway/Automate🛣.xcodeproj -scheme AutomateHighway
+
+```
+
+## Run from Terminal
+
+> open terminal and run `.build.nosync/Debug/Automate.app/Contents/MacOS/Automate 🤖command:sourcery`
 
 ## Integrate in your project
 
