@@ -12,7 +12,7 @@
 		<key>SignPost.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>10</integer>
+			<integer>6</integer>
 		</dict>
 		<key>SourceryAutoProtocols.xcscheme</key>
 		<dict>
@@ -24,7 +24,7 @@
 		<key>SourceryWorker.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>11</integer>
+			<integer>7</integer>
 		</dict>
 		<key>Task.xcscheme</key>
 		<dict>

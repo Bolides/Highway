@@ -9,6 +9,7 @@ import Cocoa
 import os
 import Terminal
 import SignPost
+import SourceryWorker
 
 class ViewController: NSViewController {
 
@@ -16,7 +17,7 @@ class ViewController: NSViewController {
     
     @IBAction func runSourcery(_ sender: NSButton) {
         do {
-            _ = try AutomateHighwaySourceryWorker().attempt()
+            _ = try AutomateHighwaySourceryWorker(sourceryFolderWorkerType: SourceryFolderWorker.self).attempt()
             signPost.success("💁🏻‍♂️ Sourcery finished ✅.")
         } catch {
             signPost.error( "❌\n \(error)\n")

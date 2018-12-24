@@ -1,8 +1,8 @@
-import SourceryAutoProtocols
-import os
-import ZFile
-import Foundation
 import Arguments
+import ZFile
+import SourceryAutoProtocols
+import Foundation
+import os
 import Terminal
 
 
@@ -65,12 +65,7 @@ open class ArgumentExecutableProtocolMock: ArgumentExecutableProtocol {
 
       guard let closureReturn = argumentsClosure else {
           guard let returnValue = argumentsReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    arguments
-                    but this case(s) is(are) not implemented in
-                    ArgumentExecutableProtocol for method argumentsClosure.
-                """
+              let message = "No returnValue implemented for argumentsClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
                  throw error
           }
@@ -112,12 +107,7 @@ open class ArgumentExecutableProtocolMock: ArgumentExecutableProtocol {
 
       guard let closureReturn = executableFileClosure else {
           guard let returnValue = executableFileReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    executableFile
-                    but this case(s) is(are) not implemented in
-                    ExecutableProtocol for method executableFileClosure.
-                """
+              let message = "No returnValue implemented for executableFileClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
                  throw error
           }
@@ -169,12 +159,7 @@ open class ExecutableProtocolMock: ExecutableProtocol {
 
       guard let closureReturn = executableFileClosure else {
           guard let returnValue = executableFileReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    executableFile
-                    but this case(s) is(are) not implemented in
-                    ExecutableProtocol for method executableFileClosure.
-                """
+              let message = "No returnValue implemented for executableFileClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
                  throw error
           }
@@ -228,12 +213,7 @@ open class TerminalWorkerProtocolMock: TerminalWorkerProtocol {
 
       guard let closureReturn = terminalTaskClosure else {
           guard let returnValue = terminalTaskReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    terminalTask
-                    but this case(s) is(are) not implemented in
-                    TerminalWorkerProtocol for method terminalTaskClosure.
-                """
+              let message = "No returnValue implemented for terminalTaskClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
                  throw error
           }

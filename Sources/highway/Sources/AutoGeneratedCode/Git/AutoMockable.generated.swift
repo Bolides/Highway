@@ -1,7 +1,7 @@
 import SourceryAutoProtocols
+import Foundation
 import os
 import Git
-import Foundation
 
 
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
@@ -240,12 +240,7 @@ open class GitToolProtocolMock: GitToolProtocol {
 
       guard let closureReturn = currentTagAtClosure else {
           guard let returnValue = currentTagAtReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    currentTagAt
-                    but this case(s) is(are) not implemented in
-                    GitToolProtocol for method currentTagAtClosure.
-                """
+              let message = "No returnValue implemented for currentTagAtClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
                  throw error
           }

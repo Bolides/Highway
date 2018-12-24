@@ -1,7 +1,7 @@
 import SourceryAutoProtocols
+import Foundation
 import os
 import Keychain
-import Foundation
 
 
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
@@ -70,12 +70,7 @@ open class KeychainProtocolMock: KeychainProtocol {
 
       guard let closureReturn = passwordMatchingClosure else {
           guard let returnValue = passwordMatchingReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    passwordMatching
-                    but this case(s) is(are) not implemented in
-                    KeychainProtocol for method passwordMatchingClosure.
-                """
+              let message = "No returnValue implemented for passwordMatchingClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
                  throw error
           }

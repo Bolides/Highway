@@ -1,7 +1,7 @@
-import SourceryAutoProtocols
-import os
 import XCBuild
+import SourceryAutoProtocols
 import Foundation
+import os
 
 
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
@@ -132,12 +132,7 @@ open class DestinationFactoryProtocolMock: DestinationFactoryProtocol {
 
       guard let closureReturn = macOSArchitectureClosure else {
           guard let returnValue = macOSArchitectureReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    macOSArchitecture
-                    but this case(s) is(are) not implemented in
-                    DestinationFactoryProtocol for method macOSArchitectureClosure.
-                """
+              let message = "No returnValue implemented for macOSArchitectureClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
               os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
 
@@ -175,12 +170,7 @@ open class DestinationFactoryProtocolMock: DestinationFactoryProtocol {
 
       guard let closureReturn = deviceNameIsGenericIdClosure else {
           guard let returnValue = deviceNameIsGenericIdReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    deviceNameIsGenericId
-                    but this case(s) is(are) not implemented in
-                    DestinationFactoryProtocol for method deviceNameIsGenericIdClosure.
-                """
+              let message = "No returnValue implemented for deviceNameIsGenericIdClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
               os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
 
@@ -218,12 +208,7 @@ open class DestinationFactoryProtocolMock: DestinationFactoryProtocol {
 
       guard let closureReturn = simulatorNameOsIdClosure else {
           guard let returnValue = simulatorNameOsIdReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    simulatorNameOsId
-                    but this case(s) is(are) not implemented in
-                    DestinationFactoryProtocol for method simulatorNameOsIdClosure.
-                """
+              let message = "No returnValue implemented for simulatorNameOsIdClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
               os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
 
@@ -380,12 +365,7 @@ open class XCBuildProtocolMock: XCBuildProtocol {
 
       guard let closureReturn = archiveUsingClosure else {
           guard let returnValue = archiveUsingReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    archiveUsing
-                    but this case(s) is(are) not implemented in
-                    XCBuildProtocol for method archiveUsingClosure.
-                """
+              let message = "No returnValue implemented for archiveUsingClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
                  throw error
           }
@@ -429,12 +409,7 @@ open class XCBuildProtocolMock: XCBuildProtocol {
 
       guard let closureReturn = exportUsingClosure else {
           guard let returnValue = exportUsingReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    exportUsing
-                    but this case(s) is(are) not implemented in
-                    XCBuildProtocol for method exportUsingClosure.
-                """
+              let message = "No returnValue implemented for exportUsingClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
                  throw error
           }
@@ -478,12 +453,7 @@ open class XCBuildProtocolMock: XCBuildProtocol {
 
       guard let closureReturn = buildAndTestUsingClosure else {
           guard let returnValue = buildAndTestUsingReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    buildAndTestUsing
-                    but this case(s) is(are) not implemented in
-                    XCBuildProtocol for method buildAndTestUsingClosure.
-                """
+              let message = "No returnValue implemented for buildAndTestUsingClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
                  throw error
           }

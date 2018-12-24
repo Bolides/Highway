@@ -1,8 +1,8 @@
 import SourceryWorker
-import SourceryAutoProtocols
-import os
 import ZFile
+import SourceryAutoProtocols
 import Foundation
+import os
 
 
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
@@ -50,6 +50,39 @@ open class SourceryExecutableFileProtocolMock: SourceryExecutableFileProtocol {
 
     public init() {}
 
+
+}
+
+
+// MARK: - SourceryFolderWorkerProtocolMock
+
+open class SourceryFolderWorkerProtocolMock: SourceryFolderWorkerProtocol {
+
+    public init() {}
+
+  public  var scrRoot: (folder: FolderProtocol, key: SourceryFolderWorker.Key) {
+      get { return underlyingScrRoot }
+      set(value) { underlyingScrRoot = value }
+  }
+  public  var underlyingScrRoot: (folder: FolderProtocol, key: SourceryFolderWorker.Key)!
+
+
+  // MARK: - <init> - parameters
+
+  public var initBundleThrowableError: Error?
+  public var initBundleReceivedBundle: BundleProtocol?
+
+  // MARK: - <init> - closure mocks
+
+  public var initBundleClosure: ((BundleProtocol) throws  -> Void)? = nil
+
+
+  // MARK: - <init> - initializer mocked
+
+  public required init(bundle: BundleProtocol) throws {
+      initBundleReceivedBundle = bundle
+     try? initBundleClosure?(bundle)
+  }
 
 }
 

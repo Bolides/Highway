@@ -1,10 +1,10 @@
-import SignPost
-import ZFile
+import Foundation
 import os
 import Arguments
-import SourceryAutoProtocols
-import Foundation
+import ZFile
 import Task
+import SignPost
+import SourceryAutoProtocols
 
 
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
@@ -74,12 +74,7 @@ open class ExecutableProviderProtocolMock: ExecutableProviderProtocol {
 
       guard let closureReturn = executableWithClosure else {
           guard let returnValue = executableWithReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    executableWith
-                    but this case(s) is(are) not implemented in
-                    ExecutableProviderProtocol for method executableWithClosure.
-                """
+              let message = "No returnValue implemented for executableWithClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
                  throw error
           }
@@ -183,12 +178,7 @@ open class SystemProtocolMock: SystemProtocol {
 
       guard let closureReturn = taskNamedClosure else {
           guard let returnValue = taskNamedReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    taskNamed
-                    but this case(s) is(are) not implemented in
-                    SystemProtocol for method taskNamedClosure.
-                """
+              let message = "No returnValue implemented for taskNamedClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
                  throw error
           }
@@ -232,12 +222,7 @@ open class SystemProtocolMock: SystemProtocol {
 
       guard let closureReturn = executeClosure else {
           guard let returnValue = executeReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    execute
-                    but this case(s) is(are) not implemented in
-                    SystemProtocol for method executeClosure.
-                """
+              let message = "No returnValue implemented for executeClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
                  throw error
           }
@@ -281,12 +266,7 @@ open class SystemProtocolMock: SystemProtocol {
 
       guard let closureReturn = launchWaitClosure else {
           guard let returnValue = launchWaitReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    launchWait
-                    but this case(s) is(are) not implemented in
-                    SystemProtocol for method launchWaitClosure.
-                """
+              let message = "No returnValue implemented for launchWaitClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
                  throw error
           }

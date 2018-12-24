@@ -1,7 +1,7 @@
-import SourceryAutoProtocols
-import os
 import Deliver
+import SourceryAutoProtocols
 import Foundation
+import os
 
 
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
@@ -65,12 +65,7 @@ open class DeliverProtocolMock: DeliverProtocol {
 
       guard let closureReturn = nowWithClosure else {
           guard let returnValue = nowWithReturnValue else {
-              let message = """
-                🧙‍♂️ 🔥asked to return a value for name parameters:
-                    nowWith
-                    but this case(s) is(are) not implemented in
-                    DeliverProtocol for method nowWithClosure.
-                """
+              let message = "No returnValue implemented for nowWithClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
                  throw error
           }

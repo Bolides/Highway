@@ -10,6 +10,7 @@ import os
 import Arguments
 import Terminal
 import SignPost
+import SourceryWorker
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -47,7 +48,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             switch $0 {
             // 4. execute the task as if button was pressed
             case .sourcery:
-                let worker = try AutomateHighwaySourceryWorker()
+                let worker = try AutomateHighwaySourceryWorker(sourceryFolderWorkerType: SourceryFolderWorker.self)
                _ = try worker.attempt()
                signPost.success("💁🏻‍♂️ Sourcery finished ✅.")
             }
