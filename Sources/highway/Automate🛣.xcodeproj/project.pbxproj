@@ -606,6 +606,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FD0553B421D1347600E9B0D0 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../../CHANGELOG.md; sourceTree = "<group>"; };
+		FD0553E621D1347700E9B0D0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		FDB7A8A621CD51870045DDA8 /* AutomateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomateTests.swift; sourceTree = "<group>"; };
 		FDB7A8A721CD51870045DDA8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "🛣.xcodeproj"; sourceTree = "<group>"; };
@@ -734,6 +736,8 @@
 		FDDEDFAF21CD4B490007D4EB = {
 			isa = PBXGroup;
 			children = (
+				FD0553E621D1347700E9B0D0 /* README.md */,
+				FD0553B421D1347600E9B0D0 /* CHANGELOG.md */,
 				FDDEE02321CD4B820007D4EB /* AutomateHighway */,
 				FDB7A8A521CD51870045DDA8 /* AutomateHighwayTests */,
 				FDDEDFB921CD4B490007D4EB /* Products */,
