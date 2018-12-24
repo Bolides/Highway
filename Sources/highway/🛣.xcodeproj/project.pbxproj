@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD0553A921D1291400E9B0D0 /* TestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0553A721D1291400E9B0D0 /* TestKit.h */; };
+		FD0553AE21D12A2C00E9B0D0 /* SourceryFolderWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0553AD21D12A2C00E9B0D0 /* SourceryFolderWorker.swift */; };
 		FD11267F21C6924C0072607D /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
 		FD1126C121C771970072607D /* ArgumentsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1126C021C771970072607D /* ArgumentsWorker.swift */; };
 		FD1126C621C7756A0072607D /* SourceryExecutableFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1126C521C7756A0072607D /* SourceryExecutableFile.swift */; };
@@ -42,8 +44,6 @@
 		FD3E94CF21C8117B00EA791C /* TemplatePrepend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3E94CE21C8117B00EA791C /* TemplatePrepend.swift */; };
 		FDAC932A210B595100B0D045 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		FDB7A8AD21CD58600045DDA8 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
-		FDB7A8BD21CD5EA10045DDA8 /* TestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FDB7A8BB21CD5EA10045DDA8 /* TestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FDB7A8D021CD5FBE0045DDA8 /* Data+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A8C821CD5FBE0045DDA8 /* Data+Convenience.swift */; };
 		FDB7A8D621CD5FE40045DDA8 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F42221BEE5340052222C /* ZFile.framework */; };
 		FDB7A8D921CD603B0045DDA8 /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
 		FDB7A90B21CD62400045DDA8 /* TestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A8B921CD5EA10045DDA8 /* TestKit.framework */; };
@@ -1295,6 +1295,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD0553A721D1291400E9B0D0 /* TestKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestKit.h; sourceTree = "<group>"; };
+		FD0553A821D1291400E9B0D0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD0553AD21D12A2C00E9B0D0 /* SourceryFolderWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceryFolderWorker.swift; sourceTree = "<group>"; };
 		FD1126C021C771970072607D /* ArgumentsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentsWorker.swift; sourceTree = "<group>"; };
 		FD1126C521C7756A0072607D /* SourceryExecutableFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryExecutableFile.swift; sourceTree = "<group>"; };
 		FD1126CC21C77F050072607D /* SignPost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SignPost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1316,9 +1319,6 @@
 		FDAC932C210B5C4500B0D045 /* ExcecutableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcecutableProtocol.swift; sourceTree = "<group>"; };
 		FDAC9350210B7D4A00B0D045 /* TerminalTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminalTasks.swift; sourceTree = "<group>"; };
 		FDB7A8B921CD5EA10045DDA8 /* TestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDB7A8BB21CD5EA10045DDA8 /* TestKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestKit.h; sourceTree = "<group>"; };
-		FDB7A8BC21CD5EA10045DDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDB7A8C821CD5FBE0045DDA8 /* Data+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Data+Convenience.swift"; path = "../../../../../../Desktop/TestKit/Data+Convenience.swift"; sourceTree = "<group>"; };
 		FDB7A93A21CD6A780045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDB7A93D21CD6A780045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDB7A94021CD6A780045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
@@ -1359,7 +1359,7 @@
 		FDC156F221C5355400E04B44 /* SourceryExecutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceryExecutor.swift; sourceTree = "<group>"; };
 		FDC156F321C5355400E04B44 /* SourceryWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceryWorker.swift; sourceTree = "<group>"; };
 		FDC156F421C5355400E04B44 /* Sourcery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sourcery.swift; sourceTree = "<group>"; };
-		FDC1571421C5485900E04B44 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FDC1571421C5485900E04B44 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		FDE9B6F721C58ED400D1F50A /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDEC11E121C679B600CB7DAD /* DecoderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderMock.swift; sourceTree = "<group>"; };
 		FDEC11E221C679B600CB7DAD /* AutoGenerateProtocol.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoGenerateProtocol.generated.swift; sourceTree = "<group>"; };
@@ -1828,6 +1828,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD0553A621D1291400E9B0D0 /* TestKit */ = {
+			isa = PBXGroup;
+			children = (
+				FD0553A721D1291400E9B0D0 /* TestKit.h */,
+				FD0553A821D1291400E9B0D0 /* Info.plist */,
+			);
+			path = TestKit;
+			sourceTree = "<group>";
+		};
 		FD1126CD21C77F050072607D /* SignPost */ = {
 			isa = PBXGroup;
 			children = (
@@ -1868,16 +1877,6 @@
 				FD34F42221BEE5340052222C /* ZFile.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FDB7A8BA21CD5EA10045DDA8 /* TestKit */ = {
-			isa = PBXGroup;
-			children = (
-				FDB7A8C821CD5FBE0045DDA8 /* Data+Convenience.swift */,
-				FDB7A8BB21CD5EA10045DDA8 /* TestKit.h */,
-				FDB7A8BC21CD5EA10045DDA8 /* Info.plist */,
-			);
-			path = TestKit;
 			sourceTree = "<group>";
 		};
 		FDB7A93821CD6A780045DDA8 /* Url */ = {
@@ -2032,6 +2031,7 @@
 		FDC156DC21C5347C00E04B44 /* SourceryWorker */ = {
 			isa = PBXGroup;
 			children = (
+				FD0553AD21D12A2C00E9B0D0 /* SourceryFolderWorker.swift */,
 				FDC156DE21C5347C00E04B44 /* Info.plist */,
 				FDC156F421C5355400E04B44 /* Sourcery.swift */,
 				FD3E94CE21C8117B00EA791C /* TemplatePrepend.swift */,
@@ -2354,7 +2354,7 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				FDB7A8BA21CD5EA10045DDA8 /* TestKit */,
+				FD0553A621D1291400E9B0D0 /* TestKit */,
 				OBJ_83 /* Arguments */,
 				FDEC11E021C679B600CB7DAD /* AutoGeneratedCode */,
 				OBJ_103 /* Deliver */,
@@ -2438,7 +2438,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDB7A8BD21CD5EA10045DDA8 /* TestKit.h in Headers */,
+				FD0553A921D1291400E9B0D0 /* TestKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3532,7 +3532,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDB7A8D021CD5FBE0045DDA8 /* Data+Convenience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3584,6 +3583,7 @@
 				FD1126C621C7756A0072607D /* SourceryExecutableFile.swift in Sources */,
 				FDC156F721C5355400E04B44 /* Sourcery.swift in Sources */,
 				FDC156F621C5355400E04B44 /* SourceryWorker.swift in Sources */,
+				FD0553AE21D12A2C00E9B0D0 /* SourceryFolderWorker.swift in Sources */,
 				FD3E94CF21C8117B00EA791C /* TemplatePrepend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -6146,7 +6146,6 @@
 		OBJ_768 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = $inherited;
@@ -6163,7 +6162,6 @@
 		OBJ_769 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = $inherited;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = $inherited;

@@ -1,0 +1,8 @@
+[submodule "Carthage/Checkouts/Quick"]
+	url = https://github.com/doozMen/Quick.git
+[submodule "Carthage/Checkouts/Sourcery"]
+	url = https://github.com/krzysztofzablocki/Sourcery.git
+[submodule "Carthage/Checkouts/Nimble"]
+	url = https://github.com/doozMen/Nimble.git
+[submodule "Carthage/Checkouts/zfile"]
+	url = https://github.com/doozMen/zfile.git

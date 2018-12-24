@@ -25,3 +25,16 @@
 /.sourcery-Errors.yml
 /.sourcery-Deliver.yml
 /.sourcery-Arguments.yml
+/Sources/highway/.sourcery-XCBuild.yml
+/Sources/highway/.sourcery-Url.yml
+/Sources/highway/.sourcery-Terminal.yml
+/Sources/highway/.sourcery-Task.yml
+/Sources/highway/.sourcery-SourceryWorker.yml
+/Sources/highway/.sourcery-SignPost.yml
+/Sources/highway/.sourcery-Result.yml
+/Sources/highway/.sourcery-POSIX.yml
+/Sources/highway/.sourcery-Keychain.yml
+/Sources/highway/.sourcery-Git.yml
+/Sources/highway/.sourcery-Errors.yml
+/Sources/highway/.sourcery-Deliver.yml
+/Sources/highway/.sourcery-Arguments.yml
