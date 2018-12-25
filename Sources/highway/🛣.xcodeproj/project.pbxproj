@@ -4,7 +4,7 @@
 	classes = {
 	};
 	objectVersion = 46;
-	objects = {
+	objects ={
 
 /* Begin PBXBuildFile section */
 		FD0553A921D1291400E9B0D0 /* TestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0553A721D1291400E9B0D0 /* TestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };

@@ -1,30 +1,19 @@
+
+Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## User settings
+xcuserdata/
+
+## Carthage & macOS
+
 /Carthage/Build
-/Frameworks🛣/XCBuildData
 .DS_Store
-/🛣Products/macosx/XCBuildData
-/🛣Products/macosx/🛣.build
-/🛣.xcodeproj/project.xcworkspace/xcuserdata
-/🛣.xcodeproj/xcuserdata
-.build.nosync
-/EmbedHighWay/🛣.xcodeproj/xcuserdata
-/EmbedHighWay/🛣.xcodeproj/project.xcworkspace/xcuserdata
-/Automate🛣.xcodeproj/xcuserdata/doozmen.xcuserdatad
-/Automate🛣/Automate🛣.xcodeproj/xcuserdata
-/Automate🛣/Automate🛣.xcodeproj/project.xcworkspace/xcuserdata
-/Automate🛣.xcodeproj/project.xcworkspace/xcuserdata
-/.sourcery-XCBuild.yml
-/.sourcery-Url.yml
-/.sourcery-Terminal.yml
-/.sourcery-Task.yml
-/.sourcery-SourceryWorker.yml
-/.sourcery-SignPost.yml
-/.sourcery-Result.yml
-/.sourcery-POSIX.yml
-/.sourcery-Keychain.yml
-/.sourcery-Git.yml
-/.sourcery-Errors.yml
-/.sourcery-Deliver.yml
-/.sourcery-Arguments.yml
+
+
+## Sourcery (files are generated)
+
 /Sources/highway/.sourcery-XCBuild.yml
 /Sources/highway/.sourcery-Url.yml
 /Sources/highway/.sourcery-Terminal.yml
@@ -38,6 +27,3 @@
 /Sources/highway/.sourcery-Errors.yml
 /Sources/highway/.sourcery-Deliver.yml
 /Sources/highway/.sourcery-Arguments.yml
-/Sources/highway/🛣.xcodeproj/xcuserdata
-/Sources/highway/Automate🛣.xcodeproj/project.xcworkspace/xcuserdata
-/Sources/highway/Automate🛣.xcodeproj/xcuserdata

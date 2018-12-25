@@ -4,7 +4,7 @@
 	classes = {
 	};
 	objectVersion = 50;
-	objects = {
+	objects ={
 
 /* Begin PBXBuildFile section */
 		FD0553F421D1370D00E9B0D0 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD05539D21D1282C00E9B0D0 /* ZFile.framework */; };
