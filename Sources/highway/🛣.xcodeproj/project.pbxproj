@@ -4,7 +4,7 @@
 	classes = {
 	};
 	objectVersion = 46;
-	objects ={
+	objects = {
 
 /* Begin PBXBuildFile section */
 		FD0553A921D1291400E9B0D0 /* TestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0553A721D1291400E9B0D0 /* TestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -2767,9 +2767,9 @@
 			productReference = FDC156E321C5347D00E04B44 /* SourceryWorkerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FDE9B6F621C58ED400D1F50A /* SourceryAutoProtocols-iOS */ = {
+		FDE9B6F621C58ED400D1F50A /* SourceryAutoProtocols-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FDE9B70821C58ED500D1F50A /* Build configuration list for PBXNativeTarget "SourceryAutoProtocols-iOS" */;
+			buildConfigurationList = FDE9B70821C58ED500D1F50A /* Build configuration list for PBXNativeTarget "SourceryAutoProtocols-ios" */;
 			buildPhases = (
 				FDE9B6F221C58ED400D1F50A /* Headers */,
 				FDE9B6F321C58ED400D1F50A /* Sources */,
@@ -2780,7 +2780,7 @@
 			);
 			dependencies = (
 			);
-			name = "SourceryAutoProtocols-iOS";
+			name = "SourceryAutoProtocols-ios";
 			productName = SourceryAutoGenerateProtocols;
 			productReference = FDE9B6F721C58ED400D1F50A /* SourceryAutoProtocols.framework */;
 			productType = "com.apple.product-type.framework";
@@ -3039,9 +3039,9 @@
 			productReference = "highway::ResultTests::Product" /* ResultTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		"highway::SourceryAutoProtocols" /* SourceryAutoProtocols */ = {
+		"highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_692 /* Build configuration list for PBXNativeTarget "SourceryAutoProtocols" */;
+			buildConfigurationList = OBJ_692 /* Build configuration list for PBXNativeTarget "SourceryAutoProtocols-macos" */;
 			buildPhases = (
 				OBJ_695 /* Sources */,
 				OBJ_698 /* Frameworks */,
@@ -3050,7 +3050,7 @@
 			);
 			dependencies = (
 			);
-			name = SourceryAutoProtocols;
+			name = "SourceryAutoProtocols-macos";
 			productName = SourceryAutoProtocols;
 			productReference = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */;
 			productType = "com.apple.product-type.framework";
@@ -3431,7 +3431,8 @@
 				FDB7A9E121CD736C0045DDA8 /* TerminalMock */,
 				"highway::Task" /* Task */,
 				FDB7A9FB21CD7E8C0045DDA8 /* TaskMock */,
-				"highway::SourceryAutoProtocols" /* SourceryAutoProtocols */,
+				"highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */,
+				FDE9B6F621C58ED400D1F50A /* SourceryAutoProtocols-ios */,
 				FDC156DA21C5347C00E04B44 /* SourceryWorker */,
 				FDB7AA0C21CD81DC0045DDA8 /* SourceryWorkerMock */,
 				"highway::POSIX" /* POSIX */,
@@ -3443,7 +3444,6 @@
 				"highway::Result" /* Result */,
 				FDB7A8B821CD5EA10045DDA8 /* TestKit */,
 				"highway::Git" /* Git */,
-				FDE9B6F621C58ED400D1F50A /* SourceryAutoProtocols-iOS */,
 				"highway::ArgumentsTests" /* ArgumentsTests */,
 				"highway::DeliverTests" /* DeliverTests */,
 				"highway::GitTests" /* GitTests */,
@@ -3886,7 +3886,7 @@
 		};
 		FD1126F621C780DA0072607D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD1126F521C780DA0072607D /* PBXContainerItemProxy */;
 		};
 		FD1126F921C780FD0072607D /* PBXTargetDependency */ = {
@@ -3931,7 +3931,7 @@
 		};
 		FDB7A91321CD665A0045DDA8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FDB7A91221CD665A0045DDA8 /* PBXContainerItemProxy */;
 		};
 		FDB7A91521CD665A0045DDA8 /* PBXTargetDependency */ = {
@@ -3991,7 +3991,7 @@
 		};
 		FDB7A9BD21CD6C590045DDA8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FDB7A9BC21CD6C590045DDA8 /* PBXContainerItemProxy */;
 		};
 		FDB7A9C021CD6CA50045DDA8 /* PBXTargetDependency */ = {
@@ -4006,7 +4006,7 @@
 		};
 		FDB7A9D821CD71960045DDA8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FDB7A9D721CD71960045DDA8 /* PBXContainerItemProxy */;
 		};
 		FDB7A9DB21CD71A60045DDA8 /* PBXTargetDependency */ = {
@@ -4091,7 +4091,7 @@
 		};
 		OBJ_1006 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326D2B2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_274 /* PBXTargetDependency */ = {
@@ -4101,7 +4101,7 @@
 		};
 		OBJ_275 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326C7B2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_286 /* PBXTargetDependency */ = {
@@ -4116,7 +4116,7 @@
 		};
 		OBJ_288 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326D1A2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_306 /* PBXTargetDependency */ = {
@@ -4156,7 +4156,7 @@
 		};
 		OBJ_314 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326CC02109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_326 /* PBXTargetDependency */ = {
@@ -4171,12 +4171,12 @@
 		};
 		OBJ_329 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326D3F2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_337 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326C7A2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_354 /* PBXTargetDependency */ = {
@@ -4211,7 +4211,7 @@
 		};
 		OBJ_361 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326C992109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_390 /* PBXTargetDependency */ = {
@@ -4266,7 +4266,7 @@
 		};
 		OBJ_402 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326D172109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_614 /* PBXTargetDependency */ = {
@@ -4301,7 +4301,7 @@
 		};
 		OBJ_621 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326CA92109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_630 /* PBXTargetDependency */ = {
@@ -4311,7 +4311,7 @@
 		};
 		OBJ_631 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326C8D2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_642 /* PBXTargetDependency */ = {
@@ -4326,12 +4326,12 @@
 		};
 		OBJ_644 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326CF72109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_652 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326C7D2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_679 /* PBXTargetDependency */ = {
@@ -4386,7 +4386,7 @@
 		};
 		OBJ_691 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326D3B2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_759 /* PBXTargetDependency */ = {
@@ -4411,7 +4411,7 @@
 		};
 		OBJ_765 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326C852109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_796 /* PBXTargetDependency */ = {
@@ -4466,12 +4466,12 @@
 		};
 		OBJ_808 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326D602109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_828 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326C842109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_855 /* PBXTargetDependency */ = {
@@ -4526,12 +4526,12 @@
 		};
 		OBJ_867 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326D702109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_919 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326C822109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_930 /* PBXTargetDependency */ = {
@@ -4541,7 +4541,7 @@
 		};
 		OBJ_931 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326D722109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_956 /* PBXTargetDependency */ = {
@@ -4581,7 +4581,7 @@
 		};
 		OBJ_964 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols */;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326CB22109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_990 /* PBXTargetDependency */ = {
@@ -6560,7 +6560,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FDE9B70821C58ED500D1F50A /* Build configuration list for PBXNativeTarget "SourceryAutoProtocols-iOS" */ = {
+		FDE9B70821C58ED500D1F50A /* Build configuration list for PBXNativeTarget "SourceryAutoProtocols-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FDE9B70921C58ED500D1F50A /* Debug */,
@@ -6686,7 +6686,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_692 /* Build configuration list for PBXNativeTarget "SourceryAutoProtocols" */ = {
+		OBJ_692 /* Build configuration list for PBXNativeTarget "SourceryAutoProtocols-macos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_693 /* Debug */,
