@@ -10,8 +10,8 @@ github "doozMen/template-sourcery" "v1.0.1"
 
 # Testing
 
-github "doozMen/Quick" "feature/v1.3.2-withoutWarnings"
-github "doozMen/Nimble" "feature/v7.3.1-withoutWarnings"
+github "doozMen/Quick" "v1.3.4"
+github "doozMen/Nimble" "v7.3.3"
 
 # TestAppdelegate
 
