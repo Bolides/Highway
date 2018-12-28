@@ -21,7 +21,7 @@ protocol DemoSourceryWorkerProtocol {
     //// sourcery:end
 }
 
-struct AutomateHighwaySourceryWorker: DemoSourceryWorkerProtocol, AutoGenerateProtocol {
+public struct AutomateHighwaySourceryWorker: DemoSourceryWorkerProtocol, AutoGenerateProtocol {
     
     private let signPost: SignPostProtocol
     private let workers: [SourceryWorkerProtocol]
@@ -83,7 +83,7 @@ struct AutomateHighwaySourceryWorker: DemoSourceryWorkerProtocol, AutoGeneratePr
     
     init(
         signPost: SignPostProtocol = SignPost.shared,
-        sourceryFolderWorkerType: SourceryFolderWorkerProtocol.Type,
+        sourceryFolderWorkerType: SourceryFolderWorkerProtocol.Type = SourceryFolderWorker.self,
         workers: [SourceryWorkerProtocol]? = nil
         ) throws {
         self.signPost = signPost

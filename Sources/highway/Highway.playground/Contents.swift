@@ -19,6 +19,8 @@ Rk3L4IKW
 
 let encoded = JWT.encode(claims: claims, algorithm: .hs512(secret))
 
+let currentFolder = FileSystem.shared.currentFolder
+
 //: # Cupertino JWT
 
 // Get content of the .p8 file
@@ -34,3 +36,4 @@ do {
 } catch {
     // Handle error
 }
+

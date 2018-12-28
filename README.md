@@ -70,7 +70,7 @@ Run sourcery to generate protocols.
 4. Info.plist should contain `BE_DOOZ_SRCROOT = $SRCROOT)`
 
 3. Add button to run sourcery in storyboard (see `AutomateHighwayViewControlle`r)
-	
+
 4. Set sourcery paths to your liking. Use output in console to guide you if you used the example code above.
 
 5. Try running automate from command line
@@ -112,3 +112,7 @@ Run sourcery to generate protocols.
 	<#path to automate app, probably derivedData#>/Automate.app/Contents/MacOS/Automate 🤖command:sourcery
 	```
 > This should output sourcery success and quit the app.
+
+## git-secret
+
+The api key to appstore connect is stored via git-secret. run `git-secret reveal` to use it.
