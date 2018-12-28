@@ -1,6 +1,6 @@
 # Persistance
 
-github "doozMen/ZFile" "v2.0.3"
+github "doozMen/ZFile" "v2.0.4"
 
 # Auto generate Code
 ## move back to original origin when available
