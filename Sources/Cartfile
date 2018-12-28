@@ -20,3 +20,4 @@ github "mokacoding/TestAppDelegateExample" "master"
 # JWT Token generation
 
 github "doozMen/JSONWebToken.swift" "2.2.1"
+github "ethanhuang13/CupertinoJWT" "v0.2.1"

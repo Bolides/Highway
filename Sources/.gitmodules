@@ -14,3 +14,5 @@
 	url = https://github.com/doozMen/ZFile.git
 [submodule "Carthage/Checkouts/JSONWebToken.swift"]
 	url = https://github.com/doozMen/JSONWebToken.swift.git
+[submodule "Carthage/Checkouts/CryptoSwift"]
+	url = https://github.com/doozMen/CryptoSwift.git

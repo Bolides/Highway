@@ -27,3 +27,5 @@ xcuserdata/
 /Sources/highway/.sourcery-Errors.yml
 /Sources/highway/.sourcery-Deliver.yml
 /Sources/highway/.sourcery-Arguments.yml
+.gitsecret/keys/random_seed
+/Sources/highway/Sources/AutomateHighway/AuthKey_VV7NT37UVU.p8
