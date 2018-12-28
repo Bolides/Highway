@@ -15,6 +15,8 @@
 		FD05540321D137A900E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4E54DE21D1271900B5A776 /* Nimble.framework */; };
 		FD27B87621D69317008F829A /* JWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD27B84021D69307008F829A /* JWT.framework */; };
 		FD27B87721D69317008F829A /* JWT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD27B84021D69307008F829A /* JWT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD27B8A621D6B411008F829A /* CupertinoJWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD27B89321D6B3C2008F829A /* CupertinoJWT.framework */; };
+		FD27B8A721D6B411008F829A /* CupertinoJWT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD27B89321D6B3C2008F829A /* CupertinoJWT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDB7A8A821CD51870045DDA8 /* AutomateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A8A621CD51870045DDA8 /* AutomateTests.swift */; };
 		FDB7A8AA21CD524D0045DDA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDEE02721CD4B820007D4EB /* Main.storyboard */; };
 		FDDEE12521CD4DC90007D4EB /* AutomateHighwayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEE02421CD4B820007D4EB /* AutomateHighwayViewController.swift */; };
@@ -178,6 +180,48 @@
 			proxyType = 1;
 			remoteGlobalIDString = 279D639B1AD07FFF0024E2BC;
 			remoteInfo = "JWT-OSX";
+		};
+		FD27B88E21D6B3C2008F829A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD27B88521D6B3C2008F829A /* CupertinoJWT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6CCBCF96212E6444009DD9AC;
+			remoteInfo = "CupertinoJWT iOS";
+		};
+		FD27B89021D6B3C2008F829A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD27B88521D6B3C2008F829A /* CupertinoJWT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6CCBD070212E92CF009DD9AC;
+			remoteInfo = "CupertinoJWT Tests";
+		};
+		FD27B89221D6B3C2008F829A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD27B88521D6B3C2008F829A /* CupertinoJWT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D1E18D821B6BFB80073A4FC;
+			remoteInfo = "CupertinoJWT macOS";
+		};
+		FD27B89421D6B3C2008F829A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD27B88521D6B3C2008F829A /* CupertinoJWT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D244D9C21B82C0000907D0B;
+			remoteInfo = "CupertinoJWT watchOS";
+		};
+		FD27B89621D6B3C2008F829A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD27B88521D6B3C2008F829A /* CupertinoJWT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D244DAF21B82CE200907D0B;
+			remoteInfo = "CupertinoJWT tvOS";
+		};
+		FD27B8A821D6B411008F829A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD27B88521D6B3C2008F829A /* CupertinoJWT.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D1E18C721B6BFB80073A4FC;
+			remoteInfo = "CupertinoJWT macOS";
 		};
 		FD4E54AD21D126E300B5A776 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -687,6 +731,7 @@
 				FDDEE15721CD4E6D0007D4EB /* Task.framework in Embed Frameworks */,
 				FDDEE13321CD4E6D0007D4EB /* Keychain.framework in Embed Frameworks */,
 				FDDEE14B21CD4E6D0007D4EB /* SourceryAutoProtocols.framework in Embed Frameworks */,
+				FD27B8A721D6B411008F829A /* CupertinoJWT.framework in Embed Frameworks */,
 				FD0553F521D1370D00E9B0D0 /* ZFile.framework in Embed Frameworks */,
 				FDDEE15B21CD4E6D0007D4EB /* Url.framework in Embed Frameworks */,
 				FDDEE15F21CD4E6D0007D4EB /* SourceryWorker.framework in Embed Frameworks */,
@@ -706,6 +751,8 @@
 		FD27B83621D69306008F829A /* JWT.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JWT.xcodeproj; path = ../Carthage/Checkouts/JSONWebToken.swift/JWT.xcodeproj; sourceTree = "<group>"; };
 		FD27B88121D696FC008F829A /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = ../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug/CryptoSwift.framework; sourceTree = "<group>"; };
 		FD27B88221D69758008F829A /* Highway.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Highway.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FD27B88521D6B3C2008F829A /* CupertinoJWT.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CupertinoJWT.xcodeproj; path = ../../../../Babylon/Interview1/Sources/Carthage/Checkouts/highway/Sources/Carthage/Checkouts/CupertinoJWT/CupertinoJWT.xcodeproj; sourceTree = "<group>"; };
+		FD27B8DB21D6B48A008F829A /* AuthKey_VV7NT37UVU.p8 */ = {isa = PBXFileReference; lastKnownFileType = text; path = AuthKey_VV7NT37UVU.p8; sourceTree = "<group>"; };
 		FDB7A8A621CD51870045DDA8 /* AutomateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomateTests.swift; sourceTree = "<group>"; };
 		FDB7A8A721CD51870045DDA8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "🛣.xcodeproj"; sourceTree = "<group>"; };
@@ -741,6 +788,7 @@
 				FDDEE15621CD4E6D0007D4EB /* Task.framework in Frameworks */,
 				FDDEE13221CD4E6D0007D4EB /* Keychain.framework in Frameworks */,
 				FDDEE14A21CD4E6D0007D4EB /* SourceryAutoProtocols.framework in Frameworks */,
+				FD27B8A621D6B411008F829A /* CupertinoJWT.framework in Frameworks */,
 				FD0553F421D1370D00E9B0D0 /* ZFile.framework in Frameworks */,
 				FDDEE15A21CD4E6D0007D4EB /* Url.framework in Frameworks */,
 				FDDEE15E21CD4E6D0007D4EB /* SourceryWorker.framework in Frameworks */,
@@ -794,6 +842,18 @@
 				FD27B84421D69307008F829A /* JWT.framework */,
 				FD27B84621D69307008F829A /* JWT.framework */,
 				FD27B84821D69307008F829A /* JWTTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD27B88621D6B3C2008F829A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD27B88F21D6B3C2008F829A /* CupertinoJWT.framework */,
+				FD27B89121D6B3C2008F829A /* CupertinoJWT Tests.xctest */,
+				FD27B89321D6B3C2008F829A /* CupertinoJWT.framework */,
+				FD27B89521D6B3C2008F829A /* CupertinoJWT.framework */,
+				FD27B89721D6B3C2008F829A /* CupertinoJWT.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -870,6 +930,7 @@
 				FDF72D9921D683D9006009D3 /* Sources */,
 				FDDEDFB921CD4B490007D4EB /* Products */,
 				FDB7A8A221CD515B0045DDA8 /* Frameworks */,
+				FD27B88521D6B3C2008F829A /* CupertinoJWT.xcodeproj */,
 				FDDEE0ED21CD4CC80007D4EB /* Quick.xcodeproj */,
 				FDDEE0C521CD4CBF0007D4EB /* Nimble.xcodeproj */,
 				FDDEE0B321CD4C230007D4EB /* Sourcery.xcodeproj */,
@@ -892,6 +953,7 @@
 		FDDEE02321CD4B820007D4EB /* AutomateHighway */ = {
 			isa = PBXGroup;
 			children = (
+				FD27B8DB21D6B48A008F829A /* AuthKey_VV7NT37UVU.p8 */,
 				FDDEE02421CD4B820007D4EB /* AutomateHighwayViewController.swift */,
 				FDDEE02521CD4B820007D4EB /* AutomateSourceryWorker.swift */,
 				FDDEE02621CD4B820007D4EB /* Assets.xcassets */,
@@ -993,6 +1055,7 @@
 				FDDEE16921CD4E6D0007D4EB /* PBXTargetDependency */,
 				FD0553F721D1370D00E9B0D0 /* PBXTargetDependency */,
 				FD27B87921D69317008F829A /* PBXTargetDependency */,
+				FD27B8A921D6B411008F829A /* PBXTargetDependency */,
 			);
 			name = AutomateHighway;
 			productName = AutomateHighway;
@@ -1052,6 +1115,10 @@
 			productRefGroup = FDDEDFB921CD4B490007D4EB /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = FD27B88621D6B3C2008F829A /* Products */;
+					ProjectRef = FD27B88521D6B3C2008F829A /* CupertinoJWT.xcodeproj */;
+				},
 				{
 					ProductGroup = FD27B83721D69306008F829A /* Products */;
 					ProjectRef = FD27B83621D69306008F829A /* JWT.xcodeproj */;
@@ -1161,6 +1228,41 @@
 			fileType = wrapper.cfbundle;
 			path = JWTTests.xctest;
 			remoteRef = FD27B84721D69307008F829A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD27B88F21D6B3C2008F829A /* CupertinoJWT.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CupertinoJWT.framework;
+			remoteRef = FD27B88E21D6B3C2008F829A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD27B89121D6B3C2008F829A /* CupertinoJWT Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "CupertinoJWT Tests.xctest";
+			remoteRef = FD27B89021D6B3C2008F829A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD27B89321D6B3C2008F829A /* CupertinoJWT.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CupertinoJWT.framework;
+			remoteRef = FD27B89221D6B3C2008F829A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD27B89521D6B3C2008F829A /* CupertinoJWT.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CupertinoJWT.framework;
+			remoteRef = FD27B89421D6B3C2008F829A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD27B89721D6B3C2008F829A /* CupertinoJWT.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CupertinoJWT.framework;
+			remoteRef = FD27B89621D6B3C2008F829A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		FD4E54AE21D126E300B5A776 /* SignPostMock.framework */ = {
@@ -1626,6 +1728,11 @@
 			isa = PBXTargetDependency;
 			name = "JWT-OSX";
 			targetProxy = FD27B87821D69317008F829A /* PBXContainerItemProxy */;
+		};
+		FD27B8A921D6B411008F829A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CupertinoJWT macOS";
+			targetProxy = FD27B8A821D6B411008F829A /* PBXContainerItemProxy */;
 		};
 		FDDEE11A21CD4D230007D4EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
