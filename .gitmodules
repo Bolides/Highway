@@ -16,3 +16,6 @@
 [submodule "Carthage/Checkouts/ZFile"]
 	path = Sources/Carthage/Checkouts/ZFile
 	url = https://github.com/doozMen/ZFile.git
+[submodule "Carthage/Checkouts/JWT"]
+	path = Sources/Carthage/Checkouts/JWT
+	url = https://github.com/yourkarma/JWT.git

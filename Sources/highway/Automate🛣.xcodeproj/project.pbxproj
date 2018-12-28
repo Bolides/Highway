@@ -4,7 +4,7 @@
 	classes = {
 	};
 	objectVersion = 50;
-	objects ={
+	objects = {
 
 /* Begin PBXBuildFile section */
 		FD0553F421D1370D00E9B0D0 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD05539D21D1282C00E9B0D0 /* ZFile.framework */; };
@@ -47,6 +47,7 @@
 		FDDEE15F21CD4E6D0007D4EB /* SourceryWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDEE05921CD4BC40007D4EB /* SourceryWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDDEE16621CD4E6D0007D4EB /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDEE05121CD4BC40007D4EB /* SignPost.framework */; };
 		FDDEE16721CD4E6D0007D4EB /* SignPost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDEE05121CD4BC40007D4EB /* SignPost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDF72D8221D6825A006009D3 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = FDF72D8121D6825A006009D3 /* Cartfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -674,6 +675,7 @@
 		FDDEE0ED21CD4CC80007D4EB /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = ../Carthage/Checkouts/Quick/Quick.xcodeproj; sourceTree = "<group>"; };
 		FDDEE10721CD4D220007D4EB /* AutomateHighway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutomateHighway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDEE11821CD4D230007D4EB /* AutomateHighwayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutomateHighwayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDF72D8121D6825A006009D3 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = ../Cartfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -797,9 +799,10 @@
 		FDDEDFAF21CD4B490007D4EB = {
 			isa = PBXGroup;
 			children = (
-				FD05542F21D13F2300E9B0D0 /* Tests */,
+				FDF72D8121D6825A006009D3 /* Cartfile */,
 				FD0553E621D1347700E9B0D0 /* README.md */,
 				FD0553B421D1347600E9B0D0 /* CHANGELOG.md */,
+				FD05542F21D13F2300E9B0D0 /* Tests */,
 				FDDEE02321CD4B820007D4EB /* AutomateHighway */,
 				FDDEDFB921CD4B490007D4EB /* Products */,
 				FDDEE0ED21CD4CC80007D4EB /* Quick.xcodeproj */,
@@ -848,6 +851,7 @@
 				FDDEE05521CD4BC40007D4EB /* Task.framework */,
 				FD4E54B221D126E300B5A776 /* TaskMock.framework */,
 				FDDEE05721CD4BC40007D4EB /* SourceryAutoProtocols.framework */,
+				FDDEE06D21CD4BC40007D4EB /* SourceryAutoProtocols.framework */,
 				FDDEE05921CD4BC40007D4EB /* SourceryWorker.framework */,
 				FD4E54B421D126E300B5A776 /* SourceryWorkerMock.framework */,
 				FDDEE05B21CD4BC40007D4EB /* POSIX.framework */,
@@ -859,7 +863,6 @@
 				FDDEE06721CD4BC40007D4EB /* Result.framework */,
 				FDB7A90521CD617B0045DDA8 /* TestKit.framework */,
 				FDDEE06B21CD4BC40007D4EB /* Git.framework */,
-				FDDEE06D21CD4BC40007D4EB /* SourceryAutoProtocols.framework */,
 				FDDEE07121CD4BC40007D4EB /* ArgumentsTests.xctest */,
 				FDDEE07321CD4BC40007D4EB /* DeliverTests.xctest */,
 				FDDEE07521CD4BC40007D4EB /* GitTests.xctest */,
@@ -1429,6 +1432,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDF72D8221D6825A006009D3 /* Cartfile in Resources */,
 				FDDEE12821CD4E040007D4EB /* Assets.xcassets in Resources */,
 				FDB7A8AA21CD524D0045DDA8 /* Main.storyboard in Resources */,
 			);

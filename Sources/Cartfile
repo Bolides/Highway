@@ -16,3 +16,7 @@ github "doozMen/Nimble" "v7.3.3"
 # TestAppdelegate
 
 github "mokacoding/TestAppDelegateExample" "master"
+
+# JWT Token generation
+
+github "kylef/JSONWebToken.swift" "2.2.0"
