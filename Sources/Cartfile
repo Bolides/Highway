@@ -1,10 +1,10 @@
 # Persistance
 
-github "doozMen/ZFile" "v2.0.2"
+github "doozMen/ZFile" "v2.0.3"
 
 # Auto generate Code
-
-github "krzysztofzablocki/Sourcery" "0.15.0"
+## move back to original origin when available
+github "doozMen/Sourcery" "0.15.1"
 github "doozMen/template-sourcery" "v1.0.1"
 
 
@@ -18,6 +18,6 @@ github "doozMen/Nimble" "v7.3.3"
 github "mokacoding/TestAppDelegateExample" "master"
 
 # JWT Token generation
-
-github "doozMen/JSONWebToken.swift" "2.2.1"
-github "ethanhuang13/CupertinoJWT" "v0.2.1"
+## Revert back to orignal from ethanhuang13 when PR merged
+github "doozMen/JSONWebToken.swift" "2.2.2"
+github "doozMen/CupertinoJWT" "v0.2.1"
