@@ -16,9 +16,9 @@
 [submodule "Carthage/Checkouts/ZFile"]
 	path = Sources/Carthage/Checkouts/ZFile
 	url = https://github.com/doozMen/ZFile.git
-[submodule "Carthage/Checkouts/JWT"]
-	path = Sources/Carthage/Checkouts/JWT
-	url = https://github.com/yourkarma/JWT.git
 [submodule "Carthage/Checkouts/JSONWebToken.swift"]
 	path = Sources/Carthage/Checkouts/JSONWebToken.swift
-	url = https://github.com/kylef/JSONWebToken.swift.git
+	url = https://github.com/dooZMen/JSONWebToken.swift.git
+[submodule "Carthage/Checkouts/CryptoSwift"]
+	path = Sources/Carthage/Checkouts/CryptoSwift
+	url = https://github.com/doozMen/CryptoSwift.git

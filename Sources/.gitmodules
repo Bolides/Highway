@@ -12,3 +12,5 @@
 	url = https://github.com/doozMen/template-sourcery.git
 [submodule "Carthage/Checkouts/ZFile"]
 	url = https://github.com/doozMen/ZFile.git
+[submodule "Carthage/Checkouts/JSONWebToken.swift"]
+	url = https://github.com/doozMen/JSONWebToken.swift.git

@@ -13,6 +13,10 @@
 		FD0553FB21D1375F00E9B0D0 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD05539F21D1282C00E9B0D0 /* ZFileMock.framework */; };
 		FD05540221D137A300E9B0D0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4E54F921D1272700B5A776 /* Quick.framework */; };
 		FD05540321D137A900E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4E54DE21D1271900B5A776 /* Nimble.framework */; };
+		FD27B87621D69317008F829A /* JWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD27B84021D69307008F829A /* JWT.framework */; };
+		FD27B87721D69317008F829A /* JWT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD27B84021D69307008F829A /* JWT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD27B87B21D69345008F829A /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD27B87A21D69345008F829A /* CryptoSwift.framework */; };
+		FD27B87C21D69345008F829A /* CryptoSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD27B87A21D69345008F829A /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDB7A8A821CD51870045DDA8 /* AutomateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A8A621CD51870045DDA8 /* AutomateTests.swift */; };
 		FDB7A8AA21CD524D0045DDA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDEE02721CD4B820007D4EB /* Main.storyboard */; };
 		FDDEE12521CD4DC90007D4EB /* AutomateHighwayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEE02421CD4B820007D4EB /* AutomateHighwayViewController.swift */; };
@@ -134,6 +138,48 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1F925EAC195C0D6300ED456B;
 			remoteInfo = "Nimble-macOS";
+		};
+		FD27B83F21D69307008F829A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD27B83621D69306008F829A /* JWT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 279D639C1AD07FFF0024E2BC;
+			remoteInfo = "JWT-OSX";
+		};
+		FD27B84121D69307008F829A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD27B83621D69306008F829A /* JWT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CD9B62231C7753D8005D4844;
+			remoteInfo = "JWT-iOS";
+		};
+		FD27B84321D69307008F829A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD27B83621D69306008F829A /* JWT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CD9B62351C7753EC005D4844;
+			remoteInfo = "JWT-tvOS";
+		};
+		FD27B84521D69307008F829A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD27B83621D69306008F829A /* JWT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CD9B62471C7753FB005D4844;
+			remoteInfo = "JWT-watchOS";
+		};
+		FD27B84721D69307008F829A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD27B83621D69306008F829A /* JWT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 279D63A71AD07FFF0024E2BC;
+			remoteInfo = JWTTests;
+		};
+		FD27B87821D69317008F829A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD27B83621D69306008F829A /* JWT.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 279D639B1AD07FFF0024E2BC;
+			remoteInfo = "JWT-OSX";
 		};
 		FD4E54AD21D126E300B5A776 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -636,6 +682,7 @@
 			files = (
 				FDDEE13F21CD4E6D0007D4EB /* XCBuild.framework in Embed Frameworks */,
 				FDDEE14721CD4E6D0007D4EB /* Errors.framework in Embed Frameworks */,
+				FD27B87C21D69345008F829A /* CryptoSwift.framework in Embed Frameworks */,
 				FDDEE15321CD4E6D0007D4EB /* Deliver.framework in Embed Frameworks */,
 				FDDEE14321CD4E6D0007D4EB /* Result.framework in Embed Frameworks */,
 				FDDEE13B21CD4E6D0007D4EB /* POSIX.framework in Embed Frameworks */,
@@ -648,6 +695,7 @@
 				FDDEE15F21CD4E6D0007D4EB /* SourceryWorker.framework in Embed Frameworks */,
 				FDDEE14F21CD4E6D0007D4EB /* Git.framework in Embed Frameworks */,
 				FDDEE13721CD4E6D0007D4EB /* Terminal.framework in Embed Frameworks */,
+				FD27B87721D69317008F829A /* JWT.framework in Embed Frameworks */,
 				FDDEE12F21CD4E6D0007D4EB /* Arguments.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -658,6 +706,8 @@
 /* Begin PBXFileReference section */
 		FD0553B421D1347600E9B0D0 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../../CHANGELOG.md; sourceTree = "<group>"; };
 		FD0553E621D1347700E9B0D0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		FD27B83621D69306008F829A /* JWT.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JWT.xcodeproj; path = ../Carthage/Checkouts/JSONWebToken.swift/JWT.xcodeproj; sourceTree = "<group>"; };
+		FD27B87A21D69345008F829A /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB7A8A621CD51870045DDA8 /* AutomateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomateTests.swift; sourceTree = "<group>"; };
 		FDB7A8A721CD51870045DDA8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "🛣.xcodeproj"; sourceTree = "<group>"; };
@@ -686,6 +736,7 @@
 			files = (
 				FDDEE13E21CD4E6D0007D4EB /* XCBuild.framework in Frameworks */,
 				FDDEE14621CD4E6D0007D4EB /* Errors.framework in Frameworks */,
+				FD27B87B21D69345008F829A /* CryptoSwift.framework in Frameworks */,
 				FDDEE15221CD4E6D0007D4EB /* Deliver.framework in Frameworks */,
 				FDDEE14221CD4E6D0007D4EB /* Result.framework in Frameworks */,
 				FDDEE13A21CD4E6D0007D4EB /* POSIX.framework in Frameworks */,
@@ -698,6 +749,7 @@
 				FDDEE15E21CD4E6D0007D4EB /* SourceryWorker.framework in Frameworks */,
 				FDDEE14E21CD4E6D0007D4EB /* Git.framework in Frameworks */,
 				FDDEE13621CD4E6D0007D4EB /* Terminal.framework in Frameworks */,
+				FD27B87621D69317008F829A /* JWT.framework in Frameworks */,
 				FDDEE12E21CD4E6D0007D4EB /* Arguments.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -735,6 +787,18 @@
 				FDB7A8A521CD51870045DDA8 /* AutomateHighwayTests */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		FD27B83721D69306008F829A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD27B84021D69307008F829A /* JWT.framework */,
+				FD27B84221D69307008F829A /* JWT.framework */,
+				FD27B84421D69307008F829A /* JWT.framework */,
+				FD27B84621D69307008F829A /* JWT.framework */,
+				FD27B84821D69307008F829A /* JWTTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		FD4E54C321D1270800B5A776 /* Products */ = {
@@ -800,6 +864,8 @@
 		FDDEDFAF21CD4B490007D4EB = {
 			isa = PBXGroup;
 			children = (
+				FD27B87A21D69345008F829A /* CryptoSwift.framework */,
+				FD27B83621D69306008F829A /* JWT.xcodeproj */,
 				FDF72D8121D6825A006009D3 /* Cartfile */,
 				FD0553E621D1347700E9B0D0 /* README.md */,
 				FD0553B421D1347600E9B0D0 /* CHANGELOG.md */,
@@ -928,6 +994,7 @@
 				FDDEE16121CD4E6D0007D4EB /* PBXTargetDependency */,
 				FDDEE16921CD4E6D0007D4EB /* PBXTargetDependency */,
 				FD0553F721D1370D00E9B0D0 /* PBXTargetDependency */,
+				FD27B87921D69317008F829A /* PBXTargetDependency */,
 			);
 			name = AutomateHighway;
 			productName = AutomateHighway;
@@ -987,6 +1054,10 @@
 			productRefGroup = FDDEDFB921CD4B490007D4EB /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = FD27B83721D69306008F829A /* Products */;
+					ProjectRef = FD27B83621D69306008F829A /* JWT.xcodeproj */;
+				},
 				{
 					ProductGroup = FD4E54D421D1271900B5A776 /* Products */;
 					ProjectRef = FDDEE0C521CD4CBF0007D4EB /* Nimble.xcodeproj */;
@@ -1057,6 +1128,41 @@
 			fileType = wrapper.framework;
 			path = FoundationGenericHelper.framework;
 			remoteRef = FD0553A221D1282C00E9B0D0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD27B84021D69307008F829A /* JWT.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JWT.framework;
+			remoteRef = FD27B83F21D69307008F829A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD27B84221D69307008F829A /* JWT.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JWT.framework;
+			remoteRef = FD27B84121D69307008F829A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD27B84421D69307008F829A /* JWT.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JWT.framework;
+			remoteRef = FD27B84321D69307008F829A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD27B84621D69307008F829A /* JWT.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JWT.framework;
+			remoteRef = FD27B84521D69307008F829A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD27B84821D69307008F829A /* JWTTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = JWTTests.xctest;
+			remoteRef = FD27B84721D69307008F829A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		FD4E54AE21D126E300B5A776 /* SignPostMock.framework */ = {
@@ -1517,6 +1623,11 @@
 			isa = PBXTargetDependency;
 			name = "Nimble-macOS";
 			targetProxy = FD05540021D1379D00E9B0D0 /* PBXContainerItemProxy */;
+		};
+		FD27B87921D69317008F829A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "JWT-OSX";
+			targetProxy = FD27B87821D69317008F829A /* PBXContainerItemProxy */;
 		};
 		FDDEE11A21CD4D230007D4EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
