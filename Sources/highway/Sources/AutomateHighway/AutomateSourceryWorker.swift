@@ -109,7 +109,7 @@ public struct AutomateHighwaySourceryWorker: DemoSourceryWorkerProtocol, AutoGen
             signPost.message("⚠️ Failed to runn from current folder at\(currentFolder.path) ⚠️")
             signPost.message("💁🏻‍♂️ Will try to run from folder defined in Info.plist with key \(SourceryFolderWorker.Key.scrRoot.rawValue) ...")
             
-            currentFolder = try SourceryFolderWorker(bundle: Bundle.main).scrRoot.folder
+            currentFolder = try SourceryFolderWorker(bundle: Bundle.main).srcRoot.folder
             projectFolder = currentFolder
             
             sourcesFolder = try projectFolder.subfolder(named: "Sources")

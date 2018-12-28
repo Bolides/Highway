@@ -11,9 +11,11 @@ import Arguments
 import Terminal
 import SignPost
 import SourceryWorker
+import Deliver
+import ZFile
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AutomateAppdelegateAppDelegate: NSObject, NSApplicationDelegate {
     
     lazy var signPost: SignPostProtocol = SignPost.shared
 
@@ -29,9 +31,28 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             signPost.error("❌ running command caused error:\n\(error)\n")
             NSApplication.shared.terminate(self)
         }
+        
+        tempGenerateJWTToken()
     }
     
    
+    private func tempGenerateJWTToken() {
+        
+        //: # Cupertino JWT
+        
+        do {
+            let srcRoot = try SourceryFolderWorker(bundle: Bundle.main).srcRoot.folder
+
+            // Get content of the .p8 file
+            let p8 = try srcRoot.file(named: "/Sources/AutomateHighway/AuthKey_VV7NT37UVU.p8")
+            let worker = try JWTTokenWorker(p8KeyFile: p8)
+            signPost.message("💁🏻‍♂️ JWT token \(worker.token)")
+            
+        } catch {
+            signPost.error("⚠️  \(error)")
+        }
+    }
+    
     // MARK: - Command Line
     
     private func determineIfRunFromCommandLine() throws {

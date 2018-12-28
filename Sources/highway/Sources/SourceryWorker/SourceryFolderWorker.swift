@@ -13,7 +13,7 @@ import FoundationGenericHelper
 
 public protocol SourceryFolderWorkerProtocol: AutoMockable {
     /// sourcery:inline:ZFileFolderWorker.AutoGenerateProtocol
-    var scrRoot: (folder: FolderProtocol, key: SourceryFolderWorker.Key) { get }
+    var srcRoot: (folder: FolderProtocol, key: SourceryFolderWorker.Key) { get }
     
     init(bundle: BundleProtocol) throws
     /// sourcery:end
@@ -25,11 +25,11 @@ public struct SourceryFolderWorker: SourceryFolderWorkerProtocol, AutoGeneratePr
         case scrRoot = "BE_DOOZ_SRCROOT"
     }
     
-    public let scrRoot: (folder: FolderProtocol, key: SourceryFolderWorker.Key)
+    public let srcRoot: (folder: FolderProtocol, key: SourceryFolderWorker.Key)
     
     // sourcery:inlcudeInitInProtocol
     public init(bundle: BundleProtocol) throws {
-        self.scrRoot = (try Folder(path: try bundle.string(for: AnyRawRepresentable(Key.scrRoot))), Key.scrRoot)
+        self.srcRoot = (try Folder(path: try bundle.string(for: AnyRawRepresentable(Key.scrRoot))), Key.scrRoot)
     }
 }
 

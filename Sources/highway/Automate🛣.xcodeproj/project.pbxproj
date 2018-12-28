@@ -18,10 +18,10 @@
 		FD84A7B421D6C1430093F2A7 /* CupertinoJWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD27B96921D6C11B008F829A /* CupertinoJWT.framework */; };
 		FD84A7B521D6C1430093F2A7 /* CupertinoJWT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD27B96921D6C11B008F829A /* CupertinoJWT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDB7A8A821CD51870045DDA8 /* AutomateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A8A621CD51870045DDA8 /* AutomateTests.swift */; };
-		FDB7A8AA21CD524D0045DDA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDEE02721CD4B820007D4EB /* Main.storyboard */; };
+		FDB7A8AA21CD524D0045DDA8 /* AutomateMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDEE02721CD4B820007D4EB /* AutomateMain.storyboard */; };
 		FDDEE12521CD4DC90007D4EB /* AutomateHighwayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEE02421CD4B820007D4EB /* AutomateHighwayViewController.swift */; };
 		FDDEE12621CD4DCB0007D4EB /* AutomateSourceryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEE02521CD4B820007D4EB /* AutomateSourceryWorker.swift */; };
-		FDDEE12721CD4DD30007D4EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEE02921CD4B820007D4EB /* AppDelegate.swift */; };
+		FDDEE12721CD4DD30007D4EB /* AutomateAppdelegateAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEE02921CD4B820007D4EB /* AutomateAppdelegateAppDelegate.swift */; };
 		FDDEE12821CD4E040007D4EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDDEE02621CD4B820007D4EB /* Assets.xcassets */; };
 		FDDEE12E21CD4E6D0007D4EB /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDEE04F21CD4BC40007D4EB /* Arguments.framework */; };
 		FDDEE12F21CD4E6D0007D4EB /* Arguments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDEE04F21CD4BC40007D4EB /* Arguments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -759,8 +759,8 @@
 		FDDEE02421CD4B820007D4EB /* AutomateHighwayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomateHighwayViewController.swift; sourceTree = "<group>"; };
 		FDDEE02521CD4B820007D4EB /* AutomateSourceryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomateSourceryWorker.swift; sourceTree = "<group>"; };
 		FDDEE02621CD4B820007D4EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FDDEE02821CD4B820007D4EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FDDEE02921CD4B820007D4EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FDDEE02821CD4B820007D4EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AutomateMain.storyboard; sourceTree = "<group>"; };
+		FDDEE02921CD4B820007D4EB /* AutomateAppdelegateAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomateAppdelegateAppDelegate.swift; sourceTree = "<group>"; };
 		FDDEE02A21CD4B820007D4EB /* AutomateHighway.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutomateHighway.entitlements; sourceTree = "<group>"; };
 		FDDEE02B21CD4B820007D4EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDDEE08721CD4C010007D4EB /* ZFile.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZFile.xcodeproj; path = ../Carthage/Checkouts/zfile/sources/ZFile/ZFile.xcodeproj; sourceTree = "<group>"; };
@@ -957,8 +957,8 @@
 				FDDEE02421CD4B820007D4EB /* AutomateHighwayViewController.swift */,
 				FDDEE02521CD4B820007D4EB /* AutomateSourceryWorker.swift */,
 				FDDEE02621CD4B820007D4EB /* Assets.xcassets */,
-				FDDEE02721CD4B820007D4EB /* Main.storyboard */,
-				FDDEE02921CD4B820007D4EB /* AppDelegate.swift */,
+				FDDEE02721CD4B820007D4EB /* AutomateMain.storyboard */,
+				FDDEE02921CD4B820007D4EB /* AutomateAppdelegateAppDelegate.swift */,
 				FDDEE02A21CD4B820007D4EB /* AutomateHighway.entitlements */,
 				FDDEE02B21CD4B820007D4EB /* Info.plist */,
 			);
@@ -1659,7 +1659,7 @@
 			files = (
 				FDF72D8221D6825A006009D3 /* Cartfile in Resources */,
 				FDDEE12821CD4E040007D4EB /* Assets.xcassets in Resources */,
-				FDB7A8AA21CD524D0045DDA8 /* Main.storyboard in Resources */,
+				FDB7A8AA21CD524D0045DDA8 /* AutomateMain.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1679,7 +1679,7 @@
 			files = (
 				FDDEE12521CD4DC90007D4EB /* AutomateHighwayViewController.swift in Sources */,
 				FDDEE12621CD4DCB0007D4EB /* AutomateSourceryWorker.swift in Sources */,
-				FDDEE12721CD4DD30007D4EB /* AppDelegate.swift in Sources */,
+				FDDEE12721CD4DD30007D4EB /* AutomateAppdelegateAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1812,12 +1812,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FDDEE02721CD4B820007D4EB /* Main.storyboard */ = {
+		FDDEE02721CD4B820007D4EB /* AutomateMain.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FDDEE02821CD4B820007D4EB /* Base */,
 			);
-			name = Main.storyboard;
+			name = AutomateMain.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1876,7 +1876,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1933,7 +1933,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;

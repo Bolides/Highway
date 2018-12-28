@@ -24,8 +24,8 @@ public struct  JWTTokenWorker: JWTTokenWorkerProtocol, AutoGenerateProtocol {
     public init(p8KeyFile: FileProtocol) throws {
         
         // Assign developer information and token expiration setting
-        let keyID = ""
-        let teamID = ""
+        let keyID = "VV7NT37UVU"
+        let teamID = "69a6de78-d037-47e3-e053-5b8c7c11a4d1"
         let issueDate = Date()
         let expireDuration: TimeInterval = 60 * 60
         
