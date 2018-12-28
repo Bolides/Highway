@@ -19,3 +19,6 @@
 [submodule "Carthage/Checkouts/JWT"]
 	path = Sources/Carthage/Checkouts/JWT
 	url = https://github.com/yourkarma/JWT.git
+[submodule "Carthage/Checkouts/JSONWebToken.swift"]
+	path = Sources/Carthage/Checkouts/JSONWebToken.swift
+	url = https://github.com/kylef/JSONWebToken.swift.git

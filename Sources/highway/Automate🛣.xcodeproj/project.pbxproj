@@ -676,6 +676,7 @@
 		FDDEE10721CD4D220007D4EB /* AutomateHighway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutomateHighway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDEE11821CD4D230007D4EB /* AutomateHighwayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutomateHighwayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF72D8121D6825A006009D3 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = ../Cartfile; sourceTree = "<group>"; };
+		FDF72D9B21D683F1006009D3 /* highway.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = highway.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -803,7 +804,7 @@
 				FD0553E621D1347700E9B0D0 /* README.md */,
 				FD0553B421D1347600E9B0D0 /* CHANGELOG.md */,
 				FD05542F21D13F2300E9B0D0 /* Tests */,
-				FDDEE02321CD4B820007D4EB /* AutomateHighway */,
+				FDF72D9921D683D9006009D3 /* Sources */,
 				FDDEDFB921CD4B490007D4EB /* Products */,
 				FDDEE0ED21CD4CC80007D4EB /* Quick.xcodeproj */,
 				FDDEE0C521CD4CBF0007D4EB /* Nimble.xcodeproj */,
@@ -876,6 +877,24 @@
 				FDDEE08521CD4BC40007D4EB /* SignPostTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FDF72D9921D683D9006009D3 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FDF72D9A21D683F1006009D3 /* JWTWorker */,
+				FDDEE02321CD4B820007D4EB /* AutomateHighway */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		FDF72D9A21D683F1006009D3 /* JWTWorker */ = {
+			isa = PBXGroup;
+			children = (
+				FDF72D9B21D683F1006009D3 /* highway.playground */,
+			);
+			name = JWTWorker;
+			path = Sources/JWTWorker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
