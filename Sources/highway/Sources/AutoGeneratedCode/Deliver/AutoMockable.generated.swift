@@ -1,9 +1,9 @@
-import SourceryAutoProtocols
-import ZFile
-import Deliver
-import os
 import Foundation
+import SourceryAutoProtocols
 import ZFileMock
+import ZFile
+import os
+import Deliver
 
 
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
@@ -76,6 +76,21 @@ open class DeliverProtocolMock: DeliverProtocol {
 
       return try closureReturn(options)
   }
+}
+
+
+// MARK: - JWTTokenWorkerProtocolMock
+
+open class JWTTokenWorkerProtocolMock: JWTTokenWorkerProtocol {
+
+    public init() {}
+
+  public  var token: String {
+      get { return underlyingToken }
+      set(value) { underlyingToken = value }
+  }
+  public  var underlyingToken: String = "AutoMockable filled value"
+
 }
 
 

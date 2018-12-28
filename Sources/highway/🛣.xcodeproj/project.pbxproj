@@ -68,6 +68,8 @@
 		FD34F43021BEE9EB0052222C /* CatExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34F42D21BEE9EB0052222C /* CatExecutable.swift */; };
 		FD34F43121BEE9EB0052222C /* GitExecutables.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34F42E21BEE9EB0052222C /* GitExecutables.swift */; };
 		FD3E94CF21C8117B00EA791C /* TemplatePrepend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3E94CE21C8117B00EA791C /* TemplatePrepend.swift */; };
+		FD84A7EA21D6C3D50093F2A7 /* JWTTokenWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD84A7E921D6C3C50093F2A7 /* JWTTokenWorker.swift */; };
+		FD84A7EC21D6C4870093F2A7 /* CupertinoJWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD84A7EB21D6C4870093F2A7 /* CupertinoJWT.framework */; };
 		FDAC932A210B595100B0D045 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		FDB7A8AD21CD58600045DDA8 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
 		FDB7A8D621CD5FE40045DDA8 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F42221BEE5340052222C /* ZFile.framework */; };
@@ -1346,6 +1348,8 @@
 		FD34F42D21BEE9EB0052222C /* CatExecutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatExecutable.swift; sourceTree = "<group>"; };
 		FD34F42E21BEE9EB0052222C /* GitExecutables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitExecutables.swift; sourceTree = "<group>"; };
 		FD3E94CE21C8117B00EA791C /* TemplatePrepend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatePrepend.swift; sourceTree = "<group>"; };
+		FD84A7E921D6C3C50093F2A7 /* JWTTokenWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTTokenWorker.swift; sourceTree = "<group>"; };
+		FD84A7EB21D6C4870093F2A7 /* CupertinoJWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CupertinoJWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDAC932C210B5C4500B0D045 /* ExcecutableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcecutableProtocol.swift; sourceTree = "<group>"; };
 		FDAC9350210B7D4A00B0D045 /* TerminalTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminalTasks.swift; sourceTree = "<group>"; };
 		FDB7A8B921CD5EA10045DDA8 /* TestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1622,6 +1626,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				FD84A7EC21D6C4870093F2A7 /* CupertinoJWT.framework in Frameworks */,
 				OBJ_297 /* Task.framework in Frameworks */,
 				OBJ_298 /* Arguments.framework in Frameworks */,
 				OBJ_299 /* Result.framework in Frameworks */,
@@ -1927,6 +1932,7 @@
 		FD326D9E210A0F5F00AE3A98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD84A7EB21D6C4870093F2A7 /* CupertinoJWT.framework */,
 				FD0553ED21D136CB00E9B0D0 /* ZFileMock.framework */,
 				FD0553EB21D136C200E9B0D0 /* ZFileMock.framework */,
 				FD0553E921D136B600E9B0D0 /* ZFileMock.framework */,
@@ -2142,6 +2148,7 @@
 			children = (
 				OBJ_104 /* Deliver.swift */,
 				OBJ_105 /* altool */,
+				FD84A7E921D6C3C50093F2A7 /* JWTTokenWorker.swift */,
 			);
 			path = Deliver;
 			sourceTree = "<group>";
@@ -3365,6 +3372,7 @@
 					};
 					"highway::ResultTests" = {
 						DevelopmentTeam = WWFDRU947Q;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Manual;
 					};
 					"highway::SourceryAutoProtocols" = {
@@ -3379,6 +3387,7 @@
 					};
 					"highway::TaskTests" = {
 						DevelopmentTeam = WWFDRU947Q;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Manual;
 					};
 					"highway::Terminal" = {
@@ -3388,6 +3397,7 @@
 					};
 					"highway::TerminalTests" = {
 						DevelopmentTeam = WWFDRU947Q;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Manual;
 					};
 					"highway::Url" = {
@@ -3397,6 +3407,7 @@
 					};
 					"highway::UrlTests" = {
 						DevelopmentTeam = WWFDRU947Q;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Manual;
 					};
 					"highway::XCBuild" = {
@@ -3406,6 +3417,7 @@
 					};
 					"highway::XCBuildTests" = {
 						DevelopmentTeam = WWFDRU947Q;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -3690,6 +3702,7 @@
 				OBJ_293 /* Deliver.swift in Sources */,
 				OBJ_294 /* Altool-Options.swift in Sources */,
 				OBJ_295 /* Altool.swift in Sources */,
+				FD84A7EA21D6C3D50093F2A7 /* JWTTokenWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6092,7 +6105,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = ResultTests;
 			};
 			name = Debug;
@@ -6108,7 +6121,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = ResultTests;
 			};
 			name = Release;
@@ -6214,7 +6227,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = TaskTests;
 			};
 			name = Debug;
@@ -6230,7 +6243,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = TaskTests;
 			};
 			name = Release;
@@ -6291,7 +6304,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = TerminalTests;
 			};
 			name = Debug;
@@ -6308,7 +6321,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = TerminalTests;
 			};
 			name = Release;
@@ -6369,7 +6382,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = UrlTests;
 			};
 			name = Debug;
@@ -6386,7 +6399,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = UrlTests;
 			};
 			name = Release;
@@ -6446,7 +6459,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = XCBuildTests;
 			};
 			name = Debug;
@@ -6462,7 +6475,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = XCBuildTests;
 			};
 			name = Release;

@@ -1,11 +1,11 @@
-import ZFile
-import os
-import Arguments
+import SignPost
 import Foundation
-import ZFileMock
 import Task
 import SourceryAutoProtocols
-import SignPost
+import os
+import ZFile
+import ZFileMock
+import Arguments
 
 
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
