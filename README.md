@@ -32,7 +32,7 @@ Use [Carthage](https://www.github.com/Carthage/Carthage)
 4. Set the **framework search path** to `$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)` in the **GENERAL** project settings,
 
     > ⚠️ so not in the target. In the target(s) use `$inherited`
-5. Add **macos** `Automate` target
+5. Add **macOS** `Automate` target
 6. Embed all frameworks from  Highway except the iOS versions
 7. Embed CuportinoJWT (add project from Sources/Carthage/CheckOuts/CupertinoJWT)
 8. Embed ZFile (add project from Sources/Carthage/CheckOuts/ZFile)
