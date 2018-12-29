@@ -2,10 +2,6 @@
 
 #github "doozMen/ZFile"
 
-# Auto generate Code
-
-github "doozMen/template-sourcery"
-
 # JWT Token generation
 
 github "doozMen/CupertinoJWT"

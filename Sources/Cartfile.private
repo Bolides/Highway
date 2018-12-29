@@ -2,3 +2,7 @@
 
 github "doozMen/Quick"
 github "doozMen/Nimble"
+
+# Auto generate Code
+
+github "doozMen/template-sourcery"
