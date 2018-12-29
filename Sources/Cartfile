@@ -6,11 +6,6 @@
 
 github "doozMen/template-sourcery"
 
-# Testing
-
-github "doozMen/Quick"
-github "doozMen/Nimble"
-
 # JWT Token generation
 
 github "doozMen/CupertinoJWT"
