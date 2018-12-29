@@ -1,9 +1,9 @@
 import Foundation
-import SourceryAutoProtocols
-import Result
 import ZFileMock
-import ZFile
+import Result
 import os
+import ZFile
+import SourceryAutoProtocols
 
 
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery

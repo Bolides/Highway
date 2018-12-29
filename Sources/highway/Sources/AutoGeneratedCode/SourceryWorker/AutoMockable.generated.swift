@@ -1,9 +1,9 @@
 import Foundation
-import SourceryAutoProtocols
-import ZFileMock
-import ZFile
-import os
 import SourceryWorker
+import ZFileMock
+import os
+import ZFile
+import SourceryAutoProtocols
 
 
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
@@ -60,11 +60,11 @@ open class SourceryFolderWorkerProtocolMock: SourceryFolderWorkerProtocol {
 
     public init() {}
 
-  public  var scrRoot: (folder: FolderProtocol, key: SourceryFolderWorker.Key) {
-      get { return underlyingScrRoot }
-      set(value) { underlyingScrRoot = value }
+  public  var srcRoot: (folder: FolderProtocol, key: SourceryFolderWorker.Key) {
+      get { return underlyingSrcRoot }
+      set(value) { underlyingSrcRoot = value }
   }
-  public  var underlyingScrRoot: (folder: FolderProtocol, key: SourceryFolderWorker.Key)!
+  public  var underlyingSrcRoot: (folder: FolderProtocol, key: SourceryFolderWorker.Key)!
 
 
   // MARK: - <init> - parameters
