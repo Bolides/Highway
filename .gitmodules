@@ -10,3 +10,6 @@
 [submodule "Carthage/Checkouts/Nimble"]
 	path = Sources/Carthage/Checkouts/Nimble
 	url = https://github.com/doozMen/Nimble.git
+[submodule "Carthage/Checkouts/ZFile"]
+	path = Sources/Carthage/Checkouts/ZFile
+	url = https://github.com/doozMen/ZFile.git
