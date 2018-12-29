@@ -24,4 +24,4 @@
 	url = https://github.com/doozMen/CryptoSwift.git
 [submodule "Carthage/Checkouts/CupertinoJWT"]
 	path = Sources/Carthage/Checkouts/CupertinoJWT
-	url = https://github.com/ethanhuang13/CupertinoJWT.git
+	url = https://github.com/doozMen/CupertinoJWT.git
