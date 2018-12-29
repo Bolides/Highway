@@ -1,22 +1,16 @@
 # Persistance
 
-github "doozMen/ZFile" "~> 2.0"
+github "doozMen/ZFile"
 
 # Auto generate Code
 
-github "doozMen/Sourcery" "~> 0.15"
-github "doozMen/template-sourcery" "~> 1.0"
+github "doozMen/template-sourcery"
 
 # Testing
 
-github "doozMen/Quick" "~> v1.3"
-github "doozMen/Nimble" "~> v7.3"
+github "doozMen/Quick"
+github "doozMen/Nimble"
 
 # JWT Token generation
 
-github "doozMen/JSONWebToken.swift" "~> 2.2"
-github "doozMen/CupertinoJWT" "~> v0.2"
-
-# TestAppdelegate
-
-github "mokacoding/TestAppDelegateExample" "master"
+github "doozMen/CupertinoJWT"

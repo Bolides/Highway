@@ -6,7 +6,7 @@
 	url = https://github.com/doozMen/Quick.git
 [submodule "Sources/Carthage/Checkouts/Sourcery"]
 	path = Sources/Carthage/Checkouts/Sourcery
-	url = https://github.com/krzysztofzablocki/Sourcery.git
+	url = https://github.com/doozMen/Sourcery.git
 [submodule "Sources/Carthage/Checkouts/template-sourcery"]
 	path = Sources/Carthage/Checkouts/template-sourcery
 	url = https://github.com/doozMen/template-sourcery.git
