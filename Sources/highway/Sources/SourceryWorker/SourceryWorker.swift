@@ -123,7 +123,10 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol {
             
             var allLines = try file.readAllLines()
             
-            var importStatements = _import.names.map { $0.testable ? "@testable import \($0.name)": "import \($0.name)"}
+            var importStatements = _import.names
+                .sorted(by: { $0.name.lowercased() < $1.name.lowercased() } )
+                .map { $0.testable ? "@testable import \($0.name)": "import \($0.name)"}
+           
             importStatements.append("\n")
             
             allLines = importStatements + allLines
