@@ -1,0 +1,12 @@
+[submodule "Carthage/Checkouts/template-sourcery"]
+	path = Sources/Carthage/Checkouts/template-sourcery
+	url = https://github.com/doozMen/template-sourcery.git
+[submodule "Carthage/Checkouts/Quick"]
+	path = Sources/Carthage/Checkouts/Quick
+	url = https://github.com/doozMen/Quick.git
+[submodule "Carthage/Checkouts/CupertinoJWT"]
+	path = Sources/Carthage/Checkouts/CupertinoJWT
+	url = https://github.com/doozMen/CupertinoJWT.git
+[submodule "Carthage/Checkouts/Nimble"]
+	path = Sources/Carthage/Checkouts/Nimble
+	url = https://github.com/doozMen/Nimble.git
