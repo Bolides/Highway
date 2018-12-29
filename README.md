@@ -1,15 +1,9 @@
-# Frameworks to help Automate build scripts written in Swift
-
-... Currently exploring how to use this. Very experimental state.
-
-## GOAL of highway
-
-This changed from the original project
+# Automate development tasks using Swift.
 
 1. Build frameworks you can use to write a script in swift that runs Terminal commands
 2. Building with xcbuild from swift code
-3. Optimize git workflow from Swift
-4. Generate reliable code using sourcery with a swift command
+3. Run terminal commands from swift
+4. Generate code using [Sourcery](https://github.com/doozMen/Sourcery)
 
 # Usage
 
