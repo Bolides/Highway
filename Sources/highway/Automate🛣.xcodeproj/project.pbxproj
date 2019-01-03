@@ -45,13 +45,15 @@
 		FD3F8C8B21DE0E1C00BBDA58 /* Arguments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6C21DE0E0300BBDA58 /* Arguments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD3F8C8C21DE0E1C00BBDA58 /* SwiftFormatWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C5F21DE0DDF00BBDA58 /* SwiftFormatWorker.framework */; };
 		FD3F8C8D21DE0E1C00BBDA58 /* SwiftFormatWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C5F21DE0DDF00BBDA58 /* SwiftFormatWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD3F8D4621DE235400BBDA58 /* ProjectFolderWorker_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8D4321DE235400BBDA58 /* ProjectFolderWorker_macOS.framework */; };
+		FD3F8D4721DE235400BBDA58 /* ProjectFolderWorker_macOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8D4321DE235400BBDA58 /* ProjectFolderWorker_macOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD84A7B421D6C1430093F2A7 /* CupertinoJWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD27B96921D6C11B008F829A /* CupertinoJWT.framework */; };
 		FD84A7B521D6C1430093F2A7 /* CupertinoJWT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD27B96921D6C11B008F829A /* CupertinoJWT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDB7A8A821CD51870045DDA8 /* AutomateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A8A621CD51870045DDA8 /* AutomateTests.swift */; };
 		FDB7A8AA21CD524D0045DDA8 /* AutomateMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDEE02721CD4B820007D4EB /* AutomateMain.storyboard */; };
 		FDDEE12521CD4DC90007D4EB /* AutomateHighwayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEE02421CD4B820007D4EB /* AutomateHighwayViewController.swift */; };
 		FDDEE12621CD4DCB0007D4EB /* AutomateSourceryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEE02521CD4B820007D4EB /* AutomateSourceryWorker.swift */; };
-		FDDEE12721CD4DD30007D4EB /* AutomateAppdelegateAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEE02921CD4B820007D4EB /* AutomateAppdelegateAppDelegate.swift */; };
+		FDDEE12721CD4DD30007D4EB /* AutomateAppdelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEE02921CD4B820007D4EB /* AutomateAppdelegate.swift */; };
 		FDDEE12821CD4E040007D4EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDDEE02621CD4B820007D4EB /* Assets.xcassets */; };
 		FDF72D8221D6825A006009D3 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = FDF72D8121D6825A006009D3 /* Cartfile */; };
 /* End PBXBuildFile section */
@@ -225,6 +227,272 @@
 			remoteGlobalIDString = 01A0EAA31D5DB4CF00A0A8E3;
 			remoteInfo = SwiftFormat;
 		};
+		FD3F8CDC21DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::Arguments::Product";
+			remoteInfo = Arguments;
+		};
+		FD3F8CDE21DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDB7A98321CD6B5D0045DDA8;
+			remoteInfo = ArgumentsMock;
+		};
+		FD3F8CE021DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::Deliver::Product";
+			remoteInfo = Deliver;
+		};
+		FD3F8CE221DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::Errors::Product";
+			remoteInfo = Errors;
+		};
+		FD3F8CE421DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::Git::Product";
+			remoteInfo = Git;
+		};
+		FD3F8CE621DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::Keychain::Product";
+			remoteInfo = Keychain;
+		};
+		FD3F8CE821DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::POSIX::Product";
+			remoteInfo = POSIX;
+		};
+		FD3F8CEA21DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD1126CC21C77F050072607D;
+			remoteInfo = SignPost;
+		};
+		FD3F8CEC21DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDB7A9C721CD6F7F0045DDA8;
+			remoteInfo = SignPostMock;
+		};
+		FD3F8CEE21DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDB7A9FC21CD7E8C0045DDA8;
+			remoteInfo = TaskMock;
+		};
+		FD3F8CF021DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::Result::Product";
+			remoteInfo = Result;
+		};
+		FD3F8CF221DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::SourceryAutoProtocols::Product";
+			remoteInfo = "SourceryAutoProtocols-macos";
+		};
+		FD3F8CF421DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDE9B6F721C58ED400D1F50A;
+			remoteInfo = "SourceryAutoProtocols-ios";
+		};
+		FD3F8CF621DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDC156DB21C5347C00E04B44;
+			remoteInfo = SourceryWorker;
+		};
+		FD3F8CF821DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDB7AA0D21CD81DC0045DDA8;
+			remoteInfo = SourceryWorkerMock;
+		};
+		FD3F8CFA21DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD3F8A1121DDE43A00BBDA58;
+			remoteInfo = SwiftFormatWorker;
+		};
+		FD3F8CFC21DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD3F8A7221DDE7E700BBDA58;
+			remoteInfo = SwiftFormatWorkerMock;
+		};
+		FD3F8CFE21DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::Task::Product";
+			remoteInfo = Task;
+		};
+		FD3F8D0021DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDB7A9E221CD736C0045DDA8;
+			remoteInfo = TerminalMock;
+		};
+		FD3F8D0221DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDB7A8B921CD5EA10045DDA8;
+			remoteInfo = TestKit;
+		};
+		FD3F8D0421DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::Terminal::Product";
+			remoteInfo = Terminal;
+		};
+		FD3F8D0621DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::Url::Product";
+			remoteInfo = Url;
+		};
+		FD3F8D0821DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::XCBuild::Product";
+			remoteInfo = XCBuild;
+		};
+		FD3F8D0A21DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::ArgumentsTests::Product";
+			remoteInfo = ArgumentsTests;
+		};
+		FD3F8D0C21DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::DeliverTests::Product";
+			remoteInfo = DeliverTests;
+		};
+		FD3F8D0E21DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::GitTests::Product";
+			remoteInfo = GitTests;
+		};
+		FD3F8D1021DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::POSIXTests::Product";
+			remoteInfo = POSIXTests;
+		};
+		FD3F8D1221DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::ResultTests::Product";
+			remoteInfo = ResultTests;
+		};
+		FD3F8D1421DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD3F8A1921DDE43A00BBDA58;
+			remoteInfo = SwiftformatWorkerTests;
+		};
+		FD3F8D1621DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD1126D421C77F050072607D;
+			remoteInfo = SignPostTests;
+		};
+		FD3F8D1821DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDC156E321C5347D00E04B44;
+			remoteInfo = SourceryWorkerTests;
+		};
+		FD3F8D1A21DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::TaskTests::Product";
+			remoteInfo = TaskTests;
+		};
+		FD3F8D1C21DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::TerminalTests::Product";
+			remoteInfo = TerminalTests;
+		};
+		FD3F8D1E21DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::UrlTests::Product";
+			remoteInfo = UrlTests;
+		};
+		FD3F8D2021DE1E2600BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::XCBuildTests::Product";
+			remoteInfo = XCBuildTests;
+		};
+		FD3F8D4221DE235400BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD3F8D2721DE229900BBDA58;
+			remoteInfo = "ProjectFolderWorker-macOS";
+		};
+		FD3F8D4421DE235400BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD3F8D2F21DE229A00BBDA58;
+			remoteInfo = "ProjectFolderWorkerTests-macOS";
+		};
+		FD3F8D4821DE235400BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FD3F8D2621DE229900BBDA58;
+			remoteInfo = "ProjectFolderWorker-macOS";
+		};
 		FD4E54DD21D1271900B5A776 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FDDEE0C521CD4CBF0007D4EB /* Nimble.xcodeproj */;
@@ -379,6 +647,7 @@
 				FD3F8C8921DE0E1C00BBDA58 /* Keychain.framework in Embed Frameworks */,
 				FD3F8C8B21DE0E1C00BBDA58 /* Arguments.framework in Embed Frameworks */,
 				FD3F8AF121DDED5400BBDA58 /* SwiftFormat.framework in Embed Frameworks */,
+				FD3F8D4721DE235400BBDA58 /* ProjectFolderWorker_macOS.framework in Embed Frameworks */,
 				FD3F8C8D21DE0E1C00BBDA58 /* SwiftFormatWorker.framework in Embed Frameworks */,
 				FD3F8C7D21DE0E1C00BBDA58 /* SourceryAutoProtocols.framework in Embed Frameworks */,
 				FD3F8C8521DE0E1C00BBDA58 /* POSIX.framework in Embed Frameworks */,
@@ -427,7 +696,7 @@
 		FDDEE02521CD4B820007D4EB /* AutomateSourceryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomateSourceryWorker.swift; sourceTree = "<group>"; };
 		FDDEE02621CD4B820007D4EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDDEE02821CD4B820007D4EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AutomateMain.storyboard; sourceTree = "<group>"; };
-		FDDEE02921CD4B820007D4EB /* AutomateAppdelegateAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomateAppdelegateAppDelegate.swift; sourceTree = "<group>"; };
+		FDDEE02921CD4B820007D4EB /* AutomateAppdelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomateAppdelegate.swift; sourceTree = "<group>"; };
 		FDDEE02A21CD4B820007D4EB /* AutomateHighway.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutomateHighway.entitlements; sourceTree = "<group>"; };
 		FDDEE02B21CD4B820007D4EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDDEE08721CD4C010007D4EB /* ZFile.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZFile.xcodeproj; path = ../Carthage/Checkouts/zfile/sources/ZFile/ZFile.xcodeproj; sourceTree = "<group>"; };
@@ -449,6 +718,7 @@
 				FD3F8C8821DE0E1C00BBDA58 /* Keychain.framework in Frameworks */,
 				FD3F8C8A21DE0E1C00BBDA58 /* Arguments.framework in Frameworks */,
 				FD0553F421D1370D00E9B0D0 /* ZFile.framework in Frameworks */,
+				FD3F8D4621DE235400BBDA58 /* ProjectFolderWorker_macOS.framework in Frameworks */,
 				FD3F8C8C21DE0E1C00BBDA58 /* SwiftFormatWorker.framework in Frameworks */,
 				FD3F8C7C21DE0E1C00BBDA58 /* SourceryAutoProtocols.framework in Frameworks */,
 				FD3F8C8421DE0E1C00BBDA58 /* POSIX.framework in Frameworks */,
@@ -521,6 +791,50 @@
 				FD3F8AE721DDECE500BBDA58 /* swiftformat */,
 				FD3F8AE921DDECE500BBDA58 /* SwiftFormat for Xcode.app */,
 				FD3F8AEB21DDECE500BBDA58 /* SwiftFormat.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD3F8C9721DE1E2600BBDA58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD3F8CDD21DE1E2600BBDA58 /* Arguments.framework */,
+				FD3F8CDF21DE1E2600BBDA58 /* ArgumentsMock.framework */,
+				FD3F8CE121DE1E2600BBDA58 /* Deliver.framework */,
+				FD3F8CE321DE1E2600BBDA58 /* Errors.framework */,
+				FD3F8CE521DE1E2600BBDA58 /* Git.framework */,
+				FD3F8CE721DE1E2600BBDA58 /* Keychain.framework */,
+				FD3F8CE921DE1E2600BBDA58 /* POSIX.framework */,
+				FD3F8D4321DE235400BBDA58 /* ProjectFolderWorker_macOS.framework */,
+				FD3F8CEB21DE1E2600BBDA58 /* SignPost.framework */,
+				FD3F8CED21DE1E2600BBDA58 /* SignPostMock.framework */,
+				FD3F8CEF21DE1E2600BBDA58 /* TaskMock.framework */,
+				FD3F8CF121DE1E2600BBDA58 /* Result.framework */,
+				FD3F8CF321DE1E2600BBDA58 /* SourceryAutoProtocols.framework */,
+				FD3F8CF521DE1E2600BBDA58 /* SourceryAutoProtocols.framework */,
+				FD3F8CF721DE1E2600BBDA58 /* SourceryWorker.framework */,
+				FD3F8CF921DE1E2600BBDA58 /* SourceryWorkerMock.framework */,
+				FD3F8CFB21DE1E2600BBDA58 /* SwiftFormatWorker.framework */,
+				FD3F8CFD21DE1E2600BBDA58 /* SwiftFormatWorkerMock.framework */,
+				FD3F8CFF21DE1E2600BBDA58 /* Task.framework */,
+				FD3F8D0121DE1E2600BBDA58 /* TerminalMock.framework */,
+				FD3F8D0321DE1E2600BBDA58 /* TestKit.framework */,
+				FD3F8D0521DE1E2600BBDA58 /* Terminal.framework */,
+				FD3F8D0721DE1E2600BBDA58 /* Url.framework */,
+				FD3F8D0921DE1E2600BBDA58 /* XCBuild.framework */,
+				FD3F8D0B21DE1E2600BBDA58 /* ArgumentsTests.xctest */,
+				FD3F8D0D21DE1E2600BBDA58 /* DeliverTests.xctest */,
+				FD3F8D0F21DE1E2600BBDA58 /* GitTests.xctest */,
+				FD3F8D1121DE1E2600BBDA58 /* POSIXTests.xctest */,
+				FD3F8D1321DE1E2600BBDA58 /* ResultTests.xctest */,
+				FD3F8D1521DE1E2600BBDA58 /* SwiftformatWorkerTests.xctest */,
+				FD3F8D1721DE1E2600BBDA58 /* SignPostTests.xctest */,
+				FD3F8D1921DE1E2600BBDA58 /* SourceryWorkerTests.xctest */,
+				FD3F8D1B21DE1E2600BBDA58 /* TaskTests.xctest */,
+				FD3F8D1D21DE1E2600BBDA58 /* TerminalTests.xctest */,
+				FD3F8D1F21DE1E2600BBDA58 /* UrlTests.xctest */,
+				FD3F8D2121DE1E2600BBDA58 /* XCBuildTests.xctest */,
+				FD3F8D4521DE235400BBDA58 /* ProjectFolderWorkerTests-macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -625,7 +939,7 @@
 				FDDEE02521CD4B820007D4EB /* AutomateSourceryWorker.swift */,
 				FDDEE02621CD4B820007D4EB /* Assets.xcassets */,
 				FDDEE02721CD4B820007D4EB /* AutomateMain.storyboard */,
-				FDDEE02921CD4B820007D4EB /* AutomateAppdelegateAppDelegate.swift */,
+				FDDEE02921CD4B820007D4EB /* AutomateAppdelegate.swift */,
 				FDDEE02A21CD4B820007D4EB /* AutomateHighway.entitlements */,
 				FDDEE02B21CD4B820007D4EB /* Info.plist */,
 			);
@@ -661,6 +975,7 @@
 				FD3F8AF321DDED5400BBDA58 /* PBXTargetDependency */,
 				FD84A7B721D6C1440093F2A7 /* PBXTargetDependency */,
 				FD0553F721D1370D00E9B0D0 /* PBXTargetDependency */,
+				FD3F8D4921DE235400BBDA58 /* PBXTargetDependency */,
 			);
 			name = AutomateHighway;
 			productName = AutomateHighway;
@@ -739,6 +1054,10 @@
 				{
 					ProductGroup = FD05539021D1282C00E9B0D0 /* Products */;
 					ProjectRef = FDDEE08721CD4C010007D4EB /* ZFile.xcodeproj */;
+				},
+				{
+					ProductGroup = FD3F8C9721DE1E2600BBDA58 /* Products */;
+					ProjectRef = FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -867,6 +1186,265 @@
 			fileType = "wrapper.app-extension";
 			path = SwiftFormat.appex;
 			remoteRef = FD3F8AEA21DDECE500BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8CDD21DE1E2600BBDA58 /* Arguments.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Arguments.framework;
+			remoteRef = FD3F8CDC21DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8CDF21DE1E2600BBDA58 /* ArgumentsMock.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ArgumentsMock.framework;
+			remoteRef = FD3F8CDE21DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8CE121DE1E2600BBDA58 /* Deliver.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Deliver.framework;
+			remoteRef = FD3F8CE021DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8CE321DE1E2600BBDA58 /* Errors.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Errors.framework;
+			remoteRef = FD3F8CE221DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8CE521DE1E2600BBDA58 /* Git.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Git.framework;
+			remoteRef = FD3F8CE421DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8CE721DE1E2600BBDA58 /* Keychain.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Keychain.framework;
+			remoteRef = FD3F8CE621DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8CE921DE1E2600BBDA58 /* POSIX.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = POSIX.framework;
+			remoteRef = FD3F8CE821DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8CEB21DE1E2600BBDA58 /* SignPost.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SignPost.framework;
+			remoteRef = FD3F8CEA21DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8CED21DE1E2600BBDA58 /* SignPostMock.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SignPostMock.framework;
+			remoteRef = FD3F8CEC21DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8CEF21DE1E2600BBDA58 /* TaskMock.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TaskMock.framework;
+			remoteRef = FD3F8CEE21DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8CF121DE1E2600BBDA58 /* Result.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Result.framework;
+			remoteRef = FD3F8CF021DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8CF321DE1E2600BBDA58 /* SourceryAutoProtocols.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SourceryAutoProtocols.framework;
+			remoteRef = FD3F8CF221DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8CF521DE1E2600BBDA58 /* SourceryAutoProtocols.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SourceryAutoProtocols.framework;
+			remoteRef = FD3F8CF421DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8CF721DE1E2600BBDA58 /* SourceryWorker.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SourceryWorker.framework;
+			remoteRef = FD3F8CF621DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8CF921DE1E2600BBDA58 /* SourceryWorkerMock.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SourceryWorkerMock.framework;
+			remoteRef = FD3F8CF821DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8CFB21DE1E2600BBDA58 /* SwiftFormatWorker.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftFormatWorker.framework;
+			remoteRef = FD3F8CFA21DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8CFD21DE1E2600BBDA58 /* SwiftFormatWorkerMock.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftFormatWorkerMock.framework;
+			remoteRef = FD3F8CFC21DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8CFF21DE1E2600BBDA58 /* Task.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Task.framework;
+			remoteRef = FD3F8CFE21DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8D0121DE1E2600BBDA58 /* TerminalMock.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TerminalMock.framework;
+			remoteRef = FD3F8D0021DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8D0321DE1E2600BBDA58 /* TestKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TestKit.framework;
+			remoteRef = FD3F8D0221DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8D0521DE1E2600BBDA58 /* Terminal.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Terminal.framework;
+			remoteRef = FD3F8D0421DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8D0721DE1E2600BBDA58 /* Url.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Url.framework;
+			remoteRef = FD3F8D0621DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8D0921DE1E2600BBDA58 /* XCBuild.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XCBuild.framework;
+			remoteRef = FD3F8D0821DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8D0B21DE1E2600BBDA58 /* ArgumentsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ArgumentsTests.xctest;
+			remoteRef = FD3F8D0A21DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8D0D21DE1E2600BBDA58 /* DeliverTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DeliverTests.xctest;
+			remoteRef = FD3F8D0C21DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8D0F21DE1E2600BBDA58 /* GitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GitTests.xctest;
+			remoteRef = FD3F8D0E21DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8D1121DE1E2600BBDA58 /* POSIXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = POSIXTests.xctest;
+			remoteRef = FD3F8D1021DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8D1321DE1E2600BBDA58 /* ResultTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResultTests.xctest;
+			remoteRef = FD3F8D1221DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8D1521DE1E2600BBDA58 /* SwiftformatWorkerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftformatWorkerTests.xctest;
+			remoteRef = FD3F8D1421DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8D1721DE1E2600BBDA58 /* SignPostTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SignPostTests.xctest;
+			remoteRef = FD3F8D1621DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8D1921DE1E2600BBDA58 /* SourceryWorkerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SourceryWorkerTests.xctest;
+			remoteRef = FD3F8D1821DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8D1B21DE1E2600BBDA58 /* TaskTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TaskTests.xctest;
+			remoteRef = FD3F8D1A21DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8D1D21DE1E2600BBDA58 /* TerminalTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TerminalTests.xctest;
+			remoteRef = FD3F8D1C21DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8D1F21DE1E2600BBDA58 /* UrlTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UrlTests.xctest;
+			remoteRef = FD3F8D1E21DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8D2121DE1E2600BBDA58 /* XCBuildTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = XCBuildTests.xctest;
+			remoteRef = FD3F8D2021DE1E2600BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8D4321DE235400BBDA58 /* ProjectFolderWorker_macOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ProjectFolderWorker_macOS.framework;
+			remoteRef = FD3F8D4221DE235400BBDA58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD3F8D4521DE235400BBDA58 /* ProjectFolderWorkerTests-macOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ProjectFolderWorkerTests-macOS.xctest";
+			remoteRef = FD3F8D4421DE235400BBDA58 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		FD4E54DE21D1271900B5A776 /* Nimble.framework */ = {
@@ -1024,7 +1602,7 @@
 			files = (
 				FDDEE12521CD4DC90007D4EB /* AutomateHighwayViewController.swift in Sources */,
 				FDDEE12621CD4DCB0007D4EB /* AutomateSourceryWorker.swift in Sources */,
-				FDDEE12721CD4DD30007D4EB /* AutomateAppdelegateAppDelegate.swift in Sources */,
+				FDDEE12721CD4DD30007D4EB /* AutomateAppdelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1073,6 +1651,11 @@
 			isa = PBXTargetDependency;
 			name = SwiftFormat;
 			targetProxy = FD3F8AF221DDED5400BBDA58 /* PBXContainerItemProxy */;
+		};
+		FD3F8D4921DE235400BBDA58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ProjectFolderWorker-macOS";
+			targetProxy = FD3F8D4821DE235400BBDA58 /* PBXContainerItemProxy */;
 		};
 		FD84A7B721D6C1440093F2A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

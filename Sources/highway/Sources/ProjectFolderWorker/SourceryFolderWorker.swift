@@ -11,23 +11,23 @@ import FoundationGenericHelper
 import SourceryAutoProtocols
 import ZFile
 
-public protocol SourceryFolderWorkerProtocol: AutoMockable
+public protocol ProjectFolderWorkerProtocol: AutoMockable
 {
     /// sourcery:inline:ZFileFolderWorker.AutoGenerateProtocol
-    var srcRoot: (folder: FolderProtocol, key: SourceryFolderWorker.Key) { get }
+    var srcRoot: (folder: FolderProtocol, key: ProjectFolderWorker.Key) { get }
 
     init(bundle: BundleProtocol) throws
     /// sourcery:end
 }
 
-public struct SourceryFolderWorker: SourceryFolderWorkerProtocol, AutoGenerateProtocol
+public struct ProjectFolderWorker: ProjectFolderWorkerProtocol, AutoGenerateProtocol
 {
     public enum Key: String
     {
         case scrRoot = "BE_DOOZ_SRCROOT"
     }
 
-    public let srcRoot: (folder: FolderProtocol, key: SourceryFolderWorker.Key)
+    public let srcRoot: (folder: FolderProtocol, key: ProjectFolderWorker.Key)
 
     // sourcery:inlcudeInitInProtocol
     public init(bundle: BundleProtocol) throws

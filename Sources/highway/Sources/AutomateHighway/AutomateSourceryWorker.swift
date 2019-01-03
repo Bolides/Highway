@@ -7,22 +7,21 @@
 //
 
 import Foundation
+import ProjectFolderWorker
 import SignPost
 import SourceryAutoProtocols
 import SourceryWorker
 import Terminal
 import ZFile
 
-protocol DemoSourceryWorkerProtocol
+public protocol AutomateHighwaySourceryWorkerProtocol: AutoMockable
 {
-    //// sourcery:inline:DemoSourceryWorker.AutoGenerateProtocol
-
-    func attempt() throws
-
-    //// sourcery:end
+    /// sourcery:inline:DemoSourceryWorker.AutoGenerateProtocol
+    func attempt(_ async: (@escaping (@escaping SourceryWorker.SyncOutput) -> Void))
+    /// sourcery:end
 }
 
-public struct AutomateHighwaySourceryWorker: DemoSourceryWorkerProtocol, AutoGenerateProtocol
+public class AutomateHighwaySourceryWorker: AutomateHighwaySourceryWorkerProtocol, AutoGenerateProtocol
 {
     private let signPost: SignPostProtocol
     private let workers: [SourceryWorkerProtocol]
@@ -89,7 +88,7 @@ public struct AutomateHighwaySourceryWorker: DemoSourceryWorkerProtocol, AutoGen
 
     init(
         signPost: SignPostProtocol = SignPost.shared,
-        sourceryFolderWorkerType _: SourceryFolderWorkerProtocol.Type = SourceryFolderWorker.self,
+        projectFolderWorkerType: ProjectFolderWorkerProtocol.Type = ProjectFolderWorker.self,
         workers: [SourceryWorkerProtocol]? = nil
     ) throws
     {
@@ -116,9 +115,9 @@ public struct AutomateHighwaySourceryWorker: DemoSourceryWorkerProtocol, AutoGen
         catch
         {
             signPost.message("⚠️ Failed to runn from current folder at\(currentFolder.path) ⚠️")
-            signPost.message("💁🏻‍♂️ Will try to run from folder defined in Info.plist with key \(SourceryFolderWorker.Key.scrRoot.rawValue) ...")
+            signPost.message("💁🏻‍♂️ Will try to run from folder defined in Info.plist with key \(ProjectFolderWorker.Key.scrRoot.rawValue) ...")
 
-            currentFolder = try SourceryFolderWorker(bundle: Bundle.main).srcRoot.folder
+            currentFolder = try projectFolderWorkerType.init(bundle: Bundle.main).srcRoot.folder
             projectFolder = currentFolder
 
             sourcesFolder = try projectFolder.subfolder(named: "Sources")
@@ -162,7 +161,7 @@ public struct AutomateHighwaySourceryWorker: DemoSourceryWorkerProtocol, AutoGen
             )
         }
 
-        self.workers = try sourcerySequence.map { try SourceryWorker(sourcery: $0) }
+        self.workers = sourcerySequence.map { SourceryWorker(sourcery: $0) }
     }
 
     // MARK: - Error
@@ -176,12 +175,22 @@ public struct AutomateHighwaySourceryWorker: DemoSourceryWorkerProtocol, AutoGen
 
     // MARK: - Sourcery Setup
 
-    func attempt() throws
+    public func attempt(_ async: (@escaping (@escaping SourceryWorker.SyncOutput) -> Void))
     {
-        return try workers.forEach
-        {
-            let output = try $0.attempt()
-            signPost.verbose("\(output.joined(separator: "\n"))")
+        workers.forEach
+        { [weak self] in
+
+            guard let `self` = self else { return }
+
+            $0.attempt
+            { syncOutput in
+                async
+                {
+                    let output = try syncOutput()
+                    self.signPost.verbose("\(output.joined(separator: "\n"))")
+                    return output
+                }
+            }
         }
     }
 }

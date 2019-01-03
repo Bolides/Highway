@@ -18,11 +18,9 @@ class SwiftformatWorkerTests: QuickSpec
     {
         super.spec()
 
-        var sut: SwiftFormatWorker!
-
-        beforeEach
+        it("does not throw on init")
         {
-            sut = SwiftFormatWorker(folderToFormat: try! FolderProtocolMock(), configFile: try! FileProtocolMock())
+            expect { try SwiftFormatWorker() }.toNot(throwError())
         }
     }
 }

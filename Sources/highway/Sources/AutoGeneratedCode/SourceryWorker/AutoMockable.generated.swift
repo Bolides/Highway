@@ -54,39 +54,6 @@ open class SourceryExecutableFileProtocolMock: FileProtocolMock, SourceryExecuta
 }
 
 
-// MARK: - SourceryFolderWorkerProtocolMock
-
-open class SourceryFolderWorkerProtocolMock: SourceryFolderWorkerProtocol {
-
-    public init() {}
-
-  public  var srcRoot: (folder: FolderProtocol, key: SourceryFolderWorker.Key) {
-      get { return underlyingSrcRoot }
-      set(value) { underlyingSrcRoot = value }
-  }
-  public  var underlyingSrcRoot: (folder: FolderProtocol, key: SourceryFolderWorker.Key)!
-
-
-  // MARK: - <init> - parameters
-
-  public var initBundleThrowableError: Error?
-  public var initBundleReceivedBundle: BundleProtocol?
-
-  // MARK: - <init> - closure mocks
-
-  public var initBundleClosure: ((BundleProtocol) throws  -> Void)? = nil
-
-
-  // MARK: - <init> - initializer mocked
-
-  public required init(bundle: BundleProtocol) throws {
-      initBundleReceivedBundle = bundle
-     try? initBundleClosure?(bundle)
-  }
-
-}
-
-
 // MARK: - TemplatePrependProtocolMock
 
 open class TemplatePrependProtocolMock: TemplatePrependProtocol {

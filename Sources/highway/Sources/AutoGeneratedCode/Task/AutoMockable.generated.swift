@@ -300,7 +300,7 @@ open class TaskProtocolMock: TaskProtocol {
       set(value) { underlyingArguments = value }
   }
   public  var underlyingArguments: Arguments!
-  public var environment: [String : String] = [:]
+  public var environment: [String: String] = [:]
   public var currentDirectoryUrl: FolderProtocol?
   public  var input: Channel {
       get { return underlyingInput }

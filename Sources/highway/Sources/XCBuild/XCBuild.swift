@@ -13,9 +13,9 @@ public protocol XCBuildProtocol: AutoMockable
     var system: SystemProtocol { get }
     var fileSystem: FileSystemProtocol { get }
 
-    func archive(using options: ArchiveOptionsProtocol) throws -> ArchiveProtocol
-    func export(using options: ExportArchiveOptionsProtocol) throws -> ExportProtocol
-    func buildAndTest(using options: ArgumentExecutableProtocol) throws -> TestReport
+    func archive(using options: ArchiveOptionsProtocol) throws  -> ArchiveProtocol
+    func export(using options: ExportArchiveOptionsProtocol) throws  -> ExportProtocol
+    func buildAndTest(using options: ArgumentExecutableProtocol) throws  -> TestReport
     /// sourcery:end
 }
 

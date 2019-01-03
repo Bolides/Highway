@@ -7,6 +7,7 @@
 
 import Cocoa
 import os
+import ProjectFolderWorker
 import SignPost
 import SourceryWorker
 import SwiftFormatWorker
@@ -20,14 +21,30 @@ class AutomateHighwayViewController: NSViewController
 
     lazy var signPost: SignPostProtocol = SignPost.shared
 
-    lazy var swiftFormatWorker: SwiftFormatWorkerProtocol = SwiftFormatWorker(folderToFormat: folder, configFile: config)
+    private var sourceryWorker: AutomateHighwaySourceryWorkerProtocol?
+    private var swiftFormatWorker: SwiftFormatWorkerProtocol?
 
     @IBAction func runSourcery(_: NSButton)
     {
         do
         {
-            _ = try AutomateHighwaySourceryWorker(sourceryFolderWorkerType: SourceryFolderWorker.self).attempt()
-            signPost.success("💁🏻‍♂️ Sourcery finished ✅.")
+            if sourceryWorker == nil
+            {
+                sourceryWorker = try AutomateHighwaySourceryWorker(projectFolderWorkerType: ProjectFolderWorker.self)
+            }
+
+            sourceryWorker!.attempt
+            { [weak self] syncOutput in
+                do
+                {
+                    _ = try syncOutput()
+                    self?.signPost.success("💁🏻‍♂️ \(#function) finished ✅.")
+                }
+                catch
+                {
+                    self?.signPost.error("❌ \(#function)\n \(error)\n❌")
+                }
+            }
         }
         catch
         {
@@ -37,17 +54,29 @@ class AutomateHighwayViewController: NSViewController
 
     @IBAction func runSwiftFormat(_: NSButton)
     {
-        swiftFormatWorker.attempt
-        { [weak self] syncOutput in
-            do
+        do
+        {
+            if swiftFormatWorker == nil
             {
-                try syncOutput()
-                self?.signPost.success("💁🏻‍♂️ SwiftFormat finished ✅.")
+                swiftFormatWorker = try SwiftFormatWorker()
             }
-            catch
-            {
-                self?.signPost.error("❌\n \(error)\n")
+
+            swiftFormatWorker!.attempt
+            { [weak self] syncOutput in
+                do
+                {
+                    try syncOutput()
+                    self?.signPost.success("💁🏻‍♂️ \(#function) finished ✅.")
+                }
+                catch
+                {
+                    self?.signPost.error("❌ \(#function)\n \(error)\n❌")
+                }
             }
+        }
+        catch
+        {
+            signPost.error("❌ \(#function) \n \(error)\n❌")
         }
     }
 }

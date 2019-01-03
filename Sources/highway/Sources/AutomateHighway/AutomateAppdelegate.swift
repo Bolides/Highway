@@ -9,13 +9,15 @@ import Arguments
 import Cocoa
 import Deliver
 import os
+import ProjectFolderWorker
 import SignPost
 import SourceryWorker
+import SwiftFormatWorker
 import Terminal
 import ZFile
 
 @NSApplicationMain
-class AutomateAppdelegateAppDelegate: NSObject, NSApplicationDelegate
+class AutomateAppdelegate: NSObject, NSApplicationDelegate
 {
     lazy var signPost: SignPostProtocol = SignPost.shared
 
@@ -29,7 +31,7 @@ class AutomateAppdelegateAppDelegate: NSObject, NSApplicationDelegate
         }
         catch ArgumentsWorker.Error.noWorkerCommandFoundInArguments
         {
-            signPost.message("💁🏻‍♂️ Starting without arguments.\nYou can provice arguments prefixed with * \(Worker.commandPrefix) and possible workers\n\(Worker.allCases())")
+            signPost.message("💁🏻‍♂️ Starting without arguments.\nYou can provice arguments prefixed with * \(Worker.commandPrefix) and possible workers\n\(Worker.allCases.map { "\n*\($0)" })")
         }
         catch
         {
@@ -46,7 +48,7 @@ class AutomateAppdelegateAppDelegate: NSObject, NSApplicationDelegate
 
         do
         {
-            let srcRoot = try SourceryFolderWorker(bundle: Bundle.main).srcRoot.folder
+            let srcRoot = try ProjectFolderWorker(bundle: Bundle.main).srcRoot.folder
 
             // Get content of the .p8 file
             let p8 = try srcRoot.file(named: "/Sources/AutomateHighway/AuthKey_VV7NT37UVU.p8")
@@ -71,18 +73,46 @@ class AutomateAppdelegateAppDelegate: NSObject, NSApplicationDelegate
         // 3. Find worker for the task
 
         try argumentsWorker.workers.forEach
-        {
-            switch $0 {
+        { command in
+            switch command {
             // 4. execute the task as if button was pressed
             case .sourcery:
-                let worker = try AutomateHighwaySourceryWorker(sourceryFolderWorkerType: SourceryFolderWorker.self)
-                _ = try worker.attempt()
-                signPost.success("💁🏻‍♂️ Sourcery finished ✅.")
+                let worker = try AutomateHighwaySourceryWorker(projectFolderWorkerType: ProjectFolderWorker.self)
+                worker.attempt
+                { [weak self] syncOutput in
+                    do
+                    {
+                        _ = try syncOutput()
+                        self?.signPost.success("💁🏻‍♂️ \(command) finished ✅.")
+                        // 5. Terminate After success
+
+                        NSApplication.shared.terminate(self)
+                    }
+                    catch
+                    {
+                        self?.signPost.error("❌ \(command)\n \(error)\n❌")
+                    }
+                }
+            case .swiftformat:
+
+                let worker = try SwiftFormatWorker()
+
+                worker.attempt
+                { [weak self] syncOutput in
+                    do
+                    {
+                        _ = try syncOutput()
+                        self?.signPost.success("💁🏻‍♂️ \(command) finished ✅.")
+                        // 5. Terminate After success
+
+                        NSApplication.shared.terminate(self)
+                    }
+                    catch
+                    {
+                        self?.signPost.error("❌ \(command)\n \(error)\n❌")
+                    }
+                }
             }
         }
-
-        // 5. Terminate After success
-
-        NSApplication.shared.terminate(self)
     }
 }

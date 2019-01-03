@@ -6,6 +6,7 @@
 //
 
 import os
+import ProjectFolderWorker
 import SignPost
 import SourceryAutoProtocols
 import SwiftFormat
@@ -29,16 +30,35 @@ public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
     private let signPost: SignPostProtocol
 
     public init(
-        folderToFormat: FolderProtocol,
-        configFile: FileProtocol,
+        projectFolderWorkerType: ProjectFolderWorkerProtocol.Type = ProjectFolderWorker.self,
         queue: DispatchQueue = DispatchQueue(label: "be.dooz.swiftFormat"),
         signPost: SignPostProtocol = SignPost.shared
-    )
+    ) throws
     {
-        self.folderToFormat = folderToFormat
-        self.configFile = configFile
         self.queue = queue
         self.signPost = signPost
+
+        var folderToFormat: FolderProtocol!
+        var currentFolder: FolderProtocol = FileSystem.shared.currentFolder
+
+        signPost.message("💁🏻‍♂️ swiftformate init ...")
+
+        signPost.message("💁🏻‍♂️ Running in current folder\n\(currentFolder)\n, If this is not the correct folder run AutomateZFile from the folder you want.\n AutomateZFile cannot work for derived data folder.")
+        do
+        {
+            folderToFormat = try currentFolder.subfolder(named: "Sources")
+        }
+        catch
+        {
+            signPost.message("⚠️ Failed to run from current folder at\(FileSystem.shared.currentFolder.path) ⚠️")
+            signPost.message("💁🏻‍♂️ Will try to run from folder defined in Info.plist with key \(ProjectFolderWorker.Key.scrRoot.rawValue) ...")
+
+            currentFolder = try projectFolderWorkerType.init(bundle: Bundle.main).srcRoot.folder
+            folderToFormat = try currentFolder.subfolder(named: "Sources")
+        }
+
+        configFile = try currentFolder.file(named: ".swiftformat.md")
+        self.folderToFormat = folderToFormat
     }
 
     public func attempt(_ async: (@escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void))
@@ -46,6 +66,8 @@ public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
         queue.async
         { [weak self] in
             guard let `self` = self else { return }
+
+            self.signPost.message("💁🏻‍♂️ swiftformat started ...")
 
             CLI.print = { message, type in
                 switch type {

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FD0553A921D1291400E9B0D0 /* TestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0553A721D1291400E9B0D0 /* TestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD0553AE21D12A2C00E9B0D0 /* SourceryFolderWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0553AD21D12A2C00E9B0D0 /* SourceryFolderWorker.swift */; };
 		FD0553E821D136A700E9B0D0 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0553E721D136A700E9B0D0 /* ZFileMock.framework */; };
 		FD0553EA21D136B600E9B0D0 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0553E921D136B600E9B0D0 /* ZFileMock.framework */; };
 		FD0553EC21D136C200E9B0D0 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0553EB21D136C200E9B0D0 /* ZFileMock.framework */; };
@@ -82,6 +81,12 @@
 		FD3F8A8821DDE94100BBDA58 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3F8A6621DDE6B100BBDA58 /* AutoMockable.generated.swift */; };
 		FD3F8AED21DDED2400BBDA58 /* SwiftFormat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8AEC21DDED2400BBDA58 /* SwiftFormat.framework */; };
 		FD3F8C9021DE18B500BBDA58 /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
+		FD3F8D3021DE229A00BBDA58 /* ProjectFolderWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8D2721DE229900BBDA58 /* ProjectFolderWorker.framework */; };
+		FD3F8D3521DE229A00BBDA58 /* ProjectFolderWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3F8D3421DE229A00BBDA58 /* ProjectFolderWorker.swift */; };
+		FD3F8D3721DE229A00BBDA58 /* ProjectFolderWorker_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3F8D2921DE229A00BBDA58 /* ProjectFolderWorker_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD3F8D3E21DE22B500BBDA58 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F42221BEE5340052222C /* ZFile.framework */; };
+		FD3F8D3F21DE22C700BBDA58 /* SourceryFolderWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0553AD21D12A2C00E9B0D0 /* SourceryFolderWorker.swift */; };
+		FD3F8D4A21DE238C00BBDA58 /* ProjectFolderWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8D2721DE229900BBDA58 /* ProjectFolderWorker.framework */; };
 		FD84A7EA21D6C3D50093F2A7 /* JWTTokenWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD84A7E921D6C3C50093F2A7 /* JWTTokenWorker.swift */; };
 		FD84A7EC21D6C4870093F2A7 /* CupertinoJWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD84A7EB21D6C4870093F2A7 /* CupertinoJWT.framework */; };
 		FDAC932A210B595100B0D045 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
@@ -1131,6 +1136,20 @@
 			remoteGlobalIDString = FD1126CB21C77F050072607D;
 			remoteInfo = SignPost;
 		};
+		FD3F8D3121DE229A00BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD3F8D2621DE229900BBDA58;
+			remoteInfo = "ProjectFolderWorker-macOS";
+		};
+		FD3F8D4B21DE23C300BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD3F8D2621DE229900BBDA58;
+			remoteInfo = "ProjectFolderWorker-macOS";
+		};
 		FDB7A8AB21CD58540045DDA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1405,6 +1424,13 @@
 		FD3F8A7421DDE7E700BBDA58 /* SwiftformatWorkerMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftformatWorkerMock.h; sourceTree = "<group>"; };
 		FD3F8A7521DDE7E700BBDA58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD3F8AEC21DDED2400BBDA58 /* SwiftFormat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftFormat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8C9121DE1D2B00BBDA58 /* .swiftformat.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .swiftformat.md; sourceTree = SOURCE_ROOT; };
+		FD3F8D2721DE229900BBDA58 /* ProjectFolderWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProjectFolderWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8D2921DE229A00BBDA58 /* ProjectFolderWorker_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectFolderWorker_macOS.h; sourceTree = "<group>"; };
+		FD3F8D2A21DE229A00BBDA58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD3F8D2F21DE229A00BBDA58 /* ProjectFolderWorkerTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ProjectFolderWorkerTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8D3421DE229A00BBDA58 /* ProjectFolderWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFolderWorker.swift; sourceTree = "<group>"; };
+		FD3F8D3621DE229A00BBDA58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD84A7E921D6C3C50093F2A7 /* JWTTokenWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTTokenWorker.swift; sourceTree = "<group>"; };
 		FD84A7EB21D6C4870093F2A7 /* CupertinoJWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CupertinoJWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDAC932C210B5C4500B0D045 /* ExcecutableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcecutableProtocol.swift; sourceTree = "<group>"; };
@@ -1586,6 +1612,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD3F8D2421DE229900BBDA58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3F8D3E21DE22B500BBDA58 /* ZFile.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3F8D2C21DE229A00BBDA58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3F8D3021DE229A00BBDA58 /* ProjectFolderWorker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDB7A8B621CD5EA10045DDA8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1661,6 +1703,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3F8D4A21DE238C00BBDA58 /* ProjectFolderWorker.framework in Frameworks */,
 				FD1126FA21C781050072607D /* SignPost.framework in Frameworks */,
 				FDC156FA21C535A400E04B44 /* Terminal.framework in Frameworks */,
 			);
@@ -2069,6 +2112,25 @@
 			path = SwiftformatWorkerMock;
 			sourceTree = "<group>";
 		};
+		FD3F8D2821DE229A00BBDA58 /* ProjectFolderWorker */ = {
+			isa = PBXGroup;
+			children = (
+				FD0553AD21D12A2C00E9B0D0 /* SourceryFolderWorker.swift */,
+				FD3F8D2921DE229A00BBDA58 /* ProjectFolderWorker_macOS.h */,
+				FD3F8D2A21DE229A00BBDA58 /* Info.plist */,
+			);
+			path = ProjectFolderWorker;
+			sourceTree = "<group>";
+		};
+		FD3F8D3321DE229A00BBDA58 /* ProjectFolderWorker */ = {
+			isa = PBXGroup;
+			children = (
+				FD3F8D3421DE229A00BBDA58 /* ProjectFolderWorker.swift */,
+				FD3F8D3621DE229A00BBDA58 /* Info.plist */,
+			);
+			path = ProjectFolderWorker;
+			sourceTree = "<group>";
+		};
 		FDB7A93821CD6A780045DDA8 /* Url */ = {
 			isa = PBXGroup;
 			children = (
@@ -2221,7 +2283,6 @@
 		FDC156DC21C5347C00E04B44 /* SourceryWorker */ = {
 			isa = PBXGroup;
 			children = (
-				FD0553AD21D12A2C00E9B0D0 /* SourceryFolderWorker.swift */,
 				FDC156DE21C5347C00E04B44 /* Info.plist */,
 				FDC156F421C5355400E04B44 /* Sourcery.swift */,
 				FD3E94CE21C8117B00EA791C /* TemplatePrepend.swift */,
@@ -2361,6 +2422,7 @@
 		OBJ_151 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				FD3F8D3321DE229A00BBDA58 /* ProjectFolderWorker */,
 				FDB7A98421CD6B5D0045DDA8 /* ArgumentsMock */,
 				OBJ_168 /* ArgumentsTests */,
 				OBJ_188 /* DeliverTests */,
@@ -2509,6 +2571,8 @@
 				FD3F8A1121DDE43A00BBDA58 /* SwiftFormatWorker.framework */,
 				FD3F8A1921DDE43A00BBDA58 /* SwiftformatWorkerTests.xctest */,
 				FD3F8A7221DDE7E700BBDA58 /* SwiftFormatWorkerMock.framework */,
+				FD3F8D2721DE229900BBDA58 /* ProjectFolderWorker.framework */,
+				FD3F8D2F21DE229A00BBDA58 /* ProjectFolderWorkerTests-macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -2554,6 +2618,8 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				FD3F8D2821DE229A00BBDA58 /* ProjectFolderWorker */,
+				FD3F8C9121DE1D2B00BBDA58 /* .swiftformat.md */,
 				OBJ_83 /* Arguments */,
 				FDEC11E021C679B600CB7DAD /* AutoGeneratedCode */,
 				OBJ_103 /* Deliver */,
@@ -2650,6 +2716,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD3F8A7621DDE7E700BBDA58 /* SwiftformatWorkerMock.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3F8D2221DE229900BBDA58 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3F8D3721DE229A00BBDA58 /* ProjectFolderWorker_macOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2814,6 +2888,42 @@
 			productReference = FD3F8A7221DDE7E700BBDA58 /* SwiftFormatWorkerMock.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		FD3F8D2621DE229900BBDA58 /* ProjectFolderWorker-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD3F8D3821DE229A00BBDA58 /* Build configuration list for PBXNativeTarget "ProjectFolderWorker-macOS" */;
+			buildPhases = (
+				FD3F8D2221DE229900BBDA58 /* Headers */,
+				FD3F8D2321DE229900BBDA58 /* Sources */,
+				FD3F8D2421DE229900BBDA58 /* Frameworks */,
+				FD3F8D2521DE229900BBDA58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ProjectFolderWorker-macOS";
+			productName = "ProjectFolderWorker-macOS";
+			productReference = FD3F8D2721DE229900BBDA58 /* ProjectFolderWorker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FD3F8D2E21DE229A00BBDA58 /* ProjectFolderWorkerTests-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD3F8D3B21DE229A00BBDA58 /* Build configuration list for PBXNativeTarget "ProjectFolderWorkerTests-macOS" */;
+			buildPhases = (
+				FD3F8D2B21DE229A00BBDA58 /* Sources */,
+				FD3F8D2C21DE229A00BBDA58 /* Frameworks */,
+				FD3F8D2D21DE229A00BBDA58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD3F8D3221DE229A00BBDA58 /* PBXTargetDependency */,
+			);
+			name = "ProjectFolderWorkerTests-macOS";
+			productName = "ProjectFolderWorker-macOSTests";
+			productReference = FD3F8D2F21DE229A00BBDA58 /* ProjectFolderWorkerTests-macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FDB7A8B821CD5EA10045DDA8 /* TestKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDB7A8C021CD5EA10045DDA8 /* Build configuration list for PBXNativeTarget "TestKit" */;
@@ -2956,6 +3066,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD3F8D4C21DE23C300BBDA58 /* PBXTargetDependency */,
 				FD1126F921C780FD0072607D /* PBXTargetDependency */,
 				FDC156F921C5359C00E04B44 /* PBXTargetDependency */,
 			);
@@ -3490,6 +3601,14 @@
 						CreatedOnToolsVersion = 10.1;
 						ProvisioningStyle = Manual;
 					};
+					FD3F8D2621DE229900BBDA58 = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Manual;
+					};
+					FD3F8D2E21DE229A00BBDA58 = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+					};
 					FDB7A8B821CD5EA10045DDA8 = {
 						CreatedOnToolsVersion = 10.1;
 						DevelopmentTeam = WWFDRU947Q;
@@ -3664,6 +3783,7 @@
 				"highway::Git" /* Git */,
 				"highway::Keychain" /* Keychain */,
 				"highway::POSIX" /* POSIX */,
+				FD3F8D2621DE229900BBDA58 /* ProjectFolderWorker-macOS */,
 				FD1126CB21C77F050072607D /* SignPost */,
 				FDB7A9C621CD6F7F0045DDA8 /* SignPostMock */,
 				FDB7A9FB21CD7E8C0045DDA8 /* TaskMock */,
@@ -3692,6 +3812,7 @@
 				"highway::TerminalTests" /* TerminalTests */,
 				"highway::UrlTests" /* UrlTests */,
 				"highway::XCBuildTests" /* XCBuildTests */,
+				FD3F8D2E21DE229A00BBDA58 /* ProjectFolderWorkerTests-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -3726,6 +3847,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FD3F8A7021DDE7E700BBDA58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3F8D2521DE229900BBDA58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3F8D2D21DE229A00BBDA58 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3870,6 +4005,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD3F8D2321DE229900BBDA58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3F8D3F21DE22C700BBDA58 /* SourceryFolderWorker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3F8D2B21DE229A00BBDA58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3F8D3521DE229A00BBDA58 /* ProjectFolderWorker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDB7A8B521CD5EA10045DDA8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3925,7 +4076,6 @@
 				FD1126C621C7756A0072607D /* SourceryExecutableFile.swift in Sources */,
 				FDC156F721C5355400E04B44 /* Sourcery.swift in Sources */,
 				FDC156F621C5355400E04B44 /* SourceryWorker.swift in Sources */,
-				FD0553AE21D12A2C00E9B0D0 /* SourceryFolderWorker.swift in Sources */,
 				FD3E94CF21C8117B00EA791C /* TemplatePrepend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4201,6 +4351,16 @@
 			isa = PBXTargetDependency;
 			target = FD1126CB21C77F050072607D /* SignPost */;
 			targetProxy = FD3F8C8E21DE18AA00BBDA58 /* PBXContainerItemProxy */;
+		};
+		FD3F8D3221DE229A00BBDA58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD3F8D2621DE229900BBDA58 /* ProjectFolderWorker-macOS */;
+			targetProxy = FD3F8D3121DE229A00BBDA58 /* PBXContainerItemProxy */;
+		};
+		FD3F8D4C21DE23C300BBDA58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD3F8D2621DE229900BBDA58 /* ProjectFolderWorker-macOS */;
+			targetProxy = FD3F8D4B21DE23C300BBDA58 /* PBXContainerItemProxy */;
 		};
 		FDB7A8AC21CD58540045DDA8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -5308,6 +5468,164 @@
 				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FD3F8D3921DE229A00BBDA58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Sources/ProjectFolderWorker/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "be.dooz.ProjectFolderWorker-macOS";
+				PRODUCT_NAME = ProjectFolderWorker;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FD3F8D3A21DE229A00BBDA58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Sources/ProjectFolderWorker/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "be.dooz.ProjectFolderWorker-macOS";
+				PRODUCT_NAME = ProjectFolderWorker;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FD3F8D3C21DE229A00BBDA58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Tests/ProjectFolderWorker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "be.dooz.ProjectFolderWorker-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		FD3F8D3D21DE229A00BBDA58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Tests/ProjectFolderWorker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "be.dooz.ProjectFolderWorker-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -7051,6 +7369,24 @@
 			buildConfigurations = (
 				FD3F8A7821DDE7E700BBDA58 /* Debug */,
 				FD3F8A7921DDE7E700BBDA58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD3F8D3821DE229A00BBDA58 /* Build configuration list for PBXNativeTarget "ProjectFolderWorker-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD3F8D3921DE229A00BBDA58 /* Debug */,
+				FD3F8D3A21DE229A00BBDA58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD3F8D3B21DE229A00BBDA58 /* Build configuration list for PBXNativeTarget "ProjectFolderWorkerTests-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD3F8D3C21DE229A00BBDA58 /* Debug */,
+				FD3F8D3D21DE229A00BBDA58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
