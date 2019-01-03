@@ -34,6 +34,10 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
 {
     public typealias SyncOutput = () throws -> [String]
 
+    public let queue: DispatchQueue
+
+    // MARK: - Private
+    
     private let sourcery: SourceryProtocol
     private let signPost: SignPostProtocol
     private let terminalWorker: TerminalWorkerProtocol
@@ -43,8 +47,6 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
     private let protocolGeneratableInline = "// sourcery:inline:"
     private let protocolGeneratalbeEnd = "// sourcery:end"
 
-    private let queue: DispatchQueue
-
     private let swiftFormatWorker: SwiftFormatWorkerProtocol?
 
     struct Error: Swift.Error
@@ -53,6 +55,7 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
     }
 
     /// Optionaly add swiftFormateWorker to run SwiftFormat when done generating code. If you add non swiftformat will not run on generated code.
+    /// ⚠️ If you run multiple SourceryWorkers make sure to use the same queue for SwiftFormatWorker and SourceryWorker
     public init(
         sourcery: SourceryProtocol,
         swiftFormatWorker: SwiftFormatWorkerProtocol? = nil,
