@@ -77,7 +77,9 @@ class AutomateAppdelegate: NSObject, NSApplicationDelegate
             switch command {
             // 4. execute the task as if button was pressed
             case .sourcery:
-                let worker = try AutomateHighwaySourceryWorker(projectFolderWorkerType: ProjectFolderWorker.self)
+                let worker = try AutomateHighwaySourceryWorker(
+                    projectFolderWorkerType: ProjectFolderWorker.self
+                )
                 worker.attempt
                 { [weak self] syncOutput in
                     do
@@ -95,7 +97,7 @@ class AutomateAppdelegate: NSObject, NSApplicationDelegate
                 }
             case .swiftformat:
 
-                let worker = try SwiftFormatWorker()
+                let worker = try SwiftFormatWorker(forSources: ProjectFolderWorker.self)
 
                 worker.attempt
                 { [weak self] syncOutput in

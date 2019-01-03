@@ -58,7 +58,7 @@ class AutomateHighwayViewController: NSViewController
         {
             if swiftFormatWorker == nil
             {
-                swiftFormatWorker = try SwiftFormatWorker()
+                swiftFormatWorker = try SwiftFormatWorker(forSources: ProjectFolderWorker.self)
             }
 
             swiftFormatWorker!.attempt
