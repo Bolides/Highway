@@ -18,3 +18,5 @@
 	url = https://github.com/doozMen/CryptoSwift.git
 [submodule "Carthage/Checkouts/CupertinoJWT"]
 	url = https://github.com/doozMen/CupertinoJWT.git
+[submodule "Carthage/Checkouts/SwiftFormat"]
+	url = https://github.com/nicklockwood/SwiftFormat.git
