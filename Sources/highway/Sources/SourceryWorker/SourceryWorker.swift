@@ -37,7 +37,7 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
     public let queue: DispatchQueue
 
     // MARK: - Private
-    
+
     private let sourcery: SourceryProtocol
     private let signPost: SignPostProtocol
     private let terminalWorker: TerminalWorkerProtocol
