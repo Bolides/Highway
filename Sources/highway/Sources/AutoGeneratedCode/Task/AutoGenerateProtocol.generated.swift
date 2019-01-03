@@ -17,3 +17,12 @@ import Foundation
 
 
 
+
+// Generated protocol inline for LocalSystem -> See code in the file of that type
+
+// Generated protocol inline for SystemExecutableProvider -> See code in the file of that type
+
+// Generated protocol inline for SystemExecutor -> See code in the file of that type
+
+// Generated protocol inline for Task -> See code in the file of that type
+

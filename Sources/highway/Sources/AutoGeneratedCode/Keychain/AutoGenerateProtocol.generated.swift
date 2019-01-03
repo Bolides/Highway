@@ -14,3 +14,9 @@ import Foundation
 //: - of the above it does not add it if  // sourcery:skipProtocol
 //: ---
 
+
+
+
+
+// Generated protocol inline for Keychain -> See code in the file of that type
+

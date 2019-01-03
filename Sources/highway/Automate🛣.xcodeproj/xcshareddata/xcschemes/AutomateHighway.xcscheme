@@ -188,6 +188,20 @@
                ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FD3F8A1821DDE43A00BBDA58"
+               BuildableName = "SwiftformatWorkerTests.xctest"
+               BlueprintName = "SwiftformatWorkerTests"
+               ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -313,6 +327,16 @@
                BlueprintIdentifier = "highway::XCBuildTests"
                BuildableName = "XCBuildTests.xctest"
                BlueprintName = "XCBuildTests"
+               ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FD3F8A1821DDE43A00BBDA58"
+               BuildableName = "SwiftformatWorkerTests.xctest"
+               BlueprintName = "SwiftformatWorkerTests"
                ReferencedContainer = "container:&#x1f6e3;.xcodeproj">
             </BuildableReference>
          </TestableReference>

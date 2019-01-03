@@ -68,6 +68,18 @@
 		FD34F43021BEE9EB0052222C /* CatExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34F42D21BEE9EB0052222C /* CatExecutable.swift */; };
 		FD34F43121BEE9EB0052222C /* GitExecutables.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34F42E21BEE9EB0052222C /* GitExecutables.swift */; };
 		FD3E94CF21C8117B00EA791C /* TemplatePrepend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3E94CE21C8117B00EA791C /* TemplatePrepend.swift */; };
+		FD3F8A1A21DDE43A00BBDA58 /* SwiftformatWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A1121DDE43A00BBDA58 /* SwiftformatWorker.framework */; };
+		FD3F8A1F21DDE43A00BBDA58 /* SwiftformatWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3F8A1E21DDE43A00BBDA58 /* SwiftformatWorkerTests.swift */; };
+		FD3F8A2121DDE43A00BBDA58 /* SwiftformatWorker.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3F8A1321DDE43A00BBDA58 /* SwiftformatWorker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD3F8A6121DDE4C500BBDA58 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A6021DDE4C500BBDA58 /* Quick.framework */; };
+		FD3F8A6321DDE4CB00BBDA58 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A6221DDE4CB00BBDA58 /* Nimble.framework */; };
+		FD3F8A6C21DDE73B00BBDA58 /* SwiftFormatWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3F8A6B21DDE73B00BBDA58 /* SwiftFormatWorker.swift */; };
+		FD3F8A7621DDE7E700BBDA58 /* SwiftformatWorkerMock.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3F8A7421DDE7E700BBDA58 /* SwiftformatWorkerMock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD3F8A7C21DDE80200BBDA58 /* SwiftformatWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A1121DDE43A00BBDA58 /* SwiftformatWorker.framework */; };
+		FD3F8A8021DDE85700BBDA58 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
+		FD3F8A8121DDE85D00BBDA58 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F42221BEE5340052222C /* ZFile.framework */; };
+		FD3F8A8221DDE86600BBDA58 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0553E721D136A700E9B0D0 /* ZFileMock.framework */; };
+		FD3F8A8821DDE94100BBDA58 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3F8A6621DDE6B100BBDA58 /* AutoMockable.generated.swift */; };
 		FD84A7EA21D6C3D50093F2A7 /* JWTTokenWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD84A7E921D6C3C50093F2A7 /* JWTTokenWorker.swift */; };
 		FD84A7EC21D6C4870093F2A7 /* CupertinoJWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD84A7EB21D6C4870093F2A7 /* CupertinoJWT.framework */; };
 		FDAC932A210B595100B0D045 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
@@ -1089,6 +1101,27 @@
 			remoteGlobalIDString = "highway::SourceryAutoProtocols";
 			remoteInfo = SourceryAutoProtocols;
 		};
+		FD3F8A1B21DDE43A00BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD3F8A1021DDE43A00BBDA58;
+			remoteInfo = SwiftformatWorker;
+		};
+		FD3F8A7A21DDE7F900BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD3F8A1021DDE43A00BBDA58;
+			remoteInfo = SwiftformatWorker;
+		};
+		FD3F8A7E21DDE84E00BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::SourceryAutoProtocols";
+			remoteInfo = "SourceryAutoProtocols-macos";
+		};
 		FDB7A8AB21CD58540045DDA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1348,6 +1381,20 @@
 		FD34F42D21BEE9EB0052222C /* CatExecutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatExecutable.swift; sourceTree = "<group>"; };
 		FD34F42E21BEE9EB0052222C /* GitExecutables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitExecutables.swift; sourceTree = "<group>"; };
 		FD3E94CE21C8117B00EA791C /* TemplatePrepend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatePrepend.swift; sourceTree = "<group>"; };
+		FD3F8A1121DDE43A00BBDA58 /* SwiftformatWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftformatWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8A1321DDE43A00BBDA58 /* SwiftformatWorker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftformatWorker.h; sourceTree = "<group>"; };
+		FD3F8A1421DDE43A00BBDA58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD3F8A1921DDE43A00BBDA58 /* SwiftformatWorkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftformatWorkerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8A1E21DDE43A00BBDA58 /* SwiftformatWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftformatWorkerTests.swift; sourceTree = "<group>"; };
+		FD3F8A2021DDE43A00BBDA58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD3F8A6021DDE4C500BBDA58 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8A6221DDE4CB00BBDA58 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8A6521DDE6B100BBDA58 /* AutoGenerateProtocol.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoGenerateProtocol.generated.swift; sourceTree = "<group>"; };
+		FD3F8A6621DDE6B100BBDA58 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		FD3F8A6B21DDE73B00BBDA58 /* SwiftFormatWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFormatWorker.swift; sourceTree = "<group>"; };
+		FD3F8A7221DDE7E700BBDA58 /* SwiftformatWorkerMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftformatWorkerMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8A7421DDE7E700BBDA58 /* SwiftformatWorkerMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftformatWorkerMock.h; sourceTree = "<group>"; };
+		FD3F8A7521DDE7E700BBDA58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD84A7E921D6C3C50093F2A7 /* JWTTokenWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTTokenWorker.swift; sourceTree = "<group>"; };
 		FD84A7EB21D6C4870093F2A7 /* CupertinoJWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CupertinoJWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDAC932C210B5C4500B0D045 /* ExcecutableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcecutableProtocol.swift; sourceTree = "<group>"; };
@@ -1395,9 +1442,6 @@
 		FDC156F421C5355400E04B44 /* Sourcery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sourcery.swift; sourceTree = "<group>"; };
 		FDC1571421C5485900E04B44 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		FDE9B6F721C58ED400D1F50A /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDEC11E121C679B600CB7DAD /* DecoderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderMock.swift; sourceTree = "<group>"; };
-		FDEC11E221C679B600CB7DAD /* AutoGenerateProtocol.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoGenerateProtocol.generated.swift; sourceTree = "<group>"; };
-		FDEC11E321C679B600CB7DAD /* AutoMockable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryAutoProtocols.swift; sourceTree = "<group>"; };
 		FDEC11EB21C67ACE00CB7DAD /* SignPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignPost.swift; sourceTree = "<group>"; };
 		FDEC11F221C67EAD00CB7DAD /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
@@ -1499,6 +1543,34 @@
 				FDB7A9D421CD704F0045DDA8 /* Quick.framework in Frameworks */,
 				FD1126D521C77F050072607D /* SignPost.framework in Frameworks */,
 				FDB7A9D121CD70020045DDA8 /* SignPostMock.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3F8A0E21DDE43A00BBDA58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3F8A1621DDE43A00BBDA58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3F8A6321DDE4CB00BBDA58 /* Nimble.framework in Frameworks */,
+				FD3F8A6121DDE4C500BBDA58 /* Quick.framework in Frameworks */,
+				FD3F8A1A21DDE43A00BBDA58 /* SwiftformatWorker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3F8A6F21DDE7E700BBDA58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3F8A8021DDE85700BBDA58 /* SourceryAutoProtocols.framework in Frameworks */,
+				FD3F8A8121DDE85D00BBDA58 /* ZFile.framework in Frameworks */,
+				FD3F8A8221DDE86600BBDA58 /* ZFileMock.framework in Frameworks */,
+				FD3F8A7C21DDE80200BBDA58 /* SwiftformatWorker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1932,6 +2004,8 @@
 		FD326D9E210A0F5F00AE3A98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD3F8A6221DDE4CB00BBDA58 /* Nimble.framework */,
+				FD3F8A6021DDE4C500BBDA58 /* Quick.framework */,
 				FD84A7EB21D6C4870093F2A7 /* CupertinoJWT.framework */,
 				FD0553ED21D136CB00E9B0D0 /* ZFileMock.framework */,
 				FD0553EB21D136C200E9B0D0 /* ZFileMock.framework */,
@@ -1943,6 +2017,43 @@
 				FD34F42221BEE5340052222C /* ZFile.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD3F8A1221DDE43A00BBDA58 /* SwiftformatWorker */ = {
+			isa = PBXGroup;
+			children = (
+				FD3F8A1321DDE43A00BBDA58 /* SwiftformatWorker.h */,
+				FD3F8A6B21DDE73B00BBDA58 /* SwiftFormatWorker.swift */,
+				FD3F8A1421DDE43A00BBDA58 /* Info.plist */,
+			);
+			path = SwiftformatWorker;
+			sourceTree = "<group>";
+		};
+		FD3F8A1D21DDE43A00BBDA58 /* SwiftformatWorkerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD3F8A1E21DDE43A00BBDA58 /* SwiftformatWorkerTests.swift */,
+				FD3F8A2021DDE43A00BBDA58 /* Info.plist */,
+			);
+			path = SwiftformatWorkerTests;
+			sourceTree = "<group>";
+		};
+		FD3F8A6421DDE6B100BBDA58 /* SwiftformatWorker */ = {
+			isa = PBXGroup;
+			children = (
+				FD3F8A6521DDE6B100BBDA58 /* AutoGenerateProtocol.generated.swift */,
+				FD3F8A6621DDE6B100BBDA58 /* AutoMockable.generated.swift */,
+			);
+			path = SwiftformatWorker;
+			sourceTree = "<group>";
+		};
+		FD3F8A7321DDE7E700BBDA58 /* SwiftformatWorkerMock */ = {
+			isa = PBXGroup;
+			children = (
+				FD3F8A7421DDE7E700BBDA58 /* SwiftformatWorkerMock.h */,
+				FD3F8A7521DDE7E700BBDA58 /* Info.plist */,
+			);
+			path = SwiftformatWorkerMock;
 			sourceTree = "<group>";
 		};
 		FDB7A93821CD6A780045DDA8 /* Url */ = {
@@ -2139,13 +2250,11 @@
 				FDB7A95921CD6A790045DDA8 /* Result */,
 				FDB7A93B21CD6A780045DDA8 /* SignPost */,
 				FDB7A94121CD6A780045DDA8 /* SourceryWorker */,
+				FD3F8A6421DDE6B100BBDA58 /* SwiftformatWorker */,
 				FDB7A93E21CD6A780045DDA8 /* Task */,
 				FDB7A94A21CD6A790045DDA8 /* Terminal */,
 				FDB7A93821CD6A780045DDA8 /* Url */,
 				FDB7A95C21CD6A790045DDA8 /* XCBuild */,
-				FDEC11E121C679B600CB7DAD /* DecoderMock.swift */,
-				FDEC11E221C679B600CB7DAD /* AutoGenerateProtocol.generated.swift */,
-				FDEC11E321C679B600CB7DAD /* AutoMockable.generated.swift */,
 			);
 			path = AutoGeneratedCode;
 			sourceTree = "<group>";
@@ -2239,6 +2348,7 @@
 		OBJ_151 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				FD3F8A1D21DDE43A00BBDA58 /* SwiftformatWorkerTests */,
 				FDB7AA0E21CD81DC0045DDA8 /* SourceryWorkerMock */,
 				FDB7A98421CD6B5D0045DDA8 /* ArgumentsMock */,
 				OBJ_168 /* ArgumentsTests */,
@@ -2383,6 +2493,9 @@
 				FDB7A9E221CD736C0045DDA8 /* TerminalMock.framework */,
 				FDB7A9FC21CD7E8C0045DDA8 /* TaskMock.framework */,
 				FDB7AA0D21CD81DC0045DDA8 /* SourceryWorkerMock.framework */,
+				FD3F8A1121DDE43A00BBDA58 /* SwiftformatWorker.framework */,
+				FD3F8A1921DDE43A00BBDA58 /* SwiftformatWorkerTests.xctest */,
+				FD3F8A7221DDE7E700BBDA58 /* SwiftformatWorkerMock.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -2401,6 +2514,7 @@
 			isa = PBXGroup;
 			children = (
 				FDC1571421C5485900E04B44 /* README.md */,
+				FD3F8A7321DDE7E700BBDA58 /* SwiftformatWorkerMock */,
 				FD326D9E210A0F5F00AE3A98 /* Frameworks */,
 				OBJ_194 /* Products */,
 				OBJ_7 /* Sources */,
@@ -2428,6 +2542,7 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				FD3F8A1221DDE43A00BBDA58 /* SwiftformatWorker */,
 				FDE0B76421D7BF960093CBCB /* SourceryAutoProtocols */,
 				FD0553A621D1291400E9B0D0 /* TestKit */,
 				OBJ_83 /* Arguments */,
@@ -2506,6 +2621,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD1126DE21C77F060072607D /* SignPost.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3F8A0C21DDE43A00BBDA58 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3F8A2121DDE43A00BBDA58 /* SwiftformatWorker.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3F8A6D21DDE7E700BBDA58 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3F8A7621DDE7E700BBDA58 /* SwiftformatWorkerMock.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2612,6 +2743,62 @@
 			productName = SignPostTests;
 			productReference = FD1126D421C77F050072607D /* SignPostTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FD3F8A1021DDE43A00BBDA58 /* SwiftformatWorker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD3F8A2621DDE43A00BBDA58 /* Build configuration list for PBXNativeTarget "SwiftformatWorker" */;
+			buildPhases = (
+				FD3F8A0C21DDE43A00BBDA58 /* Headers */,
+				FD3F8A0D21DDE43A00BBDA58 /* Sources */,
+				FD3F8A0E21DDE43A00BBDA58 /* Frameworks */,
+				FD3F8A0F21DDE43A00BBDA58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftformatWorker;
+			productName = SwiftformatWorker;
+			productReference = FD3F8A1121DDE43A00BBDA58 /* SwiftformatWorker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FD3F8A1821DDE43A00BBDA58 /* SwiftformatWorkerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD3F8A2721DDE43A00BBDA58 /* Build configuration list for PBXNativeTarget "SwiftformatWorkerTests" */;
+			buildPhases = (
+				FD3F8A1521DDE43A00BBDA58 /* Sources */,
+				FD3F8A1621DDE43A00BBDA58 /* Frameworks */,
+				FD3F8A1721DDE43A00BBDA58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD3F8A1C21DDE43A00BBDA58 /* PBXTargetDependency */,
+			);
+			name = SwiftformatWorkerTests;
+			productName = SwiftformatWorkerTests;
+			productReference = FD3F8A1921DDE43A00BBDA58 /* SwiftformatWorkerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FD3F8A7121DDE7E700BBDA58 /* SwiftformatWorkerMock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD3F8A7721DDE7E700BBDA58 /* Build configuration list for PBXNativeTarget "SwiftformatWorkerMock" */;
+			buildPhases = (
+				FD3F8A6D21DDE7E700BBDA58 /* Headers */,
+				FD3F8A6E21DDE7E700BBDA58 /* Sources */,
+				FD3F8A6F21DDE7E700BBDA58 /* Frameworks */,
+				FD3F8A7021DDE7E700BBDA58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD3F8A7F21DDE84E00BBDA58 /* PBXTargetDependency */,
+				FD3F8A7B21DDE7F900BBDA58 /* PBXTargetDependency */,
+			);
+			name = SwiftformatWorkerMock;
+			productName = SwiftformatWorkerMock;
+			productReference = FD3F8A7221DDE7E700BBDA58 /* SwiftformatWorkerMock.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		FDB7A8B821CD5EA10045DDA8 /* TestKit */ = {
 			isa = PBXNativeTarget;
@@ -3276,6 +3463,19 @@
 						ProvisioningStyle = Manual;
 						TestTargetID = FDEC118621C65D9200CB7DAD;
 					};
+					FD3F8A1021DDE43A00BBDA58 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Manual;
+					};
+					FD3F8A1821DDE43A00BBDA58 = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+					};
+					FD3F8A7121DDE7E700BBDA58 = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Manual;
+					};
 					FDB7A8B821CD5EA10045DDA8 = {
 						CreatedOnToolsVersion = 10.1;
 						DevelopmentTeam = WWFDRU947Q;
@@ -3445,36 +3645,39 @@
 			targets = (
 				"highway::Arguments" /* Arguments */,
 				FDB7A98221CD6B5D0045DDA8 /* ArgumentsMock */,
+				"highway::Deliver" /* Deliver */,
+				"highway::Errors" /* Errors */,
+				"highway::Git" /* Git */,
+				"highway::Keychain" /* Keychain */,
+				"highway::POSIX" /* POSIX */,
 				FD1126CB21C77F050072607D /* SignPost */,
 				FDB7A9C621CD6F7F0045DDA8 /* SignPostMock */,
-				"highway::Terminal" /* Terminal */,
-				FDB7A9E121CD736C0045DDA8 /* TerminalMock */,
-				"highway::Task" /* Task */,
 				FDB7A9FB21CD7E8C0045DDA8 /* TaskMock */,
+				"highway::Result" /* Result */,
 				"highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */,
 				FDE9B6F621C58ED400D1F50A /* SourceryAutoProtocols-ios */,
 				FDC156DA21C5347C00E04B44 /* SourceryWorker */,
 				FDB7AA0C21CD81DC0045DDA8 /* SourceryWorkerMock */,
-				"highway::POSIX" /* POSIX */,
-				"highway::Errors" /* Errors */,
-				"highway::XCBuild" /* XCBuild */,
-				"highway::Url" /* Url */,
-				"highway::Deliver" /* Deliver */,
-				"highway::Keychain" /* Keychain */,
-				"highway::Result" /* Result */,
+				FD3F8A1021DDE43A00BBDA58 /* SwiftformatWorker */,
+				FD3F8A7121DDE7E700BBDA58 /* SwiftformatWorkerMock */,
+				"highway::Task" /* Task */,
+				FDB7A9E121CD736C0045DDA8 /* TerminalMock */,
 				FDB7A8B821CD5EA10045DDA8 /* TestKit */,
-				"highway::Git" /* Git */,
+				"highway::Terminal" /* Terminal */,
+				"highway::Url" /* Url */,
+				"highway::XCBuild" /* XCBuild */,
 				"highway::ArgumentsTests" /* ArgumentsTests */,
 				"highway::DeliverTests" /* DeliverTests */,
 				"highway::GitTests" /* GitTests */,
 				"highway::POSIXTests" /* POSIXTests */,
 				"highway::ResultTests" /* ResultTests */,
+				FD3F8A1821DDE43A00BBDA58 /* SwiftformatWorkerTests */,
+				FD1126D321C77F050072607D /* SignPostTests */,
+				FDC156E221C5347D00E04B44 /* SourceryWorkerTests */,
 				"highway::TaskTests" /* TaskTests */,
 				"highway::TerminalTests" /* TerminalTests */,
 				"highway::UrlTests" /* UrlTests */,
 				"highway::XCBuildTests" /* XCBuildTests */,
-				FDC156E221C5347D00E04B44 /* SourceryWorkerTests */,
-				FD1126D321C77F050072607D /* SignPostTests */,
 			);
 		};
 /* End PBXProject section */
@@ -3488,6 +3691,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FD1126D221C77F050072607D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3F8A0F21DDE43A00BBDA58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3F8A1721DDE43A00BBDA58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3F8A7021DDE7E700BBDA58 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3605,6 +3829,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD1126DC21C77F060072607D /* SignPostTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3F8A0D21DDE43A00BBDA58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3F8A6C21DDE73B00BBDA58 /* SwiftFormatWorker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3F8A1521DDE43A00BBDA58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3F8A1F21DDE43A00BBDA58 /* SwiftformatWorkerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3F8A6E21DDE7E700BBDA58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3F8A8821DDE94100BBDA58 /* AutoMockable.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3919,6 +4167,21 @@
 			isa = PBXTargetDependency;
 			target = FD1126CB21C77F050072607D /* SignPost */;
 			targetProxy = FD1126FB21C7830B0072607D /* PBXContainerItemProxy */;
+		};
+		FD3F8A1C21DDE43A00BBDA58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD3F8A1021DDE43A00BBDA58 /* SwiftformatWorker */;
+			targetProxy = FD3F8A1B21DDE43A00BBDA58 /* PBXContainerItemProxy */;
+		};
+		FD3F8A7B21DDE7F900BBDA58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD3F8A1021DDE43A00BBDA58 /* SwiftformatWorker */;
+			targetProxy = FD3F8A7A21DDE7F900BBDA58 /* PBXContainerItemProxy */;
+		};
+		FD3F8A7F21DDE84E00BBDA58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
+			targetProxy = FD3F8A7E21DDE84E00BBDA58 /* PBXContainerItemProxy */;
 		};
 		FDB7A8AC21CD58540045DDA8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4785,6 +5048,247 @@
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SignPostTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		FD3F8A2221DDE43A00BBDA58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Sources/$(PRODUCT_NAME)/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SwiftformatWorker;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FD3F8A2321DDE43A00BBDA58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Sources/$(PRODUCT_NAME)/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SwiftformatWorker;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FD3F8A2421DDE43A00BBDA58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Tests/$(PRODUCT_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SwiftformatWorkerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		FD3F8A2521DDE43A00BBDA58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Tests/$(PRODUCT_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SwiftformatWorkerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		FD3F8A7821DDE7E700BBDA58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = SwiftformatWorkerMock/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SwiftformatWorkerMock;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FD3F8A7921DDE7E700BBDA58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = SwiftformatWorkerMock/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SwiftformatWorkerMock;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -6501,6 +7005,33 @@
 			buildConfigurations = (
 				FD1126E721C77F060072607D /* Debug */,
 				FD1126E821C77F060072607D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD3F8A2621DDE43A00BBDA58 /* Build configuration list for PBXNativeTarget "SwiftformatWorker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD3F8A2221DDE43A00BBDA58 /* Debug */,
+				FD3F8A2321DDE43A00BBDA58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD3F8A2721DDE43A00BBDA58 /* Build configuration list for PBXNativeTarget "SwiftformatWorkerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD3F8A2421DDE43A00BBDA58 /* Debug */,
+				FD3F8A2521DDE43A00BBDA58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD3F8A7721DDE7E700BBDA58 /* Build configuration list for PBXNativeTarget "SwiftformatWorkerMock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD3F8A7821DDE7E700BBDA58 /* Debug */,
+				FD3F8A7921DDE7E700BBDA58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

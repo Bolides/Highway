@@ -45,6 +45,7 @@ public struct AutomateHighwaySourceryWorker: DemoSourceryWorkerProtocol, AutoGen
         case POSIX
         case Result
         case Task
+        case SwiftformatWorker
         
         func imports() -> Set<TemplatePrepend> {
             

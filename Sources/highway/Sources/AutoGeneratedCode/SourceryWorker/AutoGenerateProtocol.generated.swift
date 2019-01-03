@@ -18,4 +18,15 @@ import Foundation
 
 
 
+// Generated protocol inline for Sourcery -> See code in the file of that type
+
+// Generated protocol inline for SourceryExecutableFile -> See code in the file of that type
+
+// Generated protocol inline for SourceryFolderWorker -> See code in the file of that type
+
+// Generated protocol inline for SourceryWorker -> See code in the file of that type
+
+// Generated protocol inline for TemplatePrepend -> See code in the file of that type
+
+// Generated protocol inline for TemplatePrepend.Import -> See code in the file of that type
 
