@@ -87,6 +87,8 @@
 		FD3F8D3E21DE22B500BBDA58 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F42221BEE5340052222C /* ZFile.framework */; };
 		FD3F8D3F21DE22C700BBDA58 /* SourceryFolderWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0553AD21D12A2C00E9B0D0 /* SourceryFolderWorker.swift */; };
 		FD3F8D4A21DE238C00BBDA58 /* ProjectFolderWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8D2721DE229900BBDA58 /* ProjectFolderWorker.framework */; };
+		FD3F8DA921DE585500BBDA58 /* ProjectFolderWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8D2721DE229900BBDA58 /* ProjectFolderWorker.framework */; };
+		FD3F8DC521DE5A3F00BBDA58 /* SwiftFormatWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A1121DDE43A00BBDA58 /* SwiftFormatWorker.framework */; };
 		FD84A7EA21D6C3D50093F2A7 /* JWTTokenWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD84A7E921D6C3C50093F2A7 /* JWTTokenWorker.swift */; };
 		FD84A7EC21D6C4870093F2A7 /* CupertinoJWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD84A7EB21D6C4870093F2A7 /* CupertinoJWT.framework */; };
 		FDAC932A210B595100B0D045 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
@@ -1150,6 +1152,20 @@
 			remoteGlobalIDString = FD3F8D2621DE229900BBDA58;
 			remoteInfo = "ProjectFolderWorker-macOS";
 		};
+		FD3F8DA721DE584D00BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD3F8D2621DE229900BBDA58;
+			remoteInfo = "ProjectFolderWorker-macOS";
+		};
+		FD3F8DC321DE5A3800BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD3F8A1021DDE43A00BBDA58;
+			remoteInfo = SwiftFormatWorker;
+		};
 		FDB7A8AB21CD58540045DDA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1587,6 +1603,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3F8DA921DE585500BBDA58 /* ProjectFolderWorker.framework in Frameworks */,
 				FD3F8C9021DE18B500BBDA58 /* SignPost.framework in Frameworks */,
 				FD3F8AED21DDED2400BBDA58 /* SwiftFormat.framework in Frameworks */,
 			);
@@ -1704,6 +1721,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3F8DC521DE5A3F00BBDA58 /* SwiftFormatWorker.framework in Frameworks */,
 				FD3F8D4A21DE238C00BBDA58 /* ProjectFolderWorker.framework in Frameworks */,
 				FD1126FA21C781050072607D /* SignPost.framework in Frameworks */,
 				FDC156FA21C535A400E04B44 /* Terminal.framework in Frameworks */,
@@ -2845,6 +2863,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD3F8DA821DE584D00BBDA58 /* PBXTargetDependency */,
 				FD3F8C8F21DE18AA00BBDA58 /* PBXTargetDependency */,
 			);
 			name = SwiftFormatWorker;
@@ -3068,6 +3087,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD3F8DC421DE5A3800BBDA58 /* PBXTargetDependency */,
 				FD3F8D4C21DE23C300BBDA58 /* PBXTargetDependency */,
 				FD1126F921C780FD0072607D /* PBXTargetDependency */,
 				FDC156F921C5359C00E04B44 /* PBXTargetDependency */,
@@ -4363,6 +4383,16 @@
 			isa = PBXTargetDependency;
 			target = FD3F8D2621DE229900BBDA58 /* ProjectFolderWorker-macOS */;
 			targetProxy = FD3F8D4B21DE23C300BBDA58 /* PBXContainerItemProxy */;
+		};
+		FD3F8DA821DE584D00BBDA58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD3F8D2621DE229900BBDA58 /* ProjectFolderWorker-macOS */;
+			targetProxy = FD3F8DA721DE584D00BBDA58 /* PBXContainerItemProxy */;
+		};
+		FD3F8DC421DE5A3800BBDA58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD3F8A1021DDE43A00BBDA58 /* SwiftFormatWorker */;
+			targetProxy = FD3F8DC321DE5A3800BBDA58 /* PBXContainerItemProxy */;
 		};
 		FDB7A8AC21CD58540045DDA8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
