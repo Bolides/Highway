@@ -15,36 +15,36 @@
 		FD05540321D137A900E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4E54DE21D1271900B5A776 /* Nimble.framework */; };
 		FD3F8AF021DDED5400BBDA58 /* SwiftFormat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8AE121DDECE500BBDA58 /* SwiftFormat.framework */; };
 		FD3F8AF121DDED5400BBDA58 /* SwiftFormat.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8AE121DDECE500BBDA58 /* SwiftFormat.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FD3F8B6121DE096000BBDA58 /* SwiftFormatWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B6021DE096000BBDA58 /* SwiftFormatWorker.framework */; };
-		FD3F8B6221DE096000BBDA58 /* SwiftFormatWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B6021DE096000BBDA58 /* SwiftFormatWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FD3F8B6421DE098200BBDA58 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B6321DE098200BBDA58 /* Arguments.framework */; };
-		FD3F8B6521DE098200BBDA58 /* Arguments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B6321DE098200BBDA58 /* Arguments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FD3F8B6721DE098200BBDA58 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B6621DE098200BBDA58 /* Keychain.framework */; };
-		FD3F8B6821DE098200BBDA58 /* Keychain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B6621DE098200BBDA58 /* Keychain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FD3F8B6A21DE098200BBDA58 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B6921DE098200BBDA58 /* Terminal.framework */; };
-		FD3F8B6B21DE098200BBDA58 /* Terminal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B6921DE098200BBDA58 /* Terminal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FD3F8B6D21DE098200BBDA58 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B6C21DE098200BBDA58 /* POSIX.framework */; };
-		FD3F8B6E21DE098200BBDA58 /* POSIX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B6C21DE098200BBDA58 /* POSIX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FD3F8B7021DE098200BBDA58 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B6F21DE098200BBDA58 /* XCBuild.framework */; };
-		FD3F8B7121DE098200BBDA58 /* XCBuild.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B6F21DE098200BBDA58 /* XCBuild.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FD3F8B7321DE098200BBDA58 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B7221DE098200BBDA58 /* Result.framework */; };
-		FD3F8B7421DE098200BBDA58 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B7221DE098200BBDA58 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FD3F8B7621DE098200BBDA58 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B7521DE098200BBDA58 /* Errors.framework */; };
-		FD3F8B7721DE098200BBDA58 /* Errors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B7521DE098200BBDA58 /* Errors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FD3F8B7921DE098200BBDA58 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B7821DE098200BBDA58 /* SourceryAutoProtocols.framework */; };
-		FD3F8B7A21DE098200BBDA58 /* SourceryAutoProtocols.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B7821DE098200BBDA58 /* SourceryAutoProtocols.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FD3F8B7C21DE098200BBDA58 /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B7B21DE098200BBDA58 /* Git.framework */; };
-		FD3F8B7D21DE098200BBDA58 /* Git.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B7B21DE098200BBDA58 /* Git.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FD3F8B7F21DE098200BBDA58 /* Deliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B7E21DE098200BBDA58 /* Deliver.framework */; };
-		FD3F8B8021DE098200BBDA58 /* Deliver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B7E21DE098200BBDA58 /* Deliver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FD3F8B8221DE098200BBDA58 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B8121DE098200BBDA58 /* Task.framework */; };
-		FD3F8B8321DE098200BBDA58 /* Task.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B8121DE098200BBDA58 /* Task.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FD3F8B8521DE098200BBDA58 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B8421DE098200BBDA58 /* Url.framework */; };
-		FD3F8B8621DE098200BBDA58 /* Url.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B8421DE098200BBDA58 /* Url.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FD3F8B8821DE098200BBDA58 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B8721DE098200BBDA58 /* SourceryWorker.framework */; };
-		FD3F8B8921DE098200BBDA58 /* SourceryWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B8721DE098200BBDA58 /* SourceryWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FD3F8B8B21DE098200BBDA58 /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B8A21DE098200BBDA58 /* SignPost.framework */; };
-		FD3F8B8C21DE098200BBDA58 /* SignPost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8B8A21DE098200BBDA58 /* SignPost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD3F8C7021DE0E1C00BBDA58 /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6321DE0E0200BBDA58 /* SignPost.framework */; };
+		FD3F8C7121DE0E1C00BBDA58 /* SignPost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6321DE0E0200BBDA58 /* SignPost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD3F8C7221DE0E1C00BBDA58 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6821DE0E0200BBDA58 /* SourceryWorker.framework */; };
+		FD3F8C7321DE0E1C00BBDA58 /* SourceryWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6821DE0E0200BBDA58 /* SourceryWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD3F8C7421DE0E1C00BBDA58 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6521DE0E0200BBDA58 /* Url.framework */; };
+		FD3F8C7521DE0E1C00BBDA58 /* Url.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6521DE0E0200BBDA58 /* Url.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD3F8C7621DE0E1C00BBDA58 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6721DE0E0200BBDA58 /* Task.framework */; };
+		FD3F8C7721DE0E1C00BBDA58 /* Task.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6721DE0E0200BBDA58 /* Task.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD3F8C7821DE0E1C00BBDA58 /* Deliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6A21DE0E0200BBDA58 /* Deliver.framework */; };
+		FD3F8C7921DE0E1C00BBDA58 /* Deliver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6A21DE0E0200BBDA58 /* Deliver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD3F8C7A21DE0E1C00BBDA58 /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6421DE0E0200BBDA58 /* Git.framework */; };
+		FD3F8C7B21DE0E1C00BBDA58 /* Git.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6421DE0E0200BBDA58 /* Git.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD3F8C7C21DE0E1C00BBDA58 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6E21DE0E0300BBDA58 /* SourceryAutoProtocols.framework */; };
+		FD3F8C7D21DE0E1C00BBDA58 /* SourceryAutoProtocols.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6E21DE0E0300BBDA58 /* SourceryAutoProtocols.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD3F8C7E21DE0E1C00BBDA58 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6221DE0E0200BBDA58 /* Errors.framework */; };
+		FD3F8C7F21DE0E1C00BBDA58 /* Errors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6221DE0E0200BBDA58 /* Errors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD3F8C8021DE0E1C00BBDA58 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6621DE0E0200BBDA58 /* Result.framework */; };
+		FD3F8C8121DE0E1C00BBDA58 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6621DE0E0200BBDA58 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD3F8C8221DE0E1C00BBDA58 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6F21DE0E0300BBDA58 /* XCBuild.framework */; };
+		FD3F8C8321DE0E1C00BBDA58 /* XCBuild.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6F21DE0E0300BBDA58 /* XCBuild.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD3F8C8421DE0E1C00BBDA58 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6D21DE0E0300BBDA58 /* POSIX.framework */; };
+		FD3F8C8521DE0E1C00BBDA58 /* POSIX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6D21DE0E0300BBDA58 /* POSIX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD3F8C8621DE0E1C00BBDA58 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6B21DE0E0200BBDA58 /* Terminal.framework */; };
+		FD3F8C8721DE0E1C00BBDA58 /* Terminal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6B21DE0E0200BBDA58 /* Terminal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD3F8C8821DE0E1C00BBDA58 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6921DE0E0200BBDA58 /* Keychain.framework */; };
+		FD3F8C8921DE0E1C00BBDA58 /* Keychain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6921DE0E0200BBDA58 /* Keychain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD3F8C8A21DE0E1C00BBDA58 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6C21DE0E0300BBDA58 /* Arguments.framework */; };
+		FD3F8C8B21DE0E1C00BBDA58 /* Arguments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C6C21DE0E0300BBDA58 /* Arguments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD3F8C8C21DE0E1C00BBDA58 /* SwiftFormatWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C5F21DE0DDF00BBDA58 /* SwiftFormatWorker.framework */; };
+		FD3F8C8D21DE0E1C00BBDA58 /* SwiftFormatWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8C5F21DE0DDF00BBDA58 /* SwiftFormatWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD84A7B421D6C1430093F2A7 /* CupertinoJWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD27B96921D6C11B008F829A /* CupertinoJWT.framework */; };
 		FD84A7B521D6C1430093F2A7 /* CupertinoJWT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD27B96921D6C11B008F829A /* CupertinoJWT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDB7A8A821CD51870045DDA8 /* AutomateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A8A621CD51870045DDA8 /* AutomateTests.swift */; };
@@ -374,24 +374,24 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FD3F8B7D21DE098200BBDA58 /* Git.framework in Embed Frameworks */,
-				FD3F8B7121DE098200BBDA58 /* XCBuild.framework in Embed Frameworks */,
-				FD3F8B6821DE098200BBDA58 /* Keychain.framework in Embed Frameworks */,
-				FD3F8B6B21DE098200BBDA58 /* Terminal.framework in Embed Frameworks */,
+				FD3F8C7921DE0E1C00BBDA58 /* Deliver.framework in Embed Frameworks */,
+				FD3F8C7321DE0E1C00BBDA58 /* SourceryWorker.framework in Embed Frameworks */,
+				FD3F8C8921DE0E1C00BBDA58 /* Keychain.framework in Embed Frameworks */,
+				FD3F8C8B21DE0E1C00BBDA58 /* Arguments.framework in Embed Frameworks */,
 				FD3F8AF121DDED5400BBDA58 /* SwiftFormat.framework in Embed Frameworks */,
+				FD3F8C8D21DE0E1C00BBDA58 /* SwiftFormatWorker.framework in Embed Frameworks */,
+				FD3F8C7D21DE0E1C00BBDA58 /* SourceryAutoProtocols.framework in Embed Frameworks */,
+				FD3F8C8521DE0E1C00BBDA58 /* POSIX.framework in Embed Frameworks */,
+				FD3F8C7F21DE0E1C00BBDA58 /* Errors.framework in Embed Frameworks */,
+				FD3F8C7521DE0E1C00BBDA58 /* Url.framework in Embed Frameworks */,
+				FD3F8C8121DE0E1C00BBDA58 /* Result.framework in Embed Frameworks */,
 				FD84A7B521D6C1430093F2A7 /* CupertinoJWT.framework in Embed Frameworks */,
-				FD3F8B7A21DE098200BBDA58 /* SourceryAutoProtocols.framework in Embed Frameworks */,
-				FD3F8B7721DE098200BBDA58 /* Errors.framework in Embed Frameworks */,
-				FD3F8B8321DE098200BBDA58 /* Task.framework in Embed Frameworks */,
+				FD3F8C8721DE0E1C00BBDA58 /* Terminal.framework in Embed Frameworks */,
+				FD3F8C7721DE0E1C00BBDA58 /* Task.framework in Embed Frameworks */,
+				FD3F8C7B21DE0E1C00BBDA58 /* Git.framework in Embed Frameworks */,
 				FD0553F521D1370D00E9B0D0 /* ZFile.framework in Embed Frameworks */,
-				FD3F8B6521DE098200BBDA58 /* Arguments.framework in Embed Frameworks */,
-				FD3F8B8021DE098200BBDA58 /* Deliver.framework in Embed Frameworks */,
-				FD3F8B8621DE098200BBDA58 /* Url.framework in Embed Frameworks */,
-				FD3F8B7421DE098200BBDA58 /* Result.framework in Embed Frameworks */,
-				FD3F8B8921DE098200BBDA58 /* SourceryWorker.framework in Embed Frameworks */,
-				FD3F8B8C21DE098200BBDA58 /* SignPost.framework in Embed Frameworks */,
-				FD3F8B6E21DE098200BBDA58 /* POSIX.framework in Embed Frameworks */,
-				FD3F8B6221DE096000BBDA58 /* SwiftFormatWorker.framework in Embed Frameworks */,
+				FD3F8C8321DE0E1C00BBDA58 /* XCBuild.framework in Embed Frameworks */,
+				FD3F8C7121DE0E1C00BBDA58 /* SignPost.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,27 +400,26 @@
 
 /* Begin PBXFileReference section */
 		FD0553E621D1347700E9B0D0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
-		FD27B88121D696FC008F829A /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = ../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug/CryptoSwift.framework; sourceTree = "<group>"; };
 		FD27B88221D69758008F829A /* Highway.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Highway.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FD27B88521D6B3C2008F829A /* CupertinoJWT.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CupertinoJWT.xcodeproj; path = ../Carthage/Checkouts/CupertinoJWT/CupertinoJWT.xcodeproj; sourceTree = "<group>"; };
 		FD27B8DB21D6B48A008F829A /* AuthKey_VV7NT37UVU.p8 */ = {isa = PBXFileReference; lastKnownFileType = text; path = AuthKey_VV7NT37UVU.p8; sourceTree = "<group>"; };
 		FD3F8AD721DDECE500BBDA58 /* SwiftFormat.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftFormat.xcodeproj; path = ../Carthage/Checkouts/SwiftFormat/SwiftFormat.xcodeproj; sourceTree = "<group>"; };
 		FD3F8B5F21DE079A00BBDA58 /* .swiftformat.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .swiftformat.md; sourceTree = "<group>"; };
-		FD3F8B6021DE096000BBDA58 /* SwiftFormatWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftFormatWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD3F8B6321DE098200BBDA58 /* Arguments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Arguments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD3F8B6621DE098200BBDA58 /* Keychain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Keychain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD3F8B6921DE098200BBDA58 /* Terminal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Terminal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD3F8B6C21DE098200BBDA58 /* POSIX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = POSIX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD3F8B6F21DE098200BBDA58 /* XCBuild.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XCBuild.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD3F8B7221DE098200BBDA58 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD3F8B7521DE098200BBDA58 /* Errors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Errors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD3F8B7821DE098200BBDA58 /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD3F8B7B21DE098200BBDA58 /* Git.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Git.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD3F8B7E21DE098200BBDA58 /* Deliver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Deliver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD3F8B8121DE098200BBDA58 /* Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD3F8B8421DE098200BBDA58 /* Url.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Url.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD3F8B8721DE098200BBDA58 /* SourceryWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD3F8B8A21DE098200BBDA58 /* SignPost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SignPost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8C5F21DE0DDF00BBDA58 /* SwiftFormatWorker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftFormatWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8C6221DE0E0200BBDA58 /* Errors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Errors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8C6321DE0E0200BBDA58 /* SignPost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SignPost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8C6421DE0E0200BBDA58 /* Git.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Git.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8C6521DE0E0200BBDA58 /* Url.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Url.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8C6621DE0E0200BBDA58 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8C6721DE0E0200BBDA58 /* Task.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8C6821DE0E0200BBDA58 /* SourceryWorker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SourceryWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8C6921DE0E0200BBDA58 /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Keychain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8C6A21DE0E0200BBDA58 /* Deliver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Deliver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8C6B21DE0E0200BBDA58 /* Terminal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Terminal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8C6C21DE0E0300BBDA58 /* Arguments.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Arguments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8C6D21DE0E0300BBDA58 /* POSIX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = POSIX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8C6E21DE0E0300BBDA58 /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3F8C6F21DE0E0300BBDA58 /* XCBuild.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XCBuild.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB7A8A621CD51870045DDA8 /* AutomateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomateTests.swift; sourceTree = "<group>"; };
 		FDB7A8A721CD51870045DDA8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "🛣.xcodeproj"; sourceTree = "<group>"; };
@@ -445,24 +444,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD3F8B7C21DE098200BBDA58 /* Git.framework in Frameworks */,
-				FD3F8B7021DE098200BBDA58 /* XCBuild.framework in Frameworks */,
-				FD3F8B6721DE098200BBDA58 /* Keychain.framework in Frameworks */,
-				FD3F8B6A21DE098200BBDA58 /* Terminal.framework in Frameworks */,
+				FD3F8C7821DE0E1C00BBDA58 /* Deliver.framework in Frameworks */,
+				FD3F8C7221DE0E1C00BBDA58 /* SourceryWorker.framework in Frameworks */,
+				FD3F8C8821DE0E1C00BBDA58 /* Keychain.framework in Frameworks */,
+				FD3F8C8A21DE0E1C00BBDA58 /* Arguments.framework in Frameworks */,
 				FD0553F421D1370D00E9B0D0 /* ZFile.framework in Frameworks */,
+				FD3F8C8C21DE0E1C00BBDA58 /* SwiftFormatWorker.framework in Frameworks */,
+				FD3F8C7C21DE0E1C00BBDA58 /* SourceryAutoProtocols.framework in Frameworks */,
+				FD3F8C8421DE0E1C00BBDA58 /* POSIX.framework in Frameworks */,
+				FD3F8C7E21DE0E1C00BBDA58 /* Errors.framework in Frameworks */,
+				FD3F8C7421DE0E1C00BBDA58 /* Url.framework in Frameworks */,
+				FD3F8C8021DE0E1C00BBDA58 /* Result.framework in Frameworks */,
 				FD3F8AF021DDED5400BBDA58 /* SwiftFormat.framework in Frameworks */,
-				FD3F8B7921DE098200BBDA58 /* SourceryAutoProtocols.framework in Frameworks */,
-				FD3F8B7621DE098200BBDA58 /* Errors.framework in Frameworks */,
-				FD3F8B8221DE098200BBDA58 /* Task.framework in Frameworks */,
+				FD3F8C8621DE0E1C00BBDA58 /* Terminal.framework in Frameworks */,
+				FD3F8C7621DE0E1C00BBDA58 /* Task.framework in Frameworks */,
+				FD3F8C7A21DE0E1C00BBDA58 /* Git.framework in Frameworks */,
 				FD84A7B421D6C1430093F2A7 /* CupertinoJWT.framework in Frameworks */,
-				FD3F8B6421DE098200BBDA58 /* Arguments.framework in Frameworks */,
-				FD3F8B7F21DE098200BBDA58 /* Deliver.framework in Frameworks */,
-				FD3F8B8521DE098200BBDA58 /* Url.framework in Frameworks */,
-				FD3F8B7321DE098200BBDA58 /* Result.framework in Frameworks */,
-				FD3F8B8821DE098200BBDA58 /* SourceryWorker.framework in Frameworks */,
-				FD3F8B8B21DE098200BBDA58 /* SignPost.framework in Frameworks */,
-				FD3F8B6D21DE098200BBDA58 /* POSIX.framework in Frameworks */,
-				FD3F8B6121DE096000BBDA58 /* SwiftFormatWorker.framework in Frameworks */,
+				FD3F8C8221DE0E1C00BBDA58 /* XCBuild.framework in Frameworks */,
+				FD3F8C7021DE0E1C00BBDA58 /* SignPost.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,7 +560,21 @@
 		FDB7A8A221CD515B0045DDA8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FD27B88121D696FC008F829A /* CryptoSwift.framework */,
+				FD3F8C6321DE0E0200BBDA58 /* SignPost.framework */,
+				FD3F8C6821DE0E0200BBDA58 /* SourceryWorker.framework */,
+				FD3F8C6521DE0E0200BBDA58 /* Url.framework */,
+				FD3F8C6721DE0E0200BBDA58 /* Task.framework */,
+				FD3F8C6A21DE0E0200BBDA58 /* Deliver.framework */,
+				FD3F8C6421DE0E0200BBDA58 /* Git.framework */,
+				FD3F8C6E21DE0E0300BBDA58 /* SourceryAutoProtocols.framework */,
+				FD3F8C6221DE0E0200BBDA58 /* Errors.framework */,
+				FD3F8C6621DE0E0200BBDA58 /* Result.framework */,
+				FD3F8C6F21DE0E0300BBDA58 /* XCBuild.framework */,
+				FD3F8C6D21DE0E0300BBDA58 /* POSIX.framework */,
+				FD3F8C6B21DE0E0200BBDA58 /* Terminal.framework */,
+				FD3F8C6921DE0E0200BBDA58 /* Keychain.framework */,
+				FD3F8C6C21DE0E0300BBDA58 /* Arguments.framework */,
+				FD3F8C5F21DE0DDF00BBDA58 /* SwiftFormatWorker.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -578,29 +591,14 @@
 		FDDEDFAF21CD4B490007D4EB = {
 			isa = PBXGroup;
 			children = (
-				FD3F8B8A21DE098200BBDA58 /* SignPost.framework */,
-				FD3F8B8721DE098200BBDA58 /* SourceryWorker.framework */,
-				FD3F8B8421DE098200BBDA58 /* Url.framework */,
-				FD3F8B8121DE098200BBDA58 /* Task.framework */,
-				FD3F8B7E21DE098200BBDA58 /* Deliver.framework */,
-				FD3F8B7B21DE098200BBDA58 /* Git.framework */,
-				FD3F8B7821DE098200BBDA58 /* SourceryAutoProtocols.framework */,
-				FD3F8B7521DE098200BBDA58 /* Errors.framework */,
-				FD3F8B7221DE098200BBDA58 /* Result.framework */,
-				FD3F8B6F21DE098200BBDA58 /* XCBuild.framework */,
-				FD3F8B6C21DE098200BBDA58 /* POSIX.framework */,
-				FD3F8B6921DE098200BBDA58 /* Terminal.framework */,
-				FD3F8B6621DE098200BBDA58 /* Keychain.framework */,
-				FD3F8B6321DE098200BBDA58 /* Arguments.framework */,
-				FD3F8B6021DE096000BBDA58 /* SwiftFormatWorker.framework */,
 				FD27B88221D69758008F829A /* Highway.playground */,
 				FDF72D8121D6825A006009D3 /* Cartfile */,
 				FD0553E621D1347700E9B0D0 /* README.md */,
-				FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */,
 				FD05542F21D13F2300E9B0D0 /* Tests */,
 				FDF72D9921D683D9006009D3 /* Sources */,
 				FDDEDFB921CD4B490007D4EB /* Products */,
 				FDB7A8A221CD515B0045DDA8 /* Frameworks */,
+				FDDEDFC921CD4B6F0007D4EB /* 🛣.xcodeproj */,
 				FD3F8AD721DDECE500BBDA58 /* SwiftFormat.xcodeproj */,
 				FD27B88521D6B3C2008F829A /* CupertinoJWT.xcodeproj */,
 				FDDEE0B221CD4C1B0007D4EB /* template-sourcery */,
