@@ -81,6 +81,7 @@
 		FD3F8A8221DDE86600BBDA58 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0553E721D136A700E9B0D0 /* ZFileMock.framework */; };
 		FD3F8A8821DDE94100BBDA58 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3F8A6621DDE6B100BBDA58 /* AutoMockable.generated.swift */; };
 		FD3F8AED21DDED2400BBDA58 /* SwiftFormat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8AEC21DDED2400BBDA58 /* SwiftFormat.framework */; };
+		FD3F8C9021DE18B500BBDA58 /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
 		FD84A7EA21D6C3D50093F2A7 /* JWTTokenWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD84A7E921D6C3C50093F2A7 /* JWTTokenWorker.swift */; };
 		FD84A7EC21D6C4870093F2A7 /* CupertinoJWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD84A7EB21D6C4870093F2A7 /* CupertinoJWT.framework */; };
 		FDAC932A210B595100B0D045 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
@@ -1123,6 +1124,13 @@
 			remoteGlobalIDString = "highway::SourceryAutoProtocols";
 			remoteInfo = "SourceryAutoProtocols-macos";
 		};
+		FD3F8C8E21DE18AA00BBDA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD1126CB21C77F050072607D;
+			remoteInfo = SignPost;
+		};
 		FDB7A8AB21CD58540045DDA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1552,6 +1560,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3F8C9021DE18B500BBDA58 /* SignPost.framework in Frameworks */,
 				FD3F8AED21DDED2400BBDA58 /* SwiftFormat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2760,6 +2769,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD3F8C8F21DE18AA00BBDA58 /* PBXTargetDependency */,
 			);
 			name = SwiftFormatWorker;
 			productName = SwiftformatWorker;
@@ -4186,6 +4196,11 @@
 			isa = PBXTargetDependency;
 			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD3F8A7E21DDE84E00BBDA58 /* PBXContainerItemProxy */;
+		};
+		FD3F8C8F21DE18AA00BBDA58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD1126CB21C77F050072607D /* SignPost */;
+			targetProxy = FD3F8C8E21DE18AA00BBDA58 /* PBXContainerItemProxy */;
 		};
 		FDB7A8AC21CD58540045DDA8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

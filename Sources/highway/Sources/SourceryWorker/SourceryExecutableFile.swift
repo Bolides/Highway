@@ -6,25 +6,27 @@
 //
 
 import Foundation
-import ZFile
 import SourceryAutoProtocols
+import ZFile
 
 // sourcery:AutoMockable
 // sourcery:mockInherit = FileProtocolMock
 // sourcery:skipPublicInit
-public protocol SourceryExecutableFileProtocol: FileProtocol {
+public protocol SourceryExecutableFileProtocol: FileProtocol
+{
     /// sourcery:inline:SourceryExecutableFile.AutoGenerateProtocol
     /// sourcery:end
 }
 
-public class SourceryExecutableFile: File, SourceryExecutableFileProtocol, AutoGenerateProtocol {
-    
-    required init(path: String) throws {
-       try super.init(path: path)
+public class SourceryExecutableFile: File, SourceryExecutableFileProtocol, AutoGenerateProtocol
+{
+    required init(path: String) throws
+    {
+        try super.init(path: path)
     }
-    
-    required init() throws {
+
+    required init() throws
+    {
         try super.init(path: "/Applications/Sourcery.app/Contents/MacOS/Sourcery")
     }
-    
 }

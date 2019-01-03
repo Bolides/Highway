@@ -1,14 +1,15 @@
-import Quick
-import Nimble
-import ZFile
 import Git
-import Url
+import Nimble
+import Quick
 import Task
+import Url
+import ZFile
 
-private final class MockGitSystem {
+private final class MockGitSystem
+{
 //    let system = MockSystem()
 //    let fs = InMemoryFileSystem()
-    
+
 //    func makeGitAvailable() throws {
 //        try fs.createDirectory(at: Absolute("/bin"))
 //        try fs.writeData(Data(), to: Absolute("/bin/git"))
@@ -22,7 +23,8 @@ private final class MockGitSystem {
 //    }
 }
 
-final class GitToolTests: QuickSpec {
+final class GitToolTests: QuickSpec
+{
     // TODO: Enable with different mocking system
 //    private var gitSystem = MockGitSystem()
 //    private var fs: FileSystem { return gitSystem.fs }

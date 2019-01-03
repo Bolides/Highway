@@ -7,29 +7,31 @@
 //
 
 import Foundation
+import FoundationGenericHelper
 import SourceryAutoProtocols
 import ZFile
-import FoundationGenericHelper
 
-public protocol SourceryFolderWorkerProtocol: AutoMockable {
+public protocol SourceryFolderWorkerProtocol: AutoMockable
+{
     /// sourcery:inline:ZFileFolderWorker.AutoGenerateProtocol
     var srcRoot: (folder: FolderProtocol, key: SourceryFolderWorker.Key) { get }
-    
+
     init(bundle: BundleProtocol) throws
     /// sourcery:end
 }
 
-public struct SourceryFolderWorker: SourceryFolderWorkerProtocol, AutoGenerateProtocol {
-    
-    public enum Key: String {
+public struct SourceryFolderWorker: SourceryFolderWorkerProtocol, AutoGenerateProtocol
+{
+    public enum Key: String
+    {
         case scrRoot = "BE_DOOZ_SRCROOT"
     }
-    
+
     public let srcRoot: (folder: FolderProtocol, key: SourceryFolderWorker.Key)
-    
+
     // sourcery:inlcudeInitInProtocol
-    public init(bundle: BundleProtocol) throws {
-        self.srcRoot = (try Folder(path: try bundle.string(for: AnyRawRepresentable(Key.scrRoot))), Key.scrRoot)
+    public init(bundle: BundleProtocol) throws
+    {
+        srcRoot = (try Folder(path: try bundle.string(for: AnyRawRepresentable(Key.scrRoot))), Key.scrRoot)
     }
 }
-

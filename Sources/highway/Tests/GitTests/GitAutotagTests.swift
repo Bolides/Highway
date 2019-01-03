@@ -1,16 +1,16 @@
 
-import TestKit
-import ZFile
-import Url
-import Task
 import Git
-import Quick
 import Nimble
+import Quick
+import Task
+import TestKit
+import Url
+import ZFile
 
-final class GitAutotagTests: QuickSpec {
-    
+final class GitAutotagTests: QuickSpec
+{
     // TODO: Enable with different mocking system
-    
+
 //    // MARK: - Properties
 //    private var system = MockSystem()
 //    private var fs = InMemoryFileSystem()
@@ -36,10 +36,10 @@ final class GitAutotagTests: QuickSpec {
 //        XCTAssertNoThrow(try fs.createDirectory(at: Absolute("/test")))
 //        // Now simulate an git failure
 //        system.unhandledExecutionFallback = { _ in
-////            $0.state = .terminated(.failure)
+    ////            $0.state = .terminated(.failure)
 //            return MockSystem.ExecutionResult.failure(.taskDidExitWithFailure(.failure))
 //        }
-////        executor.executions = { $0.state = .terminated(.failure) }
+    ////        executor.executions = { $0.state = .terminated(.failure) }
 //        XCTAssertThrowsError(try git.autotag(at: Absolute("/test")))
 //        // Now simulate an git success
 //        system.unhandledExecutionFallback = {

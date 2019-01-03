@@ -1,4 +1,5 @@
-public enum Color: String {
+public enum Color: String
+{
     case none = ""
     case red = "31m"
     case green = "32m"
@@ -7,10 +8,13 @@ public enum Color: String {
     case white = "37m"
     case black = "30m"
     case grey = "30;1m"
-    
+
     // MARK: - Properties
-    var terminalString: String {
-        if case .none = self {
+
+    var terminalString: String
+    {
+        if case .none = self
+        {
             return ""
         }
         return String.Ansi.CSI + rawValue

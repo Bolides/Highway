@@ -8,19 +8,20 @@ import Foundation
 import os
 import SourceryAutoProtocols
 
-public enum TerminalTask: RawRepresentable, Equatable, AutoCases {
-   
+public enum TerminalTask: RawRepresentable, Equatable, AutoCases
+{
     case git(ArgumentExecutableProtocol)
     case cat(ArgumentExecutableProtocol)
     case sourcery(ArgumentExecutableProtocol)
-    
+
     case xcodebuild(ArgumentExecutableProtocol)
     case xcodebuildTests(ArgumentExecutableProtocol)
     case cd(ArgumentExecutableProtocol)
-    
+
     // MARK: - Executable
-    
-    public var executable: ArgumentExecutableProtocol {
+
+    public var executable: ArgumentExecutableProtocol
+    {
         switch self {
         case let .xcodebuild(exec):
             return exec
@@ -31,22 +32,24 @@ public enum TerminalTask: RawRepresentable, Equatable, AutoCases {
         case let .cat(exec):
             return exec
         case let .xcodebuildTests(testOptions):
-           return testOptions
+            return testOptions
         case let .cd(path):
             return path
         }
     }
-    
+
     // MARK: - Equatable
-    public static func == (lhs: TerminalTask, rhs: TerminalTask) -> Bool {
+
+    public static func == (lhs: TerminalTask, rhs: TerminalTask) -> Bool
+    {
         switch (lhs, rhs) {
         case (.xcodebuild, .xcodebuild):
             return true
         case (.git, .git):
             return true
-        case (.sourcery, .sourcery ):
+        case (.sourcery, .sourcery):
             return true
-        case (.cd, .cd ):
+        case (.cd, .cd):
             return true
         case (.xcodebuildTests, .xcodebuildTests):
             return true
@@ -54,12 +57,13 @@ public enum TerminalTask: RawRepresentable, Equatable, AutoCases {
             return false
         }
     }
-    
+
     // MARK: - RawRepresentable
-    
+
     public typealias RawValue = String
-    
-    public var rawValue: String {
+
+    public var rawValue: String
+    {
         switch self {
         case .xcodebuild:
             return "xcodebuild"
@@ -75,13 +79,13 @@ public enum TerminalTask: RawRepresentable, Equatable, AutoCases {
             return "cd"
         }
     }
-    
-    public init?(rawValue: String) {
+
+    public init?(rawValue: String)
+    {
         switch rawValue {
         default:
             os_log("not possible %@", type: .error, rawValue)
             return nil
-        
         }
     }
 }

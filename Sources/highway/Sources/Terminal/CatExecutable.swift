@@ -1,21 +1,20 @@
 
+import Arguments
 import Foundation
 import Task
-import Arguments
 import ZFile
 
-
-struct CatExecutable: ArgumentExecutableProtocol {
-
+struct CatExecutable: ArgumentExecutableProtocol
+{
     let _argument: Arguments
-    
-    func executableFile() throws -> FileProtocol {
+
+    func executableFile() throws -> FileProtocol
+    {
         return try File(path: "/bin/cat")
     }
-    
-    func arguments() throws -> Arguments {
+
+    func arguments() throws -> Arguments
+    {
         return _argument
     }
-    
-    
 }

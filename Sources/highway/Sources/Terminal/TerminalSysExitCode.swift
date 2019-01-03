@@ -10,8 +10,8 @@ import Foundation
 // MARK: Exit Codes
 
 /// Exit code enum as defined in sysexits.h
-public enum TerminalSysExitCode: Int32, CustomDebugStringConvertible {
-  
+public enum TerminalSysExitCode: Int32, CustomDebugStringConvertible
+{
     case ok = 0
     case baseOrUsage = 64
     case dataError = 65
@@ -28,19 +28,22 @@ public enum TerminalSysExitCode: Int32, CustomDebugStringConvertible {
     case protocolFailiure = 76
     case noPermission = 77
     case configuration = 78
-    
+
     // MARK: - Description
-    
-    public var debugDescription: String {
+
+    public var debugDescription: String
+    {
         let prefix = "Exit code \(rawValue) ="
         switch self {
         case .ok:
             return "\(prefix) successful termination."
         case .baseOrUsage: // MARK: Exit Codes
-            
+
             /// Exit code enum as defined in sysexits.h
-            enum TerminalExitCode: Int32, CustomDebugStringConvertible {
-                var debugDescription: String {
+            enum TerminalExitCode: Int32, CustomDebugStringConvertible
+            {
+                var debugDescription: String
+                {
                     let prefix = "Exit code \(rawValue) ="
                     switch self {
                     case .ok:
@@ -77,7 +80,7 @@ public enum TerminalSysExitCode: Int32, CustomDebugStringConvertible {
                         return "\(prefix) configuration error and maximum listed value"
                     }
                 }
-                
+
                 case ok = 0
                 case baseOrUsage = 64
                 case dataError = 65
@@ -95,7 +98,7 @@ public enum TerminalSysExitCode: Int32, CustomDebugStringConvertible {
                 case noPermission = 77
                 case configuration = 78
             }
-            
+
             return "\(prefix) base value for error messages."
         case .dataError:
             return "\(prefix) data format error."
@@ -127,5 +130,4 @@ public enum TerminalSysExitCode: Int32, CustomDebugStringConvertible {
             return "\(prefix) configuration error and maximum listed value"
         }
     }
-
 }

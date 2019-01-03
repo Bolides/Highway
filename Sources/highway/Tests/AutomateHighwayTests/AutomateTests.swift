@@ -5,15 +5,15 @@
 //  Created by Stijn on 16/12/2018.
 //
 
-import Quick
 import Nimble
+import Quick
 
 @testable import AutomateHighway
 
-class AutomateTests: QuickSpec {
-
-    override func spec() {
-        // TODO
+class AutomateTests: QuickSpec
+{
+    override func spec()
+    {
+        // TODO:
     }
-
 }

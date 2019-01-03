@@ -1,14 +1,15 @@
-import Quick
 import Nimble
+import Quick
 
-import XCBuild
-import ZFile
-import Url
-@testable import Task
 import Deliver
 import Keychain
+@testable import Task
+import Url
+import XCBuild
+import ZFile
 
-final class XCBuildTests: QuickSpec {
+final class XCBuildTests: QuickSpec
+{
     // TODO: enable with new mocking system
 //    // MARK: - XCTest
 //    /// We override invokeTest to disable tests in this file in case HIGHWAY_SYSTEM_TEST is not set.

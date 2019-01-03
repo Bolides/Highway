@@ -1,13 +1,13 @@
 import Cocoa
-//import CupertinoJWT
-//import ZFile
-//import os
+// import CupertinoJWT
+// import ZFile
+// import os
 //
-//let currentFolder = FileSystem.shared.currentFolder
+// let currentFolder = FileSystem.shared.currentFolder
 //
 ////: # Cupertino JWT
 //
-//do {
+// do {
 //    // Get content of the .p8 file
 //    let p8 = try currentFolder.file(named: "/Sources/AutomateHighway/AuthKey_VV7NT37UVU.p8").readAsString()
 //
@@ -25,9 +25,8 @@ import Cocoa
 //    // e.g. urlRequest.addValue(_ value: "bearer \(token)", forHTTPHeaderField field: "authorization")
 //    os_log(.info, "💁🏻‍♂️ token: \n%@/n", "\(token)")
 //
-//} catch {
+// } catch {
 //    // Handle error
 //    os_log(.error, "⚠️ \n%@/n", "\(error)")
 //    os_log(.info, "💁🏻‍♂️ maybe run 'git-secret reveal first ...")
-//}
-
+// }

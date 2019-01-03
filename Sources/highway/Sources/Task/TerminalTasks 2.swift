@@ -9,18 +9,19 @@ import os
 import SourceryAutoProtocols
 import XCBuild
 
-public enum TerminalTask: RawRepresentable, Equatable, AutoCases {
-   
+public enum TerminalTask: RawRepresentable, Equatable, AutoCases
+{
     case git(ArgumentExecutableProtocol)
     case cat(ArgumentExecutableProtocol)
     case sourcery(ArgumentExecutableProtocol)
-    
+
     case xcodebuild(ArgumentExecutableProtocol)
     case xcodebuildTests(TestOptionsProtocol)
 
     // MARK: - Executable
-    
-    var executable: ArgumentExecutableProtocol {
+
+    var executable: ArgumentExecutableProtocol
+    {
         switch self {
         case let .xcodebuild(exec):
             return exec
@@ -31,29 +32,32 @@ public enum TerminalTask: RawRepresentable, Equatable, AutoCases {
         case let .cat(exec):
             return exec
         case let .xcodebuildTests(testOptions):
-           return testOptions
+            return testOptions
         }
     }
-    
+
     // MARK: - Equatable
-    public static func == (lhs: TerminalTask, rhs: TerminalTask) -> Bool {
+
+    public static func == (lhs: TerminalTask, rhs: TerminalTask) -> Bool
+    {
         switch (lhs, rhs) {
         case (.xcodebuild, .xcodebuild):
             return true
         case (.git, .git):
             return true
-        case (.sourcery, .sourcery ):
+        case (.sourcery, .sourcery):
             return true
         default:
             return false
         }
     }
-    
+
     // MARK: - RawRepresentable
-    
+
     public typealias RawValue = String
-    
-    public var rawValue: String {
+
+    public var rawValue: String
+    {
         switch self {
         case .xcodebuild:
             return "xcodebuild"
@@ -67,13 +71,13 @@ public enum TerminalTask: RawRepresentable, Equatable, AutoCases {
             return "xcodebuild"
         }
     }
-    
-    public init?(rawValue: String) {
+
+    public init?(rawValue: String)
+    {
         switch rawValue {
         default:
             os_log("not possible %@", type: .error, rawValue)
             return nil
-        
         }
     }
 }

@@ -8,22 +8,22 @@
 import Foundation
 import SourceryAutoProtocols
 
-public protocol ArchivePlistProtocol: Codable, AutoMockable {
-    
+public protocol ArchivePlistProtocol: Codable, AutoMockable
+{
     /// sourcery:inline:ArchivePlist.AutoGenerateProtocol
     var applicationProperties: String { get }
     var applicationPath: String { get }
     /// sourcery:end
-    
 }
 
-public struct ArchivePlist: ArchivePlistProtocol, Codable, AutoGenerateProtocol {
+public struct ArchivePlist: ArchivePlistProtocol, Codable, AutoGenerateProtocol
+{
     public let applicationProperties: String
     public let applicationPath: String
-    
-    enum CodingKeys: String, CodingKey {
+
+    enum CodingKeys: String, CodingKey
+    {
         case applicationProperties = "ApplicationProperties"
         case applicationPath = "ApplicationPath"
     }
-    
 }

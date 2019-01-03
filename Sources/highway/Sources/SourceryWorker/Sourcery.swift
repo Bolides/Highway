@@ -6,15 +6,15 @@
 //
 
 import Foundation
-import SourceryAutoProtocols
-import Task
-import ZFile
-import Terminal
 import os
 import SignPost
+import SourceryAutoProtocols
+import Task
+import Terminal
+import ZFile
 
-public protocol SourceryProtocol: ExecutableProtocol {
-    
+public protocol SourceryProtocol: ExecutableProtocol
+{
     /// sourcery:inline:Sourcery.AutoGenerateProtocol
     var templateFolder: FolderProtocol { get }
     var outputFolder: FolderProtocol { get }
@@ -24,11 +24,11 @@ public protocol SourceryProtocol: ExecutableProtocol {
     var sourceryYMLFile: FileProtocol { get }
     var imports: Set<TemplatePrepend> { get }
 
-   /// sourcery:end
-    
+    /// sourcery:end
 }
 
-public struct Sourcery: SourceryProtocol, AutoGenerateProtocol {
+public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
+{
     public let templateFolder: FolderProtocol
     public let outputFolder: FolderProtocol
     public let sourcesFolders: [FolderProtocol]
@@ -37,11 +37,13 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol {
     public let sourceryYMLFile: FileProtocol
     public let imports: Set<TemplatePrepend>
 
-    public struct ExecutableNotFoundError: Swift.Error, CustomDebugStringConvertible {
+    public struct ExecutableNotFoundError: Swift.Error, CustomDebugStringConvertible
+    {
         let message: String
         let originalError: Error
-        
-        init(_ originalError: Error) {
+
+        init(_ originalError: Error)
+        {
             message = """
             
             🧙‍♂️ ExecutableNotFoundError
@@ -56,14 +58,16 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol {
             """
             self.originalError = originalError
         }
-        
-        public var debugDescription: String {
+
+        public var debugDescription: String
+        {
             return message
         }
     }
+
     private let signPost: SignPostProtocol
-    
-    public init (
+
+    public init(
         sourcesFolders: [FolderProtocol],
         individualSourceFiles: [File]? = nil,
         templateFolder: FolderProtocol,
@@ -72,7 +76,8 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol {
         sourceryYMLFile: FileProtocol,
         imports: Set<TemplatePrepend>,
         signPost: SignPostProtocol = SignPost.shared
-    ) throws  {
+    ) throws
+    {
         self.templateFolder = templateFolder
         self.outputFolder = outputFolder
         self.sourcesFolders = sourcesFolders
@@ -80,13 +85,13 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol {
         self.sourceryAutoProtocolsFile = sourceryAutoProtocolsFile
         self.sourceryYMLFile = sourceryYMLFile
         self.imports = imports
-       
+
         // generate .sourcery file
-        
+
         try sourceryYMLFile.write(
             string: """
             sources:
-            \(sourcesFolders.map { "- \"\($0.path)\""}.joined(separator: "\n"))
+            \(sourcesFolders.map { "- \"\($0.path)\"" }.joined(separator: "\n"))
             - "\(sourceryAutoProtocolsFile.path)"
             \(individualSourceFiles == nil ? "" : individualSourceFiles!.map { "- \($0.path)" }.joined(separator: "\n"))
             templates:
@@ -94,21 +99,23 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol {
             output:
              "\(outputFolder.path)"
             """,
-            encoding:  .utf8
+            encoding: .utf8
         )
-        
+
         self.signPost = signPost
         signPost.verbose("🧙‍♂️ Sourcery YML file can be found at path:\n \(sourceryYMLFile.path)\n")
     }
-    
+
     // sourcery:skipProtocol
-    public func executableFile() throws -> FileProtocol {
-        do {
+    public func executableFile() throws -> FileProtocol
+    {
+        do
+        {
             return try SourceryExecutableFile()
-        } catch {
+        }
+        catch
+        {
             throw ExecutableNotFoundError(error)
         }
     }
-    
 }
-

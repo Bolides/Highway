@@ -8,42 +8,37 @@
 
 import Foundation
 
+public protocol AutoMockable {}
 
-public protocol AutoMockable {
-}
+@objc public protocol AutoObjcMockable {}
 
-@objc public protocol AutoObjcMockable {
-    
-}
-public protocol AutoGenerateProtocol {
-}
+public protocol AutoGenerateProtocol {}
 
-public protocol AutoGenerateSelectiveProtocol {
-}
+public protocol AutoGenerateSelectiveProtocol {}
 
-public protocol AutoEquatable {
-}
+public protocol AutoEquatable {}
 
 // MARK: Enums
 
-public protocol AutoCases {
-}
+public protocol AutoCases {}
 
 // MARK: - Sourcery Errors
 
-public enum SourceryMockError: Swift.Error, Hashable {
+public enum SourceryMockError: Swift.Error, Hashable
+{
     case implementErrorCaseFor(String)
     case subclassMockBeforeUsing(String)
-    
-    public var debugDescription: String {
+
+    public var debugDescription: String
+    {
         switch self {
         case let .implementErrorCaseFor(message):
-            return  """
+            return """
             🧙‍♂️ SourceryMockError.implementErrorCaseFor:
             message: \(message)
             """
-        case .subclassMockBeforeUsing(let message):
-            return  """
+        case let .subclassMockBeforeUsing(message):
+            return """
             \n
             🧙‍♂️ SourceryMockError.subclassMockBeforeUsing:
             message: \(message)

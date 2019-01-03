@@ -1,25 +1,32 @@
 import Foundation
 
-public protocol Printable {
+public protocol Printable
+{
     func printableString(with options: Print.Options) -> String
 }
 
-public protocol Printer {
+public protocol Printer
+{
     func string(with options: Print.Options) -> String
 }
 
-public enum Print {
-    public struct Options {
+public enum Print
+{
+    public struct Options
+    {
         public let width: Int
-        public static func defaultOptions() -> Options {
+        public static func defaultOptions() -> Options
+        {
             return self.init(width: terminal_width())
         }
     }
 }
 
-private func terminal_width() -> Int {
+private func terminal_width() -> Int
+{
     let env = ProcessInfo.processInfo.environment
-    if let columns = env["COLUMNS"], let width = Int(columns) {
+    if let columns = env["COLUMNS"], let width = Int(columns)
+    {
         return width
     }
     var ws = winsize()

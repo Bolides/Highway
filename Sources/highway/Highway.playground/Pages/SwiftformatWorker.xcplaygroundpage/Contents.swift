@@ -1,17 +1,16 @@
 //: [Previous](@previous)
 
-import Foundation
-// import SwiftFormat
-import SwiftFormatWorker
-import PlaygroundSupport
-import ZFile
-import os
 import Darwin.POSIX
 import Foundation
+import os
+import PlaygroundSupport
+// import SwiftFormat
+import SwiftFormatWorker
+import ZFile
 
 PlaygroundPage.current.needsIndefiniteExecution = true
 
-//CLI.print = { message, type in
+// CLI.print = { message, type in
 //    switch type {
 //    case .info:
 //        os_log(.info, "💁🏻‍♂️ \n%@\n", message)
@@ -24,16 +23,16 @@ PlaygroundPage.current.needsIndefiniteExecution = true
 //    case .content:
 //        os_log(.info, "💁🏻‍♂️ \n%@\n", message)
 //    }
-//}
+// }
 
-do {
-    
+do
+{
     // /Users/doozmen/Documents/dooZ/Babylon/ios-babylon-application/Sources/Carthage/Checkouts/highway/Sources/highway/.swiftformat.md
     let folder = try Folder(path: "/Users/doozmen/Documents/dooZ/Babylon/ios-babylon-application/Sources/Carthage/Checkouts/highway/Sources/highway")
     let config = try folder.file(named: ".swiftformat.md")
-    
+
     let worker = SwiftFormatWorker()
-    
+
 //
 //    DispatchQueue(label: "be.dooz.swiftformat").async {
 //
@@ -45,10 +44,10 @@ do {
 //
 //            PlaygroundPage.current.finishExecution()
 //    }
-} catch {
+}
+catch
+{
     print(error)
 }
-
-
 
 //: [Next](@next)

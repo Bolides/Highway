@@ -1,5 +1,6 @@
 import Foundation
 
-public struct TestReport {
+public struct TestReport
+{
     public init() {}
 }

@@ -1,47 +1,56 @@
-import XCTest
 import HighwayCore
-import ZFile
 import Url
+import XCTest
+import ZFile
 
-final class HighwayBundleTests: XCTestCase {
+final class HighwayBundleTests: XCTestCase
+{
     private var fs = InMemoryFileSystem()
     private let config = HighwayBundle.Configuration.standard
-    
-    override func setUp() {
+
+    override func setUp()
+    {
         super.setUp()
         fs = InMemoryFileSystem()
     }
-    
-    func testInitFailsIfDirectoryDoesNotExist() {
+
+    func testInitFailsIfDirectoryDoesNotExist()
+    {
         XCTAssertThrowsError(try HighwayBundle(url: Absolute("/bundle"), fileSystem: fs))
         XCTAssertThrowsError(try HighwayBundle(fileSystem: fs, parentUrl: Absolute("/bundle")))
     }
-    
-    func testInitFailsIfUrlPointsToFile() {
+
+    func testInitFailsIfUrlPointsToFile()
+    {
         let url = Absolute("/bundle")
         XCTAssertNoThrow(try fs.writeData(Data(), to: url))
         XCTAssertThrowsError(try HighwayBundle(url: url, fileSystem: fs))
         XCTAssertNoThrow(try fs.writeData(Data(), to: Absolute("/bundle/\(HighwayBundle.Configuration.standard.directoryName)")))
         XCTAssertThrowsError(try HighwayBundle(fileSystem: fs, parentUrl: url))
     }
-    func testInitWorksIfDirectoryExists() {
+
+    func testInitWorksIfDirectoryExists()
+    {
         XCTAssertNoThrow(try fs.createDirectory(at: Absolute("/dir/\(config.directoryName)")))
         XCTAssertNoThrow(try HighwayBundle(url: Absolute("/dir/\(config.directoryName)"), fileSystem: fs))
         XCTAssertNoThrow(try HighwayBundle(fileSystem: fs, parentUrl: Absolute("/dir")))
     }
-    func testWriteMethods() {
+
+    func testWriteMethods()
+    {
         // Prepare the FS
         let url = Absolute("/dir/\(config.directoryName)")
         XCTAssertNoThrow(try fs.createDirectory(at: url))
-        do {
+        do
+        {
             let b = try HighwayBundle(url: url, fileSystem: fs)
             var input = Data([])
-            
+
             // xcconfig
             input = Data([0x1])
             XCTAssertNoThrow(try b.write(xcconfigData: input))
             XCTAssertEqual(try fs.data(at: b.xcconfigFileUrl), input)
-            
+
             // packageDescription
             input = Data([0x12])
             XCTAssertNoThrow(try b.write(packageDescription: input))
@@ -52,9 +61,10 @@ final class HighwayBundleTests: XCTestCase {
             XCTAssertThrowsError(try fs.assertItem(at: b.mainSwiftFileUrl, is: .file))
             XCTAssertNoThrow(try b.write(mainSwiftData: input))
             XCTAssertEqual(try fs.data(at: b.mainSwiftFileUrl), input)
-        } catch {
+        }
+        catch
+        {
             XCTFail(error.localizedDescription)
         }
     }
-    
 }

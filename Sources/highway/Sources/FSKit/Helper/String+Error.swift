@@ -1,3 +1,3 @@
 import Foundation
 
-extension String: Swift.Error { }
+extension String: Swift.Error {}

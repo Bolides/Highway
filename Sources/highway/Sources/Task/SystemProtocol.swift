@@ -9,42 +9,50 @@ import SourceryAutoProtocols
 /// Everytime you would write a class that needs to create and execute Tasks
 /// you no longer have to initialize it with both but rather use the System
 /// class for that. It is just a little bit of convenience.
-public protocol SystemProtocol: AutoMockable {
-    
+public protocol SystemProtocol: AutoMockable
+{
     /// sourcery:inline:LocalSystem.AutoGenerateProtocol
 
-    func task(named name: String) throws  -> Task
-    func execute(_ task: Task) throws  -> Bool
-    func launch(_ task: Task, wait: Bool) throws  -> Bool
+    func task(named name: String) throws -> Task
+    func execute(_ task: Task) throws -> Bool
+    func launch(_ task: Task, wait: Bool) throws -> Bool
     /// sourcery:end
 }
 
-public extension SystemProtocol {
-    func execute(_ task: Task) throws -> Bool {
+public extension SystemProtocol
+{
+    func execute(_ task: Task) throws -> Bool
+    {
         return try launch(task, wait: true)
     }
 }
 
 // MARK: - Errors
-public enum TaskCreationError: Swift.Error {
+
+public enum TaskCreationError: Swift.Error
+{
     case executableNotFound(commandName: String)
 }
 
-public enum ExecutionError: Swift.Error {
+public enum ExecutionError: Swift.Error
+{
     case currentDirectoryDoesNotExist
     case invalidStateAfterExecuting
     case taskDidExitWithFailure(Termination)
 }
 
 // MARK: - Equatable for ExecutionError
-extension ExecutionError: Equatable {
-    public static func ==(lhs: ExecutionError, rhs: ExecutionError) -> Bool {
+
+extension ExecutionError: Equatable
+{
+    public static func == (lhs: ExecutionError, rhs: ExecutionError) -> Bool
+    {
         let errors = (lhs, rhs)
         switch errors {
         case (.currentDirectoryDoesNotExist, .currentDirectoryDoesNotExist),
              (.invalidStateAfterExecuting, .invalidStateAfterExecuting):
             return true
-        case (.taskDidExitWithFailure(let lf), .taskDidExitWithFailure(let rf)):
+        case let (.taskDidExitWithFailure(lf), .taskDidExitWithFailure(rf)):
             return lf == rf
         default: return false
         }

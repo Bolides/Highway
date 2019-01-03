@@ -11,69 +11,76 @@ import Foundation
 import os
 import SourceryAutoProtocols
 
-public protocol DestinationFactoryProtocol: AutoMockable {
-    
+public protocol DestinationFactoryProtocol: AutoMockable
+{
     /// sourcery:inline:DestinationFactory.AutoGenerateProtocol
 
     func macOS(architecture: Destination.Architecture) -> Destination
     func device(_ device: Destination.Device, name: String?, isGeneric: Bool, id: String?) -> Destination
     func simulator(_ simulator: Destination.Simulator, name: String, os: Destination.OS, id: String?) -> Destination
-    
+
     /// sourcery:end
-    
 }
 
-public struct DestinationFactory: AutoGenerateProtocol {
-    
-    public init() { }
-    
-    public func macOS(architecture: Destination.Architecture) -> Destination {
+public struct DestinationFactory: AutoGenerateProtocol
+{
+    public init() {}
+
+    public func macOS(architecture: Destination.Architecture) -> Destination
+    {
         return Destination(
             [
-                "platform" : Destination.PlatformType.macOS.rawValue,
-                "arch" : architecture.rawValue
+                "platform": Destination.PlatformType.macOS.rawValue,
+                "arch": architecture.rawValue,
             ]
         )
     }
-    
-    public func device(_ device: Destination.Device, name: String?, isGeneric: Bool, id: String?) -> Destination {
+
+    public func device(_ device: Destination.Device, name: String?, isGeneric: Bool, id: String?) -> Destination
+    {
         var properties = [String: String]()
         properties["\(isGeneric ? "generic/" : "")platform"] = device.name
-        if let name = name {
+        if let name = name
+        {
             properties["name"] = name
         }
-        if let id = id {
+        if let id = id
+        {
             properties["id"] = id
         }
         return Destination(properties)
     }
-    
-    public func simulator(_ simulator: Destination.Simulator, name: String, os: Destination.OS, id: String?) -> Destination {
+
+    public func simulator(_ simulator: Destination.Simulator, name: String, os: Destination.OS, id: String?) -> Destination
+    {
         var properties = [String: String]()
-        
+
         properties["platform"] = simulator.name
         properties["OS"] = os.name
         properties["name"] = name
-        if let id = id {
+        if let id = id
+        {
             properties["id"] = id
         }
         return Destination(properties)
     }
-    
+
     // MARK: - Error
-    
-    enum Error: Swift.Error, Equatable, RawRepresentable, CustomDebugStringConvertible {
-        
+
+    enum Error: Swift.Error, Equatable, RawRepresentable, CustomDebugStringConvertible
+    {
         typealias RawValue = String
-        
-        var rawValue: String {
+
+        var rawValue: String
+        {
             switch self {
-            case .message(_):
+            case .message:
                 return "message"
             }
         }
-        
-        init?(rawValue: String) {
+
+        init?(rawValue: String)
+        {
             switch rawValue {
             case "message":
                 self = .message("general")
@@ -81,9 +88,9 @@ public struct DestinationFactory: AutoGenerateProtocol {
                 return nil
             }
         }
-        
-        var debugDescription: String {
-            
+
+        var debugDescription: String
+        {
             switch self {
             case let .message(message):
                 return """
@@ -93,10 +100,8 @@ public struct DestinationFactory: AutoGenerateProtocol {
                 
                 """
             }
-            
         }
-        
+
         case message(String)
-        
     }
 }

@@ -1,20 +1,26 @@
-import ZFile
-import Url
-import Task
 import Arguments
 import SourceryAutoProtocols
+import Task
+import Url
+import ZFile
 
-public struct GitTool: AutoGenerateProtocol {
+public struct GitTool: AutoGenerateProtocol
+{
     // MARK: - Init
-    public init(system: SystemProtocol) {
+
+    public init(system: SystemProtocol)
+    {
         self.system = system
     }
-    
+
     // MARK: - Properties
+
     private let system: SystemProtocol
-    
+
     // MARK: - Helper
-    private func _git(with arguments: Arguments, at url: FolderProtocol) throws -> Task {
+
+    private func _git(with arguments: Arguments, at url: FolderProtocol) throws -> Task
+    {
         let task = try system.task(named: "git")
         task.arguments = arguments
         task.currentDirectoryUrl = url
@@ -22,54 +28,66 @@ public struct GitTool: AutoGenerateProtocol {
     }
 }
 
-extension GitTool: GitToolProtocol {
-    public func addAll(at url: FolderProtocol) throws {
+extension GitTool: GitToolProtocol
+{
+    public func addAll(at url: FolderProtocol) throws
+    {
         _ = try system.execute(try _git(with: ["add", "."], at: url))
     }
-    
-    public func commit(at url: FolderProtocol, message: String) throws {
+
+    public func commit(at url: FolderProtocol, message: String) throws
+    {
         _ = try system.execute(try _git(with: ["commit", "-m", message], at: url))
     }
-    
-    public func pushToMaster(at url: FolderProtocol) throws {
+
+    public func pushToMaster(at url: FolderProtocol) throws
+    {
         _ = try system.execute(try _git(with: ["push", "origin", "master"], at: url))
     }
-    
-    public func pushTagsToMaster(at url: FolderProtocol) throws {
+
+    public func pushTagsToMaster(at url: FolderProtocol) throws
+    {
         _ = try system.execute(try _git(with: ["push", "--tags"], at: url))
     }
-    
-    public func pull(at url: FolderProtocol) throws {
+
+    public func pull(at url: FolderProtocol) throws
+    {
         _ = try system.execute(try _git(with: ["pull"], at: url))
     }
-    
-    public func currentTag(at url: FolderProtocol) throws -> String {
+
+    public func currentTag(at url: FolderProtocol) throws -> String
+    {
         let task = try _git(with: ["describe", "--tags"], at: url)
         task.enableReadableOutputDataCapturing()
         _ = try system.execute(task)
-        
-        guard let rawTag = task.trimmedOutput else {
+
+        guard let rawTag = task.trimmedOutput else
+        {
             throw "Failed to get current tag."
         }
-        guard rawTag.isEmpty == false else {
+        guard rawTag.isEmpty == false else
+        {
             throw "Failed to get current tag."
         }
-        guard  rawTag.hasPrefix("v") else {
+        guard rawTag.hasPrefix("v") else
+        {
             throw "'\(rawTag)' is not a valid version number: Must start with 'v'."
         }
-        let numberOfDots = rawTag.reduce(0) { (result, char) -> Int in
+        let numberOfDots = rawTag.reduce(0)
+        { (result, char) -> Int in
             return char == "." ? result + 1 : result
         }
-        guard numberOfDots == 2 else {
+        guard numberOfDots == 2 else
+        {
             throw "'\(rawTag)' is not a valid version number: Must contain two '.'."
         }
         return rawTag
     }
-    
-    public func clone(with options: CloneOptions) throws {
+
+    public func clone(with options: CloneOptions) throws
+    {
         let input: [String] = ["clone"] + (options.performMirror ? ["--mirror"] : []) + [options.remoteUrl, options.localPath.path]
         let arguments = Arguments(input)
         _ = try system.execute(try _git(with: arguments, at: try Folder(path: "/")))
     }
 }
-
