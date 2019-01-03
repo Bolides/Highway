@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -724,10 +723,23 @@
                                     <action selector="runSourcery:" target="XfG-lQ-9wD" id="6gR-1z-AIB"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Qp-T6-Mxx">
+                                <rect key="frame" x="183" y="124" width="114" height="32"/>
+                                <buttonCell key="cell" type="push" title="SwiftFormat" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bRJ-ea-VN6">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="runSwiftFormat:" target="XfG-lQ-9wD" id="vUB-Qx-Kye"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="wTp-h9-xaX" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="62" id="14e-zT-3Ql"/>
                             <constraint firstItem="wTp-h9-xaX" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="1W7-AM-FwD"/>
+                            <constraint firstItem="5Qp-T6-Mxx" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="4t1-xy-LmR"/>
+                            <constraint firstItem="wTp-h9-xaX" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="NB8-HK-94F"/>
+                            <constraint firstItem="5Qp-T6-Mxx" firstAttribute="top" secondItem="wTp-h9-xaX" secondAttribute="bottom" constant="12" id="VCX-8H-mRV"/>
                         </constraints>
                     </view>
                 </viewController>

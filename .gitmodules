@@ -13,3 +13,6 @@
 [submodule "Carthage/Checkouts/ZFile"]
 	path = Sources/Carthage/Checkouts/ZFile
 	url = https://github.com/doozMen/ZFile.git
+[submodule "Carthage/Checkouts/SwiftFormat"]
+	path = Sources/Carthage/Checkouts/SwiftFormat
+	url = https://github.com/nicklockwood/SwiftFormat.git

@@ -8,17 +8,19 @@
 import Quick
 import Nimble
 
-import SwiftformatWorker
+import SwiftFormatWorker
+import ZFile
+import ZFileMock
 
 class SwiftformatWorkerTests: QuickSpec {
 
     override func spec() {
         super.spec()
         
-        var sut: SwiftformatWorker!
+        var sut: SwiftFormatWorker!
         
         beforeEach {
-            sut = SwiftformatWorker()
+            sut = SwiftFormatWorker(folderToFormat: try! FolderProtocolMock(), configFile: try! FileProtocolMock())
         }
     }
     

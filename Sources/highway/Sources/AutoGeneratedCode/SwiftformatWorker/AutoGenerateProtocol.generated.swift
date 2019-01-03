@@ -18,3 +18,5 @@ import Foundation
 
 
 
+// Generated protocol inline for SwiftFormatWorker -> See code in the file of that type
+
