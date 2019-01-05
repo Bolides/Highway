@@ -16,6 +16,8 @@ import ZFile
 public protocol SourceryProtocol: ExecutableProtocol
 {
     /// sourcery:inline:Sourcery.AutoGenerateProtocol
+    var uuid: String { get }
+    var name: String { get }
     var templateFolder: FolderProtocol { get }
     var outputFolder: FolderProtocol { get }
     var sourcesFolders: [FolderProtocol] { get }
@@ -29,44 +31,30 @@ public protocol SourceryProtocol: ExecutableProtocol
 
 public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
 {
+    // MARK: - Identify the Sourcery Model
+    
+    public let uuid: String = UUID().uuidString
+    public let name: String
+
+    // MARK: - Folders and Files
+    
     public let templateFolder: FolderProtocol
     public let outputFolder: FolderProtocol
     public let sourcesFolders: [FolderProtocol]
     public let individualSourceFiles: [File]?
     public let sourceryAutoProtocolsFile: FileProtocol
     public let sourceryYMLFile: FileProtocol
+    
+    // MARK: - Imports to be prepended to templates
+    
     public let imports: Set<TemplatePrepend>
-
-    public struct ExecutableNotFoundError: Swift.Error, CustomDebugStringConvertible
-    {
-        let message: String
-        let originalError: Error
-
-        init(_ originalError: Error)
-        {
-            message = """
-            
-            🧙‍♂️ ExecutableNotFoundError
-            
-            You should install sourcery in your application folder by building it from source.
-            Instructions on how to do that can be found https://github.com/krzysztofzablocki/Sourcery
-            
-            After that is done move the applition to the application folder so GitHooks can execute task
-            
-            `/Applications/Sourcery.app/Contents/MacOS/Sourcery`
-            
-            """
-            self.originalError = originalError
-        }
-
-        public var debugDescription: String
-        {
-            return message
-        }
-    }
-
+    
+    // MARK: - Private
+    
     private let signPost: SignPostProtocol
 
+    // MARK: - Init
+    
     public init(
         sourcesFolders: [FolderProtocol],
         individualSourceFiles: [File]? = nil,
@@ -104,6 +92,8 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
 
         self.signPost = signPost
         signPost.verbose("🧙‍♂️ Sourcery YML file can be found at path:\n \(sourceryYMLFile.path)\n")
+        
+        name = sourcesFolders.map { $0.name }.joined(separator: "\n")
     }
 
     // sourcery:skipProtocol
@@ -116,6 +106,36 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
         catch
         {
             throw ExecutableNotFoundError(error)
+        }
+    }
+    
+    // MARK: - Error
+    
+    public struct ExecutableNotFoundError: Swift.Error, CustomDebugStringConvertible
+    {
+        let message: String
+        let originalError: Error
+        
+        init(_ originalError: Error)
+        {
+            message = """
+            
+            🧙‍♂️ ExecutableNotFoundError
+            
+            You should install sourcery in your application folder by building it from source.
+            Instructions on how to do that can be found https://github.com/krzysztofzablocki/Sourcery
+            
+            After that is done move the applition to the application folder so GitHooks can execute task
+            
+            `/Applications/Sourcery.app/Contents/MacOS/Sourcery`
+            
+            """
+            self.originalError = originalError
+        }
+        
+        public var debugDescription: String
+        {
+            return message
         }
     }
 }
