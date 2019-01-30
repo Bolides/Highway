@@ -10,6 +10,8 @@ public protocol TerminalWorkerProtocol: AutoMockable
 {
     @discardableResult
     func terminal(task: TerminalTask) throws -> [String]
+    @discardableResult
+    func runExecutable(_ executable: ExecutableProtocol) throws -> [String]
 }
 
 public struct TerminalWorker: TerminalWorkerProtocol
@@ -22,45 +24,83 @@ public struct TerminalWorker: TerminalWorkerProtocol
     }
 
     @discardableResult
+    public func runExecutable(_ executable: ExecutableProtocol) throws -> [String] {
+        let processTask = Process()
+        let executableFile: FileProtocol = try executable.executableFile()
+        try processTask.executable(set: executableFile)
+        
+        let message = "👾  running executable at path \(executableFile)\n"
+        signPost.verbose(message)
+        
+        return try runProcess(processTask)
+    }
+    
+    @discardableResult
     public func terminal(task: TerminalTask) throws -> [String]
     {
-        var finalResult = [String]()
 
         let processTask = Process()
         processTask.arguments = try task.executable.arguments().all
         try processTask.executable(set: try task.executable.executableFile())
-
         let message = "👾  \(task.rawValue): \(processTask.executableFile)\n"
-
         signPost.verbose(message)
+        
+        return try runProcess(processTask)
+    }
+    
+    private func runProcess(_ processTask: Process, task: TerminalTask? = nil) throws -> [String] {
+        
+        var finalResult = [String]()
 
         let pipe = Pipe()
         processTask.standardOutput = pipe
         processTask.standardError = pipe
         processTask.launch()
         processTask.waitUntilExit()
-
+        
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
         let outputData = String(data: data, encoding: String.Encoding.utf8)
         let output = outputData?.components(separatedBy: "\n")
-
+        
         guard let exitCode = TerminalSysExitCode(rawValue: processTask.terminationStatus) else
         {
-            throw TerminalWorker.Error.errorUnkownExitCode(code: Int(processTask.terminationStatus), task: task, output: output ?? [])
+            if let task = task {
+                throw TerminalWorker.Error.errorUnkownExitCode(code: Int(processTask.terminationStatus), task: task, output: output ?? [])
+            } else if let output = output {
+                finalResult.append(contentsOf: output)
+                throw TerminalWorker.Error.unknownTask(errorOutput: finalResult)
+            } else {
+                throw TerminalWorker.Error.unknownTask(errorOutput: ["No exit code or output"])
+            }
         }
-
+        
         guard exitCode == .ok else
         {
-            throw TerminalWorker.Error.errorExitCode(code: exitCode, task: task, output: output ?? [])
+            if let task = task {
+                
+                throw TerminalWorker.Error.errorExitCode(code: exitCode, task: task, output: output ?? [])
+            } else if let output = output {
+                finalResult.append(contentsOf: output)
+                throw TerminalWorker.Error.unknownTask(errorOutput: finalResult)
+            } else {
+                throw TerminalWorker.Error.unknownTask(errorOutput: ["No exit code or output"])
+            }
         }
-
+        
         guard let result = output, result.count >= 2 else
         {
-            throw TerminalWorker.Error.emptyOutputFromTask(task)
+             if let task = task {
+                throw TerminalWorker.Error.emptyOutputFromTask(task)
+            } else if let output = output {
+                finalResult.append(contentsOf: output)
+                throw TerminalWorker.Error.unknownTask(errorOutput: finalResult)
+            } else {
+                throw TerminalWorker.Error.unknownTask(errorOutput: ["No exit code or output"])
+            }
         }
-
+        
         finalResult.append(contentsOf: result)
-
+        
         return finalResult
     }
 
