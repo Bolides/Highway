@@ -174,16 +174,6 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
 
     // MARK: - Private
 
-    private func optionallyRun(_ swiftFormatWorker: SwiftFormatWorkerProtocol?, kind: String, asyncFinished: (() -> Void)?) {
-        if let swiftFormatWorker = swiftFormatWorker
-        {
-           
-        } else {
-            signPost.message("🧙‍♂️ ⚠️ swiftformat will not run on \(kind).\n  (Optionally init SourceryWorker with swiftFormatForSourcesWorker to enable)")
-            asyncFinished?()
-        }
-    }
-    
     private func replace(in fileSequence: AnySequence<File>, inline: (current: String, replace: String), end: (current: String, replace: String)) throws
     {
         try fileSequence.forEach
