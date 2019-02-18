@@ -14,20 +14,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FD1126CB21C77F050072607D"
-               BuildableName = "SignPost.framework"
-               BlueprintName = "SignPost"
-               ReferencedContainer = "container:Highway.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "highway::Arguments"
                BuildableName = "Arguments.framework"
                BlueprintName = "Arguments"
@@ -224,6 +210,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FD1126CB21C77F050072607D"
+               BuildableName = "SignPost.framework"
+               BlueprintName = "SignPost"
+               ReferencedContainer = "container:Highway.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "FDB7A9C621CD6F7F0045DDA8"
                BuildableName = "SignPostMock.framework"
                BlueprintName = "SignPostMock"
@@ -351,8 +351,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FD3F8A1821DDE43A00BBDA58"
-               BuildableName = "SwiftformatWorkerTests.xctest"
-               BlueprintName = "SwiftformatWorkerTests"
+               BuildableName = "SwiftFormatWorkerTests.xctest"
+               BlueprintName = "SwiftFormatWorkerTests"
                ReferencedContainer = "container:Highway.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -522,9 +522,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FD1126CB21C77F050072607D"
-            BuildableName = "SignPost.framework"
-            BlueprintName = "SignPost"
+            BlueprintIdentifier = "highway::Arguments"
+            BuildableName = "Arguments.framework"
+            BlueprintName = "Arguments"
             ReferencedContainer = "container:Highway.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -544,9 +544,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FD1126CB21C77F050072607D"
-            BuildableName = "SignPost.framework"
-            BlueprintName = "SignPost"
+            BlueprintIdentifier = "highway::Arguments"
+            BuildableName = "Arguments.framework"
+            BlueprintName = "Arguments"
             ReferencedContainer = "container:Highway.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -562,9 +562,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FD1126CB21C77F050072607D"
-            BuildableName = "SignPost.framework"
-            BlueprintName = "SignPost"
+            BlueprintIdentifier = "highway::Arguments"
+            BuildableName = "Arguments.framework"
+            BlueprintName = "Arguments"
             ReferencedContainer = "container:Highway.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -1,6 +1,6 @@
 //
-//  SwiftformatWorkerTests.swift
-//  SwiftformatWorkerTests
+//  SwiftFormatWorkerTests.swift
+//  SwiftFormatWorkerTests
 //
 //  Created by Stijn on 03/01/2019.
 //
@@ -13,7 +13,7 @@ import ZFile
 import ZFileMock
 import ProjectFolderWorker
 
-class SwiftformatWorkerTests: QuickSpec
+class SwiftFormatWorkerTests: QuickSpec
 {
     override func spec()
     {

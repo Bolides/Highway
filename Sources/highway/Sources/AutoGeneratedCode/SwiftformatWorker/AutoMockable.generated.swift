@@ -1,7 +1,7 @@
 import Foundation
 import os
 import SourceryAutoProtocols
-import SwiftformatWorker
+import SwiftFormatWorker
 import ZFile
 import ZFileMock
 

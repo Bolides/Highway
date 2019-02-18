@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import ProjectFolderWorker_macOS
+@testable import ProjectFolderWorker
 
 class ProjectFolderWorker: XCTestCase {
 

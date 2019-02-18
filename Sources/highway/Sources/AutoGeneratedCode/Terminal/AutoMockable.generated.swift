@@ -156,6 +156,10 @@ open class ExecutableProtocolMock: ExecutableProtocol
 
 open class TerminalWorkerProtocolMock: TerminalWorkerProtocol
 {
+    public func runExecutable(_ executable: ExecutableProtocol) throws -> [String] {
+        return []
+    }
+    
     public init() {}
 
     // MARK: - <terminal> - parameters

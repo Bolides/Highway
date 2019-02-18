@@ -1,6 +1,6 @@
 //
 //  SwiftFormatWorker.swift
-//  SwiftformatWorker
+//  SwiftFormatWorker
 //
 //  Created by Stijn on 03/01/2019.
 //
@@ -14,7 +14,7 @@ import ZFile
 
 public protocol SwiftFormatWorkerProtocol: AutoMockable
 {
-    /// sourcery:inline:SwiftformatWorker.AutoGenerateProtocol
+    /// sourcery:inline:SwiftFormatWorker.AutoGenerateProtocol
 
     func attempt(_ async: (@escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void))
     /// sourcery:end
