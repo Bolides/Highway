@@ -8,32 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FD0553A921D1291400E9B0D0 /* TestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0553A721D1291400E9B0D0 /* TestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD0553E821D136A700E9B0D0 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0553E721D136A700E9B0D0 /* ZFileMock.framework */; };
-		FD0553EA21D136B600E9B0D0 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0553E921D136B600E9B0D0 /* ZFileMock.framework */; };
-		FD0553EC21D136C200E9B0D0 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0553EB21D136C200E9B0D0 /* ZFileMock.framework */; };
-		FD0553EE21D136CB00E9B0D0 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0553ED21D136CB00E9B0D0 /* ZFileMock.framework */; };
-		FD0553EF21D136D500E9B0D0 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F42221BEE5340052222C /* ZFile.framework */; };
-		FD05540421D138F700E9B0D0 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0553ED21D136CB00E9B0D0 /* ZFileMock.framework */; };
-		FD05540521D1395400E9B0D0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D321CD704F0045DDA8 /* Quick.framework */; };
-		FD05540621D1395C00E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D521CD70580045DDA8 /* Nimble.framework */; };
-		FD05540721D1396500E9B0D0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D321CD704F0045DDA8 /* Quick.framework */; };
-		FD05540821D1396D00E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D521CD70580045DDA8 /* Nimble.framework */; };
-		FD05540921D1397A00E9B0D0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D321CD704F0045DDA8 /* Quick.framework */; };
-		FD05540A21D1398100E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D521CD70580045DDA8 /* Nimble.framework */; };
-		FD05540B21D1398D00E9B0D0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D321CD704F0045DDA8 /* Quick.framework */; };
-		FD05540C21D1399500E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D521CD70580045DDA8 /* Nimble.framework */; };
-		FD05540D21D1399E00E9B0D0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D321CD704F0045DDA8 /* Quick.framework */; };
-		FD05540E21D139A400E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D521CD70580045DDA8 /* Nimble.framework */; };
-		FD05540F21D139AE00E9B0D0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D321CD704F0045DDA8 /* Quick.framework */; };
-		FD05541021D139B500E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D521CD70580045DDA8 /* Nimble.framework */; };
-		FD05541121D139BE00E9B0D0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D321CD704F0045DDA8 /* Quick.framework */; };
-		FD05541221D139C500E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D521CD70580045DDA8 /* Nimble.framework */; };
-		FD05541321D139CD00E9B0D0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D321CD704F0045DDA8 /* Quick.framework */; };
-		FD05541421D139D400E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D521CD70580045DDA8 /* Nimble.framework */; };
-		FD05541521D139DD00E9B0D0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D321CD704F0045DDA8 /* Quick.framework */; };
-		FD05541621D139E400E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D521CD70580045DDA8 /* Nimble.framework */; };
-		FD05541721D139EC00E9B0D0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D321CD704F0045DDA8 /* Quick.framework */; };
-		FD05541821D139F300E9B0D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D521CD70580045DDA8 /* Nimble.framework */; };
 		FD11267F21C6924C0072607D /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
 		FD1126C121C771970072607D /* ArgumentsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1126C021C771970072607D /* ArgumentsWorker.swift */; };
 		FD1126C621C7756A0072607D /* SourceryExecutableFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1126C521C7756A0072607D /* SourceryExecutableFile.swift */; };
@@ -58,7 +32,6 @@
 		FD326D942109E3C600AE3A98 /* ArchivePlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326D932109E3C600AE3A98 /* ArchivePlist.swift */; };
 		FD326D972109F2B800AE3A98 /* GitTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326D952109F2AC00AE3A98 /* GitTool.swift */; };
 		FD326DA1210A134000AE3A98 /* DestinationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326DA0210A134000AE3A98 /* DestinationFactory.swift */; };
-		FD34F42321BEE5340052222C /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F42221BEE5340052222C /* ZFile.framework */; };
 		FD34F42721BEE8CA0052222C /* TerminalWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34F42621BEE8CA0052222C /* TerminalWorker.swift */; };
 		FD34F42821BEE8D50052222C /* TerminalTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAC9350210B7D4A00B0D045 /* TerminalTasks.swift */; };
 		FD34F42A21BEE8E20052222C /* TerminalSysExitCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34F42921BEE8E20052222C /* TerminalSysExitCode.swift */; };
@@ -70,30 +43,26 @@
 		FD3F8A1A21DDE43A00BBDA58 /* SwiftFormatWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A1121DDE43A00BBDA58 /* SwiftFormatWorker.framework */; };
 		FD3F8A1F21DDE43A00BBDA58 /* SwiftformatWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3F8A1E21DDE43A00BBDA58 /* SwiftformatWorkerTests.swift */; };
 		FD3F8A2121DDE43A00BBDA58 /* SwiftformatWorker.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3F8A1321DDE43A00BBDA58 /* SwiftformatWorker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD3F8A6121DDE4C500BBDA58 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A6021DDE4C500BBDA58 /* Quick.framework */; };
-		FD3F8A6321DDE4CB00BBDA58 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A6221DDE4CB00BBDA58 /* Nimble.framework */; };
 		FD3F8A6C21DDE73B00BBDA58 /* SwiftFormatWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3F8A6B21DDE73B00BBDA58 /* SwiftFormatWorker.swift */; };
 		FD3F8A7621DDE7E700BBDA58 /* SwiftformatWorkerMock.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3F8A7421DDE7E700BBDA58 /* SwiftformatWorkerMock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD3F8A7C21DDE80200BBDA58 /* SwiftFormatWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A1121DDE43A00BBDA58 /* SwiftFormatWorker.framework */; };
 		FD3F8A8021DDE85700BBDA58 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
-		FD3F8A8121DDE85D00BBDA58 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F42221BEE5340052222C /* ZFile.framework */; };
-		FD3F8A8221DDE86600BBDA58 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0553E721D136A700E9B0D0 /* ZFileMock.framework */; };
 		FD3F8A8821DDE94100BBDA58 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3F8A6621DDE6B100BBDA58 /* AutoMockable.generated.swift */; };
-		FD3F8AED21DDED2400BBDA58 /* SwiftFormat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8AEC21DDED2400BBDA58 /* SwiftFormat.framework */; };
 		FD3F8C9021DE18B500BBDA58 /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
 		FD3F8D3021DE229A00BBDA58 /* ProjectFolderWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8D2721DE229900BBDA58 /* ProjectFolderWorker.framework */; };
 		FD3F8D3521DE229A00BBDA58 /* ProjectFolderWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3F8D3421DE229A00BBDA58 /* ProjectFolderWorker.swift */; };
 		FD3F8D3721DE229A00BBDA58 /* ProjectFolderWorker_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3F8D2921DE229A00BBDA58 /* ProjectFolderWorker_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD3F8D3E21DE22B500BBDA58 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F42221BEE5340052222C /* ZFile.framework */; };
 		FD3F8D3F21DE22C700BBDA58 /* SourceryFolderWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0553AD21D12A2C00E9B0D0 /* SourceryFolderWorker.swift */; };
 		FD3F8D4A21DE238C00BBDA58 /* ProjectFolderWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8D2721DE229900BBDA58 /* ProjectFolderWorker.framework */; };
 		FD3F8DA921DE585500BBDA58 /* ProjectFolderWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8D2721DE229900BBDA58 /* ProjectFolderWorker.framework */; };
 		FD3F8DC521DE5A3F00BBDA58 /* SwiftFormatWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A1121DDE43A00BBDA58 /* SwiftFormatWorker.framework */; };
+		FD589F60221B0EA300335F55 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
+		FD589F62221B0EB300335F55 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F61221B0EB300335F55 /* ZFileMock.framework */; };
+		FD589F64221B0EC100335F55 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
+		FD589F66221B0EC800335F55 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
 		FD84A7EA21D6C3D50093F2A7 /* JWTTokenWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD84A7E921D6C3C50093F2A7 /* JWTTokenWorker.swift */; };
-		FD84A7EC21D6C4870093F2A7 /* CupertinoJWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD84A7EB21D6C4870093F2A7 /* CupertinoJWT.framework */; };
 		FDAC932A210B595100B0D045 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		FDB7A8AD21CD58600045DDA8 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
-		FDB7A8D621CD5FE40045DDA8 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F42221BEE5340052222C /* ZFile.framework */; };
 		FDB7A8D921CD603B0045DDA8 /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
 		FDB7A90B21CD62400045DDA8 /* TestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A8B921CD5EA10045DDA8 /* TestKit.framework */; };
 		FDB7A92821CD666E0045DDA8 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
@@ -117,8 +86,6 @@
 		FDB7A9CB21CD6F7F0045DDA8 /* SignPostMock.h in Headers */ = {isa = PBXBuildFile; fileRef = FDB7A9C921CD6F7F0045DDA8 /* SignPostMock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FDB7A9D121CD70020045DDA8 /* SignPostMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9C721CD6F7F0045DDA8 /* SignPostMock.framework */; };
 		FDB7A9D221CD70140045DDA8 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A93D21CD6A780045DDA8 /* AutoMockable.generated.swift */; };
-		FDB7A9D421CD704F0045DDA8 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D321CD704F0045DDA8 /* Quick.framework */; };
-		FDB7A9D621CD70580045DDA8 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9D521CD70580045DDA8 /* Nimble.framework */; };
 		FDB7A9D921CD719F0045DDA8 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		FDB7A9DC21CD71AF0045DDA8 /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
 		FDB7A9E621CD736C0045DDA8 /* TerminalMock.h in Headers */ = {isa = PBXBuildFile; fileRef = FDB7A9E421CD736C0045DDA8 /* TerminalMock.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -126,7 +93,6 @@
 		FDB7A9EF21CD744D0045DDA8 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
 		FDB7A9F221CD74B00045DDA8 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
 		FDB7A9F521CD74D40045DDA8 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
-		FDB7A9F621CD75040045DDA8 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F42221BEE5340052222C /* ZFile.framework */; };
 		FDB7AA0021CD7E8C0045DDA8 /* TaskMock.h in Headers */ = {isa = PBXBuildFile; fileRef = FDB7A9FE21CD7E8C0045DDA8 /* TaskMock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FDB7AA0621CD7EF50045DDA8 /* TaskMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9FC21CD7E8C0045DDA8 /* TaskMock.framework */; };
 		FDB7AA0721CD7F080045DDA8 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A94021CD6A780045DDA8 /* AutoMockable.generated.swift */; };
@@ -1306,10 +1272,6 @@
 		FD0553A721D1291400E9B0D0 /* TestKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestKit.h; sourceTree = "<group>"; };
 		FD0553A821D1291400E9B0D0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD0553AD21D12A2C00E9B0D0 /* SourceryFolderWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceryFolderWorker.swift; sourceTree = "<group>"; };
-		FD0553E721D136A700E9B0D0 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD0553E921D136B600E9B0D0 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD0553EB21D136C200E9B0D0 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD0553ED21D136CB00E9B0D0 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1126C021C771970072607D /* ArgumentsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentsWorker.swift; sourceTree = "<group>"; };
 		FD1126C521C7756A0072607D /* SourceryExecutableFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryExecutableFile.swift; sourceTree = "<group>"; };
 		FD1126CC21C77F050072607D /* SignPost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SignPost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1321,7 +1283,6 @@
 		FD326D932109E3C600AE3A98 /* ArchivePlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchivePlist.swift; sourceTree = "<group>"; };
 		FD326D952109F2AC00AE3A98 /* GitTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitTool.swift; sourceTree = "<group>"; };
 		FD326DA0210A134000AE3A98 /* DestinationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationFactory.swift; sourceTree = "<group>"; };
-		FD34F42221BEE5340052222C /* ZFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD34F42621BEE8CA0052222C /* TerminalWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminalWorker.swift; sourceTree = "<group>"; };
 		FD34F42921BEE8E20052222C /* TerminalSysExitCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminalSysExitCode.swift; sourceTree = "<group>"; };
 		FD34F42C21BEE9EB0052222C /* CDToFolderExecutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDToFolderExecutable.swift; sourceTree = "<group>"; };
@@ -1334,15 +1295,12 @@
 		FD3F8A1921DDE43A00BBDA58 /* SwiftformatWorkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftformatWorkerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3F8A1E21DDE43A00BBDA58 /* SwiftformatWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftformatWorkerTests.swift; sourceTree = "<group>"; };
 		FD3F8A2021DDE43A00BBDA58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD3F8A6021DDE4C500BBDA58 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD3F8A6221DDE4CB00BBDA58 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3F8A6521DDE6B100BBDA58 /* AutoGenerateProtocol.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoGenerateProtocol.generated.swift; sourceTree = "<group>"; };
 		FD3F8A6621DDE6B100BBDA58 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FD3F8A6B21DDE73B00BBDA58 /* SwiftFormatWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFormatWorker.swift; sourceTree = "<group>"; };
 		FD3F8A7221DDE7E700BBDA58 /* SwiftFormatWorkerMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftFormatWorkerMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3F8A7421DDE7E700BBDA58 /* SwiftformatWorkerMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftformatWorkerMock.h; sourceTree = "<group>"; };
 		FD3F8A7521DDE7E700BBDA58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD3F8AEC21DDED2400BBDA58 /* SwiftFormat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftFormat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3F8C9121DE1D2B00BBDA58 /* .swiftformat.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .swiftformat.md; sourceTree = SOURCE_ROOT; };
 		FD3F8D2721DE229900BBDA58 /* ProjectFolderWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProjectFolderWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3F8D2921DE229A00BBDA58 /* ProjectFolderWorker_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectFolderWorker_macOS.h; sourceTree = "<group>"; };
@@ -1351,8 +1309,11 @@
 		FD3F8D3421DE229A00BBDA58 /* ProjectFolderWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFolderWorker.swift; sourceTree = "<group>"; };
 		FD3F8D3621DE229A00BBDA58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD3F8D4D21DE304800BBDA58 /* .swiftformat.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .swiftformat.md; sourceTree = "<group>"; };
+		FD589F5F221B0EA300335F55 /* ZFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD589F61221B0EB300335F55 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD589F63221B0EC100335F55 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD589F65221B0EC800335F55 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD84A7E921D6C3C50093F2A7 /* JWTTokenWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTTokenWorker.swift; sourceTree = "<group>"; };
-		FD84A7EB21D6C4870093F2A7 /* CupertinoJWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CupertinoJWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDAC932C210B5C4500B0D045 /* ExcecutableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcecutableProtocol.swift; sourceTree = "<group>"; };
 		FDAC9350210B7D4A00B0D045 /* TerminalTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminalTasks.swift; sourceTree = "<group>"; };
 		FDB7A8B921CD5EA10045DDA8 /* TestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1375,8 +1336,6 @@
 		FDB7A9C721CD6F7F0045DDA8 /* SignPostMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SignPostMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB7A9C921CD6F7F0045DDA8 /* SignPostMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignPostMock.h; sourceTree = "<group>"; };
 		FDB7A9CA21CD6F7F0045DDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDB7A9D321CD704F0045DDA8 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDB7A9D521CD70580045DDA8 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB7A9E221CD736C0045DDA8 /* TerminalMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TerminalMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB7A9E421CD736C0045DDA8 /* TerminalMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalMock.h; sourceTree = "<group>"; };
 		FDB7A9E521CD736C0045DDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1493,8 +1452,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDB7A9D621CD70580045DDA8 /* Nimble.framework in Frameworks */,
-				FDB7A9D421CD704F0045DDA8 /* Quick.framework in Frameworks */,
 				FD1126D521C77F050072607D /* SignPost.framework in Frameworks */,
 				FDB7A9D121CD70020045DDA8 /* SignPostMock.framework in Frameworks */,
 			);
@@ -1506,7 +1463,6 @@
 			files = (
 				FD3F8DA921DE585500BBDA58 /* ProjectFolderWorker.framework in Frameworks */,
 				FD3F8C9021DE18B500BBDA58 /* SignPost.framework in Frameworks */,
-				FD3F8AED21DDED2400BBDA58 /* SwiftFormat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1514,8 +1470,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD3F8A6321DDE4CB00BBDA58 /* Nimble.framework in Frameworks */,
-				FD3F8A6121DDE4C500BBDA58 /* Quick.framework in Frameworks */,
 				FD3F8A1A21DDE43A00BBDA58 /* SwiftFormatWorker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1525,8 +1479,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD3F8A8021DDE85700BBDA58 /* SourceryAutoProtocols.framework in Frameworks */,
-				FD3F8A8121DDE85D00BBDA58 /* ZFile.framework in Frameworks */,
-				FD3F8A8221DDE86600BBDA58 /* ZFileMock.framework in Frameworks */,
 				FD3F8A7C21DDE80200BBDA58 /* SwiftFormatWorker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1535,7 +1487,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD3F8D3E21DE22B500BBDA58 /* ZFile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1564,7 +1515,6 @@
 				FDB7A93321CD666E0045DDA8 /* Url.framework in Frameworks */,
 				FDB7A93421CD666E0045DDA8 /* XCBuild.framework in Frameworks */,
 				FDB7A8D921CD603B0045DDA8 /* SignPost.framework in Frameworks */,
-				FDB7A8D621CD5FE40045DDA8 /* ZFile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1572,7 +1522,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD0553E821D136A700E9B0D0 /* ZFileMock.framework in Frameworks */,
 				FDB7A9BE21CD6C620045DDA8 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDB7A9C121CD6CAB0045DDA8 /* Arguments.framework in Frameworks */,
 			);
@@ -1582,7 +1531,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD0553EA21D136B600E9B0D0 /* ZFileMock.framework in Frameworks */,
+				FD589F66221B0EC800335F55 /* Quick.framework in Frameworks */,
+				FD589F64221B0EC100335F55 /* Nimble.framework in Frameworks */,
+				FD589F62221B0EB300335F55 /* ZFileMock.framework in Frameworks */,
+				FD589F60221B0EA300335F55 /* ZFile.framework in Frameworks */,
 				FDB7A9D921CD719F0045DDA8 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDB7A9DC21CD71AF0045DDA8 /* SignPost.framework in Frameworks */,
 			);
@@ -1592,8 +1544,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD0553EC21D136C200E9B0D0 /* ZFileMock.framework in Frameworks */,
-				FDB7A9F621CD75040045DDA8 /* ZFile.framework in Frameworks */,
 				FDB7A9F521CD74D40045DDA8 /* Arguments.framework in Frameworks */,
 				FDB7A9F221CD74B00045DDA8 /* Task.framework in Frameworks */,
 				FDB7A9EF21CD744D0045DDA8 /* Terminal.framework in Frameworks */,
@@ -1604,7 +1554,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD0553EE21D136CB00E9B0D0 /* ZFileMock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1612,7 +1561,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD0553EF21D136D500E9B0D0 /* ZFile.framework in Frameworks */,
 				FDB7AA1721CD81FD0045DDA8 /* SourceryWorker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1632,8 +1580,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD05541821D139F300E9B0D0 /* Nimble.framework in Frameworks */,
-				FD05541721D139EC00E9B0D0 /* Quick.framework in Frameworks */,
 				FDB7AA1B21CD82DD0045DDA8 /* SourceryWorkerMock.framework in Frameworks */,
 				FDC156E421C5347D00E04B44 /* SourceryWorker.framework in Frameworks */,
 			);
@@ -1659,8 +1605,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FD05540621D1395C00E9B0D0 /* Nimble.framework in Frameworks */,
-				FD05540521D1395400E9B0D0 /* Quick.framework in Frameworks */,
 				OBJ_285 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDB7A9BB21CD6BCC0045DDA8 /* ArgumentsMock.framework in Frameworks */,
 				OBJ_283 /* Arguments.framework in Frameworks */,
@@ -1672,7 +1616,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FD84A7EC21D6C4870093F2A7 /* CupertinoJWT.framework in Frameworks */,
 				OBJ_297 /* Task.framework in Frameworks */,
 				OBJ_298 /* Arguments.framework in Frameworks */,
 				OBJ_300 /* Errors.framework in Frameworks */,
@@ -1687,8 +1630,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FD05540821D1396D00E9B0D0 /* Nimble.framework in Frameworks */,
-				FD05540721D1396500E9B0D0 /* Quick.framework in Frameworks */,
 				OBJ_322 /* Arguments.framework in Frameworks */,
 				OBJ_323 /* Errors.framework in Frameworks */,
 				OBJ_325 /* SourceryAutoProtocols.framework in Frameworks */,
@@ -1720,8 +1661,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FD05540A21D1398100E9B0D0 /* Nimble.framework in Frameworks */,
-				FD05540921D1397A00E9B0D0 /* Quick.framework in Frameworks */,
 				OBJ_386 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDB7A93721CD67CC0045DDA8 /* TestKit.framework in Frameworks */,
 				FDB7A8AD21CD58600045DDA8 /* SourceryWorker.framework in Frameworks */,
@@ -1763,8 +1702,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FD05540C21D1399500E9B0D0 /* Nimble.framework in Frameworks */,
-				FD05540B21D1398D00E9B0D0 /* Quick.framework in Frameworks */,
 				OBJ_639 /* POSIX.framework in Frameworks */,
 				OBJ_640 /* Url.framework in Frameworks */,
 				OBJ_641 /* SourceryAutoProtocols.framework in Frameworks */,
@@ -1775,8 +1712,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FD05540E21D139A400E9B0D0 /* Nimble.framework in Frameworks */,
-				FD05540D21D1399E00E9B0D0 /* Quick.framework in Frameworks */,
 				OBJ_663 /* XCBuild.framework in Frameworks */,
 				OBJ_664 /* Deliver.framework in Frameworks */,
 				OBJ_666 /* POSIX.framework in Frameworks */,
@@ -1804,7 +1739,6 @@
 				FD1126FD21C783130072607D /* SignPost.framework in Frameworks */,
 				FDAC932A210B595100B0D045 /* POSIX.framework in Frameworks */,
 				OBJ_752 /* Arguments.framework in Frameworks */,
-				FD34F42321BEE5340052222C /* ZFile.framework in Frameworks */,
 				OBJ_754 /* Errors.framework in Frameworks */,
 				OBJ_756 /* Url.framework in Frameworks */,
 				OBJ_758 /* SourceryAutoProtocols.framework in Frameworks */,
@@ -1815,8 +1749,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FD05541021D139B500E9B0D0 /* Nimble.framework in Frameworks */,
-				FD05540F21D139AE00E9B0D0 /* Quick.framework in Frameworks */,
 				FDB7AA0621CD7EF50045DDA8 /* TaskMock.framework in Frameworks */,
 				FDB7A90B21CD62400045DDA8 /* TestKit.framework in Frameworks */,
 				OBJ_780 /* XCBuild.framework in Frameworks */,
@@ -1845,8 +1777,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FD05541221D139C500E9B0D0 /* Nimble.framework in Frameworks */,
-				FD05541121D139BE00E9B0D0 /* Quick.framework in Frameworks */,
 				OBJ_851 /* SourceryAutoProtocols.framework in Frameworks */,
 				OBJ_839 /* XCBuild.framework in Frameworks */,
 				OBJ_840 /* Deliver.framework in Frameworks */,
@@ -1872,8 +1802,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FD05541421D139D400E9B0D0 /* Nimble.framework in Frameworks */,
-				FD05541321D139CD00E9B0D0 /* Quick.framework in Frameworks */,
 				OBJ_928 /* Url.framework in Frameworks */,
 				OBJ_929 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
@@ -1897,9 +1825,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FD05541621D139E400E9B0D0 /* Nimble.framework in Frameworks */,
-				FD05541521D139DD00E9B0D0 /* Quick.framework in Frameworks */,
-				FD05540421D138F700E9B0D0 /* ZFileMock.framework in Frameworks */,
 				OBJ_973 /* Keychain.framework in Frameworks */,
 				OBJ_977 /* XCBuild.framework in Frameworks */,
 				OBJ_978 /* Deliver.framework in Frameworks */,
@@ -1960,18 +1885,11 @@
 		FD326D9E210A0F5F00AE3A98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FD3F8AEC21DDED2400BBDA58 /* SwiftFormat.framework */,
-				FD3F8A6221DDE4CB00BBDA58 /* Nimble.framework */,
-				FD3F8A6021DDE4C500BBDA58 /* Quick.framework */,
-				FD84A7EB21D6C4870093F2A7 /* CupertinoJWT.framework */,
-				FD0553ED21D136CB00E9B0D0 /* ZFileMock.framework */,
-				FD0553EB21D136C200E9B0D0 /* ZFileMock.framework */,
-				FD0553E921D136B600E9B0D0 /* ZFileMock.framework */,
-				FD0553E721D136A700E9B0D0 /* ZFileMock.framework */,
-				FDB7A9D521CD70580045DDA8 /* Nimble.framework */,
-				FDB7A9D321CD704F0045DDA8 /* Quick.framework */,
+				FD589F65221B0EC800335F55 /* Quick.framework */,
+				FD589F63221B0EC100335F55 /* Nimble.framework */,
+				FD589F61221B0EB300335F55 /* ZFileMock.framework */,
+				FD589F5F221B0EA300335F55 /* ZFile.framework */,
 				FDC156B621C52EE800E04B44 /* UIKit.framework */,
-				FD34F42221BEE5340052222C /* ZFile.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -3624,7 +3542,7 @@
 					};
 				};
 			};
-			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "🛣" */;
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "Highway" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -3647,7 +3565,6 @@
 				FD3F8D2621DE229900BBDA58 /* ProjectFolderWorker-macOS */,
 				FD1126CB21C77F050072607D /* SignPost */,
 				FDB7A9C621CD6F7F0045DDA8 /* SignPostMock */,
-				FDB7A9FB21CD7E8C0045DDA8 /* TaskMock */,
 				"highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */,
 				FDE9B6F621C58ED400D1F50A /* SourceryAutoProtocols-ios */,
 				FDC156DA21C5347C00E04B44 /* SourceryWorker */,
@@ -3655,6 +3572,7 @@
 				FD3F8A1021DDE43A00BBDA58 /* SwiftFormatWorker */,
 				FD3F8A7121DDE7E700BBDA58 /* SwiftFormatWorkerMock */,
 				"highway::Task" /* Task */,
+				FDB7A9FB21CD7E8C0045DDA8 /* TaskMock */,
 				FDB7A9E121CD736C0045DDA8 /* TerminalMock */,
 				FDB7A8B821CD5EA10045DDA8 /* TestKit */,
 				"highway::Terminal" /* Terminal */,
@@ -6359,7 +6277,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "🛣.xcodeproj/$(PRODUCT_NAME)_Info.plist";
+				INFOPLIST_FILE = "Highway.xcodeproj/$(PRODUCT_NAME)_Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "-DXcode";
@@ -6563,7 +6481,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "🛣.xcodeproj/$(PRODUCT_NAME)_Info.plist";
+				INFOPLIST_FILE = "Highway.xcodeproj/$(PRODUCT_NAME)_Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				OTHER_SWIFT_FLAGS = "-DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -7230,7 +7148,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_2 /* Build configuration list for PBXProject "🛣" */ = {
+		OBJ_2 /* Build configuration list for PBXProject "Highway" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_3 /* Debug */,

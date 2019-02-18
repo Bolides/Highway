@@ -9,3 +9,5 @@ github "doozMen/CupertinoJWT"
 # Format ♥
 
 github "nicklockwood/SwiftFormat"
+
+github "antitypical/Result" ~> 4.0
