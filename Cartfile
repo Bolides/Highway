@@ -1,11 +1,3 @@
-# Persistance
-
-github "doozMen/ZFile"
-
-# JWT Token generation
-
-github "doozMen/CupertinoJWT"
-
 # Format ♥
 
 github "nicklockwood/SwiftFormat"

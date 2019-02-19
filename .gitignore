@@ -29,9 +29,4 @@ xcuserdata/
 /Sources/highway/.sourcery-Arguments.yml
 .gitsecret/keys/random_seed
 /Sources/highway/Sources/AutomateHighway/AuthKey_VV7NT37UVU.p8
-/Carthage/Checkouts
-Checkouts
-/Carthage/Checkouts/CupertinoJWT
-/Carthage/Checkouts/Result
-/Carthage/Checkouts/SwiftFormat
-/Carthage/Checkouts/ZFile
+Carthage
