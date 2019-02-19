@@ -1,3 +1,11 @@
+# Persistance
+
+github "Bolides/ZFile"
+
+# JWT Token generation
+
+github "Bolides/CupertinoJWT"
+
 # Format ♥
 
 github "nicklockwood/SwiftFormat"

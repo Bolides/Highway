@@ -1,10 +1,4 @@
-# Persistance
 
-github "doozMen/ZFile"
-
-# JWT Token generation
-
-github "doozMen/CupertinoJWT"
 
 # Testing
 
