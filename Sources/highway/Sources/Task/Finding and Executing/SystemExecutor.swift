@@ -36,8 +36,13 @@ public final class SystemExecutor: SystemExecutorProtocol, AutoGenerateProtocol
     public func launch(task: Task, wait: Bool) throws
     {
         let process = task.toProcess
+        let pipe = Pipe()
+        process.standardOutput = pipe
+        process.standardError = pipe
+        
         signPost.verbose(task.description)
         task.state = .executing
+        
         process.launch()
         if wait
         {
@@ -51,41 +56,5 @@ public final class SystemExecutor: SystemExecutorProtocol, AutoGenerateProtocol
         {
             signPost.verbose(task.state.description)
         }
-    }
-}
-
-private extension Process
-{
-    func takeIOFrom(_ task: Task)
-    {
-        standardInput = task.input.asProcessChannel
-        standardOutput = task.output.asProcessChannel
-    }
-}
-
-// internal because it is tested
-extension Task
-{
-    // sourcery:skipProtocol
-    var toProcess: Process
-    {
-        let result = Process()
-        result.arguments = arguments.all
-        result.launchPath = executable.path
-        if let currentDirectoryPath = currentDirectoryUrl?.path
-        {
-            result.currentDirectoryPath = currentDirectoryPath
-        }
-        var _environment: [String: String] = ProcessInfo.processInfo.environment
-        environment.forEach
-        {
-            _environment[$0.key] = $0.value
-        }
-        result.environment = _environment
-        result.terminationHandler = { terminatedProcess in
-            self.state = .terminated(Termination(describing: terminatedProcess))
-        }
-        result.takeIOFrom(self)
-        return result
     }
 }

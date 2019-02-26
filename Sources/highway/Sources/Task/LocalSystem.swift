@@ -14,7 +14,7 @@ public final class LocalSystem: SystemProtocol, AutoGenerateProtocol
 
     // MARK: - Init
 
-    public init(executor: SystemExecutorProtocol, executableProvider: ExecutableProviderProtocol, fileSystem: FileSystemProtocol)
+    public init(executor: SystemExecutorProtocol, executableProvider: ExecutableProviderProtocol, fileSystem: FileSystemProtocol = FileSystem.shared)
     {
         self.executor = executor
         self.executableProvider = executableProvider
@@ -22,7 +22,7 @@ public final class LocalSystem: SystemProtocol, AutoGenerateProtocol
     }
 
     /// Local System
-    public init(executableProvider: SystemExecutableProvider? = nil, signPost: SignPostProtocol) throws
+    public init(executableProvider: SystemExecutableProvider? = nil, signPost: SignPostProtocol = SignPost.shared) throws
     {
         executor = SystemExecutor(signPost: signPost)
         self.executableProvider = (executableProvider == nil) ? try SystemExecutableProvider() : executableProvider!

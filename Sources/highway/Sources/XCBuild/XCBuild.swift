@@ -15,7 +15,7 @@ public protocol XCBuildProtocol: AutoMockable
 
     func archive(using options: ArchiveOptionsProtocol) throws -> ArchiveProtocol
     func export(using options: ExportArchiveOptionsProtocol) throws -> ExportProtocol
-    func buildAndTest(using options: ArgumentExecutableProtocol) throws -> TestReport
+    func buildAndTest(using options: ArgumentExecutableProtocol) throws -> TestReportProtocol
     /// sourcery:end
 }
 
@@ -29,13 +29,15 @@ public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol
 
     public let system: SystemProtocol
     public let fileSystem: FileSystemProtocol
-
+    public let terminalWorker: TerminalWorkerProtocol
+    
     // MARK: - Init
 
-    public init(system: SystemProtocol, fileSystem: FileSystemProtocol)
+    public init(system: SystemProtocol, terminalWorker: TerminalWorkerProtocol = TerminalWorker.shared, fileSystem: FileSystemProtocol = FileSystem.shared)
     {
         self.system = system
         self.fileSystem = fileSystem
+        self.terminalWorker = terminalWorker
     }
 
     // MARK: - Archiving
@@ -78,26 +80,23 @@ public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol
 
     // MARK: Testing
 
+    public enum TestRunError: Swift.Error {
+        case testsFailed(report: TestReportProtocol)
+    }
+    
     @discardableResult
-    public func buildAndTest(using options: ArgumentExecutableProtocol) throws -> TestReport
+    public func buildAndTest(using options: ArgumentExecutableProtocol) throws -> TestReportProtocol
     {
         let xcbuild = try _buildTestTask(using: options)
 
-        do
-        {
-            let xcpretty = try system.task(named: "xcpretty")
-            xcbuild.output = .pipe()
-            xcbuild.environment["NSUnbufferedIO"] = "YES" // otherwise xcpretty might not get everything
-            xcpretty.input = xcbuild.output
-            _ = try system.launch(xcbuild, wait: false)
-            _ = try system.execute(xcpretty)
+        do {
+            let output = try terminalWorker.runProcess(xcbuild.toProcess)
+            return TestReport(output: output)
+        } catch let Terminal.TerminalWorker.Error.unknownTask(errorOutput: errorOutput) {
+            
+            let report = TestReport(output: errorOutput)
+            throw TestRunError.testsFailed(report: report)
         }
-        catch
-        {
-            _ = try system.execute(xcbuild)
-        }
-
-        return TestReport()
     }
 
     private func _buildTestTask(using options: ArgumentExecutableProtocol) throws -> Task

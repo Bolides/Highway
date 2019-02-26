@@ -59,6 +59,7 @@
 		FD589F64221B0EC100335F55 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
 		FD589F66221B0EC800335F55 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
 		FD84A7EA21D6C3D50093F2A7 /* JWTTokenWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD84A7E921D6C3C50093F2A7 /* JWTTokenWorker.swift */; };
+		FDAA4C1D2225899A0091F9C3 /* MinimalTestOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAA4C1C2225899A0091F9C3 /* MinimalTestOptions.swift */; };
 		FDAC932A210B595100B0D045 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		FDB7A8AD21CD58600045DDA8 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
 		FDB7A8D921CD603B0045DDA8 /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
@@ -1366,6 +1367,7 @@
 		FD589F63221B0EC100335F55 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD589F65221B0EC800335F55 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD84A7E921D6C3C50093F2A7 /* JWTTokenWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTTokenWorker.swift; sourceTree = "<group>"; };
+		FDAA4C1C2225899A0091F9C3 /* MinimalTestOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimalTestOptions.swift; sourceTree = "<group>"; };
 		FDAC932C210B5C4500B0D045 /* ExcecutableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcecutableProtocol.swift; sourceTree = "<group>"; };
 		FDAC9350210B7D4A00B0D045 /* TerminalTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminalTasks.swift; sourceTree = "<group>"; };
 		FDB7A8B921CD5EA10045DDA8 /* TestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2457,6 +2459,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_19 /* TestOptions.swift */,
+				FDAA4C1C2225899A0091F9C3 /* MinimalTestOptions.swift */,
 				OBJ_20 /* TestReport.swift */,
 			);
 			path = Test;
@@ -4187,6 +4190,7 @@
 				OBJ_938 /* Destination.swift in Sources */,
 				OBJ_939 /* Export.swift in Sources */,
 				OBJ_940 /* ExportArchiveOptions.swift in Sources */,
+				FDAA4C1D2225899A0091F9C3 /* MinimalTestOptions.swift in Sources */,
 				FD326D942109E3C600AE3A98 /* ArchivePlist.swift in Sources */,
 				OBJ_941 /* ExportOptions.swift in Sources */,
 				OBJ_943 /* TestOptions.swift in Sources */,

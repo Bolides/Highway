@@ -17,7 +17,7 @@ public protocol DestinationProtocol: AutoMockable
 public struct Destination: DestinationProtocol, AutoGenerateProtocol
 {
     public var raw = [String: String]()
-    init(_ properties: [String: String])
+    public init(_ properties: [String: String])
     {
         raw = properties
     }
