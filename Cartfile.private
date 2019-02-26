@@ -1,4 +1,8 @@
 
+# Persistance
+
+github "Bolides/ZFile" ~> 1.1.0
+
 # Testing
 
 github "doozMen/Quick"
