@@ -20,7 +20,8 @@ public protocol TaskProtocol: AutoMockable
     var capturedOutputString: String? { get }
     var successfullyFinished: Bool { get }
     var description: String { get }
-
+    var toProcess: Process { get }
+    
     func enableReadableOutputDataCapturing()
     func throwIfNotSuccess(_ error: Swift.Error) throws
     /// sourcery:end
@@ -29,7 +30,7 @@ public protocol TaskProtocol: AutoMockable
 public class Task: TaskProtocol, AutoGenerateProtocol
 {
     // MARK: - Init
-
+    
     public convenience init(commandName: String, arguments: Arguments = .empty, currentDirectoryUrl: FolderProtocol? = nil, provider: ExecutableProviderProtocol) throws
     {
         self.init(
@@ -38,7 +39,7 @@ public class Task: TaskProtocol, AutoGenerateProtocol
             currentDirectoryUrl: currentDirectoryUrl
         )
     }
-
+    
     public init(executable: FileProtocol, arguments: Arguments = .empty, currentDirectoryUrl: FolderProtocol? = nil)
     {
         self.executable = executable
@@ -46,15 +47,15 @@ public class Task: TaskProtocol, AutoGenerateProtocol
         self.arguments = arguments
         self.currentDirectoryUrl = currentDirectoryUrl
     }
-
+    
     // MARK: - Properties
-
+    
     public var name: String { return executable.name }
     public var executable: FileProtocol
     public var arguments = Arguments.empty
     public var environment = [String: String]()
     public var currentDirectoryUrl: FolderProtocol?
-
+    
     public var input: Channel
     {
         get { return io.input }
@@ -65,14 +66,14 @@ public class Task: TaskProtocol, AutoGenerateProtocol
         get { return io.output }
         set { io.output = newValue }
     }
-
+    
     public var state: State
     public func enableReadableOutputDataCapturing()
     {
         io.enableReadableOutputDataCapturing()
     }
     public var capturedOutputData: Data? { return io.readOutputData }
-
+    
     public var readOutputString: String?
     {
         return capturedOutputString
@@ -81,7 +82,7 @@ public class Task: TaskProtocol, AutoGenerateProtocol
     {
         return capturedOutputString?.trimmingCharacters(in: .whitespacesAndNewlines)
     }
-
+    
     public var capturedOutputString: String?
     {
         guard let data = capturedOutputData else
@@ -90,12 +91,12 @@ public class Task: TaskProtocol, AutoGenerateProtocol
         }
         return String(data: data, encoding: .utf8)
     }
-
+    
     public var successfullyFinished: Bool
     {
         return state.successfullyFinished
     }
-
+    
     public func throwIfNotSuccess(_ error: Swift.Error) throws
     {
         guard successfullyFinished else
@@ -103,9 +104,31 @@ public class Task: TaskProtocol, AutoGenerateProtocol
             throw "🛣 🔥 \(name) with customError: \n \(error).\n"
         }
     }
-
+    
+    public var toProcess: Process
+    {
+        let result = Process()
+        result.arguments = arguments.all
+        result.launchPath = executable.path
+        if let currentDirectoryPath = currentDirectoryUrl?.path
+        {
+            result.currentDirectoryPath = currentDirectoryPath
+        }
+        var _environment: [String: String] = ProcessInfo.processInfo.environment
+        environment.forEach
+            {
+                _environment[$0.key] = $0.value
+        }
+        result.environment = _environment
+        result.terminationHandler = { terminatedProcess in
+            self.state = .terminated(Termination(describing: terminatedProcess))
+        }
+        result.takeIOFrom(self)
+        return result
+    }
+    
     // MARK: - Private
-
+    
     private var io = IO()
 }
 
@@ -113,6 +136,27 @@ extension Task: CustomStringConvertible
 {
     public var description: String
     {
-        return "\(name) \(arguments)"
+        
+        return """
+        
+        TASK
+        
+        \(name):
+        \(arguments.all.map { " *   \($0)"}.joined(separator: "\n"))
+        
+        OUTPUT
+        
+        \(String(describing: capturedOutputString))
+        
+        """
+    }
+}
+
+private extension Process
+{
+    func takeIOFrom(_ task: Task)
+    {
+        standardInput = task.input.asProcessChannel
+        standardOutput = task.output.asProcessChannel
     }
 }

@@ -10,12 +10,18 @@ public protocol TerminalWorkerProtocol: AutoMockable
 {
     @discardableResult
     func terminal(task: TerminalTask) throws -> [String]
+    
     @discardableResult
     func runExecutable(_ executable: ExecutableProtocol) throws -> [String]
+    
+    @discardableResult
+    func runProcess(_ processTask: Process) throws -> [String]
 }
 
 public struct TerminalWorker: TerminalWorkerProtocol
 {
+    public static let shared: TerminalWorkerProtocol = TerminalWorker()
+    
     public let signPost: SignPostProtocol
 
     public init(signPost: SignPostProtocol = SignPost.shared)
@@ -48,7 +54,11 @@ public struct TerminalWorker: TerminalWorkerProtocol
         return try runProcess(processTask)
     }
     
-    private func runProcess(_ processTask: Process, task: TerminalTask? = nil) throws -> [String] {
+    public func runProcess(_ processTask: Process) throws -> [String] {
+        return try runProcess(processTask, task: nil)
+    }
+    
+    public func runProcess(_ processTask: Process, task: TerminalTask?) throws -> [String] {
         
         var finalResult = [String]()
 

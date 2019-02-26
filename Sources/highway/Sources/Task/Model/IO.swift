@@ -16,8 +16,8 @@ public final class IO
         output = .pipe()
         output.readabilityHandler = { handle in
             handle.withAvailableData
-            { available in
-                self.readOutputData?.append(available)
+            { data in
+                self.readOutputData?.append(data)
             }
         }
     }
