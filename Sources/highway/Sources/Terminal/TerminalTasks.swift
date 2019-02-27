@@ -13,7 +13,8 @@ public enum TerminalTask: RawRepresentable, Equatable, AutoCases
     case git(ArgumentExecutableProtocol)
     case cat(ArgumentExecutableProtocol)
     case sourcery(ArgumentExecutableProtocol)
-
+    case pod(ArgumentExecutableProtocol)
+    
     case xcodebuild(ArgumentExecutableProtocol)
     case xcodebuildTests(ArgumentExecutableProtocol)
     case cd(ArgumentExecutableProtocol)
@@ -35,6 +36,8 @@ public enum TerminalTask: RawRepresentable, Equatable, AutoCases
             return testOptions
         case let .cd(path):
             return path
+        case let .pod(pod):
+            return pod
         }
     }
 
@@ -52,6 +55,8 @@ public enum TerminalTask: RawRepresentable, Equatable, AutoCases
         case (.cd, .cd):
             return true
         case (.xcodebuildTests, .xcodebuildTests):
+            return true
+        case (.pod, .pod):
             return true
         default:
             return false
@@ -77,6 +82,8 @@ public enum TerminalTask: RawRepresentable, Equatable, AutoCases
             return "xcodebuild"
         case .cd:
             return "cd"
+        case .pod:
+            return "pod"
         }
     }
 
