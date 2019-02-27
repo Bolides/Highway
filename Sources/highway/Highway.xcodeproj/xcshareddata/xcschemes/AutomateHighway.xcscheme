@@ -63,7 +63,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "-srcRoot:/../../../"
+            argument = "-srcRoot /../../../../../../../"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

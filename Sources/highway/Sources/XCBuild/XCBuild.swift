@@ -12,10 +12,11 @@ public protocol XCBuildProtocol: AutoMockable
     /// sourcery:inline:XCBuild.AutoGenerateProtocol
     var system: SystemProtocol { get }
     var fileSystem: FileSystemProtocol { get }
+    var terminalWorker: TerminalWorkerProtocol { get }
 
-    func archive(using options: ArchiveOptionsProtocol) throws -> ArchiveProtocol
-    func export(using options: ExportArchiveOptionsProtocol) throws -> ExportProtocol
-    func buildAndTest(using options: ArgumentExecutableProtocol) throws -> TestReportProtocol
+    func archive(using options: ArchiveOptionsProtocol) throws  -> ArchiveProtocol
+    func export(using options: ExportArchiveOptionsProtocol) throws  -> ExportProtocol
+    func buildAndTest(using options: ArgumentExecutableProtocol) throws  -> TestReportProtocol
     /// sourcery:end
 }
 

@@ -14,8 +14,10 @@ import ZFile
 public protocol SwiftFormatWorkerProtocol: AutoMockable
 {
     /// sourcery:inline:SwiftFormatWorker.AutoGenerateProtocol
+    static var queue: DispatchQueue { get }
+    var queue: DispatchQueue { get }
 
-    func attempt(_ async: (@escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void))
+    func attempt(_ asyncSwiftFormatAttemptOutput: (@escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void))
     /// sourcery:end
 }
 
