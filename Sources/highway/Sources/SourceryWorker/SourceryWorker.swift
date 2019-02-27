@@ -13,6 +13,7 @@ import SwiftFormatWorker
 import Task
 import Terminal
 import ZFile
+import Errors
 
 public protocol SourceryWorkerProtocol
 {
@@ -74,10 +75,15 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
     {
         queue.async
         { [weak self] in
-            guard let `self` = self else { return }
+            guard let `self` = self else {
+                asyncSourceryWorkerOutput { throw "SourceryWorker release before it could finish" }
+                return
+            }
 
             do
             {
+                self.signPost.verbose("Executing sourcery from executable \(try self.executor().executableFile())")
+
                 self.signPost.verbose("🧙‍♂️ All files in Sources folders will be scanned for occurrences of `/// sourcery:` and replaced with `/// sourcery:` to be able generate protocols.")
 
                 // 1. Find all files in sourceFolder and Replace occurances of inline with 3 slashes

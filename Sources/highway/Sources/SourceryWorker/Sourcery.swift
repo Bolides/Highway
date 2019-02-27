@@ -44,7 +44,8 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
     public let individualSourceFiles: [File]?
     public let sourceryAutoProtocolsFile: FileProtocol
     public let sourceryYMLFile: FileProtocol
-
+    public let sourceryExecutableFile: FileProtocol
+    
     // MARK: - Imports to be prepended to templates
 
     public let imports: Set<TemplatePrepend>
@@ -63,7 +64,8 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
         sourceryAutoProtocolsFile: FileProtocol,
         sourceryYMLFile: FileProtocol,
         imports: Set<TemplatePrepend>,
-        signPost: SignPostProtocol = SignPost.shared
+        signPost: SignPostProtocol = SignPost.shared,
+        sourceryExecutableFile: FileProtocol
     ) throws
     {
         self.templateFolder = templateFolder
@@ -73,7 +75,7 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
         self.sourceryAutoProtocolsFile = sourceryAutoProtocolsFile
         self.sourceryYMLFile = sourceryYMLFile
         self.imports = imports
-
+        self.sourceryExecutableFile = sourceryExecutableFile
         // generate .sourcery file
 
         try sourceryYMLFile.write(
@@ -99,14 +101,7 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
     // sourcery:skipProtocol
     public func executableFile() throws -> FileProtocol
     {
-        do
-        {
-            return try SourceryExecutableFile()
-        }
-        catch
-        {
-            throw ExecutableNotFoundError(error)
-        }
+        return sourceryExecutableFile
     }
 
     // MARK: - Error
