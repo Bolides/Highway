@@ -2,7 +2,7 @@ import Foundation
 
 public extension Channel
 {
-    public class Writer
+    class Writer
     {
         // MARK: - Properties
 

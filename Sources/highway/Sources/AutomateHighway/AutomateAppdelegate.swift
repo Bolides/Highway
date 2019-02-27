@@ -7,6 +7,7 @@
 
 import Arguments
 import Cocoa
+import Errors
 import os
 import SignPost
 import SourceryWorker
@@ -36,7 +37,6 @@ class AutomateAppdelegate: NSObject, NSApplicationDelegate
             signPost.error("❌ running command caused error:\n\(error)\n")
             NSApplication.shared.terminate(self)
         }
-
     }
 
     // MARK: - Command Line
@@ -73,7 +73,21 @@ class AutomateAppdelegate: NSObject, NSApplicationDelegate
                 }
             case .swiftformat:
 
-                let worker = try SwiftFormatWorker()
+                let highwayCommandLineArguments = HighwayCommandLineOption.Values()
+                guard let relativeProjectPath = highwayCommandLineArguments.optionsAndValues[.srcroot] else
+                {
+                    throw HighwayError.missingSrcroot(
+                        message: """
+                        You can provide the following options
+                        \(HighwayCommandLineOption.allCases.map { $0.rawValue }.joined(separator: "\n"))
+                        """,
+                        function: "\(#function)"
+                    )
+                }
+
+                let projectFolder = try Folder(relativePath: relativeProjectPath)
+
+                let worker = try SwiftFormatWorker(folderToFormatRecursive: try projectFolder.subfolder(named: "Sources/Highway/Sources"))
 
                 worker.attempt
                 { [weak self] syncOutput in

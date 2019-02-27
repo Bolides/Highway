@@ -33,6 +33,7 @@ public struct ExportOptions: Codable
         case developerId = "developer-id"
         case macApplication = "mac-application"
     }
+
     // Describes how Xcode should export the archive. Available options: app-store, package, ad-hoc, enterprise, development, developer-id, and mac-application. The list of options varies based on the type of archive. Defaults to development.
     public var method: Method = .development
 
@@ -68,7 +69,7 @@ public struct ExportOptions: Codable
         private var _profiles = [String: String]()
         public init(from decoder: Decoder) throws
         {
-            _profiles = try Dictionary<String, String>(from: decoder)
+            _profiles = try [String: String](from: decoder)
         }
 
         public func encode(to encoder: Encoder) throws

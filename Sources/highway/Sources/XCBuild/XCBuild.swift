@@ -14,9 +14,9 @@ public protocol XCBuildProtocol: AutoMockable
     var fileSystem: FileSystemProtocol { get }
     var terminalWorker: TerminalWorkerProtocol { get }
 
-    func archive(using options: ArchiveOptionsProtocol) throws  -> ArchiveProtocol
-    func export(using options: ExportArchiveOptionsProtocol) throws  -> ExportProtocol
-    func buildAndTest(using options: ArgumentExecutableProtocol) throws  -> TestReportProtocol
+    func archive(using options: ArchiveOptionsProtocol) throws -> ArchiveProtocol
+    func export(using options: ExportArchiveOptionsProtocol) throws -> ExportProtocol
+    func buildAndTest(using options: ArgumentExecutableProtocol) throws -> TestReportProtocol
     /// sourcery:end
 }
 
@@ -31,7 +31,7 @@ public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol
     public let system: SystemProtocol
     public let fileSystem: FileSystemProtocol
     public let terminalWorker: TerminalWorkerProtocol
-    
+
     // MARK: - Init
 
     public init(system: SystemProtocol, terminalWorker: TerminalWorkerProtocol = TerminalWorker.shared, fileSystem: FileSystemProtocol = FileSystem.shared)
@@ -81,20 +81,23 @@ public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol
 
     // MARK: Testing
 
-    public enum TestRunError: Swift.Error {
+    public enum TestRunError: Swift.Error
+    {
         case testsFailed(report: TestReportProtocol)
     }
-    
+
     @discardableResult
     public func buildAndTest(using options: ArgumentExecutableProtocol) throws -> TestReportProtocol
     {
         let xcbuild = try _buildTestTask(using: options)
 
-        do {
+        do
+        {
             let output = try terminalWorker.runProcess(xcbuild.toProcess)
             return TestReport(output: output)
-        } catch let Terminal.TerminalWorker.Error.unknownTask(errorOutput: errorOutput) {
-            
+        }
+        catch let Terminal.TerminalWorker.Error.unknownTask(errorOutput: errorOutput)
+        {
             let report = TestReport(output: errorOutput)
             throw TestRunError.testsFailed(report: report)
         }
@@ -143,7 +146,7 @@ func _option(_ name: String, value: String?) -> XCodeBuildOption
     return XCodeBuildOption(name: name, value: value)
 }
 
-fileprivate extension ArchiveOptionsProtocol
+private extension ArchiveOptionsProtocol
 {
     // sourcery:skipProtocol
     var arguments: Arguments
@@ -158,7 +161,7 @@ fileprivate extension ArchiveOptionsProtocol
     }
 }
 
-fileprivate extension ExportArchiveOptionsProtocol
+private extension ExportArchiveOptionsProtocol
 {
     // sourcery:skipProtocol
     var arguments: Arguments

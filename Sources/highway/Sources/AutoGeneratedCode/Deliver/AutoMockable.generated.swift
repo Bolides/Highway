@@ -22,6 +22,7 @@ open class DeliverProtocolMock: DeliverProtocol
     {
         return nowWithCallsCount > 0
     }
+
     public var nowWithReceivedOptions: Deliver.Options?
     public var nowWithReturnValue: Bool?
 
@@ -71,6 +72,7 @@ open class JWTTokenWorkerProtocolMock: JWTTokenWorkerProtocol
         get { return underlyingToken }
         set(value) { underlyingToken = value }
     }
+
     public var underlyingToken: String = "AutoMockable filled value"
 }
 

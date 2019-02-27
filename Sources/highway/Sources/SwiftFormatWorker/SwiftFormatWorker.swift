@@ -5,6 +5,8 @@
 //  Created by Stijn on 03/01/2019.
 //
 
+import Arguments
+import Errors
 import os
 import SignPost
 import SourceryAutoProtocols
@@ -17,14 +19,14 @@ public protocol SwiftFormatWorkerProtocol: AutoMockable
     static var queue: DispatchQueue { get }
     var queue: DispatchQueue { get }
 
-    func attempt(_ asyncSwiftFormatAttemptOutput: (@escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void))
+    func attempt(_ asyncSwiftFormatAttemptOutput: @escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void)
     /// sourcery:end
 }
 
 public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
 {
     public static let queue: DispatchQueue = DispatchQueue(label: "be.dooz.swiftFormat")
-    
+
     public typealias SyncOutput = () throws -> Void
 
     public let queue: DispatchQueue
@@ -34,11 +36,11 @@ public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
     private let configFile: FileProtocol
     private let signPost: SignPostProtocol
     private let folderToFormatRecursive: FolderProtocol
-    
+
     // MARK: - Init
 
     public init(
-        folderToFormatRecursive: FolderProtocol = FileSystem.shared.currentFolder,
+        folderToFormatRecursive: FolderProtocol,
         configFile: FileProtocol,
         queue: DispatchQueue = SwiftFormatWorker.queue,
         signPost: SignPostProtocol = SignPost.shared
@@ -50,32 +52,35 @@ public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
         self.folderToFormatRecursive = folderToFormatRecursive
     }
 
-    public convenience init() throws {
-        guard let configPath = Bundle.main.path(forResource: ".swiftformat", ofType: "md") else {
+    public convenience init(folderToFormatRecursive: FolderProtocol, highwayCommandLineArguments: HighwayCommandLineOption.Values = HighwayCommandLineOption.Values()) throws
+    {
+        guard let configPath = Bundle.main.path(forResource: ".swiftformat", ofType: "md") else
+        {
             throw Error.swiftFormatCannotRunWithoutConfigFileInBundle
         }
-        
+
         let configFile = try File(path: configPath)
-        
-        try self.init(configFile: configFile)
+
+        try self.init(folderToFormatRecursive: folderToFormatRecursive, configFile: configFile)
     }
 
-    public func attempt(_ asyncSwiftFormatAttemptOutput: (@escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void))
+    public func attempt(_ asyncSwiftFormatAttemptOutput: @escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void)
     {
         queue.async
         { [weak self] in
             guard let `self` = self else { return }
-           
+
             let formatSettings = try? self.configFile.readAsString()
             self.signPost.verbose("👨🏻‍🏫  SwiftFormat \(self.folderToFormatRecursive.name) \n with settings \n \(String(describing: formatSettings))\n ...\n")
 
             CLI.print = { message, type in
                 switch type {
-                case .info, .success, .content:
-                    self.signPost.message("👨🏻‍🏫 SwiftFormat \(self.folderToFormatRecursive.name) \n\(message)\n ❌")
+                case .success:
+                    self.signPost.message("👨🏻‍🏫 SwiftFormat \(self.folderToFormatRecursive.name) \n\(message)\n ✅")
+                case .info, .content:
+                    self.signPost.message("👨🏻‍🏫 SwiftFormat \(self.folderToFormatRecursive.name) \n\(message)\n")
                 case .error:
-                    asyncSwiftFormatAttemptOutput { throw Error.cliError("🌋 \n\(message)\n") }
-                    break
+                    asyncSwiftFormatAttemptOutput { throw Error.cliError("❌ \n\(message)\n ❌") }
                 case .warning:
                     self.signPost.message("⚠️ \n\(message)\n")
                 }
@@ -86,10 +91,9 @@ public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
 
             switch output {
             case .ok:
-                asyncSwiftFormatAttemptOutput { return }
+                asyncSwiftFormatAttemptOutput {}
             case .lintFailure, .error:
                 asyncSwiftFormatAttemptOutput { throw Error.cliError("\(output)") }
-                break
             }
         }
     }
@@ -100,6 +104,5 @@ public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
     {
         case cliError(String)
         case swiftFormatCannotRunWithoutConfigFileInBundle
-        
     }
 }

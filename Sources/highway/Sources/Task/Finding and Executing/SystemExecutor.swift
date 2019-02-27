@@ -8,13 +8,13 @@ public protocol SystemExecutorProtocol: AutoMockable
     /// sourcery:inline:SystemExecutor.AutoGenerateProtocol
     var signPost: SignPostProtocol { get set }
 
-    func launch(task: Task, wait: Bool) throws 
+    func launch(task: Task, wait: Bool) throws
     /// sourcery:end
 }
 
 public extension SystemExecutorProtocol
 {
-    public func execute(task: Task) throws
+    func execute(task: Task) throws
     {
         try launch(task: task, wait: true)
     }
@@ -39,10 +39,10 @@ public final class SystemExecutor: SystemExecutorProtocol, AutoGenerateProtocol
         let pipe = Pipe()
         process.standardOutput = pipe
         process.standardError = pipe
-        
+
         signPost.verbose(task.description)
         task.state = .executing
-        
+
         process.launch()
         if wait
         {

@@ -99,9 +99,9 @@ extension FileSystem
 
 public extension FileSystem
 {
-    public typealias ExistingItemHandler<R, I> = (FileSystem, I) throws -> R
+    typealias ExistingItemHandler<R, I> = (FileSystem, I) throws -> R
 
-    public func withExistingFile<R>(at url: Absolute, defaultValue: R, _ body: ExistingItemHandler<R, File>) throws -> R
+    func withExistingFile<R>(at url: Absolute, defaultValue: R, _ body: ExistingItemHandler<R, File>) throws -> R
     {
         do
         {
@@ -115,7 +115,7 @@ public extension FileSystem
         }
     }
 
-    public func withExistingDirectory<R>(at url: Absolute, defaultValue: R, _ body: ExistingItemHandler<R, Directory>) throws -> R
+    func withExistingDirectory<R>(at url: Absolute, defaultValue: R, _ body: ExistingItemHandler<R, Directory>) throws -> R
     {
         do
         {

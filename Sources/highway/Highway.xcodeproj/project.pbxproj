@@ -115,6 +115,9 @@
 		FDC093E92226931400B054BA /* AutomateHighwayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC09386222691E500B054BA /* AutomateHighwayViewController.swift */; };
 		FDC093EA2226932000B054BA /* AutomateMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC09387222691E500B054BA /* AutomateMain.storyboard */; };
 		FDC093EC22269B7600B054BA /* .swiftformat.md in Resources */ = {isa = PBXBuildFile; fileRef = FD3F8C9121DE1D2B00BBDA58 /* .swiftformat.md */; };
+		FDC093EE2226AAEB00B054BA /* HighwayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC093ED2226AAEB00B054BA /* HighwayError.swift */; };
+		FDC093EF2226AD2400B054BA /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
+		FDC093F02226AD7200B054BA /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
 		FDC156E421C5347D00E04B44 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
 		FDC156E921C5347D00E04B44 /* SourceryWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC156E821C5347D00E04B44 /* SourceryWorkerTests.swift */; };
 		FDC156EB21C5347D00E04B44 /* SourceryWorker.h in Headers */ = {isa = PBXBuildFile; fileRef = FDC156DD21C5347C00E04B44 /* SourceryWorker.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1272,6 +1275,7 @@
 		FDC0938A222691E500B054BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDC0938B222691E500B054BA /* AutomateHighway.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutomateHighway.entitlements; sourceTree = "<group>"; };
 		FDC09390222691FE00B054BA /* AutomateHighway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutomateHighway.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDC093ED2226AAEB00B054BA /* HighwayError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighwayError.swift; sourceTree = "<group>"; };
 		FDC156B621C52EE800E04B44 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SourceryWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC156DD21C5347C00E04B44 /* SourceryWorker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceryWorker.h; sourceTree = "<group>"; };
@@ -1406,6 +1410,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDC093F02226AD7200B054BA /* Errors.framework in Frameworks */,
+				FDC093EF2226AD2400B054BA /* Arguments.framework in Frameworks */,
 				FDFCEFCE221B1ABB001AC549 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDFCEFD4221B1D90001AC549 /* FoundationGenericHelper.framework in Frameworks */,
 				FD3F8C9021DE18B500BBDA58 /* SignPost.framework in Frameworks */,
@@ -2417,6 +2423,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_96 /* String+Error.swift */,
+				FDC093ED2226AAEB00B054BA /* HighwayError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -3673,6 +3680,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				FDC093EE2226AAEB00B054BA /* HighwayError.swift in Sources */,
 				OBJ_334 /* String+Error.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

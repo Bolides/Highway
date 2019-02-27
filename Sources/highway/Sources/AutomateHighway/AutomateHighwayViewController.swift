@@ -5,7 +5,9 @@
 //  Created by Stijn on 16/12/2018.
 //
 
+import Arguments
 import Cocoa
+import Errors
 import os
 import SignPost
 import SourceryWorker
@@ -15,8 +17,8 @@ import ZFile
 
 class AutomateHighwayViewController: NSViewController
 {
-
     lazy var signPost: SignPostProtocol = SignPost.shared
+    lazy var highwayCommandLineArguments = HighwayCommandLineOption.Values()
 
     private var sourceryWorker: AutomateHighwaySourceryWorkerProtocol?
     private var swiftFormatWorker: SwiftFormatWorkerProtocol?
@@ -53,10 +55,22 @@ class AutomateHighwayViewController: NSViewController
     {
         do
         {
-            
+            guard let relativeProjectPath = highwayCommandLineArguments.optionsAndValues[.srcroot] else
+            {
+                throw HighwayError.missingSrcroot(
+                    message: """
+                    You can provide the following options
+                    \(HighwayCommandLineOption.allCases.map { $0.rawValue }.joined(separator: "\n"))
+                    """,
+                    function: "\(#function)"
+                )
+            }
+
+            let projectFolder = try Folder(relativePath: relativeProjectPath)
+
             if swiftFormatWorker == nil
             {
-                swiftFormatWorker = try SwiftFormatWorker()
+                swiftFormatWorker = try SwiftFormatWorker(folderToFormatRecursive: try projectFolder.subfolder(named: "Sources/Highway/Sources"))
             }
 
             swiftFormatWorker!.attempt

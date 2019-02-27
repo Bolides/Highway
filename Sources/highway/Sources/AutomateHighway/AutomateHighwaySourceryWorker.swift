@@ -6,6 +6,8 @@
 //  Copyright © 2018 dooz. All rights reserved.
 //
 
+import Arguments
+import Errors
 import Foundation
 import SignPost
 import SourceryAutoProtocols
@@ -13,35 +15,34 @@ import SourceryWorker
 import SwiftFormatWorker
 import Terminal
 import ZFile
-import Arguments
 
 public protocol AutomateHighwaySourceryWorkerProtocol: AutoMockable
 {
     /// sourcery:inline:DemoSourceryWorker.AutoGenerateProtocol
-    func attempt(_ async: (@escaping (@escaping SourceryWorker.SyncOutput) -> Void))
+    func attempt(_ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
     /// sourcery:end
 }
 
 public class AutomateHighwaySourceryWorker: AutomateHighwaySourceryWorkerProtocol, AutoGenerateProtocol
 {
     public static let queue = DispatchQueue(label: "be.dooz.swiftformatWorker.sourceryWorker")
-    
+
     // MARK: - Private
-    
+
     private static let commonImportAutoMockable = Set(
         [
             TemplatePrepend.Import(name: "SourceryAutoProtocols"),
             TemplatePrepend.Import(name: "Foundation"),
             TemplatePrepend.Import(name: "os"),
-            ]
+        ]
     )
-    
+
     private let signPost: SignPostProtocol
     private let workers: [SourceryWorkerProtocol]
     private let highwayCommandLineArguments: HighwayCommandLineOption.Values
-    
+
     // MARK: - Init
-    
+
     init(
         signPost: SignPostProtocol = SignPost.shared,
         highwayCommandLineArguments: HighwayCommandLineOption.Values = HighwayCommandLineOption.Values()
@@ -50,9 +51,19 @@ public class AutomateHighwaySourceryWorker: AutomateHighwaySourceryWorkerProtoco
         self.highwayCommandLineArguments = highwayCommandLineArguments
         self.signPost = signPost
 
-        let relativeProjectPath = highwayCommandLineArguments.optionsAndValues[.srcroot] ?? ""
+        guard let relativeProjectPath = highwayCommandLineArguments.optionsAndValues[.srcroot] else
+        {
+            throw HighwayError.missingSrcroot(
+                message: """
+                You can provide the following options
+                \(HighwayCommandLineOption.allCases.map { $0.rawValue }.joined(separator: "\n"))
+                """,
+                function: "\(#function)"
+            )
+        }
+
         let projectFolder = try Folder(relativePath: relativeProjectPath)
-        
+
         signPost.message("💁🏻‍♂️ Sourcery don on Project in folder\n \(projectFolder.path)\n")
 
         let highwayFolder = try projectFolder.subfolder(named: "Sources/highway")
@@ -68,7 +79,7 @@ public class AutomateHighwaySourceryWorker: AutomateHighwaySourceryWorkerProtoco
 
         let sourcerySequence = try Target.allCases.map
         { target in
-            return try Sourcery(
+            try Sourcery(
                 sourcesFolders: [sourcesFolder.subfolder(named: target.rawValue)],
                 individualSourceFiles: nil,
                 templateFolder: templateFolder,
@@ -94,7 +105,7 @@ public class AutomateHighwaySourceryWorker: AutomateHighwaySourceryWorkerProtoco
             )
         }
 
-        self.workers = try sourcerySequence.map
+        workers = try sourcerySequence.map
         {
             try SourceryWorker(sourcery: $0, queue: AutomateHighwaySourceryWorker.queue)
         }
@@ -102,16 +113,9 @@ public class AutomateHighwaySourceryWorker: AutomateHighwaySourceryWorkerProtoco
 
     // MARK: - Error
 
-    enum Error: Swift.Error, CustomStringConvertible
-    {
-        var description: String { return "⚠️ You are running in derived data folder. See README of project on github doozMen/highway to change your project settings!" }
-
-        case runningInDerivedDataFolder
-    }
-
     // MARK: - Sourcery Setup
 
-    public func attempt(_ async: (@escaping (@escaping SourceryWorker.SyncOutput) -> Void))
+    public func attempt(_ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
     {
         workers.forEach
         { [weak self] in
@@ -129,9 +133,9 @@ public class AutomateHighwaySourceryWorker: AutomateHighwaySourceryWorkerProtoco
             }
         }
     }
-    
+
     // MARK: - Enum
-    
+
     enum Target: String, CaseIterable
     {
         case Arguments
@@ -146,7 +150,7 @@ public class AutomateHighwaySourceryWorker: AutomateHighwaySourceryWorkerProtoco
         case POSIX
         case Task
         case SwiftformatWorker
-        
+
         func imports() -> Set<TemplatePrepend>
         {
             // Insert the target itself
@@ -154,33 +158,32 @@ public class AutomateHighwaySourceryWorker: AutomateHighwaySourceryWorkerProtoco
             importNames.insert(TemplatePrepend.Import(name: rawValue))
             importNames.insert(TemplatePrepend.Import(name: VendorFramework.ZFile.rawValue))
             importNames.insert(TemplatePrepend.Import(name: VendorFramework.ZFileMock.rawValue))
-            
+
             // If not the default, add a case and insert imports into importNames
             switch self {
             case .Task:
                 importNames.insert(TemplatePrepend.Import(name: Target.Arguments.rawValue))
                 importNames.insert(TemplatePrepend.Import(name: Target.SignPost.rawValue))
-                
+
                 return Set([TemplatePrepend(name: importNames, template: Template.AutoMockable.rawValue)])
             case .Terminal:
                 importNames.insert(TemplatePrepend.Import(name: Target.Arguments.rawValue))
-                
+
                 return Set([TemplatePrepend(name: importNames, template: Template.AutoMockable.rawValue)])
             default:
                 return Set([TemplatePrepend(name: importNames, template: Template.AutoMockable.rawValue)])
             }
         }
     }
-    
+
     enum VendorFramework: String, CaseIterable
     {
         case ZFile
         case ZFileMock
     }
-    
+
     enum Template: String
     {
         case AutoMockable
     }
-
 }

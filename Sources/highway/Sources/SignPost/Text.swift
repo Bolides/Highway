@@ -99,19 +99,19 @@ public extension Text
 {
     // MARK: - Whitespace
 
-    public init(whitespaceWidth width: Int = 0)
+    init(whitespaceWidth width: Int = 0)
     {
         self.init(SubText.whitespace(width))
     }
 
-    public static func whitespace(_ width: Int = 1) -> Text
+    static func whitespace(_ width: Int = 1) -> Text
     {
         return Text(whitespaceWidth: width)
     }
 
     // MARK: - Colored Text
 
-    public static func text(_ string: String, color: Color = .none, bold _: Bool = false) -> Text
+    static func text(_ string: String, color: Color = .none, bold _: Bool = false) -> Text
     {
         return Text(string, color: color)
     }

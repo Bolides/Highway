@@ -36,12 +36,12 @@ public struct SubText
 
 public extension SubText
 {
-    public init(whitespaceWidth width: Int = 0)
+    init(whitespaceWidth width: Int = 0)
     {
         self.init(String.whitespace(width))
     }
 
-    public static func whitespace(_ width: Int = 1) -> SubText
+    static func whitespace(_ width: Int = 1) -> SubText
     {
         return SubText(whitespaceWidth: width)
     }

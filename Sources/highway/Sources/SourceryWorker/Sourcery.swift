@@ -32,29 +32,29 @@ public protocol SourceryProtocol: ExecutableProtocol
 public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
 {
     // MARK: - Identify the Sourcery Model
-    
+
     public let uuid: String = UUID().uuidString
     public let name: String
 
     // MARK: - Folders and Files
-    
+
     public let templateFolder: FolderProtocol
     public let outputFolder: FolderProtocol
     public let sourcesFolders: [FolderProtocol]
     public let individualSourceFiles: [File]?
     public let sourceryAutoProtocolsFile: FileProtocol
     public let sourceryYMLFile: FileProtocol
-    
+
     // MARK: - Imports to be prepended to templates
-    
+
     public let imports: Set<TemplatePrepend>
-    
+
     // MARK: - Private
-    
+
     private let signPost: SignPostProtocol
 
     // MARK: - Init
-    
+
     public init(
         sourcesFolders: [FolderProtocol],
         individualSourceFiles: [File]? = nil,
@@ -92,7 +92,7 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
 
         self.signPost = signPost
         signPost.verbose("🧙‍♂️ Sourcery YML file can be found at path:\n \(sourceryYMLFile.path)\n")
-        
+
         name = sourcesFolders.map { $0.name }.joined(separator: "\n")
     }
 
@@ -108,14 +108,14 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
             throw ExecutableNotFoundError(error)
         }
     }
-    
+
     // MARK: - Error
-    
+
     public struct ExecutableNotFoundError: Swift.Error, CustomDebugStringConvertible
     {
         let message: String
         let originalError: Error
-        
+
         init(_ originalError: Error)
         {
             message = """
@@ -132,7 +132,7 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
             """
             self.originalError = originalError
         }
-        
+
         public var debugDescription: String
         {
             return message
