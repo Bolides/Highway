@@ -55,7 +55,7 @@ public struct TestOptions: TestOptionsProtocol, AutoGenerateProtocol
 
     public func arguments() throws -> Arguments
     {
-        var args = Arguments.empty
+        var args = Arguments([])
 
         args += _option("scheme", value: scheme)
         args += _option("project", value: project)

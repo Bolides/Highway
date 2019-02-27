@@ -7,7 +7,6 @@
 
 import Foundation
 import os
-import ProjectFolderWorker
 import SignPost
 import SourceryAutoProtocols
 import SwiftFormatWorker

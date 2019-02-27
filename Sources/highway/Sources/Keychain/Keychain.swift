@@ -58,7 +58,7 @@ public extension Keychain
         public let service: String
         public var processArguments: Arguments
         {
-            return Arguments("find-generic-password")
+            return Arguments(["find-generic-password"])
                 + "-a" + account
                 + "-s" + service
                 + "-w" // Display only the password on stdout

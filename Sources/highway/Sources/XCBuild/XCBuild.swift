@@ -147,7 +147,7 @@ fileprivate extension ArchiveOptionsProtocol
     // sourcery:skipProtocol
     var arguments: Arguments
     {
-        var args = Arguments.empty
+        var args = Arguments([])
         args += _option("scheme", value: scheme)
         args += _option("project", value: project)
         args += _option("destination", value: destination.asString)
@@ -163,7 +163,7 @@ fileprivate extension ExportArchiveOptionsProtocol
     var arguments: Arguments
     {
         let exportOptionsPlistPath = "\(exportPath)/generated.plist"
-        var args = Arguments("-exportArchive")
+        var args = Arguments(["-exportArchive"])
         args += _option("exportOptionsPlist", value: exportOptionsPlistPath)
         args += _option("archivePath", value: archivePath.path)
         args += _option("exportPath", value: exportPath)
