@@ -7,9 +7,7 @@
 
 import Arguments
 import Cocoa
-import Deliver
 import os
-import ProjectFolderWorker
 import SignPost
 import SourceryWorker
 import SwiftFormatWorker
@@ -39,26 +37,6 @@ class AutomateAppdelegate: NSObject, NSApplicationDelegate
             NSApplication.shared.terminate(self)
         }
 
-        tempGenerateJWTToken()
-    }
-
-    private func tempGenerateJWTToken()
-    {
-        //: # Cupertino JWT
-
-        do
-        {
-            let srcRoot = try ProjectFolderWorker(bundle: Bundle.main).srcRoot.folder
-
-            // Get content of the .p8 file
-            let p8 = try srcRoot.file(named: "/Sources/AutomateHighway/AuthKey_VV7NT37UVU.p8")
-            let worker = try JWTTokenWorker(p8KeyFile: p8)
-            signPost.message("💁🏻‍♂️ JWT token \(worker.token)")
-        }
-        catch
-        {
-            signPost.error("⚠️  \(error)")
-        }
     }
 
     // MARK: - Command Line
@@ -77,9 +55,7 @@ class AutomateAppdelegate: NSObject, NSApplicationDelegate
             switch command {
             // 4. execute the task as if button was pressed
             case .sourcery:
-                let worker = try AutomateHighwaySourceryWorker(
-                    projectFolderWorkerType: ProjectFolderWorker.self
-                )
+                let worker = try AutomateHighwaySourceryWorker()
                 worker.attempt
                 { [weak self] syncOutput in
                     do
@@ -97,7 +73,7 @@ class AutomateAppdelegate: NSObject, NSApplicationDelegate
                 }
             case .swiftformat:
 
-                let worker = try SwiftFormatWorker(forSources: ProjectFolderWorker.self)
+                let worker = try SwiftFormatWorker()
 
                 worker.attempt
                 { [weak self] syncOutput in

@@ -7,39 +7,15 @@ public protocol ArgumentsConvertible
 
 public struct Arguments
 {
-    // MARK: - Convenience
-
-    public static let empty = Arguments()
-
+    // MARK: - Properties
+    
+    public var all: [String]
+    
     // MARK: - Init
 
-    public init(all: [String] = [])
+    public init(_ all: [String] = CommandLine.arguments)
     {
         self.all = all
-    }
-
-    public init(_ all: [String] = [])
-    {
-        self.all = all
-    }
-
-    public init(argumentsArray: [Arguments])
-    {
-        let allArray: [[String]] = argumentsArray.map { $0.all }
-        all = Array(allArray.joined())
-    }
-
-    public init(_ arg: String)
-    {
-        self.init([arg])
-    }
-
-    // MARK: - Properties
-
-    public var all: [String]
-    public var remaining: Arguments
-    {
-        return Arguments(Array(all.dropFirst()))
     }
 
     // MARK: - Appending

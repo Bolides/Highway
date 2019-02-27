@@ -31,7 +31,7 @@ public class Task: TaskProtocol, AutoGenerateProtocol
 {
     // MARK: - Init
     
-    public convenience init(commandName: String, arguments: Arguments = .empty, currentDirectoryUrl: FolderProtocol? = nil, provider: ExecutableProviderProtocol) throws
+    public convenience init(commandName: String, arguments: Arguments = Arguments(), currentDirectoryUrl: FolderProtocol? = nil, provider: ExecutableProviderProtocol) throws
     {
         self.init(
             executable: try provider.executable(with: commandName),
@@ -40,7 +40,7 @@ public class Task: TaskProtocol, AutoGenerateProtocol
         )
     }
     
-    public init(executable: FileProtocol, arguments: Arguments = .empty, currentDirectoryUrl: FolderProtocol? = nil)
+    public init(executable: FileProtocol, arguments: Arguments = Arguments(), currentDirectoryUrl: FolderProtocol? = nil)
     {
         self.executable = executable
         state = .waiting
@@ -52,7 +52,7 @@ public class Task: TaskProtocol, AutoGenerateProtocol
     
     public var name: String { return executable.name }
     public var executable: FileProtocol
-    public var arguments = Arguments.empty
+    public var arguments = Arguments()
     public var environment = [String: String]()
     public var currentDirectoryUrl: FolderProtocol?
     

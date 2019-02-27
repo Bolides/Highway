@@ -35,7 +35,7 @@ public struct  MinimalTestOptions: MinimalTestOptionsProtocol, AutoGenerateProto
     
     public func arguments() throws -> Arguments
     {
-        var args = Arguments.empty
+        var args = Arguments([])
         
         args += _option("scheme", value: scheme)
         args += _option("workspace", value: workspace.path)

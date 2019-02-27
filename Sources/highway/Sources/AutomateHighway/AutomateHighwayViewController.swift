@@ -7,7 +7,6 @@
 
 import Cocoa
 import os
-import ProjectFolderWorker
 import SignPost
 import SourceryWorker
 import SwiftFormatWorker
@@ -16,8 +15,6 @@ import ZFile
 
 class AutomateHighwayViewController: NSViewController
 {
-    let folder = try! Folder(path: "/Users/doozmen/Documents/dooZ/Babylon/ios-babylon-application/Sources/Carthage/Checkouts/highway/Sources/highway")
-    lazy var config = try! folder.file(named: ".swiftformat.md")
 
     lazy var signPost: SignPostProtocol = SignPost.shared
 
@@ -30,7 +27,7 @@ class AutomateHighwayViewController: NSViewController
         {
             if sourceryWorker == nil
             {
-                sourceryWorker = try AutomateHighwaySourceryWorker(projectFolderWorkerType: ProjectFolderWorker.self)
+                sourceryWorker = try AutomateHighwaySourceryWorker()
             }
 
             sourceryWorker!.attempt
@@ -56,9 +53,10 @@ class AutomateHighwayViewController: NSViewController
     {
         do
         {
+            
             if swiftFormatWorker == nil
             {
-                swiftFormatWorker = try SwiftFormatWorker(forSources: ProjectFolderWorker.self)
+                swiftFormatWorker = try SwiftFormatWorker()
             }
 
             swiftFormatWorker!.attempt
