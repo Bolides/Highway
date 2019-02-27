@@ -37,8 +37,9 @@ public enum HighwayCommandLineOption: String, CaseIterable
 
     // MARK: - Structs
 
-    public struct Values
+    public struct Values: CustomStringConvertible
     {
+        
         public let optionsAndValues: [HighwayCommandLineOption.SingleOption: String]
 
         public init(options: Set<HighwayCommandLineOption> = HighwayCommandLineOption.validOptionsFormCommandLine, arguments: [String] = CommandLine.arguments)
@@ -59,5 +60,14 @@ public enum HighwayCommandLineOption: String, CaseIterable
 
             self.optionsAndValues = optionsAndValues
         }
+        
+        public var description: String {
+            return """
+            \(HighwayCommandLineOption.Values.self) options
+            
+            \(optionsAndValues.map { "\($0) : \($1)" }.joined(separator: "\n"))
+            """
+        }
+
     }
 }
