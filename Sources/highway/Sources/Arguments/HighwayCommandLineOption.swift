@@ -63,9 +63,7 @@ public enum HighwayCommandLineOption: String, CaseIterable
         
         public var description: String {
             return """
-            \(HighwayCommandLineOption.Values.self) options
-            
-            \(optionsAndValues.map { "\($0) : \($1)" }.joined(separator: "\n"))
+            \(optionsAndValues.map { "  * \($0) : \($1)" }.joined(separator: "\n"))
             """
         }
 

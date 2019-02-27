@@ -43,7 +43,6 @@ public enum SignPostCommandLineOptions: String, CaseIterable
         
         public var description: String {
             return """
-            \(SignPostCommandLineOptions.Values.self)
             
             \(all.map { "   * \($0)"}.joined(separator:"\n"))
             

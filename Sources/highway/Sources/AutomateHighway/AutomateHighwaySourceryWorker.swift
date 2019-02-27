@@ -64,7 +64,7 @@ public class AutomateHighwaySourceryWorker: AutomateHighwaySourceryWorkerProtoco
 
         let projectFolder = try Folder(relativePath: relativeProjectPath)
 
-        signPost.message("💁🏻‍♂️ Sourcery don on Project in folder\n \(projectFolder.path)\n")
+        signPost.verbose("💁🏻‍♂️ Sourcery done on Project in folder\n \(projectFolder.path)\n")
 
         let highwayFolder = try projectFolder.subfolder(named: "Sources/highway")
         let sourcesFolder = try highwayFolder.subfolder(named: "Sources")

@@ -46,7 +46,7 @@ class AutomateAppdelegate: NSObject, NSApplicationDelegate
         // 1. Check if run from command line
 
         let argumentsWorker = try ArgumentsWorker()
-        signPost.message("💁🏻‍♂️ loaded with arguments prefixed with <🤖command:>\n \(argumentsWorker.workers.map { $0.rawValue }.joined(separator: "\n"))\n")
+        signPost.verbose("💁🏻‍♂️ loaded with arguments prefixed with <🤖command:>\n \(argumentsWorker.workers.map { $0.rawValue }.joined(separator: "\n"))\n")
 
         // 3. Find worker for the task
 

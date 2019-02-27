@@ -76,9 +76,9 @@ public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
             CLI.print = { message, type in
                 switch type {
                 case .success:
-                    self.signPost.message("👨🏻‍🏫 SwiftFormat \(self.folderToFormatRecursive.name) \n\(message)\n ✅")
+                    self.signPost.verbose("👨🏻‍🏫 SwiftFormat \(self.folderToFormatRecursive.name) \n\(message)\n ✅")
                 case .info, .content:
-                    self.signPost.message("👨🏻‍🏫 SwiftFormat \(self.folderToFormatRecursive.name) \n\(message)\n")
+                    self.signPost.verbose("👨🏻‍🏫 SwiftFormat \(self.folderToFormatRecursive.name) \n\(message)\n")
                 case .error:
                     asyncSwiftFormatAttemptOutput { throw Error.cliError("❌ \n\(message)\n ❌") }
                 case .warning:

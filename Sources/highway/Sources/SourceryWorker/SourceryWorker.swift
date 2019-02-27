@@ -135,7 +135,7 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
 
                 let sourceFolderStrings: [String] = self.sourcery.sourcesFolders.map { $0.name }
 
-                self.signPost.message("🧙‍♂️ Generating code for \n\(sourceFolderStrings.joined(separator: " * \n"))")
+                self.signPost.verbose("🧙‍♂️ Generating code for \n\(sourceFolderStrings.joined(separator: " * \n"))")
 
                 let sourceryWorkerOutput = try self.terminalWorker.terminal(task: .sourcery(try self.executor()))
 
@@ -160,7 +160,7 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
                     try file.write(data: data)
                 }
 
-                self.signPost.message("🧙‍♂️ ✅ \n\(sourceFolderStrings.joined(separator: " * \n"))\n✅")
+                self.signPost.verbose("🧙‍♂️ ✅ \n\(sourceFolderStrings.joined(separator: " * \n"))\n✅")
                 asyncSourceryWorkerOutput { sourceryWorkerOutput }
             }
             catch
