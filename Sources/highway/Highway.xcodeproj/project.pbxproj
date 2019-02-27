@@ -75,7 +75,7 @@
 		FDB7AA1721CD81FD0045DDA8 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
 		FDB7AA1821CD82640045DDA8 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A94321CD6A780045DDA8 /* AutoMockable.generated.swift */; };
 		FDB7AA1B21CD82DD0045DDA8 /* SourceryWorkerMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7AA0D21CD81DC0045DDA8 /* SourceryWorkerMock.framework */; };
-		FDC0937B22268C2F00B054BA /* CommandLineOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC0937A22268C2F00B054BA /* CommandLineOptions.swift */; };
+		FDC0937B22268C2F00B054BA /* SignPostCommandLineOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC0937A22268C2F00B054BA /* SignPostCommandLineOptions.swift */; };
 		FDC093A02226924600B054BA /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		FDC093A12226924600B054BA /* Arguments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDC093A42226924600B054BA /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Keychain::Product" /* Keychain.framework */; };
@@ -158,7 +158,7 @@
 		FDFCF00C221B221E001AC549 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFDA221B1E43001AC549 /* ZFile.framework */; };
 		FDFCF00D221B2227001AC549 /* FoundationGenericHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCF00A221B21D4001AC549 /* FoundationGenericHelper.framework */; };
 		OBJ_269 /* Arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* Arguments.swift */; };
-		OBJ_270 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* Option.swift */; };
+		OBJ_270 /* HighwayCommandLineOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* HighwayCommandLineOption.swift */; };
 		OBJ_272 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
 		OBJ_273 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_281 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_169 /* test.swift */; };
@@ -1262,7 +1262,7 @@
 		FDB7AA0D21CD81DC0045DDA8 /* SourceryWorkerMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SourceryWorkerMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB7AA0F21CD81DC0045DDA8 /* SourceryWorkerMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceryWorkerMock.h; sourceTree = "<group>"; };
 		FDB7AA1021CD81DC0045DDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDC0937A22268C2F00B054BA /* CommandLineOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineOptions.swift; sourceTree = "<group>"; };
+		FDC0937A22268C2F00B054BA /* SignPostCommandLineOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignPostCommandLineOptions.swift; sourceTree = "<group>"; };
 		FDC09383222691E500B054BA /* AutomateHighwaySourceryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomateHighwaySourceryWorker.swift; sourceTree = "<group>"; };
 		FDC09384222691E500B054BA /* AutomateAppdelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomateAppdelegate.swift; sourceTree = "<group>"; };
 		FDC09385222691E500B054BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1361,7 +1361,7 @@
 		OBJ_55 /* Absolute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Absolute.swift; sourceTree = "<group>"; };
 		OBJ_56 /* Relative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relative.swift; sourceTree = "<group>"; };
 		OBJ_84 /* Arguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arguments.swift; sourceTree = "<group>"; };
-		OBJ_85 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		OBJ_85 /* HighwayCommandLineOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighwayCommandLineOption.swift; sourceTree = "<group>"; };
 		OBJ_96 /* String+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Error.swift"; sourceTree = "<group>"; };
 		OBJ_98 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		"highway::Arguments::Product" /* Arguments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Arguments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1790,7 +1790,7 @@
 				FD1126CF21C77F050072607D /* Info.plist */,
 				OBJ_113 /* Line.swift */,
 				OBJ_114 /* List.swift */,
-				FDC0937A22268C2F00B054BA /* CommandLineOptions.swift */,
+				FDC0937A22268C2F00B054BA /* SignPostCommandLineOptions.swift */,
 				OBJ_111 /* Printable.swift */,
 				OBJ_115 /* Prompt.swift */,
 				FD1126CE21C77F050072607D /* SignPost.h */,
@@ -2398,7 +2398,7 @@
 				FDEC11F221C67EAD00CB7DAD /* Worker.swift */,
 				OBJ_84 /* Arguments.swift */,
 				FD1126C021C771970072607D /* ArgumentsWorker.swift */,
-				OBJ_85 /* Option.swift */,
+				OBJ_85 /* HighwayCommandLineOption.swift */,
 			);
 			path = Arguments;
 			sourceTree = "<group>";
@@ -3528,7 +3528,7 @@
 				FD1126EC21C77F920072607D /* List.swift in Sources */,
 				FD1126F021C77FAA0072607D /* Text.swift in Sources */,
 				FD1126F321C77FAA0072607D /* Texts+Operators.swift in Sources */,
-				FDC0937B22268C2F00B054BA /* CommandLineOptions.swift in Sources */,
+				FDC0937B22268C2F00B054BA /* SignPostCommandLineOptions.swift in Sources */,
 				FD1126E921C77F7E0072607D /* SignPost.swift in Sources */,
 				FD1126EE21C77FAA0072607D /* SubText.swift in Sources */,
 				FD1126EA21C77F8B0072607D /* Printable.swift in Sources */,
@@ -3656,7 +3656,7 @@
 			files = (
 				FD1126C121C771970072607D /* ArgumentsWorker.swift in Sources */,
 				OBJ_269 /* Arguments.swift in Sources */,
-				OBJ_270 /* Option.swift in Sources */,
+				OBJ_270 /* HighwayCommandLineOption.swift in Sources */,
 				FDEC11F421C67ED700CB7DAD /* Worker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

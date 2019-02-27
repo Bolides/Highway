@@ -13,8 +13,11 @@ import Terminal
 
 // sourcery:AutoMockable
 public protocol MinimalTestOptionsProtocol: ArgumentExecutableProtocol {
-    // sourcery:inline:MinimalTestOptions.AutoGenerateProtocol
-    // sourcery:end
+    /// sourcery:inline:MinimalTestOptions.AutoGenerateProtocol
+
+    func arguments() throws  -> Arguments
+    func executableFile() throws  -> FileProtocol
+    /// sourcery:end
 }
 
 public struct  MinimalTestOptions: MinimalTestOptionsProtocol, AutoGenerateProtocol {

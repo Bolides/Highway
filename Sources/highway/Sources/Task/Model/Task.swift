@@ -19,11 +19,11 @@ public protocol TaskProtocol: AutoMockable
     var trimmedOutput: String? { get }
     var capturedOutputString: String? { get }
     var successfullyFinished: Bool { get }
-    var description: String { get }
     var toProcess: Process { get }
-    
+    var description: String { get }
+
     func enableReadableOutputDataCapturing()
-    func throwIfNotSuccess(_ error: Swift.Error) throws
+    func throwIfNotSuccess(_ error: Swift.Error) throws 
     /// sourcery:end
 }
 

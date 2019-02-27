@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum CommandLineOptions: String, CaseIterable {
+public enum SignPostCommandLineOptions: String, CaseIterable {
     case verbose
     case _verbose = "-verbose"
     case __verbose = "--verbose"
