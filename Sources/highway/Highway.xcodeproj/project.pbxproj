@@ -98,6 +98,7 @@
 		FDB7AA1721CD81FD0045DDA8 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
 		FDB7AA1821CD82640045DDA8 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A94321CD6A780045DDA8 /* AutoMockable.generated.swift */; };
 		FDB7AA1B21CD82DD0045DDA8 /* SourceryWorkerMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7AA0D21CD81DC0045DDA8 /* SourceryWorkerMock.framework */; };
+		FDC0937B22268C2F00B054BA /* CommandLineOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC0937A22268C2F00B054BA /* CommandLineOptions.swift */; };
 		FDC156E421C5347D00E04B44 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
 		FDC156E921C5347D00E04B44 /* SourceryWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC156E821C5347D00E04B44 /* SourceryWorkerTests.swift */; };
 		FDC156EB21C5347D00E04B44 /* SourceryWorker.h in Headers */ = {isa = PBXBuildFile; fileRef = FDC156DD21C5347C00E04B44 /* SourceryWorker.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1399,6 +1400,7 @@
 		FDB7AA0D21CD81DC0045DDA8 /* SourceryWorkerMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SourceryWorkerMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB7AA0F21CD81DC0045DDA8 /* SourceryWorkerMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceryWorkerMock.h; sourceTree = "<group>"; };
 		FDB7AA1021CD81DC0045DDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDC0937A22268C2F00B054BA /* CommandLineOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineOptions.swift; sourceTree = "<group>"; };
 		FDC156B621C52EE800E04B44 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SourceryWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC156DD21C5347C00E04B44 /* SourceryWorker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceryWorker.h; sourceTree = "<group>"; };
@@ -1977,6 +1979,7 @@
 				FD1126CF21C77F050072607D /* Info.plist */,
 				OBJ_113 /* Line.swift */,
 				OBJ_114 /* List.swift */,
+				FDC0937A22268C2F00B054BA /* CommandLineOptions.swift */,
 				OBJ_111 /* Printable.swift */,
 				OBJ_115 /* Prompt.swift */,
 				FD1126CE21C77F050072607D /* SignPost.h */,
@@ -3873,6 +3876,7 @@
 				FD1126EC21C77F920072607D /* List.swift in Sources */,
 				FD1126F021C77FAA0072607D /* Text.swift in Sources */,
 				FD1126F321C77FAA0072607D /* Texts+Operators.swift in Sources */,
+				FDC0937B22268C2F00B054BA /* CommandLineOptions.swift in Sources */,
 				FD1126E921C77F7E0072607D /* SignPost.swift in Sources */,
 				FD1126EE21C77FAA0072607D /* SubText.swift in Sources */,
 				FD1126EA21C77F8B0072607D /* Printable.swift in Sources */,

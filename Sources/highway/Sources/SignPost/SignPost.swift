@@ -5,7 +5,7 @@ public protocol SignPostProtocol: AutoMockable
 {
     /// sourcery:inline:SignPost.AutoGenerateProtocol
     static var shared: SignPostProtocol { get }
-    var verbose: Bool { get set }
+    var verbose: Bool { get }
 
     func write(printer: Printer)
     func write(printable: Printable)
@@ -25,12 +25,20 @@ public protocol SignPostProtocol: AutoMockable
 public class SignPost: SignPostProtocol, AutoGenerateProtocol
 {
     public static let shared: SignPostProtocol = SignPost()
-
-    public var verbose = false
+    
+    public let verbose: Bool
 
     // MARK: - Init
 
-    public init() {}
+    public init(verbose: Bool = false, commandLineArguments: [String] = CommandLine.arguments) {
+        var verbose = verbose
+        
+        guard let commandLineVerbose = (commandLineArguments.compactMap { CommandLineOptions(rawValue: $0) }.first?.isVerbose) else {
+            self.verbose = verbose
+            return
+        }
+        self.verbose = commandLineVerbose
+    }
 
     // MARK: - Private
 
