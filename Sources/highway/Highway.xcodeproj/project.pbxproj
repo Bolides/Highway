@@ -51,6 +51,7 @@
 		FD589F62221B0EB300335F55 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F61221B0EB300335F55 /* ZFileMock.framework */; };
 		FD589F64221B0EC100335F55 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
 		FD589F66221B0EC800335F55 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FD74CC7D2226F35B00A65E44 /* PodExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD74CC7C2226F35B00A65E44 /* PodExecutable.swift */; };
 		FDAA4C1D2225899A0091F9C3 /* MinimalTestOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAA4C1C2225899A0091F9C3 /* MinimalTestOptions.swift */; };
 		FDAC932A210B595100B0D045 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		FDB7A8AD21CD58600045DDA8 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
@@ -1234,6 +1235,7 @@
 		FD589F61221B0EB300335F55 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD589F63221B0EC100335F55 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD589F65221B0EC800335F55 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD74CC7C2226F35B00A65E44 /* PodExecutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodExecutable.swift; sourceTree = "<group>"; };
 		FDAA4C1C2225899A0091F9C3 /* MinimalTestOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimalTestOptions.swift; sourceTree = "<group>"; };
 		FDAC932C210B5C4500B0D045 /* ExcecutableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcecutableProtocol.swift; sourceTree = "<group>"; };
 		FDAC9350210B7D4A00B0D045 /* TerminalTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminalTasks.swift; sourceTree = "<group>"; };
@@ -2112,6 +2114,7 @@
 			isa = PBXGroup;
 			children = (
 				FD34F42C21BEE9EB0052222C /* CDToFolderExecutable.swift */,
+				FD74CC7C2226F35B00A65E44 /* PodExecutable.swift */,
 				FD34F42D21BEE9EB0052222C /* CatExecutable.swift */,
 				FD34F42E21BEE9EB0052222C /* GitExecutables.swift */,
 				FDAC932C210B5C4500B0D045 /* ExcecutableProtocol.swift */,
@@ -3779,6 +3782,7 @@
 				FD34F43121BEE9EB0052222C /* GitExecutables.swift in Sources */,
 				FD34F42B21BEE91C0052222C /* ExcecutableProtocol.swift in Sources */,
 				FD34F42F21BEE9EB0052222C /* CDToFolderExecutable.swift in Sources */,
+				FD74CC7D2226F35B00A65E44 /* PodExecutable.swift in Sources */,
 				FD34F42A21BEE8E20052222C /* TerminalSysExitCode.swift in Sources */,
 				FD34F42821BEE8D50052222C /* TerminalTasks.swift in Sources */,
 				FD34F43021BEE9EB0052222C /* CatExecutable.swift in Sources */,
