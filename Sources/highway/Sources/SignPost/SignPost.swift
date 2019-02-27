@@ -38,6 +38,7 @@ public class SignPost: SignPostProtocol, AutoGenerateProtocol
             return
         }
         self.verbose = commandLineVerbose
+        print("⚠️ SignPost is running verbose ⚠️")
     }
 
     // MARK: - Private
