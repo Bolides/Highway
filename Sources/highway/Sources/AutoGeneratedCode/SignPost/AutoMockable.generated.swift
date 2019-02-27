@@ -5,237 +5,261 @@ import SourceryAutoProtocols
 import ZFile
 import ZFileMock
 
+
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // MARK: - SignPostProtocolMock
 
-open class SignPostProtocolMock: SignPostProtocol
-{
+open class SignPostProtocolMock: SignPostProtocol {
+
     public init() {}
 
-    public static var shared: SignPostProtocol
-    {
-        get { return underlyingShared }
-        set(value) { underlyingShared = value }
-    }
+  public static var shared: SignPostProtocol {
+      get { return underlyingShared }
+      set(value) { underlyingShared = value }
+  }
+  public static var underlyingShared: SignPostProtocol!
+  public  var verbose: Bool {
+      get { return underlyingVerbose }
+      set(value) { underlyingVerbose = value }
+  }
+  public  var underlyingVerbose: Bool = false
 
-    public static var underlyingShared: SignPostProtocol!
-    public var verbose: Bool
-    {
-        get { return underlyingVerbose }
-        set(value) { underlyingVerbose = value }
-    }
 
-    public var underlyingVerbose: Bool = false
+  // MARK: - <write> - parameters
 
-    // MARK: - <write> - parameters
+  public var writePrinterCallsCount = 0
+  public var writePrinterCalled: Bool {
+    return writePrinterCallsCount > 0
+  }
+  public var writePrinterReceivedPrinter: Printer?
 
-    public var writePrinterCallsCount = 0
-    public var writePrinterCalled: Bool
-    {
-        return writePrinterCallsCount > 0
-    }
+  // MARK: - <write> - closure mocks
 
-    public var writePrinterReceivedPrinter: Printer?
+  public var writePrinterClosure: ((Printer)  -> Void)? = nil
 
-    // MARK: - <write> - closure mocks
 
-    public var writePrinterClosure: ((Printer) -> Void)?
 
-    // MARK: - <write> - method mocked
+  // MARK: - <write> - method mocked
 
-    open func write(printer: Printer)
-    {
-        writePrinterCallsCount += 1
-        writePrinterReceivedPrinter = printer
+  open func write(printer: Printer) {
 
-        // <write> - Void return mock implementation
+      writePrinterCallsCount += 1
+      writePrinterReceivedPrinter = printer
 
-        writePrinterClosure?(printer)
-    }
+      // <write> - Void return mock implementation
 
-    // MARK: - <write> - parameters
+      writePrinterClosure?(printer)
 
-    public var writePrintableCallsCount = 0
-    public var writePrintableCalled: Bool
-    {
-        return writePrintableCallsCount > 0
-    }
+  }
 
-    public var writePrintableReceivedPrintable: Printable?
+  // MARK: - <write> - parameters
 
-    // MARK: - <write> - closure mocks
+  public var writePrintableCallsCount = 0
+  public var writePrintableCalled: Bool {
+    return writePrintableCallsCount > 0
+  }
+  public var writePrintableReceivedPrintable: Printable?
 
-    public var writePrintableClosure: ((Printable) -> Void)?
+  // MARK: - <write> - closure mocks
 
-    // MARK: - <write> - method mocked
+  public var writePrintableClosure: ((Printable)  -> Void)? = nil
 
-    open func write(printable: Printable)
-    {
-        writePrintableCallsCount += 1
-        writePrintableReceivedPrintable = printable
 
-        // <write> - Void return mock implementation
 
-        writePrintableClosure?(printable)
-    }
+  // MARK: - <write> - method mocked
 
-    // MARK: - <error> - parameters
+  open func write(printable: Printable) {
 
-    public var errorCallsCount = 0
-    public var errorCalled: Bool
-    {
-        return errorCallsCount > 0
-    }
+      writePrintableCallsCount += 1
+      writePrintableReceivedPrintable = printable
 
-    public var errorReceivedText: String?
+      // <write> - Void return mock implementation
 
-    // MARK: - <error> - closure mocks
+      writePrintableClosure?(printable)
 
-    public var errorClosure: ((String) -> Void)?
+  }
 
-    // MARK: - <error> - method mocked
+  // MARK: - <error> - parameters
 
-    open func error(_ text: String)
-    {
-        errorCallsCount += 1
-        errorReceivedText = text
+  public var errorCallsCount = 0
+  public var errorCalled: Bool {
+    return errorCallsCount > 0
+  }
+  public var errorReceivedText: String?
 
-        // <error> - Void return mock implementation
+  // MARK: - <error> - closure mocks
 
-        errorClosure?(text)
-    }
+  public var errorClosure: ((String)  -> Void)? = nil
 
-    // MARK: - <success> - parameters
 
-    public var successCallsCount = 0
-    public var successCalled: Bool
-    {
-        return successCallsCount > 0
-    }
 
-    public var successReceivedText: String?
+  // MARK: - <error> - method mocked
 
-    // MARK: - <success> - closure mocks
+  open func error(_ text: String) {
 
-    public var successClosure: ((String) -> Void)?
+      errorCallsCount += 1
+      errorReceivedText = text
 
-    // MARK: - <success> - method mocked
+      // <error> - Void return mock implementation
 
-    open func success(_ text: String)
-    {
-        successCallsCount += 1
-        successReceivedText = text
+      errorClosure?(text)
 
-        // <success> - Void return mock implementation
+  }
 
-        successClosure?(text)
-    }
+  // MARK: - <success> - parameters
 
-    // MARK: - <message> - parameters
+  public var successCallsCount = 0
+  public var successCalled: Bool {
+    return successCallsCount > 0
+  }
+  public var successReceivedText: String?
 
-    public var messageCallsCount = 0
-    public var messageCalled: Bool
-    {
-        return messageCallsCount > 0
-    }
+  // MARK: - <success> - closure mocks
 
-    public var messageReceivedText: String?
+  public var successClosure: ((String)  -> Void)? = nil
 
-    // MARK: - <message> - closure mocks
 
-    public var messageClosure: ((String) -> Void)?
 
-    // MARK: - <message> - method mocked
+  // MARK: - <success> - method mocked
 
-    open func message(_ text: String)
-    {
-        messageCallsCount += 1
-        messageReceivedText = text
+  open func success(_ text: String) {
 
-        // <message> - Void return mock implementation
+      successCallsCount += 1
+      successReceivedText = text
 
-        messageClosure?(text)
-    }
+      // <success> - Void return mock implementation
 
-    // MARK: - <verbose> - parameters
+      successClosure?(text)
 
-    public var verboseCallsCount = 0
-    public var verboseCalled: Bool
-    {
-        return verboseCallsCount > 0
-    }
+  }
 
-    public var verboseReceivedText: String?
+  // MARK: - <message> - parameters
 
-    // MARK: - <verbose> - closure mocks
+  public var messageCallsCount = 0
+  public var messageCalled: Bool {
+    return messageCallsCount > 0
+  }
+  public var messageReceivedText: String?
 
-    public var verboseClosure: ((String) -> Void)?
+  // MARK: - <message> - closure mocks
 
-    // MARK: - <verbose> - method mocked
+  public var messageClosure: ((String)  -> Void)? = nil
 
-    open func verbose(_ text: String)
-    {
-        verboseCallsCount += 1
-        verboseReceivedText = text
 
-        // <verbose> - Void return mock implementation
 
-        verboseClosure?(text)
-    }
+  // MARK: - <message> - method mocked
 
-    // MARK: - <print> - parameters
+  open func message(_ text: String) {
 
-    public var printCallsCount = 0
-    public var printCalled: Bool
-    {
-        return printCallsCount > 0
-    }
+      messageCallsCount += 1
+      messageReceivedText = text
 
-    public var printReceivedPrintable: Printable?
+      // <message> - Void return mock implementation
 
-    // MARK: - <print> - closure mocks
+      messageClosure?(text)
 
-    public var printClosure: ((Printable) -> Void)?
+  }
 
-    // MARK: - <print> - method mocked
+  // MARK: - <verbose> - parameters
 
-    open func print(_ printable: Printable)
-    {
-        printCallsCount += 1
-        printReceivedPrintable = printable
+  public var verboseCallsCount = 0
+  public var verboseCalled: Bool {
+    return verboseCallsCount > 0
+  }
+  public var verboseReceivedText: String?
 
-        // <print> - Void return mock implementation
+  // MARK: - <verbose> - closure mocks
 
-        printClosure?(printable)
-    }
+  public var verboseClosure: ((String)  -> Void)? = nil
 
-    // MARK: - <verbosePrint> - parameters
 
-    public var verbosePrintCallsCount = 0
-    public var verbosePrintCalled: Bool
-    {
-        return verbosePrintCallsCount > 0
-    }
 
-    public var verbosePrintReceivedPrintable: Printable?
+  // MARK: - <verbose> - method mocked
 
-    // MARK: - <verbosePrint> - closure mocks
+  open func verbose(_ text: String) {
 
-    public var verbosePrintClosure: ((Printable) -> Void)?
+      verboseCallsCount += 1
+      verboseReceivedText = text
 
-    // MARK: - <verbosePrint> - method mocked
+      // <verbose> - Void return mock implementation
 
-    open func verbosePrint(_ printable: Printable)
-    {
-        verbosePrintCallsCount += 1
-        verbosePrintReceivedPrintable = printable
+      verboseClosure?(text)
 
-        // <verbosePrint> - Void return mock implementation
+  }
 
-        verbosePrintClosure?(printable)
-    }
+  // MARK: - <print> - parameters
+
+  public var printCallsCount = 0
+  public var printCalled: Bool {
+    return printCallsCount > 0
+  }
+  public var printReceivedPrintable: Printable?
+
+  // MARK: - <print> - closure mocks
+
+  public var printClosure: ((Printable)  -> Void)? = nil
+
+
+
+  // MARK: - <print> - method mocked
+
+  open func print(_ printable: Printable) {
+
+      printCallsCount += 1
+      printReceivedPrintable = printable
+
+      // <print> - Void return mock implementation
+
+      printClosure?(printable)
+
+  }
+
+  // MARK: - <verbosePrint> - parameters
+
+  public var verbosePrintCallsCount = 0
+  public var verbosePrintCalled: Bool {
+    return verbosePrintCallsCount > 0
+  }
+  public var verbosePrintReceivedPrintable: Printable?
+
+  // MARK: - <verbosePrint> - closure mocks
+
+  public var verbosePrintClosure: ((Printable)  -> Void)? = nil
+
+
+
+  // MARK: - <verbosePrint> - method mocked
+
+  open func verbosePrint(_ printable: Printable) {
+
+      verbosePrintCallsCount += 1
+      verbosePrintReceivedPrintable = printable
+
+      // <verbosePrint> - Void return mock implementation
+
+      verbosePrintClosure?(printable)
+
+  }
 }
 
+
 // MARK: - OBJECTIVE-C
+

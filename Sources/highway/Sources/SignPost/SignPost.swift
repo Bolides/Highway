@@ -32,8 +32,6 @@ public class SignPost: SignPostProtocol, AutoGenerateProtocol
 
     public init(verbose: Bool = false, commandLineArguments: [String] = CommandLine.arguments)
     {
-        var verbose = verbose
-
         guard let commandLineVerbose = (commandLineArguments.compactMap { SignPostCommandLineOptions(rawValue: $0) }.first?.isVerbose) else
         {
             self.verbose = verbose
