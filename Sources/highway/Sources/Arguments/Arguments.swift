@@ -8,12 +8,12 @@ public protocol ArgumentsConvertible
 public struct Arguments
 {
     // MARK: - Properties
-    
+
     public var all: [String]
-    
+
     // MARK: - Init
 
-    public init(_ all: [String] = (HighwayCommandLineOption.validOptionsFormCommandLine.map { $0.rawValue}))
+    public init(_ all: [String] = (HighwayCommandLineOption.validOptionsFormCommandLine.map { $0.rawValue }))
     {
         self.all = all
     }

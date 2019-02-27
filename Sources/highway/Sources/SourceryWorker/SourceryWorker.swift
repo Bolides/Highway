@@ -20,9 +20,9 @@ public protocol SourceryWorkerProtocol
 
     /// sourcery:inline:SourceryWorker.AutoGenerateProtocol
     var sourcery: SourceryProtocol { get }
-    
+
     func executor() throws -> ArgumentExecutableProtocol
-    func attempt(_ async: (@escaping (@escaping SourceryWorkerProtocol.SyncOutput) -> Void))
+    func attempt(_ async: @escaping (@escaping SourceryWorkerProtocol.SyncOutput) -> Void)
     /// sourcery:end
 }
 
@@ -39,10 +39,11 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
     public static let queue: DispatchQueue = DispatchQueue(label: "be.dooz.highway.sourceryWorker")
 
     public let sourcery: SourceryProtocol
+
     // MARK: - Private
 
     private let queue: DispatchQueue
-    
+
     private let signPost: SignPostProtocol
     private let terminalWorker: TerminalWorkerProtocol
 
@@ -69,8 +70,7 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
         return SourceryExecutor(sourcery)
     }
 
-    
-    public func attempt(_ asyncSourceryWorkerOutput: (@escaping (@escaping SourceryWorkerProtocol.SyncOutput) -> Void))
+    public func attempt(_ asyncSourceryWorkerOutput: @escaping (@escaping SourceryWorkerProtocol.SyncOutput) -> Void)
     {
         queue.async
         { [weak self] in
@@ -134,9 +134,9 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
                 // 4. Run sourcery to generate the mocks
 
                 let sourceFolderStrings: [String] = self.sourcery.sourcesFolders.map { $0.name }
-                
+
                 self.signPost.message("🧙‍♂️ Generating code for \n\(sourceFolderStrings.joined(separator: " * \n"))")
-                
+
                 let sourceryWorkerOutput = try self.terminalWorker.terminal(task: .sourcery(try self.executor()))
 
                 // 6. Add imports to output
@@ -155,14 +155,13 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
 
                     allLines = importStatements + allLines
 
-                    guard let data = (allLines.joined(separator: "\n").data(using: .utf8)) else { return }
+                    guard let data = allLines.joined(separator: "\n").data(using: .utf8) else { return }
 
                     try file.write(data: data)
                 }
 
                 self.signPost.message("🧙‍♂️ ✅ \n\(sourceFolderStrings.joined(separator: " * \n"))\n✅")
-                asyncSourceryWorkerOutput { return sourceryWorkerOutput }
-                
+                asyncSourceryWorkerOutput { sourceryWorkerOutput }
             }
             catch
             {

@@ -75,7 +75,7 @@ extension GitTool: GitToolProtocol
         }
         let numberOfDots = rawTag.reduce(0)
         { (result, char) -> Int in
-            return char == "." ? result + 1 : result
+            char == "." ? result + 1 : result
         }
         guard numberOfDots == 2 else
         {

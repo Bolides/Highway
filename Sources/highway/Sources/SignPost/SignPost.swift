@@ -25,15 +25,17 @@ public protocol SignPostProtocol: AutoMockable
 public class SignPost: SignPostProtocol, AutoGenerateProtocol
 {
     public static let shared: SignPostProtocol = SignPost()
-    
+
     public let verbose: Bool
 
     // MARK: - Init
 
-    public init(verbose: Bool = false, commandLineArguments: [String] = CommandLine.arguments) {
+    public init(verbose: Bool = false, commandLineArguments: [String] = CommandLine.arguments)
+    {
         var verbose = verbose
-        
-        guard let commandLineVerbose = (commandLineArguments.compactMap { SignPostCommandLineOptions(rawValue: $0) }.first?.isVerbose) else {
+
+        guard let commandLineVerbose = (commandLineArguments.compactMap { SignPostCommandLineOptions(rawValue: $0) }.first?.isVerbose) else
+        {
             self.verbose = verbose
             return
         }
@@ -50,6 +52,7 @@ public class SignPost: SignPostProtocol, AutoGenerateProtocol
     {
         rawLog("\n\r" + promptTemplate.terminalString + text + "\n")
     }
+
     private func rawLog(_ text: String)
     {
         _sync
@@ -57,6 +60,7 @@ public class SignPost: SignPostProtocol, AutoGenerateProtocol
             stream.write(text)
         }
     }
+
     private func rawLogNl(_ text: String)
     {
         _sync
@@ -74,6 +78,7 @@ public class SignPost: SignPostProtocol, AutoGenerateProtocol
             self._write(printer: printer)
         }
     }
+
     private func _write(printer: Printer)
     {
         let string = printer.string(with: .defaultOptions())
@@ -106,7 +111,7 @@ public class SignPost: SignPostProtocol, AutoGenerateProtocol
     }
 }
 
-fileprivate extension SignPost
+private extension SignPost
 {
     func _withPrompt(_ text: String) -> String
     {

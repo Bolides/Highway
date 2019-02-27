@@ -9,7 +9,7 @@ public protocol KeychainProtocol: AutoMockable
     /// sourcery:inline:Keychain.AutoGenerateProtocol
     var system: SystemProtocol { get }
 
-    func password(matching query: Keychain.PasswordQuery) throws  -> String
+    func password(matching query: Keychain.PasswordQuery) throws -> String
     /// sourcery:end
 }
 
@@ -46,7 +46,7 @@ public class Keychain: KeychainProtocol, AutoGenerateProtocol
 
 public extension Keychain
 {
-    public class PasswordQuery
+    class PasswordQuery
     {
         public init(account: String, service: String)
         {

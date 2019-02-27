@@ -28,7 +28,7 @@ public struct ArgumentsWorker: AutoGenerateProtocol
             .map { $0.replacingOccurrences(of: Worker.commandPrefix, with: "") }
             .compactMap { Worker(rawValue: $0) }
 
-        guard workers.count > 0 else
+        guard !workers.isEmpty else
         {
             throw Error.noWorkerCommandFoundInArguments
         }
