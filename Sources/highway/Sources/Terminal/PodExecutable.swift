@@ -8,12 +8,16 @@
 import Foundation
 import Arguments
 import ZFile
+import SignPost
 
 public struct PodExecutable: ArgumentExecutableProtocol
 {
     
-    public init()
+    private let signPost: SignPostProtocol
+    
+    public init(signPost: SignPostProtocol = SignPost.shared)
     {
+        self.signPost = signPost
     }
     
     public func arguments() throws -> Arguments
@@ -24,6 +28,9 @@ public struct PodExecutable: ArgumentExecutableProtocol
     public func executableFile() throws -> FileProtocol
     {
         let homeFolder = FileSystem.shared.homeFolder
-        return try homeFolder.file(named: ".rbenv/shims/pod")
+        signPost.verbose("Searching for pod command in folder \(homeFolder)")
+        let podfile = try homeFolder.file(named: ".rbenv/shims/pod")
+        signPost.verbose("Using pod \(podfile)")
+        return podfile
     }
 }
