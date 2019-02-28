@@ -44,7 +44,6 @@
 		FD34F6A822282C51001D8EB1 /* ArgumentsMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A98321CD6B5D0045DDA8 /* ArgumentsMock.framework */; };
 		FD34F6AB22282CAF001D8EB1 /* SignPostMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9C721CD6F7F0045DDA8 /* SignPostMock.framework */; };
 		FD34F6AC22282E4B001D8EB1 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
-		FD34F6B62228394B001D8EB1 /* CLISpinner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F6B52228394B001D8EB1 /* CLISpinner.framework */; };
 		FD34F6B7222839E6001D8EB1 /* CLISpinner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F6B52228394B001D8EB1 /* CLISpinner.framework */; };
 		FD34F6B8222839E6001D8EB1 /* CLISpinner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F6B52228394B001D8EB1 /* CLISpinner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD34F6BA22283A18001D8EB1 /* Rainbow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F6B922283A18001D8EB1 /* Rainbow.framework */; };
@@ -1589,7 +1588,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD34F6B62228394B001D8EB1 /* CLISpinner.framework in Frameworks */,
 				FD3F8DC521DE5A3F00BBDA58 /* SwiftFormatWorker.framework in Frameworks */,
 				FD1126FA21C781050072607D /* SignPost.framework in Frameworks */,
 				FDC156FA21C535A400E04B44 /* Terminal.framework in Frameworks */,

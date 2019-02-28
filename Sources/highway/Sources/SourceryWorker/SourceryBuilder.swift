@@ -73,7 +73,7 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
             signPost.verbose("cd \(disk.carthage.sourcery)")
             FileManager.default.changeCurrentDirectoryPath(disk.carthage.sourcery.path)
 
-            signPost.message("🚀 Start building sourcery ...")
+            signPost.message("🚀 Start building sourcery (😅 this can take some time ☕️) ...")
 
 
             let output = try terminalWorker.runProcess(swiftBuildTask.toProcess)
