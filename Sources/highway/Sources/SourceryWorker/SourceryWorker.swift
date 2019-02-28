@@ -5,6 +5,7 @@
 //  Created by Stijn on 07/07/2018.
 //
 
+import Errors
 import Foundation
 import os
 import SignPost
@@ -13,7 +14,6 @@ import SwiftFormatWorker
 import Task
 import Terminal
 import ZFile
-import Errors
 
 public protocol SourceryWorkerProtocol
 {
@@ -75,7 +75,8 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
     {
         queue.async
         { [weak self] in
-            guard let `self` = self else {
+            guard let `self` = self else
+            {
                 asyncSourceryWorkerOutput { throw "SourceryWorker release before it could finish" }
                 return
             }

@@ -13,6 +13,7 @@ import ArgumentsMock
 import SignPostMock
 import Errors
 import ZFile
+@testable import Arguments
 
 import SourceryWorker
 
@@ -37,6 +38,16 @@ class SourceryBuilderSpec: QuickSpec {
                 disk = DiskProtocolMock()
                 disk.srcRoot = srcRootFolder
                 
+                sourceryExecutableFile = try! FileProtocolMock()
+                sourceryExecutableFolder = try! FolderProtocolMock()
+                sourceryExecutableFolder.fileNamedClosure = { path in
+                    return sourceryExecutableFile
+                }
+                
+                disk.underlyingCarthage = Disk.Carthage(
+                    checkouts: try! FolderProtocolMock(),
+                    sourcery: sourceryExecutableFolder
+                )
                 terminal = TerminalWorkerProtocolMock()
                 signPost = SignPostProtocolMock()
                 
@@ -48,26 +59,39 @@ class SourceryBuilderSpec: QuickSpec {
                     )
                 }.toNot(throwError())
                 
-                sourceryExecutableFile = try! FileProtocolMock()
-                sourceryExecutableFolder = try! FolderProtocolMock()
-                sourceryExecutableFolder.fileNamedClosure = { path in
-                    return sourceryExecutableFile
-                }
+                
             }
             
             context("no sourcery build") {
                 
                 beforeEach {
-                    srcRootFolder.subfolderNamedClosure  = { path in
+                    var throwCount = 0
+                    sourceryExecutableFolder.subfolderNamedClosure  = { path in
+                        
+                        guard throwCount == 0 else {
+                            
+                            // Fake success file after faked build
+                            return sourceryExecutableFolder
+                        }
+                        
+                        throwCount += 1
+
                         throw ZFile.FileSystem.Item.PathError.invalid("mocking out build of sourcery")
                     }
+                    
+                    // Faking build sourcery success
+                    terminal.runProcessClosure = { _ in return [""] }
                     
                     expect { try sut?.attemptToBuildSourceryIfNeeded() }.toNot(throwError())
 
                 }
                 
-                it("NO sign missing build to verbose") {
-                    expect { signPost.verboseCalled } == false
+                it("builds sourcery") {
+                    expect(terminal.runProcessCalled) == true
+                }
+                
+                it("signpost missing build to verbose") {
+                    expect { signPost.verboseCalled } == true
                 }
                 
             }
@@ -75,12 +99,16 @@ class SourceryBuilderSpec: QuickSpec {
             context("sourcery has build") {
                 
                 beforeEach {
-                    srcRootFolder.subfolderNamedClosure  = { path in
+                    sourceryExecutableFolder.subfolderNamedClosure  = { path in
                         return sourceryExecutableFolder
                     }
                     
                     expect { try sut?.attemptToBuildSourceryIfNeeded() }.toNot(throwError())
                     
+                }
+                
+                it("does not build sourcery") {
+                    expect(terminal.runProcessCalled) == false
                 }
                 
                 it("NO sign missing build to verbose") {

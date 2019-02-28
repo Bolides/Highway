@@ -8,7 +8,7 @@ public protocol SystemExecutorProtocol: AutoMockable
     /// sourcery:inline:SystemExecutor.AutoGenerateProtocol
     var signPost: SignPostProtocol { get set }
 
-    func launch(task: Task, wait: Bool) throws 
+    func launch(task: Task, wait: Bool) throws
     /// sourcery:end
 }
 

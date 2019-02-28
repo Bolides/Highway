@@ -5,32 +5,50 @@
 //  Created by Stijn on 27/02/2019.
 //
 
-import Foundation
 import Arguments
-import ZFile
+import Foundation
 import SignPost
+import Task
+import ZFile
 
 public struct PodExecutable: ArgumentExecutableProtocol
 {
-    
     private let signPost: SignPostProtocol
-    
-    public init(signPost: SignPostProtocol = SignPost.shared)
+    private let system: SystemProtocol
+
+    public init(
+        system: SystemProtocol,
+        signPost: SignPostProtocol = SignPost.shared
+    )
     {
+        self.system = system
         self.signPost = signPost
     }
-    
+
     public func arguments() throws -> Arguments
     {
         return Arguments(arrayLiteral: "install")
     }
-    
+
     public func executableFile() throws -> FileProtocol
     {
-        let homeFolder = FileSystem.shared.homeFolder
-        signPost.verbose("Searching for pod command in folder \(homeFolder)")
-        let podfile = try homeFolder.file(named: ".rbenv/shims/pod")
-        signPost.verbose("Using pod \(podfile)")
+        var podfile: FileProtocol!
+
+        do
+        {
+            let homeFolder = FileSystem.shared.homeFolder
+            signPost.verbose("Searching for pod command in folder \(homeFolder)")
+            podfile = try homeFolder.file(named: ".rbenv/shims/pod")
+        }
+        catch
+        {
+            signPost.message("Pod not found, looking on system")
+            let systemTask = try system.task(named: "pod")
+            podfile = systemTask.executable
+        }
+
+        signPost.verbose("found pod at \(String(describing: podfile))")
+
         return podfile
     }
 }

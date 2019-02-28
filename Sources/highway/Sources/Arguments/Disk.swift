@@ -7,12 +7,13 @@
 
 import Foundation
 
-import SourceryAutoProtocols
-import ZFile
 import Errors
 import SignPost
+import SourceryAutoProtocols
+import ZFile
 
-public protocol DiskProtocol: AutoMockable {
+public protocol DiskProtocol: AutoMockable
+{
     /// sourcery:inline:Disk.AutoGenerateProtocol
     var srcRoot: FolderProtocol { get }
     var carthage: Disk.Carthage { get }
@@ -20,30 +21,31 @@ public protocol DiskProtocol: AutoMockable {
 }
 
 /// Will deliver files based on the arguments passed from the commandline
-public struct Disk: DiskProtocol, AutoGenerateProtocol {
-    
+public struct Disk: DiskProtocol, AutoGenerateProtocol
+{
     /// Root folder where project and its dependencies are is located
     public let srcRoot: FolderProtocol
     public let carthage: Disk.Carthage
-    
-    public struct Carthage {
-        
-        public enum Path: String, CaseIterable {
+
+    public struct Carthage
+    {
+        public enum Path: String, CaseIterable
+        {
             case checkouts = "Carthage/Checkouts"
             case sourcery = "Sourcery"
         }
-        
+
         public let checkouts: FolderProtocol
         public let sourcery: FolderProtocol
     }
-    
+
     private let signPost: SignPostProtocol
-    
+
     public init(
         highwayCommandLineArguments: HighwayCommandLineOption.Values = HighwayCommandLineOption.Values(),
         signPost: SignPostProtocol = SignPost.shared
-    ) throws {
-        
+    ) throws
+    {
         guard let relativeProjectPath = highwayCommandLineArguments.optionsAndValues[.srcroot] else
         {
             throw HighwayError.missingSrcroot(
@@ -54,20 +56,18 @@ public struct Disk: DiskProtocol, AutoGenerateProtocol {
                 function: "\(#function)"
             )
         }
-        
+
         srcRoot = try Folder(relativePath: relativeProjectPath)
         self.signPost = signPost
-        
+
         signPost.verbose("Looking for \(Carthage.Path.checkouts.rawValue)")
         let carthageCheckouts = try srcRoot.subfolder(named: Carthage.Path.checkouts.rawValue)
-        
+
         signPost.verbose("Looking for \(Carthage.Path.sourcery.rawValue)")
 
         carthage = Carthage(
             checkouts: carthageCheckouts,
             sourcery: try carthageCheckouts.subfolder(named: Carthage.Path.sourcery.rawValue)
         )
-
     }
-    
 }

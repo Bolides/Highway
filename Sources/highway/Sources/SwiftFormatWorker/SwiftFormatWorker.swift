@@ -68,7 +68,11 @@ public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
     {
         queue.async
         { [weak self] in
-            guard let `self` = self else { return }
+            guard let `self` = self else
+            {
+                asyncSwiftFormatAttemptOutput { throw "\(SwiftFormatWorker.self) was released before \(#function) could finish" }
+                return
+            }
 
             let formatSettings = try? self.configFile.readAsString()
             self.signPost.verbose("👨🏻‍🏫  SwiftFormat \(self.folderToFormatRecursive.name) \n with settings \n \(String(describing: formatSettings))\n ...\n")

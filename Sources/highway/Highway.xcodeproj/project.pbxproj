@@ -50,6 +50,7 @@
 		FD34F6BA22283A18001D8EB1 /* Rainbow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F6B922283A18001D8EB1 /* Rainbow.framework */; };
 		FD34F6BB22283A18001D8EB1 /* Rainbow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F6B922283A18001D8EB1 /* Rainbow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD34F71622284258001D8EB1 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
+		FD34F71822285A81001D8EB1 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		FD3E94CF21C8117B00EA791C /* TemplatePrepend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3E94CE21C8117B00EA791C /* TemplatePrepend.swift */; };
 		FD3F8A1A21DDE43A00BBDA58 /* SwiftFormatWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A1121DDE43A00BBDA58 /* SwiftFormatWorker.framework */; };
 		FD3F8A1F21DDE43A00BBDA58 /* SwiftFormatWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3F8A1E21DDE43A00BBDA58 /* SwiftFormatWorkerTests.swift */; };
@@ -1584,6 +1585,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD34F71822285A81001D8EB1 /* Arguments.framework in Frameworks */,
 				FD34F6AC22282E4B001D8EB1 /* ZFile.framework in Frameworks */,
 				FD34F6AB22282CAF001D8EB1 /* SignPostMock.framework in Frameworks */,
 				FD34F6A822282C51001D8EB1 /* ArgumentsMock.framework in Frameworks */,

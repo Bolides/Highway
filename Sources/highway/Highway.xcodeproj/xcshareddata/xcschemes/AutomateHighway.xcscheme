@@ -67,12 +67,16 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "&#x1f916;command:sourcery"
+            argument = "&#x1f916;command:swiftformat"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
+            argument = "&#x1f916;command:sourcery"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
             argument = "-verbose"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
       <AdditionalOptions>

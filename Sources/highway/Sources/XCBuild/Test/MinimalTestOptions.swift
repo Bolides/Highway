@@ -16,8 +16,8 @@ public protocol MinimalTestOptionsProtocol: ArgumentExecutableProtocol
 {
     /// sourcery:inline:MinimalTestOptions.AutoGenerateProtocol
 
-    func arguments() throws  -> Arguments
-    func executableFile() throws  -> FileProtocol
+    func arguments() throws -> Arguments
+    func executableFile() throws -> FileProtocol
     /// sourcery:end
 }
 

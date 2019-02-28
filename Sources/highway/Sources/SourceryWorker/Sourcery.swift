@@ -46,7 +46,7 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
     public let sourceryAutoProtocolsFile: FileProtocol
     public let sourceryYMLFile: FileProtocol
     public let sourceryExecutableFile: FileProtocol
-    
+
     // MARK: - Imports to be prepended to templates
 
     public let imports: Set<TemplatePrepend>
