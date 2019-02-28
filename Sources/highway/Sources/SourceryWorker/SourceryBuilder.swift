@@ -6,7 +6,6 @@
 //
 
 import Arguments
-import CLISpinner
 import Errors
 import SignPost
 import SourceryAutoProtocols
@@ -34,21 +33,18 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
     private let disk: DiskProtocol
     private let signPost: SignPostProtocol
     private let localSystem: SystemProtocol
-    private let spinner: Spinner
 
     /// Will try to init Disk when no dis provided
     public init(
         terminalWorker: TerminalWorkerProtocol = TerminalWorker(),
         disk: DiskProtocol? = nil,
         signPost: SignPostProtocol = SignPost.shared,
-        localSystem: SystemProtocol = try! LocalSystem(),
-        spinner: Spinner = Spinner(pattern: .dots)
+        localSystem: SystemProtocol = try! LocalSystem()
     ) throws
     {
         self.terminalWorker = terminalWorker
         self.signPost = signPost
         self.localSystem = localSystem
-        self.spinner = spinner
 
         guard let disk = disk else
         {
@@ -79,20 +75,9 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 
             signPost.message("🚀 Start building sourcery ...")
 
-            DispatchQueue.main.async { self.spinner.start() }
 
-            do
-            {
-                let output = try terminalWorker.runProcess(swiftBuildTask.toProcess)
-                DispatchQueue.main.async { self.spinner.stop() }
-                signPost.verbose("\(output.joined(separator: "\n"))")
-            }
-            catch
-            {
-                DispatchQueue.main.async { self.spinner.fail() }
-
-                throw error
-            }
+            let output = try terminalWorker.runProcess(swiftBuildTask.toProcess)
+            signPost.verbose("\(output.joined(separator: "\n"))")
 
             signPost.message("🚀 finished sourcery swift build ✅")
 
