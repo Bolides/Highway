@@ -23,7 +23,7 @@ public protocol TaskProtocol: AutoMockable
     var description: String { get }
 
     func enableReadableOutputDataCapturing()
-    func throwIfNotSuccess(_ error: Swift.Error) throws
+    func throwIfNotSuccess(_ error: Swift.Error) throws 
     /// sourcery:end
 }
 

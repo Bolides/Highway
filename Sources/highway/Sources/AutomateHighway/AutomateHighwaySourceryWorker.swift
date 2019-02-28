@@ -163,7 +163,7 @@ public class AutomateHighwaySourceryWorker: AutomateHighwaySourceryWorkerProtoco
         case Errors
         case POSIX
         case Task
-        case SwiftformatWorker
+        case SwiftFormatWorker
 
         func imports() -> Set<TemplatePrepend>
         {

@@ -13,15 +13,15 @@ public protocol SystemProtocol: AutoMockable
 {
     /// sourcery:inline:LocalSystem.AutoGenerateProtocol
 
-    func task(named name: String) throws -> Task
-    func execute(_ task: Task) throws -> Bool
-    func launch(_ task: Task, wait: Bool) throws -> Bool
+    func task(named name: String) throws  -> Task
+    func execute(_ task: TaskProtocol) throws  -> Bool
+    func launch(_ task: TaskProtocol, wait: Bool) throws  -> Bool
     /// sourcery:end
 }
 
 public extension SystemProtocol
 {
-    func execute(_ task: Task) throws -> Bool
+    func execute(_ task: TaskProtocol) throws -> Bool
     {
         return try launch(task, wait: true)
     }

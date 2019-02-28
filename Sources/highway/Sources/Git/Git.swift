@@ -7,16 +7,16 @@ import ZFile
 
 public protocol GitToolProtocol: AutoMockable
 {
-    // sourcery:inline:GitTool.AutoGenerateProtocol
+    /// sourcery:inline:GitTool.AutoGenerateProtocol
 
-    func addAll(at url: FolderProtocol) throws
-    func commit(at url: FolderProtocol, message: String) throws
-    func pushToMaster(at url: FolderProtocol) throws
-    func pushTagsToMaster(at url: FolderProtocol) throws
-    func pull(at url: FolderProtocol) throws
-    func currentTag(at url: FolderProtocol) throws -> String
-    func clone(with options: CloneOptions) throws
-    // sourcery:end
+    func addAll(at url: FolderProtocol) throws 
+    func commit(at url: FolderProtocol, message: String) throws 
+    func pushToMaster(at url: FolderProtocol) throws 
+    func pushTagsToMaster(at url: FolderProtocol) throws 
+    func pull(at url: FolderProtocol) throws 
+    func currentTag(at url: FolderProtocol) throws  -> String
+    func clone(with options: CloneOptions) throws 
+    /// sourcery:end
 }
 
 public struct CloneOptions: AutoMockable

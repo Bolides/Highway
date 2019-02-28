@@ -20,7 +20,7 @@ public protocol SourceryBuilderProtocol: AutoMockable
     static var buildPath: String { get }
     static var executalbeName: String { get }
 
-    func attemptToBuildSourceryIfNeeded() throws -> FileProtocol
+    func attemptToBuildSourceryIfNeeded() throws  -> FileProtocol
     /// sourcery:end
 }
 

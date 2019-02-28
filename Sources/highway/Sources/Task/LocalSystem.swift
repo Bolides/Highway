@@ -3,6 +3,7 @@ import Result
 import SignPost
 import SourceryAutoProtocols
 import ZFile
+import Errors
 
 public final class LocalSystem: SystemProtocol, AutoGenerateProtocol
 {
@@ -39,26 +40,21 @@ extension LocalSystem
         return Task(executable: try executableProvider.executable(with: name))
     }
 
-    public func execute(_ task: Task) throws -> Bool
+    public func execute(_ task: TaskProtocol) throws -> Bool
     {
         return try launch(task, wait: true)
     }
 
-    public func launch(_ task: Task, wait: Bool) throws -> Bool
+    public func launch(_ task: TaskProtocol, wait: Bool) throws -> Bool
     {
         try executor.launch(task: task, wait: wait)
 
         guard wait else { return true }
 
-        let state = task.state
-        switch state {
-        case .waiting, .executing:
-            throw ExecutionError.invalidStateAfterExecuting
-        case let .terminated(termination):
-            guard termination.isSuccess else
-            {
-                throw ExecutionError.taskDidExitWithFailure(termination)
-            }
+        switch task.successfullyFinished {
+        case false:
+            throw HighwayError.failedToCompleteTask("\(task)")
+        case true:
             return true
         }
     }

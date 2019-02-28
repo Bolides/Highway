@@ -51,6 +51,7 @@
 		FD34F6BB22283A18001D8EB1 /* Rainbow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F6B922283A18001D8EB1 /* Rainbow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD34F71622284258001D8EB1 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
 		FD34F71822285A81001D8EB1 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
+		FD34F71B2228603A001D8EB1 /* ArgumentsMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A98321CD6B5D0045DDA8 /* ArgumentsMock.framework */; };
 		FD3E94CF21C8117B00EA791C /* TemplatePrepend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3E94CE21C8117B00EA791C /* TemplatePrepend.swift */; };
 		FD3F8A1A21DDE43A00BBDA58 /* SwiftFormatWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A1121DDE43A00BBDA58 /* SwiftFormatWorker.framework */; };
 		FD3F8A1F21DDE43A00BBDA58 /* SwiftFormatWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3F8A1E21DDE43A00BBDA58 /* SwiftFormatWorkerTests.swift */; };
@@ -949,6 +950,13 @@
 			remoteGlobalIDString = FDB7A9C621CD6F7F0045DDA8;
 			remoteInfo = SignPostMock;
 		};
+		FD34F71922285F1A001D8EB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDB7A98221CD6B5D0045DDA8;
+			remoteInfo = ArgumentsMock;
+		};
 		FD3F8A1B21DDE43A00BBDA58 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1820,6 +1828,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				FD34F71B2228603A001D8EB1 /* ArgumentsMock.framework in Frameworks */,
 				OBJ_973 /* Keychain.framework in Frameworks */,
 				OBJ_977 /* XCBuild.framework in Frameworks */,
 				OBJ_980 /* POSIX.framework in Frameworks */,
@@ -3235,6 +3244,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD34F71A22285F1A001D8EB1 /* PBXTargetDependency */,
 				OBJ_990 /* PBXTargetDependency */,
 				OBJ_994 /* PBXTargetDependency */,
 				OBJ_997 /* PBXTargetDependency */,
@@ -3954,6 +3964,11 @@
 			isa = PBXTargetDependency;
 			target = FDB7A9C621CD6F7F0045DDA8 /* SignPostMock */;
 			targetProxy = FD34F6A922282CA9001D8EB1 /* PBXContainerItemProxy */;
+		};
+		FD34F71A22285F1A001D8EB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDB7A98221CD6B5D0045DDA8 /* ArgumentsMock */;
+			targetProxy = FD34F71922285F1A001D8EB1 /* PBXContainerItemProxy */;
 		};
 		FD3F8A1C21DDE43A00BBDA58 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

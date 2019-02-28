@@ -77,7 +77,7 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
         { [weak self] in
             guard let `self` = self else
             {
-                asyncSourceryWorkerOutput { throw "SourceryWorker release before it could finish" }
+                asyncSourceryWorkerOutput { throw "SourceryWorker released before it could finish" }
                 return
             }
 
@@ -93,6 +93,8 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
 
                 for folder in self.sourcery.sourcesFolders
                 {
+                    self.signPost.message("🧙‍♂️ in folder \(folder.name)")
+                    
                     let fileSequence = folder.makeFileSequence(recursive: true, includeHidden: false)
 
                     try self.replace(

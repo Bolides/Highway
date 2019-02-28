@@ -11,7 +11,8 @@ public enum HighwayError: Swift.Error, CustomStringConvertible
 {
     case missingSrcroot(message: String, function: String)
     case implement(String)
-
+    case failedToCompleteTask(String)
+    
     // MARK: - CustomStringConvertible
 
     public var description: String
@@ -29,6 +30,12 @@ public enum HighwayError: Swift.Error, CustomStringConvertible
             return """
             ❌ Highway Missing implementation in
                 \(function)
+            ❌
+            """
+        case let .failedToCompleteTask(task):
+            return """
+            ❌ Highway Failed to complete task
+                \(task)
             ❌
             """
         }
