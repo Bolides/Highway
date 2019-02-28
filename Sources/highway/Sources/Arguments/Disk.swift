@@ -60,7 +60,7 @@ public struct Disk: DiskProtocol, AutoGenerateProtocol
         srcRoot = try Folder(relativePath: relativeProjectPath)
         self.signPost = signPost
 
-        signPost.verbose("Looking for \(Carthage.Path.checkouts.rawValue)")
+        signPost.verbose("Looking for \(Carthage.Path.checkouts.rawValue) \nfrom\n \(srcRoot)\n")
         let carthageCheckouts = try srcRoot.subfolder(named: Carthage.Path.checkouts.rawValue)
 
         signPost.verbose("Looking for \(Carthage.Path.sourcery.rawValue)")

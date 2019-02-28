@@ -1278,8 +1278,6 @@
 		FD3F8A6B21DDE73B00BBDA58 /* SwiftFormatWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFormatWorker.swift; sourceTree = "<group>"; };
 		FD3F8A7221DDE7E700BBDA58 /* SwiftFormatWorkerMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftFormatWorkerMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3F8C9121DE1D2B00BBDA58 /* .swiftformat.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .swiftformat.md; sourceTree = SOURCE_ROOT; };
-		FD3F8D3421DE229A00BBDA58 /* ProjectFolderWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFolderWorker.swift; sourceTree = "<group>"; };
-		FD3F8D3621DE229A00BBDA58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD3F8D4D21DE304800BBDA58 /* .swiftformat.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .swiftformat.md; sourceTree = "<group>"; };
 		FD5363FB222817580033D4C6 /* SourceryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryBuilder.swift; sourceTree = "<group>"; };
 		FD5363FD222817B50033D4C6 /* SourceryBuilderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryBuilderSpec.swift; sourceTree = "<group>"; };
@@ -1950,15 +1948,6 @@
 			path = SwiftformatWorker;
 			sourceTree = "<group>";
 		};
-		FD3F8D3321DE229A00BBDA58 /* ProjectFolderWorker */ = {
-			isa = PBXGroup;
-			children = (
-				FD3F8D3421DE229A00BBDA58 /* ProjectFolderWorker.swift */,
-				FD3F8D3621DE229A00BBDA58 /* Info.plist */,
-			);
-			path = ProjectFolderWorker;
-			sourceTree = "<group>";
-		};
 		FDB7A93821CD6A780045DDA8 /* Url */ = {
 			isa = PBXGroup;
 			children = (
@@ -2250,7 +2239,6 @@
 		OBJ_151 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				FD3F8D3321DE229A00BBDA58 /* ProjectFolderWorker */,
 				FDB7A98421CD6B5D0045DDA8 /* ArgumentsMock */,
 				OBJ_168 /* ArgumentsTests */,
 				OBJ_188 /* DeliverTests */,

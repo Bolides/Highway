@@ -52,14 +52,10 @@ public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
         self.folderToFormatRecursive = folderToFormatRecursive
     }
 
-    public convenience init(folderToFormatRecursive: FolderProtocol, highwayCommandLineArguments: HighwayCommandLineOption.Values = HighwayCommandLineOption.Values()) throws
+    public convenience init(folderToFormatRecursive: FolderProtocol, bundle: BundleProtocol = Bundle.main, highwayCommandLineArguments: HighwayCommandLineOption.Values = HighwayCommandLineOption.Values()) throws
     {
-        guard let configPath = Bundle.main.path(forResource: ".swiftformat", ofType: "md") else
-        {
-            throw Error.swiftFormatCannotRunWithoutConfigFileInBundle
-        }
 
-        let configFile = try File(path: configPath)
+        let configFile = try bundle.fileforResource(with: ".swiftformat", of: "md")
 
         try self.init(folderToFormatRecursive: folderToFormatRecursive, configFile: configFile)
     }
