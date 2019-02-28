@@ -10,7 +10,8 @@ import Foundation
 public enum HighwayError: Swift.Error, CustomStringConvertible
 {
     case missingSrcroot(message: String, function: String)
-
+    case implement(String)
+    
     // MARK: - CustomStringConvertible
 
     public var description: String
@@ -18,8 +19,16 @@ public enum HighwayError: Swift.Error, CustomStringConvertible
         switch self {
         case let .missingSrcroot(message: message, function: function):
             return """
-            ❌ Highway Error in \(function)
-            \(message)
+            ❌ Highway Error in
+                \(function)
+            with message
+                \(message)
+            ❌
+            """
+        case let .implement(function):
+            return """
+            ❌ Highway Missing implementation in
+                \(function)
             ❌
             """
         }

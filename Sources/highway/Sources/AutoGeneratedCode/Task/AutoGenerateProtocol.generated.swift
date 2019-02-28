@@ -1,4 +1,4 @@
-// Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 
@@ -19,10 +19,65 @@ import Foundation
 
 
 // Generated protocol inline for LocalSystem -> See code in the file of that type
+    // sourcery:inline:LocalSystem.AutoGenerateProtocol
 
+    func task(named name: String) throws  -> Task
+    func execute(_ task: Task) throws  -> Bool
+    func launch(_ task: Task, wait: Bool) throws  -> Bool
+    // sourcery:end
 // Generated protocol inline for SystemExecutableProvider -> See code in the file of that type
+    // sourcery:inline:SystemExecutableProvider.AutoGenerateProtocol
+    var searchedUrls: [FolderProtocol] { get set }
+    var fileSystem: FileSystemProtocol { get }
 
+    func executable(with executableName: String) throws  -> FileProtocol
+    // sourcery:end
 // Generated protocol inline for SystemExecutor -> See code in the file of that type
+    // sourcery:inline:SystemExecutor.AutoGenerateProtocol
+    var signPost: SignPostProtocol { get set }
 
+    func launch(task: Task, wait: Bool) throws 
+    // sourcery:end
 // Generated protocol inline for Task -> See code in the file of that type
+    // sourcery:inline:Task.AutoGenerateProtocol
+    var name: String { get }
+    var executable: FileProtocol { get set }
+    var arguments: Arguments { get set }
+    var environment: [String: String] { get set }
+    var currentDirectoryUrl: FolderProtocol? { get set }
+    var input: Channel { get set }
+    var output: Channel { get set }
+    var state: State { get set }
+    var capturedOutputData: Data? { get }
+    var readOutputString: String? { get }
+    var trimmedOutput: String? { get }
+    var capturedOutputString: String? { get }
+    var successfullyFinished: Bool { get }
+    var toProcess: Process { get }
+    var description: String { get }
+
+    func enableReadableOutputDataCapturing()
+    func throwIfNotSuccess(_ error: Swift.Error) throws 
+    // sourcery:end
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
 

@@ -1,4 +1,4 @@
-// Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 
@@ -19,4 +19,40 @@ import Foundation
 
 
 // Generated protocol inline for SignPost -> See code in the file of that type
+    // sourcery:inline:SignPost.AutoGenerateProtocol
+    static var shared: SignPostProtocol { get }
+    var verbose: Bool { get }
+
+    func write(printer: Printer)
+    func write(printable: Printable)
+    // sourcery:"Always printed as error"
+    func error(_ text: String)
+    func success(_ text: String)
+    func message(_ text: String)
+    // sourcery:"Prints text only if --verbose is set."
+    func verbose(_ text: String)
+    func print(_ printable: Printable)
+    func verbosePrint(_ printable: Printable)
+    // sourcery:end
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
 

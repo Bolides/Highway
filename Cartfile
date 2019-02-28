@@ -8,3 +8,12 @@ github "Bolides/CupertinoJWT"
 github "nicklockwood/SwiftFormat"
 
 github "antitypical/Result" ~> 4.0
+
+# Auto generate Code
+
+github "doozMen/template-sourcery"
+github "doozMen/Sourcery"
+
+# Fancy terminal
+
+github "doozMen/CLISpinner" ~> 0.4.0

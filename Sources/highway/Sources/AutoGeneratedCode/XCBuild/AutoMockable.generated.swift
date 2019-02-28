@@ -6,7 +6,7 @@ import ZFile
 import ZFileMock
 
 
-// Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 
@@ -136,9 +136,6 @@ open class DestinationFactoryProtocolMock: DestinationFactoryProtocol {
           guard let returnValue = macOSArchitectureReturnValue else {
               let message = "No returnValue implemented for macOSArchitectureClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-              os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
-
-              return macOSArchitectureReturnValue!
           }
           return returnValue
       }
@@ -174,9 +171,6 @@ open class DestinationFactoryProtocolMock: DestinationFactoryProtocol {
           guard let returnValue = deviceNameIsGenericIdReturnValue else {
               let message = "No returnValue implemented for deviceNameIsGenericIdClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-              os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
-
-              return deviceNameIsGenericIdReturnValue!
           }
           return returnValue
       }
@@ -212,9 +206,6 @@ open class DestinationFactoryProtocolMock: DestinationFactoryProtocol {
           guard let returnValue = simulatorNameOsIdReturnValue else {
               let message = "No returnValue implemented for simulatorNameOsIdClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-              os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
-
-              return simulatorNameOsIdReturnValue!
           }
           return returnValue
       }
@@ -449,9 +440,6 @@ open class TestReportProtocolMock: TestReportProtocol {
           guard let returnValue = failedTestsReturnValue else {
               let message = "No returnValue implemented for failedTestsClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-              os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
-
-              return failedTestsReturnValue!
           }
           return returnValue
       }

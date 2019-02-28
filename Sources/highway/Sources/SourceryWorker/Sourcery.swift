@@ -24,6 +24,7 @@ public protocol SourceryProtocol: ExecutableProtocol
     var individualSourceFiles: [File]? { get }
     var sourceryAutoProtocolsFile: FileProtocol { get }
     var sourceryYMLFile: FileProtocol { get }
+    var sourceryExecutableFile: FileProtocol { get }
     var imports: Set<TemplatePrepend> { get }
 
     /// sourcery:end

@@ -1,4 +1,4 @@
-// Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 
@@ -19,4 +19,30 @@ import Foundation
 
 
 // Generated protocol inline for Keychain -> See code in the file of that type
+    // sourcery:inline:Keychain.AutoGenerateProtocol
+    var system: SystemProtocol { get }
+
+    func password(matching query: Keychain.PasswordQuery) throws  -> String
+    // sourcery:end
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
 

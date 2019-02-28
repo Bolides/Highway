@@ -55,7 +55,7 @@ class AutomateAppdelegate: NSObject, NSApplicationDelegate
             switch command {
             // 4. execute the task as if button was pressed
             case .sourcery:
-                let worker = try AutomateHighwaySourceryWorker()
+                let worker = try AutomateHighwaySourceryWorker(disk: try Disk())
                 worker.attempt
                 { [weak self] syncOutput in
                     do

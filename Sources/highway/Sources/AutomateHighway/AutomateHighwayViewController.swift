@@ -29,7 +29,7 @@ class AutomateHighwayViewController: NSViewController
         {
             if sourceryWorker == nil
             {
-                sourceryWorker = try AutomateHighwaySourceryWorker()
+                sourceryWorker = try AutomateHighwaySourceryWorker(disk: try Disk())
             }
 
             sourceryWorker!.attempt
