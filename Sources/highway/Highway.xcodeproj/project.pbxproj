@@ -142,6 +142,8 @@
 		FDC156F621C5355400E04B44 /* SourceryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC156F321C5355400E04B44 /* SourceryWorker.swift */; };
 		FDC156F721C5355400E04B44 /* Sourcery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC156F421C5355400E04B44 /* Sourcery.swift */; };
 		FDC156FA21C535A400E04B44 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
+		FDD572682228701C0016657D /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
+		FDD5726B222870510016657D /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
 		FDEC11E721C679DF00CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */; };
 		FDEC11E821C679E200CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */; };
 		FDEC11F421C67ED700CB7DAD /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11F221C67EAD00CB7DAD /* Worker.swift */; };
@@ -1188,6 +1190,13 @@
 			remoteGlobalIDString = "highway::Task";
 			remoteInfo = Task;
 		};
+		FDD572692228702D0016657D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD1126CB21C77F050072607D;
+			remoteInfo = SignPost;
+		};
 		FDFCEFCB221B1A6B001AC549 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1614,7 +1623,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				FDD5726B222870510016657D /* ZFile.framework in Frameworks */,
 				OBJ_273 /* SourceryAutoProtocols.framework in Frameworks */,
+				FDD572682228701C0016657D /* SignPost.framework in Frameworks */,
 				OBJ_272 /* Errors.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2879,6 +2890,7 @@
 			);
 			dependencies = (
 				OBJ_275 /* PBXTargetDependency */,
+				FDD5726A2228702D0016657D /* PBXTargetDependency */,
 				OBJ_274 /* PBXTargetDependency */,
 			);
 			name = Arguments;
@@ -4122,6 +4134,11 @@
 			isa = PBXTargetDependency;
 			target = "highway::Task" /* Task */;
 			targetProxy = FDC156FB21C5363C00E04B44 /* PBXContainerItemProxy */;
+		};
+		FDD5726A2228702D0016657D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD1126CB21C77F050072607D /* SignPost */;
+			targetProxy = FDD572692228702D0016657D /* PBXContainerItemProxy */;
 		};
 		FDFCEFCC221B1A6B001AC549 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
