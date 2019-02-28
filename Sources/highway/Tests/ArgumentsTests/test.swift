@@ -1,25 +1,24 @@
 import Arguments
 import ArgumentsMock
-import XCTest
 
-private class Person
-{
-    var firstName: String?
-    var lastName: String?
-    var age: Int?
-}
+import Quick
+import Nimble
 
-final class ArgumentsTests: XCTestCase
-{
-    func testExample()
-    {
-        let p = Person()
-        let parser = Parser(p)
-        parser.add(Key<String>("--firstname", "-fn", description: "Sets the first name."))
-        { pers, keyable in
-            pers.firstName = keyable
+class ArgumentsSpec: QuickSpec {
+    
+    override func spec() {
+        
+        describe("ArgumentsTests") {
+            
+            var sut: Arguments?
+            
+            beforeEach {
+                sut = Arguments()
+            }
+            
+            it("should have default arguments from command line") {
+                expect(sut?.all) == ["srcroot mocked test argument from scheme"]
+            }
         }
-        XCTAssertNoThrow(try parser.consume(["--firstname", "Chris"]))
-        print(p)
     }
 }
