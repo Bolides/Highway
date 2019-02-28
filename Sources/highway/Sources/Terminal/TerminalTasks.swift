@@ -14,7 +14,7 @@ public enum TerminalTask: RawRepresentable, Equatable, AutoCases
     case cat(ArgumentExecutableProtocol)
     case sourcery(ArgumentExecutableProtocol)
     case pod(ArgumentExecutableProtocol)
-    
+
     case xcodebuild(ArgumentExecutableProtocol)
     case xcodebuildTests(ArgumentExecutableProtocol)
     case cd(ArgumentExecutableProtocol)

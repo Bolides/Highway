@@ -5,72 +5,55 @@ import SwiftformatWorker
 import ZFile
 import ZFileMock
 
-
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // MARK: - SwiftFormatWorkerProtocolMock
 
-open class SwiftFormatWorkerProtocolMock: SwiftFormatWorkerProtocol {
-
+open class SwiftFormatWorkerProtocolMock: SwiftFormatWorkerProtocol
+{
     public init() {}
 
-  public static var queue: DispatchQueue {
-      get { return underlyingQueue }
-      set(value) { underlyingQueue = value }
-  }
-  public static var underlyingQueue: DispatchQueue!
-  public  var queue: DispatchQueue {
-      get { return underlyingQueue }
-      set(value) { underlyingQueue = value }
-  }
-  public  var underlyingQueue: DispatchQueue!
+    public static var queue: DispatchQueue
+    {
+        get { return underlyingQueue }
+        set(value) { underlyingQueue = value }
+    }
 
+    public static var underlyingQueue: DispatchQueue!
+    public var queue: DispatchQueue
+    {
+        get { return underlyingQueue }
+        set(value) { underlyingQueue = value }
+    }
 
-  // MARK: - <attempt> - parameters
+    public var underlyingQueue: DispatchQueue!
 
-  public var attemptCallsCount = 0
-  public var attemptCalled: Bool {
-    return attemptCallsCount > 0
-  }
-  public var attemptReceivedAsyncSwiftFormatAttemptOutput: ((@escaping SwiftFormatWorker.SyncOutput) -> Void)?
+    // MARK: - <attempt> - parameters
 
-  // MARK: - <attempt> - closure mocks
+    public var attemptCallsCount = 0
+    public var attemptCalled: Bool
+    {
+        return attemptCallsCount > 0
+    }
 
-  public var attemptClosure: ((@escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void)  -> Void)? = nil
+    public var attemptReceivedAsyncSwiftFormatAttemptOutput: ((@escaping SwiftFormatWorker.SyncOutput) -> Void)?
 
+    // MARK: - <attempt> - closure mocks
 
+    public var attemptClosure: ((@escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void) -> Void)?
 
-  // MARK: - <attempt> - method mocked
+    // MARK: - <attempt> - method mocked
 
-  open func attempt(_ asyncSwiftFormatAttemptOutput: @escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void) {
+    open func attempt(_ asyncSwiftFormatAttemptOutput: @escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void)
+    {
+        attemptCallsCount += 1
+        attemptReceivedAsyncSwiftFormatAttemptOutput = asyncSwiftFormatAttemptOutput
 
-      attemptCallsCount += 1
-      attemptReceivedAsyncSwiftFormatAttemptOutput = asyncSwiftFormatAttemptOutput
+        // <attempt> - Void return mock implementation
 
-      // <attempt> - Void return mock implementation
-
-      attemptClosure?(asyncSwiftFormatAttemptOutput)
-
-  }
+        attemptClosure?(asyncSwiftFormatAttemptOutput)
+    }
 }
 
-
 // MARK: - OBJECTIVE-C
-

@@ -11,7 +11,7 @@ public enum HighwayError: Swift.Error, CustomStringConvertible
 {
     case missingSrcroot(message: String, function: String)
     case implement(String)
-    
+
     // MARK: - CustomStringConvertible
 
     public var description: String

@@ -55,22 +55,9 @@ class AutomateHighwayViewController: NSViewController
     {
         do
         {
-            guard let relativeProjectPath = highwayCommandLineArguments.optionsAndValues[.srcroot] else
-            {
-                throw HighwayError.missingSrcroot(
-                    message: """
-                    You can provide the following options
-                    \(HighwayCommandLineOption.allCases.map { $0.rawValue }.joined(separator: "\n"))
-                    """,
-                    function: "\(#function)"
-                )
-            }
-
-            let projectFolder = try Folder(relativePath: relativeProjectPath)
-
             if swiftFormatWorker == nil
             {
-                swiftFormatWorker = try SwiftFormatWorker(folderToFormatRecursive: try projectFolder.subfolder(named: "Sources/Highway/Sources"))
+                swiftFormatWorker = try SwiftFormatWorker(folderToFormatRecursive: try Disk().srcRoot.subfolder(named: "Sources/Highway/Sources"))
             }
 
             swiftFormatWorker!.attempt
