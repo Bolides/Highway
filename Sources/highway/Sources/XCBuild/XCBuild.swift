@@ -6,6 +6,8 @@ import Task
 import Terminal
 import Url
 import ZFile
+import Errors
+import SignPost
 
 public protocol XCBuildProtocol: AutoMockable
 {
@@ -17,6 +19,7 @@ public protocol XCBuildProtocol: AutoMockable
     func archive(using options: ArchiveOptionsProtocol) throws  -> ArchiveProtocol
     func export(using options: ExportArchiveOptionsProtocol) throws  -> ExportProtocol
     func buildAndTest(using options: ArgumentExecutableProtocol) throws  -> TestReportProtocol
+    func findPosibleDestinations(for scheme: String, in workspace: FolderProtocol) throws -> [String]
     /// sourcery:end
 }
 
@@ -32,13 +35,47 @@ public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol
     public let fileSystem: FileSystemProtocol
     public let terminalWorker: TerminalWorkerProtocol
 
+    private let signPost: SignPostProtocol
     // MARK: - Init
 
-    public init(system: SystemProtocol, terminalWorker: TerminalWorkerProtocol = TerminalWorker.shared, fileSystem: FileSystemProtocol = FileSystem.shared)
+    public init(
+        system: SystemProtocol,
+        terminalWorker: TerminalWorkerProtocol = TerminalWorker.shared,
+        fileSystem: FileSystemProtocol = FileSystem.shared,
+        signPost: SignPostProtocol = SignPost.shared
+    )
     {
         self.system = system
         self.fileSystem = fileSystem
         self.terminalWorker = terminalWorker
+        self.signPost = signPost
+    }
+    
+    // MARK: - Find destinations
+    
+    public func findPosibleDestinations(for scheme: String, in workspace: FolderProtocol) throws -> [String] {
+        
+        do
+        {
+            let task = try _xcodebuild()
+            var args = Arguments([])
+            args += _option("scheme", value: scheme)
+            args += _option("workspace", value: workspace.path)
+            
+            args.append("-showdestinations")
+            
+            task.arguments = args
+            
+            signPost.verbose("\(self) \(#function) started \(task)")
+            let output = try terminalWorker.runProcess(task.toProcess)
+            signPost.verbose("destions found \(output)")
+            return output
+        }
+        catch
+        {
+            throw "\(self) \(#function) \(error)"
+        }
+        
     }
 
     // MARK: - Archiving
@@ -114,8 +151,7 @@ public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol
 
     private func _xcodebuild() throws -> Task
     {
-        let result = try system.task(named: "xcrun")
-        result.arguments = ["xcodebuild"]
+        let result = try system.task(named: "xcodebuild")
         return result
     }
 }

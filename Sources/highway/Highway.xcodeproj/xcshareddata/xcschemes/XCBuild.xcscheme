@@ -14,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FD1126CB21C77F050072607D"
-               BuildableName = "SignPost.framework"
-               BlueprintName = "SignPost"
+               BlueprintIdentifier = "highway::XCBuild"
+               BuildableName = "XCBuild.framework"
+               BlueprintName = "XCBuild"
+               ReferencedContainer = "container:Highway.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "highway::XCBuildTests"
+               BuildableName = "XCBuildTests.xctest"
+               BlueprintName = "XCBuildTests"
                ReferencedContainer = "container:Highway.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,7 +42,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "highway::XCBuildTests"
+               BuildableName = "XCBuildTests.xctest"
+               BlueprintName = "XCBuildTests"
+               ReferencedContainer = "container:Highway.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "highway::XCBuild"
+            BuildableName = "XCBuild.framework"
+            BlueprintName = "XCBuild"
+            ReferencedContainer = "container:Highway.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -45,9 +78,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FD1126CB21C77F050072607D"
-            BuildableName = "SignPost.framework"
-            BlueprintName = "SignPost"
+            BlueprintIdentifier = "highway::XCBuild"
+            BuildableName = "XCBuild.framework"
+            BlueprintName = "XCBuild"
             ReferencedContainer = "container:Highway.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +96,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FD1126CB21C77F050072607D"
-            BuildableName = "SignPost.framework"
-            BlueprintName = "SignPost"
+            BlueprintIdentifier = "highway::XCBuild"
+            BuildableName = "XCBuild.framework"
+            BlueprintName = "XCBuild"
             ReferencedContainer = "container:Highway.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

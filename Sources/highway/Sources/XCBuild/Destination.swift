@@ -67,7 +67,8 @@ extension Destination
     {
         case iOS = "iOS Simulator"
         case tvOS = "tvOS Simulator"
-        var name: String { return rawValue }
+        
+        public var name: String { return rawValue }
     }
 
     public enum Device: String

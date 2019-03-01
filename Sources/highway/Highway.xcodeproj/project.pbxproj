@@ -70,6 +70,7 @@
 		FD74CC7D2226F35B00A65E44 /* PodExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD74CC7C2226F35B00A65E44 /* PodExecutable.swift */; };
 		FDAA4C1D2225899A0091F9C3 /* MinimalTestOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAA4C1C2225899A0091F9C3 /* MinimalTestOptions.swift */; };
 		FDAC932A210B595100B0D045 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
+		FDB74B4D22294586000B068C /* XCBuildDestinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB74B4C22294586000B068C /* XCBuildDestinations.swift */; };
 		FDB7A8AD21CD58600045DDA8 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
 		FDB7A98721CD6B5D0045DDA8 /* ArgumentsMock.h in Headers */ = {isa = PBXBuildFile; fileRef = FDB7A98521CD6B5D0045DDA8 /* ArgumentsMock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FDB7A98B21CD6B950045DDA8 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A95221CD6A790045DDA8 /* AutoMockable.generated.swift */; };
@@ -1298,6 +1299,7 @@
 		FDAA4C1C2225899A0091F9C3 /* MinimalTestOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimalTestOptions.swift; sourceTree = "<group>"; };
 		FDAC932C210B5C4500B0D045 /* ExcecutableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcecutableProtocol.swift; sourceTree = "<group>"; };
 		FDAC9350210B7D4A00B0D045 /* TerminalTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminalTasks.swift; sourceTree = "<group>"; };
+		FDB74B4C22294586000B068C /* XCBuildDestinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCBuildDestinations.swift; sourceTree = "<group>"; };
 		FDB7A93A21CD6A780045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDB7A93D21CD6A780045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDB7A94021CD6A780045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
@@ -2464,6 +2466,7 @@
 				OBJ_13 /* Export */,
 				OBJ_18 /* Test */,
 				OBJ_21 /* XCBuild.swift */,
+				FDB74B4C22294586000B068C /* XCBuildDestinations.swift */,
 			);
 			path = XCBuild;
 			sourceTree = "<group>";
@@ -3897,6 +3900,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_936 /* Archive.swift in Sources */,
+				FDB74B4D22294586000B068C /* XCBuildDestinations.swift in Sources */,
 				FD326DA1210A134000AE3A98 /* DestinationFactory.swift in Sources */,
 				OBJ_937 /* ArchiveOptions.swift in Sources */,
 				OBJ_938 /* Destination.swift in Sources */,

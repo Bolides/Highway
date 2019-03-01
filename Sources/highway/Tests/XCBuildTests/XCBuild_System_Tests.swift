@@ -42,6 +42,21 @@ class XCBuildSpec: QuickSpec {
                 }
                
             }
+            
+            context("get possible destinations") {
+                
+                beforeEach {
+                    xcbuildExecutable.argumentsReturnValue = Arguments([""])
+                    system.taskNamedReturnValue = TaskProtocolMock()
+                    
+                }
+                
+                it("returns detinations") {
+                    expect { try sut?.buildAndTest(using: xcbuildExecutable) }.toNot(throwError())
+
+                }
+                
+            }
         }
     }
 }
