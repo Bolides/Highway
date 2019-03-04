@@ -28,6 +28,7 @@ public struct MinimalTestOptions: MinimalTestOptionsProtocol, AutoGenerateProtoc
     private let workspace: FolderProtocol
     private let destination: Destination?
     private let xcodebuild: XCBuildProtocol
+    private let signPost: SignPostProtocol
 
     // xcodebuild test -workspace ios/ReactNativeConfig.xcworkspace -scheme RNConfiguration-macOS
     // You can create a destionation with the destination factory
@@ -44,6 +45,7 @@ public struct MinimalTestOptions: MinimalTestOptionsProtocol, AutoGenerateProtoc
         self.workspace = workspace
         self.destination = destination
         self.xcodebuild = xcodebuild
+        self.signPost = signPost
     }
 
     public func arguments() throws -> Arguments
@@ -53,15 +55,15 @@ public struct MinimalTestOptions: MinimalTestOptionsProtocol, AutoGenerateProtoc
         args += _option("scheme", value: scheme)
         args += _option("workspace", value: workspace.path)
 
-        // TODO: run xcodebuild -showdestinations -scheme RNConfigurationBridge-iOS -workspace ReactNativeConfig.xcworkspace for possible destionations
-        // TODO: pick one
-        // return
-
-        if let destination = destination
+        if destination != nil
         {
             let destinations = try xcodebuild.findPosibleDestinations(for: scheme, in: workspace)
+            signPost.verbose("possibleDestinations \(destinations) \n choosing first\n")
 
-//            args += _option("destination", value: destination)
+            if let firstDestination = destinations.first
+            {
+                args += _option("destination", value: firstDestination)
+            }
         }
 
         args.append(["-quiet", "test"]) // arguments without a value
