@@ -5,6 +5,8 @@ import SignPost
 import SourceryAutoProtocols
 import Url
 import ZFile
+import SignPost
+import Arguments
 
 public protocol PathEnvironmentParserProtocol: AutoMockable
 {
@@ -27,19 +29,26 @@ public struct PathEnvironmentParser: PathEnvironmentParserProtocol
     // MARK: - Init
 
     public init(
+        highwayCommandLineArguments: HighwayCommandLineOption.Values = HighwayCommandLineOption.Values(),
         processInfoEnvironment: [String: String] = ProcessInfo.processInfo.environment,
         signPost: SignPostProtocol = SignPost.shared
     )
     {
-        do
+        let pathFromCommandline = highwayCommandLineArguments.ordered.compactMap { $0.path }.first
+        
         {
-            signPost.verbose("\(PathEnvironmentParser.self) \(#function)")
-            guard let path = processInfoEnvironment["PATH"] else { throw "\(PathEnvironmentParser.self) \(#function) \(HighwayError.processInfoMissingPath(processInfo: processInfoEnvironment))" }
+            if pathFromCommandline != nil {
+                signPost.message("\(PathEnvironmentParser.self) \(#function) \n⚠️ using path from command line argument \(HighwayCommandLineOption.SingleOption.path("your path"))")
+            }
+            
+            guard let path = pathFromCommandline == nil ? processInfoEnvironment["PATH"] : pathFromCommandline! else {
+                throw "\(PathEnvironmentParser.self) \(#function) \(HighwayError.processInfoMissingPath(processInfo: processInfoEnvironment))"
+            }
 
             let paths: [String] = path.components(separatedBy: ":")
-
-            signPost.verbose("\(PathEnvironmentParser.self) \(#function) found path \(path)")
-
+            
+            signPost.message("\(PathEnvironmentParser.self) \(#function) found path \n\(paths.map { "* \($0)"}.joined(separator: "\n"))")
+            
             urls = try paths.compactMap { try Folder(path: $0) }
         }
         catch

@@ -46,7 +46,7 @@ public struct Disk: DiskProtocol, AutoGenerateProtocol
         signPost: SignPostProtocol = SignPost.shared
     ) throws
     {
-        guard let relativeProjectPath = highwayCommandLineArguments.optionsAndValues[.srcroot] else
+        guard let relativeProjectPath = (highwayCommandLineArguments.ordered.compactMap { $0.srcRoot }.first) else
         {
             throw HighwayError.missingSrcroot(
                 message: """

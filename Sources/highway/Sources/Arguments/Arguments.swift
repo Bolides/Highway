@@ -13,7 +13,7 @@ public struct Arguments
 
     // MARK: - Init
 
-    public init(_ all: [String] = (HighwayCommandLineOption.Values().optionsAndValues.map { "\($0.key) \($0.value)" }))
+    public init(_ all: [String] = CommandLine.arguments)
     {
         self.all = all
     }

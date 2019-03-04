@@ -7,66 +7,72 @@ public enum HighwayCommandLineOption: String, CaseIterable
     case __srcRoot = "--srcRoot"
     case srcroot
     case _srcroot = "-srcroot"
+    case _path = "-path"
 
-    public var isSrcRoot: Bool
-    {
-        switch self
-        {
-        case .__srcRoot, ._srcRoot, .srcRoot, .srcroot, ._srcroot:
-            return true
-        }
-    }
-
-    public var singleOption: HighwayCommandLineOption.SingleOption
-    {
-        switch self
-        {
-        case .__srcRoot, ._srcRoot, .srcRoot, .srcroot, ._srcroot:
-            return SingleOption.srcroot
-        }
-    }
-
-    public static var validOptionsFormCommandLine: Set<HighwayCommandLineOption>
-    {
-        return Set(CommandLine.arguments.compactMap { HighwayCommandLineOption(rawValue: $0) })
-    }
-
+    
     // MARK: - Enum
 
-    public enum SingleOption: String, CaseIterable
+    public enum SingleOption
     {
-        case srcroot
+        case srcroot(String)
+        case path(String)
+        
+        public var srcRoot: String? {
+            switch self {
+            case let .srcroot(root):
+                return root
+            default:
+                return nil
+            }
+        }
+        
+        public var path: String? {
+            switch self {
+            case let .path(path):
+                return path
+            default:
+                return nil
+            }
+        }
     }
 
     // MARK: - Structs
 
     public struct Values: CustomStringConvertible
     {
-        public let optionsAndValues: [HighwayCommandLineOption.SingleOption: String]
+        
+        public let ordered: [HighwayCommandLineOption.SingleOption]
 
-        public init(options: Set<HighwayCommandLineOption> = HighwayCommandLineOption.validOptionsFormCommandLine, arguments: [String] = CommandLine.arguments)
+        public init(arguments: [String] = CommandLine.arguments)
         {
-            var optionsAndValues = [HighwayCommandLineOption.SingleOption: String]()
+            var ordered = [HighwayCommandLineOption.SingleOption]()
 
-            options.forEach
-            { option in
-                guard let optionIndex = arguments.firstIndex(of: option.rawValue) else
+            arguments.forEach
+            { argument in
+                guard
+                    let option = HighwayCommandLineOption(rawValue: argument),
+                    let optionIndex = arguments.firstIndex(of: option.rawValue) else
                 {
                     return
                 }
                 let nextIndex = optionIndex + 1
                 let value = arguments[nextIndex]
 
-                optionsAndValues[option.singleOption] = value
+                switch option {
+                case .__srcRoot, ._srcRoot, .srcRoot, ._srcroot, .srcroot:
+                    ordered.append(.srcroot(value))
+                case _path:
+                    ordered.append(.path(value))
+                }
             }
 
-            self.optionsAndValues = optionsAndValues
+            self.ordered = ordered
         }
 
         public var description: String
         {
             return """
-            \(optionsAndValues.map { "  * \($0) : \($1)" }.joined(separator: "\n"))
+            \(ordered.map { "  * \($0)" }.joined(separator: "\n"))
             """
         }
     }
