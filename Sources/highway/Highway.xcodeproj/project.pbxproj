@@ -38,8 +38,6 @@
 		FD34F42F21BEE9EB0052222C /* CDToFolderExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34F42C21BEE9EB0052222C /* CDToFolderExecutable.swift */; };
 		FD34F43021BEE9EB0052222C /* CatExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34F42D21BEE9EB0052222C /* CatExecutable.swift */; };
 		FD34F43121BEE9EB0052222C /* GitExecutables.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34F42E21BEE9EB0052222C /* GitExecutables.swift */; };
-		FD34F6A022282BB5001D8EB1 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F69F22282BB5001D8EB1 /* Quick.framework */; };
-		FD34F6A222282BBB001D8EB1 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F6A122282BBB001D8EB1 /* Nimble.framework */; };
 		FD34F6A322282BDC001D8EB1 /* TerminalMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9E221CD736C0045DDA8 /* TerminalMock.framework */; };
 		FD34F6A822282C51001D8EB1 /* ArgumentsMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A98321CD6B5D0045DDA8 /* ArgumentsMock.framework */; };
 		FD34F6AB22282CAF001D8EB1 /* SignPostMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9C721CD6F7F0045DDA8 /* SignPostMock.framework */; };
@@ -60,11 +58,32 @@
 		FD5363FE222817B50033D4C6 /* SourceryBuilderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5363FD222817B50033D4C6 /* SourceryBuilderSpec.swift */; };
 		FD536400222818750033D4C6 /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5363FF222818750033D4C6 /* Disk.swift */; };
 		FD589F60221B0EA300335F55 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
-		FD589F62221B0EB300335F55 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F61221B0EB300335F55 /* ZFileMock.framework */; };
 		FD589F64221B0EC100335F55 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
 		FD589F66221B0EC800335F55 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
 		FD74CC7D2226F35B00A65E44 /* PodExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD74CC7C2226F35B00A65E44 /* PodExecutable.swift */; };
 		FDAA4C1D2225899A0091F9C3 /* MinimalTestOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAA4C1C2225899A0091F9C3 /* MinimalTestOptions.swift */; };
+		FDAB8373222D8E1A00A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FDAB8374222D8E1A00A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
+		FDAB8375222D8E2000A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FDAB8376222D8E2000A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
+		FDAB8377222D8E2800A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FDAB8378222D8E2800A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
+		FDAB8379222D8E2E00A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FDAB837A222D8E2E00A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
+		FDAB837B222D8E3400A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FDAB837C222D8E3400A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
+		FDAB837D222D8E3B00A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FDAB837E222D8E3B00A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
+		FDAB837F222D8E4100A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FDAB8380222D8E4100A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
+		FDAB8381222D8E4D00A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FDAB8382222D8E4D00A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
+		FDAB8383222D8E5500A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FDAB8384222D8E5500A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
+		FDAB8385222D8E5C00A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FDAB8386222D8E5C00A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
+		FDAB8387222D8E6200A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FDAB8388222D8E6200A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
 		FDAC932A210B595100B0D045 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		FDB74B4D22294586000B068C /* XCBuildDestinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB74B4C22294586000B068C /* XCBuildDestinations.swift */; };
 		FDB7A8AD21CD58600045DDA8 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
@@ -92,7 +111,6 @@
 		FDC0937B22268C2F00B054BA /* SignPostCommandLineOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC0937A22268C2F00B054BA /* SignPostCommandLineOptions.swift */; };
 		FDC093A02226924600B054BA /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		FDC093A12226924600B054BA /* Arguments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDC093A52226924600B054BA /* Keychain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Keychain::Product" /* Keychain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDC093A82226924600B054BA /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
 		FDC093A92226924600B054BA /* Terminal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDC093AC2226924600B054BA /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
@@ -139,8 +157,6 @@
 		FDC156FA21C535A400E04B44 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
 		FDD572682228701C0016657D /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
 		FDD5726B222870510016657D /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
-		FDE20735222D76F000E44616 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE20734222D76F000E44616 /* Quick.framework */; };
-		FDE20737222D76F600E44616 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE20736222D76F600E44616 /* Nimble.framework */; };
 		FDE2073A222D771600E44616 /* TaskMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9FC21CD7E8C0045DDA8 /* TaskMock.framework */; };
 		FDE207B8222D885A00E44616 /* CupertinoJWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFE3221B1EA7001AC549 /* CupertinoJWT.framework */; };
 		FDE207B9222D885A00E44616 /* CupertinoJWT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFE3221B1EA7001AC549 /* CupertinoJWT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -148,30 +164,16 @@
 		FDEC11E821C679E200CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */; };
 		FDEC11F421C67ED700CB7DAD /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11F221C67EAD00CB7DAD /* Worker.swift */; };
 		FDFCEFC3221B1981001AC549 /* SwiftFormat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFC2221B1981001AC549 /* SwiftFormat.framework */; };
-		FDFCEFC8221B1A34001AC549 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFC7221B1A34001AC549 /* Quick.framework */; };
-		FDFCEFCA221B1A3B001AC549 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFC9221B1A3B001AC549 /* Nimble.framework */; };
 		FDFCEFCD221B1A74001AC549 /* SwiftFormatWorkerMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A7221DDE7E700BBDA58 /* SwiftFormatWorkerMock.framework */; };
 		FDFCEFCE221B1ABB001AC549 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		FDFCEFD1221B1AFA001AC549 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
-		FDFCEFD2221B1B77001AC549 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F61221B0EB300335F55 /* ZFileMock.framework */; };
 		FDFCEFD4221B1D90001AC549 /* FoundationGenericHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFD3221B1D90001AC549 /* FoundationGenericHelper.framework */; };
 		FDFCEFDB221B1E43001AC549 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFDA221B1E43001AC549 /* ZFile.framework */; };
-		FDFCEFDD221B1E43001AC549 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFDC221B1E43001AC549 /* ZFileMock.framework */; };
 		FDFCEFDF221B1E53001AC549 /* FoundationGenericHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFDE221B1E53001AC549 /* FoundationGenericHelper.framework */; };
 		FDFCEFE2221B1E97001AC549 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFE0221B1E82001AC549 /* Result.framework */; };
-		FDFCEFE6221B1EEF001AC549 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFE5221B1EEF001AC549 /* Quick.framework */; };
-		FDFCEFE8221B1EF7001AC549 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFE7221B1EF7001AC549 /* Nimble.framework */; };
-		FDFCEFEE221B1F19001AC549 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFED221B1F19001AC549 /* Quick.framework */; };
-		FDFCEFF0221B1F20001AC549 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFEF221B1F20001AC549 /* Nimble.framework */; };
-		FDFCEFF2221B1F3C001AC549 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF1221B1F3C001AC549 /* Quick.framework */; };
-		FDFCEFF4221B1F44001AC549 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF3221B1F44001AC549 /* Nimble.framework */; };
 		FDFCEFF7221B1FD9001AC549 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
 		FDFCEFF9221B2044001AC549 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF8221B2044001AC549 /* ZFileMock.framework */; };
 		FDFCEFFA221B2044001AC549 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFDA221B1E43001AC549 /* ZFile.framework */; };
-		FDFCEFFC221B205C001AC549 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFFB221B205C001AC549 /* Quick.framework */; };
-		FDFCEFFE221B2062001AC549 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFFD221B2062001AC549 /* Nimble.framework */; };
-		FDFCEFFF221B207F001AC549 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFFB221B205C001AC549 /* Quick.framework */; };
-		FDFCF000221B2086001AC549 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFFD221B2062001AC549 /* Nimble.framework */; };
 		FDFCF003221B2137001AC549 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFDA221B1E43001AC549 /* ZFile.framework */; };
 		FDFCF004221B2137001AC549 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF8221B2044001AC549 /* ZFileMock.framework */; };
 		FDFCF005221B2141001AC549 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFDA221B1E43001AC549 /* ZFile.framework */; };
@@ -209,12 +211,6 @@
 		OBJ_384 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		OBJ_385 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
 		OBJ_386 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
-		OBJ_606 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
-		OBJ_607 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
-		OBJ_609 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
-		OBJ_611 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
-		OBJ_612 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
-		OBJ_613 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_626 /* abscwd.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_150 /* abscwd.swift */; };
 		OBJ_628 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
 		OBJ_629 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
@@ -457,48 +453,6 @@
 			remoteGlobalIDString = "highway::SourceryAutoProtocols";
 			remoteInfo = SourceryAutoProtocols;
 		};
-		FD326CA22109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Task";
-			remoteInfo = Task;
-		};
-		FD326CA32109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Arguments";
-			remoteInfo = Arguments;
-		};
-		FD326CA52109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Errors";
-			remoteInfo = Errors;
-		};
-		FD326CA72109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Url";
-			remoteInfo = Url;
-		};
-		FD326CA82109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Terminal";
-			remoteInfo = Terminal;
-		};
-		FD326CA92109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
-		};
 		FD326CAA2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -652,13 +606,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = "highway::SourceryAutoProtocols";
 			remoteInfo = SourceryAutoProtocols;
-		};
-		FD326D1B2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Keychain";
-			remoteInfo = Keychain;
 		};
 		FD326D1F2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1229,7 +1176,6 @@
 				FDC093A92226924600B054BA /* Terminal.framework in Embed Frameworks */,
 				FDC093C52226924600B054BA /* Task.framework in Embed Frameworks */,
 				FDC093DD2226924700B054BA /* ZFile.framework in Embed Frameworks */,
-				FDC093A52226924600B054BA /* Keychain.framework in Embed Frameworks */,
 				FDC093AD2226924600B054BA /* POSIX.framework in Embed Frameworks */,
 				FDC093E12226924700B054BA /* SwiftFormat.framework in Embed Frameworks */,
 				FDC093CD2226924700B054BA /* SourceryWorker.framework in Embed Frameworks */,
@@ -1265,8 +1211,6 @@
 		FD34F42C21BEE9EB0052222C /* CDToFolderExecutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDToFolderExecutable.swift; sourceTree = "<group>"; };
 		FD34F42D21BEE9EB0052222C /* CatExecutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatExecutable.swift; sourceTree = "<group>"; };
 		FD34F42E21BEE9EB0052222C /* GitExecutables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitExecutables.swift; sourceTree = "<group>"; };
-		FD34F69F22282BB5001D8EB1 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD34F6A122282BBB001D8EB1 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3E94CE21C8117B00EA791C /* TemplatePrepend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatePrepend.swift; sourceTree = "<group>"; };
 		FD3F8A1121DDE43A00BBDA58 /* SwiftFormatWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftFormatWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3F8A1321DDE43A00BBDA58 /* SwiftFormatWorker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftFormatWorker.h; sourceTree = "<group>"; };
@@ -1284,7 +1228,6 @@
 		FD5363FD222817B50033D4C6 /* SourceryBuilderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryBuilderSpec.swift; sourceTree = "<group>"; };
 		FD5363FF222818750033D4C6 /* Disk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disk.swift; sourceTree = "<group>"; };
 		FD589F5F221B0EA300335F55 /* ZFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD589F61221B0EB300335F55 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD589F63221B0EC100335F55 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD589F65221B0EC800335F55 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD74CC7C2226F35B00A65E44 /* PodExecutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodExecutable.swift; sourceTree = "<group>"; };
@@ -1341,8 +1284,6 @@
 		FDC156F321C5355400E04B44 /* SourceryWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceryWorker.swift; sourceTree = "<group>"; };
 		FDC156F421C5355400E04B44 /* Sourcery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sourcery.swift; sourceTree = "<group>"; };
 		FDC1571421C5485900E04B44 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
-		FDE20734222D76F000E44616 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDE20736222D76F600E44616 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDE9B6F721C58ED400D1F50A /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryAutoProtocols.swift; sourceTree = "<group>"; };
 		FDEC11EB21C67ACE00CB7DAD /* SignPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignPost.swift; sourceTree = "<group>"; };
@@ -1350,25 +1291,12 @@
 		FDECFC43221B4B8700EA1E33 /* Cartfile.private */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile.private; path = ../../Cartfile.private; sourceTree = "<group>"; };
 		FDECFC44221B4B9900EA1E33 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = ../../Cartfile; sourceTree = "<group>"; };
 		FDFCEFC2221B1981001AC549 /* SwiftFormat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftFormat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFC7221B1A34001AC549 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFC9221B1A3B001AC549 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFCEFD3221B1D90001AC549 /* FoundationGenericHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FoundationGenericHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFCEFDA221B1E43001AC549 /* ZFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFDC221B1E43001AC549 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFCEFDE221B1E53001AC549 /* FoundationGenericHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FoundationGenericHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFCEFE0221B1E82001AC549 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFCEFE3221B1EA7001AC549 /* CupertinoJWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CupertinoJWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFE5221B1EEF001AC549 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFE7221B1EF7001AC549 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFE9221B1F00001AC549 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFEB221B1F06001AC549 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFED221B1F19001AC549 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFEF221B1F20001AC549 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFF1221B1F3C001AC549 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFF3221B1F44001AC549 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFCEFF8221B2044001AC549 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFFB221B205C001AC549 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFFD221B2062001AC549 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFCF00A221B21D4001AC549 /* FoundationGenericHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FoundationGenericHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
 		OBJ_109 /* FileStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStream.swift; sourceTree = "<group>"; };
@@ -1425,7 +1353,6 @@
 		"highway::Errors::Product" /* Errors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Errors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::Git::Product" /* Git.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Git.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::GitTests::Product" /* GitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = GitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		"highway::Keychain::Product" /* Keychain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Keychain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::POSIX::Product" /* POSIX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = POSIX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::POSIXTests::Product" /* POSIXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = POSIXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::ResultTests::Product" /* ResultTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ResultTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1455,6 +1382,8 @@
 			files = (
 				FD1126D521C77F050072607D /* SignPost.framework in Frameworks */,
 				FDB7A9D121CD70020045DDA8 /* SignPostMock.framework in Frameworks */,
+				FDAB837F222D8E4100A6A826 /* Quick.framework in Frameworks */,
+				FDAB8380222D8E4100A6A826 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1476,10 +1405,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDFCEFC8221B1A34001AC549 /* Quick.framework in Frameworks */,
-				FDFCEFCA221B1A3B001AC549 /* Nimble.framework in Frameworks */,
 				FD3F8A1A21DDE43A00BBDA58 /* SwiftFormatWorker.framework in Frameworks */,
 				FDFCEFCD221B1A74001AC549 /* SwiftFormatWorkerMock.framework in Frameworks */,
+				FDAB837D222D8E3B00A6A826 /* Quick.framework in Frameworks */,
+				FDAB837E222D8E3B00A6A826 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1488,7 +1417,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDFCF005221B2141001AC549 /* ZFile.framework in Frameworks */,
-				FDFCEFD2221B1B77001AC549 /* ZFileMock.framework in Frameworks */,
 				FD3F8A7C21DDE80200BBDA58 /* SwiftFormatWorker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1499,7 +1427,6 @@
 			files = (
 				FDFCEFDF221B1E53001AC549 /* FoundationGenericHelper.framework in Frameworks */,
 				FDFCEFDB221B1E43001AC549 /* ZFile.framework in Frameworks */,
-				FDFCEFDD221B1E43001AC549 /* ZFileMock.framework in Frameworks */,
 				FDB7A9C121CD6CAB0045DDA8 /* Arguments.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1510,7 +1437,6 @@
 			files = (
 				FD589F66221B0EC800335F55 /* Quick.framework in Frameworks */,
 				FD589F64221B0EC100335F55 /* Nimble.framework in Frameworks */,
-				FD589F62221B0EB300335F55 /* ZFileMock.framework in Frameworks */,
 				FD589F60221B0EA300335F55 /* ZFile.framework in Frameworks */,
 				FDB7A9D921CD719F0045DDA8 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDB7A9DC21CD71AF0045DDA8 /* SignPost.framework in Frameworks */,
@@ -1588,12 +1514,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD34F71822285A81001D8EB1 /* Arguments.framework in Frameworks */,
+				FDAB8373222D8E1A00A6A826 /* Quick.framework in Frameworks */,
+				FDAB8374222D8E1A00A6A826 /* Nimble.framework in Frameworks */,
 				FD34F6AC22282E4B001D8EB1 /* ZFile.framework in Frameworks */,
 				FD34F6AB22282CAF001D8EB1 /* SignPostMock.framework in Frameworks */,
 				FD34F6A822282C51001D8EB1 /* ArgumentsMock.framework in Frameworks */,
 				FD34F6A322282BDC001D8EB1 /* TerminalMock.framework in Frameworks */,
-				FD34F6A222282BBB001D8EB1 /* Nimble.framework in Frameworks */,
-				FD34F6A022282BB5001D8EB1 /* Quick.framework in Frameworks */,
 				FDB7AA1B21CD82DD0045DDA8 /* SourceryWorkerMock.framework in Frameworks */,
 				FDC156E421C5347D00E04B44 /* SourceryWorker.framework in Frameworks */,
 			);
@@ -1621,10 +1547,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FDFCEFE8221B1EF7001AC549 /* Nimble.framework in Frameworks */,
-				FDFCEFE6221B1EEF001AC549 /* Quick.framework in Frameworks */,
 				OBJ_285 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDB7A9BB21CD6BCC0045DDA8 /* ArgumentsMock.framework in Frameworks */,
+				FDAB8375222D8E2000A6A826 /* Quick.framework in Frameworks */,
+				FDAB8376222D8E2000A6A826 /* Nimble.framework in Frameworks */,
 				OBJ_283 /* Arguments.framework in Frameworks */,
 				OBJ_284 /* Errors.framework in Frameworks */,
 			);
@@ -1655,11 +1581,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FDFCEFF4221B1F44001AC549 /* Nimble.framework in Frameworks */,
-				FDFCEFF2221B1F3C001AC549 /* Quick.framework in Frameworks */,
 				OBJ_386 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDB7A8AD21CD58600045DDA8 /* SourceryWorker.framework in Frameworks */,
 				OBJ_374 /* XCBuild.framework in Frameworks */,
+				FDAB8377222D8E2800A6A826 /* Quick.framework in Frameworks */,
+				FDAB8378222D8E2800A6A826 /* Nimble.framework in Frameworks */,
 				OBJ_377 /* POSIX.framework in Frameworks */,
 				OBJ_378 /* Git.framework in Frameworks */,
 				OBJ_379 /* Task.framework in Frameworks */,
@@ -1667,19 +1593,6 @@
 				OBJ_383 /* Url.framework in Frameworks */,
 				OBJ_384 /* Arguments.framework in Frameworks */,
 				OBJ_385 /* Errors.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_605 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_606 /* Task.framework in Frameworks */,
-				OBJ_607 /* Arguments.framework in Frameworks */,
-				OBJ_609 /* Errors.framework in Frameworks */,
-				OBJ_611 /* Url.framework in Frameworks */,
-				OBJ_612 /* Terminal.framework in Frameworks */,
-				OBJ_613 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1696,10 +1609,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FDFCEFF0221B1F20001AC549 /* Nimble.framework in Frameworks */,
-				FDFCEFEE221B1F19001AC549 /* Quick.framework in Frameworks */,
 				OBJ_639 /* POSIX.framework in Frameworks */,
 				OBJ_640 /* Url.framework in Frameworks */,
+				FDAB8379222D8E2E00A6A826 /* Quick.framework in Frameworks */,
+				FDAB837A222D8E2E00A6A826 /* Nimble.framework in Frameworks */,
 				OBJ_641 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1712,6 +1625,8 @@
 				OBJ_666 /* POSIX.framework in Frameworks */,
 				OBJ_667 /* Git.framework in Frameworks */,
 				OBJ_668 /* Task.framework in Frameworks */,
+				FDAB837B222D8E3400A6A826 /* Quick.framework in Frameworks */,
+				FDAB837C222D8E3400A6A826 /* Nimble.framework in Frameworks */,
 				OBJ_670 /* Terminal.framework in Frameworks */,
 				OBJ_671 /* Url.framework in Frameworks */,
 				OBJ_672 /* Arguments.framework in Frameworks */,
@@ -1747,8 +1662,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FDFCEFFE221B2062001AC549 /* Nimble.framework in Frameworks */,
-				FDFCEFFC221B205C001AC549 /* Quick.framework in Frameworks */,
 				FDB7AA0621CD7EF50045DDA8 /* TaskMock.framework in Frameworks */,
 				OBJ_780 /* XCBuild.framework in Frameworks */,
 				OBJ_783 /* POSIX.framework in Frameworks */,
@@ -1758,6 +1671,8 @@
 				OBJ_788 /* Errors.framework in Frameworks */,
 				OBJ_790 /* Url.framework in Frameworks */,
 				OBJ_791 /* Terminal.framework in Frameworks */,
+				FDAB8381222D8E4D00A6A826 /* Quick.framework in Frameworks */,
+				FDAB8382222D8E4D00A6A826 /* Nimble.framework in Frameworks */,
 				OBJ_792 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1781,6 +1696,8 @@
 				OBJ_843 /* Git.framework in Frameworks */,
 				OBJ_844 /* Task.framework in Frameworks */,
 				OBJ_847 /* Url.framework in Frameworks */,
+				FDAB8383222D8E5500A6A826 /* Quick.framework in Frameworks */,
+				FDAB8384222D8E5500A6A826 /* Nimble.framework in Frameworks */,
 				OBJ_848 /* Arguments.framework in Frameworks */,
 				OBJ_849 /* Errors.framework in Frameworks */,
 				OBJ_850 /* Terminal.framework in Frameworks */,
@@ -1799,10 +1716,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FDFCF000221B2086001AC549 /* Nimble.framework in Frameworks */,
-				FDFCEFFF221B207F001AC549 /* Quick.framework in Frameworks */,
 				OBJ_928 /* Url.framework in Frameworks */,
 				OBJ_929 /* SourceryAutoProtocols.framework in Frameworks */,
+				FDAB8385222D8E5C00A6A826 /* Quick.framework in Frameworks */,
+				FDAB8386222D8E5C00A6A826 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1825,10 +1742,10 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_989 /* SourceryAutoProtocols.framework in Frameworks */,
+				FDAB8387222D8E6200A6A826 /* Quick.framework in Frameworks */,
+				FDAB8388222D8E6200A6A826 /* Nimble.framework in Frameworks */,
 				OBJ_982 /* Task.framework in Frameworks */,
 				FDE2073A222D771600E44616 /* TaskMock.framework in Frameworks */,
-				FDE20737222D76F600E44616 /* Nimble.framework in Frameworks */,
-				FDE20735222D76F000E44616 /* Quick.framework in Frameworks */,
 				FD34F71B2228603A001D8EB1 /* ArgumentsMock.framework in Frameworks */,
 				OBJ_977 /* XCBuild.framework in Frameworks */,
 				OBJ_980 /* POSIX.framework in Frameworks */,
@@ -1887,34 +1804,16 @@
 		FD326D9E210A0F5F00AE3A98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FDE20736222D76F600E44616 /* Nimble.framework */,
-				FDE20734222D76F000E44616 /* Quick.framework */,
-				FD34F6A122282BBB001D8EB1 /* Nimble.framework */,
-				FD34F69F22282BB5001D8EB1 /* Quick.framework */,
-				FDFCEFFD221B2062001AC549 /* Nimble.framework */,
-				FDFCEFFB221B205C001AC549 /* Quick.framework */,
 				FDFCF00A221B21D4001AC549 /* FoundationGenericHelper.framework */,
 				FDFCEFF8221B2044001AC549 /* ZFileMock.framework */,
-				FDFCEFF3221B1F44001AC549 /* Nimble.framework */,
-				FDFCEFF1221B1F3C001AC549 /* Quick.framework */,
-				FDFCEFEF221B1F20001AC549 /* Nimble.framework */,
-				FDFCEFED221B1F19001AC549 /* Quick.framework */,
-				FDFCEFEB221B1F06001AC549 /* Nimble.framework */,
-				FDFCEFE9221B1F00001AC549 /* Quick.framework */,
-				FDFCEFE7221B1EF7001AC549 /* Nimble.framework */,
-				FDFCEFE5221B1EEF001AC549 /* Quick.framework */,
 				FDFCEFE3221B1EA7001AC549 /* CupertinoJWT.framework */,
 				FDFCEFE0221B1E82001AC549 /* Result.framework */,
 				FDFCEFDE221B1E53001AC549 /* FoundationGenericHelper.framework */,
 				FDFCEFDA221B1E43001AC549 /* ZFile.framework */,
-				FDFCEFDC221B1E43001AC549 /* ZFileMock.framework */,
 				FDFCEFD3221B1D90001AC549 /* FoundationGenericHelper.framework */,
-				FDFCEFC9221B1A3B001AC549 /* Nimble.framework */,
-				FDFCEFC7221B1A34001AC549 /* Quick.framework */,
 				FDFCEFC2221B1981001AC549 /* SwiftFormat.framework */,
 				FD589F65221B0EC800335F55 /* Quick.framework */,
 				FD589F63221B0EC100335F55 /* Nimble.framework */,
-				FD589F61221B0EB300335F55 /* ZFileMock.framework */,
 				FD589F5F221B0EA300335F55 /* ZFile.framework */,
 				FDC156B621C52EE800E04B44 /* UIKit.framework */,
 			);
@@ -2344,7 +2243,6 @@
 			children = (
 				"highway::POSIXTests::Product" /* POSIXTests.xctest */,
 				"highway::Arguments::Product" /* Arguments.framework */,
-				"highway::Keychain::Product" /* Keychain.framework */,
 				"highway::GitTests::Product" /* GitTests.xctest */,
 				"highway::Terminal::Product" /* Terminal.framework */,
 				"highway::ArgumentsTests::Product" /* ArgumentsTests.xctest */,
@@ -2951,28 +2849,6 @@
 			productReference = "highway::GitTests::Product" /* GitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		"highway::Keychain" /* Keychain */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_600 /* Build configuration list for PBXNativeTarget "Keychain" */;
-			buildPhases = (
-				OBJ_603 /* Sources */,
-				OBJ_605 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_614 /* PBXTargetDependency */,
-				OBJ_615 /* PBXTargetDependency */,
-				OBJ_617 /* PBXTargetDependency */,
-				OBJ_619 /* PBXTargetDependency */,
-				OBJ_620 /* PBXTargetDependency */,
-				OBJ_621 /* PBXTargetDependency */,
-			);
-			name = Keychain;
-			productName = Keychain;
-			productReference = "highway::Keychain::Product" /* Keychain.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		"highway::POSIX" /* POSIX */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_622 /* Build configuration list for PBXNativeTarget "POSIX" */;
@@ -3214,7 +3090,6 @@
 			dependencies = (
 				FDE20739222D771000E44616 /* PBXTargetDependency */,
 				FD34F71A22285F1A001D8EB1 /* PBXTargetDependency */,
-				OBJ_990 /* PBXTargetDependency */,
 				OBJ_994 /* PBXTargetDependency */,
 				OBJ_997 /* PBXTargetDependency */,
 				OBJ_998 /* PBXTargetDependency */,
@@ -3333,11 +3208,6 @@
 						LastSwiftMigration = 1010;
 						ProvisioningStyle = Manual;
 					};
-					"highway::Keychain" = {
-						DevelopmentTeam = WWFDRU947Q;
-						LastSwiftMigration = 1000;
-						ProvisioningStyle = Manual;
-					};
 					"highway::POSIX" = {
 						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
@@ -3418,7 +3288,6 @@
 				FDB7A98221CD6B5D0045DDA8 /* ArgumentsMock */,
 				"highway::Errors" /* Errors */,
 				"highway::Git" /* Git */,
-				"highway::Keychain" /* Keychain */,
 				"highway::POSIX" /* POSIX */,
 				FD1126CB21C77F050072607D /* SignPost */,
 				FDB7A9C621CD6F7F0045DDA8 /* SignPostMock */,
@@ -3752,13 +3621,6 @@
 				OBJ_367 /* GitAutotagTests.swift in Sources */,
 				OBJ_368 /* GitToolTests.swift in Sources */,
 				OBJ_369 /* git.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_603 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4251,36 +4113,6 @@
 			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326D172109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
-		OBJ_614 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Task" /* Task */;
-			targetProxy = FD326CA22109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_615 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Arguments" /* Arguments */;
-			targetProxy = FD326CA32109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_617 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Errors" /* Errors */;
-			targetProxy = FD326CA52109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_619 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Url" /* Url */;
-			targetProxy = FD326CA72109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_620 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Terminal" /* Terminal */;
-			targetProxy = FD326CA82109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_621 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FD326CA92109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
 		OBJ_630 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::Url" /* Url */;
@@ -4515,11 +4347,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326CB22109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_990 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Keychain" /* Keychain */;
-			targetProxy = FD326D1B2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_994 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -5103,29 +4930,6 @@
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
 				TARGET_NAME = Git;
-			};
-			name = BetaRelease;
-		};
-		FD61D91E221C70C600CC87F8 /* BetaRelease */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Keychain;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = Keychain;
 			};
 			name = BetaRelease;
 		};
@@ -6035,29 +5839,6 @@
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
 				TARGET_NAME = Git;
-			};
-			name = Local;
-		};
-		FD61D943221C70CE00CC87F8 /* Local */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Keychain;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = Keychain;
 			};
 			name = Local;
 		};
@@ -7991,52 +7772,6 @@
 			};
 			name = Release;
 		};
-		OBJ_601 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Keychain;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = Keychain;
-			};
-			name = Debug;
-		};
-		OBJ_602 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Keychain;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = Keychain;
-			};
-			name = Release;
-		};
 		OBJ_623 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -8730,17 +8465,6 @@
 				FD61D957221C70CE00CC87F8 /* Local */,
 				OBJ_365 /* Release */,
 				FD61D932221C70C700CC87F8 /* BetaRelease */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_600 /* Build configuration list for PBXNativeTarget "Keychain" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_601 /* Debug */,
-				FD61D943221C70CE00CC87F8 /* Local */,
-				OBJ_602 /* Release */,
-				FD61D91E221C70C600CC87F8 /* BetaRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
