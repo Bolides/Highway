@@ -31,7 +31,7 @@ public class Task: TaskProtocol, AutoGenerateProtocol
 {
     // MARK: - Init
 
-    public convenience init(commandName: String, arguments: Arguments = Arguments(), currentDirectoryUrl: FolderProtocol? = nil, provider: ExecutableProviderProtocol) throws
+    public convenience init(commandName: String, arguments: Arguments = Arguments(), currentDirectoryUrl: FolderProtocol? = nil, provider: SystemExecutableProviderProtocol) throws
     {
         self.init(
             executable: try provider.executable(with: commandName),

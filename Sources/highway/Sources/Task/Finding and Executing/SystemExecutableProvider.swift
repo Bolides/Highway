@@ -4,38 +4,34 @@ import Url
 import ZFile
 
 /// Maps names command line tools/executables to file urls.
-public protocol ExecutableProviderProtocol: AutoMockable
+public protocol SystemExecutableProviderProtocol: AutoMockable
 {
     /// sourcery:inline:SystemExecutableProvider.AutoGenerateProtocol
-    var searchedUrls: [FolderProtocol] { get set }
+    var pathEnvironmentParser: PathEnvironmentParserProtocol { get }
     var fileSystem: FileSystemProtocol { get }
 
     func executable(with executableName: String) throws  -> FileProtocol
     /// sourcery:end
 }
 
-public final class SystemExecutableProvider: ExecutableProviderProtocol, AutoGenerateProtocol
+public struct SystemExecutableProvider: SystemExecutableProviderProtocol, AutoGenerateProtocol
 {
+    
+    public static let shared: SystemExecutableProviderProtocol = SystemExecutableProvider()
+    
+    // MARK: - Properties
+    
+    public let pathEnvironmentParser: PathEnvironmentParserProtocol
+    public let fileSystem: FileSystemProtocol
     // MARK: - Init
 
-    public init(searchedUrls: [FolderProtocol], fileSystem: FileSystemProtocol)
-    {
-        self.searchedUrls = searchedUrls
+    public init(
+        pathEnvironmentParser: PathEnvironmentParserProtocol = PathEnvironmentParser.shared,
+        fileSystem: FileSystemProtocol = FileSystem.shared
+    ) {
+        self.pathEnvironmentParser = pathEnvironmentParser
         self.fileSystem = fileSystem
     }
-
-    // MARK: - Convenience
-
-    public init() throws
-    {
-        searchedUrls = try PathEnvironmentParser.local().urls
-        fileSystem = FileSystem()
-    }
-
-    // MARK: - Properties
-
-    public var searchedUrls = [FolderProtocol]()
-    public let fileSystem: FileSystemProtocol
 
     // MARKL: - Error
 
@@ -51,16 +47,19 @@ extension SystemExecutableProvider
 {
     public func executable(with executableName: String) throws -> FileProtocol
     {
-        for url in searchedUrls
-        {
-            let potentialUrl = Absolute(url.path).appending(executableName)
-            do
-            {
-                let file = try File(path: potentialUrl.path)
-                return file
+        var _result: FileProtocol?
+        
+        for folder in pathEnvironmentParser.urls {
+           
+            if let executable = (folder.makeFileSequence(recursive: true, includeHidden: true).first { $0.name == executableName }) {
+                _result = executable
+                break
             }
-            catch {}
+         
         }
-        throw Error.executableNotFoundFor(executableName: executableName)
+        
+        guard let result = _result else { throw Error.executableNotFoundFor(executableName: executableName) }
+        
+        return result
     }
 }

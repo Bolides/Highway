@@ -2,6 +2,15 @@ import Foundation
 import POSIX
 import Url
 import ZFile
+import Errors
+import SourceryAutoProtocols
+
+public protocol PathEnvironmentParserProtocol: AutoMockable {
+    // sourcery:inline:PathEnvironmentParser.AutoGenerateProtocol
+    static var shared: PathEnvironmentParserProtocol  { get }
+    var urls: [FolderProtocol] { get }
+    // sourcery:end
+}
 
 /// Parser that extracts urls from a String-Array of paths.
 /// Usually used to parse the contents of the PATH-environment
@@ -9,36 +18,24 @@ import ZFile
 /// is subsituted by $cwd. Furthermore: Any component which only
 /// contains a "." is used as an input to Absolute.init:. (which
 /// standardizes the path).
-public struct PathEnvironmentParser
-{
-    // MARK: - Convenience
+public struct PathEnvironmentParser: PathEnvironmentParserProtocol {
 
-    public static func local() throws -> PathEnvironmentParser
-    {
-        let env = ProcessInfo.processInfo.environment
-        let path = env["PATH"] ?? ""
-        return try self.init(value: path, currentDirectoryUrl: FileSystem().currentFolder)
-    }
+    public static let shared: PathEnvironmentParserProtocol = try! PathEnvironmentParser()
+    
+    public var urls: [FolderProtocol]
 
     // MARK: - Init
 
-    public init(value: String, currentDirectoryUrl: FolderProtocol) throws
+    public init(
+        processInfoEnvironment: [String: String] = ProcessInfo.processInfo.environment
+    ) throws
     {
-        let paths = value.components(separatedBy: ":")
-        urls = try paths.compactMap
-        { path in
-            guard path != "" else { return nil }
-            guard path != "." else { return currentDirectoryUrl }
-
-            let isRelative = path.hasPrefix("/") == false
-            guard isRelative else { return try Folder(path: path) }
-            return try currentDirectoryUrl.subfolder(atPath: path)
-        }
-        self.currentDirectoryUrl = currentDirectoryUrl
+        guard let path = processInfoEnvironment["PATH"] else { throw "\(PathEnvironmentParser.self) \(#function) \(HighwayError.processInfoMissingPath(processInfo: processInfoEnvironment))" }
+        
+        let paths: [String] = path.components(separatedBy: ":")
+        
+        urls = try paths.compactMap { return try Folder(path: $0) }
+        
     }
 
-    // MARK: - Properties
-
-    public let currentDirectoryUrl: FolderProtocol
-    public var urls: [FolderProtocol]
 }

@@ -12,9 +12,6 @@ import SignPost
 public protocol XCBuildProtocol: AutoMockable
 {
     /// sourcery:inline:XCBuild.AutoGenerateProtocol
-    var system: SystemProtocol { get }
-    var fileSystem: FileSystemProtocol { get }
-    var terminalWorker: TerminalWorkerProtocol { get }
 
     func archive(using options: ArchiveOptionsProtocol) throws  -> ArchiveProtocol
     func export(using options: ExportArchiveOptionsProtocol) throws  -> ExportProtocol
@@ -31,21 +28,21 @@ public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol
 {
     // MARK: - Properties
 
-    public let system: SystemProtocol
-    public let fileSystem: FileSystemProtocol
-    public let terminalWorker: TerminalWorkerProtocol
+    private let systemExecutableProvider: SystemExecutableProviderProtocol
+    private let fileSystem: FileSystemProtocol
+    private let terminalWorker: TerminalWorkerProtocol
 
     private let signPost: SignPostProtocol
     // MARK: - Init
 
     public init(
-        system: SystemProtocol,
+        systemExecutableProvider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared,
         terminalWorker: TerminalWorkerProtocol = TerminalWorker.shared,
         fileSystem: FileSystemProtocol = FileSystem.shared,
         signPost: SignPostProtocol = SignPost.shared
     )
     {
-        self.system = system
+        self.systemExecutableProvider = systemExecutableProvider
         self.fileSystem = fileSystem
         self.terminalWorker = terminalWorker
         self.signPost = signPost
@@ -83,7 +80,7 @@ public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol
     @discardableResult
     public func archive(using options: ArchiveOptionsProtocol) throws -> ArchiveProtocol
     {
-        _ = try system.execute(try _archiveTask(using: options))
+        _ = try terminalWorker.runProcess(try _archiveTask(using: options).toProcess)
 
         return try Archive(archiveFolder: try Folder(path: options.archivePath), fileSystem: fileSystem)
     }
@@ -100,11 +97,8 @@ public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol
     @discardableResult
     public func export(using options: ExportArchiveOptionsProtocol) throws -> ExportProtocol
     {
-        let task = try _exportTask(using: options)
-        guard try system.execute(task) else
-        {
-            throw "Export failed. No archivePath set."
-        }
+        let task = try _exportTask(using: options).toProcess
+        _ = try terminalWorker.runProcess(task)
         return try Export(folder: try Folder(path: options.exportPath), fileSystem: fileSystem)
     }
 
@@ -151,8 +145,7 @@ public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol
 
     private func _xcodebuild() throws -> Task
     {
-        let result = try system.task(named: "xcodebuild")
-        return result
+        return Task(executable: try systemExecutableProvider.executable(with:"xcodebuild"))
     }
 }
 

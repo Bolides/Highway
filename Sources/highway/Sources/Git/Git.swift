@@ -14,8 +14,8 @@ public protocol GitToolProtocol: AutoMockable
     func pushToMaster(at url: FolderProtocol) throws 
     func pushTagsToMaster(at url: FolderProtocol) throws 
     func pull(at url: FolderProtocol) throws 
-    func currentTag(at url: FolderProtocol) throws  -> String
-    func clone(with options: CloneOptions) throws 
+    func currentTag(at url: FolderProtocol) throws  -> [String]
+    func clone(with options: CloneOptions) throws -> [String]
     /// sourcery:end
 }
 

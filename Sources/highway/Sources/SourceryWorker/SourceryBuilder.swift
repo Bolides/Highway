@@ -32,19 +32,19 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
     private let terminalWorker: TerminalWorkerProtocol
     private let disk: DiskProtocol
     private let signPost: SignPostProtocol
-    private let localSystem: SystemProtocol
+    private let systemExecutableProvider: SystemExecutableProviderProtocol
 
     /// Will try to init Disk when no dis provided
     public init(
         terminalWorker: TerminalWorkerProtocol = TerminalWorker(),
         disk: DiskProtocol? = nil,
         signPost: SignPostProtocol = SignPost.shared,
-        localSystem: SystemProtocol = try! LocalSystem()
+        systemExecutableProvider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared
     ) throws
     {
         self.terminalWorker = terminalWorker
         self.signPost = signPost
-        self.localSystem = localSystem
+        self.systemExecutableProvider = systemExecutableProvider
 
         guard let disk = disk else
         {
@@ -65,26 +65,30 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
         {
             signPost.verbose("Sourcery not build yet because of invalid path.\n Building sourcery from source with `swift build -c release`")
 
-            let system = try LocalSystem()
-            let swiftBuildTask = try system.task(named: "swift")
-
-            swiftBuildTask.arguments = Arguments(["build", "-c", "release"])
-
-            signPost.verbose("cd \(disk.carthage.sourcery)")
-            FileManager.default.changeCurrentDirectoryPath(disk.carthage.sourcery.path)
-
-            signPost.message("🚀 Start building sourcery (😅 this can take some time ☕️) ...")
-
-
-            let output = try terminalWorker.runProcess(swiftBuildTask.toProcess)
-            signPost.verbose("\(output.joined(separator: "\n"))")
-
-            signPost.message("🚀 finished sourcery swift build ✅")
-
-            signPost.verbose("cd \(disk.srcRoot)")
-            FileManager.default.changeCurrentDirectoryPath(disk.srcRoot.path)
-
-            return try findSourceryExecutableFile()
+            do {
+                let swiftBuildTask = Task(executable: try systemExecutableProvider.executable(with:  "swift"))
+                
+                swiftBuildTask.arguments = Arguments(["build", "-c", "release"])
+                
+                signPost.verbose("cd \(disk.carthage.sourcery)")
+                FileManager.default.changeCurrentDirectoryPath(disk.carthage.sourcery.path)
+                
+                signPost.message("🚀 Start building sourcery (😅 this can take some time ☕️) ...")
+                
+                
+                let output = try terminalWorker.runProcess(swiftBuildTask.toProcess)
+                signPost.verbose("\(output.joined(separator: "\n"))")
+                
+                signPost.message("🚀 finished sourcery swift build ✅")
+                
+                signPost.verbose("cd \(disk.srcRoot)")
+                FileManager.default.changeCurrentDirectoryPath(disk.srcRoot.path)
+                
+                return try findSourceryExecutableFile()
+            } catch {
+                throw "\(self) \(#function) \n\(error)\n"
+            }
+            
         }
     }
 

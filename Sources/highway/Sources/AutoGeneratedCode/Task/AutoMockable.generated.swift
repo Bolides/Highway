@@ -29,7 +29,7 @@ import ZFileMock
 
 // MARK: - ExecutableProviderProtocolMock
 
-open class ExecutableProviderProtocolMock: ExecutableProviderProtocol {
+open class ExecutableProviderProtocolMock: SystemExecutableProviderProtocol {
 
     public init() {}
 

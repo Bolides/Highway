@@ -209,7 +209,6 @@
 		OBJ_384 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		OBJ_385 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
 		OBJ_386 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
-		OBJ_604 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_98 /* Keychain.swift */; };
 		OBJ_606 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
 		OBJ_607 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		OBJ_609 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
@@ -235,8 +234,6 @@
 		OBJ_675 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_738 /* PathEnvironmentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_135 /* PathEnvironmentParser.swift */; };
 		OBJ_739 /* SystemExecutableProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_136 /* SystemExecutableProvider.swift */; };
-		OBJ_740 /* SystemExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_137 /* SystemExecutor.swift */; };
-		OBJ_742 /* LocalSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_139 /* LocalSystem.swift */; };
 		OBJ_743 /* Channel+Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_141 /* Channel+Reader.swift */; };
 		OBJ_744 /* Channel+Writer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_142 /* Channel+Writer.swift */; };
 		OBJ_745 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_143 /* Channel.swift */; };
@@ -244,7 +241,6 @@
 		OBJ_747 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_145 /* State.swift */; };
 		OBJ_748 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_146 /* Task.swift */; };
 		OBJ_749 /* Termination.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_147 /* Termination.swift */; };
-		OBJ_750 /* SystemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_148 /* SystemProtocol.swift */; };
 		OBJ_752 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		OBJ_754 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
 		OBJ_756 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
@@ -1393,8 +1389,6 @@
 		OBJ_123 /* Texts+Printable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Texts+Printable.swift"; sourceTree = "<group>"; };
 		OBJ_135 /* PathEnvironmentParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathEnvironmentParser.swift; sourceTree = "<group>"; };
 		OBJ_136 /* SystemExecutableProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemExecutableProvider.swift; sourceTree = "<group>"; };
-		OBJ_137 /* SystemExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemExecutor.swift; sourceTree = "<group>"; };
-		OBJ_139 /* LocalSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSystem.swift; sourceTree = "<group>"; };
 		OBJ_14 /* Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Export.swift; sourceTree = "<group>"; };
 		OBJ_141 /* Channel+Reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Channel+Reader.swift"; sourceTree = "<group>"; };
 		OBJ_142 /* Channel+Writer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Channel+Writer.swift"; sourceTree = "<group>"; };
@@ -1403,7 +1397,6 @@
 		OBJ_145 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		OBJ_146 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		OBJ_147 /* Termination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Termination.swift; sourceTree = "<group>"; };
-		OBJ_148 /* SystemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemProtocol.swift; sourceTree = "<group>"; };
 		OBJ_15 /* ExportArchiveOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportArchiveOptions.swift; sourceTree = "<group>"; };
 		OBJ_150 /* abscwd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = abscwd.swift; sourceTree = "<group>"; };
 		OBJ_157 /* TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTests.swift; sourceTree = "<group>"; };
@@ -1430,7 +1423,6 @@
 		OBJ_84 /* Arguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arguments.swift; sourceTree = "<group>"; };
 		OBJ_85 /* HighwayCommandLineOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighwayCommandLineOption.swift; sourceTree = "<group>"; };
 		OBJ_96 /* String+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Error.swift"; sourceTree = "<group>"; };
-		OBJ_98 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		"highway::Arguments::Product" /* Arguments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Arguments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::ArgumentsTests::Product" /* ArgumentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ArgumentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::Errors::Product" /* Errors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Errors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2208,9 +2200,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_133 /* Finding and Executing */,
-				OBJ_139 /* LocalSystem.swift */,
 				OBJ_140 /* Model */,
-				OBJ_148 /* SystemProtocol.swift */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -2220,7 +2210,6 @@
 			children = (
 				OBJ_135 /* PathEnvironmentParser.swift */,
 				OBJ_136 /* SystemExecutableProvider.swift */,
-				OBJ_137 /* SystemExecutor.swift */,
 			);
 			path = "Finding and Executing";
 			sourceTree = "<group>";
@@ -2413,13 +2402,13 @@
 		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
+				OBJ_7 /* Sources */,
 				FD34F6B922283A18001D8EB1 /* Rainbow.framework */,
 				FDECFC44221B4B9900EA1E33 /* Cartfile */,
 				FDECFC43221B4B8700EA1E33 /* Cartfile.private */,
 				FDC1571421C5485900E04B44 /* README.md */,
 				FD326D9E210A0F5F00AE3A98 /* Frameworks */,
 				OBJ_194 /* Products */,
-				OBJ_7 /* Sources */,
 				OBJ_151 /* Tests */,
 			);
 			sourceTree = "<group>";
@@ -2505,7 +2494,6 @@
 		OBJ_97 /* Keychain */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_98 /* Keychain.swift */,
 			);
 			path = Keychain;
 			sourceTree = "<group>";
@@ -3791,7 +3779,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_604 /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3833,8 +3820,6 @@
 			files = (
 				OBJ_738 /* PathEnvironmentParser.swift in Sources */,
 				OBJ_739 /* SystemExecutableProvider.swift in Sources */,
-				OBJ_740 /* SystemExecutor.swift in Sources */,
-				OBJ_742 /* LocalSystem.swift in Sources */,
 				OBJ_743 /* Channel+Reader.swift in Sources */,
 				OBJ_744 /* Channel+Writer.swift in Sources */,
 				OBJ_745 /* Channel.swift in Sources */,
@@ -3842,7 +3827,6 @@
 				OBJ_747 /* State.swift in Sources */,
 				OBJ_748 /* Task.swift in Sources */,
 				OBJ_749 /* Termination.swift in Sources */,
-				OBJ_750 /* SystemProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
