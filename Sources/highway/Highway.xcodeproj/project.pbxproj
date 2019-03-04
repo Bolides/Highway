@@ -142,6 +142,8 @@
 		FDE20735222D76F000E44616 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE20734222D76F000E44616 /* Quick.framework */; };
 		FDE20737222D76F600E44616 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE20736222D76F600E44616 /* Nimble.framework */; };
 		FDE2073A222D771600E44616 /* TaskMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9FC21CD7E8C0045DDA8 /* TaskMock.framework */; };
+		FDE207B8222D885A00E44616 /* CupertinoJWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFE3221B1EA7001AC549 /* CupertinoJWT.framework */; };
+		FDE207B9222D885A00E44616 /* CupertinoJWT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFE3221B1EA7001AC549 /* CupertinoJWT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDEC11E721C679DF00CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */; };
 		FDEC11E821C679E200CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */; };
 		FDEC11F421C67ED700CB7DAD /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11F221C67EAD00CB7DAD /* Worker.swift */; };
@@ -1222,6 +1224,7 @@
 			files = (
 				FDC093D12226924700B054BA /* SignPost.framework in Embed Frameworks */,
 				FDC093E32226924700B054BA /* Result.framework in Embed Frameworks */,
+				FDE207B9222D885A00E44616 /* CupertinoJWT.framework in Embed Frameworks */,
 				FDC093B12226924600B054BA /* XCBuild.framework in Embed Frameworks */,
 				FDC093A92226924600B054BA /* Terminal.framework in Embed Frameworks */,
 				FDC093C52226924600B054BA /* Task.framework in Embed Frameworks */,
@@ -1559,6 +1562,7 @@
 				FDC093AC2226924600B054BA /* POSIX.framework in Frameworks */,
 				FDC093E02226924700B054BA /* SwiftFormat.framework in Frameworks */,
 				FDC093CC2226924700B054BA /* SourceryWorker.framework in Frameworks */,
+				FDE207B8222D885A00E44616 /* CupertinoJWT.framework in Frameworks */,
 				FDC093B82226924600B054BA /* SourceryAutoProtocols.framework in Frameworks */,
 				FDC093BC2226924600B054BA /* Git.framework in Frameworks */,
 				FDC093DE2226924700B054BA /* FoundationGenericHelper.framework in Frameworks */,
