@@ -37,7 +37,7 @@ public struct TestOptions: TestOptionsProtocol, AutoGenerateProtocol
         resultBundlePath: String,
         fileSystem: FileSystem = FileSystem(),
         derivedDataPath: FolderProtocol?,
-        executableProvider: SystemExecutableProviderProtocol? = nil
+        executableProvider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared
     ) throws
     {
         guard fileSystem.itemKind(at: resultBundlePath) == nil else
@@ -50,7 +50,7 @@ public struct TestOptions: TestOptionsProtocol, AutoGenerateProtocol
         self.destination = destination
         self.resultBundlePath = resultBundlePath
         self.derivedDataPath = derivedDataPath
-        self.executableProvider = (executableProvider == nil) ? try SystemExecutableProvider() : executableProvider!
+        self.executableProvider = executableProvider
     }
 
     public func arguments() throws -> Arguments
