@@ -17,7 +17,7 @@ class ArgumentsSpec: QuickSpec {
             }
             
             it("should have default arguments from command line") {
-                expect(sut?.all) == ["srcroot mocked test argument from scheme"]
+                expect(sut?.all) == ["srcroot /../../../../../../../"]
             }
         }
     }

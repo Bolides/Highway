@@ -6,6 +6,7 @@ import TaskMock
 import XCBuild
 import TerminalMock
 import Arguments
+import ZFileMock
 
 class XCBuildSpec: QuickSpec {
     
@@ -18,41 +19,49 @@ class XCBuildSpec: QuickSpec {
         
             var terminal: TerminalWorkerProtocolMock!
             var xcbuildExecutable: ArgumentExecutableProtocolMock!
-            var system: SystemProtocolMock!
+            var system: SystemExecutableProviderProtocolMock!
             
             beforeEach {
                 xcbuildExecutable = ArgumentExecutableProtocolMock()
                 terminal = TerminalWorkerProtocolMock()
-                system = SystemProtocolMock()
+                system = SystemExecutableProviderProtocolMock()
                 
-                sut = XCBuild(system: system, terminalWorker: terminal)
+                sut = XCBuild(systemExecutableProvider: system, terminalWorker: terminal)
             }
             
             context("build and test") {
                 
                 beforeEach {
                     xcbuildExecutable.argumentsReturnValue = Arguments([""])
-                    system.taskNamedReturnValue = TaskProtocolMock()
+                    system.executableWithReturnValue = try? FileProtocolMock()
                     
+                    terminal.runProcessClosure = { process in
+                        return ["mocked process response success"]
+                    }
                     expect { try sut?.buildAndTest(using: xcbuildExecutable) }.toNot(throwError())
                 }
                 
                 it("call terminal") {
-                    expect(terminal.runExecutableCalled) == true
+                    expect(terminal.runProcessCalled) == true
                 }
                
             }
             
             context("get possible destinations") {
                 
+                let expected = "{mocked destination}"
+                
                 beforeEach {
                     xcbuildExecutable.argumentsReturnValue = Arguments([""])
-                    system.taskNamedReturnValue = TaskProtocolMock()
+                    system.executableWithReturnValue = try? FileProtocolMock()
                     
+                    terminal.runProcessClosure = { process in
+                        return [expected]
+                    }
                 }
                 
                 it("returns detinations") {
-                    expect { try sut?.buildAndTest(using: xcbuildExecutable) }.toNot(throwError())
+                    expect { try sut?.findPosibleDestinations(for: "bla", in: try FolderProtocolMock()) } == [expected]
 
                 }
                 

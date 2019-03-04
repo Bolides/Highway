@@ -22,10 +22,10 @@ public protocol XCBuildDestinationsProtocol: AutoMockable
 
 public struct XCBuildDestinations: XCBuildDestinationsProtocol, AutoGenerateProtocol
 {
-    let platform: Destination.Platform
-    let id: String
-    let name: String
-    let os: Destination.OS
+    public let platform: Destination.Platform
+    public let id: String
+    public let name: String
+    public let os: Destination.OS
 
     init(destinationString: String) throws
     {

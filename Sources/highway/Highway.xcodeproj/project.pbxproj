@@ -289,7 +289,6 @@
 		OBJ_955 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_970 /* DestinationFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_164 /* DestinationFactoryTests.swift */; };
 		OBJ_971 /* XCBuild_System_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_165 /* XCBuild_System_Tests.swift */; };
-		OBJ_973 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Keychain::Product" /* Keychain.framework */; };
 		OBJ_977 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
 		OBJ_980 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		OBJ_981 /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; };
@@ -1295,7 +1294,6 @@
 		FDB7A94021CD6A780045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDB7A94321CD6A780045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDB7A94621CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
-		FDB7A94921CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDB7A94C21CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDB7A94F21CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDB7A95221CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
@@ -1828,7 +1826,6 @@
 				FDE20737222D76F600E44616 /* Nimble.framework in Frameworks */,
 				FDE20735222D76F000E44616 /* Quick.framework in Frameworks */,
 				FD34F71B2228603A001D8EB1 /* ArgumentsMock.framework in Frameworks */,
-				OBJ_973 /* Keychain.framework in Frameworks */,
 				OBJ_977 /* XCBuild.framework in Frameworks */,
 				OBJ_980 /* POSIX.framework in Frameworks */,
 				OBJ_981 /* Git.framework in Frameworks */,
@@ -1986,14 +1983,6 @@
 				FDB7A94621CD6A790045DDA8 /* AutoMockable.generated.swift */,
 			);
 			path = Deliver;
-			sourceTree = "<group>";
-		};
-		FDB7A94721CD6A790045DDA8 /* Keychain */ = {
-			isa = PBXGroup;
-			children = (
-				FDB7A94921CD6A790045DDA8 /* AutoMockable.generated.swift */,
-			);
-			path = Keychain;
 			sourceTree = "<group>";
 		};
 		FDB7A94A21CD6A790045DDA8 /* Terminal */ = {
@@ -2154,7 +2143,6 @@
 				FDB7A94421CD6A790045DDA8 /* Deliver */,
 				FDB7A95321CD6A790045DDA8 /* Errors */,
 				FDB7A95621CD6A790045DDA8 /* Git */,
-				FDB7A94721CD6A790045DDA8 /* Keychain */,
 				FDB7A94D21CD6A790045DDA8 /* POSIX */,
 				FDB7A95921CD6A790045DDA8 /* Result */,
 				FDB7A93B21CD6A780045DDA8 /* SignPost */,

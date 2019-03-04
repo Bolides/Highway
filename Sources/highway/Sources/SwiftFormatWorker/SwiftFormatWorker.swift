@@ -52,11 +52,17 @@ public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
         self.folderToFormatRecursive = folderToFormatRecursive
     }
 
-    public convenience init(folderToFormatRecursive: FolderProtocol, bundle: BundleProtocol = Bundle.main, highwayCommandLineArguments: HighwayCommandLineOption.Values = HighwayCommandLineOption.Values()) throws
+    public convenience init(
+        folderToFormatRecursive: FolderProtocol,
+        bundle: BundleProtocol = Bundle.main,
+        highwayCommandLineArguments: HighwayCommandLineOption.Values = HighwayCommandLineOption.Values(),
+        queue: DispatchQueue = SwiftFormatWorker.queue,
+        signPost: SignPostProtocol = SignPost.shared
+    ) throws
     {
         let configFile = try bundle.fileforResource(with: ".swiftformat", of: "md")
 
-        try self.init(folderToFormatRecursive: folderToFormatRecursive, configFile: configFile)
+        try self.init(folderToFormatRecursive: folderToFormatRecursive, configFile: configFile, queue: queue, signPost: signPost)
     }
 
     public func attempt(_ asyncSwiftFormatAttemptOutput: @escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void)
