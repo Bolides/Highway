@@ -63,9 +63,9 @@ func encode(to encoder: Encoder) throws
 // sourcery:end
 // Generated protocol inline for MinimalTestOptions -> See code in the file of that type
 // sourcery:inline:MinimalTestOptions.AutoGenerateProtocol
+var description: String { get }
 
 func arguments() throws -> Arguments
-func executableFile() throws -> FileProtocol
 // sourcery:end
 // Generated protocol inline for TestOptions -> See code in the file of that type
 // sourcery:inline:TestOptions.AutoGenerateProtocol
@@ -91,7 +91,7 @@ func failedTests() -> String
 func findPosibleDestinations(for scheme: String, in workspace: FolderProtocol) throws -> [String]
 func archive(using options: ArchiveOptionsProtocol) throws -> ArchiveProtocol
 func export(using options: ExportArchiveOptionsProtocol) throws -> ExportProtocol
-func buildAndTest(using options: ArgumentExecutableProtocol) throws -> TestReportProtocol
+func buildAndTest(using options: MinimalTestOptionsProtocol) throws -> TestReportProtocol
 // sourcery:end
 // Generated protocol inline for XCBuildDestinations -> See code in the file of that type
 // sourcery:inline:XCBuildDestinations.AutoGenerateProtocol

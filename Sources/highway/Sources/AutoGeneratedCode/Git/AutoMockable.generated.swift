@@ -16,211 +16,197 @@ open class GitToolProtocolMock: GitToolProtocol
 
     // MARK: - <addAll> - parameters
 
-    public var addAllAtThrowableError: Error?
-    public var addAllAtCallsCount = 0
-    public var addAllAtCalled: Bool
+    public var addAllThrowableError: Error?
+    public var addAllCallsCount = 0
+    public var addAllCalled: Bool
     {
-        return addAllAtCallsCount > 0
+        return addAllCallsCount > 0
     }
-
-    public var addAllAtReceivedUrl: FolderProtocol?
 
     // MARK: - <addAll> - closure mocks
 
-    public var addAllAtClosure: ((FolderProtocol) throws -> Void)?
+    public var addAllClosure: (() throws -> Void)?
 
     // MARK: - <addAll> - method mocked
 
-    open func addAll(at url: FolderProtocol) throws
+    open func addAll() throws
     {
         // <addAll> - Throwable method implementation
 
-        if let error = addAllAtThrowableError
+        if let error = addAllThrowableError
         {
             throw error
         }
 
-        addAllAtCallsCount += 1
-        addAllAtReceivedUrl = url
+        addAllCallsCount += 1
 
         // <addAll> - Void return mock implementation
 
-        try addAllAtClosure?(url)
+        try addAllClosure?()
     }
 
     // MARK: - <commit> - parameters
 
-    public var commitAtMessageThrowableError: Error?
-    public var commitAtMessageCallsCount = 0
-    public var commitAtMessageCalled: Bool
+    public var commitMessageThrowableError: Error?
+    public var commitMessageCallsCount = 0
+    public var commitMessageCalled: Bool
     {
-        return commitAtMessageCallsCount > 0
+        return commitMessageCallsCount > 0
     }
 
-    public var commitAtMessageReceivedArguments: (url: FolderProtocol, message: String)?
+    public var commitMessageReceivedMessage: String?
 
     // MARK: - <commit> - closure mocks
 
-    public var commitAtMessageClosure: ((FolderProtocol, String) throws -> Void)?
+    public var commitMessageClosure: ((String) throws -> Void)?
 
     // MARK: - <commit> - method mocked
 
-    open func commit(at url: FolderProtocol, message: String) throws
+    open func commit(message: String) throws
     {
         // <commit> - Throwable method implementation
 
-        if let error = commitAtMessageThrowableError
+        if let error = commitMessageThrowableError
         {
             throw error
         }
 
-        commitAtMessageCallsCount += 1
-        commitAtMessageReceivedArguments = (url: url, message: message)
+        commitMessageCallsCount += 1
+        commitMessageReceivedMessage = message
 
         // <commit> - Void return mock implementation
 
-        try commitAtMessageClosure?(url, message)
+        try commitMessageClosure?(message)
     }
 
     // MARK: - <pushToMaster> - parameters
 
-    public var pushToMasterAtThrowableError: Error?
-    public var pushToMasterAtCallsCount = 0
-    public var pushToMasterAtCalled: Bool
+    public var pushToMasterThrowableError: Error?
+    public var pushToMasterCallsCount = 0
+    public var pushToMasterCalled: Bool
     {
-        return pushToMasterAtCallsCount > 0
+        return pushToMasterCallsCount > 0
     }
-
-    public var pushToMasterAtReceivedUrl: FolderProtocol?
 
     // MARK: - <pushToMaster> - closure mocks
 
-    public var pushToMasterAtClosure: ((FolderProtocol) throws -> Void)?
+    public var pushToMasterClosure: (() throws -> Void)?
 
     // MARK: - <pushToMaster> - method mocked
 
-    open func pushToMaster(at url: FolderProtocol) throws
+    open func pushToMaster() throws
     {
         // <pushToMaster> - Throwable method implementation
 
-        if let error = pushToMasterAtThrowableError
+        if let error = pushToMasterThrowableError
         {
             throw error
         }
 
-        pushToMasterAtCallsCount += 1
-        pushToMasterAtReceivedUrl = url
+        pushToMasterCallsCount += 1
 
         // <pushToMaster> - Void return mock implementation
 
-        try pushToMasterAtClosure?(url)
+        try pushToMasterClosure?()
     }
 
     // MARK: - <pushTagsToMaster> - parameters
 
-    public var pushTagsToMasterAtThrowableError: Error?
-    public var pushTagsToMasterAtCallsCount = 0
-    public var pushTagsToMasterAtCalled: Bool
+    public var pushTagsToMasterThrowableError: Error?
+    public var pushTagsToMasterCallsCount = 0
+    public var pushTagsToMasterCalled: Bool
     {
-        return pushTagsToMasterAtCallsCount > 0
+        return pushTagsToMasterCallsCount > 0
     }
-
-    public var pushTagsToMasterAtReceivedUrl: FolderProtocol?
 
     // MARK: - <pushTagsToMaster> - closure mocks
 
-    public var pushTagsToMasterAtClosure: ((FolderProtocol) throws -> Void)?
+    public var pushTagsToMasterClosure: (() throws -> Void)?
 
     // MARK: - <pushTagsToMaster> - method mocked
 
-    open func pushTagsToMaster(at url: FolderProtocol) throws
+    open func pushTagsToMaster() throws
     {
         // <pushTagsToMaster> - Throwable method implementation
 
-        if let error = pushTagsToMasterAtThrowableError
+        if let error = pushTagsToMasterThrowableError
         {
             throw error
         }
 
-        pushTagsToMasterAtCallsCount += 1
-        pushTagsToMasterAtReceivedUrl = url
+        pushTagsToMasterCallsCount += 1
 
         // <pushTagsToMaster> - Void return mock implementation
 
-        try pushTagsToMasterAtClosure?(url)
+        try pushTagsToMasterClosure?()
     }
 
     // MARK: - <pull> - parameters
 
-    public var pullAtThrowableError: Error?
-    public var pullAtCallsCount = 0
-    public var pullAtCalled: Bool
+    public var pullThrowableError: Error?
+    public var pullCallsCount = 0
+    public var pullCalled: Bool
     {
-        return pullAtCallsCount > 0
+        return pullCallsCount > 0
     }
-
-    public var pullAtReceivedUrl: FolderProtocol?
 
     // MARK: - <pull> - closure mocks
 
-    public var pullAtClosure: ((FolderProtocol) throws -> Void)?
+    public var pullClosure: (() throws -> Void)?
 
     // MARK: - <pull> - method mocked
 
-    open func pull(at url: FolderProtocol) throws
+    open func pull() throws
     {
         // <pull> - Throwable method implementation
 
-        if let error = pullAtThrowableError
+        if let error = pullThrowableError
         {
             throw error
         }
 
-        pullAtCallsCount += 1
-        pullAtReceivedUrl = url
+        pullCallsCount += 1
 
         // <pull> - Void return mock implementation
 
-        try pullAtClosure?(url)
+        try pullClosure?()
     }
 
     // MARK: - <currentTag> - parameters
 
-    public var currentTagAtThrowableError: Error?
-    public var currentTagAtCallsCount = 0
-    public var currentTagAtCalled: Bool
+    public var currentTagThrowableError: Error?
+    public var currentTagCallsCount = 0
+    public var currentTagCalled: Bool
     {
-        return currentTagAtCallsCount > 0
+        return currentTagCallsCount > 0
     }
 
-    public var currentTagAtReceivedUrl: FolderProtocol?
-    public var currentTagAtReturnValue: [String]?
+    public var currentTagReturnValue: [String]?
 
     // MARK: - <currentTag> - closure mocks
 
-    public var currentTagAtClosure: ((FolderProtocol) throws -> [String])?
+    public var currentTagClosure: (() throws -> [String])?
 
     // MARK: - <currentTag> - method mocked
 
-    open func currentTag(at url: FolderProtocol) throws -> [String]
+    open func currentTag() throws -> [String]
     {
         // <currentTag> - Throwable method implementation
 
-        if let error = currentTagAtThrowableError
+        if let error = currentTagThrowableError
         {
             throw error
         }
 
-        currentTagAtCallsCount += 1
-        currentTagAtReceivedUrl = url
+        currentTagCallsCount += 1
 
         // <currentTag> - Return Value mock implementation
 
-        guard let closureReturn = currentTagAtClosure else
+        guard let closureReturn = currentTagClosure else
         {
-            guard let returnValue = currentTagAtReturnValue else
+            guard let returnValue = currentTagReturnValue else
             {
-                let message = "No returnValue implemented for currentTagAtClosure"
+                let message = "No returnValue implemented for currentTagClosure"
                 let error = SourceryMockError.implementErrorCaseFor(message)
 
                 // You should implement [String]
@@ -230,7 +216,7 @@ open class GitToolProtocolMock: GitToolProtocol
             return returnValue
         }
 
-        return try closureReturn(url)
+        return try closureReturn()
     }
 
     // MARK: - <clone> - parameters

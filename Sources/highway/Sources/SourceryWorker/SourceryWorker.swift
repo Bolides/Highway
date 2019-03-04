@@ -20,10 +20,11 @@ public protocol SourceryWorkerProtocol
     typealias SyncOutput = () throws -> [String]
 
     /// sourcery:inline:SourceryWorker.AutoGenerateProtocol
+    static var queue: DispatchQueue { get }
     var sourcery: SourceryProtocol { get }
 
     func executor() throws -> ArgumentExecutableProtocol
-    func attempt(_ async: @escaping (@escaping SourceryWorkerProtocol.SyncOutput) -> Void)
+    func attempt(_ asyncSourceryWorkerOutput: @escaping (@escaping SourceryWorkerProtocol.SyncOutput) -> Void)
     /// sourcery:end
 }
 
@@ -50,8 +51,8 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
 
     private let mockableInline = "/// sourcery:inline:"
     private let mockableEnd = "/// sourcery:end"
-    private let protocolGeneratableInline = "// sourcery:inline:"
-    private let protocolGeneratalbeEnd = "// sourcery:end"
+    private let protocolGeneratableInline = "/// sourcery:inline:"
+    private let protocolGeneratalbeEnd = "/// sourcery:end"
 
     public init(
         sourcery: SourceryProtocol,

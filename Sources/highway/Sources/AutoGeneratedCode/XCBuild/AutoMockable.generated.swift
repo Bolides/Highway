@@ -331,6 +331,14 @@ open class MinimalTestOptionsProtocolMock: MinimalTestOptionsProtocol
 {
     public init() {}
 
+    public var description: String
+    {
+        get { return underlyingDescription }
+        set(value) { underlyingDescription = value }
+    }
+
+    public var underlyingDescription: String = "AutoMockable filled value"
+
     // MARK: - <arguments> - parameters
 
     public var argumentsThrowableError: Error?
@@ -369,53 +377,6 @@ open class MinimalTestOptionsProtocolMock: MinimalTestOptionsProtocol
                 let error = SourceryMockError.implementErrorCaseFor(message)
 
                 // You should implement Arguments
-
-                throw error
-            }
-            return returnValue
-        }
-
-        return try closureReturn()
-    }
-
-    // MARK: - <executableFile> - parameters
-
-    public var executableFileThrowableError: Error?
-    public var executableFileCallsCount = 0
-    public var executableFileCalled: Bool
-    {
-        return executableFileCallsCount > 0
-    }
-
-    public var executableFileReturnValue: FileProtocol?
-
-    // MARK: - <executableFile> - closure mocks
-
-    public var executableFileClosure: (() throws -> FileProtocol)?
-
-    // MARK: - <executableFile> - method mocked
-
-    open func executableFile() throws -> FileProtocol
-    {
-        // <executableFile> - Throwable method implementation
-
-        if let error = executableFileThrowableError
-        {
-            throw error
-        }
-
-        executableFileCallsCount += 1
-
-        // <executableFile> - Return Value mock implementation
-
-        guard let closureReturn = executableFileClosure else
-        {
-            guard let returnValue = executableFileReturnValue else
-            {
-                let message = "No returnValue implemented for executableFileClosure"
-                let error = SourceryMockError.implementErrorCaseFor(message)
-
-                // You should implement FileProtocol
 
                 throw error
             }
@@ -681,16 +642,16 @@ open class XCBuildProtocolMock: XCBuildProtocol
         return buildAndTestUsingCallsCount > 0
     }
 
-    public var buildAndTestUsingReceivedOptions: ArgumentExecutableProtocol?
+    public var buildAndTestUsingReceivedOptions: MinimalTestOptionsProtocol?
     public var buildAndTestUsingReturnValue: TestReportProtocol?
 
     // MARK: - <buildAndTest> - closure mocks
 
-    public var buildAndTestUsingClosure: ((ArgumentExecutableProtocol) throws -> TestReportProtocol)?
+    public var buildAndTestUsingClosure: ((MinimalTestOptionsProtocol) throws -> TestReportProtocol)?
 
     // MARK: - <buildAndTest> - method mocked
 
-    open func buildAndTest(using options: ArgumentExecutableProtocol) throws -> TestReportProtocol
+    open func buildAndTest(using options: MinimalTestOptionsProtocol) throws -> TestReportProtocol
     {
         // <buildAndTest> - Throwable method implementation
 

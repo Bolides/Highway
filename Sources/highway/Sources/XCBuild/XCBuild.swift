@@ -65,7 +65,7 @@ public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol
             task.arguments = args
 
             signPost.verbose("\(self) \(#function) started \(task)")
-           
+
             let output = try terminalWorker.runProcess(task.toProcess)
             signPost.verbose("destions found \(output)")
             return output

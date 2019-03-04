@@ -16,13 +16,6 @@ open class PathEnvironmentParserProtocolMock: PathEnvironmentParserProtocol
 {
     public init() {}
 
-    public static var shared: PathEnvironmentParserProtocol
-    {
-        get { return underlyingShared }
-        set(value) { underlyingShared = value }
-    }
-
-    public static var underlyingShared: PathEnvironmentParserProtocol!
     public var urls: [FolderProtocol] = []
 }
 
@@ -131,8 +124,6 @@ open class TaskProtocolMock: TaskProtocol
     }
 
     public var underlyingArguments: Arguments!
-    public var environment: [String: String] = [:]
-    public var currentDirectoryUrl: FolderProtocol?
     public var input: Channel
     {
         get { return underlyingInput }
@@ -147,24 +138,10 @@ open class TaskProtocolMock: TaskProtocol
     }
 
     public var underlyingOutput: Channel!
-    public var state: State
-    {
-        get { return underlyingState }
-        set(value) { underlyingState = value }
-    }
-
-    public var underlyingState: State!
     public var capturedOutputData: Data?
     public var readOutputString: String?
     public var trimmedOutput: String?
     public var capturedOutputString: String?
-    public var successfullyFinished: Bool
-    {
-        get { return underlyingSuccessfullyFinished }
-        set(value) { underlyingSuccessfullyFinished = value }
-    }
-
-    public var underlyingSuccessfullyFinished: Bool = false
     public var toProcess: Process
     {
         get { return underlyingToProcess }
@@ -201,40 +178,6 @@ open class TaskProtocolMock: TaskProtocol
         // <enableReadableOutputDataCapturing> - Void return mock implementation
 
         enableReadableOutputDataCapturingClosure?()
-    }
-
-    // MARK: - <throwIfNotSuccess> - parameters
-
-    public var throwIfNotSuccessThrowableError: Error?
-    public var throwIfNotSuccessCallsCount = 0
-    public var throwIfNotSuccessCalled: Bool
-    {
-        return throwIfNotSuccessCallsCount > 0
-    }
-
-    public var throwIfNotSuccessReceivedError: Swift.Error?
-
-    // MARK: - <throwIfNotSuccess> - closure mocks
-
-    public var throwIfNotSuccessClosure: ((Swift.Error) throws -> Void)?
-
-    // MARK: - <throwIfNotSuccess> - method mocked
-
-    open func throwIfNotSuccess(_ error: Swift.Error) throws
-    {
-        // <throwIfNotSuccess> - Throwable method implementation
-
-        if let error = throwIfNotSuccessThrowableError
-        {
-            throw error
-        }
-
-        throwIfNotSuccessCallsCount += 1
-        throwIfNotSuccessReceivedError = error
-
-        // <throwIfNotSuccess> - Void return mock implementation
-
-        try throwIfNotSuccessClosure?(error)
     }
 }
 

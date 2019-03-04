@@ -27,21 +27,16 @@ func executable(with executableName: String) throws -> FileProtocol
 var name: String { get }
 var executable: FileProtocol { get set }
 var arguments: Arguments { get set }
-var environment: [String: String] { get set }
-var currentDirectoryUrl: FolderProtocol? { get set }
 var input: Channel { get set }
 var output: Channel { get set }
-var state: State { get set }
 var capturedOutputData: Data? { get }
 var readOutputString: String? { get }
 var trimmedOutput: String? { get }
 var capturedOutputString: String? { get }
-var successfullyFinished: Bool { get }
 var toProcess: Process { get }
 var description: String { get }
 
 func enableReadableOutputDataCapturing()
-func throwIfNotSuccess(_ error: Swift.Error) throws
 // sourcery:end
 // Generated protocol inline for  -> See code in the file of that type
 

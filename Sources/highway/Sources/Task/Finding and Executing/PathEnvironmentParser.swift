@@ -1,10 +1,10 @@
 import Errors
 import Foundation
 import POSIX
+import SignPost
 import SourceryAutoProtocols
 import Url
 import ZFile
-import SignPost
 
 public protocol PathEnvironmentParserProtocol: AutoMockable
 {
@@ -31,19 +31,21 @@ public struct PathEnvironmentParser: PathEnvironmentParserProtocol
         signPost: SignPostProtocol = SignPost.shared
     )
     {
-        do {
+        do
+        {
             signPost.verbose("\(PathEnvironmentParser.self) \(#function)")
             guard let path = processInfoEnvironment["PATH"] else { throw "\(PathEnvironmentParser.self) \(#function) \(HighwayError.processInfoMissingPath(processInfo: processInfoEnvironment))" }
-            
+
             let paths: [String] = path.components(separatedBy: ":")
-            
+
             signPost.verbose("\(PathEnvironmentParser.self) \(#function) found path \(path)")
-            
+
             urls = try paths.compactMap { try Folder(path: $0) }
-        } catch {
+        }
+        catch
+        {
             signPost.error("⚠️ \(PathEnvironmentParser.self) \(#function) no PATH found, initializing without urls to search for commands")
             urls = [FolderProtocol]()
         }
-        
     }
 }

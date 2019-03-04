@@ -16,6 +16,7 @@ import ZFile
 public protocol MinimalTestOptionsProtocol
 {
     /// sourcery:inline:MinimalTestOptions.AutoGenerateProtocol
+    var description: String { get }
 
     func arguments() throws -> Arguments
     /// sourcery:end
@@ -69,11 +70,11 @@ public struct MinimalTestOptions: MinimalTestOptionsProtocol, AutoGenerateProtoc
 
         return args
     }
-    
+
     // MARK: - CustomStringConvertible
-    
-    public var description: String {
-        
+
+    public var description: String
+    {
         return """
         
         \(MinimalTestOptions.self)
@@ -84,6 +85,4 @@ public struct MinimalTestOptions: MinimalTestOptionsProtocol, AutoGenerateProtoc
         
         """
     }
-    
-
 }

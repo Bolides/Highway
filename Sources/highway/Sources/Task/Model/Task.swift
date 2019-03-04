@@ -1,8 +1,8 @@
 import Arguments
 import Foundation
+import SignPost
 import SourceryAutoProtocols
 import ZFile
-import SignPost
 
 public protocol TaskProtocol: AutoMockable
 {
@@ -16,28 +16,27 @@ public protocol TaskProtocol: AutoMockable
     var readOutputString: String? { get }
     var trimmedOutput: String? { get }
     var capturedOutputString: String? { get }
-    var description: String { get }
     var toProcess: Process { get }
-    
+    var description: String { get }
+
     func enableReadableOutputDataCapturing()
-    
+
     /// sourcery:end
 }
 
 public class Task: TaskProtocol, AutoGenerateProtocol
 {
-    
     // MARK: - Properties
-    
+
     public var name: String { return executable.name }
     public var executable: FileProtocol
     public var arguments: Arguments
-    
-    
+
     // MARK: - Private
-    
+
     private let signPost: SignPostProtocol
     private let fileSystem: FileSystemProtocol
+
     // MARK: - Init
 
     public convenience init(commandName: String, arguments: Arguments = Arguments([]), fileSystem: FileSystemProtocol = FileSystem.shared, provider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared, signPost: SignPostProtocol = SignPost.shared) throws
@@ -104,7 +103,7 @@ public class Task: TaskProtocol, AutoGenerateProtocol
         result.currentDirectoryPath = fileSystem.currentFolder.path
 
         result.environment = ProcessInfo.processInfo.environment
-        
+
         return result
     }
 
