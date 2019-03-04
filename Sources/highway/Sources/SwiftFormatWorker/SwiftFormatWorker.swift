@@ -54,7 +54,6 @@ public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
 
     public convenience init(folderToFormatRecursive: FolderProtocol, bundle: BundleProtocol = Bundle.main, highwayCommandLineArguments: HighwayCommandLineOption.Values = HighwayCommandLineOption.Values()) throws
     {
-
         let configFile = try bundle.fileforResource(with: ".swiftformat", of: "md")
 
         try self.init(folderToFormatRecursive: folderToFormatRecursive, configFile: configFile)
@@ -74,7 +73,8 @@ public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
             self.signPost.verbose("👨🏻‍🏫  SwiftFormat \(self.folderToFormatRecursive.name) \n with settings \n \(String(describing: formatSettings))\n ...\n")
 
             CLI.print = { message, type in
-                switch type {
+                switch type
+                {
                 case .success:
                     self.signPost.verbose("👨🏻‍🏫 SwiftFormat \(self.folderToFormatRecursive.name) \n\(message)\n ✅")
                 case .info, .content:
@@ -89,7 +89,8 @@ public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
             let arguments = ["", self.folderToFormatRecursive.path, "--config", self.configFile.path]
             let output = CLI.run(in: self.folderToFormatRecursive.path, with: arguments)
 
-            switch output {
+            switch output
+            {
             case .ok:
                 asyncSwiftFormatAttemptOutput {}
             case .lintFailure, .error:

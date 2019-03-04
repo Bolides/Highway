@@ -20,7 +20,8 @@ public enum SignPostCommandLineOptions: String, CaseIterable
 
     public var isVerbose: Bool
     {
-        switch self {
+        switch self
+        {
         case .verbose, .__verbose, ._verbose:
             return true
         }
@@ -28,7 +29,8 @@ public enum SignPostCommandLineOptions: String, CaseIterable
 
     public var signleOption: SingleOption
     {
-        switch self {
+        switch self
+        {
         case .verbose, .__verbose, ._verbose:
             return .verbose
         }

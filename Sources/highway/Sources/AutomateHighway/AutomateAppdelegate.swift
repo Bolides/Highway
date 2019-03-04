@@ -59,7 +59,8 @@ class AutomateAppdelegate: NSObject, NSApplicationDelegate
 
         argumentsWorker.workers.forEach
         { command in
-            switch command {
+            switch command
+            {
             // 4. execute the task as if button was pressed
             case .sourcery:
                 sourceryWorker?.attempt

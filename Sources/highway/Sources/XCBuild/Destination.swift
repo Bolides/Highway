@@ -43,7 +43,8 @@ extension Destination
         case latest
         var name: String
         {
-            switch self {
+            switch self
+            {
             case let .iOS(version):
                 return version
             case let .tvOS(version):
@@ -67,7 +68,7 @@ extension Destination
     {
         case iOS = "iOS Simulator"
         case tvOS = "tvOS Simulator"
-        
+
         public var name: String { return rawValue }
     }
 

@@ -1,23 +1,24 @@
 import Arguments
 import SourceryAutoProtocols
 import Task
+import Terminal
 import Url
 import ZFile
-import Terminal
 
 public struct GitTool: AutoGenerateProtocol
 {
     // MARK: - Properties
-    
+
     private let systemExecutableProvider: SystemExecutableProviderProtocol
     private let terminal: TerminalWorkerProtocol
-    
+
     // MARK: - Init
 
     public init(
         systemExecutableProvider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared,
         terminal: TerminalWorkerProtocol = TerminalWorker.shared
-    ) {
+    )
+    {
         self.systemExecutableProvider = systemExecutableProvider
         self.terminal = terminal
     }
@@ -35,7 +36,6 @@ public struct GitTool: AutoGenerateProtocol
 
 extension GitTool: GitToolProtocol
 {
-    
     public func addAll(at url: FolderProtocol) throws
     {
         _ = try terminal.runProcess(try _git(with: ["add", "."], at: url).toProcess)
@@ -65,16 +65,15 @@ extension GitTool: GitToolProtocol
     {
         let task = try _git(with: ["describe", "--tags"], at: url)
         task.enableReadableOutputDataCapturing()
-        
-        return  try terminal.runProcess(task.toProcess)
+
+        return try terminal.runProcess(task.toProcess)
     }
 
     public func clone(with options: CloneOptions) throws -> [String]
     {
         let input: [String] = ["clone"] + (options.performMirror ? ["--mirror"] : []) + [options.remoteUrl, options.localPath.path]
         let arguments = Arguments(input)
-        
+
         return try terminal.runProcess(try _git(with: arguments, at: try Folder(path: "/")).toProcess)
     }
-    
 }

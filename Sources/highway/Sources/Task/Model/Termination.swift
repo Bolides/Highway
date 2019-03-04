@@ -53,7 +53,8 @@ extension Process.TerminationReason: CustomStringConvertible
 {
     public var description: String
     {
-        switch self {
+        switch self
+        {
         case .exit: return "Exited normally."
         case .uncaughtSignal: return "Exited due to an uncaught signal."
         }

@@ -1,9 +1,9 @@
 import Arguments
 import Foundation
 import Task
+import Terminal
 import Url
 import ZFile
-import Terminal
 
 public final class GitAutotag
 {
@@ -34,7 +34,7 @@ public final class GitAutotag
         task.arguments = arguments
         task.currentDirectoryUrl = url
         task.enableReadableOutputDataCapturing()
-        
+
         return try terminal.runProcess(task.toProcess)
     }
 }

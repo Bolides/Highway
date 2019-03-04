@@ -10,7 +10,8 @@ public enum HighwayCommandLineOption: String, CaseIterable
 
     public var isSrcRoot: Bool
     {
-        switch self {
+        switch self
+        {
         case .__srcRoot, ._srcRoot, .srcRoot, .srcroot, ._srcroot:
             return true
         }
@@ -18,7 +19,8 @@ public enum HighwayCommandLineOption: String, CaseIterable
 
     public var singleOption: HighwayCommandLineOption.SingleOption
     {
-        switch self {
+        switch self
+        {
         case .__srcRoot, ._srcRoot, .srcRoot, .srcroot, ._srcroot:
             return SingleOption.srcroot
         }

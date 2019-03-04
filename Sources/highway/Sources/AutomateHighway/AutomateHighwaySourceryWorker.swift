@@ -154,7 +154,6 @@ public class AutomateHighwaySourceryWorker: AutomateHighwaySourceryWorkerProtoco
     {
         case Arguments
         case Git
-        case Keychain
         case SignPost
         case SourceryWorker
         case Terminal
@@ -174,7 +173,8 @@ public class AutomateHighwaySourceryWorker: AutomateHighwaySourceryWorkerProtoco
             importNames.insert(TemplatePrepend.Import(name: VendorFramework.ZFileMock.rawValue))
 
             // If not the default, add a case and insert imports into importNames
-            switch self {
+            switch self
+            {
             case .Task:
                 importNames.insert(TemplatePrepend.Import(name: Target.Arguments.rawValue))
                 importNames.insert(TemplatePrepend.Import(name: Target.SignPost.rawValue))

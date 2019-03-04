@@ -6,11 +6,11 @@
 //
 
 import Arguments
+import Errors
 import Foundation
 import SignPost
 import Task
 import ZFile
-import Errors
 
 public struct PodExecutable: ArgumentExecutableProtocol
 {
@@ -35,7 +35,8 @@ public struct PodExecutable: ArgumentExecutableProtocol
     {
         var podfile: FileProtocol!
 
-        do {
+        do
+        {
             do
             {
                 let homeFolder = FileSystem.shared.homeFolder
@@ -45,14 +46,16 @@ public struct PodExecutable: ArgumentExecutableProtocol
             catch
             {
                 signPost.message("Pod not found, looking in all folders from PATH")
-                
-                signPost.verbose("PATH \n \( system.pathEnvironmentParser.urls.map {$0.path }.joined(separator: "\n") ) \n")
-                
+
+                signPost.verbose("PATH \n \(system.pathEnvironmentParser.urls.map { $0.path }.joined(separator: "\n")) \n")
+
                 podfile = try system.executable(with: "pod")
             }
-            
+
             signPost.message("found pod at \(String(describing: podfile))")
-        } catch {
+        }
+        catch
+        {
             throw "\(self) \(#function) \(error)"
         }
 

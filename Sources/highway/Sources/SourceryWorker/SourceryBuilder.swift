@@ -19,7 +19,7 @@ public protocol SourceryBuilderProtocol: AutoMockable
     static var buildPath: String { get }
     static var executalbeName: String { get }
 
-    func attemptToBuildSourceryIfNeeded() throws  -> FileProtocol
+    func attemptToBuildSourceryIfNeeded() throws -> FileProtocol
     /// sourcery:end
 }
 
@@ -65,30 +65,31 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
         {
             signPost.verbose("Sourcery not build yet because of invalid path.\n Building sourcery from source with `swift build -c release`")
 
-            do {
-                let swiftBuildTask = Task(executable: try systemExecutableProvider.executable(with:  "swift"))
-                
+            do
+            {
+                let swiftBuildTask = Task(executable: try systemExecutableProvider.executable(with: "swift"))
+
                 swiftBuildTask.arguments = Arguments(["build", "-c", "release"])
-                
+
                 signPost.verbose("cd \(disk.carthage.sourcery)")
                 FileManager.default.changeCurrentDirectoryPath(disk.carthage.sourcery.path)
-                
+
                 signPost.message("🚀 Start building sourcery (😅 this can take some time ☕️) ...")
-                
-                
+
                 let output = try terminalWorker.runProcess(swiftBuildTask.toProcess)
                 signPost.verbose("\(output.joined(separator: "\n"))")
-                
+
                 signPost.message("🚀 finished sourcery swift build ✅")
-                
+
                 signPost.verbose("cd \(disk.srcRoot)")
                 FileManager.default.changeCurrentDirectoryPath(disk.srcRoot.path)
-                
+
                 return try findSourceryExecutableFile()
-            } catch {
+            }
+            catch
+            {
                 throw "\(self) \(#function) \n\(error)\n"
             }
-            
         }
     }
 

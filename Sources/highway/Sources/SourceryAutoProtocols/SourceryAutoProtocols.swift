@@ -31,7 +31,8 @@ public enum SourceryMockError: Swift.Error, Hashable
 
     public var debugDescription: String
     {
-        switch self {
+        switch self
+        {
         case let .implementErrorCaseFor(message):
             return """
             🧙‍♂️ SourceryMockError.implementErrorCaseFor:

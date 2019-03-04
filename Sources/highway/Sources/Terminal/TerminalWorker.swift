@@ -140,7 +140,8 @@ public struct TerminalWorker: TerminalWorkerProtocol
 
         public var debugDescription: String
         {
-            switch self {
+            switch self
+            {
             case let .errorUnkownExitCode(code: code, task: task, output: output):
                 return """
                 Terminal exit code error \(code) after \(task)

@@ -94,7 +94,7 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
                 for folder in self.sourcery.sourcesFolders
                 {
                     self.signPost.message("🧙‍♂️ in folder \(folder.name)")
-                    
+
                     let fileSequence = folder.makeFileSequence(recursive: true, includeHidden: false)
 
                     try self.replace(

@@ -44,10 +44,6 @@
 		FD34F6A822282C51001D8EB1 /* ArgumentsMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A98321CD6B5D0045DDA8 /* ArgumentsMock.framework */; };
 		FD34F6AB22282CAF001D8EB1 /* SignPostMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9C721CD6F7F0045DDA8 /* SignPostMock.framework */; };
 		FD34F6AC22282E4B001D8EB1 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
-		FD34F6B7222839E6001D8EB1 /* CLISpinner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F6B52228394B001D8EB1 /* CLISpinner.framework */; };
-		FD34F6B8222839E6001D8EB1 /* CLISpinner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F6B52228394B001D8EB1 /* CLISpinner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FD34F6BA22283A18001D8EB1 /* Rainbow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F6B922283A18001D8EB1 /* Rainbow.framework */; };
-		FD34F6BB22283A18001D8EB1 /* Rainbow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD34F6B922283A18001D8EB1 /* Rainbow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD34F71622284258001D8EB1 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
 		FD34F71822285A81001D8EB1 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		FD34F71B2228603A001D8EB1 /* ArgumentsMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A98321CD6B5D0045DDA8 /* ArgumentsMock.framework */; };
@@ -96,7 +92,6 @@
 		FDC0937B22268C2F00B054BA /* SignPostCommandLineOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC0937A22268C2F00B054BA /* SignPostCommandLineOptions.swift */; };
 		FDC093A02226924600B054BA /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		FDC093A12226924600B054BA /* Arguments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDC093A42226924600B054BA /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Keychain::Product" /* Keychain.framework */; };
 		FDC093A52226924600B054BA /* Keychain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Keychain::Product" /* Keychain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDC093A82226924600B054BA /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
 		FDC093A92226924600B054BA /* Terminal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -144,6 +139,9 @@
 		FDC156FA21C535A400E04B44 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
 		FDD572682228701C0016657D /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
 		FDD5726B222870510016657D /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
+		FDE20735222D76F000E44616 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE20734222D76F000E44616 /* Quick.framework */; };
+		FDE20737222D76F600E44616 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE20736222D76F600E44616 /* Nimble.framework */; };
+		FDE2073A222D771600E44616 /* TaskMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9FC21CD7E8C0045DDA8 /* TaskMock.framework */; };
 		FDEC11E721C679DF00CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */; };
 		FDEC11E821C679E200CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */; };
 		FDEC11F421C67ED700CB7DAD /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11F221C67EAD00CB7DAD /* Worker.swift */; };
@@ -1081,13 +1079,6 @@
 			remoteGlobalIDString = "highway::Arguments";
 			remoteInfo = Arguments;
 		};
-		FDC093A62226924600B054BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Keychain";
-			remoteInfo = Keychain;
-		};
 		FDC093AA2226924600B054BA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1193,6 +1184,13 @@
 			remoteGlobalIDString = FD1126CB21C77F050072607D;
 			remoteInfo = SignPost;
 		};
+		FDE20738222D771000E44616 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDB7A9FB21CD7E8C0045DDA8;
+			remoteInfo = TaskMock;
+		};
 		FDFCEFCB221B1A6B001AC549 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1232,8 +1230,6 @@
 				FDC093A52226924600B054BA /* Keychain.framework in Embed Frameworks */,
 				FDC093AD2226924600B054BA /* POSIX.framework in Embed Frameworks */,
 				FDC093E12226924700B054BA /* SwiftFormat.framework in Embed Frameworks */,
-				FD34F6B8222839E6001D8EB1 /* CLISpinner.framework in Embed Frameworks */,
-				FD34F6BB22283A18001D8EB1 /* Rainbow.framework in Embed Frameworks */,
 				FDC093CD2226924700B054BA /* SourceryWorker.framework in Embed Frameworks */,
 				FDC093B92226924600B054BA /* SourceryAutoProtocols.framework in Embed Frameworks */,
 				FDC093BD2226924600B054BA /* Git.framework in Embed Frameworks */,
@@ -1269,8 +1265,6 @@
 		FD34F42E21BEE9EB0052222C /* GitExecutables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitExecutables.swift; sourceTree = "<group>"; };
 		FD34F69F22282BB5001D8EB1 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD34F6A122282BBB001D8EB1 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD34F6B52228394B001D8EB1 /* CLISpinner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CLISpinner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD34F6B922283A18001D8EB1 /* Rainbow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Rainbow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3E94CE21C8117B00EA791C /* TemplatePrepend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatePrepend.swift; sourceTree = "<group>"; };
 		FD3F8A1121DDE43A00BBDA58 /* SwiftFormatWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftFormatWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3F8A1321DDE43A00BBDA58 /* SwiftFormatWorker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftFormatWorker.h; sourceTree = "<group>"; };
@@ -1346,6 +1340,8 @@
 		FDC156F321C5355400E04B44 /* SourceryWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceryWorker.swift; sourceTree = "<group>"; };
 		FDC156F421C5355400E04B44 /* Sourcery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sourcery.swift; sourceTree = "<group>"; };
 		FDC1571421C5485900E04B44 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		FDE20734222D76F000E44616 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDE20736222D76F600E44616 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDE9B6F721C58ED400D1F50A /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryAutoProtocols.swift; sourceTree = "<group>"; };
 		FDEC11EB21C67ACE00CB7DAD /* SignPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignPost.swift; sourceTree = "<group>"; };
@@ -1562,11 +1558,8 @@
 				FDC093B02226924600B054BA /* XCBuild.framework in Frameworks */,
 				FDC093A82226924600B054BA /* Terminal.framework in Frameworks */,
 				FDC093C42226924600B054BA /* Task.framework in Frameworks */,
-				FDC093A42226924600B054BA /* Keychain.framework in Frameworks */,
 				FDC093AC2226924600B054BA /* POSIX.framework in Frameworks */,
 				FDC093E02226924700B054BA /* SwiftFormat.framework in Frameworks */,
-				FD34F6B7222839E6001D8EB1 /* CLISpinner.framework in Frameworks */,
-				FD34F6BA22283A18001D8EB1 /* Rainbow.framework in Frameworks */,
 				FDC093CC2226924700B054BA /* SourceryWorker.framework in Frameworks */,
 				FDC093B82226924600B054BA /* SourceryAutoProtocols.framework in Frameworks */,
 				FDC093BC2226924600B054BA /* Git.framework in Frameworks */,
@@ -1829,17 +1822,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				OBJ_989 /* SourceryAutoProtocols.framework in Frameworks */,
+				OBJ_982 /* Task.framework in Frameworks */,
+				FDE2073A222D771600E44616 /* TaskMock.framework in Frameworks */,
+				FDE20737222D76F600E44616 /* Nimble.framework in Frameworks */,
+				FDE20735222D76F000E44616 /* Quick.framework in Frameworks */,
 				FD34F71B2228603A001D8EB1 /* ArgumentsMock.framework in Frameworks */,
 				OBJ_973 /* Keychain.framework in Frameworks */,
 				OBJ_977 /* XCBuild.framework in Frameworks */,
 				OBJ_980 /* POSIX.framework in Frameworks */,
 				OBJ_981 /* Git.framework in Frameworks */,
-				OBJ_982 /* Task.framework in Frameworks */,
 				OBJ_985 /* Terminal.framework in Frameworks */,
 				OBJ_986 /* Url.framework in Frameworks */,
 				OBJ_987 /* Arguments.framework in Frameworks */,
 				OBJ_988 /* Errors.framework in Frameworks */,
-				OBJ_989 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1890,7 +1886,8 @@
 		FD326D9E210A0F5F00AE3A98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FD34F6B52228394B001D8EB1 /* CLISpinner.framework */,
+				FDE20736222D76F600E44616 /* Nimble.framework */,
+				FDE20734222D76F000E44616 /* Quick.framework */,
 				FD34F6A122282BBB001D8EB1 /* Nimble.framework */,
 				FD34F69F22282BB5001D8EB1 /* Quick.framework */,
 				FDFCEFFD221B2062001AC549 /* Nimble.framework */,
@@ -2403,7 +2400,6 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_7 /* Sources */,
-				FD34F6B922283A18001D8EB1 /* Rainbow.framework */,
 				FDECFC44221B4B9900EA1E33 /* Cartfile */,
 				FDECFC43221B4B8700EA1E33 /* Cartfile.private */,
 				FDC1571421C5485900E04B44 /* README.md */,
@@ -2431,7 +2427,6 @@
 				FDEC11E021C679B600CB7DAD /* AutoGeneratedCode */,
 				OBJ_95 /* Errors */,
 				OBJ_48 /* Git */,
-				OBJ_97 /* Keychain */,
 				OBJ_149 /* POSIX */,
 				FD1126CD21C77F050072607D /* SignPost */,
 				FDE0B76421D7BF960093CBCB /* SourceryAutoProtocols */,
@@ -2489,13 +2484,6 @@
 				FDC093ED2226AAEB00B054BA /* HighwayError.swift */,
 			);
 			path = Errors;
-			sourceTree = "<group>";
-		};
-		OBJ_97 /* Keychain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Keychain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2789,7 +2777,6 @@
 			);
 			dependencies = (
 				FDC093A32226924600B054BA /* PBXTargetDependency */,
-				FDC093A72226924600B054BA /* PBXTargetDependency */,
 				FDC093AB2226924600B054BA /* PBXTargetDependency */,
 				FDC093AF2226924600B054BA /* PBXTargetDependency */,
 				FDC093B32226924600B054BA /* PBXTargetDependency */,
@@ -3233,6 +3220,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FDE20739222D771000E44616 /* PBXTargetDependency */,
 				FD34F71A22285F1A001D8EB1 /* PBXTargetDependency */,
 				OBJ_990 /* PBXTargetDependency */,
 				OBJ_994 /* PBXTargetDependency */,
@@ -4046,11 +4034,6 @@
 			target = "highway::Arguments" /* Arguments */;
 			targetProxy = FDC093A22226924600B054BA /* PBXContainerItemProxy */;
 		};
-		FDC093A72226924600B054BA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Keychain" /* Keychain */;
-			targetProxy = FDC093A62226924600B054BA /* PBXContainerItemProxy */;
-		};
 		FDC093AB2226924600B054BA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::Terminal" /* Terminal */;
@@ -4125,6 +4108,11 @@
 			isa = PBXTargetDependency;
 			target = FD1126CB21C77F050072607D /* SignPost */;
 			targetProxy = FDD572692228702D0016657D /* PBXContainerItemProxy */;
+		};
+		FDE20739222D771000E44616 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDB7A9FB21CD7E8C0045DDA8 /* TaskMock */;
+			targetProxy = FDE20738222D771000E44616 /* PBXContainerItemProxy */;
 		};
 		FDFCEFCC221B1A6B001AC549 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

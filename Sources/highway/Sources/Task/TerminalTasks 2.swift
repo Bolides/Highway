@@ -22,7 +22,8 @@ public enum TerminalTask: RawRepresentable, Equatable, AutoCases
 
     var executable: ArgumentExecutableProtocol
     {
-        switch self {
+        switch self
+        {
         case let .xcodebuild(exec):
             return exec
         case let .git(exec):
@@ -40,7 +41,8 @@ public enum TerminalTask: RawRepresentable, Equatable, AutoCases
 
     public static func == (lhs: TerminalTask, rhs: TerminalTask) -> Bool
     {
-        switch (lhs, rhs) {
+        switch (lhs, rhs)
+        {
         case (.xcodebuild, .xcodebuild):
             return true
         case (.git, .git):
@@ -58,7 +60,8 @@ public enum TerminalTask: RawRepresentable, Equatable, AutoCases
 
     public var rawValue: String
     {
-        switch self {
+        switch self
+        {
         case .xcodebuild:
             return "xcodebuild"
         case .sourcery:
@@ -74,7 +77,8 @@ public enum TerminalTask: RawRepresentable, Equatable, AutoCases
 
     public init?(rawValue: String)
     {
-        switch rawValue {
+        switch rawValue
+        {
         default:
             os_log("not possible %@", type: .error, rawValue)
             return nil
