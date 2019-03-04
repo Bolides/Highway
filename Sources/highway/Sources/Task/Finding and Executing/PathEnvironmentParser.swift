@@ -4,11 +4,11 @@ import POSIX
 import SourceryAutoProtocols
 import Url
 import ZFile
+import SignPost
 
 public protocol PathEnvironmentParserProtocol: AutoMockable
 {
     /// sourcery:inline:PathEnvironmentParser.AutoGenerateProtocol
-    static var shared: PathEnvironmentParserProtocol { get }
     var urls: [FolderProtocol] { get }
     /// sourcery:end
 }
@@ -21,20 +21,29 @@ public protocol PathEnvironmentParserProtocol: AutoMockable
 /// standardizes the path).
 public struct PathEnvironmentParser: PathEnvironmentParserProtocol
 {
-    public static let shared: PathEnvironmentParserProtocol = try! PathEnvironmentParser()
-
+    public static let shared: PathEnvironmentParser = PathEnvironmentParser()
     public var urls: [FolderProtocol]
 
     // MARK: - Init
 
     public init(
-        processInfoEnvironment: [String: String] = ProcessInfo.processInfo.environment
-    ) throws
+        processInfoEnvironment: [String: String] = ProcessInfo.processInfo.environment,
+        signPost: SignPostProtocol = SignPost.shared
+    )
     {
-        guard let path = processInfoEnvironment["PATH"] else { throw "\(PathEnvironmentParser.self) \(#function) \(HighwayError.processInfoMissingPath(processInfo: processInfoEnvironment))" }
-
-        let paths: [String] = path.components(separatedBy: ":")
-
-        urls = try paths.compactMap { try Folder(path: $0) }
+        do {
+            signPost.verbose("\(PathEnvironmentParser.self) \(#function)")
+            guard let path = processInfoEnvironment["PATH"] else { throw "\(PathEnvironmentParser.self) \(#function) \(HighwayError.processInfoMissingPath(processInfo: processInfoEnvironment))" }
+            
+            let paths: [String] = path.components(separatedBy: ":")
+            
+            signPost.verbose("\(PathEnvironmentParser.self) \(#function) found path \(path)")
+            
+            urls = try paths.compactMap { try Folder(path: $0) }
+        } catch {
+            signPost.error("⚠️ \(PathEnvironmentParser.self) \(#function) no PATH found, initializing without urls to search for commands")
+            urls = [FolderProtocol]()
+        }
+        
     }
 }
