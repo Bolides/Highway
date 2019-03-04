@@ -32,7 +32,6 @@ public final class GitAutotag
         let executable = try systemExecutableProvider.executable(with: "git-autotag")
         let task = Task(executable: executable)
         task.arguments = arguments
-        task.currentDirectoryUrl = url
         task.enableReadableOutputDataCapturing()
 
         return try terminal.runProcess(task.toProcess)

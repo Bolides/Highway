@@ -16,7 +16,7 @@ public protocol XCBuildProtocol: AutoMockable
     func findPosibleDestinations(for scheme: String, in workspace: FolderProtocol) throws -> [String]
     func archive(using options: ArchiveOptionsProtocol) throws -> ArchiveProtocol
     func export(using options: ExportArchiveOptionsProtocol) throws -> ExportProtocol
-    func buildAndTest(using options: ArgumentExecutableProtocol) throws -> TestReportProtocol
+    func buildAndTest(using options: MinimalTestOptionsProtocol) throws -> TestReportProtocol
     /// sourcery:end
 }
 
@@ -65,6 +65,7 @@ public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol
             task.arguments = args
 
             signPost.verbose("\(self) \(#function) started \(task)")
+           
             let output = try terminalWorker.runProcess(task.toProcess)
             signPost.verbose("destions found \(output)")
             return output
@@ -118,7 +119,7 @@ public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol
     }
 
     @discardableResult
-    public func buildAndTest(using options: ArgumentExecutableProtocol) throws -> TestReportProtocol
+    public func buildAndTest(using options: MinimalTestOptionsProtocol) throws -> TestReportProtocol
     {
         let xcbuild = try _buildTestTask(using: options)
 
@@ -134,7 +135,7 @@ public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol
         }
     }
 
-    private func _buildTestTask(using options: ArgumentExecutableProtocol) throws -> Task
+    private func _buildTestTask(using options: MinimalTestOptionsProtocol) throws -> Task
     {
         let result = try _xcodebuild()
         result.arguments += try options.arguments()

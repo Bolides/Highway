@@ -13,16 +13,15 @@ import Terminal
 import ZFile
 
 // sourcery:AutoMockable
-public protocol MinimalTestOptionsProtocol: ArgumentExecutableProtocol
+public protocol MinimalTestOptionsProtocol
 {
     /// sourcery:inline:MinimalTestOptions.AutoGenerateProtocol
 
     func arguments() throws -> Arguments
-    func executableFile() throws -> FileProtocol
     /// sourcery:end
 }
 
-public struct MinimalTestOptions: MinimalTestOptionsProtocol, AutoGenerateProtocol
+public struct MinimalTestOptions: MinimalTestOptionsProtocol, AutoGenerateProtocol, CustomStringConvertible
 {
     private let scheme: String
     private let workspace: FolderProtocol
@@ -31,7 +30,7 @@ public struct MinimalTestOptions: MinimalTestOptionsProtocol, AutoGenerateProtoc
     private let signPost: SignPostProtocol
 
     // xcodebuild test -workspace ios/ReactNativeConfig.xcworkspace -scheme RNConfiguration-macOS
-    // You can create a destionation with the destination factory
+    // You can create a destination with the destination factory
     public init(
         scheme: String,
         workspace: FolderProtocol,
@@ -70,14 +69,21 @@ public struct MinimalTestOptions: MinimalTestOptionsProtocol, AutoGenerateProtoc
 
         return args
     }
-
-    enum Error: Swift.Error
-    {
-        case implement
+    
+    // MARK: - CustomStringConvertible
+    
+    public var description: String {
+        
+        return """
+        
+        \(MinimalTestOptions.self)
+        
+        * scheme: \(scheme)
+        * workSpace: \(workspace.name)
+        * optional destination: \(String(describing: destination))
+        
+        """
     }
+    
 
-    public func executableFile() throws -> FileProtocol
-    {
-        throw Error.implement
-    }
 }
