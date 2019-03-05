@@ -182,7 +182,7 @@ let package = Package(
         ),
         .target(
             name: "Highway",
-            dependencies: ["CarthageWorker", "Terminal", "XCBuild", "SourceryWorker", "Git", "XCBuild", "POSIX", "Url", "Arguments", "Url", "Errors", "SignPost", "SwiftFormatWorker"],
+            dependencies: ["CarthageWorker", "Terminal", "XCBuild", "SourceryWorker", "Git", "XCBuild", "POSIX", "Url", "Arguments", "Url", "Errors", "SignPost", "SwiftFormatWorker", "SwiftFormat"],
             path: "Sources/highway/Sources/Highway"
         ),
     ]

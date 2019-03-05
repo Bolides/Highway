@@ -17,6 +17,7 @@ import Arguments
 import Url
 import Errors
 import SignPost
+import SwiftFormatWorker
 
 // TODO: Usable functions should come here
 
