@@ -13,3 +13,7 @@ github "antitypical/Result" ~> 4.0
 
 github "doozMen/template-sourcery"
 github "doozMen/Sourcery"
+
+# Dependency Management
+
+github "doozMen/Carthage"
