@@ -49,6 +49,9 @@ let package = Package(
         .library(
             name: "SwiftFormatWorkerMock",
             targets: ["SwiftFormatWorkerMock"]),
+        .library(
+            name: "CarthageWorker",
+            targets: ["CarthageWorker"]),
 
     ],
     dependencies: [
@@ -59,7 +62,7 @@ let package = Package(
         .package(url: "https://www.github.com/antitypical/Result", from: "4.0.0"),
         .package(url: "https://www.github.com/Quick/Quick", from: "2.0.0"),
         .package(url: "https://www.github.com/Quick/Nimble", from: "8.0.0"),
-        .package(url: "https://github.com/nicklockwood/SwiftFormat", from: "0.39.4"),
+        .package(url: "https://github.com/nicklockwood/SwiftFormat", from: "0.39.4")
         ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -163,6 +166,16 @@ let package = Package(
             name: "SwiftFormatWorkerTests",
             dependencies: ["SwiftFormatWorker", "SwiftFormatWorkerMock", "Quick", "Nimble"],
             path: "Sources/highway/Tests/SwiftFormatWorkerTests"
+        ),
+        .target(
+                name: "CarthageWorker",
+                dependencies: [],
+                path: "Sources/highway/Sources/CarthageWorker"
+        ),
+        .testTarget(
+            name: "CartageWorkerTests",
+            dependencies: ["CarthageWorker", "Quick", "Nimble"],
+            path: "Sources/highway/Tests/CarthageWorkerTests"
         )
     ]
 )
