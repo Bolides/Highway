@@ -1,8 +1,7 @@
 import Nimble
 import Quick
 
-import Task
-import TaskMock
+import Terminal
 import XCBuild
 import TerminalMock
 import Arguments
@@ -21,7 +20,7 @@ class XCBuildSpec: QuickSpec {
         
             var terminal: TerminalWorkerProtocolMock!
             var xcbuildExecutable: MinimalTestOptionsProtocolMock!
-            var system: SystemExecutableProviderProtocolMock!
+            var system: SystemExecutableProviderProtocol!
             
             beforeEach {
                 xcbuildExecutable = MinimalTestOptionsProtocolMock()

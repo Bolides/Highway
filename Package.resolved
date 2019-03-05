@@ -38,6 +38,15 @@
         }
       },
       {
+        "package": "SwiftFormat",
+        "repositoryURL": "https://github.com/nicklockwood/SwiftFormat",
+        "state": {
+          "branch": null,
+          "revision": "ccb33374ef60c174d7f1855a4a3fbe4036ec0d76",
+          "version": "0.39.4"
+        }
+      },
+      {
         "package": "template-sourcery",
         "repositoryURL": "https://www.github.com/doozMen/template-sourcery",
         "state": {

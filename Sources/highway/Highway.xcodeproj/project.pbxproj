@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FD11267F21C6924C0072607D /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
 		FD1126C121C771970072607D /* ArgumentsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1126C021C771970072607D /* ArgumentsWorker.swift */; };
 		FD1126C621C7756A0072607D /* SourceryExecutableFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1126C521C7756A0072607D /* SourceryExecutableFile.swift */; };
 		FD1126DC21C77F060072607D /* SignPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1126DB21C77F060072607D /* SignPostTests.swift */; };
@@ -34,7 +33,6 @@
 		FD3F8A6C21DDE73B00BBDA58 /* SwiftFormatWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3F8A6B21DDE73B00BBDA58 /* SwiftFormatWorker.swift */; };
 		FD3F8A7C21DDE80200BBDA58 /* SwiftFormatWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A1121DDE43A00BBDA58 /* SwiftFormatWorker.framework */; };
 		FD3F8A8821DDE94100BBDA58 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3F8A6621DDE6B100BBDA58 /* AutoMockable.generated.swift */; };
-		FD3F8DC521DE5A3F00BBDA58 /* SwiftFormatWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A1121DDE43A00BBDA58 /* SwiftFormatWorker.framework */; };
 		FD5363FC222817580033D4C6 /* SourceryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5363FB222817580033D4C6 /* SourceryBuilder.swift */; };
 		FD5363FE222817B50033D4C6 /* SourceryBuilderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5363FD222817B50033D4C6 /* SourceryBuilderSpec.swift */; };
 		FD536400222818750033D4C6 /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5363FF222818750033D4C6 /* Disk.swift */; };
@@ -62,7 +60,6 @@
 		FDAB8386222D8E5C00A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
 		FDAB8387222D8E6200A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
 		FDAB8388222D8E6200A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
-		FDAC932A210B595100B0D045 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		FDB74B4D22294586000B068C /* XCBuildDestinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB74B4C22294586000B068C /* XCBuildDestinations.swift */; };
 		FDB7A8AD21CD58600045DDA8 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
 		FDB7A98721CD6B5D0045DDA8 /* ArgumentsMock.h in Headers */ = {isa = PBXBuildFile; fileRef = FDB7A98521CD6B5D0045DDA8 /* ArgumentsMock.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -72,11 +69,7 @@
 		FDB7A9E621CD736C0045DDA8 /* TerminalMock.h in Headers */ = {isa = PBXBuildFile; fileRef = FDB7A9E421CD736C0045DDA8 /* TerminalMock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FDB7A9EC21CD73B30045DDA8 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A94C21CD6A790045DDA8 /* AutoMockable.generated.swift */; };
 		FDB7A9EF21CD744D0045DDA8 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
-		FDB7A9F221CD74B00045DDA8 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
 		FDB7A9F521CD74D40045DDA8 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
-		FDB7AA0021CD7E8C0045DDA8 /* TaskMock.h in Headers */ = {isa = PBXBuildFile; fileRef = FDB7A9FE21CD7E8C0045DDA8 /* TaskMock.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FDB7AA0621CD7EF50045DDA8 /* TaskMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9FC21CD7E8C0045DDA8 /* TaskMock.framework */; };
-		FDB7AA0721CD7F080045DDA8 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A94021CD6A780045DDA8 /* AutoMockable.generated.swift */; };
 		FDB7AA1121CD81DC0045DDA8 /* SourceryWorkerMock.h in Headers */ = {isa = PBXBuildFile; fileRef = FDB7AA0F21CD81DC0045DDA8 /* SourceryWorkerMock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FDB7AA1721CD81FD0045DDA8 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
 		FDB7AA1821CD82640045DDA8 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A94321CD6A780045DDA8 /* AutoMockable.generated.swift */; };
@@ -93,8 +86,6 @@
 		FDC093B52226924600B054BA /* Errors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDC093BC2226924600B054BA /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; };
 		FDC093BD2226924600B054BA /* Git.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDC093C42226924600B054BA /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
-		FDC093C52226924600B054BA /* Task.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDC093C82226924600B054BA /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
 		FDC093C92226924600B054BA /* Url.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDC093CC2226924700B054BA /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
@@ -124,7 +115,6 @@
 		FDC156F721C5355400E04B44 /* Sourcery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC156F421C5355400E04B44 /* Sourcery.swift */; };
 		FDC156FA21C535A400E04B44 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
 		FDD5726B222870510016657D /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
-		FDE2073A222D771600E44616 /* TaskMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9FC21CD7E8C0045DDA8 /* TaskMock.framework */; };
 		FDE207B8222D885A00E44616 /* CupertinoJWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFE3221B1EA7001AC549 /* CupertinoJWT.framework */; };
 		FDE207B9222D885A00E44616 /* CupertinoJWT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFE3221B1EA7001AC549 /* CupertinoJWT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDE263FE222EF68400F8C2AC /* SystemExecutableProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_136 /* SystemExecutableProvider.swift */; };
@@ -172,17 +162,11 @@
 		FDFCEFD4221B1D90001AC549 /* FoundationGenericHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFD3221B1D90001AC549 /* FoundationGenericHelper.framework */; };
 		FDFCEFDB221B1E43001AC549 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFDA221B1E43001AC549 /* ZFile.framework */; };
 		FDFCEFDF221B1E53001AC549 /* FoundationGenericHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFDE221B1E53001AC549 /* FoundationGenericHelper.framework */; };
-		FDFCEFE2221B1E97001AC549 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFE0221B1E82001AC549 /* Result.framework */; };
-		FDFCEFF7221B1FD9001AC549 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
-		FDFCEFF9221B2044001AC549 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF8221B2044001AC549 /* ZFileMock.framework */; };
-		FDFCEFFA221B2044001AC549 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFDA221B1E43001AC549 /* ZFile.framework */; };
 		FDFCF003221B2137001AC549 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFDA221B1E43001AC549 /* ZFile.framework */; };
 		FDFCF004221B2137001AC549 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF8221B2044001AC549 /* ZFileMock.framework */; };
 		FDFCF005221B2141001AC549 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFDA221B1E43001AC549 /* ZFile.framework */; };
 		FDFCF006221B214E001AC549 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFDA221B1E43001AC549 /* ZFile.framework */; };
 		FDFCF007221B214E001AC549 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF8221B2044001AC549 /* ZFileMock.framework */; };
-		FDFCF00C221B221E001AC549 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFDA221B1E43001AC549 /* ZFile.framework */; };
-		FDFCF00D221B2227001AC549 /* FoundationGenericHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCF00A221B21D4001AC549 /* FoundationGenericHelper.framework */; };
 		OBJ_269 /* Arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* Arguments.swift */; };
 		OBJ_270 /* HighwayCommandLineOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* HighwayCommandLineOption.swift */; };
 		OBJ_272 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
@@ -192,7 +176,6 @@
 		OBJ_334 /* String+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_96 /* String+Error.swift */; };
 		OBJ_342 /* Git.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* Git.swift */; };
 		OBJ_343 /* GitAutotag.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* GitAutotag.swift */; };
-		OBJ_346 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
 		OBJ_349 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
 		OBJ_350 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
 		OBJ_351 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
@@ -203,7 +186,6 @@
 		OBJ_374 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
 		OBJ_377 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		OBJ_378 /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; };
-		OBJ_379 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
 		OBJ_382 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
 		OBJ_383 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
 		OBJ_384 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
@@ -217,19 +199,14 @@
 		OBJ_663 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
 		OBJ_666 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		OBJ_667 /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; };
-		OBJ_668 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
 		OBJ_670 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
 		OBJ_671 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
 		OBJ_672 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		OBJ_673 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
-		OBJ_752 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
-		OBJ_754 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
-		OBJ_756 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
 		OBJ_775 /* TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_157 /* TaskTests.swift */; };
 		OBJ_780 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
 		OBJ_783 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		OBJ_784 /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; };
-		OBJ_785 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
 		OBJ_786 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		OBJ_788 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
 		OBJ_790 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
@@ -238,7 +215,6 @@
 		OBJ_839 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
 		OBJ_842 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		OBJ_843 /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; };
-		OBJ_844 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
 		OBJ_847 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
 		OBJ_848 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		OBJ_849 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
@@ -267,7 +243,6 @@
 		OBJ_977 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
 		OBJ_980 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		OBJ_981 /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; };
-		OBJ_982 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
 		OBJ_985 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
 		OBJ_986 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
 		OBJ_987 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
@@ -275,20 +250,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FD0F7C702188859900F84604 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::POSIX";
-			remoteInfo = POSIX;
-		};
-		FD326C782109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Arguments";
-			remoteInfo = Arguments;
-		};
 		FD326C792109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -296,33 +257,12 @@
 			remoteGlobalIDString = "highway::Errors";
 			remoteInfo = Errors;
 		};
-		FD326C7E2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Errors";
-			remoteInfo = Errors;
-		};
-		FD326C812109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Url";
-			remoteInfo = Url;
-		};
 		FD326C8C2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "highway::Url";
 			remoteInfo = Url;
-		};
-		FD326C922109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Task";
-			remoteInfo = Task;
 		};
 		FD326C952109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -351,13 +291,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = "highway::Errors";
 			remoteInfo = Errors;
-		};
-		FD326CAA2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Task";
-			remoteInfo = Task;
 		};
 		FD326CAB2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -429,13 +362,6 @@
 			remoteGlobalIDString = "highway::Git";
 			remoteInfo = Git;
 		};
-		FD326D102109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Task";
-			remoteInfo = Task;
-		};
 		FD326D132109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -499,13 +425,6 @@
 			remoteGlobalIDString = "highway::Git";
 			remoteInfo = Git;
 		};
-		FD326D242109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Task";
-			remoteInfo = Task;
-		};
 		FD326D272109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -554,13 +473,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = "highway::Git";
 			remoteInfo = Git;
-		};
-		FD326D342109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Task";
-			remoteInfo = Task;
 		};
 		FD326D362109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -611,13 +523,6 @@
 			remoteGlobalIDString = "highway::Git";
 			remoteInfo = Git;
 		};
-		FD326D592109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Task";
-			remoteInfo = Task;
-		};
 		FD326D5A2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -666,13 +571,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = "highway::Git";
 			remoteInfo = Git;
-		};
-		FD326D692109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Task";
-			remoteInfo = Task;
 		};
 		FD326D6C2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -786,26 +684,12 @@
 			remoteGlobalIDString = "highway::Terminal";
 			remoteInfo = Terminal;
 		};
-		FDB7A9F021CD74AC0045DDA8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Task";
-			remoteInfo = Task;
-		};
 		FDB7A9F321CD74CD0045DDA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "highway::Arguments";
 			remoteInfo = Arguments;
-		};
-		FDB7AA0421CD7EEE0045DDA8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FDB7A9FB21CD7E8C0045DDA8;
-			remoteInfo = TaskMock;
 		};
 		FDB7AA1521CD81F00045DDA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -863,13 +747,6 @@
 			remoteGlobalIDString = "highway::Git";
 			remoteInfo = Git;
 		};
-		FDC093C62226924600B054BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Task";
-			remoteInfo = Task;
-		};
 		FDC093CA2226924600B054BA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -904,20 +781,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = "highway::Terminal";
 			remoteInfo = Terminal;
-		};
-		FDC156FB21C5363C00E04B44 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Task";
-			remoteInfo = Task;
-		};
-		FDE20738222D771000E44616 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FDB7A9FB21CD7E8C0045DDA8;
-			remoteInfo = TaskMock;
 		};
 		FDEE79E7222EBE1600D6481F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -968,13 +831,6 @@
 			remoteGlobalIDString = FD3F8A7121DDE7E700BBDA58;
 			remoteInfo = SwiftFormatWorkerMock;
 		};
-		FDFCEFF5221B1FD4001AC549 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Task";
-			remoteInfo = Task;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -990,7 +846,6 @@
 				FDEE7A9A222ECB5C00D6481F /* PrettyColors.framework in Embed Frameworks */,
 				FDEE7A8E222ECB2600D6481F /* Tentacle.framework in Embed Frameworks */,
 				FDC093A92226924600B054BA /* Terminal.framework in Embed Frameworks */,
-				FDC093C52226924600B054BA /* Task.framework in Embed Frameworks */,
 				FDC093DD2226924700B054BA /* ZFile.framework in Embed Frameworks */,
 				FDEE7A78222EC94F00D6481F /* CarthageWorker.framework in Embed Frameworks */,
 				FDC093AD2226924600B054BA /* POSIX.framework in Embed Frameworks */,
@@ -1075,7 +930,6 @@
 		FDB7A9E221CD736C0045DDA8 /* TerminalMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TerminalMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB7A9E421CD736C0045DDA8 /* TerminalMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalMock.h; sourceTree = "<group>"; };
 		FDB7A9E521CD736C0045DDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDB7A9FC21CD7E8C0045DDA8 /* TaskMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TaskMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB7A9FE21CD7E8C0045DDA8 /* TaskMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskMock.h; sourceTree = "<group>"; };
 		FDB7A9FF21CD7E8C0045DDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDB7AA0D21CD81DC0045DDA8 /* SourceryWorkerMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SourceryWorkerMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1188,7 +1042,6 @@
 		"highway::POSIX::Product" /* POSIX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = POSIX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::POSIXTests::Product" /* POSIXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = POSIXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::ResultTests::Product" /* ResultTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ResultTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		"highway::Task::Product" /* Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::TaskTests::Product" /* TaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = TaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::Terminal::Product" /* Terminal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Terminal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::TerminalTests::Product" /* TerminalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = TerminalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1259,18 +1112,7 @@
 				FDFCF006221B214E001AC549 /* ZFile.framework in Frameworks */,
 				FDFCF007221B214E001AC549 /* ZFileMock.framework in Frameworks */,
 				FDB7A9F521CD74D40045DDA8 /* Arguments.framework in Frameworks */,
-				FDB7A9F221CD74B00045DDA8 /* Task.framework in Frameworks */,
 				FDB7A9EF21CD744D0045DDA8 /* Terminal.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FDB7A9F921CD7E8C0045DDA8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FDFCEFFA221B2044001AC549 /* ZFile.framework in Frameworks */,
-				FDFCEFF9221B2044001AC549 /* ZFileMock.framework in Frameworks */,
-				FDFCEFF7221B1FD9001AC549 /* Task.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1294,7 +1136,6 @@
 				FDEE7A99222ECB5C00D6481F /* PrettyColors.framework in Frameworks */,
 				FDEE7A8D222ECB2600D6481F /* Tentacle.framework in Frameworks */,
 				FDC093A82226924600B054BA /* Terminal.framework in Frameworks */,
-				FDC093C42226924600B054BA /* Task.framework in Frameworks */,
 				FDC093AC2226924600B054BA /* POSIX.framework in Frameworks */,
 				FDEE7A77222EC94F00D6481F /* CarthageWorker.framework in Frameworks */,
 				FDC093E02226924700B054BA /* SwiftFormat.framework in Frameworks */,
@@ -1319,7 +1160,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD3F8DC521DE5A3F00BBDA58 /* SwiftFormatWorker.framework in Frameworks */,
 				FDC156FA21C535A400E04B44 /* Terminal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1397,7 +1237,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_346 /* Task.framework in Frameworks */,
 				OBJ_349 /* Terminal.framework in Frameworks */,
 				OBJ_350 /* Url.framework in Frameworks */,
 				OBJ_351 /* Arguments.framework in Frameworks */,
@@ -1415,7 +1254,6 @@
 				FDAB8378222D8E2800A6A826 /* Nimble.framework in Frameworks */,
 				OBJ_377 /* POSIX.framework in Frameworks */,
 				OBJ_378 /* Git.framework in Frameworks */,
-				OBJ_379 /* Task.framework in Frameworks */,
 				OBJ_382 /* Terminal.framework in Frameworks */,
 				OBJ_383 /* Url.framework in Frameworks */,
 				OBJ_384 /* Arguments.framework in Frameworks */,
@@ -1449,7 +1287,6 @@
 				OBJ_663 /* XCBuild.framework in Frameworks */,
 				OBJ_666 /* POSIX.framework in Frameworks */,
 				OBJ_667 /* Git.framework in Frameworks */,
-				OBJ_668 /* Task.framework in Frameworks */,
 				FDAB837B222D8E3400A6A826 /* Quick.framework in Frameworks */,
 				FDAB837C222D8E3400A6A826 /* Nimble.framework in Frameworks */,
 				OBJ_670 /* Terminal.framework in Frameworks */,
@@ -1459,29 +1296,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_751 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				FDFCF00D221B2227001AC549 /* FoundationGenericHelper.framework in Frameworks */,
-				FDFCF00C221B221E001AC549 /* ZFile.framework in Frameworks */,
-				OBJ_752 /* Arguments.framework in Frameworks */,
-				FDFCEFE2221B1E97001AC549 /* Result.framework in Frameworks */,
-				FDAC932A210B595100B0D045 /* POSIX.framework in Frameworks */,
-				OBJ_754 /* Errors.framework in Frameworks */,
-				OBJ_756 /* Url.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		OBJ_776 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FDB7AA0621CD7EF50045DDA8 /* TaskMock.framework in Frameworks */,
 				OBJ_780 /* XCBuild.framework in Frameworks */,
 				OBJ_783 /* POSIX.framework in Frameworks */,
 				OBJ_784 /* Git.framework in Frameworks */,
-				OBJ_785 /* Task.framework in Frameworks */,
 				OBJ_786 /* Arguments.framework in Frameworks */,
 				OBJ_788 /* Errors.framework in Frameworks */,
 				OBJ_790 /* Url.framework in Frameworks */,
@@ -1495,7 +1316,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FD11267F21C6924C0072607D /* Task.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1506,7 +1326,6 @@
 				OBJ_839 /* XCBuild.framework in Frameworks */,
 				OBJ_842 /* POSIX.framework in Frameworks */,
 				OBJ_843 /* Git.framework in Frameworks */,
-				OBJ_844 /* Task.framework in Frameworks */,
 				OBJ_847 /* Url.framework in Frameworks */,
 				FDAB8383222D8E5500A6A826 /* Quick.framework in Frameworks */,
 				FDAB8384222D8E5500A6A826 /* Nimble.framework in Frameworks */,
@@ -1552,8 +1371,6 @@
 				FDEE79E6222EBDFE00D6481F /* XCBuildMock.framework in Frameworks */,
 				OBJ_987 /* Arguments.framework in Frameworks */,
 				FD34F71B2228603A001D8EB1 /* ArgumentsMock.framework in Frameworks */,
-				OBJ_982 /* Task.framework in Frameworks */,
-				FDE2073A222D771600E44616 /* TaskMock.framework in Frameworks */,
 				FDAB8387222D8E6200A6A826 /* Quick.framework in Frameworks */,
 				FDAB8388222D8E6200A6A826 /* Nimble.framework in Frameworks */,
 				OBJ_977 /* XCBuild.framework in Frameworks */,
@@ -2040,7 +1857,6 @@
 				"highway::Errors::Product" /* Errors.framework */,
 				"highway::Git::Product" /* Git.framework */,
 				"highway::TaskTests::Product" /* TaskTests.xctest */,
-				"highway::Task::Product" /* Task.framework */,
 				"highway::Url::Product" /* Url.framework */,
 				"highway::TerminalTests::Product" /* TerminalTests.xctest */,
 				"highway::UrlTests::Product" /* UrlTests.xctest */,
@@ -2049,7 +1865,6 @@
 				FD1126D421C77F050072607D /* SignPostTests.xctest */,
 				FDB7A98321CD6B5D0045DDA8 /* ArgumentsMock.framework */,
 				FDB7A9E221CD736C0045DDA8 /* TerminalMock.framework */,
-				FDB7A9FC21CD7E8C0045DDA8 /* TaskMock.framework */,
 				FDB7AA0D21CD81DC0045DDA8 /* SourceryWorkerMock.framework */,
 				FD3F8A1121DDE43A00BBDA58 /* SwiftFormatWorker.framework */,
 				FD3F8A1921DDE43A00BBDA58 /* SwiftFormatWorkerTests.xctest */,
@@ -2203,14 +2018,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FDB7A9F721CD7E8C0045DDA8 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FDB7AA0021CD7E8C0045DDA8 /* TaskMock.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FDB7AA0821CD81DC0045DDA8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2350,31 +2157,11 @@
 			);
 			dependencies = (
 				FDB7A9F421CD74CD0045DDA8 /* PBXTargetDependency */,
-				FDB7A9F121CD74AC0045DDA8 /* PBXTargetDependency */,
 				FDB7A9EE21CD74460045DDA8 /* PBXTargetDependency */,
 			);
 			name = TerminalMock;
 			productName = TerminalMock;
 			productReference = FDB7A9E221CD736C0045DDA8 /* TerminalMock.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		FDB7A9FB21CD7E8C0045DDA8 /* TaskMock */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FDB7AA0121CD7E8C0045DDA8 /* Build configuration list for PBXNativeTarget "TaskMock" */;
-			buildPhases = (
-				FDB7A9F721CD7E8C0045DDA8 /* Headers */,
-				FDB7A9F821CD7E8C0045DDA8 /* Sources */,
-				FDB7A9F921CD7E8C0045DDA8 /* Frameworks */,
-				FDB7A9FA21CD7E8C0045DDA8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FDFCEFF6221B1FD4001AC549 /* PBXTargetDependency */,
-			);
-			name = TaskMock;
-			productName = TaskMock;
-			productReference = FDB7A9FC21CD7E8C0045DDA8 /* TaskMock.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		FDB7AA0C21CD81DC0045DDA8 /* SourceryWorkerMock */ = {
@@ -2414,7 +2201,6 @@
 				FDC093B32226924600B054BA /* PBXTargetDependency */,
 				FDC093B72226924600B054BA /* PBXTargetDependency */,
 				FDC093BF2226924600B054BA /* PBXTargetDependency */,
-				FDC093C72226924600B054BA /* PBXTargetDependency */,
 				FDC093CB2226924600B054BA /* PBXTargetDependency */,
 				FDC093CF2226924700B054BA /* PBXTargetDependency */,
 				FDC093D72226924700B054BA /* PBXTargetDependency */,
@@ -2585,7 +2371,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_354 /* PBXTargetDependency */,
 				OBJ_357 /* PBXTargetDependency */,
 				OBJ_358 /* PBXTargetDependency */,
 				OBJ_359 /* PBXTargetDependency */,
@@ -2610,7 +2395,6 @@
 				OBJ_390 /* PBXTargetDependency */,
 				OBJ_393 /* PBXTargetDependency */,
 				OBJ_394 /* PBXTargetDependency */,
-				OBJ_395 /* PBXTargetDependency */,
 				OBJ_398 /* PBXTargetDependency */,
 				OBJ_399 /* PBXTargetDependency */,
 				OBJ_400 /* PBXTargetDependency */,
@@ -2669,7 +2453,6 @@
 				OBJ_679 /* PBXTargetDependency */,
 				OBJ_682 /* PBXTargetDependency */,
 				OBJ_683 /* PBXTargetDependency */,
-				OBJ_684 /* PBXTargetDependency */,
 				OBJ_686 /* PBXTargetDependency */,
 				OBJ_687 /* PBXTargetDependency */,
 				OBJ_688 /* PBXTargetDependency */,
@@ -2679,27 +2462,6 @@
 			productName = ResultTests;
 			productReference = "highway::ResultTests::Product" /* ResultTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		"highway::Task" /* Task */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_733 /* Build configuration list for PBXNativeTarget "Task" */;
-			buildPhases = (
-				FD74EB0021BED24600BF6E79 /* Search Path */,
-				OBJ_736 /* Sources */,
-				OBJ_751 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_759 /* PBXTargetDependency */,
-				FD0F7C712188859900F84604 /* PBXTargetDependency */,
-				OBJ_761 /* PBXTargetDependency */,
-				OBJ_763 /* PBXTargetDependency */,
-			);
-			name = Task;
-			productName = Task;
-			productReference = "highway::Task::Product" /* Task.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 		"highway::TaskTests" /* TaskTests */ = {
 			isa = PBXNativeTarget;
@@ -2711,11 +2473,9 @@
 			buildRules = (
 			);
 			dependencies = (
-				FDB7AA0521CD7EEE0045DDA8 /* PBXTargetDependency */,
 				OBJ_796 /* PBXTargetDependency */,
 				OBJ_799 /* PBXTargetDependency */,
 				OBJ_800 /* PBXTargetDependency */,
-				OBJ_801 /* PBXTargetDependency */,
 				OBJ_802 /* PBXTargetDependency */,
 				OBJ_804 /* PBXTargetDependency */,
 				OBJ_806 /* PBXTargetDependency */,
@@ -2736,7 +2496,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FDC156FC21C5363C00E04B44 /* PBXTargetDependency */,
 			);
 			name = Terminal;
 			productName = Terminal;
@@ -2757,7 +2516,6 @@
 				OBJ_855 /* PBXTargetDependency */,
 				OBJ_858 /* PBXTargetDependency */,
 				OBJ_859 /* PBXTargetDependency */,
-				OBJ_860 /* PBXTargetDependency */,
 				OBJ_863 /* PBXTargetDependency */,
 				OBJ_864 /* PBXTargetDependency */,
 				OBJ_865 /* PBXTargetDependency */,
@@ -2811,7 +2569,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_956 /* PBXTargetDependency */,
 				OBJ_957 /* PBXTargetDependency */,
 				OBJ_959 /* PBXTargetDependency */,
 				OBJ_960 /* PBXTargetDependency */,
@@ -2835,8 +2592,6 @@
 			dependencies = (
 				OBJ_1004 /* PBXTargetDependency */,
 				FD34F71A22285F1A001D8EB1 /* PBXTargetDependency */,
-				OBJ_999 /* PBXTargetDependency */,
-				FDE20739222D771000E44616 /* PBXTargetDependency */,
 				OBJ_994 /* PBXTargetDependency */,
 				FDEE79F3222EBF2000D6481F /* PBXTargetDependency */,
 				OBJ_997 /* PBXTargetDependency */,
@@ -2884,11 +2639,6 @@
 						ProvisioningStyle = Manual;
 					};
 					FDB7A9E121CD736C0045DDA8 = {
-						CreatedOnToolsVersion = 10.1;
-						DevelopmentTeam = WWFDRU947Q;
-						ProvisioningStyle = Automatic;
-					};
-					FDB7A9FB21CD7E8C0045DDA8 = {
 						CreatedOnToolsVersion = 10.1;
 						DevelopmentTeam = WWFDRU947Q;
 						ProvisioningStyle = Automatic;
@@ -2966,11 +2716,6 @@
 						LastSwiftMigration = 1010;
 						ProvisioningStyle = Manual;
 					};
-					"highway::Task" = {
-						DevelopmentTeam = WWFDRU947Q;
-						LastSwiftMigration = 1000;
-						ProvisioningStyle = Manual;
-					};
 					"highway::TaskTests" = {
 						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1010;
@@ -3032,8 +2777,6 @@
 				FDB7AA0C21CD81DC0045DDA8 /* SourceryWorkerMock */,
 				FD3F8A1021DDE43A00BBDA58 /* SwiftFormatWorker */,
 				FD3F8A7121DDE7E700BBDA58 /* SwiftFormatWorkerMock */,
-				"highway::Task" /* Task */,
-				FDB7A9FB21CD7E8C0045DDA8 /* TaskMock */,
 				FDB7A9E121CD736C0045DDA8 /* TerminalMock */,
 				"highway::Terminal" /* Terminal */,
 				"highway::Url" /* Url */,
@@ -3098,13 +2841,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FDB7A9FA21CD7E8C0045DDA8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FDB7AA0B21CD81DC0045DDA8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3158,27 +2894,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		FD74EB0021BED24600BF6E79 /* Search Path */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Search Path";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "echo 🛣 ${BUILD_DIR}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		FD1126D021C77F050072607D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -3225,14 +2940,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDB7A9EC21CD73B30045DDA8 /* AutoMockable.generated.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FDB7A9F821CD7E8C0045DDA8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FDB7AA0721CD7F080045DDA8 /* AutoMockable.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3372,13 +3079,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_736 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		OBJ_770 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
@@ -3469,11 +3169,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FD0F7C712188859900F84604 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::POSIX" /* POSIX */;
-			targetProxy = FD0F7C702188859900F84604 /* PBXContainerItemProxy */;
-		};
 		FD34F6A522282BE8001D8EB1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FDB7A9E121CD736C0045DDA8 /* TerminalMock */;
@@ -3529,20 +3224,10 @@
 			target = "highway::Terminal" /* Terminal */;
 			targetProxy = FDB7A9ED21CD74460045DDA8 /* PBXContainerItemProxy */;
 		};
-		FDB7A9F121CD74AC0045DDA8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Task" /* Task */;
-			targetProxy = FDB7A9F021CD74AC0045DDA8 /* PBXContainerItemProxy */;
-		};
 		FDB7A9F421CD74CD0045DDA8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::Arguments" /* Arguments */;
 			targetProxy = FDB7A9F321CD74CD0045DDA8 /* PBXContainerItemProxy */;
-		};
-		FDB7AA0521CD7EEE0045DDA8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FDB7A9FB21CD7E8C0045DDA8 /* TaskMock */;
-			targetProxy = FDB7AA0421CD7EEE0045DDA8 /* PBXContainerItemProxy */;
 		};
 		FDB7AA1621CD81F00045DDA8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3584,11 +3269,6 @@
 			target = "highway::Git" /* Git */;
 			targetProxy = FDC093BE2226924600B054BA /* PBXContainerItemProxy */;
 		};
-		FDC093C72226924600B054BA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Task" /* Task */;
-			targetProxy = FDC093C62226924600B054BA /* PBXContainerItemProxy */;
-		};
 		FDC093CB2226924600B054BA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::Url" /* Url */;
@@ -3613,16 +3293,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::Terminal" /* Terminal */;
 			targetProxy = FDC156F821C5359C00E04B44 /* PBXContainerItemProxy */;
-		};
-		FDC156FC21C5363C00E04B44 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Task" /* Task */;
-			targetProxy = FDC156FB21C5363C00E04B44 /* PBXContainerItemProxy */;
-		};
-		FDE20739222D771000E44616 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FDB7A9FB21CD7E8C0045DDA8 /* TaskMock */;
-			targetProxy = FDE20738222D771000E44616 /* PBXContainerItemProxy */;
 		};
 		FDEE79E8222EBE1600D6481F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3659,11 +3329,6 @@
 			target = FD3F8A7121DDE7E700BBDA58 /* SwiftFormatWorkerMock */;
 			targetProxy = FDFCEFCB221B1A6B001AC549 /* PBXContainerItemProxy */;
 		};
-		FDFCEFF6221B1FD4001AC549 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Task" /* Task */;
-			targetProxy = FDFCEFF5221B1FD4001AC549 /* PBXContainerItemProxy */;
-		};
 		OBJ_1002 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::Terminal" /* Terminal */;
@@ -3699,11 +3364,6 @@
 			target = "highway::Errors" /* Errors */;
 			targetProxy = FD326D192109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
-		OBJ_354 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Task" /* Task */;
-			targetProxy = FD326C922109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
 		OBJ_357 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::Terminal" /* Terminal */;
@@ -3738,11 +3398,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::Git" /* Git */;
 			targetProxy = FD326D0F2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_395 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Task" /* Task */;
-			targetProxy = FD326D102109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_398 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3794,11 +3449,6 @@
 			target = "highway::Git" /* Git */;
 			targetProxy = FD326D332109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
-		OBJ_684 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Task" /* Task */;
-			targetProxy = FD326D342109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
 		OBJ_686 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::Terminal" /* Terminal */;
@@ -3819,21 +3469,6 @@
 			target = "highway::Errors" /* Errors */;
 			targetProxy = FD326D392109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
-		OBJ_759 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Arguments" /* Arguments */;
-			targetProxy = FD326C782109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_761 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Errors" /* Errors */;
-			targetProxy = FD326C7E2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_763 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Url" /* Url */;
-			targetProxy = FD326C812109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
 		OBJ_796 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::XCBuild" /* XCBuild */;
@@ -3848,11 +3483,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::Git" /* Git */;
 			targetProxy = FD326D582109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_801 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Task" /* Task */;
-			targetProxy = FD326D592109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_802 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3889,11 +3519,6 @@
 			target = "highway::Git" /* Git */;
 			targetProxy = FD326D682109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
-		OBJ_860 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Task" /* Task */;
-			targetProxy = FD326D692109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
 		OBJ_863 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::Url" /* Url */;
@@ -3918,11 +3543,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::Url" /* Url */;
 			targetProxy = FD326D712109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_956 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Task" /* Task */;
-			targetProxy = FD326CAA2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_957 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3963,11 +3583,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::Git" /* Git */;
 			targetProxy = FD326D232109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_999 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Task" /* Task */;
-			targetProxy = FD326D242109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -4635,74 +4250,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SwiftFormatWorkerMock;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = BetaRelease;
-		};
-		FD61D929221C70C600CC87F8 /* BetaRelease */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Task;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SWIFT_PACKAGE HighwayTask";
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = Task;
-			};
-			name = BetaRelease;
-		};
-		FD61D92A221C70C600CC87F8 /* BetaRelease */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_NS_ASSERTIONS = NO;
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Tests/TaskMock/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.TaskMock;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -5426,78 +4973,6 @@
 			};
 			name = Local;
 		};
-		FD61D94E221C70CE00CC87F8 /* Local */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Task;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SWIFT_PACKAGE HighwayTask";
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = Task;
-			};
-			name = Local;
-		};
-		FD61D94F221C70CE00CC87F8 /* Local */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Tests/TaskMock/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.TaskMock;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Local;
-		};
 		FD61D950221C70CE00CC87F8 /* Local */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -6023,98 +5498,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.TerminalMock;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		FDB7AA0221CD7E8C0045DDA8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Tests/TaskMock/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.TaskMock;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FDB7AA0321CD7E8C0045DDA8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_NS_ASSERTIONS = NO;
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Tests/TaskMock/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.TaskMock;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -7441,54 +6824,6 @@
 			};
 			name = Release;
 		};
-		OBJ_734 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Task;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SWIFT_PACKAGE HighwayTask";
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = Task;
-			};
-			name = Debug;
-		};
-		OBJ_735 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Task;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SWIFT_PACKAGE HighwayTask";
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = Task;
-			};
-			name = Release;
-		};
 		OBJ_768 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -7826,17 +7161,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FDB7AA0121CD7E8C0045DDA8 /* Build configuration list for PBXNativeTarget "TaskMock" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FDB7AA0221CD7E8C0045DDA8 /* Debug */,
-				FD61D94F221C70CE00CC87F8 /* Local */,
-				FDB7AA0321CD7E8C0045DDA8 /* Release */,
-				FD61D92A221C70C600CC87F8 /* BetaRelease */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		FDB7AA1221CD81DC0045DDA8 /* Build configuration list for PBXNativeTarget "SourceryWorkerMock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -8009,17 +7333,6 @@
 				FD61D959221C70CE00CC87F8 /* Local */,
 				OBJ_656 /* Release */,
 				FD61D934221C70C700CC87F8 /* BetaRelease */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_733 /* Build configuration list for PBXNativeTarget "Task" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_734 /* Debug */,
-				FD61D94E221C70CE00CC87F8 /* Local */,
-				OBJ_735 /* Release */,
-				FD61D929221C70C600CC87F8 /* BetaRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

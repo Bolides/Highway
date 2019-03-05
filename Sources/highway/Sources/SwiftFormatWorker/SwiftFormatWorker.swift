@@ -7,7 +7,7 @@
 
 import Arguments
 import Errors
-import os
+import Foundation
 import SignPost
 import SourceryAutoProtocols
 import SwiftFormat
