@@ -38,7 +38,7 @@ public struct PathEnvironmentParser: PathEnvironmentParserProtocol
         
         do {
             if pathFromCommandline != nil {
-                signPost.message("\(PathEnvironmentParser.self) \(#function) \n⚠️ using path from command line argument \(HighwayCommandLineOption.SingleOption.path("your path"))")
+                signPost.message("\(PathEnvironmentParser.self) \(#function) \n⚠️ using path from command line argument")
             }
             
             guard let path = pathFromCommandline == nil ? processInfoEnvironment["PATH"] : pathFromCommandline! else {
@@ -47,13 +47,20 @@ public struct PathEnvironmentParser: PathEnvironmentParserProtocol
 
             let paths: [String] = path.components(separatedBy: ":")
             
-            signPost.message("\(PathEnvironmentParser.self) \(#function) found path \n\(paths.map { "* \($0)"}.joined(separator: "\n"))")
+            signPost.message("\(PathEnvironmentParser.self) \(#function) found path urls \n\(paths.map { "* \($0)"}.joined(separator: "\n"))")
             
-            urls = try paths.compactMap { try Folder(path: $0) }
+            urls = paths.compactMap {
+                    do {
+                        return try Folder(path: $0)
+                    } catch {
+                        signPost.message("⚠️  '\($0)'  ⚠️ - from $PATH is ignored because invalid")
+                        return nil
+                    }
+            }
         }
         catch
         {
-            signPost.error("⚠️ \(PathEnvironmentParser.self) \(#function) no PATH found, initializing without urls to search for commands")
+            signPost.error("⚠️ \(PathEnvironmentParser.self) \(#function) \(error)")
             urls = [FolderProtocol]()
         }
     }
