@@ -36,7 +36,7 @@ public struct PathEnvironmentParser: PathEnvironmentParserProtocol
     {
         let pathFromCommandline = highwayCommandLineArguments.ordered.compactMap { $0.path }.first
         
-        {
+        do {
             if pathFromCommandline != nil {
                 signPost.message("\(PathEnvironmentParser.self) \(#function) \n⚠️ using path from command line argument \(HighwayCommandLineOption.SingleOption.path("your path"))")
             }
