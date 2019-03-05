@@ -127,6 +127,15 @@
 		FDE2073A222D771600E44616 /* TaskMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9FC21CD7E8C0045DDA8 /* TaskMock.framework */; };
 		FDE207B8222D885A00E44616 /* CupertinoJWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFE3221B1EA7001AC549 /* CupertinoJWT.framework */; };
 		FDE207B9222D885A00E44616 /* CupertinoJWT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFE3221B1EA7001AC549 /* CupertinoJWT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDE263FE222EF68400F8C2AC /* SystemExecutableProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_136 /* SystemExecutableProvider.swift */; };
+		FDE263FF222EF68400F8C2AC /* PathEnvironmentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_135 /* PathEnvironmentParser.swift */; };
+		FDE26400222EF68C00F8C2AC /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_145 /* State.swift */; };
+		FDE26401222EF68C00F8C2AC /* Termination.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_147 /* Termination.swift */; };
+		FDE26402222EF68C00F8C2AC /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_146 /* Task.swift */; };
+		FDE26403222EF68C00F8C2AC /* Channel+Writer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_142 /* Channel+Writer.swift */; };
+		FDE26404222EF68C00F8C2AC /* IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_144 /* IO.swift */; };
+		FDE26405222EF68C00F8C2AC /* Channel+Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_141 /* Channel+Reader.swift */; };
+		FDE26406222EF68C00F8C2AC /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_143 /* Channel.swift */; };
 		FDEC11F421C67ED700CB7DAD /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11F221C67EAD00CB7DAD /* Worker.swift */; };
 		FDEE79CF222EBD1300D6481F /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF8221B2044001AC549 /* ZFileMock.framework */; };
 		FDEE79D0222EBD2400D6481F /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF8221B2044001AC549 /* ZFileMock.framework */; };
@@ -213,15 +222,6 @@
 		OBJ_671 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
 		OBJ_672 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		OBJ_673 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
-		OBJ_738 /* PathEnvironmentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_135 /* PathEnvironmentParser.swift */; };
-		OBJ_739 /* SystemExecutableProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_136 /* SystemExecutableProvider.swift */; };
-		OBJ_743 /* Channel+Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_141 /* Channel+Reader.swift */; };
-		OBJ_744 /* Channel+Writer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_142 /* Channel+Writer.swift */; };
-		OBJ_745 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_143 /* Channel.swift */; };
-		OBJ_746 /* IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_144 /* IO.swift */; };
-		OBJ_747 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_145 /* State.swift */; };
-		OBJ_748 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_146 /* Task.swift */; };
-		OBJ_749 /* Termination.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_147 /* Termination.swift */; };
 		OBJ_752 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		OBJ_754 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
 		OBJ_756 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
@@ -257,7 +257,6 @@
 		OBJ_943 /* TestOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* TestOptions.swift */; };
 		OBJ_944 /* TestReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* TestReport.swift */; };
 		OBJ_945 /* XCBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* XCBuild.swift */; };
-		OBJ_947 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
 		OBJ_948 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		OBJ_950 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
 		OBJ_951 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
@@ -1538,7 +1537,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_947 /* Task.framework in Frameworks */,
 				OBJ_948 /* Arguments.framework in Frameworks */,
 				OBJ_950 /* Errors.framework in Frameworks */,
 				OBJ_951 /* Terminal.framework in Frameworks */,
@@ -1873,6 +1871,15 @@
 		OBJ_108 /* Terminal */ = {
 			isa = PBXGroup;
 			children = (
+				OBJ_141 /* Channel+Reader.swift */,
+				OBJ_142 /* Channel+Writer.swift */,
+				OBJ_143 /* Channel.swift */,
+				OBJ_144 /* IO.swift */,
+				OBJ_145 /* State.swift */,
+				OBJ_146 /* Task.swift */,
+				OBJ_147 /* Termination.swift */,
+				OBJ_135 /* PathEnvironmentParser.swift */,
+				OBJ_136 /* SystemExecutableProvider.swift */,
 				FD34F42C21BEE9EB0052222C /* CDToFolderExecutable.swift */,
 				FD74CC7C2226F35B00A65E44 /* PodExecutable.swift */,
 				FD34F42D21BEE9EB0052222C /* CatExecutable.swift */,
@@ -1893,38 +1900,6 @@
 				OBJ_16 /* ExportOptions.swift */,
 			);
 			path = Export;
-			sourceTree = "<group>";
-		};
-		OBJ_132 /* Task */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_133 /* Finding and Executing */,
-				OBJ_140 /* Model */,
-			);
-			path = Task;
-			sourceTree = "<group>";
-		};
-		OBJ_133 /* Finding and Executing */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_135 /* PathEnvironmentParser.swift */,
-				OBJ_136 /* SystemExecutableProvider.swift */,
-			);
-			path = "Finding and Executing";
-			sourceTree = "<group>";
-		};
-		OBJ_140 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_141 /* Channel+Reader.swift */,
-				OBJ_142 /* Channel+Writer.swift */,
-				OBJ_143 /* Channel.swift */,
-				OBJ_144 /* IO.swift */,
-				OBJ_145 /* State.swift */,
-				OBJ_146 /* Task.swift */,
-				OBJ_147 /* Termination.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		OBJ_149 /* POSIX */ = {
@@ -2141,7 +2116,6 @@
 				FD1126CD21C77F050072607D /* SignPost */,
 				FDC156DC21C5347C00E04B44 /* SourceryWorker */,
 				FD3F8A1221DDE43A00BBDA58 /* SwiftFormatWorker */,
-				OBJ_132 /* Task */,
 				OBJ_108 /* Terminal */,
 				FD0553A621D1291400E9B0D0 /* TestKit */,
 				OBJ_54 /* Url */,
@@ -3402,15 +3376,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_738 /* PathEnvironmentParser.swift in Sources */,
-				OBJ_739 /* SystemExecutableProvider.swift in Sources */,
-				OBJ_743 /* Channel+Reader.swift in Sources */,
-				OBJ_744 /* Channel+Writer.swift in Sources */,
-				OBJ_745 /* Channel.swift in Sources */,
-				OBJ_746 /* IO.swift in Sources */,
-				OBJ_747 /* State.swift in Sources */,
-				OBJ_748 /* Task.swift in Sources */,
-				OBJ_749 /* Termination.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3427,10 +3392,19 @@
 			buildActionMask = 0;
 			files = (
 				FD34F43121BEE9EB0052222C /* GitExecutables.swift in Sources */,
+				FDE263FF222EF68400F8C2AC /* PathEnvironmentParser.swift in Sources */,
+				FDE26401222EF68C00F8C2AC /* Termination.swift in Sources */,
 				FD34F42B21BEE91C0052222C /* ExcecutableProtocol.swift in Sources */,
+				FDE26406222EF68C00F8C2AC /* Channel.swift in Sources */,
+				FDE26400222EF68C00F8C2AC /* State.swift in Sources */,
 				FD34F42F21BEE9EB0052222C /* CDToFolderExecutable.swift in Sources */,
+				FDE26405222EF68C00F8C2AC /* Channel+Reader.swift in Sources */,
 				FD74CC7D2226F35B00A65E44 /* PodExecutable.swift in Sources */,
+				FDE263FE222EF68400F8C2AC /* SystemExecutableProvider.swift in Sources */,
+				FDE26404222EF68C00F8C2AC /* IO.swift in Sources */,
+				FDE26402222EF68C00F8C2AC /* Task.swift in Sources */,
 				FD34F42A21BEE8E20052222C /* TerminalSysExitCode.swift in Sources */,
+				FDE26403222EF68C00F8C2AC /* Channel+Writer.swift in Sources */,
 				FD34F42821BEE8D50052222C /* TerminalTasks.swift in Sources */,
 				FD34F43021BEE9EB0052222C /* CatExecutable.swift in Sources */,
 				FD34F42721BEE8CA0052222C /* TerminalWorker.swift in Sources */,

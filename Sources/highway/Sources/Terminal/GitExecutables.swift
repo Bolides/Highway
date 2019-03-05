@@ -7,7 +7,6 @@
 
 import Arguments
 import Foundation
-import Task
 import ZFile
 
 public struct GitBranchName: ArgumentExecutableProtocol

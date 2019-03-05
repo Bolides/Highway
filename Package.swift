@@ -19,12 +19,23 @@ let package = Package(
         .library(
             name: "Url",
             targets: ["Url"]),
+        .library(
+            name: "POSIX",
+            targets: ["POSIX"]),
+        .library(
+            name: "XCBuild",
+            targets: ["XCBuild"]),
+        .library(
+            name: "Terminal",
+            targets: ["Terminal"]),
+
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://www.github.com/doozMen/ZFile", from: "2.0.1"),
         .package(url: "https://www.github.com/doozMen/SignPost", from: "1.0.0"),
         .package(url: "https://www.github.com/doozMen/template-sourcery", from: "1.2.0"),
+        .package(url: "https://www.github.com/antitypical/Result", from: "4.0.0"),
         ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -48,6 +59,21 @@ let package = Package(
             name: "Url",
             dependencies: [],
             path: "Sources/highway/Sources/Url"
+        ),
+        .target(
+            name: "POSIX",
+            dependencies: [],
+            path: "Sources/highway/Sources/POSIX"
+        ),
+        .target(
+            name: "XCBuild",
+            dependencies: ["Arguments", "Errors", "Url", "POSIX", "Terminal", "Result"],
+            path: "Sources/highway/Sources/XCBuild"
+        ),
+        .target(
+            name: "Terminal",
+            dependencies: ["POSIX"],
+            path: "Sources/highway/Sources/Terminal"
         )
     ]
 )

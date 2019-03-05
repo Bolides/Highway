@@ -8,7 +8,7 @@
 import Foundation
 
 import Foundation
-import os
+import SignPost
 import SourceryAutoProtocols
 
 public protocol DestinationFactoryProtocol: AutoMockable

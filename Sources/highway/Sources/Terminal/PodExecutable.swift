@@ -9,7 +9,6 @@ import Arguments
 import Errors
 import Foundation
 import SignPost
-import Task
 import ZFile
 
 public struct PodExecutable: ArgumentExecutableProtocol
