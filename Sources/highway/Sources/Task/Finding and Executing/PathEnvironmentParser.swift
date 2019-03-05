@@ -1,3 +1,4 @@
+import Arguments
 import Errors
 import Foundation
 import POSIX
@@ -5,8 +6,6 @@ import SignPost
 import SourceryAutoProtocols
 import Url
 import ZFile
-import SignPost
-import Arguments
 
 public protocol PathEnvironmentParserProtocol: AutoMockable
 {
@@ -35,27 +34,34 @@ public struct PathEnvironmentParser: PathEnvironmentParserProtocol
     )
     {
         let pathFromCommandline = highwayCommandLineArguments.ordered.compactMap { $0.path }.first
-        
-        do {
-            if pathFromCommandline != nil {
+
+        do
+        {
+            if pathFromCommandline != nil
+            {
                 signPost.message("\(PathEnvironmentParser.self) \(#function) \n⚠️ using path from command line argument")
             }
-            
-            guard let path = pathFromCommandline == nil ? processInfoEnvironment["PATH"] : pathFromCommandline! else {
+
+            guard let path = pathFromCommandline == nil ? processInfoEnvironment["PATH"] : pathFromCommandline! else
+            {
                 throw "\(PathEnvironmentParser.self) \(#function) \(HighwayError.processInfoMissingPath(processInfo: processInfoEnvironment))"
             }
 
             let paths: [String] = path.components(separatedBy: ":")
-            
-            signPost.message("\(PathEnvironmentParser.self) \(#function) found path urls \n\(paths.map { "* \($0)"}.joined(separator: "\n"))")
-            
-            urls = paths.compactMap {
-                    do {
-                        return try Folder(path: $0)
-                    } catch {
-                        signPost.message("⚠️  '\($0)'  ⚠️ - from $PATH is ignored because invalid")
-                        return nil
-                    }
+
+            signPost.message("\(PathEnvironmentParser.self) \(#function) found path urls \n\(paths.map { "* \($0)" }.joined(separator: "\n"))")
+
+            urls = paths.compactMap
+            {
+                do
+                {
+                    return try Folder(path: $0)
+                }
+                catch
+                {
+                    signPost.message("⚠️  '\($0)'  ⚠️ - from $PATH is ignored because invalid")
+                    return nil
+                }
             }
         }
         catch

@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "highway::XCBuildTests"
-               BuildableName = "XCBuildTests.xctest"
-               BlueprintName = "XCBuildTests"
+               BlueprintIdentifier = "FDEE79D6222EBD9A00D6481F"
+               BuildableName = "XCBuildMock.framework"
+               BlueprintName = "XCBuildMock"
                ReferencedContainer = "container:Highway.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,16 +42,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "highway::XCBuildTests"
-               BuildableName = "XCBuildTests.xctest"
-               BlueprintName = "XCBuildTests"
-               ReferencedContainer = "container:Highway.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

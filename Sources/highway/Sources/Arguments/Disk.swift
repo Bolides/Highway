@@ -46,7 +46,8 @@ public struct Disk: DiskProtocol, AutoGenerateProtocol
         signPost: SignPostProtocol = SignPost.shared
     ) throws
     {
-        do {
+        do
+        {
             guard let relativeProjectPath = (highwayCommandLineArguments.ordered.compactMap { $0.srcRoot }.first) else
             {
                 throw HighwayError.missingSrcroot(
@@ -57,22 +58,23 @@ public struct Disk: DiskProtocol, AutoGenerateProtocol
                     function: "\(#function)"
                 )
             }
-            
+
             srcRoot = try Folder(relativePath: relativeProjectPath)
             self.signPost = signPost
-            
+
             signPost.verbose("Looking for \(Carthage.Path.checkouts.rawValue) \nfrom\n \(srcRoot)\n")
             let carthageCheckouts = try srcRoot.subfolder(named: Carthage.Path.checkouts.rawValue)
-            
+
             signPost.verbose("Looking for \(Carthage.Path.sourcery.rawValue)")
-            
+
             carthage = Carthage(
                 checkouts: carthageCheckouts,
                 sourcery: try carthageCheckouts.subfolder(named: Carthage.Path.sourcery.rawValue)
             )
-        } catch {
+        }
+        catch
+        {
             throw "\(Disk.self) \(#function)\n\(error)"
         }
-        
     }
 }

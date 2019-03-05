@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FDC0938F222691FE00B054BA"
-               BuildableName = "AutomateHighway.app"
-               BlueprintName = "AutomateHighway"
+               BlueprintIdentifier = "FDB7A9FB21CD7E8C0045DDA8"
+               BuildableName = "TaskMock.framework"
+               BlueprintName = "TaskMock"
                ReferencedContainer = "container:Highway.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDC0938F222691FE00B054BA"
-            BuildableName = "AutomateHighway.app"
-            BlueprintName = "AutomateHighway"
-            ReferencedContainer = "container:Highway.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,22 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDC0938F222691FE00B054BA"
-            BuildableName = "AutomateHighway.app"
-            BlueprintName = "AutomateHighway"
+            BlueprintIdentifier = "FDB7A9FB21CD7E8C0045DDA8"
+            BuildableName = "TaskMock.framework"
+            BlueprintName = "TaskMock"
             ReferencedContainer = "container:Highway.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
-      <CommandLineArguments>
-         <CommandLineArgument
-            argument = "srcRoot /../../../../../../"
-            isEnabled = "YES">
-         </CommandLineArgument>
-      </CommandLineArguments>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -76,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDC0938F222691FE00B054BA"
-            BuildableName = "AutomateHighway.app"
-            BlueprintName = "AutomateHighway"
+            BlueprintIdentifier = "FDB7A9FB21CD7E8C0045DDA8"
+            BuildableName = "TaskMock.framework"
+            BlueprintName = "TaskMock"
             ReferencedContainer = "container:Highway.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

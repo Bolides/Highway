@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "absolute:/Users/doozmen/Documents/dooZ/active/WizKey/Sources/BolidesApp/Carthage/Checkouts/highway/Sources/highway/Highway.xcodeproj">
+      location = "group:Highway.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:../../Carthage/Checkouts/ZFile/Sources/ZFile/ZFile.xcodeproj">

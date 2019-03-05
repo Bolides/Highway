@@ -163,6 +163,16 @@
 		FDEC11E721C679DF00CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */; };
 		FDEC11E821C679E200CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */; };
 		FDEC11F421C67ED700CB7DAD /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11F221C67EAD00CB7DAD /* Worker.swift */; };
+		FDEE79CF222EBD1300D6481F /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF8221B2044001AC549 /* ZFileMock.framework */; };
+		FDEE79D0222EBD2400D6481F /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF8221B2044001AC549 /* ZFileMock.framework */; };
+		FDEE79D1222EBD4200D6481F /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF8221B2044001AC549 /* ZFileMock.framework */; };
+		FDEE79E5222EBDE200D6481F /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A95E21CD6A790045DDA8 /* AutoMockable.generated.swift */; };
+		FDEE79E6222EBDFE00D6481F /* XCBuildMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE79D7222EBD9A00D6481F /* XCBuildMock.framework */; };
+		FDEE79ED222EBE2900D6481F /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
+		FDEE79EE222EBE2E00D6481F /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
+		FDEE79EF222EBE3A00D6481F /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
+		FDEE79F0222EBE5300D6481F /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
+		FDEE79F1222EBE5300D6481F /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF8221B2044001AC549 /* ZFileMock.framework */; };
 		FDFCEFC3221B1981001AC549 /* SwiftFormat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFC2221B1981001AC549 /* SwiftFormat.framework */; };
 		FDFCEFCD221B1A74001AC549 /* SwiftFormatWorkerMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A7221DDE7E700BBDA58 /* SwiftFormatWorkerMock.framework */; };
 		FDFCEFCE221B1ABB001AC549 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
@@ -1139,6 +1149,34 @@
 			remoteGlobalIDString = FDB7A9FB21CD7E8C0045DDA8;
 			remoteInfo = TaskMock;
 		};
+		FDEE79E7222EBE1600D6481F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::XCBuild";
+			remoteInfo = XCBuild;
+		};
+		FDEE79E9222EBE1C00D6481F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::SourceryAutoProtocols";
+			remoteInfo = "SourceryAutoProtocols-macos";
+		};
+		FDEE79EB222EBE2300D6481F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Arguments";
+			remoteInfo = Arguments;
+		};
+		FDEE79F2222EBF2000D6481F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDEE79D6222EBD9A00D6481F;
+			remoteInfo = XCBuildMock;
+		};
 		FDFCEFCB221B1A6B001AC549 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1290,6 +1328,7 @@
 		FDEC11F221C67EAD00CB7DAD /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 		FDECFC43221B4B8700EA1E33 /* Cartfile.private */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile.private; path = ../../Cartfile.private; sourceTree = "<group>"; };
 		FDECFC44221B4B9900EA1E33 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = ../../Cartfile; sourceTree = "<group>"; };
+		FDEE79D7222EBD9A00D6481F /* XCBuildMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCBuildMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFCEFC2221B1981001AC549 /* SwiftFormat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftFormat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFCEFD3221B1D90001AC549 /* FoundationGenericHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FoundationGenericHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFCEFDA221B1E43001AC549 /* ZFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1416,6 +1455,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDEE79D0222EBD2400D6481F /* ZFileMock.framework in Frameworks */,
 				FDFCF005221B2141001AC549 /* ZFile.framework in Frameworks */,
 				FD3F8A7C21DDE80200BBDA58 /* SwiftFormatWorker.framework in Frameworks */,
 			);
@@ -1425,6 +1465,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDEE79CF222EBD1300D6481F /* ZFileMock.framework in Frameworks */,
 				FDFCEFDF221B1E53001AC549 /* FoundationGenericHelper.framework in Frameworks */,
 				FDFCEFDB221B1E43001AC549 /* ZFile.framework in Frameworks */,
 				FDB7A9C121CD6CAB0045DDA8 /* Arguments.framework in Frameworks */,
@@ -1435,6 +1476,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDEE79D1222EBD4200D6481F /* ZFileMock.framework in Frameworks */,
 				FD589F66221B0EC800335F55 /* Quick.framework in Frameworks */,
 				FD589F64221B0EC100335F55 /* Nimble.framework in Frameworks */,
 				FD589F60221B0EA300335F55 /* ZFile.framework in Frameworks */,
@@ -1529,6 +1571,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDEE79D4222EBD9A00D6481F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDEE79EF222EBE3A00D6481F /* SourceryAutoProtocols.framework in Frameworks */,
+				FDEE79F0222EBE5300D6481F /* ZFile.framework in Frameworks */,
+				FDEE79F1222EBE5300D6481F /* ZFileMock.framework in Frameworks */,
+				FDEE79EE222EBE2E00D6481F /* Arguments.framework in Frameworks */,
+				FDEE79ED222EBE2900D6481F /* XCBuild.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1742,17 +1796,18 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_989 /* SourceryAutoProtocols.framework in Frameworks */,
-				FDAB8387222D8E6200A6A826 /* Quick.framework in Frameworks */,
-				FDAB8388222D8E6200A6A826 /* Nimble.framework in Frameworks */,
+				FDEE79E6222EBDFE00D6481F /* XCBuildMock.framework in Frameworks */,
+				OBJ_987 /* Arguments.framework in Frameworks */,
+				FD34F71B2228603A001D8EB1 /* ArgumentsMock.framework in Frameworks */,
 				OBJ_982 /* Task.framework in Frameworks */,
 				FDE2073A222D771600E44616 /* TaskMock.framework in Frameworks */,
-				FD34F71B2228603A001D8EB1 /* ArgumentsMock.framework in Frameworks */,
+				FDAB8387222D8E6200A6A826 /* Quick.framework in Frameworks */,
+				FDAB8388222D8E6200A6A826 /* Nimble.framework in Frameworks */,
 				OBJ_977 /* XCBuild.framework in Frameworks */,
 				OBJ_980 /* POSIX.framework in Frameworks */,
 				OBJ_981 /* Git.framework in Frameworks */,
 				OBJ_985 /* Terminal.framework in Frameworks */,
 				OBJ_986 /* Url.framework in Frameworks */,
-				OBJ_987 /* Arguments.framework in Frameworks */,
 				OBJ_988 /* Errors.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2272,6 +2327,7 @@
 				FD3F8A1921DDE43A00BBDA58 /* SwiftFormatWorkerTests.xctest */,
 				FD3F8A7221DDE7E700BBDA58 /* SwiftFormatWorkerMock.framework */,
 				FDC09390222691FE00B054BA /* AutomateHighway.app */,
+				FDEE79D7222EBD9A00D6481F /* XCBuildMock.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -2451,6 +2507,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FDE9B6F221C58ED400D1F50A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDEE79D2222EBD9A00D6481F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2743,6 +2806,27 @@
 			name = "SourceryAutoProtocols-ios";
 			productName = SourceryAutoGenerateProtocols;
 			productReference = FDE9B6F721C58ED400D1F50A /* SourceryAutoProtocols.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FDEE79D6222EBD9A00D6481F /* XCBuildMock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDEE79E0222EBD9A00D6481F /* Build configuration list for PBXNativeTarget "XCBuildMock" */;
+			buildPhases = (
+				FDEE79D2222EBD9A00D6481F /* Headers */,
+				FDEE79D3222EBD9A00D6481F /* Sources */,
+				FDEE79D4222EBD9A00D6481F /* Frameworks */,
+				FDEE79D5222EBD9A00D6481F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDEE79EC222EBE2300D6481F /* PBXTargetDependency */,
+				FDEE79EA222EBE1C00D6481F /* PBXTargetDependency */,
+				FDEE79E8222EBE1600D6481F /* PBXTargetDependency */,
+			);
+			name = XCBuildMock;
+			productName = XCBuildMock;
+			productReference = FDEE79D7222EBD9A00D6481F /* XCBuildMock.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		"highway::Arguments" /* Arguments */ = {
@@ -3088,17 +3172,18 @@
 			buildRules = (
 			);
 			dependencies = (
-				FDE20739222D771000E44616 /* PBXTargetDependency */,
+				OBJ_1006 /* PBXTargetDependency */,
+				OBJ_1004 /* PBXTargetDependency */,
 				FD34F71A22285F1A001D8EB1 /* PBXTargetDependency */,
+				OBJ_999 /* PBXTargetDependency */,
+				FDE20739222D771000E44616 /* PBXTargetDependency */,
 				OBJ_994 /* PBXTargetDependency */,
+				FDEE79F3222EBF2000D6481F /* PBXTargetDependency */,
 				OBJ_997 /* PBXTargetDependency */,
 				OBJ_998 /* PBXTargetDependency */,
-				OBJ_999 /* PBXTargetDependency */,
 				OBJ_1002 /* PBXTargetDependency */,
 				OBJ_1003 /* PBXTargetDependency */,
-				OBJ_1004 /* PBXTargetDependency */,
 				OBJ_1005 /* PBXTargetDependency */,
-				OBJ_1006 /* PBXTargetDependency */,
 			);
 			name = XCBuildTests;
 			productName = XCBuildTests;
@@ -3182,6 +3267,10 @@
 						CreatedOnToolsVersion = 10.1;
 						DevelopmentTeam = WWFDRU947Q;
 						ProvisioningStyle = Manual;
+					};
+					FDEE79D6222EBD9A00D6481F = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
 					};
 					"highway::Arguments" = {
 						DevelopmentTeam = WWFDRU947Q;
@@ -3303,6 +3392,7 @@
 				"highway::Terminal" /* Terminal */,
 				"highway::Url" /* Url */,
 				"highway::XCBuild" /* XCBuild */,
+				FDEE79D6222EBD9A00D6481F /* XCBuildMock */,
 				"highway::ArgumentsTests" /* ArgumentsTests */,
 				"highway::GitTests" /* GitTests */,
 				"highway::POSIXTests" /* POSIXTests */,
@@ -3413,6 +3503,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FDE9B6F521C58ED400D1F50A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDEE79D5222EBD9A00D6481F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3572,6 +3669,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDEC11E721C679DF00CB7DAD /* SourceryAutoProtocols.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDEE79D3222EBD9A00D6481F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDEE79E5222EBDE200D6481F /* AutoMockable.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3967,6 +4072,26 @@
 			isa = PBXTargetDependency;
 			target = FDB7A9FB21CD7E8C0045DDA8 /* TaskMock */;
 			targetProxy = FDE20738222D771000E44616 /* PBXContainerItemProxy */;
+		};
+		FDEE79E8222EBE1600D6481F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::XCBuild" /* XCBuild */;
+			targetProxy = FDEE79E7222EBE1600D6481F /* PBXContainerItemProxy */;
+		};
+		FDEE79EA222EBE1C00D6481F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
+			targetProxy = FDEE79E9222EBE1C00D6481F /* PBXContainerItemProxy */;
+		};
+		FDEE79EC222EBE2300D6481F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::Arguments" /* Arguments */;
+			targetProxy = FDEE79EB222EBE2300D6481F /* PBXContainerItemProxy */;
+		};
+		FDEE79F3222EBF2000D6481F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDEE79D6222EBD9A00D6481F /* XCBuildMock */;
+			targetProxy = FDEE79F2222EBF2000D6481F /* PBXContainerItemProxy */;
 		};
 		FDFCEFCC221B1A6B001AC549 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -7098,6 +7223,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = Sources/AutomateHighway/AutomateHighway.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -7137,6 +7263,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = Sources/AutomateHighway/AutomateHighway.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = "";
@@ -7172,6 +7299,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = Sources/AutomateHighway/AutomateHighway.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = "";
@@ -7207,6 +7335,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = Sources/AutomateHighway/AutomateHighway.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = "";
@@ -7466,6 +7595,186 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		FDEE79E1222EBD9A00D6481F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Highway.xcodeproj/XCBuild_Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.XCBuildMock;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FDEE79E2222EBD9A00D6481F /* Local */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Highway.xcodeproj/XCBuild_Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.XCBuildMock;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Local;
+		};
+		FDEE79E3222EBD9A00D6481F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Highway.xcodeproj/XCBuild_Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.XCBuildMock;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FDEE79E4222EBD9A00D6481F /* BetaRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Highway.xcodeproj/XCBuild_Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.XCBuildMock;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = BetaRelease;
 		};
 		OBJ_266 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -8399,6 +8708,17 @@
 				FD61D949221C70CE00CC87F8 /* Local */,
 				FDE9B70A21C58ED500D1F50A /* Release */,
 				FD61D924221C70C600CC87F8 /* BetaRelease */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDEE79E0222EBD9A00D6481F /* Build configuration list for PBXNativeTarget "XCBuildMock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDEE79E1222EBD9A00D6481F /* Debug */,
+				FDEE79E2222EBD9A00D6481F /* Local */,
+				FDEE79E3222EBD9A00D6481F /* Release */,
+				FDEE79E4222EBD9A00D6481F /* BetaRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

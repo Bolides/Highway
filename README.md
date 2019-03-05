@@ -9,33 +9,23 @@
 
 First resolve some dependencies from the xcode project
 
-```bash
-carthage update --no-build --use-submodules`
-xcodebuild -project Sources/highway/Automate🛣.xcodeproj -scheme AutomateHighway
-
-```
-
-## Run from Terminal
-
- ``` bash
- cd Sources/highway
- <#path to automate app, probably derivedData#>/Automate.app/Contents/MacOS/Automate 🤖command:sourcery
- ```
-
+`carthage checkout`
+ To build using xcode do `File>WorkSpace Settings> Build relative to workspace` and set to `../../.build`
+ 
+ > To my knowledge I cannot share this setting, let me know if you know how you can.
+ 
 ## Integrate in your project
 
 Use [Carthage](https://www.github.com/Carthage/Carthage)
 
-1. Add Cartfile with > `github "doozMen/highway" "master"` // ⚠️ change master to a tag to fix on a version
-2. `carthage update --no-build --use-submodules`
-3. Embed the  `🛣.xcodeproj` file in your project like ZFile.xcodeProj is embeded in `🛣.xcodeproj
+1. Add Cartfile  `github "doozMen/highway`
+2. `carthage update`
+3. Embed the  `Sources/highway/Highway.xcodeproj` in workspace or project
 4. Set the **framework search path** to `$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)` in the **GENERAL** project settings,
-
-    > ⚠️ so not in the target. In the target(s) use `$inherited`
-5. Add **macOS** `Automate` target
-6. Embed all frameworks from  Highway except the iOS versions
-7. Embed CuportinoJWT (add project from Sources/Carthage/CheckOuts/CupertinoJWT)
-8. Embed ZFile (add project from Sources/Carthage/CheckOuts/ZFile)
+5. Embed all frameworks from  Highway except the iOS versions
+6. Embed  `Sources/Carthage/CheckOuts/CupertinoJWT`
+8. Embed  `Sources/Carthage/CheckOuts/ZFile`
+9. Embed  `Sources/Carthage/CheckOuts/Result`
 
 The goal is not to provide an out of the box script. You use the different frameworks to automate your workflow.
 

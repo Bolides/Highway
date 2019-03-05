@@ -180,7 +180,7 @@ public class AutomateHighwaySourceryWorker: AutomateHighwaySourceryWorkerProtoco
                 importNames.insert(TemplatePrepend.Import(name: Target.SignPost.rawValue))
 
                 return Set([TemplatePrepend(name: importNames, template: Template.AutoMockable.rawValue)])
-            case .Terminal:
+            case .Terminal, .XCBuild:
                 importNames.insert(TemplatePrepend.Import(name: Target.Arguments.rawValue))
 
                 return Set([TemplatePrepend(name: importNames, template: Template.AutoMockable.rawValue)])

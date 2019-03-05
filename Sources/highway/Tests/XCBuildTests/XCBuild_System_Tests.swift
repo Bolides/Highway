@@ -6,6 +6,8 @@ import TaskMock
 import XCBuild
 import TerminalMock
 import Arguments
+import ArgumentsMock
+import XCBuildMock
 import ZFileMock
 
 class XCBuildSpec: QuickSpec {
@@ -18,11 +20,11 @@ class XCBuildSpec: QuickSpec {
             
         
             var terminal: TerminalWorkerProtocolMock!
-            var xcbuildExecutable: ArgumentExecutableProtocolMock!
+            var xcbuildExecutable: MinimalTestOptionsProtocolMock!
             var system: SystemExecutableProviderProtocolMock!
             
             beforeEach {
-                xcbuildExecutable = ArgumentExecutableProtocolMock()
+                xcbuildExecutable = MinimalTestOptionsProtocolMock()
                 terminal = TerminalWorkerProtocolMock()
                 system = SystemExecutableProviderProtocolMock()
                 

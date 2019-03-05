@@ -23,7 +23,7 @@ import ZFile
  ````
  */
 
-public protocol ExportArchiveOptionsProtocol: Codable, AutoMockable
+public protocol ExportArchiveOptionsProtocol: AutoMockable
 {
     /// sourcery:inline:ExportArchiveOptions.AutoGenerateProtocol
     var archivePath: FolderProtocol { get }
@@ -34,7 +34,7 @@ public protocol ExportArchiveOptionsProtocol: Codable, AutoMockable
     /// sourcery:end
 }
 
-public struct ExportArchiveOptions: ExportArchiveOptionsProtocol, AutoGenerateProtocol
+public struct ExportArchiveOptions: Codable, ExportArchiveOptionsProtocol, AutoGenerateProtocol
 {
     // MARK: - Properties
 

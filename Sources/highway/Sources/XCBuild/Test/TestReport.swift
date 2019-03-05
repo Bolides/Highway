@@ -17,36 +17,39 @@ public struct TestReport: TestReportProtocol, AutoGenerateProtocol, CustomString
     public let failingTests: ArraySlice<String>?
     public let buildErrors: [String]?
     public let output: [String]
-    
+
     private let signPost: SignPostProtocol
-    
+
     public init(output: [String], signPost: SignPostProtocol = SignPost.shared)
     {
         self.output = output
         self.signPost = signPost
-        
+
         signPost.verbose("making testreport from raw output \n\(output.joined(separator: "\n"))\n")
-        
+
         signPost.message("\(TestReport.self) generating test report ... ")
         signPost.message("\(TestReport.self) checking failed tests ")
-        
+
         if let indexFailing = output.firstIndex(of: "Failing tests:"),
             let failingEnd = output.firstIndex(of: "** TEST FAILED **")
         {
             failingTests = output[indexFailing ..< failingEnd]
-        } else {
+        }
+        else
+        {
             failingTests = nil
         }
-        
+
         signPost.message("\(TestReport.self) checking build errors ")
-        
-        if (output.first { $0.contains("error:")}) != nil
+
+        if (output.first { $0.contains("error:") }) != nil
         {
             buildErrors = output.filter { $0.contains("error:") }
-        } else {
+        }
+        else
+        {
             buildErrors = nil
         }
-
     }
 
     public func failedTests() -> String
@@ -61,14 +64,15 @@ public struct TestReport: TestReportProtocol, AutoGenerateProtocol, CustomString
             let title = self.failingTests?.first
         else
         {
-            guard let buildErrors = buildErrors else {
+            guard let buildErrors = buildErrors else
+            {
                 signPost.message(output.joined(separator: "\n"))
                 return "No failed tests or Build errors, printing raw output"
             }
             return """
             \(TestReport.self) build failed with errors \(buildErrors.count)
             
-            \(buildErrors.enumerated().map {"    \($0.offset + 1 ) - \($0.element) "}.joined(separator: "\n"))
+            \(buildErrors.enumerated().map { "    \($0.offset + 1) - \($0.element) " }.joined(separator: "\n"))
             
             """
         }
