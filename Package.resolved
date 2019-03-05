@@ -1,0 +1,52 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Nimble",
+        "repositoryURL": "https://github.com/Quick/Nimble",
+        "state": {
+          "branch": null,
+          "revision": "a27c5186ce2d65f60d1237660b2509df3eb29023",
+          "version": "8.0.0"
+        }
+      },
+      {
+        "package": "Quick",
+        "repositoryURL": "https://github.com/Quick/Quick",
+        "state": {
+          "branch": null,
+          "revision": "0b4ed6c706dd0cce923b5019a605a9bcc6b1b600",
+          "version": "2.0.0"
+        }
+      },
+      {
+        "package": "SignPost",
+        "repositoryURL": "https://www.github.com/doozMen/SignPost",
+        "state": {
+          "branch": null,
+          "revision": "2267389b0367f6e49a5b0fa931c28164a572dbe0",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "template-sourcery",
+        "repositoryURL": "https://www.github.com/doozMen/template-sourcery",
+        "state": {
+          "branch": null,
+          "revision": "8782d6d289be75267d4400371da682dc667039cd",
+          "version": "1.2.0"
+        }
+      },
+      {
+        "package": "ZFile",
+        "repositoryURL": "https://www.github.com/doozMen/ZFile",
+        "state": {
+          "branch": null,
+          "revision": "ab99ce43908a09897d5faad5f5e6f8bf53dcf2a0",
+          "version": "2.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

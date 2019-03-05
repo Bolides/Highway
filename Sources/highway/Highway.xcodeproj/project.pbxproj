@@ -10,24 +10,7 @@
 		FD11267F21C6924C0072607D /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
 		FD1126C121C771970072607D /* ArgumentsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1126C021C771970072607D /* ArgumentsWorker.swift */; };
 		FD1126C621C7756A0072607D /* SourceryExecutableFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1126C521C7756A0072607D /* SourceryExecutableFile.swift */; };
-		FD1126D521C77F050072607D /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
 		FD1126DC21C77F060072607D /* SignPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1126DB21C77F060072607D /* SignPostTests.swift */; };
-		FD1126DE21C77F060072607D /* SignPost.h in Headers */ = {isa = PBXBuildFile; fileRef = FD1126CE21C77F050072607D /* SignPost.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD1126E921C77F7E0072607D /* SignPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11EB21C67ACE00CB7DAD /* SignPost.swift */; };
-		FD1126EA21C77F8B0072607D /* Printable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* Printable.swift */; };
-		FD1126EB21C77F8F0072607D /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_113 /* Line.swift */; };
-		FD1126EC21C77F920072607D /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_114 /* List.swift */; };
-		FD1126ED21C77F970072607D /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_115 /* Prompt.swift */; };
-		FD1126EE21C77FAA0072607D /* SubText.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_120 /* SubText.swift */; };
-		FD1126EF21C77FAA0072607D /* String+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_116 /* String+Convenience.swift */; };
-		FD1126F021C77FAA0072607D /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_121 /* Text.swift */; };
-		FD1126F121C77FAA0072607D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_119 /* Color.swift */; };
-		FD1126F221C77FAA0072607D /* Texts+Printable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_123 /* Texts+Printable.swift */; };
-		FD1126F321C77FAA0072607D /* Texts+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_122 /* Texts+Operators.swift */; };
-		FD1126F421C77FE60072607D /* FileStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_109 /* FileStream.swift */; };
-		FD1126F721C780E40072607D /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
-		FD1126FA21C781050072607D /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
-		FD1126FD21C783130072607D /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
 		FD326D942109E3C600AE3A98 /* ArchivePlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326D932109E3C600AE3A98 /* ArchivePlist.swift */; };
 		FD326D972109F2B800AE3A98 /* GitTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326D952109F2AC00AE3A98 /* GitTool.swift */; };
 		FD326DA1210A134000AE3A98 /* DestinationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD326DA0210A134000AE3A98 /* DestinationFactory.swift */; };
@@ -40,7 +23,6 @@
 		FD34F43121BEE9EB0052222C /* GitExecutables.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34F42E21BEE9EB0052222C /* GitExecutables.swift */; };
 		FD34F6A322282BDC001D8EB1 /* TerminalMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9E221CD736C0045DDA8 /* TerminalMock.framework */; };
 		FD34F6A822282C51001D8EB1 /* ArgumentsMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A98321CD6B5D0045DDA8 /* ArgumentsMock.framework */; };
-		FD34F6AB22282CAF001D8EB1 /* SignPostMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9C721CD6F7F0045DDA8 /* SignPostMock.framework */; };
 		FD34F6AC22282E4B001D8EB1 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
 		FD34F71622284258001D8EB1 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
 		FD34F71822285A81001D8EB1 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
@@ -52,14 +34,10 @@
 		FD3F8A6C21DDE73B00BBDA58 /* SwiftFormatWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3F8A6B21DDE73B00BBDA58 /* SwiftFormatWorker.swift */; };
 		FD3F8A7C21DDE80200BBDA58 /* SwiftFormatWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A1121DDE43A00BBDA58 /* SwiftFormatWorker.framework */; };
 		FD3F8A8821DDE94100BBDA58 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3F8A6621DDE6B100BBDA58 /* AutoMockable.generated.swift */; };
-		FD3F8C9021DE18B500BBDA58 /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
 		FD3F8DC521DE5A3F00BBDA58 /* SwiftFormatWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A1121DDE43A00BBDA58 /* SwiftFormatWorker.framework */; };
 		FD5363FC222817580033D4C6 /* SourceryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5363FB222817580033D4C6 /* SourceryBuilder.swift */; };
 		FD5363FE222817B50033D4C6 /* SourceryBuilderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5363FD222817B50033D4C6 /* SourceryBuilderSpec.swift */; };
 		FD536400222818750033D4C6 /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5363FF222818750033D4C6 /* Disk.swift */; };
-		FD589F60221B0EA300335F55 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
-		FD589F64221B0EC100335F55 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
-		FD589F66221B0EC800335F55 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
 		FD74CC7D2226F35B00A65E44 /* PodExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD74CC7C2226F35B00A65E44 /* PodExecutable.swift */; };
 		FDAA4C1D2225899A0091F9C3 /* MinimalTestOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAA4C1C2225899A0091F9C3 /* MinimalTestOptions.swift */; };
 		FDAB8373222D8E1A00A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
@@ -91,11 +69,6 @@
 		FDB7A98B21CD6B950045DDA8 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A95221CD6A790045DDA8 /* AutoMockable.generated.swift */; };
 		FDB7A9BB21CD6BCC0045DDA8 /* ArgumentsMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A98321CD6B5D0045DDA8 /* ArgumentsMock.framework */; };
 		FDB7A9C121CD6CAB0045DDA8 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
-		FDB7A9CB21CD6F7F0045DDA8 /* SignPostMock.h in Headers */ = {isa = PBXBuildFile; fileRef = FDB7A9C921CD6F7F0045DDA8 /* SignPostMock.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FDB7A9D121CD70020045DDA8 /* SignPostMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9C721CD6F7F0045DDA8 /* SignPostMock.framework */; };
-		FDB7A9D221CD70140045DDA8 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A93D21CD6A780045DDA8 /* AutoMockable.generated.swift */; };
-		FDB7A9D921CD719F0045DDA8 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
-		FDB7A9DC21CD71AF0045DDA8 /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
 		FDB7A9E621CD736C0045DDA8 /* TerminalMock.h in Headers */ = {isa = PBXBuildFile; fileRef = FDB7A9E421CD736C0045DDA8 /* TerminalMock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FDB7A9EC21CD73B30045DDA8 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A94C21CD6A790045DDA8 /* AutoMockable.generated.swift */; };
 		FDB7A9EF21CD744D0045DDA8 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
@@ -108,7 +81,6 @@
 		FDB7AA1721CD81FD0045DDA8 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
 		FDB7AA1821CD82640045DDA8 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A94321CD6A780045DDA8 /* AutoMockable.generated.swift */; };
 		FDB7AA1B21CD82DD0045DDA8 /* SourceryWorkerMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7AA0D21CD81DC0045DDA8 /* SourceryWorkerMock.framework */; };
-		FDC0937B22268C2F00B054BA /* SignPostCommandLineOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC0937A22268C2F00B054BA /* SignPostCommandLineOptions.swift */; };
 		FDC093A02226924600B054BA /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		FDC093A12226924600B054BA /* Arguments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDC093A82226924600B054BA /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
@@ -119,8 +91,6 @@
 		FDC093B12226924600B054BA /* XCBuild.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDC093B42226924600B054BA /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
 		FDC093B52226924600B054BA /* Errors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDC093B82226924600B054BA /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
-		FDC093B92226924600B054BA /* SourceryAutoProtocols.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDC093BC2226924600B054BA /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; };
 		FDC093BD2226924600B054BA /* Git.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDC093C42226924600B054BA /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
@@ -129,8 +99,6 @@
 		FDC093C92226924600B054BA /* Url.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDC093CC2226924700B054BA /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
 		FDC093CD2226924700B054BA /* SourceryWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDC093D02226924700B054BA /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
-		FDC093D12226924700B054BA /* SignPost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDC093D42226924700B054BA /* SwiftFormatWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A1121DDE43A00BBDA58 /* SwiftFormatWorker.framework */; };
 		FDC093D52226924700B054BA /* SwiftFormatWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A1121DDE43A00BBDA58 /* SwiftFormatWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDC093DD2226924700B054BA /* ZFile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -155,25 +123,19 @@
 		FDC156F621C5355400E04B44 /* SourceryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC156F321C5355400E04B44 /* SourceryWorker.swift */; };
 		FDC156F721C5355400E04B44 /* Sourcery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC156F421C5355400E04B44 /* Sourcery.swift */; };
 		FDC156FA21C535A400E04B44 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
-		FDD572682228701C0016657D /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
 		FDD5726B222870510016657D /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
 		FDE2073A222D771600E44616 /* TaskMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9FC21CD7E8C0045DDA8 /* TaskMock.framework */; };
 		FDE207B8222D885A00E44616 /* CupertinoJWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFE3221B1EA7001AC549 /* CupertinoJWT.framework */; };
 		FDE207B9222D885A00E44616 /* CupertinoJWT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFE3221B1EA7001AC549 /* CupertinoJWT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDEC11E721C679DF00CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */; };
-		FDEC11E821C679E200CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */; };
 		FDEC11F421C67ED700CB7DAD /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11F221C67EAD00CB7DAD /* Worker.swift */; };
 		FDEE79CF222EBD1300D6481F /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF8221B2044001AC549 /* ZFileMock.framework */; };
 		FDEE79D0222EBD2400D6481F /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF8221B2044001AC549 /* ZFileMock.framework */; };
-		FDEE79D1222EBD4200D6481F /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF8221B2044001AC549 /* ZFileMock.framework */; };
 		FDEE79E5222EBDE200D6481F /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A95E21CD6A790045DDA8 /* AutoMockable.generated.swift */; };
 		FDEE79E6222EBDFE00D6481F /* XCBuildMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE79D7222EBD9A00D6481F /* XCBuildMock.framework */; };
 		FDEE79ED222EBE2900D6481F /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
 		FDEE79EE222EBE2E00D6481F /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
-		FDEE79EF222EBE3A00D6481F /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		FDEE79F0222EBE5300D6481F /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
 		FDEE79F1222EBE5300D6481F /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF8221B2044001AC549 /* ZFileMock.framework */; };
-		FDEE79F6222EC0A800D6481F /* SignPostMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9C721CD6F7F0045DDA8 /* SignPostMock.framework */; };
 		FDEE7A6B222EC94F00D6481F /* CarthageWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE7A62222EC94F00D6481F /* CarthageWorker.framework */; };
 		FDEE7A72222EC94F00D6481F /* CarthageWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE7A71222EC94F00D6481F /* CarthageWorkerTests.swift */; };
 		FDEE7A74222EC94F00D6481F /* CarthageWorker.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEE7A64222EC94F00D6481F /* CarthageWorker.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -197,7 +159,6 @@
 		FDEE7A9A222ECB5C00D6481F /* PrettyColors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE7A98222ECB5C00D6481F /* PrettyColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDFCEFC3221B1981001AC549 /* SwiftFormat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFC2221B1981001AC549 /* SwiftFormat.framework */; };
 		FDFCEFCD221B1A74001AC549 /* SwiftFormatWorkerMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A7221DDE7E700BBDA58 /* SwiftFormatWorkerMock.framework */; };
-		FDFCEFCE221B1ABB001AC549 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		FDFCEFD1221B1AFA001AC549 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
 		FDFCEFD4221B1D90001AC549 /* FoundationGenericHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFD3221B1D90001AC549 /* FoundationGenericHelper.framework */; };
 		FDFCEFDB221B1E43001AC549 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFDA221B1E43001AC549 /* ZFile.framework */; };
@@ -216,13 +177,10 @@
 		OBJ_269 /* Arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* Arguments.swift */; };
 		OBJ_270 /* HighwayCommandLineOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* HighwayCommandLineOption.swift */; };
 		OBJ_272 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
-		OBJ_273 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_281 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_169 /* test.swift */; };
 		OBJ_283 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		OBJ_284 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
-		OBJ_285 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_334 /* String+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_96 /* String+Error.swift */; };
-		OBJ_336 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_342 /* Git.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* Git.swift */; };
 		OBJ_343 /* GitAutotag.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* GitAutotag.swift */; };
 		OBJ_346 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
@@ -230,7 +188,6 @@
 		OBJ_350 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
 		OBJ_351 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		OBJ_352 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
-		OBJ_353 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_367 /* GitAutotagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_185 /* GitAutotagTests.swift */; };
 		OBJ_368 /* GitToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_186 /* GitToolTests.swift */; };
 		OBJ_369 /* git.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_187 /* git.swift */; };
@@ -242,14 +199,11 @@
 		OBJ_383 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
 		OBJ_384 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		OBJ_385 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
-		OBJ_386 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_626 /* abscwd.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_150 /* abscwd.swift */; };
 		OBJ_628 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
-		OBJ_629 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_637 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_167 /* test.swift */; };
 		OBJ_639 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		OBJ_640 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
-		OBJ_641 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_658 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_162 /* test.swift */; };
 		OBJ_663 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
 		OBJ_666 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
@@ -259,7 +213,6 @@
 		OBJ_671 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
 		OBJ_672 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		OBJ_673 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
-		OBJ_675 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_738 /* PathEnvironmentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_135 /* PathEnvironmentParser.swift */; };
 		OBJ_739 /* SystemExecutableProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_136 /* SystemExecutableProvider.swift */; };
 		OBJ_743 /* Channel+Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_141 /* Channel+Reader.swift */; };
@@ -272,7 +225,6 @@
 		OBJ_752 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		OBJ_754 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
 		OBJ_756 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
-		OBJ_758 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_775 /* TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_157 /* TaskTests.swift */; };
 		OBJ_780 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
 		OBJ_783 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
@@ -282,8 +234,6 @@
 		OBJ_788 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
 		OBJ_790 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
 		OBJ_791 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
-		OBJ_792 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
-		OBJ_827 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_834 /* TerminalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_177 /* TerminalTests.swift */; };
 		OBJ_839 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
 		OBJ_842 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
@@ -293,14 +243,11 @@
 		OBJ_848 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		OBJ_849 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
 		OBJ_850 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
-		OBJ_851 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_915 /* Absolute.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* Absolute.swift */; };
 		OBJ_916 /* Relative.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* Relative.swift */; };
-		OBJ_918 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_925 /* AbsoluteURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_159 /* AbsoluteURLTests.swift */; };
 		OBJ_926 /* RelativePathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_160 /* RelativePathTests.swift */; };
 		OBJ_928 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
-		OBJ_929 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_936 /* Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Archive.swift */; };
 		OBJ_937 /* ArchiveOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* ArchiveOptions.swift */; };
 		OBJ_938 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Destination.swift */; };
@@ -316,7 +263,6 @@
 		OBJ_951 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
 		OBJ_953 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		OBJ_954 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
-		OBJ_955 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_970 /* DestinationFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_164 /* DestinationFactoryTests.swift */; };
 		OBJ_971 /* XCBuild_System_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_165 /* XCBuild_System_Tests.swift */; };
 		OBJ_977 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
@@ -327,7 +273,6 @@
 		OBJ_986 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
 		OBJ_987 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		OBJ_988 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
-		OBJ_989 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -337,34 +282,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = "highway::POSIX";
 			remoteInfo = POSIX;
-		};
-		FD1126D621C77F050072607D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FD1126CB21C77F050072607D;
-			remoteInfo = SignPost;
-		};
-		FD1126F521C780DA0072607D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
-		};
-		FD1126F821C780FD0072607D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FD1126CB21C77F050072607D;
-			remoteInfo = SignPost;
-		};
-		FD1126FB21C7830B0072607D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FD1126CB21C77F050072607D;
-			remoteInfo = SignPost;
 		};
 		FD326C782109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -380,20 +297,6 @@
 			remoteGlobalIDString = "highway::Errors";
 			remoteInfo = Errors;
 		};
-		FD326C7A2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
-		};
-		FD326C7B2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
-		};
 		FD326C7E2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -408,40 +311,12 @@
 			remoteGlobalIDString = "highway::Url";
 			remoteInfo = Url;
 		};
-		FD326C822109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
-		};
-		FD326C842109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
-		};
-		FD326C852109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
-		};
 		FD326C8C2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "highway::Url";
 			remoteInfo = Url;
-		};
-		FD326C8D2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
 		};
 		FD326C922109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -477,13 +352,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = "highway::Errors";
 			remoteInfo = Errors;
-		};
-		FD326C992109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
 		};
 		FD326CAA2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -527,13 +395,6 @@
 			remoteGlobalIDString = "highway::Url";
 			remoteInfo = Url;
 		};
-		FD326CB22109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
-		};
 		FD326CF52109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -547,13 +408,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = "highway::Url";
 			remoteInfo = Url;
-		};
-		FD326CF72109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
 		};
 		FD326D0B2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -611,13 +465,6 @@
 			remoteGlobalIDString = "highway::Errors";
 			remoteInfo = Errors;
 		};
-		FD326D172109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
-		};
 		FD326D182109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -631,13 +478,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = "highway::Errors";
 			remoteInfo = Errors;
-		};
-		FD326D1A2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
 		};
 		FD326D1F2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -695,13 +535,6 @@
 			remoteGlobalIDString = "highway::Errors";
 			remoteInfo = Errors;
 		};
-		FD326D2B2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
-		};
 		FD326D2F2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -757,13 +590,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = "highway::Errors";
 			remoteInfo = Errors;
-		};
-		FD326D3B2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
 		};
 		FD326D542109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -821,13 +647,6 @@
 			remoteGlobalIDString = "highway::Terminal";
 			remoteInfo = Terminal;
 		};
-		FD326D602109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
-		};
 		FD326D642109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -884,26 +703,12 @@
 			remoteGlobalIDString = "highway::Terminal";
 			remoteInfo = Terminal;
 		};
-		FD326D702109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
-		};
 		FD326D712109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "highway::Url";
 			remoteInfo = Url;
-		};
-		FD326D722109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
 		};
 		FD34F6A422282BE8001D8EB1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -918,13 +723,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = FDB7A98221CD6B5D0045DDA8;
 			remoteInfo = ArgumentsMock;
-		};
-		FD34F6A922282CA9001D8EB1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FDB7A9C621CD6F7F0045DDA8;
-			remoteInfo = SignPostMock;
 		};
 		FD34F71922285F1A001D8EB1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -946,13 +744,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = FD3F8A1021DDE43A00BBDA58;
 			remoteInfo = SwiftformatWorker;
-		};
-		FD3F8C8E21DE18AA00BBDA58 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FD1126CB21C77F050072607D;
-			remoteInfo = SignPost;
 		};
 		FD3F8DC321DE5A3800BBDA58 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -981,27 +772,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = "highway::Arguments";
 			remoteInfo = Arguments;
-		};
-		FDB7A9CF21CD6FFA0045DDA8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FDB7A9C621CD6F7F0045DDA8;
-			remoteInfo = SignPostMock;
-		};
-		FDB7A9D721CD71960045DDA8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
-		};
-		FDB7A9DA21CD71A60045DDA8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FD1126CB21C77F050072607D;
-			remoteInfo = SignPost;
 		};
 		FDB7A9EA21CD739B0045DDA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1087,13 +857,6 @@
 			remoteGlobalIDString = "highway::Errors";
 			remoteInfo = Errors;
 		};
-		FDC093BA2226924600B054BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = "SourceryAutoProtocols-macos";
-		};
 		FDC093BE2226924600B054BA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1121,13 +884,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = FDC156DA21C5347C00E04B44;
 			remoteInfo = SourceryWorker;
-		};
-		FDC093D22226924700B054BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FD1126CB21C77F050072607D;
-			remoteInfo = SignPost;
 		};
 		FDC093D62226924700B054BA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1157,13 +913,6 @@
 			remoteGlobalIDString = "highway::Task";
 			remoteInfo = Task;
 		};
-		FDD572692228702D0016657D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FD1126CB21C77F050072607D;
-			remoteInfo = SignPost;
-		};
 		FDE20738222D771000E44616 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1178,13 +927,6 @@
 			remoteGlobalIDString = "highway::XCBuild";
 			remoteInfo = XCBuild;
 		};
-		FDEE79E9222EBE1C00D6481F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = "SourceryAutoProtocols-macos";
-		};
 		FDEE79EB222EBE2300D6481F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1198,13 +940,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = FDEE79D6222EBD9A00D6481F;
 			remoteInfo = XCBuildMock;
-		};
-		FDEE79F4222EC09E00D6481F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FDB7A9C621CD6F7F0045DDA8;
-			remoteInfo = SignPostMock;
 		};
 		FDEE7A6C222EC94F00D6481F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1234,13 +969,6 @@
 			remoteGlobalIDString = FD3F8A7121DDE7E700BBDA58;
 			remoteInfo = SwiftFormatWorkerMock;
 		};
-		FDFCEFCF221B1AC1001AC549 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = "SourceryAutoProtocols-macos";
-		};
 		FDFCEFF5221B1FD4001AC549 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1257,7 +985,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FDC093D12226924700B054BA /* SignPost.framework in Embed Frameworks */,
 				FDC093E32226924700B054BA /* Result.framework in Embed Frameworks */,
 				FDE207B9222D885A00E44616 /* CupertinoJWT.framework in Embed Frameworks */,
 				FDC093B12226924600B054BA /* XCBuild.framework in Embed Frameworks */,
@@ -1271,7 +998,6 @@
 				FDC093E12226924700B054BA /* SwiftFormat.framework in Embed Frameworks */,
 				FDC093CD2226924700B054BA /* SourceryWorker.framework in Embed Frameworks */,
 				FDEE7A97222ECB4F00D6481F /* ReactiveSwift.framework in Embed Frameworks */,
-				FDC093B92226924600B054BA /* SourceryAutoProtocols.framework in Embed Frameworks */,
 				FDC093BD2226924600B054BA /* Git.framework in Embed Frameworks */,
 				FDEE7A88222ECAB100D6481F /* XCDBLD.framework in Embed Frameworks */,
 				FDEE7A91222ECB3400D6481F /* ReactiveTask.framework in Embed Frameworks */,
@@ -1294,7 +1020,6 @@
 		FD0553A821D1291400E9B0D0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD1126C021C771970072607D /* ArgumentsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentsWorker.swift; sourceTree = "<group>"; };
 		FD1126C521C7756A0072607D /* SourceryExecutableFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryExecutableFile.swift; sourceTree = "<group>"; };
-		FD1126CC21C77F050072607D /* SignPost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SignPost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1126CE21C77F050072607D /* SignPost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignPost.h; sourceTree = "<group>"; };
 		FD1126CF21C77F050072607D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD1126D421C77F050072607D /* SignPostTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignPostTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1333,7 +1058,6 @@
 		FDAC9350210B7D4A00B0D045 /* TerminalTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminalTasks.swift; sourceTree = "<group>"; };
 		FDB74B4C22294586000B068C /* XCBuildDestinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCBuildDestinations.swift; sourceTree = "<group>"; };
 		FDB7A93A21CD6A780045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
-		FDB7A93D21CD6A780045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDB7A94021CD6A780045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDB7A94321CD6A780045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDB7A94621CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
@@ -1347,7 +1071,6 @@
 		FDB7A98321CD6B5D0045DDA8 /* ArgumentsMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArgumentsMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB7A98521CD6B5D0045DDA8 /* ArgumentsMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArgumentsMock.h; sourceTree = "<group>"; };
 		FDB7A98621CD6B5D0045DDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDB7A9C721CD6F7F0045DDA8 /* SignPostMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SignPostMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB7A9C921CD6F7F0045DDA8 /* SignPostMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignPostMock.h; sourceTree = "<group>"; };
 		FDB7A9CA21CD6F7F0045DDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDB7A9E221CD736C0045DDA8 /* TerminalMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TerminalMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1381,8 +1104,6 @@
 		FDC156F321C5355400E04B44 /* SourceryWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceryWorker.swift; sourceTree = "<group>"; };
 		FDC156F421C5355400E04B44 /* Sourcery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sourcery.swift; sourceTree = "<group>"; };
 		FDC1571421C5485900E04B44 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
-		FDE9B6F721C58ED400D1F50A /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryAutoProtocols.swift; sourceTree = "<group>"; };
 		FDEC11EB21C67ACE00CB7DAD /* SignPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignPost.swift; sourceTree = "<group>"; };
 		FDEC11F221C67EAD00CB7DAD /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 		FDECFC43221B4B8700EA1E33 /* Cartfile.private */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile.private; path = ../../Cartfile.private; sourceTree = "<group>"; };
@@ -1468,7 +1189,6 @@
 		"highway::POSIX::Product" /* POSIX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = POSIX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::POSIXTests::Product" /* POSIXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = POSIXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::ResultTests::Product" /* ResultTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ResultTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		"highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::Task::Product" /* Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::TaskTests::Product" /* TaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = TaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::Terminal::Product" /* Terminal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Terminal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1480,20 +1200,10 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FD1126C921C77F050072607D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FD1126F721C780E40072607D /* SourceryAutoProtocols.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FD1126D121C77F050072607D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD1126D521C77F050072607D /* SignPost.framework in Frameworks */,
-				FDB7A9D121CD70020045DDA8 /* SignPostMock.framework in Frameworks */,
 				FDAB837F222D8E4100A6A826 /* Quick.framework in Frameworks */,
 				FDAB8380222D8E4100A6A826 /* Nimble.framework in Frameworks */,
 			);
@@ -1505,9 +1215,7 @@
 			files = (
 				FDC093F02226AD7200B054BA /* Errors.framework in Frameworks */,
 				FDC093EF2226AD2400B054BA /* Arguments.framework in Frameworks */,
-				FDFCEFCE221B1ABB001AC549 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDFCEFD4221B1D90001AC549 /* FoundationGenericHelper.framework in Frameworks */,
-				FD3F8C9021DE18B500BBDA58 /* SignPost.framework in Frameworks */,
 				FDFCEFD1221B1AFA001AC549 /* ZFile.framework in Frameworks */,
 				FDFCEFC3221B1981001AC549 /* SwiftFormat.framework in Frameworks */,
 			);
@@ -1517,7 +1225,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDEE79F6222EC0A800D6481F /* SignPostMock.framework in Frameworks */,
 				FD3F8A1A21DDE43A00BBDA58 /* SwiftFormatWorker.framework in Frameworks */,
 				FDFCEFCD221B1A74001AC549 /* SwiftFormatWorkerMock.framework in Frameworks */,
 				FDAB837D222D8E3B00A6A826 /* Quick.framework in Frameworks */,
@@ -1543,19 +1250,6 @@
 				FDFCEFDF221B1E53001AC549 /* FoundationGenericHelper.framework in Frameworks */,
 				FDFCEFDB221B1E43001AC549 /* ZFile.framework in Frameworks */,
 				FDB7A9C121CD6CAB0045DDA8 /* Arguments.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FDB7A9C421CD6F7F0045DDA8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FDEE79D1222EBD4200D6481F /* ZFileMock.framework in Frameworks */,
-				FD589F66221B0EC800335F55 /* Quick.framework in Frameworks */,
-				FD589F64221B0EC100335F55 /* Nimble.framework in Frameworks */,
-				FD589F60221B0EA300335F55 /* ZFile.framework in Frameworks */,
-				FDB7A9D921CD719F0045DDA8 /* SourceryAutoProtocols.framework in Frameworks */,
-				FDB7A9DC21CD71AF0045DDA8 /* SignPost.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1596,7 +1290,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD34F71622284258001D8EB1 /* ZFile.framework in Frameworks */,
-				FDC093D02226924700B054BA /* SignPost.framework in Frameworks */,
 				FDC093E22226924700B054BA /* Result.framework in Frameworks */,
 				FDC093B02226924600B054BA /* XCBuild.framework in Frameworks */,
 				FDEE7A99222ECB5C00D6481F /* PrettyColors.framework in Frameworks */,
@@ -1609,7 +1302,6 @@
 				FDC093CC2226924700B054BA /* SourceryWorker.framework in Frameworks */,
 				FDE207B8222D885A00E44616 /* CupertinoJWT.framework in Frameworks */,
 				FDEE7A96222ECB4F00D6481F /* ReactiveSwift.framework in Frameworks */,
-				FDC093B82226924600B054BA /* SourceryAutoProtocols.framework in Frameworks */,
 				FDC093BC2226924600B054BA /* Git.framework in Frameworks */,
 				FDEE7A87222ECAB100D6481F /* XCDBLD.framework in Frameworks */,
 				FDEE7A90222ECB3400D6481F /* ReactiveTask.framework in Frameworks */,
@@ -1629,7 +1321,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD3F8DC521DE5A3F00BBDA58 /* SwiftFormatWorker.framework in Frameworks */,
-				FD1126FA21C781050072607D /* SignPost.framework in Frameworks */,
 				FDC156FA21C535A400E04B44 /* Terminal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1642,7 +1333,6 @@
 				FDAB8373222D8E1A00A6A826 /* Quick.framework in Frameworks */,
 				FDAB8374222D8E1A00A6A826 /* Nimble.framework in Frameworks */,
 				FD34F6AC22282E4B001D8EB1 /* ZFile.framework in Frameworks */,
-				FD34F6AB22282CAF001D8EB1 /* SignPostMock.framework in Frameworks */,
 				FD34F6A822282C51001D8EB1 /* ArgumentsMock.framework in Frameworks */,
 				FD34F6A322282BDC001D8EB1 /* TerminalMock.framework in Frameworks */,
 				FDB7AA1B21CD82DD0045DDA8 /* SourceryWorkerMock.framework in Frameworks */,
@@ -1650,18 +1340,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FDE9B6F421C58ED400D1F50A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FDEE79D4222EBD9A00D6481F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDEE79EF222EBE3A00D6481F /* SourceryAutoProtocols.framework in Frameworks */,
 				FDEE79F0222EBE5300D6481F /* ZFile.framework in Frameworks */,
 				FDEE79F1222EBE5300D6481F /* ZFileMock.framework in Frameworks */,
 				FDEE79EE222EBE2E00D6481F /* Arguments.framework in Frameworks */,
@@ -1689,8 +1371,6 @@
 			buildActionMask = 0;
 			files = (
 				FDD5726B222870510016657D /* ZFile.framework in Frameworks */,
-				OBJ_273 /* SourceryAutoProtocols.framework in Frameworks */,
-				FDD572682228701C0016657D /* SignPost.framework in Frameworks */,
 				OBJ_272 /* Errors.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1699,7 +1379,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_285 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDB7A9BB21CD6BCC0045DDA8 /* ArgumentsMock.framework in Frameworks */,
 				FDAB8375222D8E2000A6A826 /* Quick.framework in Frameworks */,
 				FDAB8376222D8E2000A6A826 /* Nimble.framework in Frameworks */,
@@ -1712,7 +1391,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_336 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1725,7 +1403,6 @@
 				OBJ_350 /* Url.framework in Frameworks */,
 				OBJ_351 /* Arguments.framework in Frameworks */,
 				OBJ_352 /* Errors.framework in Frameworks */,
-				OBJ_353 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1733,7 +1410,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_386 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDB7A8AD21CD58600045DDA8 /* SourceryWorker.framework in Frameworks */,
 				OBJ_374 /* XCBuild.framework in Frameworks */,
 				FDAB8377222D8E2800A6A826 /* Quick.framework in Frameworks */,
@@ -1753,7 +1429,6 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_628 /* Url.framework in Frameworks */,
-				OBJ_629 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1765,7 +1440,6 @@
 				OBJ_640 /* Url.framework in Frameworks */,
 				FDAB8379222D8E2E00A6A826 /* Quick.framework in Frameworks */,
 				FDAB837A222D8E2E00A6A826 /* Nimble.framework in Frameworks */,
-				OBJ_641 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1783,14 +1457,6 @@
 				OBJ_671 /* Url.framework in Frameworks */,
 				OBJ_672 /* Arguments.framework in Frameworks */,
 				OBJ_673 /* Errors.framework in Frameworks */,
-				OBJ_675 /* SourceryAutoProtocols.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_698 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1802,11 +1468,9 @@
 				FDFCF00C221B221E001AC549 /* ZFile.framework in Frameworks */,
 				OBJ_752 /* Arguments.framework in Frameworks */,
 				FDFCEFE2221B1E97001AC549 /* Result.framework in Frameworks */,
-				FD1126FD21C783130072607D /* SignPost.framework in Frameworks */,
 				FDAC932A210B595100B0D045 /* POSIX.framework in Frameworks */,
 				OBJ_754 /* Errors.framework in Frameworks */,
 				OBJ_756 /* Url.framework in Frameworks */,
-				OBJ_758 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1825,7 +1489,6 @@
 				OBJ_791 /* Terminal.framework in Frameworks */,
 				FDAB8381222D8E4D00A6A826 /* Quick.framework in Frameworks */,
 				FDAB8382222D8E4D00A6A826 /* Nimble.framework in Frameworks */,
-				OBJ_792 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1834,7 +1497,6 @@
 			buildActionMask = 0;
 			files = (
 				FD11267F21C6924C0072607D /* Task.framework in Frameworks */,
-				OBJ_827 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1842,7 +1504,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_851 /* SourceryAutoProtocols.framework in Frameworks */,
 				OBJ_839 /* XCBuild.framework in Frameworks */,
 				OBJ_842 /* POSIX.framework in Frameworks */,
 				OBJ_843 /* Git.framework in Frameworks */,
@@ -1860,7 +1521,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_918 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1869,7 +1529,6 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_928 /* Url.framework in Frameworks */,
-				OBJ_929 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDAB8385222D8E5C00A6A826 /* Quick.framework in Frameworks */,
 				FDAB8386222D8E5C00A6A826 /* Nimble.framework in Frameworks */,
 			);
@@ -1885,7 +1544,6 @@
 				OBJ_951 /* Terminal.framework in Frameworks */,
 				OBJ_953 /* POSIX.framework in Frameworks */,
 				OBJ_954 /* Url.framework in Frameworks */,
-				OBJ_955 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1893,7 +1551,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_989 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDEE79E6222EBDFE00D6481F /* XCBuildMock.framework in Frameworks */,
 				OBJ_987 /* Arguments.framework in Frameworks */,
 				FD34F71B2228603A001D8EB1 /* ArgumentsMock.framework in Frameworks */,
@@ -2007,14 +1664,6 @@
 				FDB7A93A21CD6A780045DDA8 /* AutoMockable.generated.swift */,
 			);
 			path = Url;
-			sourceTree = "<group>";
-		};
-		FDB7A93B21CD6A780045DDA8 /* SignPost */ = {
-			isa = PBXGroup;
-			children = (
-				FDB7A93D21CD6A780045DDA8 /* AutoMockable.generated.swift */,
-			);
-			path = SignPost;
 			sourceTree = "<group>";
 		};
 		FDB7A93E21CD6A780045DDA8 /* Task */ = {
@@ -2183,14 +1832,6 @@
 			path = ../Tests/SourceryWorkerTests;
 			sourceTree = "<group>";
 		};
-		FDE0B76421D7BF960093CBCB /* SourceryAutoProtocols */ = {
-			isa = PBXGroup;
-			children = (
-				FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */,
-			);
-			path = SourceryAutoProtocols;
-			sourceTree = "<group>";
-		};
 		FDEC11E021C679B600CB7DAD /* AutoGeneratedCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -2201,7 +1842,6 @@
 				FDB7A95621CD6A790045DDA8 /* Git */,
 				FDB7A94D21CD6A790045DDA8 /* POSIX */,
 				FDB7A95921CD6A790045DDA8 /* Result */,
-				FDB7A93B21CD6A780045DDA8 /* SignPost */,
 				FDB7A94121CD6A780045DDA8 /* SourceryWorker */,
 				FD3F8A6421DDE6B100BBDA58 /* SwiftformatWorker */,
 				FDB7A93E21CD6A780045DDA8 /* Task */,
@@ -2423,7 +2063,6 @@
 				"highway::XCBuild::Product" /* XCBuild.framework */,
 				"highway::ResultTests::Product" /* ResultTests.xctest */,
 				"highway::Errors::Product" /* Errors.framework */,
-				"highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */,
 				"highway::Git::Product" /* Git.framework */,
 				"highway::TaskTests::Product" /* TaskTests.xctest */,
 				"highway::Task::Product" /* Task.framework */,
@@ -2432,11 +2071,8 @@
 				"highway::UrlTests::Product" /* UrlTests.xctest */,
 				FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */,
 				FDC156E321C5347D00E04B44 /* SourceryWorkerTests.xctest */,
-				FDE9B6F721C58ED400D1F50A /* SourceryAutoProtocols.framework */,
-				FD1126CC21C77F050072607D /* SignPost.framework */,
 				FD1126D421C77F050072607D /* SignPostTests.xctest */,
 				FDB7A98321CD6B5D0045DDA8 /* ArgumentsMock.framework */,
-				FDB7A9C721CD6F7F0045DDA8 /* SignPostMock.framework */,
 				FDB7A9E221CD736C0045DDA8 /* TerminalMock.framework */,
 				FDB7A9FC21CD7E8C0045DDA8 /* TaskMock.framework */,
 				FDB7AA0D21CD81DC0045DDA8 /* SourceryWorkerMock.framework */,
@@ -2503,7 +2139,6 @@
 				OBJ_48 /* Git */,
 				OBJ_149 /* POSIX */,
 				FD1126CD21C77F050072607D /* SignPost */,
-				FDE0B76421D7BF960093CBCB /* SourceryAutoProtocols */,
 				FDC156DC21C5347C00E04B44 /* SourceryWorker */,
 				FD3F8A1221DDE43A00BBDA58 /* SwiftFormatWorker */,
 				OBJ_132 /* Task */,
@@ -2563,14 +2198,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		FD1126C721C77F050072607D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FD1126DE21C77F060072607D /* SignPost.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FD3F8A0C21DDE43A00BBDA58 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2591,14 +2218,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDB7A98721CD6B5D0045DDA8 /* ArgumentsMock.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FDB7A9C221CD6F7F0045DDA8 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FDB7A9CB21CD6F7F0045DDA8 /* SignPostMock.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2634,13 +2253,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FDE9B6F221C58ED400D1F50A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FDEE79D2222EBD9A00D6481F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2659,25 +2271,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		FD1126CB21C77F050072607D /* SignPost */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FD1126E321C77F060072607D /* Build configuration list for PBXNativeTarget "SignPost" */;
-			buildPhases = (
-				FD1126C721C77F050072607D /* Headers */,
-				FD1126C821C77F050072607D /* Sources */,
-				FD1126C921C77F050072607D /* Frameworks */,
-				FD1126CA21C77F050072607D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FD1126F621C780DA0072607D /* PBXTargetDependency */,
-			);
-			name = SignPost;
-			productName = SignPost;
-			productReference = FD1126CC21C77F050072607D /* SignPost.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		FD1126D321C77F050072607D /* SignPostTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD1126E621C77F060072607D /* Build configuration list for PBXNativeTarget "SignPostTests" */;
@@ -2689,8 +2282,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FD1126D721C77F050072607D /* PBXTargetDependency */,
-				FDB7A9D021CD6FFA0045DDA8 /* PBXTargetDependency */,
 			);
 			name = SignPostTests;
 			productName = SignPostTests;
@@ -2709,8 +2300,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FDFCEFD0221B1AC1001AC549 /* PBXTargetDependency */,
-				FD3F8C8F21DE18AA00BBDA58 /* PBXTargetDependency */,
 			);
 			name = SwiftFormatWorker;
 			productName = SwiftformatWorker;
@@ -2728,7 +2317,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FDEE79F5222EC09E00D6481F /* PBXTargetDependency */,
 				FD3F8A1C21DDE43A00BBDA58 /* PBXTargetDependency */,
 				FDFCEFCC221B1A6B001AC549 /* PBXTargetDependency */,
 			);
@@ -2773,26 +2361,6 @@
 			name = ArgumentsMock;
 			productName = ArgumentsMock;
 			productReference = FDB7A98321CD6B5D0045DDA8 /* ArgumentsMock.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		FDB7A9C621CD6F7F0045DDA8 /* SignPostMock */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FDB7A9CC21CD6F7F0045DDA8 /* Build configuration list for PBXNativeTarget "SignPostMock" */;
-			buildPhases = (
-				FDB7A9C221CD6F7F0045DDA8 /* Headers */,
-				FDB7A9C321CD6F7F0045DDA8 /* Sources */,
-				FDB7A9C421CD6F7F0045DDA8 /* Frameworks */,
-				FDB7A9C521CD6F7F0045DDA8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FDB7A9D821CD71960045DDA8 /* PBXTargetDependency */,
-				FDB7A9DB21CD71A60045DDA8 /* PBXTargetDependency */,
-			);
-			name = SignPostMock;
-			productName = SignPostMock;
-			productReference = FDB7A9C721CD6F7F0045DDA8 /* SignPostMock.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		FDB7A9E121CD736C0045DDA8 /* TerminalMock */ = {
@@ -2871,12 +2439,10 @@
 				FDC093AF2226924600B054BA /* PBXTargetDependency */,
 				FDC093B32226924600B054BA /* PBXTargetDependency */,
 				FDC093B72226924600B054BA /* PBXTargetDependency */,
-				FDC093BB2226924600B054BA /* PBXTargetDependency */,
 				FDC093BF2226924600B054BA /* PBXTargetDependency */,
 				FDC093C72226924600B054BA /* PBXTargetDependency */,
 				FDC093CB2226924600B054BA /* PBXTargetDependency */,
 				FDC093CF2226924700B054BA /* PBXTargetDependency */,
-				FDC093D32226924700B054BA /* PBXTargetDependency */,
 				FDC093D72226924700B054BA /* PBXTargetDependency */,
 				FDEE7A76222EC94F00D6481F /* PBXTargetDependency */,
 			);
@@ -2898,7 +2464,6 @@
 			);
 			dependencies = (
 				FD3F8DC421DE5A3800BBDA58 /* PBXTargetDependency */,
-				FD1126F921C780FD0072607D /* PBXTargetDependency */,
 				FDC156F921C5359C00E04B44 /* PBXTargetDependency */,
 			);
 			name = SourceryWorker;
@@ -2917,7 +2482,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FD34F6AA22282CA9001D8EB1 /* PBXTargetDependency */,
 				FD34F6A722282C4B001D8EB1 /* PBXTargetDependency */,
 				FD34F6A522282BE8001D8EB1 /* PBXTargetDependency */,
 				FDB7AA1A21CD82D50045DDA8 /* PBXTargetDependency */,
@@ -2927,24 +2491,6 @@
 			productName = SourceryWorkerTests;
 			productReference = FDC156E321C5347D00E04B44 /* SourceryWorkerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		FDE9B6F621C58ED400D1F50A /* SourceryAutoProtocols-ios */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FDE9B70821C58ED500D1F50A /* Build configuration list for PBXNativeTarget "SourceryAutoProtocols-ios" */;
-			buildPhases = (
-				FDE9B6F221C58ED400D1F50A /* Headers */,
-				FDE9B6F321C58ED400D1F50A /* Sources */,
-				FDE9B6F421C58ED400D1F50A /* Frameworks */,
-				FDE9B6F521C58ED400D1F50A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "SourceryAutoProtocols-ios";
-			productName = SourceryAutoGenerateProtocols;
-			productReference = FDE9B6F721C58ED400D1F50A /* SourceryAutoProtocols.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 		FDEE79D6222EBD9A00D6481F /* XCBuildMock */ = {
 			isa = PBXNativeTarget;
@@ -2959,7 +2505,6 @@
 			);
 			dependencies = (
 				FDEE79EC222EBE2300D6481F /* PBXTargetDependency */,
-				FDEE79EA222EBE1C00D6481F /* PBXTargetDependency */,
 				FDEE79E8222EBE1600D6481F /* PBXTargetDependency */,
 			);
 			name = XCBuildMock;
@@ -3014,8 +2559,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_275 /* PBXTargetDependency */,
-				FDD5726A2228702D0016657D /* PBXTargetDependency */,
 				OBJ_274 /* PBXTargetDependency */,
 			);
 			name = Arguments;
@@ -3033,7 +2576,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_288 /* PBXTargetDependency */,
 				FDB7A9BA21CD6BBE0045DDA8 /* PBXTargetDependency */,
 				OBJ_286 /* PBXTargetDependency */,
 				OBJ_287 /* PBXTargetDependency */,
@@ -3053,7 +2595,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_337 /* PBXTargetDependency */,
 			);
 			name = Errors;
 			productName = Errors;
@@ -3075,7 +2616,6 @@
 				OBJ_358 /* PBXTargetDependency */,
 				OBJ_359 /* PBXTargetDependency */,
 				OBJ_360 /* PBXTargetDependency */,
-				OBJ_361 /* PBXTargetDependency */,
 			);
 			name = Git;
 			productName = Git;
@@ -3092,7 +2632,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_402 /* PBXTargetDependency */,
 				FDB7A8AC21CD58540045DDA8 /* PBXTargetDependency */,
 				OBJ_390 /* PBXTargetDependency */,
 				OBJ_393 /* PBXTargetDependency */,
@@ -3119,7 +2658,6 @@
 			);
 			dependencies = (
 				OBJ_630 /* PBXTargetDependency */,
-				OBJ_631 /* PBXTargetDependency */,
 			);
 			name = POSIX;
 			productName = POSIX;
@@ -3138,7 +2676,6 @@
 			dependencies = (
 				OBJ_642 /* PBXTargetDependency */,
 				OBJ_643 /* PBXTargetDependency */,
-				OBJ_644 /* PBXTargetDependency */,
 			);
 			name = POSIXTests;
 			productName = POSIXTests;
@@ -3163,28 +2700,11 @@
 				OBJ_687 /* PBXTargetDependency */,
 				OBJ_688 /* PBXTargetDependency */,
 				OBJ_689 /* PBXTargetDependency */,
-				OBJ_691 /* PBXTargetDependency */,
 			);
 			name = ResultTests;
 			productName = ResultTests;
 			productReference = "highway::ResultTests::Product" /* ResultTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		"highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_692 /* Build configuration list for PBXNativeTarget "SourceryAutoProtocols-macos" */;
-			buildPhases = (
-				OBJ_695 /* Sources */,
-				OBJ_698 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "SourceryAutoProtocols-macos";
-			productName = SourceryAutoProtocols;
-			productReference = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 		"highway::Task" /* Task */ = {
 			isa = PBXNativeTarget;
@@ -3197,9 +2717,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_765 /* PBXTargetDependency */,
 				OBJ_759 /* PBXTargetDependency */,
-				FD1126FC21C7830B0072607D /* PBXTargetDependency */,
 				FD0F7C712188859900F84604 /* PBXTargetDependency */,
 				OBJ_761 /* PBXTargetDependency */,
 				OBJ_763 /* PBXTargetDependency */,
@@ -3219,7 +2737,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_808 /* PBXTargetDependency */,
 				FDB7AA0521CD7EEE0045DDA8 /* PBXTargetDependency */,
 				OBJ_796 /* PBXTargetDependency */,
 				OBJ_799 /* PBXTargetDependency */,
@@ -3245,7 +2762,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_828 /* PBXTargetDependency */,
 				FDC156FC21C5363C00E04B44 /* PBXTargetDependency */,
 			);
 			name = Terminal;
@@ -3263,7 +2779,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_867 /* PBXTargetDependency */,
 				FDB7A9EB21CD739B0045DDA8 /* PBXTargetDependency */,
 				OBJ_855 /* PBXTargetDependency */,
 				OBJ_858 /* PBXTargetDependency */,
@@ -3289,7 +2804,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_919 /* PBXTargetDependency */,
 			);
 			name = Url;
 			productName = Url;
@@ -3307,7 +2821,6 @@
 			);
 			dependencies = (
 				OBJ_930 /* PBXTargetDependency */,
-				OBJ_931 /* PBXTargetDependency */,
 			);
 			name = UrlTests;
 			productName = UrlTests;
@@ -3330,7 +2843,6 @@
 				OBJ_960 /* PBXTargetDependency */,
 				OBJ_962 /* PBXTargetDependency */,
 				OBJ_963 /* PBXTargetDependency */,
-				OBJ_964 /* PBXTargetDependency */,
 			);
 			name = XCBuild;
 			productName = XCBuild;
@@ -3347,7 +2859,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_1006 /* PBXTargetDependency */,
 				OBJ_1004 /* PBXTargetDependency */,
 				FD34F71A22285F1A001D8EB1 /* PBXTargetDependency */,
 				OBJ_999 /* PBXTargetDependency */,
@@ -3374,11 +2885,6 @@
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				TargetAttributes = {
-					FD1126CB21C77F050072607D = {
-						CreatedOnToolsVersion = 10.1;
-						DevelopmentTeam = WWFDRU947Q;
-						ProvisioningStyle = Manual;
-					};
 					FD1126D321C77F050072607D = {
 						CreatedOnToolsVersion = 10.1;
 						DevelopmentTeam = WWFDRU947Q;
@@ -3399,11 +2905,6 @@
 						ProvisioningStyle = Manual;
 					};
 					FDB7A98221CD6B5D0045DDA8 = {
-						CreatedOnToolsVersion = 10.1;
-						DevelopmentTeam = WWFDRU947Q;
-						ProvisioningStyle = Manual;
-					};
-					FDB7A9C621CD6F7F0045DDA8 = {
 						CreatedOnToolsVersion = 10.1;
 						DevelopmentTeam = WWFDRU947Q;
 						ProvisioningStyle = Manual;
@@ -3434,11 +2935,6 @@
 						ProvisioningStyle = Manual;
 					};
 					FDC156E221C5347D00E04B44 = {
-						CreatedOnToolsVersion = 10.1;
-						DevelopmentTeam = WWFDRU947Q;
-						ProvisioningStyle = Manual;
-					};
-					FDE9B6F621C58ED400D1F50A = {
 						CreatedOnToolsVersion = 10.1;
 						DevelopmentTeam = WWFDRU947Q;
 						ProvisioningStyle = Manual;
@@ -3494,11 +2990,6 @@
 					"highway::ResultTests" = {
 						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1010;
-						ProvisioningStyle = Manual;
-					};
-					"highway::SourceryAutoProtocols" = {
-						DevelopmentTeam = WWFDRU947Q;
-						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
 					};
 					"highway::Task" = {
@@ -3563,10 +3054,6 @@
 				"highway::Errors" /* Errors */,
 				"highway::Git" /* Git */,
 				"highway::POSIX" /* POSIX */,
-				FD1126CB21C77F050072607D /* SignPost */,
-				FDB7A9C621CD6F7F0045DDA8 /* SignPostMock */,
-				"highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */,
-				FDE9B6F621C58ED400D1F50A /* SourceryAutoProtocols-ios */,
 				FDC156DA21C5347C00E04B44 /* SourceryWorker */,
 				FDB7AA0C21CD81DC0045DDA8 /* SourceryWorkerMock */,
 				FD3F8A1021DDE43A00BBDA58 /* SwiftFormatWorker */,
@@ -3595,13 +3082,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FD1126CA21C77F050072607D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FD1126D221C77F050072607D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3631,13 +3111,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FDB7A98121CD6B5D0045DDA8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FDB7A9C521CD6F7F0045DDA8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3682,13 +3155,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FDC156E121C5347D00E04B44 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FDE9B6F521C58ED400D1F50A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3740,26 +3206,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FD1126C821C77F050072607D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FD1126EB21C77F8F0072607D /* Line.swift in Sources */,
-				FD1126EC21C77F920072607D /* List.swift in Sources */,
-				FD1126F021C77FAA0072607D /* Text.swift in Sources */,
-				FD1126F321C77FAA0072607D /* Texts+Operators.swift in Sources */,
-				FDC0937B22268C2F00B054BA /* SignPostCommandLineOptions.swift in Sources */,
-				FD1126E921C77F7E0072607D /* SignPost.swift in Sources */,
-				FD1126EE21C77FAA0072607D /* SubText.swift in Sources */,
-				FD1126EA21C77F8B0072607D /* Printable.swift in Sources */,
-				FD1126F421C77FE60072607D /* FileStream.swift in Sources */,
-				FD1126EF21C77FAA0072607D /* String+Convenience.swift in Sources */,
-				FD1126ED21C77F970072607D /* Prompt.swift in Sources */,
-				FD1126F221C77FAA0072607D /* Texts+Printable.swift in Sources */,
-				FD1126F121C77FAA0072607D /* Color.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FD1126D021C77F050072607D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3797,14 +3243,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDB7A98B21CD6B950045DDA8 /* AutoMockable.generated.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FDB7A9C321CD6F7F0045DDA8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FDB7A9D221CD70140045DDA8 /* AutoMockable.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3861,14 +3299,6 @@
 			files = (
 				FD5363FE222817B50033D4C6 /* SourceryBuilderSpec.swift in Sources */,
 				FDC156E921C5347D00E04B44 /* SourceryWorkerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FDE9B6F321C58ED400D1F50A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FDEC11E721C679DF00CB7DAD /* SourceryAutoProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3965,14 +3395,6 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_658 /* test.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_695 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				FDEC11E821C679E200CB7DAD /* SourceryAutoProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4078,26 +3500,6 @@
 			target = "highway::POSIX" /* POSIX */;
 			targetProxy = FD0F7C702188859900F84604 /* PBXContainerItemProxy */;
 		};
-		FD1126D721C77F050072607D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FD1126CB21C77F050072607D /* SignPost */;
-			targetProxy = FD1126D621C77F050072607D /* PBXContainerItemProxy */;
-		};
-		FD1126F621C780DA0072607D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FD1126F521C780DA0072607D /* PBXContainerItemProxy */;
-		};
-		FD1126F921C780FD0072607D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FD1126CB21C77F050072607D /* SignPost */;
-			targetProxy = FD1126F821C780FD0072607D /* PBXContainerItemProxy */;
-		};
-		FD1126FC21C7830B0072607D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FD1126CB21C77F050072607D /* SignPost */;
-			targetProxy = FD1126FB21C7830B0072607D /* PBXContainerItemProxy */;
-		};
 		FD34F6A522282BE8001D8EB1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FDB7A9E121CD736C0045DDA8 /* TerminalMock */;
@@ -4107,11 +3509,6 @@
 			isa = PBXTargetDependency;
 			target = FDB7A98221CD6B5D0045DDA8 /* ArgumentsMock */;
 			targetProxy = FD34F6A622282C4B001D8EB1 /* PBXContainerItemProxy */;
-		};
-		FD34F6AA22282CA9001D8EB1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FDB7A9C621CD6F7F0045DDA8 /* SignPostMock */;
-			targetProxy = FD34F6A922282CA9001D8EB1 /* PBXContainerItemProxy */;
 		};
 		FD34F71A22285F1A001D8EB1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4127,11 +3524,6 @@
 			isa = PBXTargetDependency;
 			target = FD3F8A1021DDE43A00BBDA58 /* SwiftFormatWorker */;
 			targetProxy = FD3F8A7A21DDE7F900BBDA58 /* PBXContainerItemProxy */;
-		};
-		FD3F8C8F21DE18AA00BBDA58 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FD1126CB21C77F050072607D /* SignPost */;
-			targetProxy = FD3F8C8E21DE18AA00BBDA58 /* PBXContainerItemProxy */;
 		};
 		FD3F8DC421DE5A3800BBDA58 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4152,21 +3544,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::Arguments" /* Arguments */;
 			targetProxy = FDB7A9BF21CD6CA50045DDA8 /* PBXContainerItemProxy */;
-		};
-		FDB7A9D021CD6FFA0045DDA8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FDB7A9C621CD6F7F0045DDA8 /* SignPostMock */;
-			targetProxy = FDB7A9CF21CD6FFA0045DDA8 /* PBXContainerItemProxy */;
-		};
-		FDB7A9D821CD71960045DDA8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FDB7A9D721CD71960045DDA8 /* PBXContainerItemProxy */;
-		};
-		FDB7A9DB21CD71A60045DDA8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FD1126CB21C77F050072607D /* SignPost */;
-			targetProxy = FDB7A9DA21CD71A60045DDA8 /* PBXContainerItemProxy */;
 		};
 		FDB7A9EB21CD739B0045DDA8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4228,11 +3605,6 @@
 			target = "highway::Errors" /* Errors */;
 			targetProxy = FDC093B62226924600B054BA /* PBXContainerItemProxy */;
 		};
-		FDC093BB2226924600B054BA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FDC093BA2226924600B054BA /* PBXContainerItemProxy */;
-		};
 		FDC093BF2226924600B054BA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::Git" /* Git */;
@@ -4252,11 +3624,6 @@
 			isa = PBXTargetDependency;
 			target = FDC156DA21C5347C00E04B44 /* SourceryWorker */;
 			targetProxy = FDC093CE2226924700B054BA /* PBXContainerItemProxy */;
-		};
-		FDC093D32226924700B054BA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FD1126CB21C77F050072607D /* SignPost */;
-			targetProxy = FDC093D22226924700B054BA /* PBXContainerItemProxy */;
 		};
 		FDC093D72226924700B054BA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4278,11 +3645,6 @@
 			target = "highway::Task" /* Task */;
 			targetProxy = FDC156FB21C5363C00E04B44 /* PBXContainerItemProxy */;
 		};
-		FDD5726A2228702D0016657D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FD1126CB21C77F050072607D /* SignPost */;
-			targetProxy = FDD572692228702D0016657D /* PBXContainerItemProxy */;
-		};
 		FDE20739222D771000E44616 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FDB7A9FB21CD7E8C0045DDA8 /* TaskMock */;
@@ -4293,11 +3655,6 @@
 			target = "highway::XCBuild" /* XCBuild */;
 			targetProxy = FDEE79E7222EBE1600D6481F /* PBXContainerItemProxy */;
 		};
-		FDEE79EA222EBE1C00D6481F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FDEE79E9222EBE1C00D6481F /* PBXContainerItemProxy */;
-		};
 		FDEE79EC222EBE2300D6481F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::Arguments" /* Arguments */;
@@ -4307,11 +3664,6 @@
 			isa = PBXTargetDependency;
 			target = FDEE79D6222EBD9A00D6481F /* XCBuildMock */;
 			targetProxy = FDEE79F2222EBF2000D6481F /* PBXContainerItemProxy */;
-		};
-		FDEE79F5222EC09E00D6481F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FDB7A9C621CD6F7F0045DDA8 /* SignPostMock */;
-			targetProxy = FDEE79F4222EC09E00D6481F /* PBXContainerItemProxy */;
 		};
 		FDEE7A6D222EC94F00D6481F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4332,11 +3684,6 @@
 			isa = PBXTargetDependency;
 			target = FD3F8A7121DDE7E700BBDA58 /* SwiftFormatWorkerMock */;
 			targetProxy = FDFCEFCB221B1A6B001AC549 /* PBXContainerItemProxy */;
-		};
-		FDFCEFD0221B1AC1001AC549 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FDFCEFCF221B1AC1001AC549 /* PBXContainerItemProxy */;
 		};
 		FDFCEFF6221B1FD4001AC549 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4363,20 +3710,10 @@
 			target = "highway::Errors" /* Errors */;
 			targetProxy = FD326D2A2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
-		OBJ_1006 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FD326D2B2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
 		OBJ_274 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::Errors" /* Errors */;
 			targetProxy = FD326C792109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_275 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FD326C7B2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_286 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4387,16 +3724,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::Errors" /* Errors */;
 			targetProxy = FD326D192109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_288 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FD326D1A2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_337 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FD326C7A2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_354 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4422,11 +3749,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::Errors" /* Errors */;
 			targetProxy = FD326C982109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_361 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FD326C992109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_390 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4468,20 +3790,10 @@
 			target = "highway::Errors" /* Errors */;
 			targetProxy = FD326D162109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
-		OBJ_402 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FD326D172109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
 		OBJ_630 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::Url" /* Url */;
 			targetProxy = FD326C8C2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_631 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FD326C8D2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_642 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4492,11 +3804,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::Url" /* Url */;
 			targetProxy = FD326CF62109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_644 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FD326CF72109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_679 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4538,11 +3845,6 @@
 			target = "highway::Errors" /* Errors */;
 			targetProxy = FD326D392109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
-		OBJ_691 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FD326D3B2109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
 		OBJ_759 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::Arguments" /* Arguments */;
@@ -4557,11 +3859,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::Url" /* Url */;
 			targetProxy = FD326C812109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_765 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FD326C852109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_796 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4603,16 +3900,6 @@
 			target = "highway::Terminal" /* Terminal */;
 			targetProxy = FD326D5F2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
-		OBJ_808 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FD326D602109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_828 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FD326C842109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
 		OBJ_855 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::XCBuild" /* XCBuild */;
@@ -4653,25 +3940,10 @@
 			target = "highway::Terminal" /* Terminal */;
 			targetProxy = FD326D6F2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
-		OBJ_867 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FD326D702109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_919 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FD326C822109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
 		OBJ_930 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::Url" /* Url */;
 			targetProxy = FD326D712109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_931 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FD326D722109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_956 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4702,11 +3974,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::Url" /* Url */;
 			targetProxy = FD326CB12109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_964 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FD326CB22109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_994 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4742,90 +4009,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		FD1126E421C77F060072607D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = $inherited;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SignPost;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FD1126E521C77F060072607D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_NS_ASSERTIONS = NO;
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = $inherited;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SignPost;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		FD1126E721C77F060072607D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -5317,152 +4500,6 @@
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
 				TARGET_NAME = POSIX;
-			};
-			name = BetaRelease;
-		};
-		FD61D921221C70C600CC87F8 /* BetaRelease */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_NS_ASSERTIONS = NO;
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = $inherited;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SignPost;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = BetaRelease;
-		};
-		FD61D922221C70C600CC87F8 /* BetaRelease */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_NS_ASSERTIONS = NO;
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Tests/SignPostMock/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SignPostMock;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = BetaRelease;
-		};
-		FD61D923221C70C600CC87F8 /* BetaRelease */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SourceryAutoProtocols;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = SourceryAutoProtocols;
-			};
-			name = BetaRelease;
-		};
-		FD61D924221C70C600CC87F8 /* BetaRelease */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = $inherited;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SourceryAutoGenerateProtocols;
-				PRODUCT_NAME = SourceryAutoProtocols;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = BetaRelease;
 		};
@@ -6231,163 +5268,6 @@
 			};
 			name = Local;
 		};
-		FD61D946221C70CE00CC87F8 /* Local */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = $inherited;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SignPost;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Local;
-		};
-		FD61D947221C70CE00CC87F8 /* Local */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Tests/SignPostMock/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SignPostMock;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Local;
-		};
-		FD61D948221C70CE00CC87F8 /* Local */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SourceryAutoProtocols;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = SourceryAutoProtocols;
-			};
-			name = Local;
-		};
-		FD61D949221C70CE00CC87F8 /* Local */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = $inherited;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SourceryAutoGenerateProtocols;
-				PRODUCT_NAME = SourceryAutoProtocols;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Local;
-		};
 		FD61D94A221C70CE00CC87F8 /* Local */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -7085,94 +5965,6 @@
 			};
 			name = Release;
 		};
-		FDB7A9CD21CD6F7F0045DDA8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Tests/SignPostMock/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SignPostMock;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FDB7A9CE21CD6F7F0045DDA8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_NS_ASSERTIONS = NO;
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Tests/SignPostMock/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SignPostMock;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		FDB7A9E821CD736C0045DDA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -7751,91 +6543,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SourceryWorkerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-			};
-			name = Release;
-		};
-		FDE9B70921C58ED500D1F50A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = $inherited;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SourceryAutoGenerateProtocols;
-				PRODUCT_NAME = SourceryAutoProtocols;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FDE9B70A21C58ED500D1F50A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = $inherited;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SourceryAutoGenerateProtocols;
-				PRODUCT_NAME = SourceryAutoProtocols;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -8760,52 +7467,6 @@
 			};
 			name = Release;
 		};
-		OBJ_693 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SourceryAutoProtocols;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = SourceryAutoProtocols;
-			};
-			name = Debug;
-		};
-		OBJ_694 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SourceryAutoProtocols;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = SourceryAutoProtocols;
-			};
-			name = Release;
-		};
 		OBJ_734 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -9125,17 +7786,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FD1126E321C77F060072607D /* Build configuration list for PBXNativeTarget "SignPost" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FD1126E421C77F060072607D /* Debug */,
-				FD61D946221C70CE00CC87F8 /* Local */,
-				FD1126E521C77F060072607D /* Release */,
-				FD61D921221C70C600CC87F8 /* BetaRelease */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		FD1126E621C77F060072607D /* Build configuration list for PBXNativeTarget "SignPostTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -9187,17 +7837,6 @@
 				FD61D93F221C70CE00CC87F8 /* Local */,
 				FDB7A98921CD6B5D0045DDA8 /* Release */,
 				FD61D91A221C70C600CC87F8 /* BetaRelease */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FDB7A9CC21CD6F7F0045DDA8 /* Build configuration list for PBXNativeTarget "SignPostMock" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FDB7A9CD21CD6F7F0045DDA8 /* Debug */,
-				FD61D947221C70CE00CC87F8 /* Local */,
-				FDB7A9CE21CD6F7F0045DDA8 /* Release */,
-				FD61D922221C70C600CC87F8 /* BetaRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -9264,17 +7903,6 @@
 				FD61D95C221C70CE00CC87F8 /* Local */,
 				FDC156F121C5347D00E04B44 /* Release */,
 				FD61D937221C70C700CC87F8 /* BetaRelease */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FDE9B70821C58ED500D1F50A /* Build configuration list for PBXNativeTarget "SourceryAutoProtocols-ios" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FDE9B70921C58ED500D1F50A /* Debug */,
-				FD61D949221C70CE00CC87F8 /* Local */,
-				FDE9B70A21C58ED500D1F50A /* Release */,
-				FD61D924221C70C600CC87F8 /* BetaRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -9407,17 +8035,6 @@
 				FD61D959221C70CE00CC87F8 /* Local */,
 				OBJ_656 /* Release */,
 				FD61D934221C70C700CC87F8 /* BetaRelease */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_692 /* Build configuration list for PBXNativeTarget "SourceryAutoProtocols-macos" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_693 /* Debug */,
-				FD61D948221C70CE00CC87F8 /* Local */,
-				OBJ_694 /* Release */,
-				FD61D923221C70C600CC87F8 /* BetaRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
