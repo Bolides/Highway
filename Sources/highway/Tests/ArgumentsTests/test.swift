@@ -17,7 +17,7 @@ class ArgumentsSpec: QuickSpec {
             }
             
             it("should have default arguments from command line") {
-                expect(sut?.all) == ["srcroot /../../../../../../../"]
+                expect(sut?.all).to(contain( ["-srcRoot", "/../../../../../../../"]))
             }
         }
     }

@@ -173,6 +173,7 @@
 		FDEE79EF222EBE3A00D6481F /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		FDEE79F0222EBE5300D6481F /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
 		FDEE79F1222EBE5300D6481F /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF8221B2044001AC549 /* ZFileMock.framework */; };
+		FDEE79F6222EC0A800D6481F /* SignPostMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9C721CD6F7F0045DDA8 /* SignPostMock.framework */; };
 		FDFCEFC3221B1981001AC549 /* SwiftFormat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFC2221B1981001AC549 /* SwiftFormat.framework */; };
 		FDFCEFCD221B1A74001AC549 /* SwiftFormatWorkerMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A7221DDE7E700BBDA58 /* SwiftFormatWorkerMock.framework */; };
 		FDFCEFCE221B1ABB001AC549 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
@@ -1177,6 +1178,13 @@
 			remoteGlobalIDString = FDEE79D6222EBD9A00D6481F;
 			remoteInfo = XCBuildMock;
 		};
+		FDEE79F4222EC09E00D6481F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDB7A9C621CD6F7F0045DDA8;
+			remoteInfo = SignPostMock;
+		};
 		FDFCEFCB221B1A6B001AC549 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1444,6 +1452,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDEE79F6222EC0A800D6481F /* SignPostMock.framework in Frameworks */,
 				FD3F8A1A21DDE43A00BBDA58 /* SwiftFormatWorker.framework in Frameworks */,
 				FDFCEFCD221B1A74001AC549 /* SwiftFormatWorkerMock.framework in Frameworks */,
 				FDAB837D222D8E3B00A6A826 /* Quick.framework in Frameworks */,
@@ -2592,6 +2601,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FDEE79F5222EC09E00D6481F /* PBXTargetDependency */,
 				FD3F8A1C21DDE43A00BBDA58 /* PBXTargetDependency */,
 				FDFCEFCC221B1A6B001AC549 /* PBXTargetDependency */,
 			);
@@ -3217,7 +3227,7 @@
 					};
 					FD3F8A1821DDE43A00BBDA58 = {
 						CreatedOnToolsVersion = 10.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					FD3F8A7121DDE7E700BBDA58 = {
 						CreatedOnToolsVersion = 10.1;
@@ -4093,6 +4103,11 @@
 			target = FDEE79D6222EBD9A00D6481F /* XCBuildMock */;
 			targetProxy = FDEE79F2222EBF2000D6481F /* PBXContainerItemProxy */;
 		};
+		FDEE79F5222EC09E00D6481F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDB7A9C621CD6F7F0045DDA8 /* SignPostMock */;
+			targetProxy = FDEE79F4222EC09E00D6481F /* PBXContainerItemProxy */;
+		};
 		FDFCEFCC221B1A6B001AC549 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FD3F8A7121DDE7E700BBDA58 /* SwiftFormatWorkerMock */;
@@ -4762,8 +4777,9 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -4779,6 +4795,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SwiftFormatWorkerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 4.2;
 			};
@@ -4800,9 +4817,10 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -4814,6 +4832,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SwiftFormatWorkerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
@@ -5656,9 +5675,10 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -5670,6 +5690,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SwiftFormatWorkerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = BetaRelease;
@@ -6602,8 +6623,9 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -6619,6 +6641,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SwiftFormatWorkerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 4.2;
 			};
