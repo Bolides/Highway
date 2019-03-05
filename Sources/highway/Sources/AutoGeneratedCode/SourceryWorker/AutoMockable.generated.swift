@@ -6,7 +6,7 @@ import ZFile
 import ZFileMock
 
 
-// Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 
@@ -42,6 +42,71 @@ open class ImportProtocolMock: ImportProtocol {
   }
   public  var underlyingTestable: Bool = false
 
+}
+
+
+// MARK: - SourceryBuilderProtocolMock
+
+open class SourceryBuilderProtocolMock: SourceryBuilderProtocol {
+
+    public init() {}
+
+  public static var buildPath: String {
+      get { return underlyingBuildPath }
+      set(value) { underlyingBuildPath = value }
+  }
+  public static var underlyingBuildPath: String = "AutoMockable filled value"
+  public static var executalbeName: String {
+      get { return underlyingExecutalbeName }
+      set(value) { underlyingExecutalbeName = value }
+  }
+  public static var underlyingExecutalbeName: String = "AutoMockable filled value"
+
+
+  // MARK: - <attemptToBuildSourceryIfNeeded> - parameters
+
+  public var attemptToBuildSourceryIfNeededThrowableError: Error?
+  public var attemptToBuildSourceryIfNeededCallsCount = 0
+  public var attemptToBuildSourceryIfNeededCalled: Bool {
+    return attemptToBuildSourceryIfNeededCallsCount > 0
+  }
+  public var attemptToBuildSourceryIfNeededReturnValue: FileProtocol?
+
+  // MARK: - <attemptToBuildSourceryIfNeeded> - closure mocks
+
+  public var attemptToBuildSourceryIfNeededClosure: (() throws  -> FileProtocol)? = nil
+
+
+
+  // MARK: - <attemptToBuildSourceryIfNeeded> - method mocked
+
+  open func attemptToBuildSourceryIfNeeded() throws -> FileProtocol {
+
+
+      // <attemptToBuildSourceryIfNeeded> - Throwable method implementation
+
+    if let error = attemptToBuildSourceryIfNeededThrowableError {
+        throw error
+    }
+
+      attemptToBuildSourceryIfNeededCallsCount += 1
+
+      // <attemptToBuildSourceryIfNeeded> - Return Value mock implementation
+
+      guard let closureReturn = attemptToBuildSourceryIfNeededClosure else {
+          guard let returnValue = attemptToBuildSourceryIfNeededReturnValue else {
+              let message = "No returnValue implemented for attemptToBuildSourceryIfNeededClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+
+              // You should implement FileProtocol
+
+              throw error
+          }
+          return returnValue
+      }
+
+      return try closureReturn()
+  }
 }
 
 

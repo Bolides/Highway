@@ -8,7 +8,7 @@ import ZFile
 import ZFileMock
 
 
-// Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 
@@ -27,13 +27,33 @@ import ZFileMock
 
 
 
-// MARK: - ExecutableProviderProtocolMock
+// MARK: - PathEnvironmentParserProtocolMock
 
-open class ExecutableProviderProtocolMock: ExecutableProviderProtocol {
+open class PathEnvironmentParserProtocolMock: PathEnvironmentParserProtocol {
 
     public init() {}
 
-  public var searchedUrls: [FolderProtocol] = []
+  public var urls: [FolderProtocol] = []
+
+}
+
+
+// MARK: - SystemExecutableProviderProtocolMock
+
+open class SystemExecutableProviderProtocolMock: SystemExecutableProviderProtocol {
+
+    public init() {}
+
+  public static var shared: SystemExecutableProviderProtocol {
+      get { return underlyingShared }
+      set(value) { underlyingShared = value }
+  }
+  public static var underlyingShared: SystemExecutableProviderProtocol!
+  public  var pathEnvironmentParser: PathEnvironmentParserProtocol {
+      get { return underlyingPathEnvironmentParser }
+      set(value) { underlyingPathEnvironmentParser = value }
+  }
+  public  var underlyingPathEnvironmentParser: PathEnvironmentParserProtocol!
   public  var fileSystem: FileSystemProtocol {
       get { return underlyingFileSystem }
       set(value) { underlyingFileSystem = value }
@@ -77,204 +97,15 @@ open class ExecutableProviderProtocolMock: ExecutableProviderProtocol {
           guard let returnValue = executableWithReturnValue else {
               let message = "No returnValue implemented for executableWithClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FileProtocol
+
+              throw error
           }
           return returnValue
       }
 
       return try closureReturn(executableName)
-  }
-}
-
-
-// MARK: - SystemExecutorProtocolMock
-
-open class SystemExecutorProtocolMock: SystemExecutorProtocol {
-
-    public init() {}
-
-  public  var signPost: SignPostProtocol {
-      get { return underlyingSignPost }
-      set(value) { underlyingSignPost = value }
-  }
-  public  var underlyingSignPost: SignPostProtocol!
-
-
-  // MARK: - <launch> - parameters
-
-  public var launchTaskWaitThrowableError: Error?
-  public var launchTaskWaitCallsCount = 0
-  public var launchTaskWaitCalled: Bool {
-    return launchTaskWaitCallsCount > 0
-  }
-  public var launchTaskWaitReceivedArguments: (task: (Task), wait: (Bool))?
-
-  // MARK: - <launch> - closure mocks
-
-  public var launchTaskWaitClosure: ((Task, Bool) throws  -> Void)? = nil
-
-
-
-  // MARK: - <launch> - method mocked
-
-  open func launch(task: Task, wait: Bool) throws {
-
-
-      // <launch> - Throwable method implementation
-
-    if let error = launchTaskWaitThrowableError {
-        throw error
-    }
-
-      launchTaskWaitCallsCount += 1
-      launchTaskWaitReceivedArguments = (task: task, wait: wait)
-
-      // <launch> - Void return mock implementation
-
-      try launchTaskWaitClosure?(task, wait)
-
-  }
-}
-
-
-// MARK: - SystemProtocolMock
-
-open class SystemProtocolMock: SystemProtocol {
-
-    public init() {}
-
-
-
-  // MARK: - <task> - parameters
-
-  public var taskNamedThrowableError: Error?
-  public var taskNamedCallsCount = 0
-  public var taskNamedCalled: Bool {
-    return taskNamedCallsCount > 0
-  }
-  public var taskNamedReceivedName: String?
-  public var taskNamedReturnValue: Task?
-
-  // MARK: - <task> - closure mocks
-
-  public var taskNamedClosure: ((String) throws  -> Task)? = nil
-
-
-
-  // MARK: - <task> - method mocked
-
-  open func task(named name: String) throws -> Task {
-
-
-      // <task> - Throwable method implementation
-
-    if let error = taskNamedThrowableError {
-        throw error
-    }
-
-      taskNamedCallsCount += 1
-      taskNamedReceivedName = name
-
-      // <task> - Return Value mock implementation
-
-      guard let closureReturn = taskNamedClosure else {
-          guard let returnValue = taskNamedReturnValue else {
-              let message = "No returnValue implemented for taskNamedClosure"
-              let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
-          }
-          return returnValue
-      }
-
-      return try closureReturn(name)
-  }
-
-  // MARK: - <execute> - parameters
-
-  public var executeThrowableError: Error?
-  public var executeCallsCount = 0
-  public var executeCalled: Bool {
-    return executeCallsCount > 0
-  }
-  public var executeReceivedTask: Task?
-  public var executeReturnValue: Bool?
-
-  // MARK: - <execute> - closure mocks
-
-  public var executeClosure: ((Task) throws  -> Bool)? = nil
-
-
-
-  // MARK: - <execute> - method mocked
-
-  open func execute(_ task: Task) throws -> Bool {
-
-
-      // <execute> - Throwable method implementation
-
-    if let error = executeThrowableError {
-        throw error
-    }
-
-      executeCallsCount += 1
-      executeReceivedTask = task
-
-      // <execute> - Return Value mock implementation
-
-      guard let closureReturn = executeClosure else {
-          guard let returnValue = executeReturnValue else {
-              let message = "No returnValue implemented for executeClosure"
-              let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
-          }
-          return returnValue
-      }
-
-      return try closureReturn(task)
-  }
-
-  // MARK: - <launch> - parameters
-
-  public var launchWaitThrowableError: Error?
-  public var launchWaitCallsCount = 0
-  public var launchWaitCalled: Bool {
-    return launchWaitCallsCount > 0
-  }
-  public var launchWaitReceivedArguments: (task: (Task), wait: (Bool))?
-  public var launchWaitReturnValue: Bool?
-
-  // MARK: - <launch> - closure mocks
-
-  public var launchWaitClosure: ((Task, Bool) throws  -> Bool)? = nil
-
-
-
-  // MARK: - <launch> - method mocked
-
-  open func launch(_ task: Task, wait: Bool) throws -> Bool {
-
-
-      // <launch> - Throwable method implementation
-
-    if let error = launchWaitThrowableError {
-        throw error
-    }
-
-      launchWaitCallsCount += 1
-      launchWaitReceivedArguments = (task: task, wait: wait)
-
-      // <launch> - Return Value mock implementation
-
-      guard let closureReturn = launchWaitClosure else {
-          guard let returnValue = launchWaitReturnValue else {
-              let message = "No returnValue implemented for launchWaitClosure"
-              let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
-          }
-          return returnValue
-      }
-
-      return try closureReturn(task, wait)
   }
 }
 
@@ -300,8 +131,6 @@ open class TaskProtocolMock: TaskProtocol {
       set(value) { underlyingArguments = value }
   }
   public  var underlyingArguments: Arguments!
-  public var environment: [String: String] = [:]
-  public var currentDirectoryUrl: FolderProtocol?
   public  var input: Channel {
       get { return underlyingInput }
       set(value) { underlyingInput = value }
@@ -312,20 +141,10 @@ open class TaskProtocolMock: TaskProtocol {
       set(value) { underlyingOutput = value }
   }
   public  var underlyingOutput: Channel!
-  public  var state: State {
-      get { return underlyingState }
-      set(value) { underlyingState = value }
-  }
-  public  var underlyingState: State!
   public var capturedOutputData: Data?
   public var readOutputString: String?
   public var trimmedOutput: String?
   public var capturedOutputString: String?
-  public  var successfullyFinished: Bool {
-      get { return underlyingSuccessfullyFinished }
-      set(value) { underlyingSuccessfullyFinished = value }
-  }
-  public  var underlyingSuccessfullyFinished: Bool = false
   public  var toProcess: Process {
       get { return underlyingToProcess }
       set(value) { underlyingToProcess = value }
@@ -359,42 +178,7 @@ open class TaskProtocolMock: TaskProtocol {
 
       // <enableReadableOutputDataCapturing> - Void return mock implementation
 
-      enableReadableOutputDataCapturingClosure?()
-
-  }
-
-  // MARK: - <throwIfNotSuccess> - parameters
-
-  public var throwIfNotSuccessThrowableError: Error?
-  public var throwIfNotSuccessCallsCount = 0
-  public var throwIfNotSuccessCalled: Bool {
-    return throwIfNotSuccessCallsCount > 0
-  }
-  public var throwIfNotSuccessReceivedError: Swift.Error?
-
-  // MARK: - <throwIfNotSuccess> - closure mocks
-
-  public var throwIfNotSuccessClosure: ((Swift.Error) throws  -> Void)? = nil
-
-
-
-  // MARK: - <throwIfNotSuccess> - method mocked
-
-  open func throwIfNotSuccess(_ error: Swift.Error) throws {
-
-
-      // <throwIfNotSuccess> - Throwable method implementation
-
-    if let error = throwIfNotSuccessThrowableError {
-        throw error
-    }
-
-      throwIfNotSuccessCallsCount += 1
-      throwIfNotSuccessReceivedError = error
-
-      // <throwIfNotSuccess> - Void return mock implementation
-
-      try throwIfNotSuccessClosure?(error)
+        enableReadableOutputDataCapturingClosure?()
 
   }
 }

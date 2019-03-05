@@ -7,7 +7,7 @@ import ZFile
 import ZFileMock
 
 
-// Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 
@@ -68,7 +68,10 @@ open class ArgumentExecutableProtocolMock: ArgumentExecutableProtocol {
           guard let returnValue = argumentsReturnValue else {
               let message = "No returnValue implemented for argumentsClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement Arguments
+
+              throw error
           }
           return returnValue
       }
@@ -110,7 +113,10 @@ open class ArgumentExecutableProtocolMock: ArgumentExecutableProtocol {
           guard let returnValue = executableFileReturnValue else {
               let message = "No returnValue implemented for executableFileClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FileProtocol
+
+              throw error
           }
           return returnValue
       }
@@ -162,7 +168,10 @@ open class ExecutableProtocolMock: ExecutableProtocol {
           guard let returnValue = executableFileReturnValue else {
               let message = "No returnValue implemented for executableFileClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FileProtocol
+
+              throw error
           }
           return returnValue
       }
@@ -216,7 +225,10 @@ open class TerminalWorkerProtocolMock: TerminalWorkerProtocol {
           guard let returnValue = terminalTaskReturnValue else {
               let message = "No returnValue implemented for terminalTaskClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement [String]
+
+              throw error
           }
           return returnValue
       }
@@ -260,7 +272,10 @@ open class TerminalWorkerProtocolMock: TerminalWorkerProtocol {
           guard let returnValue = runExecutableReturnValue else {
               let message = "No returnValue implemented for runExecutableClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement [String]
+
+              throw error
           }
           return returnValue
       }
@@ -304,7 +319,10 @@ open class TerminalWorkerProtocolMock: TerminalWorkerProtocol {
           guard let returnValue = runProcessReturnValue else {
               let message = "No returnValue implemented for runProcessClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement [String]
+
+              throw error
           }
           return returnValue
       }

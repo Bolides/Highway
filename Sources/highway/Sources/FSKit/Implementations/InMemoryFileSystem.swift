@@ -16,7 +16,8 @@ public final class InMemoryFileSystem: FileSystem
             throw FSError.doesNotExist
         }
 
-        switch node.contents {
+        switch node.contents
+        {
         case .file:
             return Metadata(type: .file)
         case .directory:
@@ -121,7 +122,8 @@ public final class InMemoryFileSystem: FileSystem
         }
         let remaining = Array(urlPath.dropFirst())
         let contents = currentNode.contents
-        switch contents {
+        switch contents
+        {
         case .file:
             throw FSError.doesNotExist
         case let .directory(dir):

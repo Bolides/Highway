@@ -1,5 +1,6 @@
 import Arguments
 import Foundation
+import SignPost
 import SourceryAutoProtocols
 import ZFile
 
@@ -9,52 +10,52 @@ public protocol TaskProtocol: AutoMockable
     var name: String { get }
     var executable: FileProtocol { get set }
     var arguments: Arguments { get set }
-    var environment: [String: String] { get set }
-    var currentDirectoryUrl: FolderProtocol? { get set }
     var input: Channel { get set }
     var output: Channel { get set }
-    var state: State { get set }
     var capturedOutputData: Data? { get }
     var readOutputString: String? { get }
     var trimmedOutput: String? { get }
     var capturedOutputString: String? { get }
-    var successfullyFinished: Bool { get }
     var toProcess: Process { get }
     var description: String { get }
 
     func enableReadableOutputDataCapturing()
-    func throwIfNotSuccess(_ error: Swift.Error) throws 
+
     /// sourcery:end
 }
 
 public class Task: TaskProtocol, AutoGenerateProtocol
 {
-    // MARK: - Init
-
-    public convenience init(commandName: String, arguments: Arguments = Arguments(), currentDirectoryUrl: FolderProtocol? = nil, provider: ExecutableProviderProtocol) throws
-    {
-        self.init(
-            executable: try provider.executable(with: commandName),
-            arguments: arguments,
-            currentDirectoryUrl: currentDirectoryUrl
-        )
-    }
-
-    public init(executable: FileProtocol, arguments: Arguments = Arguments(), currentDirectoryUrl: FolderProtocol? = nil)
-    {
-        self.executable = executable
-        state = .waiting
-        self.arguments = arguments
-        self.currentDirectoryUrl = currentDirectoryUrl
-    }
-
     // MARK: - Properties
 
     public var name: String { return executable.name }
     public var executable: FileProtocol
-    public var arguments = Arguments()
-    public var environment = [String: String]()
-    public var currentDirectoryUrl: FolderProtocol?
+    public var arguments: Arguments
+
+    // MARK: - Private
+
+    private let signPost: SignPostProtocol
+    private let fileSystem: FileSystemProtocol
+
+    // MARK: - Init
+
+    public convenience init(commandName: String, arguments: Arguments = Arguments([]), fileSystem: FileSystemProtocol = FileSystem.shared, provider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared, signPost: SignPostProtocol = SignPost.shared) throws
+    {
+        self.init(
+            executable: try provider.executable(with: commandName),
+            arguments: arguments,
+            fileSystem: fileSystem,
+            signPost: signPost
+        )
+    }
+
+    public init(executable: FileProtocol, arguments: Arguments = Arguments([]), fileSystem: FileSystemProtocol = FileSystem.shared, signPost: SignPostProtocol = SignPost.shared)
+    {
+        self.executable = executable
+        self.arguments = arguments
+        self.fileSystem = fileSystem
+        self.signPost = signPost
+    }
 
     public var input: Channel
     {
@@ -68,7 +69,6 @@ public class Task: TaskProtocol, AutoGenerateProtocol
         set { io.output = newValue }
     }
 
-    public var state: State
     public func enableReadableOutputDataCapturing()
     {
         io.enableReadableOutputDataCapturing()
@@ -95,38 +95,15 @@ public class Task: TaskProtocol, AutoGenerateProtocol
         return String(data: data, encoding: .utf8)
     }
 
-    public var successfullyFinished: Bool
-    {
-        return state.successfullyFinished
-    }
-
-    public func throwIfNotSuccess(_ error: Swift.Error) throws
-    {
-        guard successfullyFinished else
-        {
-            throw "🛣 🔥 \(name) with customError: \n \(error).\n"
-        }
-    }
-
     public var toProcess: Process
     {
         let result = Process()
         result.arguments = arguments.all
         result.launchPath = executable.path
-        if let currentDirectoryPath = currentDirectoryUrl?.path
-        {
-            result.currentDirectoryPath = currentDirectoryPath
-        }
-        var _environment: [String: String] = ProcessInfo.processInfo.environment
-        environment.forEach
-        {
-            _environment[$0.key] = $0.value
-        }
-        result.environment = _environment
-        result.terminationHandler = { terminatedProcess in
-            self.state = .terminated(Termination(describing: terminatedProcess))
-        }
-        result.takeIOFrom(self)
+        result.currentDirectoryPath = fileSystem.currentFolder.path
+
+        result.environment = ProcessInfo.processInfo.environment
+
         return result
     }
 
@@ -151,14 +128,5 @@ extension Task: CustomStringConvertible
         \(String(describing: capturedOutputString))
         
         """
-    }
-}
-
-private extension Process
-{
-    func takeIOFrom(_ task: Task)
-    {
-        standardInput = task.input.asProcessChannel
-        standardOutput = task.output.asProcessChannel
     }
 }

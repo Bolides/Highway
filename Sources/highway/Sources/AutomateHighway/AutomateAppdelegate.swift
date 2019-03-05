@@ -20,12 +20,19 @@ class AutomateAppdelegate: NSObject, NSApplicationDelegate
 {
     lazy var signPost: SignPostProtocol = SignPost.shared
 
+    var sourceryWorker: AutomateHighwaySourceryWorkerProtocol?
+    var swiftFormatWorker: SwiftFormatWorkerProtocol?
+
     // MARK: - Application LifeCycle
 
     func applicationDidFinishLaunching(_: Notification)
     {
         do
         {
+            let disk = try Disk()
+            sourceryWorker = try AutomateHighwaySourceryWorker(disk: disk)
+            swiftFormatWorker = try SwiftFormatWorker(folderToFormatRecursive: try disk.srcRoot.subfolder(named: "Sources/Highway/Sources"))
+
             try determineIfRunFromCommandLine()
         }
         catch ArgumentsWorker.Error.noWorkerCommandFoundInArguments
@@ -46,17 +53,17 @@ class AutomateAppdelegate: NSObject, NSApplicationDelegate
         // 1. Check if run from command line
 
         let argumentsWorker = try ArgumentsWorker()
-        signPost.message("💁🏻‍♂️ loaded with arguments prefixed with <🤖command:>\n \(argumentsWorker.workers.map { $0.rawValue }.joined(separator: "\n"))\n")
+        signPost.verbose("💁🏻‍♂️ loaded with arguments prefixed with <🤖command:>\n \(argumentsWorker.workers.map { $0.rawValue }.joined(separator: "\n"))\n")
 
         // 3. Find worker for the task
 
-        try argumentsWorker.workers.forEach
+        argumentsWorker.workers.forEach
         { command in
-            switch command {
+            switch command
+            {
             // 4. execute the task as if button was pressed
             case .sourcery:
-                let worker = try AutomateHighwaySourceryWorker()
-                worker.attempt
+                sourceryWorker?.attempt
                 { [weak self] syncOutput in
                     do
                     {
@@ -73,23 +80,7 @@ class AutomateAppdelegate: NSObject, NSApplicationDelegate
                 }
             case .swiftformat:
 
-                let highwayCommandLineArguments = HighwayCommandLineOption.Values()
-                guard let relativeProjectPath = highwayCommandLineArguments.optionsAndValues[.srcroot] else
-                {
-                    throw HighwayError.missingSrcroot(
-                        message: """
-                        You can provide the following options
-                        \(HighwayCommandLineOption.allCases.map { $0.rawValue }.joined(separator: "\n"))
-                        """,
-                        function: "\(#function)"
-                    )
-                }
-
-                let projectFolder = try Folder(relativePath: relativeProjectPath)
-
-                let worker = try SwiftFormatWorker(folderToFormatRecursive: try projectFolder.subfolder(named: "Sources/Highway/Sources"))
-
-                worker.attempt
+                swiftFormatWorker?.attempt
                 { [weak self] syncOutput in
                     do
                     {

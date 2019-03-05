@@ -1,4 +1,4 @@
-// Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 
@@ -19,4 +19,31 @@ import Foundation
 
 
 // Generated protocol inline for SwiftFormatWorker -> See code in the file of that type
+    // sourcery:inline:SwiftFormatWorker.AutoGenerateProtocol
+    static var queue: DispatchQueue { get }
+    var queue: DispatchQueue { get }
+
+    func attempt(_ asyncSwiftFormatAttemptOutput: @escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void)
+    // sourcery:end
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
+
+// Generated protocol inline for  -> See code in the file of that type
 

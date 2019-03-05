@@ -6,7 +6,7 @@ import ZFile
 import ZFileMock
 
 
-// Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 
@@ -66,7 +66,7 @@ open class SignPostProtocolMock: SignPostProtocol {
 
       // <write> - Void return mock implementation
 
-      writePrinterClosure?(printer)
+        writePrinterClosure?(printer)
 
   }
 
@@ -93,7 +93,7 @@ open class SignPostProtocolMock: SignPostProtocol {
 
       // <write> - Void return mock implementation
 
-      writePrintableClosure?(printable)
+        writePrintableClosure?(printable)
 
   }
 
@@ -120,7 +120,7 @@ open class SignPostProtocolMock: SignPostProtocol {
 
       // <error> - Void return mock implementation
 
-      errorClosure?(text)
+        errorClosure?(text)
 
   }
 
@@ -147,7 +147,7 @@ open class SignPostProtocolMock: SignPostProtocol {
 
       // <success> - Void return mock implementation
 
-      successClosure?(text)
+        successClosure?(text)
 
   }
 
@@ -174,7 +174,7 @@ open class SignPostProtocolMock: SignPostProtocol {
 
       // <message> - Void return mock implementation
 
-      messageClosure?(text)
+        messageClosure?(text)
 
   }
 
@@ -201,7 +201,7 @@ open class SignPostProtocolMock: SignPostProtocol {
 
       // <verbose> - Void return mock implementation
 
-      verboseClosure?(text)
+        verboseClosure?(text)
 
   }
 
@@ -228,7 +228,7 @@ open class SignPostProtocolMock: SignPostProtocol {
 
       // <print> - Void return mock implementation
 
-      printClosure?(printable)
+        printClosure?(printable)
 
   }
 
@@ -255,7 +255,7 @@ open class SignPostProtocolMock: SignPostProtocol {
 
       // <verbosePrint> - Void return mock implementation
 
-      verbosePrintClosure?(printable)
+        verbosePrintClosure?(printable)
 
   }
 }

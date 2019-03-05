@@ -52,7 +52,8 @@ public struct ExportOptions: Codable
             case identifiedBy(UUIDString)
             var value: String
             {
-                switch self {
+                switch self
+                {
                 case let .named(name):
                     return name
                 case let .identifiedBy(uuid):
@@ -105,7 +106,8 @@ public struct ExportOptions: Codable
         case device(modelIdentifier: String)
         public init?(rawValue: String)
         {
-            switch rawValue {
+            switch rawValue
+            {
             case "<none>": self = .none
             case "<thin-for-all-variants>": self = .all
             default: self = .device(modelIdentifier: rawValue)
@@ -114,7 +116,8 @@ public struct ExportOptions: Codable
 
         public var rawValue: String
         {
-            switch self {
+            switch self
+            {
             case .none:
                 return "<none>"
             case .all:

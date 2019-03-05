@@ -1,3 +1,4 @@
+import Arguments
 import Foundation
 import os
 import SourceryAutoProtocols
@@ -6,7 +7,7 @@ import ZFile
 import ZFileMock
 
 
-// Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 
@@ -136,9 +137,12 @@ open class DestinationFactoryProtocolMock: DestinationFactoryProtocol {
           guard let returnValue = macOSArchitectureReturnValue else {
               let message = "No returnValue implemented for macOSArchitectureClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-              os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
 
-              return macOSArchitectureReturnValue!
+              // You should implement Destination
+
+              os_log("❌ %@", type: .error, "\(error)")
+
+              fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
           }
           return returnValue
       }
@@ -174,9 +178,12 @@ open class DestinationFactoryProtocolMock: DestinationFactoryProtocol {
           guard let returnValue = deviceNameIsGenericIdReturnValue else {
               let message = "No returnValue implemented for deviceNameIsGenericIdClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-              os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
 
-              return deviceNameIsGenericIdReturnValue!
+              // You should implement Destination
+
+              os_log("❌ %@", type: .error, "\(error)")
+
+              fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
           }
           return returnValue
       }
@@ -212,9 +219,12 @@ open class DestinationFactoryProtocolMock: DestinationFactoryProtocol {
           guard let returnValue = simulatorNameOsIdReturnValue else {
               let message = "No returnValue implemented for simulatorNameOsIdClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-              os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
 
-              return simulatorNameOsIdReturnValue!
+              // You should implement Destination
+
+              os_log("❌ %@", type: .error, "\(error)")
+
+              fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
           }
           return returnValue
       }
@@ -289,7 +299,7 @@ open class ExportArchiveOptionsProtocolMock: ExportArchiveOptionsProtocol {
 
       // <encode> - Void return mock implementation
 
-      try encodeToClosure?(encoder)
+        try encodeToClosure?(encoder)
 
   }
 }
@@ -321,6 +331,11 @@ open class MinimalTestOptionsProtocolMock: MinimalTestOptionsProtocol {
 
     public init() {}
 
+  public  var description: String {
+      get { return underlyingDescription }
+      set(value) { underlyingDescription = value }
+  }
+  public  var underlyingDescription: String = "AutoMockable filled value"
 
 
   // MARK: - <arguments> - parameters
@@ -357,49 +372,10 @@ open class MinimalTestOptionsProtocolMock: MinimalTestOptionsProtocol {
           guard let returnValue = argumentsReturnValue else {
               let message = "No returnValue implemented for argumentsClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
-          }
-          return returnValue
-      }
 
-      return try closureReturn()
-  }
+              // You should implement Arguments
 
-  // MARK: - <executableFile> - parameters
-
-  public var executableFileThrowableError: Error?
-  public var executableFileCallsCount = 0
-  public var executableFileCalled: Bool {
-    return executableFileCallsCount > 0
-  }
-  public var executableFileReturnValue: FileProtocol?
-
-  // MARK: - <executableFile> - closure mocks
-
-  public var executableFileClosure: (() throws  -> FileProtocol)? = nil
-
-
-
-  // MARK: - <executableFile> - method mocked
-
-  open func executableFile() throws -> FileProtocol {
-
-
-      // <executableFile> - Throwable method implementation
-
-    if let error = executableFileThrowableError {
-        throw error
-    }
-
-      executableFileCallsCount += 1
-
-      // <executableFile> - Return Value mock implementation
-
-      guard let closureReturn = executableFileClosure else {
-          guard let returnValue = executableFileReturnValue else {
-              let message = "No returnValue implemented for executableFileClosure"
-              let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+              throw error
           }
           return returnValue
       }
@@ -449,9 +425,12 @@ open class TestReportProtocolMock: TestReportProtocol {
           guard let returnValue = failedTestsReturnValue else {
               let message = "No returnValue implemented for failedTestsClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-              os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
 
-              return failedTestsReturnValue!
+              // You should implement String
+
+              os_log("❌ %@", type: .error, "\(error)")
+
+              fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
           }
           return returnValue
       }
@@ -461,28 +440,90 @@ open class TestReportProtocolMock: TestReportProtocol {
 }
 
 
+// MARK: - XCBuildDestinationsProtocolMock
+
+open class XCBuildDestinationsProtocolMock: XCBuildDestinationsProtocol {
+
+    public init() {}
+
+  public  var platform: Destination.Platform {
+      get { return underlyingPlatform }
+      set(value) { underlyingPlatform = value }
+  }
+  public  var underlyingPlatform: Destination.Platform!
+  public  var id: String {
+      get { return underlyingId }
+      set(value) { underlyingId = value }
+  }
+  public  var underlyingId: String = "AutoMockable filled value"
+  public  var name: String {
+      get { return underlyingName }
+      set(value) { underlyingName = value }
+  }
+  public  var underlyingName: String = "AutoMockable filled value"
+  public  var os: Destination.OS {
+      get { return underlyingOs }
+      set(value) { underlyingOs = value }
+  }
+  public  var underlyingOs: Destination.OS!
+
+}
+
+
 // MARK: - XCBuildProtocolMock
 
 open class XCBuildProtocolMock: XCBuildProtocol {
 
     public init() {}
 
-  public  var system: SystemProtocol {
-      get { return underlyingSystem }
-      set(value) { underlyingSystem = value }
-  }
-  public  var underlyingSystem: SystemProtocol!
-  public  var fileSystem: FileSystemProtocol {
-      get { return underlyingFileSystem }
-      set(value) { underlyingFileSystem = value }
-  }
-  public  var underlyingFileSystem: FileSystemProtocol!
-  public  var terminalWorker: TerminalWorkerProtocol {
-      get { return underlyingTerminalWorker }
-      set(value) { underlyingTerminalWorker = value }
-  }
-  public  var underlyingTerminalWorker: TerminalWorkerProtocol!
 
+
+  // MARK: - <findPosibleDestinations> - parameters
+
+  public var findPosibleDestinationsForInThrowableError: Error?
+  public var findPosibleDestinationsForInCallsCount = 0
+  public var findPosibleDestinationsForInCalled: Bool {
+    return findPosibleDestinationsForInCallsCount > 0
+  }
+  public var findPosibleDestinationsForInReceivedArguments: (scheme: (String), workspace: (FolderProtocol))?
+  public var findPosibleDestinationsForInReturnValue: [String]?
+
+  // MARK: - <findPosibleDestinations> - closure mocks
+
+  public var findPosibleDestinationsForInClosure: ((String, FolderProtocol) throws  -> [String])? = nil
+
+
+
+  // MARK: - <findPosibleDestinations> - method mocked
+
+  open func findPosibleDestinations(for scheme: String, in workspace: FolderProtocol) throws -> [String] {
+
+
+      // <findPosibleDestinations> - Throwable method implementation
+
+    if let error = findPosibleDestinationsForInThrowableError {
+        throw error
+    }
+
+      findPosibleDestinationsForInCallsCount += 1
+      findPosibleDestinationsForInReceivedArguments = (scheme: scheme, workspace: workspace)
+
+      // <findPosibleDestinations> - Return Value mock implementation
+
+      guard let closureReturn = findPosibleDestinationsForInClosure else {
+          guard let returnValue = findPosibleDestinationsForInReturnValue else {
+              let message = "No returnValue implemented for findPosibleDestinationsForInClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+
+              // You should implement [String]
+
+              throw error
+          }
+          return returnValue
+      }
+
+      return try closureReturn(scheme, workspace)
+  }
 
   // MARK: - <archive> - parameters
 
@@ -520,7 +561,10 @@ open class XCBuildProtocolMock: XCBuildProtocol {
           guard let returnValue = archiveUsingReturnValue else {
               let message = "No returnValue implemented for archiveUsingClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement ArchiveProtocol
+
+              throw error
           }
           return returnValue
       }
@@ -564,7 +608,10 @@ open class XCBuildProtocolMock: XCBuildProtocol {
           guard let returnValue = exportUsingReturnValue else {
               let message = "No returnValue implemented for exportUsingClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement ExportProtocol
+
+              throw error
           }
           return returnValue
       }
@@ -579,18 +626,18 @@ open class XCBuildProtocolMock: XCBuildProtocol {
   public var buildAndTestUsingCalled: Bool {
     return buildAndTestUsingCallsCount > 0
   }
-  public var buildAndTestUsingReceivedOptions: ArgumentExecutableProtocol?
+  public var buildAndTestUsingReceivedOptions: MinimalTestOptionsProtocol?
   public var buildAndTestUsingReturnValue: TestReportProtocol?
 
   // MARK: - <buildAndTest> - closure mocks
 
-  public var buildAndTestUsingClosure: ((ArgumentExecutableProtocol) throws  -> TestReportProtocol)? = nil
+  public var buildAndTestUsingClosure: ((MinimalTestOptionsProtocol) throws  -> TestReportProtocol)? = nil
 
 
 
   // MARK: - <buildAndTest> - method mocked
 
-  open func buildAndTest(using options: ArgumentExecutableProtocol) throws -> TestReportProtocol {
+  open func buildAndTest(using options: MinimalTestOptionsProtocol) throws -> TestReportProtocol {
 
 
       // <buildAndTest> - Throwable method implementation
@@ -608,7 +655,10 @@ open class XCBuildProtocolMock: XCBuildProtocol {
           guard let returnValue = buildAndTestUsingReturnValue else {
               let message = "No returnValue implemented for buildAndTestUsingClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement TestReportProtocol
+
+              throw error
           }
           return returnValue
       }

@@ -21,7 +21,8 @@ extension State: CustomDebugStringConvertible
 {
     public var debugDescription: String
     {
-        switch self {
+        switch self
+        {
         case .waiting:
             return "WAITING"
         case .executing:
@@ -36,7 +37,8 @@ extension State: CustomStringConvertible
 {
     public var description: String
     {
-        switch self {
+        switch self
+        {
         case .waiting: return "[WAITING]"
         case .executing: return "[EXECUTING]"
         case let .terminated(termination): return "[TERMINATED] \(termination)"

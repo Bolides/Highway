@@ -5,6 +5,7 @@
 //  Created by Stijn on 07/07/2018.
 //
 
+import Errors
 import Foundation
 import os
 import SignPost
@@ -19,10 +20,11 @@ public protocol SourceryWorkerProtocol
     typealias SyncOutput = () throws -> [String]
 
     /// sourcery:inline:SourceryWorker.AutoGenerateProtocol
+    static var queue: DispatchQueue { get }
     var sourcery: SourceryProtocol { get }
 
     func executor() throws -> ArgumentExecutableProtocol
-    func attempt(_ async: @escaping (@escaping SourceryWorkerProtocol.SyncOutput) -> Void)
+    func attempt(_ asyncSourceryWorkerOutput: @escaping (@escaping SourceryWorkerProtocol.SyncOutput) -> Void)
     /// sourcery:end
 }
 
@@ -49,8 +51,8 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
 
     private let mockableInline = "/// sourcery:inline:"
     private let mockableEnd = "/// sourcery:end"
-    private let protocolGeneratableInline = "// sourcery:inline:"
-    private let protocolGeneratalbeEnd = "// sourcery:end"
+    private let protocolGeneratableInline = "/// sourcery:inline:"
+    private let protocolGeneratalbeEnd = "/// sourcery:end"
 
     public init(
         sourcery: SourceryProtocol,
@@ -74,10 +76,16 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
     {
         queue.async
         { [weak self] in
-            guard let `self` = self else { return }
+            guard let `self` = self else
+            {
+                asyncSourceryWorkerOutput { throw "SourceryWorker released before it could finish" }
+                return
+            }
 
             do
             {
+                self.signPost.verbose("Executing sourcery from executable \(try self.executor().executableFile())")
+
                 self.signPost.verbose("🧙‍♂️ All files in Sources folders will be scanned for occurrences of `/// sourcery:` and replaced with `/// sourcery:` to be able generate protocols.")
 
                 // 1. Find all files in sourceFolder and Replace occurances of inline with 3 slashes
@@ -86,6 +94,8 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
 
                 for folder in self.sourcery.sourcesFolders
                 {
+                    self.signPost.message("🧙‍♂️ in folder \(folder.name)")
+
                     let fileSequence = folder.makeFileSequence(recursive: true, includeHidden: false)
 
                     try self.replace(
@@ -135,7 +145,7 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
 
                 let sourceFolderStrings: [String] = self.sourcery.sourcesFolders.map { $0.name }
 
-                self.signPost.message("🧙‍♂️ Generating code for \n\(sourceFolderStrings.joined(separator: " * \n"))")
+                self.signPost.verbose("🧙‍♂️ Generating code for \n\(sourceFolderStrings.joined(separator: " * \n"))")
 
                 let sourceryWorkerOutput = try self.terminalWorker.terminal(task: .sourcery(try self.executor()))
 
@@ -160,7 +170,7 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
                     try file.write(data: data)
                 }
 
-                self.signPost.message("🧙‍♂️ ✅ \n\(sourceFolderStrings.joined(separator: " * \n"))\n✅")
+                self.signPost.verbose("🧙‍♂️ ✅ \n\(sourceFolderStrings.joined(separator: " * \n"))\n✅")
                 asyncSourceryWorkerOutput { sourceryWorkerOutput }
             }
             catch

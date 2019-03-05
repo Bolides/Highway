@@ -13,6 +13,7 @@ public enum TerminalTask: RawRepresentable, Equatable, AutoCases
     case git(ArgumentExecutableProtocol)
     case cat(ArgumentExecutableProtocol)
     case sourcery(ArgumentExecutableProtocol)
+    case pod(ArgumentExecutableProtocol)
 
     case xcodebuild(ArgumentExecutableProtocol)
     case xcodebuildTests(ArgumentExecutableProtocol)
@@ -22,7 +23,8 @@ public enum TerminalTask: RawRepresentable, Equatable, AutoCases
 
     public var executable: ArgumentExecutableProtocol
     {
-        switch self {
+        switch self
+        {
         case let .xcodebuild(exec):
             return exec
         case let .git(exec):
@@ -35,6 +37,8 @@ public enum TerminalTask: RawRepresentable, Equatable, AutoCases
             return testOptions
         case let .cd(path):
             return path
+        case let .pod(pod):
+            return pod
         }
     }
 
@@ -42,7 +46,8 @@ public enum TerminalTask: RawRepresentable, Equatable, AutoCases
 
     public static func == (lhs: TerminalTask, rhs: TerminalTask) -> Bool
     {
-        switch (lhs, rhs) {
+        switch (lhs, rhs)
+        {
         case (.xcodebuild, .xcodebuild):
             return true
         case (.git, .git):
@@ -52,6 +57,8 @@ public enum TerminalTask: RawRepresentable, Equatable, AutoCases
         case (.cd, .cd):
             return true
         case (.xcodebuildTests, .xcodebuildTests):
+            return true
+        case (.pod, .pod):
             return true
         default:
             return false
@@ -64,7 +71,8 @@ public enum TerminalTask: RawRepresentable, Equatable, AutoCases
 
     public var rawValue: String
     {
-        switch self {
+        switch self
+        {
         case .xcodebuild:
             return "xcodebuild"
         case .sourcery:
@@ -77,12 +85,15 @@ public enum TerminalTask: RawRepresentable, Equatable, AutoCases
             return "xcodebuild"
         case .cd:
             return "cd"
+        case .pod:
+            return "pod"
         }
     }
 
     public init?(rawValue: String)
     {
-        switch rawValue {
+        switch rawValue
+        {
         default:
             os_log("not possible %@", type: .error, rawValue)
             return nil

@@ -14,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FDC0938F222691FE00B054BA"
-               BuildableName = "AutomateHighway.app"
-               BlueprintName = "AutomateHighway"
+               BlueprintIdentifier = "highway::XCBuild"
+               BuildableName = "XCBuild.framework"
+               BlueprintName = "XCBuild"
+               ReferencedContainer = "container:Highway.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FDEE79D6222EBD9A00D6481F"
+               BuildableName = "XCBuildMock.framework"
+               BlueprintName = "XCBuildMock"
                ReferencedContainer = "container:Highway.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,23 +42,13 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FDEE7A69222EC94F00D6481F"
-               BuildableName = "CarthageWorkerTests.xctest"
-               BlueprintName = "CarthageWorkerTests"
-               ReferencedContainer = "container:Highway.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDC0938F222691FE00B054BA"
-            BuildableName = "AutomateHighway.app"
-            BlueprintName = "AutomateHighway"
+            BlueprintIdentifier = "highway::XCBuild"
+            BuildableName = "XCBuild.framework"
+            BlueprintName = "XCBuild"
             ReferencedContainer = "container:Highway.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -61,22 +65,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDC0938F222691FE00B054BA"
-            BuildableName = "AutomateHighway.app"
-            BlueprintName = "AutomateHighway"
+            BlueprintIdentifier = "highway::XCBuild"
+            BuildableName = "XCBuild.framework"
+            BlueprintName = "XCBuild"
             ReferencedContainer = "container:Highway.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
-      <CommandLineArguments>
-         <CommandLineArgument
-            argument = "srcRoot /../../../../../../"
-            isEnabled = "YES">
-         </CommandLineArgument>
-      </CommandLineArguments>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -86,16 +83,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDC0938F222691FE00B054BA"
-            BuildableName = "AutomateHighway.app"
-            BlueprintName = "AutomateHighway"
+            BlueprintIdentifier = "highway::XCBuild"
+            BuildableName = "XCBuild.framework"
+            BlueprintName = "XCBuild"
             ReferencedContainer = "container:Highway.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

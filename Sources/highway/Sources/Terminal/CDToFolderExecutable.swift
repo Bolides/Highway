@@ -14,7 +14,7 @@ public struct CDToFolderExecutable: ArgumentExecutableProtocol
 {
     private let folder: FolderProtocol
 
-    init(folder: FolderProtocol)
+    public init(to folder: FolderProtocol)
     {
         self.folder = folder
     }

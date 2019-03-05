@@ -1,14 +1,14 @@
 //
-//  ProjectFolderWorker_macOSTests.swift
-//  ProjectFolderWorker-macOSTests
+//  CarthageWorkerTests.swift
+//  CarthageWorkerTests
 //
-//  Created by Stijn on 03/01/2019.
+//  Created by Stijn on 05/03/2019.
 //
 
 import XCTest
-@testable import ProjectFolderWorker
+@testable import CarthageWorker
 
-class ProjectFolderWorker: XCTestCase {
+class CarthageWorkerTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

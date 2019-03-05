@@ -34,7 +34,8 @@ public enum TerminalSysExitCode: Int32, CustomDebugStringConvertible
     public var debugDescription: String
     {
         let prefix = "Exit code \(rawValue) ="
-        switch self {
+        switch self
+        {
         case .ok:
             return "\(prefix) successful termination."
         case .baseOrUsage: // MARK: Exit Codes
@@ -45,7 +46,8 @@ public enum TerminalSysExitCode: Int32, CustomDebugStringConvertible
                 var debugDescription: String
                 {
                     let prefix = "Exit code \(rawValue) ="
-                    switch self {
+                    switch self
+                    {
                     case .ok:
                         return "\(prefix) successful termination."
                     case .baseOrUsage:

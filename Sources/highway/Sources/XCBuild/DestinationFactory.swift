@@ -73,7 +73,8 @@ public struct DestinationFactory: AutoGenerateProtocol
 
         var rawValue: String
         {
-            switch self {
+            switch self
+            {
             case .message:
                 return "message"
             }
@@ -81,7 +82,8 @@ public struct DestinationFactory: AutoGenerateProtocol
 
         init?(rawValue: String)
         {
-            switch rawValue {
+            switch rawValue
+            {
             case "message":
                 self = .message("general")
             default:
@@ -91,7 +93,8 @@ public struct DestinationFactory: AutoGenerateProtocol
 
         var debugDescription: String
         {
-            switch self {
+            switch self
+            {
             case let .message(message):
                 return """
                 

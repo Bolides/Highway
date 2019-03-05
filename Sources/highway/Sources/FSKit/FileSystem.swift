@@ -82,7 +82,8 @@ extension FileSystem
         let meta = try itemMetadata(at: url)
         let actualType = meta.type
         let actualVsExpected = (actualType, itemType)
-        switch actualVsExpected {
+        switch actualVsExpected
+        {
         case let (actual, expected) where actual == expected: return
         default: throw FSError.typeMismatch
         }

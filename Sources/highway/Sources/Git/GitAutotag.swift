@@ -1,6 +1,7 @@
 import Arguments
 import Foundation
 import Task
+import Terminal
 import Url
 import ZFile
 
@@ -8,38 +9,31 @@ public final class GitAutotag
 {
     // MARK: - Properties
 
-    public let system: SystemProtocol
+    public let terminal: TerminalWorkerProtocol
+    public let systemExecutableProvider: SystemExecutableProviderProtocol
 
     // MARK: - Init
 
-    public init(system: SystemProtocol) throws
+    public init(
+        systemExecutableProvider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared,
+        terminal: TerminalWorkerProtocol = TerminalWorker.shared
+    ) throws
     {
-        self.system = system
+        self.terminal = terminal
+        self.systemExecutableProvider = systemExecutableProvider
     }
 
     // MARK: - Tagging
 
     @discardableResult
-    public func autotag(at url: FolderProtocol, dryRun: Bool = true) throws -> String
+    public func autotag(at url: FolderProtocol, dryRun: Bool = true) throws -> [String]
     {
         let arguments = Arguments(dryRun ? ["-n"] : [])
-        let task = try system.task(named: "git-autotag")
+        let executable = try systemExecutableProvider.executable(with: "git-autotag")
+        let task = Task(executable: executable)
         task.arguments = arguments
-        task.currentDirectoryUrl = url
         task.enableReadableOutputDataCapturing()
-        _ = try system.execute(task)
-        guard let rawTag = task.trimmedOutput else
-        {
-            throw "Failed to get current tag."
-        }
-        let numberOfDots = rawTag.reduce(0)
-        { (result, char) -> Int in
-            char == "." ? result + 1 : result
-        }
-        guard numberOfDots == 2 else
-        {
-            throw "'\(rawTag)' is not a valid version number: Must contain two '.'."
-        }
-        return rawTag
+
+        return try terminal.runProcess(task.toProcess)
     }
 }

@@ -7,7 +7,3 @@ github "Bolides/ZFile" ~> 1.1.0
 
 github "doozMen/Quick"
 github "doozMen/Nimble"
-
-# Auto generate Code
-
-github "doozMen/template-sourcery"

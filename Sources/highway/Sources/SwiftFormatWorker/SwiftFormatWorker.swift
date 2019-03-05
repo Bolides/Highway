@@ -52,33 +52,39 @@ public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
         self.folderToFormatRecursive = folderToFormatRecursive
     }
 
-    public convenience init(folderToFormatRecursive: FolderProtocol, highwayCommandLineArguments: HighwayCommandLineOption.Values = HighwayCommandLineOption.Values()) throws
+    public convenience init(
+        folderToFormatRecursive: FolderProtocol,
+        bundle: BundleProtocol = Bundle.main,
+        highwayCommandLineArguments: HighwayCommandLineOption.Values = HighwayCommandLineOption.Values(),
+        queue: DispatchQueue = SwiftFormatWorker.queue,
+        signPost: SignPostProtocol = SignPost.shared
+    ) throws
     {
-        guard let configPath = Bundle.main.path(forResource: ".swiftformat", ofType: "md") else
-        {
-            throw Error.swiftFormatCannotRunWithoutConfigFileInBundle
-        }
+        let configFile = try bundle.fileforResource(with: ".swiftformat", of: "md")
 
-        let configFile = try File(path: configPath)
-
-        try self.init(folderToFormatRecursive: folderToFormatRecursive, configFile: configFile)
+        try self.init(folderToFormatRecursive: folderToFormatRecursive, configFile: configFile, queue: queue, signPost: signPost)
     }
 
     public func attempt(_ asyncSwiftFormatAttemptOutput: @escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void)
     {
         queue.async
         { [weak self] in
-            guard let `self` = self else { return }
+            guard let `self` = self else
+            {
+                asyncSwiftFormatAttemptOutput { throw "\(SwiftFormatWorker.self) was released before \(#function) could finish" }
+                return
+            }
 
             let formatSettings = try? self.configFile.readAsString()
             self.signPost.verbose("👨🏻‍🏫  SwiftFormat \(self.folderToFormatRecursive.name) \n with settings \n \(String(describing: formatSettings))\n ...\n")
 
             CLI.print = { message, type in
-                switch type {
+                switch type
+                {
                 case .success:
-                    self.signPost.message("👨🏻‍🏫 SwiftFormat \(self.folderToFormatRecursive.name) \n\(message)\n ✅")
+                    self.signPost.verbose("👨🏻‍🏫 SwiftFormat \(self.folderToFormatRecursive.name) \n\(message)\n ✅")
                 case .info, .content:
-                    self.signPost.message("👨🏻‍🏫 SwiftFormat \(self.folderToFormatRecursive.name) \n\(message)\n")
+                    self.signPost.verbose("👨🏻‍🏫 SwiftFormat \(self.folderToFormatRecursive.name) \n\(message)\n")
                 case .error:
                     asyncSwiftFormatAttemptOutput { throw Error.cliError("❌ \n\(message)\n ❌") }
                 case .warning:
@@ -89,7 +95,8 @@ public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
             let arguments = ["", self.folderToFormatRecursive.path, "--config", self.configFile.path]
             let output = CLI.run(in: self.folderToFormatRecursive.path, with: arguments)
 
-            switch output {
+            switch output
+            {
             case .ok:
                 asyncSwiftFormatAttemptOutput {}
             case .lintFailure, .error:

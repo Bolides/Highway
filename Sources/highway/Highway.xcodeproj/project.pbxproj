@@ -38,6 +38,13 @@
 		FD34F42F21BEE9EB0052222C /* CDToFolderExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34F42C21BEE9EB0052222C /* CDToFolderExecutable.swift */; };
 		FD34F43021BEE9EB0052222C /* CatExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34F42D21BEE9EB0052222C /* CatExecutable.swift */; };
 		FD34F43121BEE9EB0052222C /* GitExecutables.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34F42E21BEE9EB0052222C /* GitExecutables.swift */; };
+		FD34F6A322282BDC001D8EB1 /* TerminalMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9E221CD736C0045DDA8 /* TerminalMock.framework */; };
+		FD34F6A822282C51001D8EB1 /* ArgumentsMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A98321CD6B5D0045DDA8 /* ArgumentsMock.framework */; };
+		FD34F6AB22282CAF001D8EB1 /* SignPostMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9C721CD6F7F0045DDA8 /* SignPostMock.framework */; };
+		FD34F6AC22282E4B001D8EB1 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
+		FD34F71622284258001D8EB1 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
+		FD34F71822285A81001D8EB1 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
+		FD34F71B2228603A001D8EB1 /* ArgumentsMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A98321CD6B5D0045DDA8 /* ArgumentsMock.framework */; };
 		FD3E94CF21C8117B00EA791C /* TemplatePrepend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3E94CE21C8117B00EA791C /* TemplatePrepend.swift */; };
 		FD3F8A1A21DDE43A00BBDA58 /* SwiftFormatWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A1121DDE43A00BBDA58 /* SwiftFormatWorker.framework */; };
 		FD3F8A1F21DDE43A00BBDA58 /* SwiftFormatWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3F8A1E21DDE43A00BBDA58 /* SwiftFormatWorkerTests.swift */; };
@@ -47,12 +54,38 @@
 		FD3F8A8821DDE94100BBDA58 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3F8A6621DDE6B100BBDA58 /* AutoMockable.generated.swift */; };
 		FD3F8C9021DE18B500BBDA58 /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
 		FD3F8DC521DE5A3F00BBDA58 /* SwiftFormatWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A1121DDE43A00BBDA58 /* SwiftFormatWorker.framework */; };
+		FD5363FC222817580033D4C6 /* SourceryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5363FB222817580033D4C6 /* SourceryBuilder.swift */; };
+		FD5363FE222817B50033D4C6 /* SourceryBuilderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5363FD222817B50033D4C6 /* SourceryBuilderSpec.swift */; };
+		FD536400222818750033D4C6 /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5363FF222818750033D4C6 /* Disk.swift */; };
 		FD589F60221B0EA300335F55 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
-		FD589F62221B0EB300335F55 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F61221B0EB300335F55 /* ZFileMock.framework */; };
 		FD589F64221B0EC100335F55 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
 		FD589F66221B0EC800335F55 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FD74CC7D2226F35B00A65E44 /* PodExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD74CC7C2226F35B00A65E44 /* PodExecutable.swift */; };
 		FDAA4C1D2225899A0091F9C3 /* MinimalTestOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAA4C1C2225899A0091F9C3 /* MinimalTestOptions.swift */; };
+		FDAB8373222D8E1A00A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FDAB8374222D8E1A00A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
+		FDAB8375222D8E2000A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FDAB8376222D8E2000A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
+		FDAB8377222D8E2800A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FDAB8378222D8E2800A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
+		FDAB8379222D8E2E00A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FDAB837A222D8E2E00A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
+		FDAB837B222D8E3400A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FDAB837C222D8E3400A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
+		FDAB837D222D8E3B00A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FDAB837E222D8E3B00A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
+		FDAB837F222D8E4100A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FDAB8380222D8E4100A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
+		FDAB8381222D8E4D00A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FDAB8382222D8E4D00A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
+		FDAB8383222D8E5500A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FDAB8384222D8E5500A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
+		FDAB8385222D8E5C00A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FDAB8386222D8E5C00A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
+		FDAB8387222D8E6200A6A826 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F65221B0EC800335F55 /* Quick.framework */; };
+		FDAB8388222D8E6200A6A826 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F63221B0EC100335F55 /* Nimble.framework */; };
 		FDAC932A210B595100B0D045 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
+		FDB74B4D22294586000B068C /* XCBuildDestinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB74B4C22294586000B068C /* XCBuildDestinations.swift */; };
 		FDB7A8AD21CD58600045DDA8 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC156DB21C5347C00E04B44 /* SourceryWorker.framework */; };
 		FDB7A98721CD6B5D0045DDA8 /* ArgumentsMock.h in Headers */ = {isa = PBXBuildFile; fileRef = FDB7A98521CD6B5D0045DDA8 /* ArgumentsMock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FDB7A98B21CD6B950045DDA8 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A95221CD6A790045DDA8 /* AutoMockable.generated.swift */; };
@@ -78,8 +111,6 @@
 		FDC0937B22268C2F00B054BA /* SignPostCommandLineOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC0937A22268C2F00B054BA /* SignPostCommandLineOptions.swift */; };
 		FDC093A02226924600B054BA /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		FDC093A12226924600B054BA /* Arguments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDC093A42226924600B054BA /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Keychain::Product" /* Keychain.framework */; };
-		FDC093A52226924600B054BA /* Keychain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Keychain::Product" /* Keychain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDC093A82226924600B054BA /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
 		FDC093A92226924600B054BA /* Terminal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDC093AC2226924600B054BA /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
@@ -102,7 +133,6 @@
 		FDC093D12226924700B054BA /* SignPost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDC093D42226924700B054BA /* SwiftFormatWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A1121DDE43A00BBDA58 /* SwiftFormatWorker.framework */; };
 		FDC093D52226924700B054BA /* SwiftFormatWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A1121DDE43A00BBDA58 /* SwiftFormatWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDC093DC2226924700B054BA /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
 		FDC093DD2226924700B054BA /* ZFile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDC093DE2226924700B054BA /* FoundationGenericHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFD3221B1D90001AC549 /* FoundationGenericHelper.framework */; };
 		FDC093DF2226924700B054BA /* FoundationGenericHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFD3221B1D90001AC549 /* FoundationGenericHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -125,34 +155,57 @@
 		FDC156F621C5355400E04B44 /* SourceryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC156F321C5355400E04B44 /* SourceryWorker.swift */; };
 		FDC156F721C5355400E04B44 /* Sourcery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC156F421C5355400E04B44 /* Sourcery.swift */; };
 		FDC156FA21C535A400E04B44 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
+		FDD572682228701C0016657D /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1126CC21C77F050072607D /* SignPost.framework */; };
+		FDD5726B222870510016657D /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
+		FDE2073A222D771600E44616 /* TaskMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9FC21CD7E8C0045DDA8 /* TaskMock.framework */; };
+		FDE207B8222D885A00E44616 /* CupertinoJWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFE3221B1EA7001AC549 /* CupertinoJWT.framework */; };
+		FDE207B9222D885A00E44616 /* CupertinoJWT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFE3221B1EA7001AC549 /* CupertinoJWT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDEC11E721C679DF00CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */; };
 		FDEC11E821C679E200CB7DAD /* SourceryAutoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11E421C679B600CB7DAD /* SourceryAutoProtocols.swift */; };
 		FDEC11F421C67ED700CB7DAD /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC11F221C67EAD00CB7DAD /* Worker.swift */; };
+		FDEE79CF222EBD1300D6481F /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF8221B2044001AC549 /* ZFileMock.framework */; };
+		FDEE79D0222EBD2400D6481F /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF8221B2044001AC549 /* ZFileMock.framework */; };
+		FDEE79D1222EBD4200D6481F /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF8221B2044001AC549 /* ZFileMock.framework */; };
+		FDEE79E5222EBDE200D6481F /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7A95E21CD6A790045DDA8 /* AutoMockable.generated.swift */; };
+		FDEE79E6222EBDFE00D6481F /* XCBuildMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE79D7222EBD9A00D6481F /* XCBuildMock.framework */; };
+		FDEE79ED222EBE2900D6481F /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
+		FDEE79EE222EBE2E00D6481F /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
+		FDEE79EF222EBE3A00D6481F /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
+		FDEE79F0222EBE5300D6481F /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
+		FDEE79F1222EBE5300D6481F /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF8221B2044001AC549 /* ZFileMock.framework */; };
+		FDEE79F6222EC0A800D6481F /* SignPostMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB7A9C721CD6F7F0045DDA8 /* SignPostMock.framework */; };
+		FDEE7A6B222EC94F00D6481F /* CarthageWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE7A62222EC94F00D6481F /* CarthageWorker.framework */; };
+		FDEE7A72222EC94F00D6481F /* CarthageWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE7A71222EC94F00D6481F /* CarthageWorkerTests.swift */; };
+		FDEE7A74222EC94F00D6481F /* CarthageWorker.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEE7A64222EC94F00D6481F /* CarthageWorker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDEE7A77222EC94F00D6481F /* CarthageWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE7A62222EC94F00D6481F /* CarthageWorker.framework */; };
+		FDEE7A78222EC94F00D6481F /* CarthageWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE7A62222EC94F00D6481F /* CarthageWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDEE7A84222ECAA100D6481F /* CarthageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE7A83222ECAA100D6481F /* CarthageKit.framework */; };
+		FDEE7A85222ECAA100D6481F /* CarthageKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE7A83222ECAA100D6481F /* CarthageKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDEE7A87222ECAB100D6481F /* XCDBLD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE7A86222ECAB000D6481F /* XCDBLD.framework */; };
+		FDEE7A88222ECAB100D6481F /* XCDBLD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE7A86222ECAB000D6481F /* XCDBLD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDEE7A8A222ECAE600D6481F /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE7A89222ECAE600D6481F /* Curry.framework */; };
+		FDEE7A8B222ECAE600D6481F /* Curry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE7A89222ECAE600D6481F /* Curry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDEE7A8D222ECB2600D6481F /* Tentacle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE7A8C222ECB2600D6481F /* Tentacle.framework */; };
+		FDEE7A8E222ECB2600D6481F /* Tentacle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE7A8C222ECB2600D6481F /* Tentacle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDEE7A90222ECB3400D6481F /* ReactiveTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE7A8F222ECB3400D6481F /* ReactiveTask.framework */; };
+		FDEE7A91222ECB3400D6481F /* ReactiveTask.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE7A8F222ECB3400D6481F /* ReactiveTask.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDEE7A93222ECB4200D6481F /* Commandant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE7A92222ECB4200D6481F /* Commandant.framework */; };
+		FDEE7A94222ECB4200D6481F /* Commandant.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE7A92222ECB4200D6481F /* Commandant.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDEE7A96222ECB4F00D6481F /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE7A95222ECB4F00D6481F /* ReactiveSwift.framework */; };
+		FDEE7A97222ECB4F00D6481F /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE7A95222ECB4F00D6481F /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDEE7A99222ECB5C00D6481F /* PrettyColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE7A98222ECB5C00D6481F /* PrettyColors.framework */; };
+		FDEE7A9A222ECB5C00D6481F /* PrettyColors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDEE7A98222ECB5C00D6481F /* PrettyColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDFCEFC3221B1981001AC549 /* SwiftFormat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFC2221B1981001AC549 /* SwiftFormat.framework */; };
-		FDFCEFC8221B1A34001AC549 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFC7221B1A34001AC549 /* Quick.framework */; };
-		FDFCEFCA221B1A3B001AC549 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFC9221B1A3B001AC549 /* Nimble.framework */; };
 		FDFCEFCD221B1A74001AC549 /* SwiftFormatWorkerMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F8A7221DDE7E700BBDA58 /* SwiftFormatWorkerMock.framework */; };
 		FDFCEFCE221B1ABB001AC549 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		FDFCEFD1221B1AFA001AC549 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F5F221B0EA300335F55 /* ZFile.framework */; };
-		FDFCEFD2221B1B77001AC549 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD589F61221B0EB300335F55 /* ZFileMock.framework */; };
 		FDFCEFD4221B1D90001AC549 /* FoundationGenericHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFD3221B1D90001AC549 /* FoundationGenericHelper.framework */; };
 		FDFCEFDB221B1E43001AC549 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFDA221B1E43001AC549 /* ZFile.framework */; };
-		FDFCEFDD221B1E43001AC549 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFDC221B1E43001AC549 /* ZFileMock.framework */; };
 		FDFCEFDF221B1E53001AC549 /* FoundationGenericHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFDE221B1E53001AC549 /* FoundationGenericHelper.framework */; };
 		FDFCEFE2221B1E97001AC549 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFE0221B1E82001AC549 /* Result.framework */; };
-		FDFCEFE6221B1EEF001AC549 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFE5221B1EEF001AC549 /* Quick.framework */; };
-		FDFCEFE8221B1EF7001AC549 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFE7221B1EF7001AC549 /* Nimble.framework */; };
-		FDFCEFEE221B1F19001AC549 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFED221B1F19001AC549 /* Quick.framework */; };
-		FDFCEFF0221B1F20001AC549 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFEF221B1F20001AC549 /* Nimble.framework */; };
-		FDFCEFF2221B1F3C001AC549 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF1221B1F3C001AC549 /* Quick.framework */; };
-		FDFCEFF4221B1F44001AC549 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF3221B1F44001AC549 /* Nimble.framework */; };
 		FDFCEFF7221B1FD9001AC549 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
 		FDFCEFF9221B2044001AC549 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF8221B2044001AC549 /* ZFileMock.framework */; };
 		FDFCEFFA221B2044001AC549 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFDA221B1E43001AC549 /* ZFile.framework */; };
-		FDFCEFFC221B205C001AC549 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFFB221B205C001AC549 /* Quick.framework */; };
-		FDFCEFFE221B2062001AC549 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFFD221B2062001AC549 /* Nimble.framework */; };
-		FDFCEFFF221B207F001AC549 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFFB221B205C001AC549 /* Quick.framework */; };
-		FDFCF000221B2086001AC549 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFFD221B2062001AC549 /* Nimble.framework */; };
 		FDFCF003221B2137001AC549 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFDA221B1E43001AC549 /* ZFile.framework */; };
 		FDFCF004221B2137001AC549 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFF8221B2044001AC549 /* ZFileMock.framework */; };
 		FDFCF005221B2141001AC549 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCEFDA221B1E43001AC549 /* ZFile.framework */; };
@@ -190,13 +243,6 @@
 		OBJ_384 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		OBJ_385 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
 		OBJ_386 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
-		OBJ_604 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_98 /* Keychain.swift */; };
-		OBJ_606 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Task::Product" /* Task.framework */; };
-		OBJ_607 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
-		OBJ_609 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
-		OBJ_611 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
-		OBJ_612 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Terminal::Product" /* Terminal.framework */; };
-		OBJ_613 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_626 /* abscwd.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_150 /* abscwd.swift */; };
 		OBJ_628 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
 		OBJ_629 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
@@ -216,8 +262,6 @@
 		OBJ_675 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_738 /* PathEnvironmentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_135 /* PathEnvironmentParser.swift */; };
 		OBJ_739 /* SystemExecutableProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_136 /* SystemExecutableProvider.swift */; };
-		OBJ_740 /* SystemExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_137 /* SystemExecutor.swift */; };
-		OBJ_742 /* LocalSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_139 /* LocalSystem.swift */; };
 		OBJ_743 /* Channel+Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_141 /* Channel+Reader.swift */; };
 		OBJ_744 /* Channel+Writer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_142 /* Channel+Writer.swift */; };
 		OBJ_745 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_143 /* Channel.swift */; };
@@ -225,7 +269,6 @@
 		OBJ_747 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_145 /* State.swift */; };
 		OBJ_748 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_146 /* Task.swift */; };
 		OBJ_749 /* Termination.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_147 /* Termination.swift */; };
-		OBJ_750 /* SystemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_148 /* SystemProtocol.swift */; };
 		OBJ_752 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Arguments::Product" /* Arguments.framework */; };
 		OBJ_754 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Errors::Product" /* Errors.framework */; };
 		OBJ_756 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Url::Product" /* Url.framework */; };
@@ -276,7 +319,6 @@
 		OBJ_955 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::SourceryAutoProtocols::Product" /* SourceryAutoProtocols.framework */; };
 		OBJ_970 /* DestinationFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_164 /* DestinationFactoryTests.swift */; };
 		OBJ_971 /* XCBuild_System_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_165 /* XCBuild_System_Tests.swift */; };
-		OBJ_973 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Keychain::Product" /* Keychain.framework */; };
 		OBJ_977 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::XCBuild::Product" /* XCBuild.framework */; };
 		OBJ_980 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::POSIX::Product" /* POSIX.framework */; };
 		OBJ_981 /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "highway::Git::Product" /* Git.framework */; };
@@ -443,48 +485,6 @@
 			remoteGlobalIDString = "highway::SourceryAutoProtocols";
 			remoteInfo = SourceryAutoProtocols;
 		};
-		FD326CA22109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Task";
-			remoteInfo = Task;
-		};
-		FD326CA32109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Arguments";
-			remoteInfo = Arguments;
-		};
-		FD326CA52109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Errors";
-			remoteInfo = Errors;
-		};
-		FD326CA72109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Url";
-			remoteInfo = Url;
-		};
-		FD326CA82109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Terminal";
-			remoteInfo = Terminal;
-		};
-		FD326CA92109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
-		};
 		FD326CAA2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -638,13 +638,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = "highway::SourceryAutoProtocols";
 			remoteInfo = SourceryAutoProtocols;
-		};
-		FD326D1B2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Keychain";
-			remoteInfo = Keychain;
 		};
 		FD326D1F2109CCEA00AE3A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -912,6 +905,34 @@
 			remoteGlobalIDString = "highway::SourceryAutoProtocols";
 			remoteInfo = SourceryAutoProtocols;
 		};
+		FD34F6A422282BE8001D8EB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDB7A9E121CD736C0045DDA8;
+			remoteInfo = TerminalMock;
+		};
+		FD34F6A622282C4B001D8EB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDB7A98221CD6B5D0045DDA8;
+			remoteInfo = ArgumentsMock;
+		};
+		FD34F6A922282CA9001D8EB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDB7A9C621CD6F7F0045DDA8;
+			remoteInfo = SignPostMock;
+		};
+		FD34F71922285F1A001D8EB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDB7A98221CD6B5D0045DDA8;
+			remoteInfo = ArgumentsMock;
+		};
 		FD3F8A1B21DDE43A00BBDA58 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1038,13 +1059,6 @@
 			remoteGlobalIDString = "highway::Arguments";
 			remoteInfo = Arguments;
 		};
-		FDC093A62226924600B054BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Keychain";
-			remoteInfo = Keychain;
-		};
 		FDC093AA2226924600B054BA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1143,6 +1157,76 @@
 			remoteGlobalIDString = "highway::Task";
 			remoteInfo = Task;
 		};
+		FDD572692228702D0016657D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD1126CB21C77F050072607D;
+			remoteInfo = SignPost;
+		};
+		FDE20738222D771000E44616 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDB7A9FB21CD7E8C0045DDA8;
+			remoteInfo = TaskMock;
+		};
+		FDEE79E7222EBE1600D6481F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::XCBuild";
+			remoteInfo = XCBuild;
+		};
+		FDEE79E9222EBE1C00D6481F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::SourceryAutoProtocols";
+			remoteInfo = "SourceryAutoProtocols-macos";
+		};
+		FDEE79EB222EBE2300D6481F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Arguments";
+			remoteInfo = Arguments;
+		};
+		FDEE79F2222EBF2000D6481F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDEE79D6222EBD9A00D6481F;
+			remoteInfo = XCBuildMock;
+		};
+		FDEE79F4222EC09E00D6481F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDB7A9C621CD6F7F0045DDA8;
+			remoteInfo = SignPostMock;
+		};
+		FDEE7A6C222EC94F00D6481F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDEE7A61222EC94F00D6481F;
+			remoteInfo = CarthageWorker;
+		};
+		FDEE7A6E222EC94F00D6481F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDC0938F222691FE00B054BA;
+			remoteInfo = AutomateHighway;
+		};
+		FDEE7A75222EC94F00D6481F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDEE7A61222EC94F00D6481F;
+			remoteInfo = CarthageWorker;
+		};
 		FDFCEFCB221B1A6B001AC549 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -1175,21 +1259,30 @@
 			files = (
 				FDC093D12226924700B054BA /* SignPost.framework in Embed Frameworks */,
 				FDC093E32226924700B054BA /* Result.framework in Embed Frameworks */,
+				FDE207B9222D885A00E44616 /* CupertinoJWT.framework in Embed Frameworks */,
 				FDC093B12226924600B054BA /* XCBuild.framework in Embed Frameworks */,
+				FDEE7A9A222ECB5C00D6481F /* PrettyColors.framework in Embed Frameworks */,
+				FDEE7A8E222ECB2600D6481F /* Tentacle.framework in Embed Frameworks */,
 				FDC093A92226924600B054BA /* Terminal.framework in Embed Frameworks */,
 				FDC093C52226924600B054BA /* Task.framework in Embed Frameworks */,
 				FDC093DD2226924700B054BA /* ZFile.framework in Embed Frameworks */,
-				FDC093A52226924600B054BA /* Keychain.framework in Embed Frameworks */,
+				FDEE7A78222EC94F00D6481F /* CarthageWorker.framework in Embed Frameworks */,
 				FDC093AD2226924600B054BA /* POSIX.framework in Embed Frameworks */,
 				FDC093E12226924700B054BA /* SwiftFormat.framework in Embed Frameworks */,
 				FDC093CD2226924700B054BA /* SourceryWorker.framework in Embed Frameworks */,
+				FDEE7A97222ECB4F00D6481F /* ReactiveSwift.framework in Embed Frameworks */,
 				FDC093B92226924600B054BA /* SourceryAutoProtocols.framework in Embed Frameworks */,
 				FDC093BD2226924600B054BA /* Git.framework in Embed Frameworks */,
+				FDEE7A88222ECAB100D6481F /* XCDBLD.framework in Embed Frameworks */,
+				FDEE7A91222ECB3400D6481F /* ReactiveTask.framework in Embed Frameworks */,
 				FDC093DF2226924700B054BA /* FoundationGenericHelper.framework in Embed Frameworks */,
+				FDEE7A85222ECAA100D6481F /* CarthageKit.framework in Embed Frameworks */,
+				FDEE7A94222ECB4200D6481F /* Commandant.framework in Embed Frameworks */,
 				FDC093C92226924600B054BA /* Url.framework in Embed Frameworks */,
 				FDC093D52226924700B054BA /* SwiftFormatWorker.framework in Embed Frameworks */,
 				FDC093A12226924600B054BA /* Arguments.framework in Embed Frameworks */,
 				FDC093B52226924600B054BA /* Errors.framework in Embed Frameworks */,
+				FDEE7A8B222ECAE600D6481F /* Curry.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1227,22 +1320,23 @@
 		FD3F8A6B21DDE73B00BBDA58 /* SwiftFormatWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFormatWorker.swift; sourceTree = "<group>"; };
 		FD3F8A7221DDE7E700BBDA58 /* SwiftFormatWorkerMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftFormatWorkerMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3F8C9121DE1D2B00BBDA58 /* .swiftformat.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .swiftformat.md; sourceTree = SOURCE_ROOT; };
-		FD3F8D3421DE229A00BBDA58 /* ProjectFolderWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFolderWorker.swift; sourceTree = "<group>"; };
-		FD3F8D3621DE229A00BBDA58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD3F8D4D21DE304800BBDA58 /* .swiftformat.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .swiftformat.md; sourceTree = "<group>"; };
+		FD5363FB222817580033D4C6 /* SourceryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryBuilder.swift; sourceTree = "<group>"; };
+		FD5363FD222817B50033D4C6 /* SourceryBuilderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryBuilderSpec.swift; sourceTree = "<group>"; };
+		FD5363FF222818750033D4C6 /* Disk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disk.swift; sourceTree = "<group>"; };
 		FD589F5F221B0EA300335F55 /* ZFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD589F61221B0EB300335F55 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD589F63221B0EC100335F55 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD589F65221B0EC800335F55 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD74CC7C2226F35B00A65E44 /* PodExecutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodExecutable.swift; sourceTree = "<group>"; };
 		FDAA4C1C2225899A0091F9C3 /* MinimalTestOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimalTestOptions.swift; sourceTree = "<group>"; };
 		FDAC932C210B5C4500B0D045 /* ExcecutableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcecutableProtocol.swift; sourceTree = "<group>"; };
 		FDAC9350210B7D4A00B0D045 /* TerminalTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminalTasks.swift; sourceTree = "<group>"; };
+		FDB74B4C22294586000B068C /* XCBuildDestinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCBuildDestinations.swift; sourceTree = "<group>"; };
 		FDB7A93A21CD6A780045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDB7A93D21CD6A780045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDB7A94021CD6A780045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDB7A94321CD6A780045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDB7A94621CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
-		FDB7A94921CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDB7A94C21CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDB7A94F21CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDB7A95221CD6A790045DDA8 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
@@ -1293,26 +1387,28 @@
 		FDEC11F221C67EAD00CB7DAD /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 		FDECFC43221B4B8700EA1E33 /* Cartfile.private */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile.private; path = ../../Cartfile.private; sourceTree = "<group>"; };
 		FDECFC44221B4B9900EA1E33 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = ../../Cartfile; sourceTree = "<group>"; };
+		FDEE79D7222EBD9A00D6481F /* XCBuildMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCBuildMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDEE7A62222EC94F00D6481F /* CarthageWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CarthageWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDEE7A64222EC94F00D6481F /* CarthageWorker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarthageWorker.h; sourceTree = "<group>"; };
+		FDEE7A65222EC94F00D6481F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDEE7A6A222EC94F00D6481F /* CarthageWorkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarthageWorkerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDEE7A71222EC94F00D6481F /* CarthageWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarthageWorkerTests.swift; sourceTree = "<group>"; };
+		FDEE7A73222EC94F00D6481F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDEE7A83222ECAA100D6481F /* CarthageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CarthageKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDEE7A86222ECAB000D6481F /* XCDBLD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XCDBLD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDEE7A89222ECAE600D6481F /* Curry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Curry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDEE7A8C222ECB2600D6481F /* Tentacle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tentacle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDEE7A8F222ECB3400D6481F /* ReactiveTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactiveTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDEE7A92222ECB4200D6481F /* Commandant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Commandant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDEE7A95222ECB4F00D6481F /* ReactiveSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactiveSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDEE7A98222ECB5C00D6481F /* PrettyColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PrettyColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFCEFC2221B1981001AC549 /* SwiftFormat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftFormat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFC7221B1A34001AC549 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFC9221B1A3B001AC549 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFCEFD3221B1D90001AC549 /* FoundationGenericHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FoundationGenericHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFCEFDA221B1E43001AC549 /* ZFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFDC221B1E43001AC549 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFCEFDE221B1E53001AC549 /* FoundationGenericHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FoundationGenericHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFCEFE0221B1E82001AC549 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFCEFE3221B1EA7001AC549 /* CupertinoJWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CupertinoJWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFE5221B1EEF001AC549 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFE7221B1EF7001AC549 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFE9221B1F00001AC549 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFEB221B1F06001AC549 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFED221B1F19001AC549 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFEF221B1F20001AC549 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFF1221B1F3C001AC549 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFF3221B1F44001AC549 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFCEFF8221B2044001AC549 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFFB221B205C001AC549 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDFCEFFD221B2062001AC549 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFCF00A221B21D4001AC549 /* FoundationGenericHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FoundationGenericHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
 		OBJ_109 /* FileStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStream.swift; sourceTree = "<group>"; };
@@ -1330,8 +1426,6 @@
 		OBJ_123 /* Texts+Printable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Texts+Printable.swift"; sourceTree = "<group>"; };
 		OBJ_135 /* PathEnvironmentParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathEnvironmentParser.swift; sourceTree = "<group>"; };
 		OBJ_136 /* SystemExecutableProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemExecutableProvider.swift; sourceTree = "<group>"; };
-		OBJ_137 /* SystemExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemExecutor.swift; sourceTree = "<group>"; };
-		OBJ_139 /* LocalSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSystem.swift; sourceTree = "<group>"; };
 		OBJ_14 /* Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Export.swift; sourceTree = "<group>"; };
 		OBJ_141 /* Channel+Reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Channel+Reader.swift"; sourceTree = "<group>"; };
 		OBJ_142 /* Channel+Writer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Channel+Writer.swift"; sourceTree = "<group>"; };
@@ -1340,7 +1434,6 @@
 		OBJ_145 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		OBJ_146 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		OBJ_147 /* Termination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Termination.swift; sourceTree = "<group>"; };
-		OBJ_148 /* SystemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemProtocol.swift; sourceTree = "<group>"; };
 		OBJ_15 /* ExportArchiveOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportArchiveOptions.swift; sourceTree = "<group>"; };
 		OBJ_150 /* abscwd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = abscwd.swift; sourceTree = "<group>"; };
 		OBJ_157 /* TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTests.swift; sourceTree = "<group>"; };
@@ -1367,13 +1460,11 @@
 		OBJ_84 /* Arguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arguments.swift; sourceTree = "<group>"; };
 		OBJ_85 /* HighwayCommandLineOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighwayCommandLineOption.swift; sourceTree = "<group>"; };
 		OBJ_96 /* String+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Error.swift"; sourceTree = "<group>"; };
-		OBJ_98 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		"highway::Arguments::Product" /* Arguments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Arguments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::ArgumentsTests::Product" /* ArgumentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ArgumentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::Errors::Product" /* Errors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Errors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::Git::Product" /* Git.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Git.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::GitTests::Product" /* GitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = GitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		"highway::Keychain::Product" /* Keychain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Keychain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::POSIX::Product" /* POSIX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = POSIX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::POSIXTests::Product" /* POSIXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = POSIXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"highway::ResultTests::Product" /* ResultTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ResultTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1403,6 +1494,8 @@
 			files = (
 				FD1126D521C77F050072607D /* SignPost.framework in Frameworks */,
 				FDB7A9D121CD70020045DDA8 /* SignPostMock.framework in Frameworks */,
+				FDAB837F222D8E4100A6A826 /* Quick.framework in Frameworks */,
+				FDAB8380222D8E4100A6A826 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1424,10 +1517,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDFCEFC8221B1A34001AC549 /* Quick.framework in Frameworks */,
-				FDFCEFCA221B1A3B001AC549 /* Nimble.framework in Frameworks */,
+				FDEE79F6222EC0A800D6481F /* SignPostMock.framework in Frameworks */,
 				FD3F8A1A21DDE43A00BBDA58 /* SwiftFormatWorker.framework in Frameworks */,
 				FDFCEFCD221B1A74001AC549 /* SwiftFormatWorkerMock.framework in Frameworks */,
+				FDAB837D222D8E3B00A6A826 /* Quick.framework in Frameworks */,
+				FDAB837E222D8E3B00A6A826 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1435,8 +1529,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDEE79D0222EBD2400D6481F /* ZFileMock.framework in Frameworks */,
 				FDFCF005221B2141001AC549 /* ZFile.framework in Frameworks */,
-				FDFCEFD2221B1B77001AC549 /* ZFileMock.framework in Frameworks */,
 				FD3F8A7C21DDE80200BBDA58 /* SwiftFormatWorker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1445,9 +1539,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDEE79CF222EBD1300D6481F /* ZFileMock.framework in Frameworks */,
 				FDFCEFDF221B1E53001AC549 /* FoundationGenericHelper.framework in Frameworks */,
 				FDFCEFDB221B1E43001AC549 /* ZFile.framework in Frameworks */,
-				FDFCEFDD221B1E43001AC549 /* ZFileMock.framework in Frameworks */,
 				FDB7A9C121CD6CAB0045DDA8 /* Arguments.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1456,9 +1550,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDEE79D1222EBD4200D6481F /* ZFileMock.framework in Frameworks */,
 				FD589F66221B0EC800335F55 /* Quick.framework in Frameworks */,
 				FD589F64221B0EC100335F55 /* Nimble.framework in Frameworks */,
-				FD589F62221B0EB300335F55 /* ZFileMock.framework in Frameworks */,
 				FD589F60221B0EA300335F55 /* ZFile.framework in Frameworks */,
 				FDB7A9D921CD719F0045DDA8 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDB7A9DC21CD71AF0045DDA8 /* SignPost.framework in Frameworks */,
@@ -1501,23 +1595,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD34F71622284258001D8EB1 /* ZFile.framework in Frameworks */,
 				FDC093D02226924700B054BA /* SignPost.framework in Frameworks */,
 				FDC093E22226924700B054BA /* Result.framework in Frameworks */,
 				FDC093B02226924600B054BA /* XCBuild.framework in Frameworks */,
+				FDEE7A99222ECB5C00D6481F /* PrettyColors.framework in Frameworks */,
+				FDEE7A8D222ECB2600D6481F /* Tentacle.framework in Frameworks */,
 				FDC093A82226924600B054BA /* Terminal.framework in Frameworks */,
 				FDC093C42226924600B054BA /* Task.framework in Frameworks */,
-				FDC093DC2226924700B054BA /* ZFile.framework in Frameworks */,
-				FDC093A42226924600B054BA /* Keychain.framework in Frameworks */,
 				FDC093AC2226924600B054BA /* POSIX.framework in Frameworks */,
+				FDEE7A77222EC94F00D6481F /* CarthageWorker.framework in Frameworks */,
 				FDC093E02226924700B054BA /* SwiftFormat.framework in Frameworks */,
 				FDC093CC2226924700B054BA /* SourceryWorker.framework in Frameworks */,
+				FDE207B8222D885A00E44616 /* CupertinoJWT.framework in Frameworks */,
+				FDEE7A96222ECB4F00D6481F /* ReactiveSwift.framework in Frameworks */,
 				FDC093B82226924600B054BA /* SourceryAutoProtocols.framework in Frameworks */,
 				FDC093BC2226924600B054BA /* Git.framework in Frameworks */,
+				FDEE7A87222ECAB100D6481F /* XCDBLD.framework in Frameworks */,
+				FDEE7A90222ECB3400D6481F /* ReactiveTask.framework in Frameworks */,
 				FDC093DE2226924700B054BA /* FoundationGenericHelper.framework in Frameworks */,
+				FDEE7A84222ECAA100D6481F /* CarthageKit.framework in Frameworks */,
+				FDEE7A93222ECB4200D6481F /* Commandant.framework in Frameworks */,
 				FDC093C82226924600B054BA /* Url.framework in Frameworks */,
 				FDC093D42226924700B054BA /* SwiftFormatWorker.framework in Frameworks */,
 				FDC093A02226924600B054BA /* Arguments.framework in Frameworks */,
 				FDC093B42226924600B054BA /* Errors.framework in Frameworks */,
+				FDEE7A8A222ECAE600D6481F /* Curry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1535,6 +1638,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD34F71822285A81001D8EB1 /* Arguments.framework in Frameworks */,
+				FDAB8373222D8E1A00A6A826 /* Quick.framework in Frameworks */,
+				FDAB8374222D8E1A00A6A826 /* Nimble.framework in Frameworks */,
+				FD34F6AC22282E4B001D8EB1 /* ZFile.framework in Frameworks */,
+				FD34F6AB22282CAF001D8EB1 /* SignPostMock.framework in Frameworks */,
+				FD34F6A822282C51001D8EB1 /* ArgumentsMock.framework in Frameworks */,
+				FD34F6A322282BDC001D8EB1 /* TerminalMock.framework in Frameworks */,
 				FDB7AA1B21CD82DD0045DDA8 /* SourceryWorkerMock.framework in Frameworks */,
 				FDC156E421C5347D00E04B44 /* SourceryWorker.framework in Frameworks */,
 			);
@@ -1547,11 +1657,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDEE79D4222EBD9A00D6481F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDEE79EF222EBE3A00D6481F /* SourceryAutoProtocols.framework in Frameworks */,
+				FDEE79F0222EBE5300D6481F /* ZFile.framework in Frameworks */,
+				FDEE79F1222EBE5300D6481F /* ZFileMock.framework in Frameworks */,
+				FDEE79EE222EBE2E00D6481F /* Arguments.framework in Frameworks */,
+				FDEE79ED222EBE2900D6481F /* XCBuild.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDEE7A5F222EC94F00D6481F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDEE7A67222EC94F00D6481F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDEE7A6B222EC94F00D6481F /* CarthageWorker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		OBJ_271 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				FDD5726B222870510016657D /* ZFile.framework in Frameworks */,
 				OBJ_273 /* SourceryAutoProtocols.framework in Frameworks */,
+				FDD572682228701C0016657D /* SignPost.framework in Frameworks */,
 				OBJ_272 /* Errors.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1560,10 +1699,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FDFCEFE8221B1EF7001AC549 /* Nimble.framework in Frameworks */,
-				FDFCEFE6221B1EEF001AC549 /* Quick.framework in Frameworks */,
 				OBJ_285 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDB7A9BB21CD6BCC0045DDA8 /* ArgumentsMock.framework in Frameworks */,
+				FDAB8375222D8E2000A6A826 /* Quick.framework in Frameworks */,
+				FDAB8376222D8E2000A6A826 /* Nimble.framework in Frameworks */,
 				OBJ_283 /* Arguments.framework in Frameworks */,
 				OBJ_284 /* Errors.framework in Frameworks */,
 			);
@@ -1594,11 +1733,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FDFCEFF4221B1F44001AC549 /* Nimble.framework in Frameworks */,
-				FDFCEFF2221B1F3C001AC549 /* Quick.framework in Frameworks */,
 				OBJ_386 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDB7A8AD21CD58600045DDA8 /* SourceryWorker.framework in Frameworks */,
 				OBJ_374 /* XCBuild.framework in Frameworks */,
+				FDAB8377222D8E2800A6A826 /* Quick.framework in Frameworks */,
+				FDAB8378222D8E2800A6A826 /* Nimble.framework in Frameworks */,
 				OBJ_377 /* POSIX.framework in Frameworks */,
 				OBJ_378 /* Git.framework in Frameworks */,
 				OBJ_379 /* Task.framework in Frameworks */,
@@ -1606,19 +1745,6 @@
 				OBJ_383 /* Url.framework in Frameworks */,
 				OBJ_384 /* Arguments.framework in Frameworks */,
 				OBJ_385 /* Errors.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_605 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_606 /* Task.framework in Frameworks */,
-				OBJ_607 /* Arguments.framework in Frameworks */,
-				OBJ_609 /* Errors.framework in Frameworks */,
-				OBJ_611 /* Url.framework in Frameworks */,
-				OBJ_612 /* Terminal.framework in Frameworks */,
-				OBJ_613 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1635,10 +1761,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FDFCEFF0221B1F20001AC549 /* Nimble.framework in Frameworks */,
-				FDFCEFEE221B1F19001AC549 /* Quick.framework in Frameworks */,
 				OBJ_639 /* POSIX.framework in Frameworks */,
 				OBJ_640 /* Url.framework in Frameworks */,
+				FDAB8379222D8E2E00A6A826 /* Quick.framework in Frameworks */,
+				FDAB837A222D8E2E00A6A826 /* Nimble.framework in Frameworks */,
 				OBJ_641 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1651,6 +1777,8 @@
 				OBJ_666 /* POSIX.framework in Frameworks */,
 				OBJ_667 /* Git.framework in Frameworks */,
 				OBJ_668 /* Task.framework in Frameworks */,
+				FDAB837B222D8E3400A6A826 /* Quick.framework in Frameworks */,
+				FDAB837C222D8E3400A6A826 /* Nimble.framework in Frameworks */,
 				OBJ_670 /* Terminal.framework in Frameworks */,
 				OBJ_671 /* Url.framework in Frameworks */,
 				OBJ_672 /* Arguments.framework in Frameworks */,
@@ -1686,8 +1814,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FDFCEFFE221B2062001AC549 /* Nimble.framework in Frameworks */,
-				FDFCEFFC221B205C001AC549 /* Quick.framework in Frameworks */,
 				FDB7AA0621CD7EF50045DDA8 /* TaskMock.framework in Frameworks */,
 				OBJ_780 /* XCBuild.framework in Frameworks */,
 				OBJ_783 /* POSIX.framework in Frameworks */,
@@ -1697,6 +1823,8 @@
 				OBJ_788 /* Errors.framework in Frameworks */,
 				OBJ_790 /* Url.framework in Frameworks */,
 				OBJ_791 /* Terminal.framework in Frameworks */,
+				FDAB8381222D8E4D00A6A826 /* Quick.framework in Frameworks */,
+				FDAB8382222D8E4D00A6A826 /* Nimble.framework in Frameworks */,
 				OBJ_792 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1720,6 +1848,8 @@
 				OBJ_843 /* Git.framework in Frameworks */,
 				OBJ_844 /* Task.framework in Frameworks */,
 				OBJ_847 /* Url.framework in Frameworks */,
+				FDAB8383222D8E5500A6A826 /* Quick.framework in Frameworks */,
+				FDAB8384222D8E5500A6A826 /* Nimble.framework in Frameworks */,
 				OBJ_848 /* Arguments.framework in Frameworks */,
 				OBJ_849 /* Errors.framework in Frameworks */,
 				OBJ_850 /* Terminal.framework in Frameworks */,
@@ -1738,10 +1868,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FDFCF000221B2086001AC549 /* Nimble.framework in Frameworks */,
-				FDFCEFFF221B207F001AC549 /* Quick.framework in Frameworks */,
 				OBJ_928 /* Url.framework in Frameworks */,
 				OBJ_929 /* SourceryAutoProtocols.framework in Frameworks */,
+				FDAB8385222D8E5C00A6A826 /* Quick.framework in Frameworks */,
+				FDAB8386222D8E5C00A6A826 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1763,16 +1893,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_973 /* Keychain.framework in Frameworks */,
+				OBJ_989 /* SourceryAutoProtocols.framework in Frameworks */,
+				FDEE79E6222EBDFE00D6481F /* XCBuildMock.framework in Frameworks */,
+				OBJ_987 /* Arguments.framework in Frameworks */,
+				FD34F71B2228603A001D8EB1 /* ArgumentsMock.framework in Frameworks */,
+				OBJ_982 /* Task.framework in Frameworks */,
+				FDE2073A222D771600E44616 /* TaskMock.framework in Frameworks */,
+				FDAB8387222D8E6200A6A826 /* Quick.framework in Frameworks */,
+				FDAB8388222D8E6200A6A826 /* Nimble.framework in Frameworks */,
 				OBJ_977 /* XCBuild.framework in Frameworks */,
 				OBJ_980 /* POSIX.framework in Frameworks */,
 				OBJ_981 /* Git.framework in Frameworks */,
-				OBJ_982 /* Task.framework in Frameworks */,
 				OBJ_985 /* Terminal.framework in Frameworks */,
 				OBJ_986 /* Url.framework in Frameworks */,
-				OBJ_987 /* Arguments.framework in Frameworks */,
 				OBJ_988 /* Errors.framework in Frameworks */,
-				OBJ_989 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1823,30 +1957,16 @@
 		FD326D9E210A0F5F00AE3A98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FDFCEFFD221B2062001AC549 /* Nimble.framework */,
-				FDFCEFFB221B205C001AC549 /* Quick.framework */,
 				FDFCF00A221B21D4001AC549 /* FoundationGenericHelper.framework */,
 				FDFCEFF8221B2044001AC549 /* ZFileMock.framework */,
-				FDFCEFF3221B1F44001AC549 /* Nimble.framework */,
-				FDFCEFF1221B1F3C001AC549 /* Quick.framework */,
-				FDFCEFEF221B1F20001AC549 /* Nimble.framework */,
-				FDFCEFED221B1F19001AC549 /* Quick.framework */,
-				FDFCEFEB221B1F06001AC549 /* Nimble.framework */,
-				FDFCEFE9221B1F00001AC549 /* Quick.framework */,
-				FDFCEFE7221B1EF7001AC549 /* Nimble.framework */,
-				FDFCEFE5221B1EEF001AC549 /* Quick.framework */,
 				FDFCEFE3221B1EA7001AC549 /* CupertinoJWT.framework */,
 				FDFCEFE0221B1E82001AC549 /* Result.framework */,
 				FDFCEFDE221B1E53001AC549 /* FoundationGenericHelper.framework */,
 				FDFCEFDA221B1E43001AC549 /* ZFile.framework */,
-				FDFCEFDC221B1E43001AC549 /* ZFileMock.framework */,
 				FDFCEFD3221B1D90001AC549 /* FoundationGenericHelper.framework */,
-				FDFCEFC9221B1A3B001AC549 /* Nimble.framework */,
-				FDFCEFC7221B1A34001AC549 /* Quick.framework */,
 				FDFCEFC2221B1981001AC549 /* SwiftFormat.framework */,
 				FD589F65221B0EC800335F55 /* Quick.framework */,
 				FD589F63221B0EC100335F55 /* Nimble.framework */,
-				FD589F61221B0EB300335F55 /* ZFileMock.framework */,
 				FD589F5F221B0EA300335F55 /* ZFile.framework */,
 				FDC156B621C52EE800E04B44 /* UIKit.framework */,
 			);
@@ -1879,15 +1999,6 @@
 				FD3F8A6621DDE6B100BBDA58 /* AutoMockable.generated.swift */,
 			);
 			path = SwiftformatWorker;
-			sourceTree = "<group>";
-		};
-		FD3F8D3321DE229A00BBDA58 /* ProjectFolderWorker */ = {
-			isa = PBXGroup;
-			children = (
-				FD3F8D3421DE229A00BBDA58 /* ProjectFolderWorker.swift */,
-				FD3F8D3621DE229A00BBDA58 /* Info.plist */,
-			);
-			path = ProjectFolderWorker;
 			sourceTree = "<group>";
 		};
 		FDB7A93821CD6A780045DDA8 /* Url */ = {
@@ -1928,14 +2039,6 @@
 				FDB7A94621CD6A790045DDA8 /* AutoMockable.generated.swift */,
 			);
 			path = Deliver;
-			sourceTree = "<group>";
-		};
-		FDB7A94721CD6A790045DDA8 /* Keychain */ = {
-			isa = PBXGroup;
-			children = (
-				FDB7A94921CD6A790045DDA8 /* AutoMockable.generated.swift */,
-			);
-			path = Keychain;
 			sourceTree = "<group>";
 		};
 		FDB7A94A21CD6A790045DDA8 /* Terminal */ = {
@@ -2059,6 +2162,7 @@
 			children = (
 				FDC156DE21C5347C00E04B44 /* Info.plist */,
 				FDC156F421C5355400E04B44 /* Sourcery.swift */,
+				FD5363FB222817580033D4C6 /* SourceryBuilder.swift */,
 				FD3E94CE21C8117B00EA791C /* TemplatePrepend.swift */,
 				FDC156F221C5355400E04B44 /* SourceryExecutor.swift */,
 				FD1126C521C7756A0072607D /* SourceryExecutableFile.swift */,
@@ -2071,6 +2175,7 @@
 		FDC156E721C5347D00E04B44 /* SourceryWorkerTests */ = {
 			isa = PBXGroup;
 			children = (
+				FD5363FD222817B50033D4C6 /* SourceryBuilderSpec.swift */,
 				FDC156E821C5347D00E04B44 /* SourceryWorkerTests.swift */,
 				FDC156EA21C5347D00E04B44 /* Info.plist */,
 			);
@@ -2094,7 +2199,6 @@
 				FDB7A94421CD6A790045DDA8 /* Deliver */,
 				FDB7A95321CD6A790045DDA8 /* Errors */,
 				FDB7A95621CD6A790045DDA8 /* Git */,
-				FDB7A94721CD6A790045DDA8 /* Keychain */,
 				FDB7A94D21CD6A790045DDA8 /* POSIX */,
 				FDB7A95921CD6A790045DDA8 /* Result */,
 				FDB7A93B21CD6A780045DDA8 /* SignPost */,
@@ -2108,10 +2212,29 @@
 			path = AutoGeneratedCode;
 			sourceTree = "<group>";
 		};
+		FDEE7A63222EC94F00D6481F /* CarthageWorker */ = {
+			isa = PBXGroup;
+			children = (
+				FDEE7A64222EC94F00D6481F /* CarthageWorker.h */,
+				FDEE7A65222EC94F00D6481F /* Info.plist */,
+			);
+			path = CarthageWorker;
+			sourceTree = "<group>";
+		};
+		FDEE7A70222EC94F00D6481F /* CarthageWorkerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDEE7A71222EC94F00D6481F /* CarthageWorkerTests.swift */,
+				FDEE7A73222EC94F00D6481F /* Info.plist */,
+			);
+			path = CarthageWorkerTests;
+			sourceTree = "<group>";
+		};
 		OBJ_108 /* Terminal */ = {
 			isa = PBXGroup;
 			children = (
 				FD34F42C21BEE9EB0052222C /* CDToFolderExecutable.swift */,
+				FD74CC7C2226F35B00A65E44 /* PodExecutable.swift */,
 				FD34F42D21BEE9EB0052222C /* CatExecutable.swift */,
 				FD34F42E21BEE9EB0052222C /* GitExecutables.swift */,
 				FDAC932C210B5C4500B0D045 /* ExcecutableProtocol.swift */,
@@ -2136,9 +2259,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_133 /* Finding and Executing */,
-				OBJ_139 /* LocalSystem.swift */,
 				OBJ_140 /* Model */,
-				OBJ_148 /* SystemProtocol.swift */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -2148,7 +2269,6 @@
 			children = (
 				OBJ_135 /* PathEnvironmentParser.swift */,
 				OBJ_136 /* SystemExecutableProvider.swift */,
-				OBJ_137 /* SystemExecutor.swift */,
 			);
 			path = "Finding and Executing";
 			sourceTree = "<group>";
@@ -2178,9 +2298,9 @@
 		OBJ_151 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				FD3F8D3321DE229A00BBDA58 /* ProjectFolderWorker */,
 				FDB7A98421CD6B5D0045DDA8 /* ArgumentsMock */,
 				OBJ_168 /* ArgumentsTests */,
+				FDEE7A70222EC94F00D6481F /* CarthageWorkerTests */,
 				OBJ_188 /* DeliverTests */,
 				OBJ_184 /* GitTests */,
 				OBJ_166 /* POSIXTests */,
@@ -2295,7 +2415,6 @@
 			children = (
 				"highway::POSIXTests::Product" /* POSIXTests.xctest */,
 				"highway::Arguments::Product" /* Arguments.framework */,
-				"highway::Keychain::Product" /* Keychain.framework */,
 				"highway::GitTests::Product" /* GitTests.xctest */,
 				"highway::Terminal::Product" /* Terminal.framework */,
 				"highway::ArgumentsTests::Product" /* ArgumentsTests.xctest */,
@@ -2325,6 +2444,9 @@
 				FD3F8A1921DDE43A00BBDA58 /* SwiftFormatWorkerTests.xctest */,
 				FD3F8A7221DDE7E700BBDA58 /* SwiftFormatWorkerMock.framework */,
 				FDC09390222691FE00B054BA /* AutomateHighway.app */,
+				FDEE79D7222EBD9A00D6481F /* XCBuildMock.framework */,
+				FDEE7A62222EC94F00D6481F /* CarthageWorker.framework */,
+				FDEE7A6A222EC94F00D6481F /* CarthageWorkerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -2342,12 +2464,20 @@
 		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
+				FDEE7A98222ECB5C00D6481F /* PrettyColors.framework */,
+				FDEE7A95222ECB4F00D6481F /* ReactiveSwift.framework */,
+				FDEE7A92222ECB4200D6481F /* Commandant.framework */,
+				FDEE7A8F222ECB3400D6481F /* ReactiveTask.framework */,
+				FDEE7A8C222ECB2600D6481F /* Tentacle.framework */,
+				FDEE7A89222ECAE600D6481F /* Curry.framework */,
+				FDEE7A86222ECAB000D6481F /* XCDBLD.framework */,
+				FDEE7A83222ECAA100D6481F /* CarthageKit.framework */,
+				OBJ_7 /* Sources */,
 				FDECFC44221B4B9900EA1E33 /* Cartfile */,
 				FDECFC43221B4B8700EA1E33 /* Cartfile.private */,
 				FDC1571421C5485900E04B44 /* README.md */,
 				FD326D9E210A0F5F00AE3A98 /* Frameworks */,
 				OBJ_194 /* Products */,
-				OBJ_7 /* Sources */,
 				OBJ_151 /* Tests */,
 			);
 			sourceTree = "<group>";
@@ -2365,12 +2495,12 @@
 			isa = PBXGroup;
 			children = (
 				FD3F8C9121DE1D2B00BBDA58 /* .swiftformat.md */,
-				FDC09382222691E500B054BA /* AutomateHighway */,
 				OBJ_83 /* Arguments */,
 				FDEC11E021C679B600CB7DAD /* AutoGeneratedCode */,
+				FDC09382222691E500B054BA /* AutomateHighway */,
+				FDEE7A63222EC94F00D6481F /* CarthageWorker */,
 				OBJ_95 /* Errors */,
 				OBJ_48 /* Git */,
-				OBJ_97 /* Keychain */,
 				OBJ_149 /* POSIX */,
 				FD1126CD21C77F050072607D /* SignPost */,
 				FDE0B76421D7BF960093CBCB /* SourceryAutoProtocols */,
@@ -2394,6 +2524,7 @@
 				OBJ_13 /* Export */,
 				OBJ_18 /* Test */,
 				OBJ_21 /* XCBuild.swift */,
+				FDB74B4C22294586000B068C /* XCBuildDestinations.swift */,
 			);
 			path = XCBuild;
 			sourceTree = "<group>";
@@ -2402,6 +2533,7 @@
 			isa = PBXGroup;
 			children = (
 				FDEC11F221C67EAD00CB7DAD /* Worker.swift */,
+				FD5363FF222818750033D4C6 /* Disk.swift */,
 				OBJ_84 /* Arguments.swift */,
 				FD1126C021C771970072607D /* ArgumentsWorker.swift */,
 				OBJ_85 /* HighwayCommandLineOption.swift */,
@@ -2426,14 +2558,6 @@
 				FDC093ED2226AAEB00B054BA /* HighwayError.swift */,
 			);
 			path = Errors;
-			sourceTree = "<group>";
-		};
-		OBJ_97 /* Keychain */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_98 /* Keychain.swift */,
-			);
-			path = Keychain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2517,6 +2641,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDEE79D2222EBD9A00D6481F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDEE7A5D222EC94F00D6481F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDEE7A74222EC94F00D6481F /* CarthageWorker.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -2589,6 +2728,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FDEE79F5222EC09E00D6481F /* PBXTargetDependency */,
 				FD3F8A1C21DDE43A00BBDA58 /* PBXTargetDependency */,
 				FDFCEFCC221B1A6B001AC549 /* PBXTargetDependency */,
 			);
@@ -2727,7 +2867,6 @@
 			);
 			dependencies = (
 				FDC093A32226924600B054BA /* PBXTargetDependency */,
-				FDC093A72226924600B054BA /* PBXTargetDependency */,
 				FDC093AB2226924600B054BA /* PBXTargetDependency */,
 				FDC093AF2226924600B054BA /* PBXTargetDependency */,
 				FDC093B32226924600B054BA /* PBXTargetDependency */,
@@ -2739,6 +2878,7 @@
 				FDC093CF2226924700B054BA /* PBXTargetDependency */,
 				FDC093D32226924700B054BA /* PBXTargetDependency */,
 				FDC093D72226924700B054BA /* PBXTargetDependency */,
+				FDEE7A76222EC94F00D6481F /* PBXTargetDependency */,
 			);
 			name = AutomateHighway;
 			productName = AutomateHighway;
@@ -2777,6 +2917,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD34F6AA22282CA9001D8EB1 /* PBXTargetDependency */,
+				FD34F6A722282C4B001D8EB1 /* PBXTargetDependency */,
+				FD34F6A522282BE8001D8EB1 /* PBXTargetDependency */,
 				FDB7AA1A21CD82D50045DDA8 /* PBXTargetDependency */,
 				FDC156E621C5347D00E04B44 /* PBXTargetDependency */,
 			);
@@ -2803,6 +2946,64 @@
 			productReference = FDE9B6F721C58ED400D1F50A /* SourceryAutoProtocols.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		FDEE79D6222EBD9A00D6481F /* XCBuildMock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDEE79E0222EBD9A00D6481F /* Build configuration list for PBXNativeTarget "XCBuildMock" */;
+			buildPhases = (
+				FDEE79D2222EBD9A00D6481F /* Headers */,
+				FDEE79D3222EBD9A00D6481F /* Sources */,
+				FDEE79D4222EBD9A00D6481F /* Frameworks */,
+				FDEE79D5222EBD9A00D6481F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDEE79EC222EBE2300D6481F /* PBXTargetDependency */,
+				FDEE79EA222EBE1C00D6481F /* PBXTargetDependency */,
+				FDEE79E8222EBE1600D6481F /* PBXTargetDependency */,
+			);
+			name = XCBuildMock;
+			productName = XCBuildMock;
+			productReference = FDEE79D7222EBD9A00D6481F /* XCBuildMock.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FDEE7A61222EC94F00D6481F /* CarthageWorker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDEE7A81222EC94F00D6481F /* Build configuration list for PBXNativeTarget "CarthageWorker" */;
+			buildPhases = (
+				FDEE7A5D222EC94F00D6481F /* Headers */,
+				FDEE7A5E222EC94F00D6481F /* Sources */,
+				FDEE7A5F222EC94F00D6481F /* Frameworks */,
+				FDEE7A60222EC94F00D6481F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CarthageWorker;
+			productName = CarthageWorker;
+			productReference = FDEE7A62222EC94F00D6481F /* CarthageWorker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FDEE7A69222EC94F00D6481F /* CarthageWorkerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDEE7A82222EC94F00D6481F /* Build configuration list for PBXNativeTarget "CarthageWorkerTests" */;
+			buildPhases = (
+				FDEE7A66222EC94F00D6481F /* Sources */,
+				FDEE7A67222EC94F00D6481F /* Frameworks */,
+				FDEE7A68222EC94F00D6481F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDEE7A6D222EC94F00D6481F /* PBXTargetDependency */,
+				FDEE7A6F222EC94F00D6481F /* PBXTargetDependency */,
+			);
+			name = CarthageWorkerTests;
+			productName = CarthageWorkerTests;
+			productReference = FDEE7A6A222EC94F00D6481F /* CarthageWorkerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		"highway::Arguments" /* Arguments */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_265 /* Build configuration list for PBXNativeTarget "Arguments" */;
@@ -2814,6 +3015,7 @@
 			);
 			dependencies = (
 				OBJ_275 /* PBXTargetDependency */,
+				FDD5726A2228702D0016657D /* PBXTargetDependency */,
 				OBJ_274 /* PBXTargetDependency */,
 			);
 			name = Arguments;
@@ -2905,28 +3107,6 @@
 			productName = GitTests;
 			productReference = "highway::GitTests::Product" /* GitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		"highway::Keychain" /* Keychain */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_600 /* Build configuration list for PBXNativeTarget "Keychain" */;
-			buildPhases = (
-				OBJ_603 /* Sources */,
-				OBJ_605 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_614 /* PBXTargetDependency */,
-				OBJ_615 /* PBXTargetDependency */,
-				OBJ_617 /* PBXTargetDependency */,
-				OBJ_619 /* PBXTargetDependency */,
-				OBJ_620 /* PBXTargetDependency */,
-				OBJ_621 /* PBXTargetDependency */,
-			);
-			name = Keychain;
-			productName = Keychain;
-			productReference = "highway::Keychain::Product" /* Keychain.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 		"highway::POSIX" /* POSIX */ = {
 			isa = PBXNativeTarget;
@@ -3167,16 +3347,18 @@
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_990 /* PBXTargetDependency */,
+				OBJ_1006 /* PBXTargetDependency */,
+				OBJ_1004 /* PBXTargetDependency */,
+				FD34F71A22285F1A001D8EB1 /* PBXTargetDependency */,
+				OBJ_999 /* PBXTargetDependency */,
+				FDE20739222D771000E44616 /* PBXTargetDependency */,
 				OBJ_994 /* PBXTargetDependency */,
+				FDEE79F3222EBF2000D6481F /* PBXTargetDependency */,
 				OBJ_997 /* PBXTargetDependency */,
 				OBJ_998 /* PBXTargetDependency */,
-				OBJ_999 /* PBXTargetDependency */,
 				OBJ_1002 /* PBXTargetDependency */,
 				OBJ_1003 /* PBXTargetDependency */,
-				OBJ_1004 /* PBXTargetDependency */,
 				OBJ_1005 /* PBXTargetDependency */,
-				OBJ_1006 /* PBXTargetDependency */,
 			);
 			name = XCBuildTests;
 			productName = XCBuildTests;
@@ -3210,7 +3392,7 @@
 					};
 					FD3F8A1821DDE43A00BBDA58 = {
 						CreatedOnToolsVersion = 10.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					FD3F8A7121DDE7E700BBDA58 = {
 						CreatedOnToolsVersion = 10.1;
@@ -3261,6 +3443,19 @@
 						DevelopmentTeam = WWFDRU947Q;
 						ProvisioningStyle = Manual;
 					};
+					FDEE79D6222EBD9A00D6481F = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+					};
+					FDEE7A61222EC94F00D6481F = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+					};
+					FDEE7A69222EC94F00D6481F = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FDC0938F222691FE00B054BA;
+					};
 					"highway::Arguments" = {
 						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1000;
@@ -3284,11 +3479,6 @@
 					"highway::GitTests" = {
 						DevelopmentTeam = WWFDRU947Q;
 						LastSwiftMigration = 1010;
-						ProvisioningStyle = Manual;
-					};
-					"highway::Keychain" = {
-						DevelopmentTeam = WWFDRU947Q;
-						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
 					};
 					"highway::POSIX" = {
@@ -3369,9 +3559,9 @@
 				FDC0938F222691FE00B054BA /* AutomateHighway */,
 				"highway::Arguments" /* Arguments */,
 				FDB7A98221CD6B5D0045DDA8 /* ArgumentsMock */,
+				FDEE7A61222EC94F00D6481F /* CarthageWorker */,
 				"highway::Errors" /* Errors */,
 				"highway::Git" /* Git */,
-				"highway::Keychain" /* Keychain */,
 				"highway::POSIX" /* POSIX */,
 				FD1126CB21C77F050072607D /* SignPost */,
 				FDB7A9C621CD6F7F0045DDA8 /* SignPostMock */,
@@ -3387,6 +3577,7 @@
 				"highway::Terminal" /* Terminal */,
 				"highway::Url" /* Url */,
 				"highway::XCBuild" /* XCBuild */,
+				FDEE79D6222EBD9A00D6481F /* XCBuildMock */,
 				"highway::ArgumentsTests" /* ArgumentsTests */,
 				"highway::GitTests" /* GitTests */,
 				"highway::POSIXTests" /* POSIXTests */,
@@ -3398,6 +3589,7 @@
 				"highway::TerminalTests" /* TerminalTests */,
 				"highway::UrlTests" /* UrlTests */,
 				"highway::XCBuildTests" /* XCBuildTests */,
+				FDEE7A69222EC94F00D6481F /* CarthageWorkerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -3497,6 +3689,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FDE9B6F521C58ED400D1F50A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDEE79D5222EBD9A00D6481F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDEE7A60222EC94F00D6481F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDEE7A68222EC94F00D6481F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3636,6 +3849,7 @@
 				FDC156F521C5355400E04B44 /* SourceryExecutor.swift in Sources */,
 				FD1126C621C7756A0072607D /* SourceryExecutableFile.swift in Sources */,
 				FDC156F721C5355400E04B44 /* Sourcery.swift in Sources */,
+				FD5363FC222817580033D4C6 /* SourceryBuilder.swift in Sources */,
 				FDC156F621C5355400E04B44 /* SourceryWorker.swift in Sources */,
 				FD3E94CF21C8117B00EA791C /* TemplatePrepend.swift in Sources */,
 			);
@@ -3645,6 +3859,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD5363FE222817B50033D4C6 /* SourceryBuilderSpec.swift in Sources */,
 				FDC156E921C5347D00E04B44 /* SourceryWorkerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3657,11 +3872,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDEE79D3222EBD9A00D6481F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDEE79E5222EBDE200D6481F /* AutoMockable.generated.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDEE7A5E222EC94F00D6481F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDEE7A66222EC94F00D6481F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDEE7A72222EC94F00D6481F /* CarthageWorkerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		OBJ_268 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
 				FD1126C121C771970072607D /* ArgumentsWorker.swift in Sources */,
+				FD536400222818750033D4C6 /* Disk.swift in Sources */,
 				OBJ_269 /* Arguments.swift in Sources */,
 				OBJ_270 /* HighwayCommandLineOption.swift in Sources */,
 				FDEC11F421C67ED700CB7DAD /* Worker.swift in Sources */,
@@ -3705,14 +3944,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_603 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_604 /* Keychain.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		OBJ_625 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
@@ -3751,8 +3982,6 @@
 			files = (
 				OBJ_738 /* PathEnvironmentParser.swift in Sources */,
 				OBJ_739 /* SystemExecutableProvider.swift in Sources */,
-				OBJ_740 /* SystemExecutor.swift in Sources */,
-				OBJ_742 /* LocalSystem.swift in Sources */,
 				OBJ_743 /* Channel+Reader.swift in Sources */,
 				OBJ_744 /* Channel+Writer.swift in Sources */,
 				OBJ_745 /* Channel.swift in Sources */,
@@ -3760,7 +3989,6 @@
 				OBJ_747 /* State.swift in Sources */,
 				OBJ_748 /* Task.swift in Sources */,
 				OBJ_749 /* Termination.swift in Sources */,
-				OBJ_750 /* SystemProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3779,6 +4007,7 @@
 				FD34F43121BEE9EB0052222C /* GitExecutables.swift in Sources */,
 				FD34F42B21BEE91C0052222C /* ExcecutableProtocol.swift in Sources */,
 				FD34F42F21BEE9EB0052222C /* CDToFolderExecutable.swift in Sources */,
+				FD74CC7D2226F35B00A65E44 /* PodExecutable.swift in Sources */,
 				FD34F42A21BEE8E20052222C /* TerminalSysExitCode.swift in Sources */,
 				FD34F42821BEE8D50052222C /* TerminalTasks.swift in Sources */,
 				FD34F43021BEE9EB0052222C /* CatExecutable.swift in Sources */,
@@ -3817,6 +4046,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_936 /* Archive.swift in Sources */,
+				FDB74B4D22294586000B068C /* XCBuildDestinations.swift in Sources */,
 				FD326DA1210A134000AE3A98 /* DestinationFactory.swift in Sources */,
 				OBJ_937 /* ArchiveOptions.swift in Sources */,
 				OBJ_938 /* Destination.swift in Sources */,
@@ -3867,6 +4097,26 @@
 			isa = PBXTargetDependency;
 			target = FD1126CB21C77F050072607D /* SignPost */;
 			targetProxy = FD1126FB21C7830B0072607D /* PBXContainerItemProxy */;
+		};
+		FD34F6A522282BE8001D8EB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDB7A9E121CD736C0045DDA8 /* TerminalMock */;
+			targetProxy = FD34F6A422282BE8001D8EB1 /* PBXContainerItemProxy */;
+		};
+		FD34F6A722282C4B001D8EB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDB7A98221CD6B5D0045DDA8 /* ArgumentsMock */;
+			targetProxy = FD34F6A622282C4B001D8EB1 /* PBXContainerItemProxy */;
+		};
+		FD34F6AA22282CA9001D8EB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDB7A9C621CD6F7F0045DDA8 /* SignPostMock */;
+			targetProxy = FD34F6A922282CA9001D8EB1 /* PBXContainerItemProxy */;
+		};
+		FD34F71A22285F1A001D8EB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDB7A98221CD6B5D0045DDA8 /* ArgumentsMock */;
+			targetProxy = FD34F71922285F1A001D8EB1 /* PBXContainerItemProxy */;
 		};
 		FD3F8A1C21DDE43A00BBDA58 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3958,11 +4208,6 @@
 			target = "highway::Arguments" /* Arguments */;
 			targetProxy = FDC093A22226924600B054BA /* PBXContainerItemProxy */;
 		};
-		FDC093A72226924600B054BA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Keychain" /* Keychain */;
-			targetProxy = FDC093A62226924600B054BA /* PBXContainerItemProxy */;
-		};
 		FDC093AB2226924600B054BA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "highway::Terminal" /* Terminal */;
@@ -4032,6 +4277,56 @@
 			isa = PBXTargetDependency;
 			target = "highway::Task" /* Task */;
 			targetProxy = FDC156FB21C5363C00E04B44 /* PBXContainerItemProxy */;
+		};
+		FDD5726A2228702D0016657D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD1126CB21C77F050072607D /* SignPost */;
+			targetProxy = FDD572692228702D0016657D /* PBXContainerItemProxy */;
+		};
+		FDE20739222D771000E44616 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDB7A9FB21CD7E8C0045DDA8 /* TaskMock */;
+			targetProxy = FDE20738222D771000E44616 /* PBXContainerItemProxy */;
+		};
+		FDEE79E8222EBE1600D6481F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::XCBuild" /* XCBuild */;
+			targetProxy = FDEE79E7222EBE1600D6481F /* PBXContainerItemProxy */;
+		};
+		FDEE79EA222EBE1C00D6481F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
+			targetProxy = FDEE79E9222EBE1C00D6481F /* PBXContainerItemProxy */;
+		};
+		FDEE79EC222EBE2300D6481F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "highway::Arguments" /* Arguments */;
+			targetProxy = FDEE79EB222EBE2300D6481F /* PBXContainerItemProxy */;
+		};
+		FDEE79F3222EBF2000D6481F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDEE79D6222EBD9A00D6481F /* XCBuildMock */;
+			targetProxy = FDEE79F2222EBF2000D6481F /* PBXContainerItemProxy */;
+		};
+		FDEE79F5222EC09E00D6481F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDB7A9C621CD6F7F0045DDA8 /* SignPostMock */;
+			targetProxy = FDEE79F4222EC09E00D6481F /* PBXContainerItemProxy */;
+		};
+		FDEE7A6D222EC94F00D6481F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDEE7A61222EC94F00D6481F /* CarthageWorker */;
+			targetProxy = FDEE7A6C222EC94F00D6481F /* PBXContainerItemProxy */;
+		};
+		FDEE7A6F222EC94F00D6481F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDC0938F222691FE00B054BA /* AutomateHighway */;
+			targetProxy = FDEE7A6E222EC94F00D6481F /* PBXContainerItemProxy */;
+		};
+		FDEE7A76222EC94F00D6481F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDEE7A61222EC94F00D6481F /* CarthageWorker */;
+			targetProxy = FDEE7A75222EC94F00D6481F /* PBXContainerItemProxy */;
 		};
 		FDFCEFCC221B1A6B001AC549 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4177,36 +4472,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326D172109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_614 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Task" /* Task */;
-			targetProxy = FD326CA22109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_615 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Arguments" /* Arguments */;
-			targetProxy = FD326CA32109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_617 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Errors" /* Errors */;
-			targetProxy = FD326CA52109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_619 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Url" /* Url */;
-			targetProxy = FD326CA72109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_620 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Terminal" /* Terminal */;
-			targetProxy = FD326CA82109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_621 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
-			targetProxy = FD326CA92109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_630 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4442,11 +4707,6 @@
 			isa = PBXTargetDependency;
 			target = "highway::SourceryAutoProtocols" /* SourceryAutoProtocols-macos */;
 			targetProxy = FD326CB22109CCEA00AE3A98 /* PBXContainerItemProxy */;
-		};
-		OBJ_990 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "highway::Keychain" /* Keychain */;
-			targetProxy = FD326D1B2109CCEA00AE3A98 /* PBXContainerItemProxy */;
 		};
 		OBJ_994 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4737,8 +4997,9 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -4754,6 +5015,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SwiftFormatWorkerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 4.2;
 			};
@@ -4775,9 +5037,10 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -4789,6 +5052,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SwiftFormatWorkerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
@@ -5030,29 +5294,6 @@
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
 				TARGET_NAME = Git;
-			};
-			name = BetaRelease;
-		};
-		FD61D91E221C70C600CC87F8 /* BetaRelease */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Keychain;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = Keychain;
 			};
 			name = BetaRelease;
 		};
@@ -5654,9 +5895,10 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -5668,6 +5910,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SwiftFormatWorkerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = BetaRelease;
@@ -5962,29 +6205,6 @@
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
 				TARGET_NAME = Git;
-			};
-			name = Local;
-		};
-		FD61D943221C70CE00CC87F8 /* Local */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Keychain;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = Keychain;
 			};
 			name = Local;
 		};
@@ -6623,8 +6843,9 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -6640,6 +6861,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.SwiftFormatWorkerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 4.2;
 			};
@@ -7244,6 +7466,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = Sources/AutomateHighway/AutomateHighway.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -7283,6 +7506,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = Sources/AutomateHighway/AutomateHighway.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = "";
@@ -7318,6 +7542,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = Sources/AutomateHighway/AutomateHighway.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = "";
@@ -7353,6 +7578,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = Sources/AutomateHighway/AutomateHighway.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = "";
@@ -7612,6 +7838,510 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		FDEE79E1222EBD9A00D6481F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Highway.xcodeproj/XCBuild_Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.XCBuildMock;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FDEE79E2222EBD9A00D6481F /* Local */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Highway.xcodeproj/XCBuild_Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.XCBuildMock;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Local;
+		};
+		FDEE79E3222EBD9A00D6481F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Highway.xcodeproj/XCBuild_Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.XCBuildMock;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FDEE79E4222EBD9A00D6481F /* BetaRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Highway.xcodeproj/XCBuild_Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.XCBuildMock;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = BetaRelease;
+		};
+		FDEE7A79222EC94F00D6481F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Sources/CarthageWorker/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.CarthageWorker;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FDEE7A7A222EC94F00D6481F /* Local */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Sources/CarthageWorker/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.CarthageWorker;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Local;
+		};
+		FDEE7A7B222EC94F00D6481F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Sources/CarthageWorker/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.CarthageWorker;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FDEE7A7C222EC94F00D6481F /* BetaRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Sources/CarthageWorker/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.CarthageWorker;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = BetaRelease;
+		};
+		FDEE7A7D222EC94F00D6481F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Tests/CarthageWorkerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.CarthageWorkerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutomateHighway.app/Contents/MacOS/AutomateHighway";
+			};
+			name = Debug;
+		};
+		FDEE7A7E222EC94F00D6481F /* Local */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Tests/CarthageWorkerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.CarthageWorkerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutomateHighway.app/Contents/MacOS/AutomateHighway";
+			};
+			name = Local;
+		};
+		FDEE7A7F222EC94F00D6481F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Tests/CarthageWorkerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.CarthageWorkerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutomateHighway.app/Contents/MacOS/AutomateHighway";
+			};
+			name = Release;
+		};
+		FDEE7A80222EC94F00D6481F /* BetaRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Tests/CarthageWorkerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.CarthageWorkerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutomateHighway.app/Contents/MacOS/AutomateHighway";
+			};
+			name = BetaRelease;
 		};
 		OBJ_266 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -7915,52 +8645,6 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				USE_HEADERMAP = NO;
-			};
-			name = Release;
-		};
-		OBJ_601 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Keychain;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = Keychain;
-			};
-			name = Debug;
-		};
-		OBJ_602 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $inherited;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = $inherited;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Keychain;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = Keychain;
 			};
 			name = Release;
 		};
@@ -8595,6 +9279,39 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		FDEE79E0222EBD9A00D6481F /* Build configuration list for PBXNativeTarget "XCBuildMock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDEE79E1222EBD9A00D6481F /* Debug */,
+				FDEE79E2222EBD9A00D6481F /* Local */,
+				FDEE79E3222EBD9A00D6481F /* Release */,
+				FDEE79E4222EBD9A00D6481F /* BetaRelease */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDEE7A81222EC94F00D6481F /* Build configuration list for PBXNativeTarget "CarthageWorker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDEE7A79222EC94F00D6481F /* Debug */,
+				FDEE7A7A222EC94F00D6481F /* Local */,
+				FDEE7A7B222EC94F00D6481F /* Release */,
+				FDEE7A7C222EC94F00D6481F /* BetaRelease */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDEE7A82222EC94F00D6481F /* Build configuration list for PBXNativeTarget "CarthageWorkerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDEE7A7D222EC94F00D6481F /* Debug */,
+				FDEE7A7E222EC94F00D6481F /* Local */,
+				FDEE7A7F222EC94F00D6481F /* Release */,
+				FDEE7A80222EC94F00D6481F /* BetaRelease */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		OBJ_2 /* Build configuration list for PBXProject "Highway" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -8657,17 +9374,6 @@
 				FD61D957221C70CE00CC87F8 /* Local */,
 				OBJ_365 /* Release */,
 				FD61D932221C70C700CC87F8 /* BetaRelease */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_600 /* Build configuration list for PBXNativeTarget "Keychain" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_601 /* Debug */,
-				FD61D943221C70CE00CC87F8 /* Local */,
-				OBJ_602 /* Release */,
-				FD61D91E221C70C600CC87F8 /* BetaRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

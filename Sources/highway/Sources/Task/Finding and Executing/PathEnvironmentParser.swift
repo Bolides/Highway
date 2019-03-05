@@ -1,7 +1,18 @@
+import Arguments
+import Errors
 import Foundation
 import POSIX
+import SignPost
+import SourceryAutoProtocols
 import Url
 import ZFile
+
+public protocol PathEnvironmentParserProtocol: AutoMockable
+{
+    /// sourcery:inline:PathEnvironmentParser.AutoGenerateProtocol
+    var urls: [FolderProtocol] { get }
+    /// sourcery:end
+}
 
 /// Parser that extracts urls from a String-Array of paths.
 /// Usually used to parse the contents of the PATH-environment
@@ -9,36 +20,54 @@ import ZFile
 /// is subsituted by $cwd. Furthermore: Any component which only
 /// contains a "." is used as an input to Absolute.init:. (which
 /// standardizes the path).
-public struct PathEnvironmentParser
+public struct PathEnvironmentParser: PathEnvironmentParserProtocol
 {
-    // MARK: - Convenience
-
-    public static func local() throws -> PathEnvironmentParser
-    {
-        let env = ProcessInfo.processInfo.environment
-        let path = env["PATH"] ?? ""
-        return try self.init(value: path, currentDirectoryUrl: FileSystem().currentFolder)
-    }
+    public static let shared: PathEnvironmentParser = PathEnvironmentParser()
+    public var urls: [FolderProtocol]
 
     // MARK: - Init
 
-    public init(value: String, currentDirectoryUrl: FolderProtocol) throws
+    public init(
+        highwayCommandLineArguments: HighwayCommandLineOption.Values = HighwayCommandLineOption.Values(),
+        processInfoEnvironment: [String: String] = ProcessInfo.processInfo.environment,
+        signPost: SignPostProtocol = SignPost.shared
+    )
     {
-        let paths = value.components(separatedBy: ":")
-        urls = try paths.compactMap
-        { path in
-            guard path != "" else { return nil }
-            guard path != "." else { return currentDirectoryUrl }
+        let pathFromCommandline = highwayCommandLineArguments.ordered.compactMap { $0.path }.first
 
-            let isRelative = path.hasPrefix("/") == false
-            guard isRelative else { return try Folder(path: path) }
-            return try currentDirectoryUrl.subfolder(atPath: path)
+        do
+        {
+            if pathFromCommandline != nil
+            {
+                signPost.message("\(PathEnvironmentParser.self) \(#function) \n⚠️ using path from command line argument")
+            }
+
+            guard let path = pathFromCommandline == nil ? processInfoEnvironment["PATH"] : pathFromCommandline! else
+            {
+                throw "\(PathEnvironmentParser.self) \(#function) \(HighwayError.processInfoMissingPath(processInfo: processInfoEnvironment))"
+            }
+
+            let paths: [String] = path.components(separatedBy: ":")
+
+            signPost.message("\(PathEnvironmentParser.self) \(#function) found path urls \n\(paths.map { "* \($0)" }.joined(separator: "\n"))")
+
+            urls = paths.compactMap
+            {
+                do
+                {
+                    return try Folder(path: $0)
+                }
+                catch
+                {
+                    signPost.message("⚠️  '\($0)'  ⚠️ - from $PATH is ignored because invalid")
+                    return nil
+                }
+            }
         }
-        self.currentDirectoryUrl = currentDirectoryUrl
+        catch
+        {
+            signPost.error("⚠️ \(PathEnvironmentParser.self) \(#function) \(error)")
+            urls = [FolderProtocol]()
+        }
     }
-
-    // MARK: - Properties
-
-    public let currentDirectoryUrl: FolderProtocol
-    public var urls: [FolderProtocol]
 }

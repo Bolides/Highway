@@ -15,8 +15,9 @@ public protocol TestReportProtocol: AutoMockable
 public struct TestReport: TestReportProtocol, AutoGenerateProtocol, CustomStringConvertible
 {
     public let failingTests: ArraySlice<String>?
+    public let buildErrors: [String]?
+    public let output: [String]
 
-    private let output: [String]
     private let signPost: SignPostProtocol
 
     public init(output: [String], signPost: SignPostProtocol = SignPost.shared)
@@ -24,14 +25,31 @@ public struct TestReport: TestReportProtocol, AutoGenerateProtocol, CustomString
         self.output = output
         self.signPost = signPost
 
-        guard let indexFailing = output.firstIndex(of: "Failing tests:"),
-            let failingEnd = output.firstIndex(of: "** TEST FAILED **") else
+        signPost.verbose("making testreport from raw output \n\(output.joined(separator: "\n"))\n")
+
+        signPost.message("\(TestReport.self) generating test report ... ")
+        signPost.message("\(TestReport.self) checking failed tests ")
+
+        if let indexFailing = output.firstIndex(of: "Failing tests:"),
+            let failingEnd = output.firstIndex(of: "** TEST FAILED **")
+        {
+            failingTests = output[indexFailing ..< failingEnd]
+        }
+        else
         {
             failingTests = nil
-            return
         }
 
-        failingTests = output[indexFailing ..< failingEnd]
+        signPost.message("\(TestReport.self) checking build errors ")
+
+        if (output.first { $0.contains("error:") }) != nil
+        {
+            buildErrors = output.filter { $0.contains("error:") }
+        }
+        else
+        {
+            buildErrors = nil
+        }
     }
 
     public func failedTests() -> String
@@ -46,8 +64,17 @@ public struct TestReport: TestReportProtocol, AutoGenerateProtocol, CustomString
             let title = self.failingTests?.first
         else
         {
-            signPost.verbose(output.joined(separator: "\n"))
-            return "No failed tests"
+            guard let buildErrors = buildErrors else
+            {
+                signPost.message(output.joined(separator: "\n"))
+                return "No failed tests or Build errors, printing raw output"
+            }
+            return """
+            \(TestReport.self) build failed with errors \(buildErrors.count)
+            
+            \(buildErrors.enumerated().map { "    \($0.offset + 1) - \($0.element) " }.joined(separator: "\n"))
+            
+            """
         }
 
         return """

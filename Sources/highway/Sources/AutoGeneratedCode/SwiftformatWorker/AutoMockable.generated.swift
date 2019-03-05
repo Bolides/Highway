@@ -1,12 +1,12 @@
 import Foundation
 import os
 import SourceryAutoProtocols
-import SwiftformatWorker
+import SwiftFormatWorker
 import ZFile
 import ZFileMock
 
 
-// Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 
@@ -66,7 +66,7 @@ open class SwiftFormatWorkerProtocolMock: SwiftFormatWorkerProtocol {
 
       // <attempt> - Void return mock implementation
 
-      attemptClosure?(asyncSwiftFormatAttemptOutput)
+        attemptClosure?(asyncSwiftFormatAttemptOutput)
 
   }
 }
