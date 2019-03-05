@@ -16,6 +16,11 @@ import Url
 import Arguments
 import Url
 import Errors
-
+import SignPost
 
 // TODO: Usable functions should come here
+
+
+public func helloWorldSwiftSH() {
+//    sigh
+}
