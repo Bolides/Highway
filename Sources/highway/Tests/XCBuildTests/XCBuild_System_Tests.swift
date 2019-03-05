@@ -20,7 +20,7 @@ class XCBuildSpec: QuickSpec {
         
             var terminal: TerminalWorkerProtocolMock!
             var xcbuildExecutable: MinimalTestOptionsProtocolMock!
-            var system: SystemExecutableProviderProtocol!
+            var system: SystemExecutableProviderProtocolMock!
             
             beforeEach {
                 xcbuildExecutable = MinimalTestOptionsProtocolMock()

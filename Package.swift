@@ -149,7 +149,7 @@ let package = Package(
         ),
         .testTarget(
             name: "SourceryWorkerTests",
-            dependencies: ["SourceryWorker", "Quick", "Nimble"],
+            dependencies: ["SourceryWorker", "SignPostMock", "Quick", "Nimble"],
             path: "Sources/highway/Tests/SourceryWorkerTests"
         ),
         .target(
@@ -164,17 +164,17 @@ let package = Package(
         ),
         .testTarget(
             name: "SwiftFormatWorkerTests",
-            dependencies: ["SwiftFormatWorker", "SwiftFormatWorkerMock", "Quick", "Nimble"],
+            dependencies: ["SwiftFormatWorker", "SwiftFormatWorkerMock", "SignPostMock", "Quick", "Nimble"],
             path: "Sources/highway/Tests/SwiftFormatWorkerTests"
         ),
         .target(
                 name: "CarthageWorker",
-                dependencies: [],
+                dependencies: ["SourceryAutoProtocols"],
                 path: "Sources/highway/Sources/CarthageWorker"
         ),
         .testTarget(
             name: "CartageWorkerTests",
-            dependencies: ["CarthageWorker", "Quick", "Nimble"],
+            dependencies: ["CarthageWorker", "SignPostMock", "Quick", "Nimble"],
             path: "Sources/highway/Tests/CarthageWorkerTests"
         ),
     ]
