@@ -1,15 +1,9 @@
 #!/usr/bin/swift sh
 
 import Foundation
-import SwiftFormatWorker // @doozMen/highway
+import Highway // @doozMen ~> 2.1
 
-firstly {
-    after(.seconds(2))
-}.then {
-    after(.milliseconds(500))
-}.done {
-    print("notice: two and a half seconds elapsed")
-    exit(0)
-}
+
+helloWorldSwiftSH()
 
 RunLoop.main.run()
