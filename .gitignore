@@ -32,3 +32,5 @@ xcuserdata/
 Carthage
 /Sources/highway/.build
 /.build
+/HighwaySetup/.build
+/HighwaySetup/HighwaySetup.xcodeproj

@@ -52,9 +52,6 @@ let package = Package(
         .library(
             name: "CarthageWorker",
             targets: ["CarthageWorker"]),
-        .library(
-            name: "Highway",
-            targets: ["Highway"]),
 
     ],
     dependencies: [
@@ -179,11 +176,6 @@ let package = Package(
             name: "CartageWorkerTests",
             dependencies: ["CarthageWorker", "Quick", "Nimble"],
             path: "Sources/highway/Tests/CarthageWorkerTests"
-        ),
-        .target(
-            name: "Highway",
-            dependencies: ["CarthageWorker", "Terminal", "XCBuild", "SourceryWorker", "Git", "XCBuild", "POSIX", "Url", "Arguments", "Url", "Errors", "SignPost", "SwiftFormatWorker", "SwiftFormat"],
-            path: "Sources/highway/Sources/Highway"
         ),
     ]
 )

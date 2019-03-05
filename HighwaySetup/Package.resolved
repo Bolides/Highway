@@ -1,0 +1,79 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Highway",
+        "repositoryURL": "https://github.com/doozMen/Highway.git",
+        "state": {
+          "branch": null,
+          "revision": "14079486b1e8c16bcfc7624ad1bbbd02498a7fe2",
+          "version": "2.1.3"
+        }
+      },
+      {
+        "package": "Nimble",
+        "repositoryURL": "https://www.github.com/Quick/Nimble",
+        "state": {
+          "branch": null,
+          "revision": "a27c5186ce2d65f60d1237660b2509df3eb29023",
+          "version": "8.0.0"
+        }
+      },
+      {
+        "package": "Quick",
+        "repositoryURL": "https://www.github.com/Quick/Quick",
+        "state": {
+          "branch": null,
+          "revision": "0b4ed6c706dd0cce923b5019a605a9bcc6b1b600",
+          "version": "2.0.0"
+        }
+      },
+      {
+        "package": "Result",
+        "repositoryURL": "https://www.github.com/antitypical/Result",
+        "state": {
+          "branch": null,
+          "revision": "2ca499ba456795616fbc471561ff1d963e6ae160",
+          "version": "4.1.0"
+        }
+      },
+      {
+        "package": "SignPost",
+        "repositoryURL": "https://www.github.com/doozMen/SignPost",
+        "state": {
+          "branch": null,
+          "revision": "2267389b0367f6e49a5b0fa931c28164a572dbe0",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "SwiftFormat",
+        "repositoryURL": "https://github.com/nicklockwood/SwiftFormat.git",
+        "state": {
+          "branch": null,
+          "revision": "ccb33374ef60c174d7f1855a4a3fbe4036ec0d76",
+          "version": "0.39.4"
+        }
+      },
+      {
+        "package": "template-sourcery",
+        "repositoryURL": "https://www.github.com/doozMen/template-sourcery",
+        "state": {
+          "branch": null,
+          "revision": "8782d6d289be75267d4400371da682dc667039cd",
+          "version": "1.2.0"
+        }
+      },
+      {
+        "package": "ZFile",
+        "repositoryURL": "https://www.github.com/doozMen/ZFile",
+        "state": {
+          "branch": null,
+          "revision": "ab99ce43908a09897d5faad5f5e6f8bf53dcf2a0",
+          "version": "2.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

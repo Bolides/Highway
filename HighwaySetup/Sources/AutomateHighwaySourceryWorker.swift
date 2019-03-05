@@ -53,7 +53,7 @@ public class AutomateHighwaySourceryWorker: AutomateHighwaySourceryWorkerProtoco
 
     // MARK: - Init
 
-    init(
+    public init(
         disk: DiskProtocol,
         signPost: SignPostProtocol = SignPost.shared,
         queue: DispatchQueue = AutomateHighwaySourceryWorker.queue
