@@ -5,6 +5,7 @@
 //  Created by Stijn on 03/01/2019.
 //
 
+import Foundation
 import Nimble
 import Quick
 

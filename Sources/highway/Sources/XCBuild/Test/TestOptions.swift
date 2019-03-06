@@ -1,7 +1,6 @@
 import Arguments
 import Foundation
 import SourceryAutoProtocols
-import Task
 import Terminal
 import ZFile
 
@@ -14,8 +13,8 @@ public protocol TestOptionsProtocol: ArgumentExecutableProtocol
     var resultBundlePath: String { get }
     var derivedDataPath: FolderProtocol? { get }
 
-    func arguments() throws -> Arguments
-    func executableFile() throws -> FileProtocol
+    func arguments() throws  -> Arguments
+    func executableFile() throws  -> FileProtocol
     /// sourcery:end
 }
 

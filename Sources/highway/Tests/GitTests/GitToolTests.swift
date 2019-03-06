@@ -1,7 +1,7 @@
 import Git
 import Nimble
 import Quick
-import Task
+import Terminal
 import Url
 import ZFile
 

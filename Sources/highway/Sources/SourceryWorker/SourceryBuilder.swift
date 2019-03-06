@@ -9,9 +9,9 @@ import Arguments
 import Errors
 import SignPost
 import SourceryAutoProtocols
-import Task
 import Terminal
 import ZFile
+import Foundation
 
 public protocol SourceryBuilderProtocol: AutoMockable
 {

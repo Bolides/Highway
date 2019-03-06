@@ -1,8 +1,9 @@
 import Foundation
-import os
+import SignPost
 import SignPost
 import SourceryAutoProtocols
 import ZFile
+import Errors
 
 // MARK: - TerminalWorker
 
@@ -177,13 +178,21 @@ public struct TerminalWorker: TerminalWorkerProtocol
 
 extension Process
 {
-    public var executableFile: FileProtocol
+    public func executableFile() throws -> FileProtocol
     {
-        return try! File(path: executableURL?.path ?? "")
+        if #available(OSX 10.13, *) {
+            return try File(path: executableURL?.path ?? "")
+        } else {
+            throw "Does not support #available(OSX 10.13, *)"
+        }
     }
 
     public func executable(set file: FileProtocol) throws
     {
-        executableURL = URL(fileURLWithPath: file.path)
+        if #available(OSX 10.13, *) {
+            executableURL = URL(fileURLWithPath: file.path)
+        } else {
+            throw "Does not support #available(OSX 10.13, *)"
+        }
     }
 }

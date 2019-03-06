@@ -5,7 +5,7 @@
 //
 
 import Foundation
-import os
+import SignPost
 import SourceryAutoProtocols
 
 public enum TerminalTask: RawRepresentable, Equatable, AutoCases
@@ -95,7 +95,7 @@ public enum TerminalTask: RawRepresentable, Equatable, AutoCases
         switch rawValue
         {
         default:
-            os_log("not possible %@", type: .error, rawValue)
+            SignPost.shared.error("not possible \(rawValue)")
             return nil
         }
     }

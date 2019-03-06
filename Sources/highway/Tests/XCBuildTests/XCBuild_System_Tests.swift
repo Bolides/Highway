@@ -1,8 +1,7 @@
 import Nimble
 import Quick
 
-import Task
-import TaskMock
+import Terminal
 import XCBuild
 import TerminalMock
 import Arguments

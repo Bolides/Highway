@@ -1,6 +1,6 @@
 import Arguments
 import Foundation
-import os
+import SignPost
 import SourceryAutoProtocols
 import ZFile
 import ZFileMock
