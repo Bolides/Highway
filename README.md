@@ -1,37 +1,41 @@
-# Automate development tasks using Swift.
+# Highway
 
-1. Build frameworks you can use to write a script in swift that runs Terminal commands
-2. Building with xcbuild from swift code
-3. Run terminal commands from swift
-4. Generate code using [Sourcery](https://github.com/doozMen/Sourcery)
+## Develop on Highway
 
-# Usage
+``` bash
+swift build --product HWSetup -c release --static-swift-stdlib
+# will output where the executable is build, usually
+./.build/x86_64-apple-macosx10.10/release/HWSetup
+# after running this sourcery is setup too and you can generate code when needed
+```
+# Used Highway in your project
 
-First resolve some dependencies from the xcode project
+If you do not yet have a `Package.swift` run `swift package init`
 
-`carthage checkout`
- To build using xcode do `File>WorkSpace Settings> Build relative to workspace` and set to `../../.build`
- 
- > To my knowledge I cannot share this setting, let me know if you know how you can.
- 
-## Integrate in your project
+add `.package(url: "https://www.github.com/doozMen/Highway", from: "2.3.0")`
 
-Use [Carthage](https://www.github.com/Carthage/Carthage)
+do `swift build`
 
-1. Add Cartfile  `github "doozMen/highway`
-2. `carthage update`
-3. Embed the  `Sources/highway/Highway.xcodeproj` in workspace or project
-4. Set the **framework search path** to `$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)` in the **GENERAL** project settings,
-5. Embed all frameworks from  Highway except the iOS versions
-6. Embed  `Sources/Carthage/CheckOuts/CupertinoJWT`
-8. Embed  `Sources/Carthage/CheckOuts/ZFile`
-9. Embed  `Sources/Carthage/CheckOuts/Result`
+choose frameworks to add. For example HWSetup runs sourcery for highway, swiftformat and performs tests.
 
-The goal is not to provide an out of the box script. You use the different frameworks to automate your workflow.
+``` swift
+// Add a target in Package.swift
+.target(
+            name:   "HWSetup",
+            dependencies: [
+                    "Arguments",
+                    "Errors",
+                    "SignPost",
+                    "SourceryAutoProtocols",
+                    "SourceryWorker",
+                    "SwiftFormatWorker",
+                    "Terminal",
+                    "ZFile"
+            ]
+```
 
---- 
-The rest is extra
+`swift package generate-xcodeproj`
 
-## git-secret
+> You should not add the generated xcode project to git, just use it to Develop
 
-The api key to appstore connect is stored via git-secret. run `git-secret reveal` to use it.
+🚀 Done
