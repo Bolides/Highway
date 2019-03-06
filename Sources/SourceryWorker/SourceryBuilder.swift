@@ -46,7 +46,7 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 
         guard let disk = disk else
         {
-            self.disk = try SwiftPackageService().swiftPackage
+            self.disk = try SwiftPackageDependencyService().swiftPackage
             return
         }
 

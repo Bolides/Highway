@@ -9,23 +9,23 @@ import Foundation
 import Arguments
 import SourceryAutoProtocols
 
-public protocol SwiftPackageServiceProtocol: AutoMockable {
+public protocol SwiftPackageDumpServiceProtocol: AutoMockable {
     // sourcery:inline:SwiftPackageService .AutoGenerateProtocol
     // sourcery:end
 }
 
-public struct  SwiftPackageService: SwiftPackageServiceProtocol, AutoGenerateProtocol {
-    
-    public let swiftPackage: SwiftPackageProtocol
+public struct  SwiftPackageDumpService: SwiftPackageDumpServiceProtocol, AutoGenerateProtocol {
+        
+    public let swiftPackageDump: SwiftPackageDumpProtocol
     
     public init(terminal: TerminalWorkerProtocol = TerminalWorker.shared) throws {
         let task = try Task(commandName: "swift")
-        task.arguments = Arguments(["package", "show-dependencies", "--format", "json"])
+        task.arguments = Arguments([ "package", "dump-package"])
         
         let output: String = try terminal.runProcess(task.toProcess).joined()
         let data: Data = output.data(using: .utf8)!
         
-        swiftPackage = try JSONDecoder().decode(SwiftPackage.self, from: data)
+        swiftPackageDump = try JSONDecoder().decode(SwiftPackageDump.self, from: data)
     }
     
 }

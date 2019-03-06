@@ -51,11 +51,6 @@ open class SourceryBuilderProtocolMock: SourceryBuilderProtocol {
 
     public init() {}
 
-  public static var buildPath: String {
-      get { return underlyingBuildPath }
-      set(value) { underlyingBuildPath = value }
-  }
-  public static var underlyingBuildPath: String = "AutoMockable filled value"
   public static var executalbeName: String {
       get { return underlyingExecutalbeName }
       set(value) { underlyingExecutalbeName = value }

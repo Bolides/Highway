@@ -20,13 +20,13 @@ public protocol SwiftPackageProtocol: AutoMockable {
     // sourcery:end
 }
 
-public struct SwiftPackage: Decodable, SwiftPackageProtocol, CustomStringConvertible {
+public struct SwiftPackageDependencies: Decodable, SwiftPackageProtocol, CustomStringConvertible {
     
     public let name: String
     public let path: String
     public let url: URL
 
-    public let dependencies: [SwiftPackage]
+    public let dependencies: [SwiftPackageDependencies]
     
     public func srcRoot() throws -> FolderProtocol  {
         return try Folder(path: url.absoluteString)
@@ -50,7 +50,7 @@ public struct SwiftPackage: Decodable, SwiftPackageProtocol, CustomStringConvert
     
     public var description: String {
         return """
-        \(SwiftPackage.self)
+        \(SwiftPackageDependencies.self)
         
         * name: \(name)
         * path: \(path)

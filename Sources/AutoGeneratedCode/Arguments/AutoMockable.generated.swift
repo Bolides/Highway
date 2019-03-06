@@ -36,9 +36,29 @@ open class ArgumentsWorkerProtocolMock: ArgumentsWorkerProtocol {
 }
 
 
+// MARK: - SwiftPackageDumpProtocolMock
+
+open class SwiftPackageDumpProtocolMock: SwiftPackageDumpProtocol {
+
+    public init() {}
+
+
+}
+
+
 // MARK: - SwiftPackageProtocolMock
 
 open class SwiftPackageProtocolMock: SwiftPackageProtocol {
+
+    public init() {}
+
+
+}
+
+
+// MARK: - SwiftProductProtocolMock
+
+open class SwiftProductProtocolMock: SwiftProductProtocol {
 
     public init() {}
 

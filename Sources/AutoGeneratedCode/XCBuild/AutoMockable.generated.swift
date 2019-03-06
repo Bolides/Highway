@@ -5,7 +5,7 @@ import SourceryAutoProtocols
 import XCBuild
 import ZFile
 import ZFileMock
-import SignPost
+
 
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
@@ -17,7 +17,7 @@ import SignPost
 
 
 
-let signPost = SignPost.shared
+
 
 
 
@@ -140,7 +140,7 @@ open class DestinationFactoryProtocolMock: DestinationFactoryProtocol {
 
               // You should implement Destination
 
-              signPost.error("❌ \(error)")
+              os_log("❌ %@", type: .error, "\(error)")
 
               fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
           }
@@ -181,7 +181,7 @@ open class DestinationFactoryProtocolMock: DestinationFactoryProtocol {
 
               // You should implement Destination
 
-              signPost.error("❌ \(error)")
+              os_log("❌ %@", type: .error, "\(error)")
 
               fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
           }
@@ -222,7 +222,7 @@ open class DestinationFactoryProtocolMock: DestinationFactoryProtocol {
 
               // You should implement Destination
 
-              signPost.error("❌ \(error)")
+              os_log("❌ %@", type: .error, "\(error)")
 
               fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
           }
@@ -428,7 +428,7 @@ open class TestReportProtocolMock: TestReportProtocol {
 
               // You should implement String
 
-              signPost.error("❌ \(error)")
+              os_log("❌ %@", type: .error, "\(error)")
 
               fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
           }

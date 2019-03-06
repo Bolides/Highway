@@ -1,9 +1,7 @@
-import Arguments
+import CarthageWorker
 import Foundation
 import os
-import SignPost
 import SourceryAutoProtocols
-import Task
 import ZFile
 import ZFileMock
 
@@ -25,6 +23,16 @@ import ZFileMock
 
 
 
+
+
+// MARK: - CarthageWorkerProtocolMock
+
+open class CarthageWorkerProtocolMock: CarthageWorkerProtocol {
+
+    public init() {}
+
+
+}
 
 
 // MARK: - OBJECTIVE-C
