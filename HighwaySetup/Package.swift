@@ -8,10 +8,10 @@ package.products = [
 ]
 package.dependencies = [
     .package(url: "https://github.com/doozMen/SignPost.git", from: "1.0.0"),
-    .package(url: "https://github.com/doozMen/Highway.git", from: "2.1.3"),
+    .package(url: "https://github.com/doozMen/Highway.git", from: "2.2.0"),
     .package(url: "https://www.github.com/doozMen/template-sourcery", from: "1.2.0"),
     .package(url: "https://www.github.com/doozMen/ZFile", from: "2.0.1"),
 ]
 package.targets = [
-    .target(name: "HighwaySetup", dependencies: ["Arguments", "Errors", "SwiftFormatWorker", "Terminal", "ZFile", "SourceryWorker", "SourceryAutoProtocols", "ZFile"], path: "Sources")
+    .target(name: "HighwaySetup", dependencies: ["Arguments", "Errors", "SwiftFormatWorker", "Terminal", "ZFile", "SourceryWorker", "SourceryAutoProtocols", "ZFile", "SignPost"], path: "Sources")
 ]

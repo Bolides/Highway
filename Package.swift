@@ -59,6 +59,7 @@ let package = Package(
         .package(url: "https://www.github.com/doozMen/ZFile", from: "2.0.1"),
         .package(url: "https://www.github.com/doozMen/SignPost", from: "1.0.0"),
         .package(url: "https://www.github.com/doozMen/template-sourcery", from: "1.2.0"),
+        .package(url: "https://www.github.com/doozMen/Sourcery", from: "0.15.3"),
         .package(url: "https://www.github.com/antitypical/Result", from: "4.0.0"),
         .package(url: "https://www.github.com/Quick/Quick", from: "2.0.0"),
         .package(url: "https://www.github.com/Quick/Nimble", from: "8.0.0"),
