@@ -10,14 +10,14 @@ import SourceryAutoProtocols
 import ZFile
 import Errors
 public protocol SwiftPackageProtocol: AutoMockable {
-    // sourcery:inline:SwiftPackage.AutoGenerateProtocol
+    /// sourcery:inline:SwiftPackage.AutoGenerateProtocol
     var name: String { get }
     var url: URL { get }
     
     func srcRoot() throws -> FolderProtocol
     func templateFolder() throws -> FolderProtocol
     func sourceryFolder() throws -> FolderProtocol
-    // sourcery:end
+    /// sourcery:end
 }
 
 public struct SwiftPackageDependencies: Decodable, SwiftPackageProtocol, CustomStringConvertible {

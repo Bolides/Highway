@@ -10,8 +10,8 @@ import Arguments
 import SourceryAutoProtocols
 
 public protocol SwiftPackageDependencyServiceProtocol: AutoMockable {
-    // sourcery:inline:SwiftPackageService .AutoGenerateProtocol
-    // sourcery:end
+    /// sourcery:inline:SwiftPackageService .AutoGenerateProtocol
+    /// sourcery:end
 }
 
 public struct  SwiftPackageDependencyService: SwiftPackageDependencyServiceProtocol, AutoGenerateProtocol {

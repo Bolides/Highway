@@ -10,9 +10,9 @@ import Foundation
 import SourceryAutoProtocols
 
 public protocol SwiftProductProtocol: AutoMockable {
-    // sourcery:inline:SwiftProduct.AutoGenerateProtocol
+    /// sourcery:inline:SwiftProduct.AutoGenerateProtocol
     var name: String { get }
-    // sourcery:end
+    /// sourcery:end
 }
 
 public struct SwiftProduct: SwiftProductProtocol, Decodable, AutoGenerateProtocol, Hashable {
