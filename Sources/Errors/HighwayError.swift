@@ -13,7 +13,8 @@ public enum HighwayError: Swift.Error, CustomStringConvertible
     case implement(String)
     case failedToCompleteTask(String)
     case processInfoMissingPath(processInfo: [String: String])
-
+    case missingTemplateFolder(String)
+    
     // MARK: - CustomStringConvertible
 
     public var description: String
@@ -45,6 +46,17 @@ public enum HighwayError: Swift.Error, CustomStringConvertible
             ❌ Highway Failed processInfoMissingPath
             \(processInfo)
             ❌
+            """
+        case let .missingTemplateFolder(location):
+            return """
+            ❌ Highway Failed missingTemplateFolder
+                add `.package(url: "https://www.github.com/doozMen/template-sourcery", from: "1.2.0")`
+                to Package.swift
+            
+            > thrown in
+            
+                \(location)
+            
             """
         }
     }
