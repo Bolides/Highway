@@ -5,13 +5,13 @@ import SignPost
 import Terminal
 
 let automateSourceryWorker: AutomateHighwaySourceryWorkerProtocol?
-let disk: DiskProtocol?
+let disk: SwiftPackageProtocol?
 let signPost = SignPost.shared
 
 do {
-    let package = try SwiftPackageService().swiftPackage
+    disk = try SwiftPackageService().swiftPackage
     
-    automateSourceryWorker = try AutomateHighwaySourceryWorker(disk: package, queue: DispatchQueue.main)
+    automateSourceryWorker = try AutomateHighwaySourceryWorker(disk: disk!)
     automateSourceryWorker?.attempt{ asyncResult in
         do {
 
@@ -19,6 +19,7 @@ do {
             signPost.message("\(result.joined(separator: "\n"))")
             exit(EXIT_SUCCESS)
         } catch {
+            signPost.error("\(error)")
             exit(EXIT_FAILURE)
         }
     }
@@ -26,3 +27,5 @@ do {
     signPost.error("\(error)")
     exit(EXIT_FAILURE)
 }
+
+RunLoop.main.run()

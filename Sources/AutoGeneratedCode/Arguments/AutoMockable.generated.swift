@@ -36,22 +36,12 @@ open class ArgumentsWorkerProtocolMock: ArgumentsWorkerProtocol {
 }
 
 
-// MARK: - DiskProtocolMock
+// MARK: - SwiftPackageProtocolMock
 
-open class DiskProtocolMock: DiskProtocol {
+open class SwiftPackageProtocolMock: SwiftPackageProtocol {
 
     public init() {}
 
-  public  var srcRoot: FolderProtocol {
-      get { return underlyingSrcRoot }
-      set(value) { underlyingSrcRoot = value }
-  }
-  public  var underlyingSrcRoot: FolderProtocol!
-  public  var carthage: Disk.Carthage {
-      get { return underlyingCarthage }
-      set(value) { underlyingCarthage = value }
-  }
-  public  var underlyingCarthage: Disk.Carthage!
 
 }
 

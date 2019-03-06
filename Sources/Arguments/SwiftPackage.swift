@@ -16,6 +16,7 @@ public protocol SwiftPackageProtocol: AutoMockable {
     
     func srcRoot() throws -> FolderProtocol
     func templateFolder() throws -> FolderProtocol
+    func sourceryFolder() throws -> FolderProtocol
     // sourcery:end
 }
 
@@ -37,6 +38,14 @@ public struct SwiftPackage: Decodable, SwiftPackageProtocol, CustomStringConvert
             throw  HighwayError.missingTemplateFolder("\(self) \(#function) \(#line):")
         }
         return try Folder(path: templatePackage.path)
+    }
+    
+    public func sourceryFolder() throws -> FolderProtocol {
+        
+        guard let sourceryPackage = (dependencies.first { $0.name == "Sourcery" }) else {
+            throw  HighwayError.missingTemplateFolder("\(self) \(#function) \(#line):")
+        }
+        return try Folder(path: sourceryPackage.path)
     }
     
     public var description: String {

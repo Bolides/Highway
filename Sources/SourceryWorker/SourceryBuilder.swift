@@ -16,7 +16,6 @@ import Foundation
 public protocol SourceryBuilderProtocol: AutoMockable
 {
     /// sourcery:inline:SourceryBuilder.AutoGenerateProtocol
-    static var buildPath: String { get }
     static var executalbeName: String { get }
 
     func attemptToBuildSourceryIfNeeded() throws -> FileProtocol
@@ -26,18 +25,17 @@ public protocol SourceryBuilderProtocol: AutoMockable
 /// Will build sourcery from carthage if it is not found in the project
 public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 {
-    public static let buildPath: String = ".build/release"
-    public static let executalbeName: String = "sourcery"
+    public static let executalbeName: String = "./.build/x86_64-apple-macosx10.10/release/Sourcery"
 
     private let terminalWorker: TerminalWorkerProtocol
-    private let disk: DiskProtocol
+    private let disk: SwiftPackageProtocol
     private let signPost: SignPostProtocol
     private let systemExecutableProvider: SystemExecutableProviderProtocol
 
     /// Will try to init Disk when no dis provided
     public init(
         terminalWorker: TerminalWorkerProtocol = TerminalWorker(),
-        disk: DiskProtocol? = nil,
+        disk: SwiftPackageProtocol? = nil,
         signPost: SignPostProtocol = SignPost.shared,
         systemExecutableProvider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared
     ) throws
@@ -48,7 +46,7 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 
         guard let disk = disk else
         {
-            self.disk = try Disk()
+            self.disk = try SwiftPackageService().swiftPackage
             return
         }
 
@@ -67,22 +65,24 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 
             do
             {
-                let swiftBuildTask = Task(executable: try systemExecutableProvider.executable(with: "swift"))
-
-                swiftBuildTask.arguments = Arguments(["build", "-c", "release"])
-
-                signPost.verbose("cd \(disk.carthage.sourcery)")
-                FileManager.default.changeCurrentDirectoryPath(disk.carthage.sourcery.path)
+    
+                let srcRoot = try disk.srcRoot()
+                
+                FileManager.default.changeCurrentDirectoryPath(srcRoot.path)
 
                 signPost.message("🚀 Start building sourcery (😅 this can take some time ☕️) ...")
-
-                let output = try terminalWorker.runProcess(swiftBuildTask.toProcess)
-                signPost.verbose("\(output.joined(separator: "\n"))")
+                let task = try Task(commandName: "swift")
+                task.arguments = Arguments(["build", "--product", "Sourcery", "-c", "release", "--static-swift-stdlib"])
+                
+                let output = try terminalWorker.runProcess(task.toProcess)
+                
+                signPost.message("\(output.joined(separator: "\n"))")
 
                 signPost.message("🚀 finished sourcery swift build ✅")
 
-                signPost.verbose("cd \(disk.srcRoot)")
-                FileManager.default.changeCurrentDirectoryPath(disk.srcRoot.path)
+                signPost.verbose("cd \(srcRoot)")
+                
+                FileManager.default.changeCurrentDirectoryPath(srcRoot.path)
 
                 return try findSourceryExecutableFile()
             }
@@ -97,6 +97,6 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 
     private func findSourceryExecutableFile() throws -> FileProtocol
     {
-        return try disk.carthage.sourcery.subfolder(named: SourceryBuilder.buildPath).file(named: SourceryBuilder.executalbeName)
+        return try disk.srcRoot().file(named: SourceryBuilder.executalbeName)
     }
 }
