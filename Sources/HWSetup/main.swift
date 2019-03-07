@@ -6,7 +6,7 @@ import Terminal
 import Arguments
 import XCBuild
 
-let automateSourceryWorker: AutomateHighwaySourceryWorkerProtocol?
+let automateSourceryWorker: HWSetupSourceryWorkerWorkerProtocol?
 let disk: SwiftPackageDependenciesProtocol?
 let swiftPackageDump: SwiftPackageDumpProtocol?
 let signPost = SignPost.shared
@@ -18,7 +18,7 @@ let terminal = TerminalWorker.shared
 do {
     disk = try SwiftPackageDependencyService().swiftPackage
     swiftPackageDump = try SwiftPackageDumpService().swiftPackageDump
-    automateSourceryWorker = try AutomateHighwaySourceryWorker(disk: disk!, dispatchGroup: dispatchGroup, swiftPackageDump: swiftPackageDump!)
+    automateSourceryWorker = try HWSetupSourceryWorker(disk: disk!, dispatchGroup: dispatchGroup, swiftPackageDump: swiftPackageDump!)
 
     let sourceryProducts = swiftPackageDump!.products.map { $0.name }.filter { !$0.hasSuffix("Mock") }
     signPost.message("🧙‍♂️ \(sourceryProducts.count) for \n\(sourceryProducts.enumerated().map { " \($0.offset + 1) \($0.element)" }.joined(separator: "\n"))\n ")

@@ -191,6 +191,51 @@ open class SwiftPackageDependenciesProtocolMock: SwiftPackageDependenciesProtoco
 
       return try closureReturn()
   }
+
+  // MARK: - <sourceryAutoProtocolFile> - parameters
+
+  public var sourceryAutoProtocolFileThrowableError: Error?
+  public var sourceryAutoProtocolFileCallsCount = 0
+  public var sourceryAutoProtocolFileCalled: Bool {
+    return sourceryAutoProtocolFileCallsCount > 0
+  }
+  public var sourceryAutoProtocolFileReturnValue: FileProtocol?
+
+  // MARK: - <sourceryAutoProtocolFile> - closure mocks
+
+  public var sourceryAutoProtocolFileClosure: (() throws  -> FileProtocol)? = nil
+
+
+
+  // MARK: - <sourceryAutoProtocolFile> - method mocked
+
+  open func sourceryAutoProtocolFile() throws -> FileProtocol {
+
+
+      // <sourceryAutoProtocolFile> - Throwable method implementation
+
+    if let error = sourceryAutoProtocolFileThrowableError {
+        throw error
+    }
+
+      sourceryAutoProtocolFileCallsCount += 1
+
+      // <sourceryAutoProtocolFile> - Return Value mock implementation
+
+      guard let closureReturn = sourceryAutoProtocolFileClosure else {
+          guard let returnValue = sourceryAutoProtocolFileReturnValue else {
+              let message = "No returnValue implemented for sourceryAutoProtocolFileClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+
+              // You should implement FileProtocol
+
+              throw error
+          }
+          return returnValue
+      }
+
+      return try closureReturn()
+  }
 }
 
 

@@ -28,9 +28,9 @@ let signPost = SignPost.shared
 
 
 
-// MARK: - AutomateHighwaySourceryWorkerProtocolMock
+// MARK: - HWSetupSourceryWorkerWorkerProtocolMock
 
-open class AutomateHighwaySourceryWorkerProtocolMock: AutomateHighwaySourceryWorkerProtocol {
+open class HWSetupSourceryWorkerWorkerProtocolMock: HWSetupSourceryWorkerWorkerProtocol {
 
     public init() {}
 

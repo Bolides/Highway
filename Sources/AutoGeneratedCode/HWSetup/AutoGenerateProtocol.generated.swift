@@ -19,8 +19,8 @@ import Foundation
 
 
 
-// Generated protocol inline for AutomateHighwaySourceryWorker -> See code in the file of that type
-    // sourcery:inline:AutomateHighwaySourceryWorker.AutoGenerateProtocol
+// Generated protocol inline for HWSetupSourceryWorker -> See code in the file of that type
+    // sourcery:inline:HWSetupSourceryWorker.AutoGenerateProtocol
     static var queue: DispatchQueue { get }
     static var commonImportAutoMockable: <<unknown type, please add type attribution to variable 'static let commonImportAutoMockable = Set(
         [

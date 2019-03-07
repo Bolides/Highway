@@ -19,7 +19,7 @@ extension SwiftProduct {
         }
         
         // Insert the target itself
-        var importNames = AutomateHighwaySourceryWorker.commonImportAutoMockable
+        var importNames = HWSetupSourceryWorker.commonImportAutoMockable
         importNames.insert(TemplatePrepend.Import(name: name))
         importNames.insert(TemplatePrepend.Import(name: VendorFramework.ZFile.rawValue))
         importNames.insert(TemplatePrepend.Import(name: VendorFramework.ZFileMock.rawValue))
