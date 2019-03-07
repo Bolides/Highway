@@ -42,7 +42,7 @@ public class AutomateHighwaySourceryWorker: AutomateHighwaySourceryWorkerProtoco
 
     private let queue: DispatchQueue
 
-    private let disk: SwiftPackageProtocol
+    private let disk: SwiftPackageDependenciesProtocol
     private let swiftPackageDump: SwiftPackageDumpProtocol
     
     private let sourcesFolder: FolderProtocol
@@ -55,7 +55,7 @@ public class AutomateHighwaySourceryWorker: AutomateHighwaySourceryWorkerProtoco
     // MARK: - Init
 
     public init(
-        disk: SwiftPackageProtocol,
+        disk: SwiftPackageDependenciesProtocol,
         dispatchGroup: DispatchGroup,
         swiftPackageDump: SwiftPackageDumpProtocol,
         signPost: SignPostProtocol = SignPost.shared,

@@ -28,14 +28,14 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
     public static let executalbeName: String = "./.build/x86_64-apple-macosx10.10/release/Sourcery"
 
     private let terminalWorker: TerminalWorkerProtocol
-    private let disk: SwiftPackageProtocol
+    private let disk: SwiftPackageDependenciesProtocol
     private let signPost: SignPostProtocol
     private let systemExecutableProvider: SystemExecutableProviderProtocol
 
     /// Will try to init Disk when no dis provided
     public init(
         terminalWorker: TerminalWorkerProtocol = TerminalWorker(),
-        disk: SwiftPackageProtocol? = nil,
+        disk: SwiftPackageDependenciesProtocol? = nil,
         signPost: SignPostProtocol = SignPost.shared,
         systemExecutableProvider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared
     ) throws

@@ -26,7 +26,7 @@ class SourceryBuilderSpec: QuickSpec {
             var sut: SourceryBuilder?
             
             var terminal: TerminalWorkerProtocolMock!
-            var disk: DiskProtocolMock!
+            var disk: SwiftPackageDependenciesProtocolMock!
             var signPost: SignPostProtocolMock!
             var srcRootFolder: FolderProtocolMock!
             var sourceryExecutableFolder: FolderProtocolMock!
@@ -35,8 +35,8 @@ class SourceryBuilderSpec: QuickSpec {
             beforeEach {
                 
                 srcRootFolder = try! FolderProtocolMock()
-                disk = DiskProtocolMock()
-                disk.srcRoot = srcRootFolder
+                disk = SwiftPackageDependenciesProtocolMock()
+                disk.srcRootReturnValue = srcRootFolder
                 
                 sourceryExecutableFile = try! FileProtocolMock()
                 sourceryExecutableFolder = try! FolderProtocolMock()
@@ -44,10 +44,10 @@ class SourceryBuilderSpec: QuickSpec {
                     return sourceryExecutableFile
                 }
                 
-                disk.underlyingCarthage = Disk.Carthage(
-                    checkouts: try! FolderProtocolMock(),
-                    sourcery: sourceryExecutableFolder
-                )
+//                disk.underlyingCarthage = Disk.Carthage(
+//                    checkouts: try! FolderProtocolMock(),
+//                    sourcery: sourceryExecutableFolder
+//                )
                 terminal = TerminalWorkerProtocolMock()
                 signPost = SignPostProtocolMock()
                 

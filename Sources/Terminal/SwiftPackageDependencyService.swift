@@ -16,7 +16,7 @@ public protocol SwiftPackageDependencyServiceProtocol: AutoMockable {
 
 public struct  SwiftPackageDependencyService: SwiftPackageDependencyServiceProtocol, AutoGenerateProtocol {
     
-    public let swiftPackage: SwiftPackageProtocol
+    public let swiftPackage: SwiftPackageDependenciesProtocol
     
     public init(terminal: TerminalWorkerProtocol = TerminalWorker.shared) throws {
         let task = try Task(commandName: "swift")

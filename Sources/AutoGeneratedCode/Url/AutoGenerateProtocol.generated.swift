@@ -14,6 +14,7 @@ import Foundation
 //: - of the above it does not add it if  // sourcery:skipProtocol
 //: ---
 
+/*
 
 
 
@@ -40,3 +41,4 @@ import Foundation
 
 // Generated protocol inline for  -> See code in the file of that type
 
+*/

@@ -39,24 +39,9 @@ open class ArgumentsWorkerProtocolMock: ArgumentsWorkerProtocol {
 }
 
 
-// MARK: - SwiftPackageDumpProtocolMock
+// MARK: - SwiftPackageDependenciesProtocolMock
 
-open class SwiftPackageDumpProtocolMock: SwiftPackageDumpProtocol {
-
-    public init() {}
-
-  public  var products: Set<SwiftProduct> {
-      get { return underlyingProducts }
-      set(value) { underlyingProducts = value }
-  }
-  public  var underlyingProducts: Set<SwiftProduct>!
-
-}
-
-
-// MARK: - SwiftPackageProtocolMock
-
-open class SwiftPackageProtocolMock: SwiftPackageProtocol {
+open class SwiftPackageDependenciesProtocolMock: SwiftPackageDependenciesProtocol {
 
     public init() {}
 
@@ -206,6 +191,21 @@ open class SwiftPackageProtocolMock: SwiftPackageProtocol {
 
       return try closureReturn()
   }
+}
+
+
+// MARK: - SwiftPackageDumpProtocolMock
+
+open class SwiftPackageDumpProtocolMock: SwiftPackageDumpProtocol {
+
+    public init() {}
+
+  public  var products: Set<SwiftProduct> {
+      get { return underlyingProducts }
+      set(value) { underlyingProducts = value }
+  }
+  public  var underlyingProducts: Set<SwiftProduct>!
+
 }
 
 

@@ -9,8 +9,8 @@ import Foundation
 import SourceryAutoProtocols
 import ZFile
 import Errors
-public protocol SwiftPackageProtocol: AutoMockable {
-    /// sourcery:inline:SwiftPackage.AutoGenerateProtocol
+public protocol SwiftPackageDependenciesProtocol: AutoMockable {
+    /// sourcery:inline:SwiftPackageDependencies.AutoGenerateProtocol
     var name: String { get }
     var url: URL { get }
     
@@ -20,7 +20,7 @@ public protocol SwiftPackageProtocol: AutoMockable {
     /// sourcery:end
 }
 
-public struct SwiftPackageDependencies: Decodable, SwiftPackageProtocol, CustomStringConvertible {
+public struct SwiftPackageDependencies: Decodable, SwiftPackageDependenciesProtocol, CustomStringConvertible {
     
     public let name: String
     public let path: String

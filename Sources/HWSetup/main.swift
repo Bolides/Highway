@@ -6,7 +6,7 @@ import Terminal
 
 
 let automateSourceryWorker: AutomateHighwaySourceryWorkerProtocol?
-let disk: SwiftPackageProtocol?
+let disk: SwiftPackageDependenciesProtocol?
 let swiftPackageDump: SwiftPackageDumpProtocol?
 let signPost = SignPost.shared
 let dispatchGroup = DispatchGroup()
