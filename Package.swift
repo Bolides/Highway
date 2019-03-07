@@ -61,7 +61,7 @@ public let package = Package(
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://www.github.com/doozMen/ZFile", from: "2.0.2"),
         .package(url: "https://www.github.com/doozMen/SignPost", from: "1.0.0"),
-        .package(url: "https://www.github.com/doozMen/template-sourcery", from: "1.2.0"),
+        .package(url: "https://www.github.com/doozMen/template-sourcery", from: "1.2.1"),
         .package(url: "https://www.github.com/antitypical/Result", from: "4.1.0"),
         .package(url: "https://github.com/nicklockwood/SwiftFormat", from: "0.39.4"),
         .package(url: "https://www.github.com/Quick/Quick", from: "1.3.4"),
