@@ -3,7 +3,8 @@ import Foundation
 import Arguments
 import SignPost
 import Terminal
-
+import Arguments
+import XCBuild
 
 let automateSourceryWorker: AutomateHighwaySourceryWorkerProtocol?
 let disk: SwiftPackageDependenciesProtocol?
@@ -12,6 +13,7 @@ let signPost = SignPost.shared
 let dispatchGroup = DispatchGroup()
 
 signPost.message("🚀 HWSetup ... ")
+let terminal = TerminalWorker.shared
 
 do {
     disk = try SwiftPackageDependencyService().swiftPackage
@@ -36,8 +38,21 @@ do {
     }
     
     dispatchGroup.notify(queue: DispatchQueue.main) {
-        signPost.message("🚀 HWSetup ✅")
-        exit(EXIT_SUCCESS)
+        
+        signPost.message("🚀 HWSetup complete ...\n🧪 TESTING ... ")
+        do {
+            let task = try Task(commandName: "swift")
+            task.arguments = Arguments(["test"])
+            
+            let testOutput = TestReport(output: try terminal.runProcess(task.toProcess))
+            signPost.message("\(testOutput)")
+            signPost.message("🚀 HWSetup ✅")
+            exit(EXIT_SUCCESS)
+        } catch {
+            signPost.error("\(error)")
+            exit(EXIT_FAILURE)
+        }
+        
     }
     dispatchMain()
 } catch {

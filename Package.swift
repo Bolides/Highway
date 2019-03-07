@@ -182,7 +182,8 @@ public let package = Package(
                     "SourceryWorker",
                     "SwiftFormatWorker",
                     "Terminal",
-                    "ZFile"
+                    "ZFile",
+                    "XCBuild"
             ]
         )
     ]

@@ -27,8 +27,8 @@ public struct TestReport: TestReportProtocol, AutoGenerateProtocol, CustomString
 
         signPost.verbose("making testreport from raw output \n\(output.joined(separator: "\n"))\n")
 
-        signPost.message("\(TestReport.self) generating test report ... ")
-        signPost.message("\(TestReport.self) checking failed tests ")
+        signPost.verbose("\(TestReport.self) generating test report ... ")
+        signPost.verbose("\(TestReport.self) checking failed tests ")
 
         if let indexFailing = output.firstIndex(of: "Failing tests:"),
             let failingEnd = output.firstIndex(of: "** TEST FAILED **")
@@ -40,7 +40,7 @@ public struct TestReport: TestReportProtocol, AutoGenerateProtocol, CustomString
             failingTests = nil
         }
 
-        signPost.message("\(TestReport.self) checking build errors ")
+        signPost.verbose("\(TestReport.self) checking build errors ")
 
         if (output.first { $0.contains("error:") }) != nil
         {
@@ -66,9 +66,9 @@ public struct TestReport: TestReportProtocol, AutoGenerateProtocol, CustomString
         {
             guard let buildErrors = buildErrors else
             {
-                signPost.message(output.joined(separator: "\n"))
-                return "No failed tests or Build errors, printing raw output"
+                return "🧪 \(TestReport.self) ✅"
             }
+            
             return """
             \(TestReport.self) build failed with errors \(buildErrors.count)
             
