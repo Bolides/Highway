@@ -8,11 +8,11 @@
 import Foundation
 import SourceryAutoProtocols
 
-public protocol CarthageWorkerProtocol: AutoMockable {
+public protocol CarthageWorkerProtocol: AutoMockable
+{
     /// sourcery:inline:CarthageWorker.AutoGenerateProtocol
     /// sourcery:end
 }
 
-public struct  CarthageWorker: CarthageWorkerProtocol, AutoGenerateProtocol {
-    
-}
+public struct CarthageWorker: CarthageWorkerProtocol, AutoGenerateProtocol
+{}

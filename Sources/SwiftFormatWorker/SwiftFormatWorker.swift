@@ -25,9 +25,26 @@ public protocol SwiftFormatWorkerProtocol: AutoMockable
 
 public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
 {
+    public typealias SyncOutput = () throws -> Void
     public static let queue: DispatchQueue = DispatchQueue(label: "be.dooz.swiftFormat")
 
-    public typealias SyncOutput = () throws -> Void
+    public static let rulesPath = ".swiftformat.md"
+    public static let defaultSwiftFormat = """
+    #  Rule Options
+
+    --binarygrouping none
+    --decimalgrouping none
+    --hexgrouping none
+    --octalgrouping none
+    --stripunusedargs closure-only
+    --wraparguments beforefirst
+    --wrapcollections beforefirst
+    --allman true
+
+    # Exclude
+
+    --exclude Sources/Generated
+    """
 
     public let queue: DispatchQueue
 
@@ -54,15 +71,39 @@ public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
 
     public convenience init(
         folderToFormatRecursive: FolderProtocol,
-        bundle: BundleProtocol = Bundle.main,
         highwayCommandLineArguments: HighwayCommandLineOption.Values = HighwayCommandLineOption.Values(),
         queue: DispatchQueue = SwiftFormatWorker.queue,
         signPost: SignPostProtocol = SignPost.shared
     ) throws
     {
-        let configFile = try bundle.fileforResource(with: ".swiftformat", of: "md")
+        do
+        {
+            var configFile: FileProtocol!
 
-        try self.init(folderToFormatRecursive: folderToFormatRecursive, configFile: configFile, queue: queue, signPost: signPost)
+            do
+            {
+                configFile = try folderToFormatRecursive.file(named: SwiftFormatWorker.rulesPath)
+            }
+            catch ZFile.FileSystem.Item.PathError.invalid
+            {
+                signPost.message("\(SwiftFormatWorker.self) \(#function) \(#line) will create a .swiformat.md file for you ")
+
+                configFile = try folderToFormatRecursive.createFile(named: SwiftFormatWorker.rulesPath)
+                try configFile.write(string: SwiftFormatWorker.defaultSwiftFormat)
+
+                signPost.message("\(SwiftFormatWorker.self) \(#function) \(#line) created \(configFile!)")
+            }
+            catch
+            {
+                throw error
+            }
+
+            try self.init(folderToFormatRecursive: folderToFormatRecursive, configFile: configFile, queue: queue, signPost: signPost)
+        }
+        catch
+        {
+            throw "\(SwiftFormatWorker.self) \(#function) \(#line) \n\(error)\n"
+        }
     }
 
     public func attempt(_ asyncSwiftFormatAttemptOutput: @escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void)

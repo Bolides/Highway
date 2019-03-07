@@ -14,7 +14,8 @@ public enum HighwayError: Swift.Error, CustomStringConvertible
     case failedToCompleteTask(String)
     case processInfoMissingPath(processInfo: [String: String])
     case missingTemplateFolder(String)
-    
+    case prematureRelease(in: String)
+
     // MARK: - CustomStringConvertible
 
     public var description: String
@@ -56,6 +57,16 @@ public enum HighwayError: Swift.Error, CustomStringConvertible
             > thrown in
             
                 \(location)
+            
+            """
+        case let .prematureRelease(in: location):
+            return """
+            ❌ Highway Failed prematureRelease(in:)
+                ℹ️ You should retain any workers that do asynchronous work
+            
+            > thrown in
+            
+            \(location)
             
             """
         }

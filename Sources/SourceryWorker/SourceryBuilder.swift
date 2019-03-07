@@ -7,11 +7,11 @@
 
 import Arguments
 import Errors
+import Foundation
 import SignPost
 import SourceryAutoProtocols
 import Terminal
 import ZFile
-import Foundation
 
 public protocol SourceryBuilderProtocol: AutoMockable
 {
@@ -65,23 +65,22 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 
             do
             {
-    
                 let srcRoot = try disk.srcRoot()
-                
+
                 FileManager.default.changeCurrentDirectoryPath(srcRoot.path)
 
                 signPost.message("🚀 Start building sourcery (😅 this can take some time ☕️) ...")
                 let task = try Task(commandName: "swift")
                 task.arguments = Arguments(["build", "--product", "Sourcery", "-c", "release", "--static-swift-stdlib"])
-                
+
                 let output = try terminalWorker.runProcess(task.toProcess)
-                
+
                 signPost.message("\(output.joined(separator: "\n"))")
 
                 signPost.message("🚀 finished sourcery swift build ✅")
 
                 signPost.verbose("cd \(srcRoot)")
-                
+
                 FileManager.default.changeCurrentDirectoryPath(srcRoot.path)
 
                 return try findSourceryExecutableFile()

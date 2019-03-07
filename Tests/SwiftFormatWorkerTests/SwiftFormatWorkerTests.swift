@@ -23,7 +23,6 @@ class SwiftFormatWorkerTests: QuickSpec
         var sut: SwiftFormatWorker?
 
         var folderToFormatRecursive: FolderProtocolMock!
-        var bundle: BundleProtocolMock!
         var signPost: SignPostProtocolMock!
         
         var swiftFormatFile: FileProtocolMock!
@@ -33,15 +32,12 @@ class SwiftFormatWorkerTests: QuickSpec
             expect {
                 
                 folderToFormatRecursive = try FolderProtocolMock()
-                bundle = BundleProtocolMock()
                 signPost = SignPostProtocolMock()
                 swiftFormatFile = try FileProtocolMock()
                 
-                bundle.fileforResourceWithOfClosure = { _, _ in return swiftFormatFile }
-                
                 sut = try SwiftFormatWorker(
                     folderToFormatRecursive: folderToFormatRecursive,
-                    bundle: bundle,
+                    configFile: swiftFormatFile,
                     queue: DispatchQueue.main,
                     signPost: signPost
                 )

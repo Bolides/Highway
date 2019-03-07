@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 public enum HighwayProduct: String, CaseIterable, Decodable
 {
     case Arguments

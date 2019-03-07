@@ -1,9 +1,8 @@
+import Errors
 import Foundation
-import SignPost
 import SignPost
 import SourceryAutoProtocols
 import ZFile
-import Errors
 
 // MARK: - TerminalWorker
 
@@ -180,18 +179,24 @@ extension Process
 {
     public func executableFile() throws -> FileProtocol
     {
-        if #available(OSX 10.13, *) {
+        if #available(OSX 10.13, *)
+        {
             return try File(path: executableURL?.path ?? "")
-        } else {
+        }
+        else
+        {
             throw "Does not support #available(OSX 10.13, *)"
         }
     }
 
     public func executable(set file: FileProtocol) throws
     {
-        if #available(OSX 10.13, *) {
+        if #available(OSX 10.13, *)
+        {
             executableURL = URL(fileURLWithPath: file.path)
-        } else {
+        }
+        else
+        {
             throw "Does not support #available(OSX 10.13, *)"
         }
     }

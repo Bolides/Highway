@@ -68,7 +68,7 @@ public struct TestReport: TestReportProtocol, AutoGenerateProtocol, CustomString
             {
                 return "🧪 \(TestReport.self) ✅"
             }
-            
+
             return """
             \(TestReport.self) build failed with errors \(buildErrors.count)
             
