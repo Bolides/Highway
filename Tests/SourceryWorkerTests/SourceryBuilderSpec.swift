@@ -21,7 +21,7 @@ class SourceryBuilderSpec: QuickSpec {
     
     override func spec() {
         
-        describe("SourceryBuilder") {
+        pending("⚠️  SourceryBuilder spec are temporarily disabled") {
             
             var sut: SourceryBuilder?
             

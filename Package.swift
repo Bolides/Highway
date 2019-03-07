@@ -102,7 +102,15 @@ public let package = Package(
         ),
         .testTarget(
             name: "XCBuildTests",
-            dependencies: ["XCBuild", "XCBuildMock", "TerminalMock", "Quick", "Nimble"]
+            dependencies: [
+                "Terminal",
+                "XCBuild",
+                "TerminalMock",
+                "Arguments",
+                "ArgumentsMock",
+                "XCBuildMock",
+                "ZFileMock",
+                "Quick", "Nimble"]
         ),
         .target(
             name: "XCBuildMock",
