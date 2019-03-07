@@ -14,7 +14,7 @@ import ZFile
 
 public protocol SourceryProtocol: ExecutableProtocol
 {
-    /// sourcery:inline:Sourcery.AutoGenerateProtocol
+    // sourcery:inline:Sourcery.AutoGenerateProtocol
     var uuid: String { get }
     var name: String { get }
     var templateFolder: FolderProtocol { get }
@@ -25,8 +25,7 @@ public protocol SourceryProtocol: ExecutableProtocol
     var sourceryYMLFile: FileProtocol { get }
     var sourceryExecutableFile: FileProtocol { get }
     var imports: Set<TemplatePrepend> { get }
-
-    /// sourcery:end
+    // sourcery:end
 }
 
 public struct Sourcery: SourceryProtocol, AutoGenerateProtocol

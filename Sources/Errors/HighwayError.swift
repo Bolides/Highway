@@ -15,6 +15,8 @@ public enum HighwayError: Swift.Error, CustomStringConvertible
     case processInfoMissingPath(processInfo: [String: String])
     case missingTemplateFolder(String)
     case prematureRelease(in: String)
+    case highwayError(atLocation: String, error: Swift.Error)
+    case swiftPackageShowDependencies(String)
 
     // MARK: - CustomStringConvertible
 
@@ -24,40 +26,33 @@ public enum HighwayError: Swift.Error, CustomStringConvertible
         {
         case let .missingSrcroot(message: message, function: function):
             return """
-            ❌ Highway Error in
+            missingSrcroot
                 \(function)
             with message
                 \(message)
-            ❌
             """
         case let .implement(function):
             return """
-            ❌ Highway Missing implementation in
+            implement
                 \(function)
-            ❌
             """
         case let .failedToCompleteTask(task):
             return """
-            ❌ Highway Failed to complete task
+            failedToCompleteTask
                 \(task)
-            ❌
             """
         case let .processInfoMissingPath(processInfo):
             return """
-            ❌ Highway Failed processInfoMissingPath
+            processInfoMissingPath
             \(processInfo)
-            ❌
             """
-        case let .missingTemplateFolder(location):
+        case let .missingTemplateFolder(error):
             return """
-            ❌ Highway Failed missingTemplateFolder
-                add `.package(url: "https://www.github.com/doozMen/template-sourcery", from: "1.2.0")`
+            missingTemplateFolder
+                ℹ️ add `.package(url: "https://www.github.com/doozMen/template-sourcery", from: "1.2.0")`
                 to Package.swift
             
-            > thrown in
-            
-                \(location)
-            
+            \(error)
             """
         case let .prematureRelease(in: location):
             return """
@@ -68,6 +63,22 @@ public enum HighwayError: Swift.Error, CustomStringConvertible
             
             \(location)
             
+            """
+        case let .highwayError(atLocation, error):
+            return """
+            ❌ highwayError
+            location
+            \(atLocation)
+            
+            error
+
+            \(error)
+            """
+        case let .swiftPackageShowDependencies(message):
+            return """
+            swiftPackageShowDependencies
+            
+            \(message)
             """
         }
     }

@@ -6,7 +6,7 @@ import ZFile
 
 public protocol TaskProtocol: AutoMockable
 {
-    /// sourcery:inline:Task.AutoGenerateProtocol
+    // sourcery:inline:Task.AutoGenerateProtocol
     var name: String { get }
     var executable: FileProtocol { get set }
     var arguments: Arguments { get set }
@@ -21,7 +21,7 @@ public protocol TaskProtocol: AutoMockable
 
     func enableReadableOutputDataCapturing()
 
-    /// sourcery:end
+    // sourcery:end
 }
 
 public class Task: TaskProtocol, AutoGenerateProtocol

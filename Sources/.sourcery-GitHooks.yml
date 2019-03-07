@@ -1,0 +1,8 @@
+sources:
+- "/Users/doozmen/Documents/dooZ/Open/dev.nosync/Highway/Sources/GitHooks/"
+- "/Users/doozmen/Documents/dooZ/Open/dev.nosync/Highway/.build/checkouts/template-sourcery--1311409422962234918/Sources/SourceryAutoProtocols/SourceryAutoProtocols.swift"
+
+templates:
+- "/Users/doozmen/Documents/dooZ/Open/dev.nosync/Highway/.build/checkouts/template-sourcery--1311409422962234918/Sources/stencil/"
+output:
+ "/Users/doozmen/Documents/dooZ/Open/dev.nosync/Highway/Sources/Generated/GitHooks/"

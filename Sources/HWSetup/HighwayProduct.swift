@@ -22,4 +22,5 @@ public enum HighwayProduct: String, CaseIterable, Decodable
     case SwiftFormatWorker
     case HWSetup
     case CarthageWorker
+    case GitHooks
 }

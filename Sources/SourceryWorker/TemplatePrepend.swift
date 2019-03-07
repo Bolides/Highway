@@ -10,18 +10,18 @@ import SourceryAutoProtocols
 
 public protocol TemplatePrependProtocol: AutoMockable
 {
-    /// sourcery:inline:TemplatePrepend.AutoGenerateProtocol
+    // sourcery:inline:TemplatePrepend.AutoGenerateProtocol
     var names: Set<TemplatePrepend.Import> { get }
     var template: String { get }
-    /// sourcery:end
+    // sourcery:end
 }
 
 public protocol ImportProtocol: AutoMockable
 {
-    /// sourcery:inline:TemplatePrepend.Import.AutoGenerateProtocol
+    // sourcery:inline:TemplatePrepend.Import.AutoGenerateProtocol
     var name: String { get }
     var testable: Bool { get }
-    /// sourcery:end
+    // sourcery:end
 }
 
 public struct TemplatePrepend: Hashable, TemplatePrependProtocol, AutoGenerateProtocol

@@ -4,12 +4,14 @@ import SourceryAutoProtocols
 
 public protocol TestReportProtocol: AutoMockable
 {
-    /// sourcery:inline:TestReport.AutoGenerateProtocol
+    // sourcery:inline:TestReport.AutoGenerateProtocol
     var failingTests: ArraySlice<String>? { get }
+    var buildErrors: [String]? { get }
+    var output: [String] { get }
     var description: String { get }
 
     func failedTests() -> String
-    /// sourcery:end
+    // sourcery:end
 }
 
 public struct TestReport: TestReportProtocol, AutoGenerateProtocol, CustomStringConvertible

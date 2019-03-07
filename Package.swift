@@ -14,6 +14,9 @@ public let package = Package(
             name: "Errors",
             targets: ["Errors"]),
         .library(
+            name: "GitHooks",
+            targets: ["GitHooks"]),
+        .library(
             name: "Arguments",
             targets: ["Arguments"]),
         .library(
@@ -80,6 +83,19 @@ public let package = Package(
             dependencies: ["SourceryAutoProtocols", "ZFile", "SignPost"]
         ),
         .target(
+            name: "GitHooks",
+            dependencies: ["SourceryAutoProtocols", "ZFile", "SignPost", "Terminal"]
+        ),
+        .testTarget(
+            name: "GitHooksTests",
+            dependencies: ["GitHooks", "Quick", "Nimble"]
+        ),
+        .target(
+            name: "GitHooksMock",
+            dependencies: ["SourceryAutoProtocols", "ZFile", "ZFileMock", "SignPost", "GitHooks"],
+            path: "Sources/Generated/GitHooks"
+        ),
+        .target(
             name: "ArgumentsMock",
             dependencies: ["SourceryAutoProtocols", "ZFile", "ZFileMock", "SignPost", "Arguments"],
             path: "Sources/Generated/Arguments"
@@ -121,7 +137,7 @@ public let package = Package(
             name: "Terminal",
             dependencies: ["POSIX", "Arguments"]
         ),
-        .target(
+         .target(
             name: "TerminalMock",
             dependencies: ["Terminal", "ZFile", "ZFileMock", "Arguments", "SourceryAutoProtocols"],
             path:"Sources/Generated/Terminal"
@@ -149,7 +165,7 @@ public let package = Package(
         ),
         .testTarget(
             name: "SourceryWorkerTests",
-            dependencies: ["SourceryWorker", "SignPostMock", "Quick", "Nimble"]
+        dependencies: ["SourceryWorker", "SignPostMock", "SourceryWorkerMock", "Quick", "Nimble", "TerminalMock", "SignPostMock"]
         ),
         .target(
             name: "SwiftFormatWorker",
@@ -183,7 +199,8 @@ public let package = Package(
                     "SwiftFormatWorker",
                     "Terminal",
                     "ZFile",
-                    "XCBuild"
+                    "XCBuild",
+                    "GitHooks"
             ]
         )
     ]

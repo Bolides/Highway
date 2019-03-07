@@ -17,14 +17,7 @@ import Foundation
 /*
 
  // Generated protocol inline for SwiftFormatWorker -> See code in the file of that type
- // sourcery:inline:SwiftFormatWorker.AutoGenerateProtocol
- static var queue: DispatchQueue { get }
- static var rulesPath: String { get }
- static var defaultSwiftFormat: String { get }
- var queue: DispatchQueue { get }
 
- func attempt(_ asyncSwiftFormatAttemptOutput: @escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void)
- // sourcery:end
  // Generated protocol inline for  -> See code in the file of that type
 
  // Generated protocol inline for  -> See code in the file of that type

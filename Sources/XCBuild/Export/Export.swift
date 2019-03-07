@@ -5,10 +5,10 @@ import ZFile
 
 public protocol ExportProtocol: AutoMockable
 {
-    /// sourcery:inline:Export.AutoGenerateProtocol
+    // sourcery:inline:Export.AutoGenerateProtocol
     var folder: FolderProtocol { get }
     var ipa: FileProtocol { get }
-    /// sourcery:end
+    // sourcery:end
 }
 
 public struct Export: ExportProtocol, AutoGenerateProtocol

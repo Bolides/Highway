@@ -11,8 +11,9 @@ import SourceryAutoProtocols
 
 public protocol SwiftPackageDumpServiceProtocol: AutoMockable
 {
-    /// sourcery:inline:SwiftPackageDumpService.AutoGenerateProtocol
-    /// sourcery:end
+    // sourcery:inline:SwiftPackageDumpService.AutoGenerateProtocol
+    var swiftPackageDump: SwiftPackageDumpProtocol { get }
+    // sourcery:end
 }
 
 public struct SwiftPackageDumpService: SwiftPackageDumpServiceProtocol, AutoGenerateProtocol

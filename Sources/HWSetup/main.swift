@@ -30,8 +30,7 @@ do
     let sourceryProducts = swiftPackageDump!.products.map { $0.name }.filter { !$0.hasSuffix("Mock") }
     signPost.message("🧙‍♂️ \(sourceryProducts.count) for \n\(sourceryProducts.enumerated().map { " \($0.offset + 1) \($0.element)" }.joined(separator: "\n"))\n ")
 
-    dispatchGroup.enter()
-    automateSourceryWorker?.attempt
+    try automateSourceryWorker?.attempt
     { asyncResult in
         do
         {

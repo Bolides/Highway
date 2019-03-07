@@ -1,7 +1,8 @@
 import Foundation
-import HWSetup
+import GitHooks
 import os
 import SourceryAutoProtocols
+import Terminal
 import ZFile
 import ZFileMock
 
@@ -12,9 +13,9 @@ import SignPost
 
 let signPost = SignPost.shared
 
-// MARK: - HWSetupSourceryWorkerWorkerProtocolMock
+// MARK: - GitHooksWorkerProtocolMock
 
-open class HWSetupSourceryWorkerWorkerProtocolMock: HWSetupSourceryWorkerWorkerProtocol
+open class GitHooksWorkerProtocolMock: GitHooksWorkerProtocol
 {
     public init() {}
 }

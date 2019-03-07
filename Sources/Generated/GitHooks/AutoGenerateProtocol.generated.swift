@@ -16,29 +16,7 @@ import Foundation
 
 /*
 
- // Generated protocol inline for Archive -> See code in the file of that type
-
- // Generated protocol inline for ArchiveOptions -> See code in the file of that type
-
- // Generated protocol inline for ArchivePlist -> See code in the file of that type
-
- // Generated protocol inline for Destination -> See code in the file of that type
-
- // Generated protocol inline for DestinationFactory -> See code in the file of that type
-
- // Generated protocol inline for Export -> See code in the file of that type
-
- // Generated protocol inline for ExportArchiveOptions -> See code in the file of that type
-
- // Generated protocol inline for MinimalTestOptions -> See code in the file of that type
-
- // Generated protocol inline for TestOptions -> See code in the file of that type
-
- // Generated protocol inline for TestReport -> See code in the file of that type
-
- // Generated protocol inline for XCBuild -> See code in the file of that type
-
- // Generated protocol inline for XCBuildDestinations -> See code in the file of that type
+ // Generated protocol inline for GitHooksWorker -> See code in the file of that type
 
  // Generated protocol inline for  -> See code in the file of that type
 

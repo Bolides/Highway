@@ -11,7 +11,7 @@ import SourceryAutoProtocols
 import ZFile
 public protocol SwiftPackageDependenciesProtocol: AutoMockable
 {
-    /// sourcery:inline:SwiftPackageDependencies.AutoGenerateProtocol
+    // sourcery:inline:SwiftPackageDependencies.AutoGenerateProtocol
     var name: String { get }
     var url: URL { get }
 
@@ -19,7 +19,7 @@ public protocol SwiftPackageDependenciesProtocol: AutoMockable
     func templateFolder() throws -> FolderProtocol
     func sourceryFolder() throws -> FolderProtocol
     func sourceryAutoProtocolFile() throws -> FileProtocol
-    /// sourcery:end
+    // sourcery:end
 }
 
 public struct SwiftPackageDependencies: Decodable, SwiftPackageDependenciesProtocol, CustomStringConvertible

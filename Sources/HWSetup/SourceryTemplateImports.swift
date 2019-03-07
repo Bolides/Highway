@@ -33,6 +33,10 @@ extension SwiftProduct
             importNames.insert(TemplatePrepend.Import(name: HighwayProduct.SignPost.rawValue))
 
             return Set([TemplatePrepend(name: importNames, template: Template.AutoMockable.rawValue)])
+        case .GitHooks:
+            importNames.insert(TemplatePrepend.Import(name: HighwayProduct.Terminal.rawValue))
+
+            return Set([TemplatePrepend(name: importNames, template: Template.AutoMockable.rawValue)])
         case .Terminal, .XCBuild:
             importNames.insert(TemplatePrepend.Import(name: HighwayProduct.Arguments.rawValue))
 

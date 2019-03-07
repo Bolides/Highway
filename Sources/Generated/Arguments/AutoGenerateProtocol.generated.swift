@@ -16,16 +16,8 @@ import Foundation
 
 /*
 
- // Generated protocol inline for ArgumentsWorker -> See code in the file of that type
- // sourcery:inline:ArgumentsWorker.AutoGenerateProtocol
- var workers: [Worker] { get }
-
- // sourcery:end
  // Generated protocol inline for SwiftProduct -> See code in the file of that type
- // sourcery:inline:SwiftProduct.AutoGenerateProtocol
- var name: String { get }
 
- // sourcery:end
  // Generated protocol inline for  -> See code in the file of that type
 
  // Generated protocol inline for  -> See code in the file of that type
