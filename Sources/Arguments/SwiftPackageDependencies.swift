@@ -39,7 +39,7 @@ public struct SwiftPackageDependencies: Decodable, SwiftPackageDependenciesProto
     {
         guard let templatePackage = (dependencies.first { $0.name == "template-sourcery" }) else
         {
-            throw HighwayError.missingTemplateFolder("\(self) \(#function) \(#line):")
+            throw HighwayError.missingTemplateFolder("\(SwiftPackageDependencies.self) \(#function) \(#line):")
         }
         return try Folder(path: templatePackage.path)
     }
@@ -48,7 +48,7 @@ public struct SwiftPackageDependencies: Decodable, SwiftPackageDependenciesProto
     {
         guard let sourceryPackage = (dependencies.first { $0.name == "Sourcery" }) else
         {
-            throw HighwayError.missingTemplateFolder("\(self) \(#function) \(#line):")
+            throw HighwayError.highwayError(atLocation: "\(SwiftPackageDependencies.self) \(#function) \(#line):", error: HighwayError.missingSourcery(""))
         }
         return try Folder(path: sourceryPackage.path)
     }

@@ -11,6 +11,7 @@ import SignPost
 import SourceryAutoProtocols
 import Terminal
 import ZFile
+import Arguments
 
 public protocol SourceryProtocol: ExecutableProtocol
 {
@@ -55,6 +56,30 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
 
     // MARK: - Init
 
+    public init(
+        productName: String,
+        imports: Set<TemplatePrepend>
+    ) throws {
+        
+        let swiftPackageDependencies = try SwiftPackageDependencyService().swiftPackage
+        let sourceryBuilder = try SourceryBuilder()
+        let sourcesFolder = try swiftPackageDependencies.srcRoot().subfolder(named: "Sources")
+        let productFolder = try sourcesFolder.subfolder(named: productName)
+        let templateFolder = try swiftPackageDependencies.templateFolder()
+        let outputFolder = try sourcesFolder.createSubfolderIfNeeded(withName: "Generated").createSubfolderIfNeeded(withName: productName)
+        
+        try self.init(
+            sourcesFolders: [productFolder],
+            templateFolder: templateFolder,
+            outputFolder: outputFolder,
+            sourceryAutoProtocolsFile: try swiftPackageDependencies.sourceryAutoProtocolFile(),
+            sourceryYMLFile: try sourcesFolder.createFileIfNeeded(named: ".sourcery-\(productName).yml"),
+            imports: imports,
+            sourceryExecutableFile: try sourceryBuilder.attemptToBuildSourceryIfNeeded()
+        )
+        
+    }
+                            
     public init(
         sourcesFolders: [FolderProtocol],
         individualSourceFiles: [File]? = nil,
