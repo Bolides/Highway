@@ -15,14 +15,14 @@ import ZFile
 
 public protocol SwiftFormatWorkerProtocol: AutoMockable
 {
-    // highway:inline:SwiftFormatWorker.AutoGenerateProtocol
+    // sourcery:inline:SwiftFormatWorker.AutoGenerateProtocol
     static var queue: DispatchQueue { get }
     static var rulesPath: String { get }
     static var defaultSwiftFormat: String { get }
     var queue: DispatchQueue { get }
 
     func attempt(_ asyncSwiftFormatAttemptOutput: @escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void)
-    // highway:end
+    // sourcery:end
 }
 
 public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol

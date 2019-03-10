@@ -12,9 +12,9 @@ import Terminal
 
 public protocol GitHooksWorkerProtocol: AutoMockable
 {
-    // highway:inline:GitHooksWorker.AutoGenerateProtocol
+    // sourcery:inline:GitHooksWorker.AutoGenerateProtocol
     var terminal: TerminalWorkerProtocol { get }
-    // highway:end
+    // sourcery:end
 }
 
 /// Adds a swift build step and runs HighWay Setup <#your executable#> from .git>Hooks/pre-push

@@ -3,10 +3,10 @@ import SourceryAutoProtocols
 
 public protocol DestinationProtocol: AutoMockable
 {
-    // highway:inline:Destination.AutoGenerateProtocol
+    // sourcery:inline:Destination.AutoGenerateProtocol
     var raw: [String: String] { get set }
     var asString: String { get }
-    // highway:end
+    // sourcery:end
 }
 
 /// See https://developer.apple.com/library/content/technotes/tn2339/_index.html

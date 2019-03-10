@@ -25,13 +25,13 @@ import ZFile
 
 public protocol ExportArchiveOptionsProtocol: AutoMockable
 {
-    // highway:inline:ExportArchiveOptions.AutoGenerateProtocol
+    // sourcery:inline:ExportArchiveOptions.AutoGenerateProtocol
     var archivePath: FolderProtocol { get }
     var exportPath: String { get }
 
     func encode(to encoder: Encoder) throws
 
-    // highway:end
+    // sourcery:end
 }
 
 public struct ExportArchiveOptions: Codable, ExportArchiveOptionsProtocol, AutoGenerateProtocol

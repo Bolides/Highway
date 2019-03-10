@@ -15,11 +15,11 @@ import ZFile
 
 public protocol SourceryBuilderProtocol: AutoMockable
 {
-    // highway:inline:SourceryBuilder.AutoGenerateProtocol
+    // sourcery:inline:SourceryBuilder.AutoGenerateProtocol
     static var executalbeName: String { get }
 
     func attemptToBuildSourceryIfNeeded() throws -> FileProtocol
-    // highway:end
+    // sourcery:end
 }
 
 /// Will build sourcery from carthage if it is not found in the project

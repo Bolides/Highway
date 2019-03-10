@@ -6,13 +6,13 @@ import ZFile
 /// Maps names command line tools/executables to file urls.
 public protocol SystemExecutableProviderProtocol: AutoMockable
 {
-    // highway:inline:SystemExecutableProvider.AutoGenerateProtocol
+    // sourcery:inline:SystemExecutableProvider.AutoGenerateProtocol
     static var shared: SystemExecutableProviderProtocol { get }
     var pathEnvironmentParser: PathEnvironmentParserProtocol { get }
     var fileSystem: FileSystemProtocol { get }
 
     func executable(with executableName: String) throws -> FileProtocol
-    // highway:end
+    // sourcery:end
 }
 
 public struct SystemExecutableProvider: SystemExecutableProviderProtocol, AutoGenerateProtocol

@@ -18,11 +18,11 @@ import ZFile
 
 public protocol HWSetupSourceryWorkerWorkerProtocol: AutoMockable
 {
-    // highway:inline:HWSetupSourceryWorker.AutoGenerateProtocol
+    // sourcery:inline:HWSetupSourceryWorker.AutoGenerateProtocol
 
     func attempt(_ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void) throws
 
-    // highway:end
+    // sourcery:end
 }
 
 public class HWSetupSourceryWorker: HWSetupSourceryWorkerWorkerProtocol, AutoGenerateProtocol

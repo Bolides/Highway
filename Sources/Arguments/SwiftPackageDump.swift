@@ -12,9 +12,9 @@ import ZFile
 
 public protocol SwiftPackageDumpProtocol: AutoMockable
 {
-    // highway:inline:SwiftPackage.AutoGenerateProtocol
+    // sourcery:inline:SwiftPackage.AutoGenerateProtocol
     var products: Set<SwiftProduct> { get }
-    // highway:end
+    // sourcery:end
 }
 
 public struct SwiftPackageDump: Decodable, SwiftPackageDumpProtocol, CustomStringConvertible

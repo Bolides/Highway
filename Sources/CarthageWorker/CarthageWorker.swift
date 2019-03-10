@@ -10,8 +10,8 @@ import SourceryAutoProtocols
 
 public protocol CarthageWorkerProtocol: AutoMockable
 {
-    // highway:inline:CarthageWorker.AutoGenerateProtocol
-    // highway:end
+    // sourcery:inline:CarthageWorker.AutoGenerateProtocol
+    // sourcery:end
 }
 
 public struct CarthageWorker: CarthageWorkerProtocol, AutoGenerateProtocol

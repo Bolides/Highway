@@ -13,13 +13,13 @@ import SourceryAutoProtocols
 
 public protocol DestinationFactoryProtocol: AutoMockable
 {
-    // highway:inline:DestinationFactory.AutoGenerateProtocol
+    // sourcery:inline:DestinationFactory.AutoGenerateProtocol
 
     func macOS(architecture: Destination.Architecture) -> Destination
     func device(_ device: Destination.Device, name: String?, isGeneric: Bool, id: String?) -> Destination
     func simulator(_ simulator: Destination.Simulator, name: String, os: Destination.OS, id: String?) -> Destination
 
-    // highway:end
+    // sourcery:end
 }
 
 public struct DestinationFactory: AutoGenerateProtocol

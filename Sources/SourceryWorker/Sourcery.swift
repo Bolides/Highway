@@ -17,7 +17,7 @@ import ZFile
 // sourcery:mockInherit=ExecutableProtocolMock
 public protocol SourceryProtocol: ExecutableProtocol
 {
-    // highway:inline:Sourcery.AutoGenerateProtocol
+    // sourcery:inline:Sourcery.AutoGenerateProtocol
     var uuid: String { get }
     var name: String { get }
     var templateFolder: FolderProtocol { get }
@@ -28,7 +28,7 @@ public protocol SourceryProtocol: ExecutableProtocol
     var sourceryYMLFile: FileProtocol { get }
     var sourceryExecutableFile: FileProtocol { get }
     var imports: Set<TemplatePrepend> { get }
-    // highway:end
+    // sourcery:end
 }
 
 public struct Sourcery: SourceryProtocol, AutoGenerateProtocol

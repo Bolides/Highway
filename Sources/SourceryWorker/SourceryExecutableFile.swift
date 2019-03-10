@@ -14,8 +14,8 @@ import ZFile
 // sourcery:skipPublicInit
 public protocol SourceryExecutableFileProtocol: FileProtocol
 {
-    // highway:inline:SourceryExecutableFile.AutoGenerateProtocol
-    // highway:end
+    // sourcery:inline:SourceryExecutableFile.AutoGenerateProtocol
+    // sourcery:end
 }
 
 public class SourceryExecutableFile: File, SourceryExecutableFileProtocol, AutoGenerateProtocol

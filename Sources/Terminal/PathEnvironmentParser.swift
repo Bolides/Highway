@@ -9,9 +9,9 @@ import ZFile
 
 public protocol PathEnvironmentParserProtocol: AutoMockable
 {
-    // highway:inline:PathEnvironmentParser.AutoGenerateProtocol
+    // sourcery:inline:PathEnvironmentParser.AutoGenerateProtocol
     var urls: [FolderProtocol] { get }
-    // highway:end
+    // sourcery:end
 }
 
 /// Parser that extracts urls from a String-Array of paths.
