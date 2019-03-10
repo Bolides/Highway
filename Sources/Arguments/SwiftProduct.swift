@@ -11,9 +11,9 @@ import SourceryAutoProtocols
 
 public protocol SwiftProductProtocol: AutoMockable
 {
-    // sourcery:inline:SwiftProduct.AutoGenerateProtocol
+    // highway:inline:SwiftProduct.AutoGenerateProtocol
     var name: String { get }
-    // sourcery:end
+    // highway:end
 }
 
 public struct SwiftProduct: SwiftProductProtocol, Decodable, AutoGenerateProtocol, Hashable

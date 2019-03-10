@@ -10,13 +10,13 @@ import ZFile
 
 public protocol XCBuildProtocol: AutoMockable
 {
-    // sourcery:inline:XCBuild.AutoGenerateProtocol
+    // highway:inline:XCBuild.AutoGenerateProtocol
 
     func findPosibleDestinations(for scheme: String, in workspace: FolderProtocol) throws -> [String]
     func archive(using options: ArchiveOptionsProtocol) throws -> ArchiveProtocol
     func export(using options: ExportArchiveOptionsProtocol) throws -> ExportProtocol
     func buildAndTest(using options: MinimalTestOptionsProtocol) throws -> TestReportProtocol
-    // sourcery:end
+    // highway:end
 }
 
 /// Low-level Wrapper around xcodebuild. This is a starting point for additonal wrappers that do things like auto detection

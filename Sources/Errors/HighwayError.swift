@@ -18,6 +18,7 @@ public enum HighwayError: Swift.Error, CustomStringConvertible
     case highwayError(atLocation: String, error: Swift.Error)
     case swiftPackageShowDependencies(String)
     case missingSourcery(String)
+
     // MARK: - CustomStringConvertible
 
     public var description: String
@@ -79,7 +80,7 @@ public enum HighwayError: Swift.Error, CustomStringConvertible
             
             \(message)
             """
-        case .missingSourcery(let message):
+        case let .missingSourcery(message):
             return """
             missingSourcery
             ℹ️ add .package(url: "https://www.github.com/doozMen/Sourcery", <#wanted version#>),

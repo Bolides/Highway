@@ -17,7 +17,10 @@ import Foundation
 /*
 
  // Generated protocol inline for HWSetupSourceryWorker -> See code in the file of that type
+ // sourcery:inline:HWSetupSourceryWorker.AutoGenerateProtocol
 
+ func attempt(_ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void) throws
+ // sourcery:end
  // Generated protocol inline for  -> See code in the file of that type
 
  // Generated protocol inline for  -> See code in the file of that type

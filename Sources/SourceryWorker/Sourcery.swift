@@ -5,17 +5,17 @@
 //  Created by Stijn on 07/07/2018.
 //
 
+import Arguments
 import Foundation
 import os
 import SignPost
 import SourceryAutoProtocols
 import Terminal
 import ZFile
-import Arguments
 
 public protocol SourceryProtocol: ExecutableProtocol
 {
-    // sourcery:inline:Sourcery.AutoGenerateProtocol
+    // highway:inline:Sourcery.AutoGenerateProtocol
     var uuid: String { get }
     var name: String { get }
     var templateFolder: FolderProtocol { get }
@@ -26,7 +26,7 @@ public protocol SourceryProtocol: ExecutableProtocol
     var sourceryYMLFile: FileProtocol { get }
     var sourceryExecutableFile: FileProtocol { get }
     var imports: Set<TemplatePrepend> { get }
-    // sourcery:end
+    // highway:end
 }
 
 public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
@@ -59,15 +59,15 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
     public init(
         productName: String,
         imports: Set<TemplatePrepend>
-    ) throws {
-        
+    ) throws
+    {
         let swiftPackageDependencies = try SwiftPackageDependencyService().swiftPackage
         let sourceryBuilder = try SourceryBuilder()
         let sourcesFolder = try swiftPackageDependencies.srcRoot().subfolder(named: "Sources")
         let productFolder = try sourcesFolder.subfolder(named: productName)
         let templateFolder = try swiftPackageDependencies.templateFolder()
         let outputFolder = try sourcesFolder.createSubfolderIfNeeded(withName: "Generated").createSubfolderIfNeeded(withName: productName)
-        
+
         try self.init(
             sourcesFolders: [productFolder],
             templateFolder: templateFolder,
@@ -77,9 +77,8 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
             imports: imports,
             sourceryExecutableFile: try sourceryBuilder.attemptToBuildSourceryIfNeeded()
         )
-        
     }
-                            
+
     public init(
         sourcesFolders: [FolderProtocol],
         individualSourceFiles: [File]? = nil,

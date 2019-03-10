@@ -17,6 +17,61 @@ let signPost = SignPost.shared
 open class SwiftFormatWorkerProtocolMock: SwiftFormatWorkerProtocol
 {
     public init() {}
+
+    public static var queue: DispatchQueue
+    {
+        get { return underlyingQueue }
+        set(value) { underlyingQueue = value }
+    }
+
+    public static var underlyingQueue: DispatchQueue!
+    public static var rulesPath: String
+    {
+        get { return underlyingRulesPath }
+        set(value) { underlyingRulesPath = value }
+    }
+
+    public static var underlyingRulesPath: String = "AutoMockable filled value"
+    public static var defaultSwiftFormat: String
+    {
+        get { return underlyingDefaultSwiftFormat }
+        set(value) { underlyingDefaultSwiftFormat = value }
+    }
+
+    public static var underlyingDefaultSwiftFormat: String = "AutoMockable filled value"
+    public var queue: DispatchQueue
+    {
+        get { return underlyingQueue }
+        set(value) { underlyingQueue = value }
+    }
+
+    public var underlyingQueue: DispatchQueue!
+
+    // MARK: - <attempt> - parameters
+
+    public var attemptCallsCount = 0
+    public var attemptCalled: Bool
+    {
+        return attemptCallsCount > 0
+    }
+
+    public var attemptReceivedAsyncSwiftFormatAttemptOutput: ((@escaping SwiftFormatWorker.SyncOutput) -> Void)?
+
+    // MARK: - <attempt> - closure mocks
+
+    public var attemptClosure: ((@escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void) -> Void)?
+
+    // MARK: - <attempt> - method mocked
+
+    open func attempt(_ asyncSwiftFormatAttemptOutput: @escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void)
+    {
+        attemptCallsCount += 1
+        attemptReceivedAsyncSwiftFormatAttemptOutput = asyncSwiftFormatAttemptOutput
+
+        // <attempt> - Void return mock implementation
+
+        attemptClosure?(asyncSwiftFormatAttemptOutput)
+    }
 }
 
 // MARK: - OBJECTIVE-C

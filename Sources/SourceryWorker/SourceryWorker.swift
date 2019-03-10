@@ -16,7 +16,7 @@ public protocol SourceryWorkerProtocol
 {
     typealias SyncOutput = () throws -> [String]
 
-    // sourcery:inline:SourceryWorker.AutoGenerateProtocol
+    // highway:inline:SourceryWorker.AutoGenerateProtocol
     static var queue: DispatchQueue { get }
     static var mockableInline: String { get }
     static var mockableEnd: String { get }
@@ -24,9 +24,9 @@ public protocol SourceryWorkerProtocol
     static var protocolGeneratalbeEnd: String { get }
     var sourcery: SourceryProtocol { get }
 
-    func executor() throws  -> ArgumentExecutableProtocol
+    func executor() throws -> ArgumentExecutableProtocol
     func attempt(_ asyncSourceryWorkerOutput: @escaping (@escaping SourceryWorkerProtocol.SyncOutput) -> Void)
-    // sourcery:end
+    // highway:end
 }
 
 /// To generate mocks correctly we have to do a text replacement and run sourcery twice.
@@ -40,10 +40,10 @@ public protocol SourceryWorkerProtocol
 public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
 {
     public static let queue: DispatchQueue = DispatchQueue(label: "be.dooz.highway.sourceryWorker")
-    public static let mockableInline = "// sourcery:inline:"
-    public static let mockableEnd = "// sourcery:end"
-    public static let protocolGeneratableInline = "// sourcery:inline:"
-    public static let protocolGeneratalbeEnd = "// sourcery:end"
+    public static let mockableInline = "// highway:inline:"
+    public static let mockableEnd = "// highway:end"
+    public static let protocolGeneratableInline = "// highway:inline:"
+    public static let protocolGeneratalbeEnd = "// highway:end"
 
     public let sourcery: SourceryProtocol
 

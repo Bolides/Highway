@@ -3,12 +3,12 @@ import SourceryAutoProtocols
 
 public protocol ArchiveOptionsProtocol: AutoMockable
 {
-    // sourcery:inline:ArchiveOptions.AutoGenerateProtocol
+    // highway:inline:ArchiveOptions.AutoGenerateProtocol
     var scheme: String { get }
     var project: String { get }
     var destination: DestinationProtocol { get }
     var archivePath: String { get }
-    // sourcery:end
+    // highway:end
 }
 
 /// Options for xcodebuild's archive action:

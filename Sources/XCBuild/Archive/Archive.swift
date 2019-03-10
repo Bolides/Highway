@@ -5,11 +5,11 @@ import ZFile
 
 public protocol ArchiveProtocol: AutoMockable
 {
-    // sourcery:inline:Archive.AutoGenerateProtocol
+    // highway:inline:Archive.AutoGenerateProtocol
     var archiveFolder: FolderProtocol { get }
     var appFolder: FolderProtocol { get }
     var plist: ArchivePlistProtocol { get }
-    // sourcery:end
+    // highway:end
 }
 
 public struct Archive: ArchiveProtocol, AutoGenerateProtocol

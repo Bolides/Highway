@@ -7,7 +7,7 @@ import ZFile
 
 public protocol GitToolProtocol: AutoMockable
 {
-    // sourcery:inline:GitTool.AutoGenerateProtocol
+    // highway:inline:GitTool.AutoGenerateProtocol
 
     func addAll() throws
     func commit(message: String) throws
@@ -16,7 +16,7 @@ public protocol GitToolProtocol: AutoMockable
     func pull() throws
     func currentTag() throws -> [String]
     func clone(with options: CloneOptions) throws -> [String]
-    // sourcery:end
+    // highway:end
 }
 
 public struct CloneOptions: AutoMockable

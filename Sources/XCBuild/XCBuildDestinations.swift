@@ -12,12 +12,12 @@ import SourceryAutoProtocols
 
 public protocol XCBuildDestinationsProtocol: AutoMockable
 {
-    // sourcery:inline:XCBuildDestinations.AutoGenerateProtocol
+    // highway:inline:XCBuildDestinations.AutoGenerateProtocol
     var platform: Destination.Platform { get }
     var id: String { get }
     var name: String { get }
     var os: Destination.OS { get }
-    // sourcery:end
+    // highway:end
 }
 
 public struct XCBuildDestinations: XCBuildDestinationsProtocol, AutoGenerateProtocol

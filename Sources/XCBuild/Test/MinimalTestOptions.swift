@@ -15,11 +15,11 @@ import ZFile
 // sourcery:AutoMockable
 public protocol MinimalTestOptionsProtocol
 {
-    // sourcery:inline:MinimalTestOptions.AutoGenerateProtocol
+    // highway:inline:MinimalTestOptions.AutoGenerateProtocol
     var description: String { get }
 
     func arguments() throws -> Arguments
-    // sourcery:end
+    // highway:end
 }
 
 public struct MinimalTestOptions: MinimalTestOptionsProtocol, AutoGenerateProtocol, CustomStringConvertible

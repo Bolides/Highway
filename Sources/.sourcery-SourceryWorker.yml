@@ -1,8 +1,8 @@
 sources:
-- "/Users/doozmen/Documents/dooZ/Open/dev.nosync/Highway/Sources/SourceryWorker/"
-- "/Users/doozmen/Documents/dooZ/Open/dev.nosync/Highway/.build/checkouts/template-sourcery--1311409422962234918/Sources/SourceryAutoProtocols/SourceryAutoProtocols.swift"
+- "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SourceryWorker/"
+- "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/.build/checkouts/template-sourcery--6960370169994460304/Sources/SourceryAutoProtocols/SourceryAutoProtocols.swift"
 
 templates:
-- "/Users/doozmen/Documents/dooZ/Open/dev.nosync/Highway/.build/checkouts/template-sourcery--1311409422962234918/Sources/stencil/"
+- "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/.build/checkouts/template-sourcery--6960370169994460304/Sources/stencil/"
 output:
- "/Users/doozmen/Documents/dooZ/Open/dev.nosync/Highway/Sources/Generated/SourceryWorker/"
+ "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/SourceryWorker/"

@@ -18,6 +18,14 @@ let signPost = SignPost.shared
 open class GitHooksWorkerProtocolMock: GitHooksWorkerProtocol
 {
     public init() {}
+
+    public var terminal: TerminalWorkerProtocol
+    {
+        get { return underlyingTerminal }
+        set(value) { underlyingTerminal = value }
+    }
+
+    public var underlyingTerminal: TerminalWorkerProtocol!
 }
 
 // MARK: - OBJECTIVE-C

@@ -17,7 +17,16 @@ import Foundation
 /*
 
  // Generated protocol inline for GitTool -> See code in the file of that type
+ // sourcery:inline:GitTool.AutoGenerateProtocol
 
+ func addAll() throws
+ func commit(message: String) throws
+ func pushToMaster() throws
+ func pushTagsToMaster() throws
+ func pull() throws
+ func currentTag() throws  -> [String]
+ func clone(with options: CloneOptions) throws  -> [String]
+ // sourcery:end
  // Generated protocol inline for  -> See code in the file of that type
 
  // Generated protocol inline for  -> See code in the file of that type

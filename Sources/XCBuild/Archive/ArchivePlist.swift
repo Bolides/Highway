@@ -10,10 +10,10 @@ import SourceryAutoProtocols
 
 public protocol ArchivePlistProtocol: Codable, AutoMockable
 {
-    // sourcery:inline:ArchivePlist.AutoGenerateProtocol
+    // highway:inline:ArchivePlist.AutoGenerateProtocol
     var applicationProperties: String { get }
     var applicationPath: String { get }
-    // sourcery:end
+    // highway:end
 }
 
 public struct ArchivePlist: ArchivePlistProtocol, Codable, AutoGenerateProtocol

@@ -23,7 +23,7 @@ class SourceryWorkerSpec: QuickSpec {
             context("Static properties unchanged") {
                 
                 it("text replacements correnct") {
-                    expect(SourceryWorker.mockableInline) == "/// sourcery:inline:"
+                    expect(SourceryWorker.mockableInline) == "/// highway:inline:"
                 }
             }
             var sut: SourceryWorker?

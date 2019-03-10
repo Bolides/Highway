@@ -17,13 +17,39 @@ import Foundation
 /*
 
  // Generated protocol inline for SwiftPackageDependencyService -> See code in the file of that type
+ // sourcery:inline:SwiftPackageDependencyService.AutoGenerateProtocol
+ var swiftPackage: SwiftPackageDependenciesProtocol { get }
 
+ // sourcery:end
  // Generated protocol inline for SwiftPackageDumpService -> See code in the file of that type
+ // sourcery:inline:SwiftPackageDumpService.AutoGenerateProtocol
+ var swiftPackageDump: SwiftPackageDumpProtocol { get }
 
+ // sourcery:end
  // Generated protocol inline for SystemExecutableProvider -> See code in the file of that type
+ // sourcery:inline:SystemExecutableProvider.AutoGenerateProtocol
+ static var shared: SystemExecutableProviderProtocol { get }
+ var pathEnvironmentParser: PathEnvironmentParserProtocol { get }
+ var fileSystem: FileSystemProtocol { get }
 
+ func executable(with executableName: String) throws  -> FileProtocol
+ // sourcery:end
  // Generated protocol inline for Task -> See code in the file of that type
+ // sourcery:inline:Task.AutoGenerateProtocol
+ var name: String { get }
+ var executable: FileProtocol { get set }
+ var arguments: Arguments { get set }
+ var input: Channel { get set }
+ var output: Channel { get set }
+ var capturedOutputData: Data? { get }
+ var readOutputString: String? { get }
+ var trimmedOutput: String? { get }
+ var capturedOutputString: String? { get }
+ var toProcess: Process { get }
+ var description: String { get }
 
+ func enableReadableOutputDataCapturing()
+ // sourcery:end
  // Generated protocol inline for  -> See code in the file of that type
 
  // Generated protocol inline for  -> See code in the file of that type

@@ -6,7 +6,7 @@ import ZFile
 
 public protocol TestOptionsProtocol: ArgumentExecutableProtocol
 {
-    // sourcery:inline:TestOptions.AutoGenerateProtocol
+    // highway:inline:TestOptions.AutoGenerateProtocol
     var scheme: String { get }
     var project: String { get }
     var destination: DestinationProtocol { get }
@@ -15,7 +15,7 @@ public protocol TestOptionsProtocol: ArgumentExecutableProtocol
 
     func arguments() throws -> Arguments
     func executableFile() throws -> FileProtocol
-    // sourcery:end
+    // highway:end
 }
 
 /// Options for xcodebuild's build & test actions:
