@@ -24,6 +24,7 @@ extension SwiftProduct
         importNames.insert(TemplatePrepend.Import(name: name))
         importNames.insert(TemplatePrepend.Import(name: VendorFramework.ZFile.rawValue))
         importNames.insert(TemplatePrepend.Import(name: VendorFramework.ZFileMock.rawValue))
+        importNames.insert(TemplatePrepend.Import(name: HighwayProduct.SignPost.rawValue))
 
         // If not the default, add a case and insert imports into importNames
         switch product

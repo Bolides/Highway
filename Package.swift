@@ -215,7 +215,7 @@ public let package = Package(
         ),
         .target(
                 name: "HighwayDispatchMock",
-                dependencies: ["HighwayDispatch", "SignPost"],
+                dependencies: ["HighwayDispatch", "SignPost", "ZFileMock", "SourceryAutoProtocols"],
                 path: "Sources/Generated/HighwayDispatch"
         )
     ]

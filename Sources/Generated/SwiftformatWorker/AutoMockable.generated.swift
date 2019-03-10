@@ -1,5 +1,6 @@
 import Foundation
 import os
+import SignPost
 import SourceryAutoProtocols
 import SwiftFormatWorker
 import ZFile

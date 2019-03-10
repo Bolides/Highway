@@ -1,6 +1,7 @@
 import Foundation
 import HighwayDispatch
 import os
+import SignPost
 import SourceryAutoProtocols
 import ZFile
 import ZFileMock
