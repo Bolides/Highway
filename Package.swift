@@ -171,7 +171,15 @@ public let package = Package(
         ),
         .testTarget(
             name: "SourceryWorkerTests",
-        dependencies: ["SourceryWorker", "SignPostMock", "SourceryWorkerMock", "Quick", "Nimble", "TerminalMock", "SignPostMock", "HighwayDispatchMock"]
+        dependencies: ["SourceryWorker",
+                       "SignPostMock",
+                       "SourceryWorkerMock",
+                       "Quick",
+                       "Nimble",
+                       "TerminalMock",
+                       "SignPostMock",
+                       "HighwayDispatchMock",
+                       "ArgumentsMock"]
         ),
         .target(
             name: "SwiftFormatWorker",
