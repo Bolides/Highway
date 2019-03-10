@@ -1,4 +1,5 @@
-# Highway
+
+# Highway [![Build Status](https://app.bitrise.io/app/74c2194000b08d9d/status.svg?token=IqTwBXnTwOzE2pc1p3-aHw)](https://app.bitrise.io/app/74c2194000b08d9d)
 
 ## Develop on Highway
 
