@@ -40,10 +40,10 @@ public protocol SourceryWorkerProtocol
 public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
 {
     public static let queue: DispatchQueue = DispatchQueue(label: "be.dooz.highway.sourceryWorker")
-    public static let mockableInline = "// highway:inline:"
-    public static let mockableEnd = "// highway:end"
-    public static let protocolGeneratableInline = "// highway:inline:"
-    public static let protocolGeneratalbeEnd = "// highway:end"
+    public static let mockableInline = "/// sourcery:inline:"
+    public static let mockableEnd = "/// sourcery:end"
+    public static let protocolGeneratableInline = "// sourcery:inline:"
+    public static let protocolGeneratalbeEnd = "// sourcery:end"
 
     public let sourcery: SourceryProtocol
 

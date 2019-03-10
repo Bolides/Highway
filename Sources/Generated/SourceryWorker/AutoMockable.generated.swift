@@ -2,6 +2,7 @@ import Foundation
 import os
 import SourceryAutoProtocols
 import SourceryWorker
+import TerminalMock
 import ZFile
 import ZFileMock
 
@@ -103,10 +104,8 @@ open class SourceryExecutableFileProtocolMock: FileProtocolMock, SourceryExecuta
 
 // MARK: - SourceryProtocolMock
 
-open class SourceryProtocolMock: SourceryProtocol
+open class SourceryProtocolMock: ExecutableProtocolMock, SourceryProtocol
 {
-    public init() {}
-
     public var uuid: String
     {
         get { return underlyingUuid }

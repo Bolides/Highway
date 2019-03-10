@@ -41,6 +41,10 @@ extension SwiftProduct
             importNames.insert(TemplatePrepend.Import(name: HighwayProduct.Arguments.rawValue))
 
             return Set([TemplatePrepend(name: importNames, template: Template.AutoMockable.rawValue)])
+        case .SourceryWorker:
+            importNames.insert(TemplatePrepend.Import(name: "TerminalMock"))
+
+            return Set([TemplatePrepend(name: importNames, template: Template.AutoMockable.rawValue)])
         default:
             return Set([TemplatePrepend(name: importNames, template: Template.AutoMockable.rawValue)])
         }

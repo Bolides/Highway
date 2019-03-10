@@ -23,9 +23,13 @@ class SourceryWorkerSpec: QuickSpec {
             context("Static properties unchanged") {
                 
                 it("text replacements correnct") {
-                    expect(SourceryWorker.mockableInline) == "/// highway:inline:"
+                    expect(SourceryWorker.mockableInline) == "/// sourcery:inline:"
+                    expect(SourceryWorker.mockableEnd) == "/// sourcery:end"
+                    expect(SourceryWorker.protocolGeneratableInline) == "// sourcery:inline:"
+                    expect(SourceryWorker.protocolGeneratalbeEnd) == "// sourcery:end"
                 }
             }
+            
             var sut: SourceryWorker?
             
             var sourcery: SourceryProtocolMock!
@@ -38,13 +42,16 @@ class SourceryWorkerSpec: QuickSpec {
                 sourcery = SourceryProtocolMock()
                 terminalWorker = TerminalWorkerProtocolMock()
                 signPost = SignPostProtocolMock()
-                
-                sut = SourceryWorker(
-                    sourcery: sourcery,
-                    terminalWorker:terminalWorker,
-                    signPost: signPost,
-                    queue: queue
-                )
+               
+                expect {
+                    sut = try SourceryWorker(
+                        sourcery: sourcery,
+                        terminalWorker:terminalWorker,
+                        signPost: signPost,
+                        queue: queue
+                    )
+                }.toNot(throwError())
+               
             }
             
             it("should") {

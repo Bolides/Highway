@@ -13,6 +13,8 @@ import SourceryAutoProtocols
 import Terminal
 import ZFile
 
+// sourcery:AutoMockable
+// sourcery:mockInherit=ExecutableProtocolMock
 public protocol SourceryProtocol: ExecutableProtocol
 {
     // highway:inline:Sourcery.AutoGenerateProtocol
