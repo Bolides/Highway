@@ -12,6 +12,7 @@ import SourceryWorkerMock
 import TerminalMock
 import SignPostMock
 import Foundation
+import HighwayDispatchMock
 
 class SourceryWorkerSpec: QuickSpec {
     
@@ -23,8 +24,8 @@ class SourceryWorkerSpec: QuickSpec {
             context("Static properties unchanged") {
                 
                 it("text replacements correnct") {
-                    expect(SourceryWorker.mockableInline) == "/// sourcery:inline:"
-                    expect(SourceryWorker.mockableEnd) == "/// sourcery:end"
+                    expect(SourceryWorker.mockableInline) == "// highway:inline:"
+                    expect(SourceryWorker.mockableEnd) == "// highway:end"
                     expect(SourceryWorker.protocolGeneratableInline) == "// sourcery:inline:"
                     expect(SourceryWorker.protocolGeneratalbeEnd) == "// sourcery:end"
                 }
@@ -35,14 +36,16 @@ class SourceryWorkerSpec: QuickSpec {
             var sourcery: SourceryProtocolMock!
             var terminalWorker: TerminalWorkerProtocolMock!
             var signPost: SignPostProtocolMock!
-            let queue: DispatchQueue = DispatchQueue.main
+            var queue: HighwayDispatchProtocolMock!
             
             beforeEach {
                 
                 sourcery = SourceryProtocolMock()
                 terminalWorker = TerminalWorkerProtocolMock()
                 signPost = SignPostProtocolMock()
-               
+                queue =  HighwayDispatchProtocolMock()
+                queue.asyncSyncClosure = { $0() }
+                
                 expect {
                     sut = try SourceryWorker(
                         sourcery: sourcery,
@@ -54,8 +57,22 @@ class SourceryWorkerSpec: QuickSpec {
                
             }
             
-            it("should") {
+            it("sut should be a valid SourceryWorker") {
+                expect(sut).toNot(beNil())
+            }
+            
+            pending("🚨 should have a result") {
+                var result: [String]?
+                var _error: Swift.Error?
                 
+                sut?.attempt { _result in
+                    do { result = try _result() } catch {
+                        _error = error
+                    }
+                }
+                
+                expect(_error).toNot(beNil())
+                expect(signPost.verboseCalled).toEventually(beTrue())
             }
         }
     }

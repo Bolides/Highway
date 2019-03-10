@@ -23,4 +23,5 @@ public enum HighwayProduct: String, CaseIterable, Decodable
     case HWSetup
     case CarthageWorker
     case GitHooks
+    case HighwayDispatch
 }

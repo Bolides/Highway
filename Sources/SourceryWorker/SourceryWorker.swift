@@ -7,6 +7,7 @@
 
 import Errors
 import Foundation
+import HighwayDispatch
 import SignPost
 import SourceryAutoProtocols
 import Terminal
@@ -49,7 +50,7 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
 
     // MARK: - Private
 
-    private let queue: DispatchQueue
+    private let queue: HighwayDispatchProtocol
 
     private let signPost: SignPostProtocol
     private let terminalWorker: TerminalWorkerProtocol
@@ -58,7 +59,7 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
         sourcery: SourceryProtocol,
         terminalWorker: TerminalWorkerProtocol = TerminalWorker(),
         signPost: SignPostProtocol = SignPost.shared,
-        queue: DispatchQueue = SourceryWorker.queue
+        queue: HighwayDispatchProtocol = SourceryWorker.queue
     ) throws
     {
         self.sourcery = sourcery

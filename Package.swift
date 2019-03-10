@@ -14,6 +14,12 @@ public let package = Package(
             name: "Errors",
             targets: ["Errors"]),
         .library(
+            name: "HighwayDispatch",
+            targets: ["HighwayDispatch"]),
+        .library(
+            name: "HighwayDispatchMock",
+            targets: ["HighwayDispatchMock"]),
+        .library(
             name: "GitHooks",
             targets: ["GitHooks"]),
         .library(
@@ -156,7 +162,7 @@ public let package = Package(
         ),
         .target(
             name: "SourceryWorker",
-            dependencies: ["Terminal"]
+            dependencies: ["Terminal", "HighwayDispatch"]
         ),
         .target(
             name: "SourceryWorkerMock",
@@ -165,7 +171,7 @@ public let package = Package(
         ),
         .testTarget(
             name: "SourceryWorkerTests",
-        dependencies: ["SourceryWorker", "SignPostMock", "SourceryWorkerMock", "Quick", "Nimble", "TerminalMock", "SignPostMock"]
+        dependencies: ["SourceryWorker", "SignPostMock", "SourceryWorkerMock", "Quick", "Nimble", "TerminalMock", "SignPostMock", "HighwayDispatchMock"]
         ),
         .target(
             name: "SwiftFormatWorker",
@@ -202,6 +208,15 @@ public let package = Package(
                     "XCBuild",
                     "GitHooks"
             ]
+        ),
+        .target(
+            name: "HighwayDispatch",
+            dependencies: ["Errors", "SignPost"]
+        ),
+        .target(
+                name: "HighwayDispatchMock",
+                dependencies: ["HighwayDispatch", "SignPost"],
+                path: "Sources/Generated/HighwayDispatch"
         )
     ]
 )
