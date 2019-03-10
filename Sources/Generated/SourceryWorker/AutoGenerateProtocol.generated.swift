@@ -39,17 +39,7 @@ import Foundation
  // Generated protocol inline for SourceryExecutableFile -> See code in the file of that type
 
  // Generated protocol inline for SourceryWorker -> See code in the file of that type
- // sourcery:inline:SourceryWorker.AutoGenerateProtocol
- static var queue: DispatchQueue { get }
- static var mockableInline: String { get }
- static var mockableEnd: String { get }
- static var protocolGeneratableInline: String { get }
- static var protocolGeneratalbeEnd: String { get }
- var sourcery: SourceryProtocol { get }
 
- func executor() throws  -> ArgumentExecutableProtocol
- func attempt(_ asyncSourceryWorkerOutput: @escaping (@escaping SourceryWorkerProtocol.SyncOutput) -> Void)
- // sourcery:end
  // Generated protocol inline for TemplatePrepend -> See code in the file of that type
  // sourcery:inline:TemplatePrepend.AutoGenerateProtocol
  var names: Set<TemplatePrepend.Import> { get }
