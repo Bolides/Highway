@@ -28,26 +28,22 @@ class SourcerySpec: QuickSpec {
             var sut: Sourcery?
             
             
-            var terminal: TerminalWorkerProtocolMock!
-            
             var swiftPackageDependencies: SwiftPackageDependenciesProtocol?
             var swiftPackageDump: SwiftPackageDumpProtocol?
+            
+            beforeSuite {
+                // get real dependencies
+                expect {
+                    let srcroot = try File(path: #file).parentFolder().parentFolder().parentFolder()
+                    FileManager.default.changeCurrentDirectoryPath(srcroot.path)
+                    swiftPackageDependencies = try SwiftPackageDependencyService().swiftPackage
+                    swiftPackageDump = try SwiftPackageDumpService(swiftPackageDependencies: swiftPackageDependencies!).swiftPackageDump
+                    
+                    return true
+                    }.toNot(throwError())
+            }
+            
             context("Arguments - add's correct imports via swift package dependencies") {
-                
-                beforeEach {
-                    // get real dependencies
-                    expect {
-                        
-                        terminal = TerminalWorkerProtocolMock()
-                        terminal.runProcessReturnValue = Stub.swiftPackageShowDependencies.components(separatedBy: "\n")
-                        
-                        swiftPackageDependencies = try SwiftPackageDependencyService(terminal: terminal).swiftPackage
-                        terminal.runProcessReturnValue = Stub.swiftPackageDump.components(separatedBy: "\n")
-                        swiftPackageDump = try SwiftPackageDumpService(terminal: terminal, swiftPackageDependencies: swiftPackageDependencies!).swiftPackageDump
-                        
-                        return true
-                        }.toNot(throwError())
-                }
                 
                 context("highway products") {
                     
@@ -185,7 +181,7 @@ class SourcerySpec: QuickSpec {
                         beforeEach { setup(for: "GitHooks") }
                         
                         it("has imports for automockable") {
-                            expect(sut?.imports.first {$0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",") ) == "Foundation,GitHooks,SignPost,SourceryAutoProtocols,Terminal,ZFile,ZFileMock"
+                            expect(sut?.imports.first {$0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",") ) == "Arguments,Foundation,GitHooks,SignPost,SourceryAutoProtocols,Terminal,ZFile,ZFileMock"
                         }
                     }
                     

@@ -4,29 +4,28 @@ import Terminal
 import TerminalMock
 import Arguments
 import Stub
+import Foundation
+import ZFile
 
 class SwiftPackageDependencyServiceSpec: QuickSpec {
     
     override func spec() {
         
         describe("SwiftPackageDependencyService") {
-            
-            var sut: SwiftPackageDependencyService?
-            
-            var terminal: TerminalWorkerProtocolMock!
+                        
             var expectedSwiftPackage: SwiftPackageDependenciesProtocol?
             
-            beforeEach {
-                terminal = TerminalWorkerProtocolMock()
-                terminal.runProcessClosure = { _ in
-                    return swiftPackageShowDependencies.components(separatedBy: "\n")
-                }
+            beforeSuite {
+                // get real dependencies
                 expect {
-                    sut = try SwiftPackageDependencyService(terminal: terminal)
-                    expectedSwiftPackage = sut?.swiftPackage
+                    let srcroot = try File(path: #file).parentFolder().parentFolder().parentFolder()
+                    FileManager.default.changeCurrentDirectoryPath(srcroot.path)
+                    expectedSwiftPackage = try SwiftPackageDependencyService().swiftPackage
+                    
                     return true
                 }.toNot(throwError())
             }
+            
             
             it("have dependencies of Highway package") {
                 expect(expectedSwiftPackage?.dependencies.map { $0.name }.sorted()) == ["Nimble",
