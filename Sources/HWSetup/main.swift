@@ -92,9 +92,19 @@ do
             signPost.message("🚀 HWSetup ✅")
             exit(EXIT_SUCCESS)
         }
+        catch let TerminalWorker.Error.unknownTask(errorOutput)
+        {
+            let testOutput = TestReport(output: errorOutput)
+            signPost.error("\(testOutput)")
+            signPost.error("🚀 HWSetup ❌")
+
+            exit(EXIT_FAILURE)
+        }
         catch
         {
             signPost.error("\(error)")
+            signPost.error("🚀 HWSetup ❌")
+
             exit(EXIT_FAILURE)
         }
     }

@@ -15,17 +15,9 @@ import Arguments
 import ZFileMock
 import Errors
 
-private let expectedPrePushScript = """
-#!/bin/sh
-
-# Build setup executable
-echo "Running pre-push in "$PWD
-swift build --product GitHooksWorkerSpec -c release --static-swift-stdlib
-
-# Execute the script
-./.build/x86_64-apple-macosx10.10/release/GitHooksWorkerSpec
-# Allow push on success
-"""
+private let expectedPrePushScript = GitHooksWorker.prepushBashScript
+    .replacingOccurrences(of: "<#srcroot#>", with: "mockedRoot")
+    .replacingOccurrences(of: "<#executable name#>", with: "GitHooksWorkerSpec")
 
 class GitHooksWorkerSpec: QuickSpec {
     
@@ -51,6 +43,9 @@ class GitHooksWorkerSpec: QuickSpec {
                 let executable = SwiftProduct(name: "GitHooksWorkerSpec", product_type: "executable")
                 swiftPackageDump.products = Set([executable])
                 
+                let scrRoot = try! FolderProtocolMock()
+                scrRoot.underlyingPath = "mockedRoot"
+                swiftPackageDependencies.srcRootReturnValue = scrRoot
             }
             
             context("pre-push is still sample") {

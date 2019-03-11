@@ -28,13 +28,15 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
     public static let prepushBashScript = """
     #!/bin/sh
     
+    cd <#srcroot#>
     # Build setup executable
-    pushd ../../
-    swift build --product <#executable name#> -c release --static-swift-stdlib
+    if [ ! -f /tmp/foo.txt ]; then
+        echo "<#executable name#>, not found - building for source"
+        swift build --product <#executable name#> -c release --static-swift-stdlib
+    fi
     
     # Execute the script
     ./.build/x86_64-apple-macosx10.10/release/<#executable name#>
-    popd
     # Allow push on success
     """
 
@@ -72,7 +74,9 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
                 executable = _executable.name
             }
 
-            let script = GitHooksWorker.prepushBashScript.replacingOccurrences(of: "<#executable name#>", with: executable)
+            let script = GitHooksWorker.prepushBashScript
+                .replacingOccurrences(of: "<#executable name#>", with: executable)
+                .replacingOccurrences(of: "<#srcroot#>", with: try swiftPackageDependencies.srcRoot().path)
 
             var prePushFile: FileProtocol!
             do
