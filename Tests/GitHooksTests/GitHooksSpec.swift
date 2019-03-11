@@ -19,12 +19,11 @@ private let expectedPrePushScript = """
 #!/bin/sh
 
 # Build setup executable
-pushd ../../
+echo "Running pre-push in "$PWD
 swift build --product GitHooksWorkerSpec -c release --static-swift-stdlib
 
 # Execute the script
 ./.build/x86_64-apple-macosx10.10/release/GitHooksWorkerSpec
-popd
 # Allow push on success
 """
 
