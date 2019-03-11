@@ -1,8 +1,0 @@
-sources:
-- "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/"
-- "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/.build/checkouts/template-sourcery-7266829155499075751/Sources/SourceryAutoProtocols/SourceryAutoProtocols.swift"
-
-templates:
-- "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/.build/checkouts/template-sourcery-7266829155499075751/"
-output:
- "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/"
