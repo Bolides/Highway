@@ -68,14 +68,14 @@ public let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://www.github.com/doozMen/ZFile", from: "2.0.2"),
+        .package(url: "https://www.github.com/doozMen/ZFile", "2.0.2"..<"3.1.0"),
         .package(url: "https://www.github.com/doozMen/SignPost", from: "1.0.0"),
-        .package(url: "https://www.github.com/doozMen/template-sourcery", from: "1.2.2"),
-        .package(url: "https://www.github.com/antitypical/Result", from: "4.1.0"),
+        .package(url: "https://www.github.com/doozMen/template-sourcery", "1.2.2"..<"2.1.0"),
+        .package(url: "https://www.github.com/antitypical/Result", "4.1.0"..<"5.1.0"),
         .package(url: "https://github.com/nicklockwood/SwiftFormat", from: "0.39.4"),
-        .package(url: "https://www.github.com/Quick/Quick", from: "1.3.4"),
-        .package(url: "https://www.github.com/Quick/Nimble", from: "7.3.4"),
-        .package(url: "https://www.github.com/doozMen/Sourcery", from: "0.16.3")
+        .package(url: "https://www.github.com/Quick/Quick", "1.3.4"..<"2.1.0"),
+        .package(url: "https://www.github.com/Quick/Nimble", "7.3.4"..<"8.1.0"),
+        .package(url: "https://www.github.com/doozMen/Sourcery", "0.16.3"..<"1.0.0")
         ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
