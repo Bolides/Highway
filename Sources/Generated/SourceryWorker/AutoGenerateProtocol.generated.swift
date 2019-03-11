@@ -18,6 +18,7 @@ import Foundation
 
  // Generated protocol inline for Sourcery -> See code in the file of that type
  // sourcery:inline:Sourcery.AutoGenerateProtocol
+ static var commonImportAutoMockable: Set<TemplatePrepend.Import> { get }
  var uuid: String { get }
  var name: String { get }
  var templateFolder: FolderProtocol { get }

@@ -18,13 +18,17 @@ let terminal = TerminalWorker.shared
 do
 {
     // Swift Package
+    let swiftPackageDependencyService = try SwiftPackageDependencyService()
+    disk = swiftPackageDependencyService.swiftPackage
+    try swiftPackageDependencyService.writeToStubFile()
 
-    disk = try SwiftPackageDependencyService().swiftPackage
-    swiftPackageDump = try SwiftPackageDumpService().swiftPackageDump
+    let swiftPackageDumpService = try SwiftPackageDumpService(swiftPackageDependencies: disk!)
+    swiftPackageDump = swiftPackageDumpService.swiftPackageDump
+    try swiftPackageDumpService.writeToStubFile()
 
     // Setup Workers
 
-    automateSourceryWorker = try HWSetupSourceryWorker(disk: disk!, dispatchGroup: dispatchGroup, swiftPackageDump: swiftPackageDump!)
+    automateSourceryWorker = try HWSetupSourceryWorker(swiftPackageDependencies: disk!, dispatchGroup: dispatchGroup, swiftPackageDump: swiftPackageDump!)
     swiftFormatWorker = try SwiftFormatWorker(folderToFormatRecursive: try disk!.srcRoot().subfolder(named: "Sources"))
 
     let sourceryProducts = swiftPackageDump!.products.map { $0.name }.filter { !$0.hasSuffix("Mock") }

@@ -1,6 +1,5 @@
 import Foundation
 import GitHooks
-import os
 import SignPost
 import SourceryAutoProtocols
 import Terminal

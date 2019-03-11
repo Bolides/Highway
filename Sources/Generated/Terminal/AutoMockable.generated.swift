@@ -1,7 +1,5 @@
 import Arguments
 import Foundation
-import os
-import SignPost
 import SourceryAutoProtocols
 import Terminal
 import ZFile
@@ -191,6 +189,54 @@ open class SwiftPackageDependencyServiceProtocolMock: SwiftPackageDependencyServ
     }
 
     public var underlyingSwiftPackage: SwiftPackageDependenciesProtocol!
+
+    // MARK: - <init> - parameters
+
+    public var initTerminalThrowableError: Error?
+    public var initTerminalReceivedTerminal: TerminalWorkerProtocol?
+
+    // MARK: - <init> - closure mocks
+
+    public var initTerminalClosure: ((TerminalWorkerProtocol) throws -> Void)?
+
+    // MARK: - <init> - initializer mocked
+
+    public required init(terminal: TerminalWorkerProtocol) throws
+    {
+        initTerminalReceivedTerminal = terminal
+        try? initTerminalClosure?(terminal)
+    }
+
+    // MARK: - <writeToStubFile> - parameters
+
+    public var writeToStubFileThrowableError: Error?
+    public var writeToStubFileCallsCount = 0
+    public var writeToStubFileCalled: Bool
+    {
+        return writeToStubFileCallsCount > 0
+    }
+
+    // MARK: - <writeToStubFile> - closure mocks
+
+    public var writeToStubFileClosure: (() throws -> Void)?
+
+    // MARK: - <writeToStubFile> - method mocked
+
+    open func writeToStubFile() throws
+    {
+        // <writeToStubFile> - Throwable method implementation
+
+        if let error = writeToStubFileThrowableError
+        {
+            throw error
+        }
+
+        writeToStubFileCallsCount += 1
+
+        // <writeToStubFile> - Void return mock implementation
+
+        try writeToStubFileClosure?()
+    }
 }
 
 // MARK: - SwiftPackageDumpServiceProtocolMock
@@ -206,6 +252,37 @@ open class SwiftPackageDumpServiceProtocolMock: SwiftPackageDumpServiceProtocol
     }
 
     public var underlyingSwiftPackageDump: SwiftPackageDumpProtocol!
+
+    // MARK: - <writeToStubFile> - parameters
+
+    public var writeToStubFileThrowableError: Error?
+    public var writeToStubFileCallsCount = 0
+    public var writeToStubFileCalled: Bool
+    {
+        return writeToStubFileCallsCount > 0
+    }
+
+    // MARK: - <writeToStubFile> - closure mocks
+
+    public var writeToStubFileClosure: (() throws -> Void)?
+
+    // MARK: - <writeToStubFile> - method mocked
+
+    open func writeToStubFile() throws
+    {
+        // <writeToStubFile> - Throwable method implementation
+
+        if let error = writeToStubFileThrowableError
+        {
+            throw error
+        }
+
+        writeToStubFileCallsCount += 1
+
+        // <writeToStubFile> - Void return mock implementation
+
+        try writeToStubFileClosure?()
+    }
 }
 
 // MARK: - SystemExecutableProviderProtocolMock

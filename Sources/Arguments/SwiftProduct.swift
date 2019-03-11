@@ -19,4 +19,9 @@ public protocol SwiftProductProtocol: AutoMockable
 public struct SwiftProduct: SwiftProductProtocol, Decodable, AutoGenerateProtocol, Hashable
 {
     public let name: String
+
+    public init(name: String)
+    {
+        self.name = name
+    }
 }

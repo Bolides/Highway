@@ -8,11 +8,14 @@
 import Arguments
 import Foundation
 import SourceryAutoProtocols
+import ZFile
 
 public protocol SwiftPackageDumpServiceProtocol: AutoMockable
 {
     // sourcery:inline:SwiftPackageDumpService.AutoGenerateProtocol
     var swiftPackageDump: SwiftPackageDumpProtocol { get }
+
+    func writeToStubFile() throws
     // sourcery:end
 }
 
@@ -20,14 +23,25 @@ public struct SwiftPackageDumpService: SwiftPackageDumpServiceProtocol, AutoGene
 {
     public let swiftPackageDump: SwiftPackageDumpProtocol
 
-    public init(terminal: TerminalWorkerProtocol = TerminalWorker.shared) throws
+    private let swiftPackageDependencies: SwiftPackageDependenciesProtocol
+    private let data: Data
+
+    // sourcery:includeInitInprotocol
+    public init(terminal: TerminalWorkerProtocol = TerminalWorker.shared, swiftPackageDependencies: SwiftPackageDependenciesProtocol) throws
     {
+        self.swiftPackageDependencies = swiftPackageDependencies
         let task = try Task(commandName: "swift")
         task.arguments = Arguments(["package", "dump-package"])
 
         let output: String = try terminal.runProcess(task.toProcess).joined()
-        let data: Data = output.data(using: .utf8)!
+        data = output.data(using: .utf8)!
 
         swiftPackageDump = try JSONDecoder().decode(SwiftPackageDump.self, from: data)
+    }
+
+    public func writeToStubFile() throws
+    {
+        let stubFile = try swiftPackageDependencies.srcRoot().subfolder(named: "Sources/Stub").createFileIfNeeded(named: "\(SwiftPackageDumpService.self).json")
+        try stubFile.write(data: data)
     }
 }

@@ -1,8 +1,7 @@
 import Foundation
-import os
-import SignPost
 import SourceryAutoProtocols
 import SourceryWorker
+import Terminal
 import TerminalMock
 import ZFile
 import ZFileMock
@@ -107,6 +106,13 @@ open class SourceryExecutableFileProtocolMock: FileProtocolMock, SourceryExecuta
 
 open class SourceryProtocolMock: ExecutableProtocolMock, SourceryProtocol
 {
+    public static var commonImportAutoMockable: Set<TemplatePrepend.Import>
+    {
+        get { return underlyingCommonImportAutoMockable }
+        set(value) { underlyingCommonImportAutoMockable = value }
+    }
+
+    public static var underlyingCommonImportAutoMockable: Set<TemplatePrepend.Import>!
     public var uuid: String
     {
         get { return underlyingUuid }

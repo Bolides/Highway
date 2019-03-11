@@ -1,0 +1,215 @@
+//
+//  SourcerySpec.swift
+//  TerminalTests
+//
+//  Created by Stijn Willems on 11/03/2019.
+//
+
+import Foundation
+
+import Quick
+import Nimble
+import SourceryWorker
+import ArgumentsMock
+import ZFileMock
+import Arguments
+import TerminalMock
+import ZFile
+import Stub
+import Terminal
+import Errors
+
+class SourcerySpec: QuickSpec {
+    
+    override func spec() {
+        
+        describe("Sourcery") {
+            
+            var sut: Sourcery?
+            
+            
+            var terminal: TerminalWorkerProtocolMock!
+            
+            var swiftPackageDependencies: SwiftPackageDependenciesProtocol?
+            var swiftPackageDump: SwiftPackageDumpProtocol?
+            context("Arguments - add's correct imports via swift package dependencies") {
+                
+                beforeEach {
+                    // get real dependencies
+                    expect {
+                        
+                        terminal = TerminalWorkerProtocolMock()
+                        terminal.runProcessReturnValue = Stub.swiftPackageShowDependencies.components(separatedBy: "\n")
+                        
+                        swiftPackageDependencies = try SwiftPackageDependencyService(terminal: terminal).swiftPackage
+                        terminal.runProcessReturnValue = Stub.swiftPackageDump.components(separatedBy: "\n")
+                        swiftPackageDump = try SwiftPackageDumpService(terminal: terminal, swiftPackageDependencies: swiftPackageDependencies!).swiftPackageDump
+                        
+                        return true
+                        }.toNot(throwError())
+                }
+                
+                context("highway products") {
+                    
+                    func setup(for productName: String) {
+                        expect {
+                            guard let swiftPackageDump = swiftPackageDump, let swiftPackageDependencies = swiftPackageDependencies else { throw "swift package stuff missing"}
+                            
+                            sut = try Sourcery(productName: productName,
+                                               swiftPackageDependencies: swiftPackageDependencies,
+                                               swiftPackageDump: swiftPackageDump,
+                                               sourceryExecutable: FileProtocolMock())
+                            return sut
+                        }.toNot(throwError())
+                    }
+                    
+                    context("Arguments") {
+                        
+                        beforeEach { setup(for: "Arguments") }
+                        
+                        it("has imports for automockable") {
+                            expect(sut?.imports.first {$0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",") ) == "Arguments,Foundation,SignPost,SourceryAutoProtocols,ZFile,ZFileMock"
+                        }
+                    }
+                    
+                    context("Git") {
+                        
+                        beforeEach { setup(for: "Git") }
+                        
+                        it("has imports for automockable") {
+                            expect(sut?.imports.first {$0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",") ) == ""
+                        }
+                    }
+                    
+                    context("SignPost") {
+                        
+                        beforeEach { setup(for: "SignPost") }
+                        
+                        it("has imports for automockable") {
+                            expect(sut?.imports.first {$0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",") ) == ""
+                        }
+                    }
+                    
+                    context("SourceryWorker") {
+                        
+                        beforeEach { setup(for: "SourceryWorker") }
+                        
+                        it("has imports for automockable") {
+                            expect(sut?.imports.first {$0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",") ) == "Foundation,SourceryAutoProtocols,SourceryWorker,Terminal,TerminalMock,ZFile,ZFileMock"
+                        }
+                    }
+                    
+                    context("Terminal") {
+                        
+                        beforeEach { setup(for: "Terminal") }
+                        
+                        it("has imports for automockable") {
+                            expect(sut?.imports.first {$0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",") ) == "Arguments,Foundation,SourceryAutoProtocols,Terminal,ZFile,ZFileMock"
+                        }
+                    }
+                    
+                    context("Url") {
+                        
+                        beforeEach { setup(for: "Url") }
+                        
+                        it("has imports for automockable") {
+                            expect(sut?.imports.first {$0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",") ) == ""
+                        }
+                    }
+                    
+                    context("XCBuild") {
+                        
+                        beforeEach { setup(for: "XCBuild") }
+                        
+                        it("has imports for automockable") {
+                            expect(sut?.imports.first {$0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",") ) == "Arguments,Foundation,SignPost,SourceryAutoProtocols,XCBuild,ZFile,ZFileMock"
+                        }
+                    }
+                    
+                    context("Errors") {
+                        
+                        beforeEach { setup(for: "Errors") }
+                        
+                        it("has imports for automockable") {
+                            expect(sut?.imports.first {$0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",") ) == ""
+                        }
+                    }
+                    
+                    context("POSIX") {
+                        
+                        beforeEach { setup(for: "POSIX") }
+                        
+                        it("has imports for automockable") {
+                            expect(sut?.imports.first {$0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",") ) == ""
+                        }
+                    }
+                    
+                    context("Task") {
+                        
+                        beforeEach { setup(for: "Task") }
+                        
+                        it("has imports for automockable") {
+                            expect(sut?.imports.first {$0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",") ) == ""
+                        }
+                    }
+                    
+                    context("SwiftFormatWorker") {
+                        
+                        beforeEach { setup(for: "SwiftFormatWorker") }
+                        
+                        it("has imports for automockable") {
+                            expect(sut?.imports.first {$0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",") ) == "Foundation,SourceryAutoProtocols,SwiftFormatWorker,ZFileMock"
+                        }
+                    }
+                    
+                    context("HWSetup") {
+                        
+                        beforeEach { setup(for: "HWSetup") }
+                        
+                        it("has imports for automockable") {
+                            expect(sut?.imports.first {$0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",") ) == ""
+                        }
+                    }
+                    
+                    context("CarthageWorker") {
+                        
+                        beforeEach { setup(for: "CarthageWorker") }
+                        
+                        it("has imports for automockable") {
+                            expect(sut?.imports.first {$0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",") ) == ""
+                        }
+                    }
+                    
+                    context("GitHooks") {
+                        
+                        beforeEach { setup(for: "GitHooks") }
+                        
+                        it("has imports for automockable") {
+                            expect(sut?.imports.first {$0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",") ) == "Foundation,GitHooks,SignPost,SourceryAutoProtocols,Terminal,ZFile,ZFileMock"
+                        }
+                    }
+                    
+                    context("HighwayDispatch") {
+                        
+                        beforeEach { setup(for: "HighwayDispatch") }
+                        
+                        it("has imports for automockable") {
+                            expect(sut?.imports.first {$0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",") ) == "Foundation,HighwayDispatch,SignPost,SourceryAutoProtocols,ZFileMock"
+                        }
+                    }
+                    
+                    context("Stub") {
+                        
+                        beforeEach { setup(for: "Stub") }
+                        
+                        it("has imports for automockable") {
+                            expect(sut?.imports.first {$0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",") ) == ""
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+    }
+}

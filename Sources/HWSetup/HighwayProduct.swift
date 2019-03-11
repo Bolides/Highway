@@ -11,7 +11,6 @@ public enum HighwayProduct: String, CaseIterable, Decodable
 {
     case Arguments
     case Git
-    case SignPost
     case SourceryWorker
     case Terminal
     case Url
@@ -24,4 +23,5 @@ public enum HighwayProduct: String, CaseIterable, Decodable
     case CarthageWorker
     case GitHooks
     case HighwayDispatch
+    case Stub
 }

@@ -3,6 +3,6 @@ sources:
 - "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/.build/checkouts/template-sourcery--6960370169994460304/Sources/SourceryAutoProtocols/SourceryAutoProtocols.swift"
 
 templates:
-- "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/.build/checkouts/template-sourcery--6960370169994460304/Sources/stencil/"
+- "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/.build/checkouts/template-sourcery--6960370169994460304/"
 output:
  "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/GitHooks/"

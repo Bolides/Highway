@@ -16,31 +16,6 @@ import Foundation
 
 /*
 
- // Generated protocol inline for SwiftPackageDependencies -> See code in the file of that type
- // sourcery:inline:SwiftPackageDependencies.AutoGenerateProtocol
- var name: String { get }
- var path: String { get }
- var url: URL { get }
- var version: String { get }
- var dependencies: [SwiftPackageDependencies] { get }
- var description: String { get }
-
- func srcRoot() throws  -> FolderProtocol
- func templateFolder() throws  -> FolderProtocol
- func sourceryFolder() throws  -> FolderProtocol
- func sourceryAutoProtocolFile() throws  -> FileProtocol
- // sourcery:end
- // Generated protocol inline for SwiftProduct -> See code in the file of that type
- // sourcery:inline:SwiftProduct.AutoGenerateProtocol
- var name: String { get }
-
- // sourcery:end
- // Generated protocol inline for SwiftTarget -> See code in the file of that type
- // sourcery:inline:SwiftTarget.AutoGenerateProtocol
- var name: String { get }
- var dependencies: Set<SwiftProduct> { get }
-
- // sourcery:end
  // Generated protocol inline for  -> See code in the file of that type
 
  // Generated protocol inline for  -> See code in the file of that type

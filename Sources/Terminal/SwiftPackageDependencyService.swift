@@ -9,11 +9,17 @@ import Arguments
 import Errors
 import Foundation
 import SourceryAutoProtocols
+import ZFile
 
 public protocol SwiftPackageDependencyServiceProtocol: AutoMockable
 {
     // sourcery:inline:SwiftPackageDependencyService.AutoGenerateProtocol
     var swiftPackage: SwiftPackageDependenciesProtocol { get }
+
+    init(
+        terminal: TerminalWorkerProtocol
+    ) throws
+    func writeToStubFile() throws
     // sourcery:end
 }
 
@@ -21,6 +27,9 @@ public struct SwiftPackageDependencyService: SwiftPackageDependencyServiceProtoc
 {
     public let swiftPackage: SwiftPackageDependenciesProtocol
 
+    private let data: Data
+
+    // sourcery:includeInitInProtocol
     public init(terminal: TerminalWorkerProtocol = TerminalWorker.shared) throws
     {
         do
@@ -29,7 +38,7 @@ public struct SwiftPackageDependencyService: SwiftPackageDependencyServiceProtoc
             task.arguments = Arguments(["package", "show-dependencies", "--format", "json"])
 
             let output: String = try terminal.runProcess(task.toProcess).joined()
-            let data: Data = output.data(using: .utf8)!
+            data = output.data(using: .utf8)!
 
             do
             {
@@ -46,5 +55,11 @@ public struct SwiftPackageDependencyService: SwiftPackageDependencyServiceProtoc
         {
             throw HighwayError.highwayError(atLocation: "\(SwiftPackageDependencyService.self) \(#function) \(#line)", error: error)
         }
+    }
+
+    public func writeToStubFile() throws
+    {
+        let stubFile = try swiftPackage.srcRoot().subfolder(named: "Sources/Stub").createFileIfNeeded(named: "\(SwiftPackageDependencyService.self).json")
+        try stubFile.write(data: data)
     }
 }

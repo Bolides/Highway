@@ -64,13 +64,16 @@ public let package = Package(
         .library(
             name: "CarthageWorker",
             targets: ["CarthageWorker"]),
+        .library(
+            name: "Stub",
+            targets: ["Stub"])
 
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://www.github.com/doozMen/ZFile", "2.0.2"..<"3.1.0"),
         .package(url: "https://www.github.com/doozMen/SignPost", from: "1.0.0"),
-        .package(url: "https://www.github.com/doozMen/template-sourcery", "1.2.2"..<"2.1.0"),
+        .package(url: "https://www.github.com/doozMen/template-sourcery", "1.3.1"..<"2.1.0"),
         .package(url: "https://www.github.com/antitypical/Result", "4.1.0"..<"5.1.0"),
         .package(url: "https://github.com/nicklockwood/SwiftFormat", from: "0.39.4"),
         .package(url: "https://www.github.com/Quick/Quick", "1.3.4"..<"2.1.0"),
@@ -98,7 +101,7 @@ public let package = Package(
         ),
         .target(
             name: "GitHooksMock",
-            dependencies: ["SourceryAutoProtocols", "ZFile", "ZFileMock", "SignPost", "GitHooks"],
+            dependencies: ["SourceryAutoProtocols", "ZFile", "ZFileMock", "SignPost", "GitHooks", "Terminal"],
             path: "Sources/Generated/GitHooks"
         ),
         .target(
@@ -150,7 +153,7 @@ public let package = Package(
         ),
         .testTarget(
             name: "TerminalTests",
-            dependencies: ["Terminal", "Quick", "Nimble"]
+            dependencies: ["Terminal", "TerminalMock", "Arguments", "Quick", "Nimble", "Stub"]
         ),
         .target(
             name: "Git",
@@ -166,7 +169,7 @@ public let package = Package(
         ),
         .target(
             name: "SourceryWorkerMock",
-            dependencies: ["SourceryWorker", "ZFileMock"],
+            dependencies: ["SourceryWorker", "ZFile", "Terminal", "ZFileMock", "TerminalMock"],
             path: "Sources/Generated/SourceryWorker"
         ),
         .testTarget(
@@ -179,7 +182,12 @@ public let package = Package(
                        "TerminalMock",
                        "SignPostMock",
                        "HighwayDispatchMock",
-                       "ArgumentsMock"]
+                       "ArgumentsMock",
+                       "Arguments",
+                       "TerminalMock",
+                       "Stub",
+                       "Errors",
+                       "HWSetup"]
         ),
         .target(
             name: "SwiftFormatWorker",
@@ -217,6 +225,7 @@ public let package = Package(
                     "GitHooks"
             ]
         ),
+        .testTarget(name: "HWSetupTests", dependencies: ["HWSetup", "Quick","Nimble"]),
         .target(
             name: "HighwayDispatch",
             dependencies: ["Errors", "SignPost"]
@@ -225,6 +234,10 @@ public let package = Package(
                 name: "HighwayDispatchMock",
                 dependencies: ["HighwayDispatch", "SignPost", "ZFileMock", "SourceryAutoProtocols"],
                 path: "Sources/Generated/HighwayDispatch"
+        ),
+        .target(
+            name: "Stub",
+            dependencies: []
         )
     ]
 )

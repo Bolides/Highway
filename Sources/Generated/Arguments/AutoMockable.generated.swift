@@ -1,6 +1,5 @@
 import Arguments
 import Foundation
-import os
 import SignPost
 import SourceryAutoProtocols
 import ZFile
@@ -26,6 +25,13 @@ open class SwiftPackageDependenciesProtocolMock: SwiftPackageDependenciesProtoco
     }
 
     public var underlyingName: String = "AutoMockable filled value"
+    public var path: String
+    {
+        get { return underlyingPath }
+        set(value) { underlyingPath = value }
+    }
+
+    public var underlyingPath: String = "AutoMockable filled value"
     public var url: URL
     {
         get { return underlyingUrl }
@@ -33,6 +39,21 @@ open class SwiftPackageDependenciesProtocolMock: SwiftPackageDependenciesProtoco
     }
 
     public var underlyingUrl: URL!
+    public var version: String
+    {
+        get { return underlyingVersion }
+        set(value) { underlyingVersion = value }
+    }
+
+    public var underlyingVersion: String = "AutoMockable filled value"
+    public var dependencies: [SwiftPackageDependencies] = []
+    public var description: String
+    {
+        get { return underlyingDescription }
+        set(value) { underlyingDescription = value }
+    }
+
+    public var underlyingDescription: String = "AutoMockable filled value"
 
     // MARK: - <srcRoot> - parameters
 
@@ -236,6 +257,13 @@ open class SwiftPackageDumpProtocolMock: SwiftPackageDumpProtocol
     }
 
     public var underlyingProducts: Set<SwiftProduct>!
+    public var targets: Set<SwiftTarget>
+    {
+        get { return underlyingTargets }
+        set(value) { underlyingTargets = value }
+    }
+
+    public var underlyingTargets: Set<SwiftTarget>!
 }
 
 // MARK: - SwiftProductProtocolMock
@@ -251,6 +279,28 @@ open class SwiftProductProtocolMock: SwiftProductProtocol
     }
 
     public var underlyingName: String = "AutoMockable filled value"
+}
+
+// MARK: - SwiftTargetProtocolMock
+
+open class SwiftTargetProtocolMock: SwiftTargetProtocol
+{
+    public init() {}
+
+    public var name: String
+    {
+        get { return underlyingName }
+        set(value) { underlyingName = value }
+    }
+
+    public var underlyingName: String = "AutoMockable filled value"
+    public var dependencies: Set<SwiftProduct>
+    {
+        get { return underlyingDependencies }
+        set(value) { underlyingDependencies = value }
+    }
+
+    public var underlyingDependencies: Set<SwiftProduct>!
 }
 
 // MARK: - OBJECTIVE-C

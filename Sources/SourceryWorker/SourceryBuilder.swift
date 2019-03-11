@@ -33,6 +33,7 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
     private let systemExecutableProvider: SystemExecutableProviderProtocol
 
     /// Will try to init Disk when no dis provided
+    // sourcery:includeInitInprotocol
     public init(
         terminalWorker: TerminalWorkerProtocol = TerminalWorker(),
         disk: SwiftPackageDependenciesProtocol? = nil,

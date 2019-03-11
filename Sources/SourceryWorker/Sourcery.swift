@@ -18,6 +18,7 @@ import ZFile
 public protocol SourceryProtocol: ExecutableProtocol
 {
     // sourcery:inline:Sourcery.AutoGenerateProtocol
+    static var commonImportAutoMockable: Set<TemplatePrepend.Import> { get }
     var uuid: String { get }
     var name: String { get }
     var templateFolder: FolderProtocol { get }
@@ -33,6 +34,13 @@ public protocol SourceryProtocol: ExecutableProtocol
 
 public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
 {
+    public static let commonImportAutoMockable: Set<TemplatePrepend.Import> = Set(
+        [
+            TemplatePrepend.Import(name: "SourceryAutoProtocols"),
+            TemplatePrepend.Import(name: "Foundation"),
+        ]
+    )
+
     // MARK: - Identify the Sourcery Model
 
     public let uuid: String = UUID().uuidString
@@ -60,15 +68,28 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
 
     public init(
         productName: String,
-        imports: Set<TemplatePrepend>
+        swiftPackageDependencies: SwiftPackageDependenciesProtocol,
+        swiftPackageDump: SwiftPackageDumpProtocol,
+        sourceryExecutable: FileProtocol
     ) throws
     {
-        let swiftPackageDependencies = try SwiftPackageDependencyService().swiftPackage
-        let sourceryBuilder = try SourceryBuilder()
         let sourcesFolder = try swiftPackageDependencies.srcRoot().subfolder(named: "Sources")
         let productFolder = try sourcesFolder.subfolder(named: productName)
         let templateFolder = try swiftPackageDependencies.templateFolder()
-        let outputFolder = try sourcesFolder.createSubfolderIfNeeded(withName: "Generated").createSubfolderIfNeeded(withName: productName)
+        let outputFolder = try sourcesFolder
+            .createSubfolderIfNeeded(withName: "Generated")
+            .createSubfolderIfNeeded(withName: productName)
+
+        let nameAutoMockable = "AutoMockable"
+        var prepend = TemplatePrepend(name: Set([]), template: nameAutoMockable)
+
+        if var imports = (swiftPackageDump.targets.first { $0.name == "\(productName)Mock" }?.dependencies.map { TemplatePrepend.Import(name: $0.name) })
+        {
+            imports.append(contentsOf: Sourcery.commonImportAutoMockable)
+            imports.append(TemplatePrepend.Import(name: productName))
+
+            prepend = TemplatePrepend(name: Set(imports), template: nameAutoMockable)
+        }
 
         try self.init(
             sourcesFolders: [productFolder],
@@ -76,12 +97,12 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
             outputFolder: outputFolder,
             sourceryAutoProtocolsFile: try swiftPackageDependencies.sourceryAutoProtocolFile(),
             sourceryYMLFile: try sourcesFolder.createFileIfNeeded(named: ".sourcery-\(productName).yml"),
-            imports: imports,
-            sourceryExecutableFile: try sourceryBuilder.attemptToBuildSourceryIfNeeded()
+            imports: Set([prepend]),
+            sourceryExecutableFile: sourceryExecutable
         )
     }
 
-    public init(
+    init(
         sourcesFolders: [FolderProtocol],
         individualSourceFiles: [File]? = nil,
         templateFolder: FolderProtocol,

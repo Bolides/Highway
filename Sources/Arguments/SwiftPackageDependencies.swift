@@ -13,7 +13,11 @@ public protocol SwiftPackageDependenciesProtocol: AutoMockable
 {
     // sourcery:inline:SwiftPackageDependencies.AutoGenerateProtocol
     var name: String { get }
+    var path: String { get }
     var url: URL { get }
+    var version: String { get }
+    var dependencies: [SwiftPackageDependencies] { get }
+    var description: String { get }
 
     func srcRoot() throws -> FolderProtocol
     func templateFolder() throws -> FolderProtocol
@@ -22,11 +26,12 @@ public protocol SwiftPackageDependenciesProtocol: AutoMockable
     // sourcery:end
 }
 
-public struct SwiftPackageDependencies: Decodable, SwiftPackageDependenciesProtocol, CustomStringConvertible
+public struct SwiftPackageDependencies: Decodable, SwiftPackageDependenciesProtocol, CustomStringConvertible, AutoGenerateProtocol
 {
     public let name: String
     public let path: String
     public let url: URL
+    public let version: String
 
     public let dependencies: [SwiftPackageDependencies]
 
