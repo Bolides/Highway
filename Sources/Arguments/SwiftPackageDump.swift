@@ -12,7 +12,7 @@ import ZFile
 
 public protocol SwiftPackageDumpProtocol: AutoMockable
 {
-    // sourcery:inline:SwiftPackage.AutoGenerateProtocol
+    // sourcery:inline:SwiftPackageDump.AutoGenerateProtocol
     var products: Set<SwiftProduct> { get }
     var targets: Set<SwiftTarget> { get }
     // sourcery:end
@@ -23,12 +23,17 @@ public struct SwiftPackageDump: Decodable, SwiftPackageDumpProtocol, CustomStrin
     public let products: Set<SwiftProduct>
     public let targets: Set<SwiftTarget>
 
+    // sourcery:skipProtocol
     public var description: String
     {
         return """
         \(SwiftPackageDump.self)
         
-        // TODO
+        Products
+        \(products.map { $0.description }.joined(separator: "\n"))
+        
+        Targets
+         \(targets.map { $0.description }.joined(separator: "\n"))
         
         """
     }

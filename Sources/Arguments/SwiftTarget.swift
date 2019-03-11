@@ -13,21 +13,45 @@ public protocol SwiftTargetProtocol: AutoMockable
 {
     // sourcery:inline:SwiftTarget.AutoGenerateProtocol
     var name: String { get }
-    var dependencies: Set<SwiftProduct> { get }
+    var dependencies: Set<SwiftTarget.Dependency> { get }
     // sourcery:end
 }
 
-public struct SwiftTarget: SwiftTargetProtocol, Decodable, AutoGenerateProtocol, Hashable
+public struct SwiftTarget: SwiftTargetProtocol, Decodable, AutoGenerateProtocol, Hashable, CustomStringConvertible
 {
     public let name: String
-    public let dependencies: Set<SwiftProduct>
+    public let dependencies: Set<SwiftTarget.Dependency>
+
+    public struct Dependency: Decodable, Hashable, CustomStringConvertible
+    {
+        public let name: String
+
+        public var description: String
+        {
+            return """
+            \(Dependency.self)
+            * name: \(name)
+            """
+        }
+    }
 
     public init(
         name: String,
-        dependencies: Set<SwiftProduct>
+        dependencies: Set<SwiftTarget.Dependency>
     )
     {
         self.name = name
         self.dependencies = dependencies
+    }
+
+    // sourcery:skipProtocol
+    public var description: String
+    {
+        return """
+        \(SwiftTarget.self)
+        * name: \(name)
+        * dependencies:
+        \(dependencies.map { "  * \($0).description" }.joined(separator: "\n"))
+        """
     }
 }

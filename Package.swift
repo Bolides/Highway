@@ -93,15 +93,31 @@ public let package = Package(
         ),
         .target(
             name: "GitHooks",
-            dependencies: ["SourceryAutoProtocols", "ZFile", "SignPost", "Terminal"]
+            dependencies: ["SourceryAutoProtocols",
+                           "ZFile",
+                           "SignPost",
+                           "Terminal",
+                           "Arguments",
+                           "Errors"]
         ),
         .testTarget(
             name: "GitHooksTests",
-            dependencies: ["GitHooks", "Quick", "Nimble"]
+            dependencies: ["GitHooks",
+                           "Quick",
+                           "Nimble",
+                           "ArgumentsMock",
+                           "ZFileMock",
+                           "Errors"]
         ),
         .target(
             name: "GitHooksMock",
-            dependencies: ["SourceryAutoProtocols", "ZFile", "ZFileMock", "SignPost", "GitHooks", "Terminal"],
+            dependencies: ["SourceryAutoProtocols",
+                           "ZFile",
+                           "ZFileMock",
+                           "SignPost",
+                           "GitHooks",
+                           "Terminal",
+                           "Arguments"],
             path: "Sources/Generated/GitHooks"
         ),
         .target(

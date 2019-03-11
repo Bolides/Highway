@@ -1,6 +1,7 @@
 
 import Arguments
 import Foundation
+import GitHooks
 import SignPost
 import SwiftFormatWorker
 import Terminal
@@ -15,9 +16,11 @@ let swiftFormatWorker: SwiftFormatWorkerProtocol
 signPost.message("🚀 HWSetup ... ")
 let terminal = TerminalWorker.shared
 
+let githooks: GitHooksWorker?
 do
 {
     // Swift Package
+
     let swiftPackageDependencyService = try SwiftPackageDependencyService()
     disk = swiftPackageDependencyService.swiftPackage
     try swiftPackageDependencyService.writeToStubFile()
@@ -25,6 +28,10 @@ do
     let swiftPackageDumpService = try SwiftPackageDumpService(swiftPackageDependencies: disk!)
     swiftPackageDump = swiftPackageDumpService.swiftPackageDump
     try swiftPackageDumpService.writeToStubFile()
+
+    // Githooks
+
+    githooks = GitHooksWorker(swiftPackageDependencies: disk!, swiftPackageDump: swiftPackageDump!)
 
     // Setup Workers
 
@@ -49,6 +56,8 @@ do
             exit(EXIT_FAILURE)
         }
     }
+
+    try githooks?.addPrePushToGitHooks()
 
     dispatchGroup.notify(queue: DispatchQueue.main)
     {

@@ -1,3 +1,4 @@
+import Arguments
 import Foundation
 import GitHooks
 import SignPost
@@ -19,13 +20,44 @@ open class GitHooksWorkerProtocolMock: GitHooksWorkerProtocol
 {
     public init() {}
 
-    public var terminal: TerminalWorkerProtocol
+    public static var prepushBashScript: String
     {
-        get { return underlyingTerminal }
-        set(value) { underlyingTerminal = value }
+        get { return underlyingPrepushBashScript }
+        set(value) { underlyingPrepushBashScript = value }
     }
 
-    public var underlyingTerminal: TerminalWorkerProtocol!
+    public static var underlyingPrepushBashScript: String = "AutoMockable filled value"
+
+    // MARK: - <addPrePushToGitHooks> - parameters
+
+    public var addPrePushToGitHooksThrowableError: Error?
+    public var addPrePushToGitHooksCallsCount = 0
+    public var addPrePushToGitHooksCalled: Bool
+    {
+        return addPrePushToGitHooksCallsCount > 0
+    }
+
+    // MARK: - <addPrePushToGitHooks> - closure mocks
+
+    public var addPrePushToGitHooksClosure: (() throws -> Void)?
+
+    // MARK: - <addPrePushToGitHooks> - method mocked
+
+    open func addPrePushToGitHooks() throws
+    {
+        // <addPrePushToGitHooks> - Throwable method implementation
+
+        if let error = addPrePushToGitHooksThrowableError
+        {
+            throw error
+        }
+
+        addPrePushToGitHooksCallsCount += 1
+
+        // <addPrePushToGitHooks> - Void return mock implementation
+
+        try addPrePushToGitHooksClosure?()
+    }
 }
 
 // MARK: - OBJECTIVE-C

@@ -25,6 +25,7 @@ import Foundation
  var dependencies: [SwiftPackageDependencies] { get }
  var description: String { get }
 
+ func gitHooks() throws  -> FolderProtocol
  func srcRoot() throws  -> FolderProtocol
  func templateFolder() throws  -> FolderProtocol
  func sourceryFolder() throws  -> FolderProtocol
@@ -33,12 +34,13 @@ import Foundation
  // Generated protocol inline for SwiftProduct -> See code in the file of that type
  // sourcery:inline:SwiftProduct.AutoGenerateProtocol
  var name: String { get }
+ var product_type: String { get }
 
  // sourcery:end
  // Generated protocol inline for SwiftTarget -> See code in the file of that type
  // sourcery:inline:SwiftTarget.AutoGenerateProtocol
  var name: String { get }
- var dependencies: Set<SwiftProduct> { get }
+ var dependencies: Set<SwiftTarget.Dependency> { get }
 
  // sourcery:end
  // Generated protocol inline for  -> See code in the file of that type

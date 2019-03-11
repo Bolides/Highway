@@ -55,6 +55,53 @@ open class SwiftPackageDependenciesProtocolMock: SwiftPackageDependenciesProtoco
 
     public var underlyingDescription: String = "AutoMockable filled value"
 
+    // MARK: - <gitHooks> - parameters
+
+    public var gitHooksThrowableError: Error?
+    public var gitHooksCallsCount = 0
+    public var gitHooksCalled: Bool
+    {
+        return gitHooksCallsCount > 0
+    }
+
+    public var gitHooksReturnValue: FolderProtocol?
+
+    // MARK: - <gitHooks> - closure mocks
+
+    public var gitHooksClosure: (() throws -> FolderProtocol)?
+
+    // MARK: - <gitHooks> - method mocked
+
+    open func gitHooks() throws -> FolderProtocol
+    {
+        // <gitHooks> - Throwable method implementation
+
+        if let error = gitHooksThrowableError
+        {
+            throw error
+        }
+
+        gitHooksCallsCount += 1
+
+        // <gitHooks> - Return Value mock implementation
+
+        guard let closureReturn = gitHooksClosure else
+        {
+            guard let returnValue = gitHooksReturnValue else
+            {
+                let message = "No returnValue implemented for gitHooksClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement FolderProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
+    }
+
     // MARK: - <srcRoot> - parameters
 
     public var srcRootThrowableError: Error?
@@ -279,6 +326,13 @@ open class SwiftProductProtocolMock: SwiftProductProtocol
     }
 
     public var underlyingName: String = "AutoMockable filled value"
+    public var product_type: String
+    {
+        get { return underlyingProduct_type }
+        set(value) { underlyingProduct_type = value }
+    }
+
+    public var underlyingProduct_type: String = "AutoMockable filled value"
 }
 
 // MARK: - SwiftTargetProtocolMock
@@ -294,13 +348,13 @@ open class SwiftTargetProtocolMock: SwiftTargetProtocol
     }
 
     public var underlyingName: String = "AutoMockable filled value"
-    public var dependencies: Set<SwiftProduct>
+    public var dependencies: Set<SwiftTarget.Dependency>
     {
         get { return underlyingDependencies }
         set(value) { underlyingDependencies = value }
     }
 
-    public var underlyingDependencies: Set<SwiftProduct>!
+    public var underlyingDependencies: Set<SwiftTarget.Dependency>!
 }
 
 // MARK: - OBJECTIVE-C

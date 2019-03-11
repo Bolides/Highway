@@ -18,8 +18,9 @@ import Foundation
 
  // Generated protocol inline for GitHooksWorker -> See code in the file of that type
  // sourcery:inline:GitHooksWorker.AutoGenerateProtocol
- var terminal: TerminalWorkerProtocol { get }
+ static var prepushBashScript: String { get }
 
+ func addPrePushToGitHooks() throws
  // sourcery:end
  // Generated protocol inline for  -> See code in the file of that type
 

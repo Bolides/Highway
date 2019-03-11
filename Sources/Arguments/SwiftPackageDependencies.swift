@@ -19,6 +19,7 @@ public protocol SwiftPackageDependenciesProtocol: AutoMockable
     var dependencies: [SwiftPackageDependencies] { get }
     var description: String { get }
 
+    func gitHooks() throws -> FolderProtocol
     func srcRoot() throws -> FolderProtocol
     func templateFolder() throws -> FolderProtocol
     func sourceryFolder() throws -> FolderProtocol
@@ -34,6 +35,11 @@ public struct SwiftPackageDependencies: Decodable, SwiftPackageDependenciesProto
     public let version: String
 
     public let dependencies: [SwiftPackageDependencies]
+
+    public func gitHooks() throws -> FolderProtocol
+    {
+        return try srcRoot().subfolder(named: ".git/hooks")
+    }
 
     public func srcRoot() throws -> FolderProtocol
     {
