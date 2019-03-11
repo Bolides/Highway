@@ -39,7 +39,7 @@ do
     swiftFormatWorker = try SwiftFormatWorker(folderToFormatRecursive: try disk!.srcRoot().subfolder(named: "Sources"))
 
     let sourceryProducts = swiftPackageDump!.products.map { $0.name }.filter { !$0.hasSuffix("Mock") }
-    signPost.message("🧙‍♂️ \(sourceryProducts.count) for \n\(sourceryProducts.enumerated().map { " \($0.offset + 1) \($0.element)" }.joined(separator: "\n"))\n ")
+    signPost.message("🧙‍♂️ Sourcercy started for \(sourceryProducts.count) products \n\(sourceryProducts.enumerated().map { " \($0.offset + 1) \($0.element)" }.joined(separator: "\n"))\n ")
 
     try automateSourceryWorker?.attempt
     { asyncResult in
@@ -58,7 +58,7 @@ do
     }
 
     try githooks?.addPrePushToGitHooks()
-
+    signPost.message("🧙🏻‍♂️ still running ... (this can take some time ☕️)")
     dispatchGroup.notify(queue: DispatchQueue.main)
     {
         signPost.message("🧹 swiftformat ... ")
@@ -81,7 +81,7 @@ do
         }
 
         dispatchGroup.wait()
-        signPost.message("🚀 HWSetup complete ...\n🧪 TESTING ... ")
+        signPost.message("🧪 swift test ... ")
         do
         {
             let task = try Task(commandName: "swift")

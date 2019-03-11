@@ -95,7 +95,7 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
 
                 for folder in self.sourcery.sourcesFolders
                 {
-                    self.signPost.message("🧙‍♂️ in folder \(folder.name)")
+                    self.signPost.verbose("🧙‍♂️\(folder.name)")
 
                     let fileSequence = folder.makeFileSequence(recursive: true, includeHidden: false)
 
@@ -111,7 +111,7 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
 
                 // 2. Run sourcery to generate the protocols
 
-                self.signPost.message("🧙‍♂️ Generating PROTOCOLS")
+                self.signPost.verbose("🧙‍♂️ Generating PROTOCOLS")
 
                 self.signPost.verbose("🧙‍♂️ \(try self.terminalWorker.terminal(task: .sourcery(try self.executor())).joined(separator: "\n"))")
 
@@ -130,7 +130,7 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
 
                 // 4. Run sourcery to generate the mocks
 
-                self.signPost.message("🧙‍♂️ Generating MOCKS")
+                self.signPost.verbose("🧙‍♂️ Generating MOCKS")
 
                 let sourceryWorkerOutput = try self.terminalWorker.terminal(task: .sourcery(try self.executor()))
 
@@ -147,7 +147,7 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
 
                 // 6. Add imports to output
 
-                self.signPost.message("🧙‍♂️ Add imports to output")
+                self.signPost.verbose("🧙‍♂️ Add imports to output")
 
                 try self.sourcery.outputFolder.makeFileSequence(recursive: true, includeHidden: false).forEach
                 { file in

@@ -30,7 +30,7 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
     
     cd <#srcroot#>
     # Build setup executable
-    if [ ! -f /tmp/foo.txt ]; then
+    if [ ! -f ./.build/x86_64-apple-macosx10.10/release/<#executable name#> ]; then
         echo "<#executable name#>, not found - building for source"
         swift build --product <#executable name#> -c release --static-swift-stdlib
     fi

@@ -39,7 +39,7 @@ public struct PathEnvironmentParser: PathEnvironmentParserProtocol
         {
             if pathFromCommandline != nil
             {
-                signPost.message("\(PathEnvironmentParser.self) \(#function) \n⚠️ using path from command line argument")
+                signPost.verbose("\(PathEnvironmentParser.self) \(#function) \n⚠️ using path from command line argument")
             }
 
             guard let path = pathFromCommandline == nil ? processInfoEnvironment["PATH"] : pathFromCommandline! else
@@ -49,7 +49,7 @@ public struct PathEnvironmentParser: PathEnvironmentParserProtocol
 
             let paths: [String] = path.components(separatedBy: ":")
 
-            signPost.message("\(PathEnvironmentParser.self) \(#function) found path urls \n\(paths.map { "* \($0)" }.joined(separator: "\n"))")
+            signPost.verbose("\(PathEnvironmentParser.self) \(#function) found path urls \n\(paths.map { "* \($0)" }.joined(separator: "\n"))")
 
             urls = paths.compactMap
             {
@@ -59,7 +59,7 @@ public struct PathEnvironmentParser: PathEnvironmentParserProtocol
                 }
                 catch
                 {
-                    signPost.message("⚠️  '\($0)'  ⚠️ - from $PATH is ignored because invalid")
+                    signPost.verbose("⚠️  '\($0)'  ⚠️ - from $PATH is ignored because invalid")
                     return nil
                 }
             }
