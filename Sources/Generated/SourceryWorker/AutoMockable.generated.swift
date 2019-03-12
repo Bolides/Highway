@@ -1,4 +1,5 @@
 import Foundation
+import HighwayDispatch
 import SourceryAutoProtocols
 import SourceryWorker
 import Terminal
@@ -179,6 +180,23 @@ open class SourceryWorkerProtocolMock: SourceryWorkerProtocol
     }
 
     public var underlyingSourcery: SourceryProtocol!
+
+    // MARK: - <init> - parameters
+
+    public var initSourceryTerminalWorkerSignPostQueueThrowableError: Error?
+    public var initSourceryTerminalWorkerSignPostQueueReceivedArguments: (sourcery: SourceryProtocol, terminalWorker: TerminalWorkerProtocol, signPost: SignPostProtocol, queue: HighwayDispatchProtocol)?
+
+    // MARK: - <init> - closure mocks
+
+    public var initSourceryTerminalWorkerSignPostQueueClosure: ((SourceryProtocol, TerminalWorkerProtocol, SignPostProtocol, HighwayDispatchProtocol) throws -> Void)?
+
+    // MARK: - <init> - initializer mocked
+
+    public required init(sourcery: SourceryProtocol, terminalWorker: TerminalWorkerProtocol, signPost: SignPostProtocol, queue: HighwayDispatchProtocol) throws
+    {
+        initSourceryTerminalWorkerSignPostQueueReceivedArguments = (sourcery: sourcery, terminalWorker: terminalWorker, signPost: signPost, queue: queue)
+        try? initSourceryTerminalWorkerSignPostQueueClosure?(sourcery, terminalWorker, signPost, queue)
+    }
 
     // MARK: - <executor> - parameters
 

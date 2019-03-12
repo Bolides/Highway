@@ -21,7 +21,7 @@ import ZFile
 /// 3. Revert Replace occurances
 /// 4. Run sourcery to generate the mocks
 /// 6. Add imports to output
-public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
+public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
 {
     public typealias SyncOutput = () throws -> [String]
 
@@ -42,6 +42,7 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
     private let signPost: SignPostProtocol
     private let terminalWorker: TerminalWorkerProtocol
 
+    // sourcery:includeInitInProtocol
     public init(
         sourcery: SourceryProtocol,
         terminalWorker: TerminalWorkerProtocol = TerminalWorker(),
@@ -63,13 +64,7 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
     public func attempt(_ asyncSourceryWorkerOutput: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
     {
         queue.async
-        { [weak self] in
-            guard let `self` = self else
-            {
-                asyncSourceryWorkerOutput { throw "SourceryWorker released before it could finish" }
-                return
-            }
-
+        {
             do
             {
                 self.signPost.verbose("Executing sourcery from executable \(try self.executor().executableFile())")

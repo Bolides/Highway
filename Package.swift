@@ -185,7 +185,7 @@ public let package = Package(
         ),
         .target(
             name: "SourceryWorkerMock",
-            dependencies: ["SourceryWorker", "ZFile", "Terminal", "ZFileMock", "TerminalMock"],
+            dependencies: ["SourceryWorker", "ZFile", "Terminal", "ZFileMock", "TerminalMock", "HighwayDispatch"],
             path: "Sources/Generated/SourceryWorker"
         ),
         .testTarget(
@@ -203,7 +203,8 @@ public let package = Package(
                        "TerminalMock",
                        "Stub",
                        "Errors",
-                       "HWSetup"]
+                       "HWSetup"
+                    ]
         ),
         .target(
             name: "SwiftFormatWorker",

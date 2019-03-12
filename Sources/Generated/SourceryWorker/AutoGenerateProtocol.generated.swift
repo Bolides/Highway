@@ -42,6 +42,12 @@ import Foundation
  // sourcery:inline:SourceryWorker.AutoGenerateProtocol
  var sourcery: SourceryProtocol { get }
 
+ init(
+   sourcery: SourceryProtocol,
+   terminalWorker: TerminalWorkerProtocol,
+   signPost: SignPostProtocol,
+   queue: HighwayDispatchProtocol
+ )  throws
  func executor() throws  -> ArgumentExecutableProtocol
  func attempt(_ asyncSourceryWorkerOutput: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
  // sourcery:end

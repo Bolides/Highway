@@ -91,7 +91,7 @@ class SourcerySpec: QuickSpec {
                         beforeEach { setup(for: "SourceryWorker") }
                         
                         it("has imports for automockable") {
-                            expect(sut?.imports.first {$0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",") ) == "Foundation,SourceryAutoProtocols,SourceryWorker,Terminal,TerminalMock,ZFile,ZFileMock"
+                            expect(sut?.imports.first {$0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",") ) == "Foundation,HighwayDispatch,SourceryAutoProtocols,SourceryWorker,Terminal,TerminalMock,ZFile,ZFileMock"
                         }
                     }
                     
