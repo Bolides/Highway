@@ -164,57 +164,6 @@ open class SourceryProtocolMock: ExecutableProtocolMock, SourceryProtocol
     }
 
     public var underlyingImports: Set<TemplatePrepend>!
-    public var name: String
-    {
-        get { return underlyingName }
-        set(value) { underlyingName = value }
-    }
-
-    public var underlyingName: String = "AutoMockable filled value"
-    public var templateFolder: FolderProtocol
-    {
-        get { return underlyingTemplateFolder }
-        set(value) { underlyingTemplateFolder = value }
-    }
-
-    public var underlyingTemplateFolder: FolderProtocol!
-    public var outputFolder: FolderProtocol
-    {
-        get { return underlyingOutputFolder }
-        set(value) { underlyingOutputFolder = value }
-    }
-
-    public var underlyingOutputFolder: FolderProtocol!
-    public var sourcesFolders: [FolderProtocol] = []
-    public var individualSourceFiles: [File]?
-    public var sourceryAutoProtocolsFile: FileProtocol
-    {
-        get { return underlyingSourceryAutoProtocolsFile }
-        set(value) { underlyingSourceryAutoProtocolsFile = value }
-    }
-
-    public var underlyingSourceryAutoProtocolsFile: FileProtocol!
-    public var sourceryYMLFile: FileProtocol
-    {
-        get { return underlyingSourceryYMLFile }
-        set(value) { underlyingSourceryYMLFile = value }
-    }
-
-    public var underlyingSourceryYMLFile: FileProtocol!
-    public var sourceryExecutableFile: FileProtocol
-    {
-        get { return underlyingSourceryExecutableFile }
-        set(value) { underlyingSourceryExecutableFile = value }
-    }
-
-    public var underlyingSourceryExecutableFile: FileProtocol!
-    public var imports: Set<TemplatePrepend>
-    {
-        get { return underlyingImports }
-        set(value) { underlyingImports = value }
-    }
-
-    public var underlyingImports: Set<TemplatePrepend>!
 }
 
 // MARK: - SourceryWorkerProtocolMock
