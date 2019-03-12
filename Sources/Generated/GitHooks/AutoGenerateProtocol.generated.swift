@@ -20,6 +20,13 @@ import Foundation
  // sourcery:inline:GitHooksWorker.AutoGenerateProtocol
  static var prepushBashScript: String { get }
 
+ init(
+   swiftPackageDependencies: SwiftPackageDependenciesProtocol,
+   swiftPackageDump: SwiftPackageDumpProtocol,
+   hwSetupExecutableProductName: String?,
+   gitHooksFolder: FolderProtocol?,
+   signPost: SignPostProtocol
+ )
  func addPrePushToGitHooks() throws
  // sourcery:end
  // Generated protocol inline for  -> See code in the file of that type

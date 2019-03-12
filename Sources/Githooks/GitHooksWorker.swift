@@ -18,6 +18,13 @@ public protocol GitHooksWorkerProtocol: AutoMockable
     // sourcery:inline:GitHooksWorker.AutoGenerateProtocol
     static var prepushBashScript: String { get }
 
+    init(
+        swiftPackageDependencies: SwiftPackageDependenciesProtocol,
+        swiftPackageDump: SwiftPackageDumpProtocol,
+        hwSetupExecutableProductName: String?,
+        gitHooksFolder: FolderProtocol?,
+        signPost: SignPostProtocol
+    )
     func addPrePushToGitHooks() throws
     // sourcery:end
 }
@@ -44,14 +51,23 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
     private let signPost: SignPostProtocol
     private let swiftPackageDump: SwiftPackageDumpProtocol
     private let hwSetupExecutableProductName: String?
+    private let gitHooksFolder: FolderProtocol?
 
     /// Will take the first executable it can find in the swifPackage if you do not provice a HWSetup executable name
-    public init(swiftPackageDependencies: SwiftPackageDependenciesProtocol, swiftPackageDump: SwiftPackageDumpProtocol, hwSetupExecutableProductName: String? = nil, signPost: SignPostProtocol = SignPost.shared)
+    // sourcery:includeInitInProtocol
+    public init(
+        swiftPackageDependencies: SwiftPackageDependenciesProtocol,
+        swiftPackageDump: SwiftPackageDumpProtocol,
+        hwSetupExecutableProductName: String? = nil,
+        gitHooksFolder: FolderProtocol? = nil,
+        signPost: SignPostProtocol = SignPost.shared
+    )
     {
         self.swiftPackageDependencies = swiftPackageDependencies
         self.signPost = signPost
         self.swiftPackageDump = swiftPackageDump
         self.hwSetupExecutableProductName = hwSetupExecutableProductName
+        self.gitHooksFolder = gitHooksFolder
     }
 
     public func addPrePushToGitHooks() throws
@@ -79,14 +95,16 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
                 .replacingOccurrences(of: "<#srcroot#>", with: try swiftPackageDependencies.srcRoot().path)
 
             var prePushFile: FileProtocol!
+            let gitHooksFolder = self.gitHooksFolder == nil ? try swiftPackageDependencies.gitHooks() : self.gitHooksFolder!
+
             do
             {
-                prePushFile = try swiftPackageDependencies.gitHooks().file(named: "pre-push.sample")
+                prePushFile = try gitHooksFolder.file(named: "pre-push.sample")
                 try prePushFile.rename(to: "pre-push", keepExtension: false)
             }
             catch
             {
-                prePushFile = try swiftPackageDependencies.gitHooks().file(named: "pre-push")
+                prePushFile = try gitHooksFolder.file(named: "pre-push")
             }
 
             try prePushFile.write(string: script)
