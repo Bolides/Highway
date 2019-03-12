@@ -15,6 +15,10 @@ public protocol SwiftPackageDumpServiceProtocol: AutoMockable
     // sourcery:inline:SwiftPackageDumpService.AutoGenerateProtocol
     var swiftPackageDump: SwiftPackageDumpProtocol { get }
 
+    init(
+        terminal: TerminalWorkerProtocol,
+        swiftPackageDependencies: SwiftPackageDependenciesProtocol
+    ) throws
     func writeToStubFile() throws
     // sourcery:end
 }
@@ -26,7 +30,7 @@ public struct SwiftPackageDumpService: SwiftPackageDumpServiceProtocol, AutoGene
     private let swiftPackageDependencies: SwiftPackageDependenciesProtocol
     private let data: Data
 
-    // sourcery:includeInitInprotocol
+    // sourcery:includeInitInProtocol
     public init(terminal: TerminalWorkerProtocol = TerminalWorker.shared, swiftPackageDependencies: SwiftPackageDependenciesProtocol) throws
     {
         self.swiftPackageDependencies = swiftPackageDependencies

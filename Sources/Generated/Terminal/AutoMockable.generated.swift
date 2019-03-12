@@ -253,6 +253,23 @@ open class SwiftPackageDumpServiceProtocolMock: SwiftPackageDumpServiceProtocol
 
     public var underlyingSwiftPackageDump: SwiftPackageDumpProtocol!
 
+    // MARK: - <init> - parameters
+
+    public var initTerminalSwiftPackageDependenciesThrowableError: Error?
+    public var initTerminalSwiftPackageDependenciesReceivedArguments: (terminal: TerminalWorkerProtocol, swiftPackageDependencies: SwiftPackageDependenciesProtocol)?
+
+    // MARK: - <init> - closure mocks
+
+    public var initTerminalSwiftPackageDependenciesClosure: ((TerminalWorkerProtocol, SwiftPackageDependenciesProtocol) throws -> Void)?
+
+    // MARK: - <init> - initializer mocked
+
+    public required init(terminal: TerminalWorkerProtocol, swiftPackageDependencies: SwiftPackageDependenciesProtocol) throws
+    {
+        initTerminalSwiftPackageDependenciesReceivedArguments = (terminal: terminal, swiftPackageDependencies: swiftPackageDependencies)
+        try? initTerminalSwiftPackageDependenciesClosure?(terminal, swiftPackageDependencies)
+    }
+
     // MARK: - <writeToStubFile> - parameters
 
     public var writeToStubFileThrowableError: Error?

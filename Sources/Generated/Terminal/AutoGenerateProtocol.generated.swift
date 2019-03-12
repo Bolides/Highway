@@ -29,6 +29,10 @@ import Foundation
  // sourcery:inline:SwiftPackageDumpService.AutoGenerateProtocol
  var swiftPackageDump: SwiftPackageDumpProtocol { get }
 
+ init(
+   terminal: TerminalWorkerProtocol,
+   swiftPackageDependencies: SwiftPackageDependenciesProtocol
+ )  throws
  func writeToStubFile() throws
  // sourcery:end
  // Generated protocol inline for SystemExecutableProvider -> See code in the file of that type
