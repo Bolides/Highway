@@ -9,6 +9,7 @@ import Errors
 import Foundation
 import SourceryAutoProtocols
 import ZFile
+
 public protocol SwiftPackageDependenciesProtocol: AutoMockable
 {
     // sourcery:inline:SwiftPackageDependencies.AutoGenerateProtocol

@@ -188,7 +188,7 @@ public let package = Package(
         ),
         .target(
             name: "SourceryWorkerMock",
-            dependencies: ["SourceryWorker", "ZFile", "Terminal", "ZFileMock", "TerminalMock", "HighwayDispatch"],
+            dependencies: ["SourceryWorker", "ZFile", "Terminal", "ZFileMock", "TerminalMock", "HighwayDispatch", "Arguments"],
             path: "Sources/Generated/SourceryWorker"
         ),
         .testTarget(

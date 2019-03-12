@@ -1,3 +1,4 @@
+import Arguments
 import Foundation
 import HighwayDispatch
 import SourceryAutoProtocols
@@ -49,6 +50,23 @@ open class SourceryBuilderProtocolMock: SourceryBuilderProtocol
     }
 
     public static var underlyingExecutalbeName: String = "AutoMockable filled value"
+
+    // MARK: - <init> - parameters
+
+    public var initTerminalWorkerDiskSignPostSystemExecutableProviderThrowableError: Error?
+    public var initTerminalWorkerDiskSignPostSystemExecutableProviderReceivedArguments: (terminalWorker: TerminalWorkerProtocol, disk: SwiftPackageDependenciesProtocol?, signPost: SignPostProtocol, systemExecutableProvider: SystemExecutableProviderProtocol)?
+
+    // MARK: - <init> - closure mocks
+
+    public var initTerminalWorkerDiskSignPostSystemExecutableProviderClosure: ((TerminalWorkerProtocol, SwiftPackageDependenciesProtocol?, SignPostProtocol, SystemExecutableProviderProtocol) throws -> Void)?
+
+    // MARK: - <init> - initializer mocked
+
+    public required init(terminalWorker: TerminalWorkerProtocol, disk: SwiftPackageDependenciesProtocol?, signPost: SignPostProtocol, systemExecutableProvider: SystemExecutableProviderProtocol) throws
+    {
+        initTerminalWorkerDiskSignPostSystemExecutableProviderReceivedArguments = (terminalWorker: terminalWorker, disk: disk, signPost: signPost, systemExecutableProvider: systemExecutableProvider)
+        try? initTerminalWorkerDiskSignPostSystemExecutableProviderClosure?(terminalWorker, disk, signPost, systemExecutableProvider)
+    }
 
     // MARK: - <attemptToBuildSourceryIfNeeded> - parameters
 

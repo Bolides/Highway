@@ -18,6 +18,12 @@ public protocol SourceryBuilderProtocol: AutoMockable
     // sourcery:inline:SourceryBuilder.AutoGenerateProtocol
     static var executalbeName: String { get }
 
+    init(
+        terminalWorker: TerminalWorkerProtocol,
+        disk: SwiftPackageDependenciesProtocol?,
+        signPost: SignPostProtocol,
+        systemExecutableProvider: SystemExecutableProviderProtocol
+    ) throws
     func attemptToBuildSourceryIfNeeded() throws -> FileProtocol
     // sourcery:end
 }
@@ -33,7 +39,7 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
     private let systemExecutableProvider: SystemExecutableProviderProtocol
 
     /// Will try to init Disk when no dis provided
-    // sourcery:includeInitInprotocol
+    // sourcery:includeInitInProtocol
     public init(
         terminalWorker: TerminalWorkerProtocol = TerminalWorker(),
         disk: SwiftPackageDependenciesProtocol? = nil,
