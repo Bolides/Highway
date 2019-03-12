@@ -13,23 +13,6 @@ import SourceryAutoProtocols
 import Terminal
 import ZFile
 
-public protocol SourceryWorkerProtocol
-{
-    typealias SyncOutput = () throws -> [String]
-
-    // sourcery:inline:SourceryWorker.AutoGenerateProtocol
-    static var queue: DispatchQueue { get }
-    static var mockableInline: String { get }
-    static var mockableEnd: String { get }
-    static var protocolGeneratableInline: String { get }
-    static var protocolGeneratalbeEnd: String { get }
-    var sourcery: SourceryProtocol { get }
-
-    func executor() throws -> ArgumentExecutableProtocol
-    func attempt(_ asyncSourceryWorkerOutput: @escaping (@escaping SourceryWorkerProtocol.SyncOutput) -> Void)
-    // sourcery:end
-}
-
 /// To generate mocks correctly we have to do a text replacement and run sourcery twice.
 /// This worker will perform the following tasks
 /// 1. Find all files in sourceFolder
@@ -40,11 +23,15 @@ public protocol SourceryWorkerProtocol
 /// 6. Add imports to output
 public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
 {
+    public typealias SyncOutput = () throws -> [String]
+
+    // sourcery:begin:skipProtocol
     public static let queue: DispatchQueue = DispatchQueue(label: "be.dooz.highway.sourceryWorker")
     public static let mockableInline = "// highway:inline:"
     public static let mockableEnd = "// highway:end"
     public static let protocolGeneratableInline = "// sourcery:inline:"
     public static let protocolGeneratalbeEnd = "// sourcery:end"
+    // sourcery:end
 
     public let sourcery: SourceryProtocol
 
@@ -73,7 +60,7 @@ public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
         return SourceryExecutor(sourcery)
     }
 
-    public func attempt(_ asyncSourceryWorkerOutput: @escaping (@escaping SourceryWorkerProtocol.SyncOutput) -> Void)
+    public func attempt(_ asyncSourceryWorkerOutput: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
     {
         queue.async
         { [weak self] in

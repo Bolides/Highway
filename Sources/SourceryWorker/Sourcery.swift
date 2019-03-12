@@ -18,7 +18,6 @@ import ZFile
 public protocol SourceryProtocol: ExecutableProtocol
 {
     // sourcery:inline:Sourcery.AutoGenerateProtocol
-    static var commonImportAutoMockable: Set<TemplatePrepend.Import> { get }
     var uuid: String { get }
     var name: String { get }
     var templateFolder: FolderProtocol { get }
@@ -29,12 +28,14 @@ public protocol SourceryProtocol: ExecutableProtocol
     var sourceryYMLFile: FileProtocol { get }
     var sourceryExecutableFile: FileProtocol { get }
     var imports: Set<TemplatePrepend> { get }
+
     // sourcery:end
 }
 
 public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
 {
-    public static let commonImportAutoMockable: Set<TemplatePrepend.Import> = Set(
+    // sourcery:skipProtocol
+    static let commonImportAutoMockable: Set<TemplatePrepend.Import> = Set(
         [
             TemplatePrepend.Import(name: "SourceryAutoProtocols"),
             TemplatePrepend.Import(name: "Foundation"),

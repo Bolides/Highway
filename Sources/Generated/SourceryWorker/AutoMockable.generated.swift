@@ -106,13 +106,6 @@ open class SourceryExecutableFileProtocolMock: FileProtocolMock, SourceryExecuta
 
 open class SourceryProtocolMock: ExecutableProtocolMock, SourceryProtocol
 {
-    public static var commonImportAutoMockable: Set<TemplatePrepend.Import>
-    {
-        get { return underlyingCommonImportAutoMockable }
-        set(value) { underlyingCommonImportAutoMockable = value }
-    }
-
-    public static var underlyingCommonImportAutoMockable: Set<TemplatePrepend.Import>!
     public var uuid: String
     {
         get { return underlyingUuid }
@@ -171,6 +164,145 @@ open class SourceryProtocolMock: ExecutableProtocolMock, SourceryProtocol
     }
 
     public var underlyingImports: Set<TemplatePrepend>!
+    public var name: String
+    {
+        get { return underlyingName }
+        set(value) { underlyingName = value }
+    }
+
+    public var underlyingName: String = "AutoMockable filled value"
+    public var templateFolder: FolderProtocol
+    {
+        get { return underlyingTemplateFolder }
+        set(value) { underlyingTemplateFolder = value }
+    }
+
+    public var underlyingTemplateFolder: FolderProtocol!
+    public var outputFolder: FolderProtocol
+    {
+        get { return underlyingOutputFolder }
+        set(value) { underlyingOutputFolder = value }
+    }
+
+    public var underlyingOutputFolder: FolderProtocol!
+    public var sourcesFolders: [FolderProtocol] = []
+    public var individualSourceFiles: [File]?
+    public var sourceryAutoProtocolsFile: FileProtocol
+    {
+        get { return underlyingSourceryAutoProtocolsFile }
+        set(value) { underlyingSourceryAutoProtocolsFile = value }
+    }
+
+    public var underlyingSourceryAutoProtocolsFile: FileProtocol!
+    public var sourceryYMLFile: FileProtocol
+    {
+        get { return underlyingSourceryYMLFile }
+        set(value) { underlyingSourceryYMLFile = value }
+    }
+
+    public var underlyingSourceryYMLFile: FileProtocol!
+    public var sourceryExecutableFile: FileProtocol
+    {
+        get { return underlyingSourceryExecutableFile }
+        set(value) { underlyingSourceryExecutableFile = value }
+    }
+
+    public var underlyingSourceryExecutableFile: FileProtocol!
+    public var imports: Set<TemplatePrepend>
+    {
+        get { return underlyingImports }
+        set(value) { underlyingImports = value }
+    }
+
+    public var underlyingImports: Set<TemplatePrepend>!
+}
+
+// MARK: - SourceryWorkerProtocolMock
+
+open class SourceryWorkerProtocolMock: SourceryWorkerProtocol
+{
+    public init() {}
+
+    public var sourcery: SourceryProtocol
+    {
+        get { return underlyingSourcery }
+        set(value) { underlyingSourcery = value }
+    }
+
+    public var underlyingSourcery: SourceryProtocol!
+
+    // MARK: - <executor> - parameters
+
+    public var executorThrowableError: Error?
+    public var executorCallsCount = 0
+    public var executorCalled: Bool
+    {
+        return executorCallsCount > 0
+    }
+
+    public var executorReturnValue: ArgumentExecutableProtocol?
+
+    // MARK: - <executor> - closure mocks
+
+    public var executorClosure: (() throws -> ArgumentExecutableProtocol)?
+
+    // MARK: - <executor> - method mocked
+
+    open func executor() throws -> ArgumentExecutableProtocol
+    {
+        // <executor> - Throwable method implementation
+
+        if let error = executorThrowableError
+        {
+            throw error
+        }
+
+        executorCallsCount += 1
+
+        // <executor> - Return Value mock implementation
+
+        guard let closureReturn = executorClosure else
+        {
+            guard let returnValue = executorReturnValue else
+            {
+                let message = "No returnValue implemented for executorClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement ArgumentExecutableProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
+    }
+
+    // MARK: - <attempt> - parameters
+
+    public var attemptCallsCount = 0
+    public var attemptCalled: Bool
+    {
+        return attemptCallsCount > 0
+    }
+
+    public var attemptReceivedAsyncSourceryWorkerOutput: ((@escaping SourceryWorker.SyncOutput) -> Void)?
+
+    // MARK: - <attempt> - closure mocks
+
+    public var attemptClosure: ((@escaping (@escaping SourceryWorker.SyncOutput) -> Void) -> Void)?
+
+    // MARK: - <attempt> - method mocked
+
+    open func attempt(_ asyncSourceryWorkerOutput: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
+    {
+        attemptCallsCount += 1
+        attemptReceivedAsyncSourceryWorkerOutput = asyncSourceryWorkerOutput
+
+        // <attempt> - Void return mock implementation
+
+        attemptClosure?(asyncSourceryWorkerOutput)
+    }
 }
 
 // MARK: - TemplatePrependProtocolMock

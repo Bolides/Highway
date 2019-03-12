@@ -18,7 +18,6 @@ import Foundation
 
  // Generated protocol inline for Sourcery -> See code in the file of that type
  // sourcery:inline:Sourcery.AutoGenerateProtocol
- static var commonImportAutoMockable: Set<TemplatePrepend.Import> { get }
  var uuid: String { get }
  var name: String { get }
  var templateFolder: FolderProtocol { get }
@@ -40,7 +39,12 @@ import Foundation
  // Generated protocol inline for SourceryExecutableFile -> See code in the file of that type
 
  // Generated protocol inline for SourceryWorker -> See code in the file of that type
+ // sourcery:inline:SourceryWorker.AutoGenerateProtocol
+ var sourcery: SourceryProtocol { get }
 
+ func executor() throws  -> ArgumentExecutableProtocol
+ func attempt(_ asyncSourceryWorkerOutput: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
+ // sourcery:end
  // Generated protocol inline for TemplatePrepend -> See code in the file of that type
  // sourcery:inline:TemplatePrepend.AutoGenerateProtocol
  var names: Set<TemplatePrepend.Import> { get }
