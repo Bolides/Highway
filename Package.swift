@@ -23,6 +23,9 @@ public let package = Package(
             name: "GitHooks",
             targets: ["GitHooks"]),
         .library(
+            name: "GitHooksMock",
+            targets: ["GitHooksMock"]),
+        .library(
             name: "Arguments",
             targets: ["Arguments"]),
         .library(
