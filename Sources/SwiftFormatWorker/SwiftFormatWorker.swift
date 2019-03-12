@@ -8,6 +8,7 @@
 import Arguments
 import Errors
 import Foundation
+import HighwayDispatch
 import SignPost
 import SourceryAutoProtocols
 import SwiftFormat
@@ -16,20 +17,25 @@ import ZFile
 public protocol SwiftFormatWorkerProtocol: AutoMockable
 {
     // sourcery:inline:SwiftFormatWorker.AutoGenerateProtocol
-    static var queue: DispatchQueue { get }
-    static var rulesPath: String { get }
-    static var defaultSwiftFormat: String { get }
-    var queue: DispatchQueue { get }
+    var queue: HighwayDispatchProtocol { get }
 
+    init(
+        folderToFormatRecursive: FolderProtocol,
+        queue: HighwayDispatchProtocol,
+        signPost: SignPostProtocol
+    ) throws
     func attempt(_ asyncSwiftFormatAttemptOutput: @escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void)
     // sourcery:end
 }
 
-public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
+public struct SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
 {
     public typealias SyncOutput = () throws -> Void
-    public static let queue: DispatchQueue = DispatchQueue(label: "be.dooz.swiftFormat")
 
+    // MARK: - Static
+
+    // sourcery:begin:skipProtocol
+    public static let queue: DispatchQueue = DispatchQueue(label: "be.dooz.swiftFormat")
     public static let rulesPath = ".swiftformat.md"
     public static let defaultSwiftFormat = """
     #  Rule Options
@@ -47,8 +53,11 @@ public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
 
     --exclude Sources/Generated
     """
+    // sourcery:end
 
-    public let queue: DispatchQueue
+    // MARK: - Public Properties
+
+    public let queue: HighwayDispatchProtocol
 
     // MARK: - Private
 
@@ -61,9 +70,9 @@ public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
     public init(
         folderToFormatRecursive: FolderProtocol,
         configFile: FileProtocol,
-        queue: DispatchQueue = SwiftFormatWorker.queue,
+        queue: HighwayDispatchProtocol = SwiftFormatWorker.queue,
         signPost: SignPostProtocol = SignPost.shared
-    ) throws
+    )
     {
         self.queue = queue
         self.signPost = signPost
@@ -71,10 +80,10 @@ public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
         self.folderToFormatRecursive = folderToFormatRecursive
     }
 
-    public convenience init(
+    // sourcery:includeInitInProtocol
+    public init(
         folderToFormatRecursive: FolderProtocol,
-        highwayCommandLineArguments: HighwayCommandLineOption.Values = HighwayCommandLineOption.Values(),
-        queue: DispatchQueue = SwiftFormatWorker.queue,
+        queue: HighwayDispatchProtocol = SwiftFormatWorker.queue,
         signPost: SignPostProtocol = SignPost.shared
     ) throws
     {
@@ -90,7 +99,7 @@ public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
             {
                 signPost.message("\(SwiftFormatWorker.self) \(#function) \(#line) will create a .swiformat.md file for you ")
 
-                configFile = try folderToFormatRecursive.createFile(named: SwiftFormatWorker.rulesPath)
+                configFile = try folderToFormatRecursive.createFileIfNeeded(named: SwiftFormatWorker.rulesPath)
                 try configFile.write(string: SwiftFormatWorker.defaultSwiftFormat)
 
                 signPost.message("\(SwiftFormatWorker.self) \(#function) \(#line) created \(configFile!)")
@@ -100,7 +109,7 @@ public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
                 throw error
             }
 
-            try self.init(folderToFormatRecursive: folderToFormatRecursive, configFile: configFile, queue: queue, signPost: signPost)
+            self.init(folderToFormatRecursive: folderToFormatRecursive, configFile: configFile, queue: queue, signPost: signPost)
         }
         catch
         {
@@ -108,16 +117,12 @@ public class SwiftFormatWorker: SwiftFormatWorkerProtocol, AutoGenerateProtocol
         }
     }
 
+    // MARK: - Attempt work
+
     public func attempt(_ asyncSwiftFormatAttemptOutput: @escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void)
     {
         queue.async
-        { [weak self] in
-            guard let `self` = self else
-            {
-                asyncSwiftFormatAttemptOutput { throw "\(SwiftFormatWorker.self) was released before \(#function) could finish" }
-                return
-            }
-
+        {
             let formatSettings = try? self.configFile.readAsString()
             self.signPost.verbose("👨🏻‍🏫  SwiftFormat \(self.folderToFormatRecursive.name) \n with settings \n \(String(describing: formatSettings))\n ...\n")
 

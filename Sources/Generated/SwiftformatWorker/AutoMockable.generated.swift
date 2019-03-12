@@ -1,6 +1,8 @@
 import Foundation
+import HighwayDispatch
 import SourceryAutoProtocols
 import SwiftFormatWorker
+import ZFile
 import ZFileMock
 
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
@@ -16,34 +18,30 @@ open class SwiftFormatWorkerProtocolMock: SwiftFormatWorkerProtocol
 {
     public init() {}
 
-    public static var queue: DispatchQueue
+    public var queue: HighwayDispatchProtocol
     {
         get { return underlyingQueue }
         set(value) { underlyingQueue = value }
     }
 
-    public static var underlyingQueue: DispatchQueue!
-    public static var rulesPath: String
-    {
-        get { return underlyingRulesPath }
-        set(value) { underlyingRulesPath = value }
-    }
+    public var underlyingQueue: HighwayDispatchProtocol!
 
-    public static var underlyingRulesPath: String = "AutoMockable filled value"
-    public static var defaultSwiftFormat: String
-    {
-        get { return underlyingDefaultSwiftFormat }
-        set(value) { underlyingDefaultSwiftFormat = value }
-    }
+    // MARK: - <init> - parameters
 
-    public static var underlyingDefaultSwiftFormat: String = "AutoMockable filled value"
-    public var queue: DispatchQueue
-    {
-        get { return underlyingQueue }
-        set(value) { underlyingQueue = value }
-    }
+    public var initFolderToFormatRecursiveQueueSignPostThrowableError: Error?
+    public var initFolderToFormatRecursiveQueueSignPostReceivedArguments: (folderToFormatRecursive: FolderProtocol, queue: HighwayDispatchProtocol, signPost: SignPostProtocol)?
 
-    public var underlyingQueue: DispatchQueue!
+    // MARK: - <init> - closure mocks
+
+    public var initFolderToFormatRecursiveQueueSignPostClosure: ((FolderProtocol, HighwayDispatchProtocol, SignPostProtocol) throws -> Void)?
+
+    // MARK: - <init> - initializer mocked
+
+    public required init(folderToFormatRecursive: FolderProtocol, queue: HighwayDispatchProtocol, signPost: SignPostProtocol) throws
+    {
+        initFolderToFormatRecursiveQueueSignPostReceivedArguments = (folderToFormatRecursive: folderToFormatRecursive, queue: queue, signPost: signPost)
+        try? initFolderToFormatRecursiveQueueSignPostClosure?(folderToFormatRecursive, queue, signPost)
+    }
 
     // MARK: - <attempt> - parameters
 

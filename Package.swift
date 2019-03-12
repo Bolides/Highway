@@ -207,16 +207,22 @@ public let package = Package(
         ),
         .target(
             name: "SwiftFormatWorker",
-            dependencies: ["Errors", "Arguments", "FoundationGenericHelper", "ZFile", "SwiftFormat"]
+            dependencies: ["Errors", "Arguments", "FoundationGenericHelper", "ZFile", "SwiftFormat", "HighwayDispatch"]
         ),
         .target(
             name: "SwiftFormatWorkerMock",
-            dependencies: ["SwiftFormatWorker", "ZFileMock", "SwiftFormatWorker"],
+            dependencies: ["SwiftFormatWorker", "ZFileMock", "ZFile", "SwiftFormatWorker", "HighwayDispatch"],
             path: "Sources/Generated/SwiftFormatWorker"
         ),
         .testTarget(
             name: "SwiftFormatWorkerTests",
-            dependencies: ["SwiftFormatWorker", "SwiftFormatWorkerMock", "SignPostMock", "Quick", "Nimble"]
+            dependencies: ["SwiftFormatWorker",
+                           "SwiftFormatWorkerMock",
+                           "SignPostMock",
+                           "Quick",
+                           "Nimble",
+                           "HighwayDispatchMock"
+            ]
         ),
         .target(
                 name: "CarthageWorker",

@@ -52,3 +52,4 @@ Carthage
 /Sources/.sourcery-Terminal.yml
 /Sources/.sourcery-Url.yml
 /Sources/.sourcery-XCBuild.yml
+/Sources/Stub/SwiftPackageDumpService.json
