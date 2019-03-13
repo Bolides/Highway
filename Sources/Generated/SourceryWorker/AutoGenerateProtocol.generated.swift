@@ -42,8 +42,6 @@ import Foundation
  )  throws
  func attemptToBuildSourceryIfNeeded() throws  -> FileProtocol
  // sourcery:end
- // Generated protocol inline for SourceryExecutableFile -> See code in the file of that type
-
  // Generated protocol inline for SourceryWorker -> See code in the file of that type
  // sourcery:inline:SourceryWorker.AutoGenerateProtocol
  var sourcery: SourceryProtocol { get }

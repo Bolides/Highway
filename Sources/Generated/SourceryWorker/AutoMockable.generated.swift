@@ -116,11 +116,6 @@ open class SourceryBuilderProtocolMock: SourceryBuilderProtocol
     }
 }
 
-// MARK: - SourceryExecutableFileProtocolMock
-
-open class SourceryExecutableFileProtocolMock: FileProtocolMock, SourceryExecutableFileProtocol
-{}
-
 // MARK: - SourceryProtocolMock
 
 open class SourceryProtocolMock: ExecutableProtocolMock, SourceryProtocol
