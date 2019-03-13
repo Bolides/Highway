@@ -278,7 +278,7 @@ public let package = Package(
         ),
         .target(
             name: "SwiftFormatWorker",
-            dependencies: ["Errors", "Arguments", "FoundationGenericHelper", "ZFile", "SwiftFormat", "HighwayDispatch"]
+            dependencies: ["Errors", "Arguments", "ZFile", "SwiftFormat", "HighwayDispatch"]
         ),
         .target(
             name: "SwiftFormatWorkerMock",

@@ -49,7 +49,7 @@ public enum HighwayError: Swift.Error, CustomStringConvertible
         case let .missingTemplateFolder(error):
             return """
             missingTemplateFolder
-                ℹ️ add `.package(url: "https://www.github.com/doozMen/template-sourcery", from: "1.2.0")`
+                ℹ️ add `.package(url: "https://www.github.com/doozMen/template-sourcery", "1.3.3"..<"2.0.0")` or another version
                 to Package.swift
             
             \(error)

@@ -51,6 +51,7 @@ class SwiftPackageDependencyServiceSpec: QuickSpec
                         "Nimble",
                         "Quick",
                         "SignPost",
+                        "Sourcery",
                         "template-sourcery",
                     ]
                 }
