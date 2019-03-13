@@ -23,7 +23,7 @@ func handleSwiftformat(_ output: @escaping HighwayRunner.SyncSwiftformat) { do {
 
 do
 {
-    signPost.message("🚀 \(HighwayRunner.self) ✅")
+    signPost.message("🚀 \(HighwayRunner.self) ...")
 
     // Swift Package
 
