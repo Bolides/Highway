@@ -27,7 +27,7 @@ do
 
     // Swift Package
 
-    let highway = try Highway(srcRootDependencies: try DependencyService().dependency)
+    let highway = try Highway(srcRootDependencies: try DependencyService().dependency, highwaySetupProductName: "HWSetup")
 
     highwayRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
 

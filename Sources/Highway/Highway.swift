@@ -77,6 +77,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
     public init(
         srcRootDependencies: DependencyProtocol,
         extraFolders: [FolderProtocol]? = nil,
+        highwaySetupProductName: String? = nil, // if nothing provided the name or the root package is taken
         swiftformatType: SwiftFormatWorkerProtocol.Type = SwiftFormatWorker.self,
         githooksType: GitHooksWorkerProtocol.Type = GitHooksWorker.self,
         sourceryWorkerType: SourceryWorkerProtocol.Type = SourceryWorker.self,
@@ -133,7 +134,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         githooks = githooksType.init(
             swiftPackageDependencies: rootPackage.dependencies,
             swiftPackageDump: rootPackage.dump,
-            hwSetupExecutableProductName: rootPackage.name,
+            hwSetupExecutableProductName: highwaySetupProductName == nil ? rootPackage.name : highwaySetupProductName!,
             gitHooksFolder: try rootPackage.dependencies.srcRoot().subfolder(named: ".git/hooks"),
             signPost: signPost
         )
