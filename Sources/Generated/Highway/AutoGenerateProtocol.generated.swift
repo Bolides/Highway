@@ -16,18 +16,36 @@ import Foundation
 
 /*
 
- // Generated protocol inline for GitHooksWorker -> See code in the file of that type
- // sourcery:inline:GitHooksWorker.AutoGenerateProtocol
- static var prepushBashScript: String { get }
+ // Generated protocol inline for Highway -> See code in the file of that type
+ // sourcery:inline:Highway.AutoGenerateProtocol
+ static var queue: HighwayDispatchProtocol { get }
+ var packages: [Highway.Package] { get }
+ var srcRootDependencies: DependencyProtocol { get }
+ var sourceryBuilder: SourceryBuilderProtocol { get }
+ var sourceryWorkers: [SourceryWorkerProtocol] { get }
+ var queue: HighwayDispatchProtocol { get }
+ var githooks: GitHooksWorkerProtocol { get }
+ var swiftformat: SwiftFormatWorkerProtocol { get }
 
- init(
-   swiftPackageDependencies: DependencyProtocol,
-   swiftPackageDump: DumpProtocol,
-   hwSetupExecutableProductName: String?,
-   gitHooksFolder: FolderProtocol?,
-   signPost: SignPostProtocol
- )
- func addPrePushToGitHooks() throws
+ static func package(for folder: FolderProtocol, terminal: TerminalWorkerProtocol) throws  -> Highway.Package
+ // sourcery:end
+ // Generated protocol inline for Highway.Package -> See code in the file of that type
+ // sourcery:inline:Highway.Package.AutoGenerateProtocol
+ var name: String { get }
+ var dependencies: DependencyProtocol { get }
+ var dump: DumpProtocol { get }
+
+ // sourcery:end
+ // Generated protocol inline for HighwayRunner -> See code in the file of that type
+ // sourcery:inline:HighwayRunner.AutoGenerateProtocol
+ static var queue: HighwayDispatchProtocol { get }
+ var errors: [Swift.Error]? { get set }
+ var highway: HighwayProtocol { get }
+
+ func runTests(_ async: @escaping (@escaping HighwayRunner.SyncTestOutput) -> Void)
+ func runSourcery(_ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
+ func addGithooksPrePush() throws
+ func runSwiftformat(_ async: @escaping (@escaping HighwayRunner.SyncSwiftformat) -> Void)
  // sourcery:end
  // Generated protocol inline for  -> See code in the file of that type
 

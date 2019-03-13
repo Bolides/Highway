@@ -36,7 +36,7 @@ import Foundation
 
  init(
    terminalWorker: TerminalWorkerProtocol,
-   disk: SwiftPackageDependenciesProtocol?,
+   disk: DependencyProtocol?,
    signPost: SignPostProtocol,
    systemExecutableProvider: SystemExecutableProviderProtocol
  )  throws

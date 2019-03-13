@@ -1,8 +1,10 @@
-import XCTest
 @testable import highway
+import XCTest
 
-final class highwayTests: XCTestCase {
-    func testExample() {
+final class highwayTests: XCTestCase
+{
+    func testExample()
+    {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.

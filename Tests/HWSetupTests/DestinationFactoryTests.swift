@@ -10,8 +10,6 @@ final class HWSetupSpec: QuickSpec
         super.spec()
 
         pending("🚨 HWSetup")
-        {
-           
-        }
+        {}
     }
 }

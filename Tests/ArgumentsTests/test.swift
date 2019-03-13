@@ -1,23 +1,25 @@
 import Arguments
 import ArgumentsMock
 
-import Quick
 import Nimble
+import Quick
 
-class ArgumentsSpec: QuickSpec {
-    
-    override func spec() {
-        
-        describe("ArgumentsTests") {
-            
+class ArgumentsSpec: QuickSpec
+{
+    override func spec()
+    {
+        describe("ArgumentsTests")
+        {
             var sut: Arguments?
-            
-            beforeEach {
+
+            beforeEach
+            {
                 sut = Arguments()
             }
-            
-            it("should have default arguments from command line") {
-                expect(sut?.all).to(contain( ["-srcRoot", "/../../../../../../../"]))
+
+            it("should have default arguments from command line")
+            {
+                expect(sut?.all).to(contain(["-srcRoot", "/../../../../../../../"]))
             }
         }
     }

@@ -16,13 +16,13 @@ import Foundation
 
 /*
 
- // Generated protocol inline for SwiftPackageDependencies -> See code in the file of that type
- // sourcery:inline:SwiftPackageDependencies.AutoGenerateProtocol
+ // Generated protocol inline for Dependency -> See code in the file of that type
+ // sourcery:inline:Dependency.AutoGenerateProtocol
  var name: String { get }
  var path: String { get }
  var url: URL { get }
  var version: String { get }
- var dependencies: [SwiftPackageDependencies] { get }
+ var dependencies: [Dependency] { get }
  var description: String { get }
 
  func gitHooks() throws  -> FolderProtocol

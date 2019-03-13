@@ -231,7 +231,7 @@ final class SwiftBuildSystemTests: XCTestCase
     }
 }
 
-fileprivate class SystemMock
+private class SystemMock
 {
     init()
     {

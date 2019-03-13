@@ -5,118 +5,118 @@
 //  Created by Stijn on 28/02/2019.
 //
 
-import Quick
-import Nimble
-import ZFileMock
-import TerminalMock
-import ArgumentsMock
-import SignPostMock
-import Errors
-import ZFile
 @testable import Arguments
+import ArgumentsMock
+import Errors
+import Nimble
+import Quick
+import SignPostMock
+import TerminalMock
+import ZFile
+import ZFileMock
 
 import SourceryWorker
 
-class SourceryBuilderSpec: QuickSpec {
-    
-    override func spec() {
-        
-        pending("⚠️  SourceryBuilder spec are temporarily disabled") {
-            
+class SourceryBuilderSpec: QuickSpec
+{
+    override func spec()
+    {
+        pending("⚠️  SourceryBuilder spec are temporarily disabled")
+        {
             var sut: SourceryBuilder?
-            
+
             var terminal: TerminalWorkerProtocolMock!
             var disk: SwiftPackageDependenciesProtocolMock!
             var signPost: SignPostProtocolMock!
             var srcRootFolder: FolderProtocolMock!
             var sourceryExecutableFolder: FolderProtocolMock!
             var sourceryExecutableFile: FileProtocolMock!
-            
-            beforeEach {
-                
+
+            beforeEach
+            {
                 srcRootFolder = try! FolderProtocolMock()
                 disk = SwiftPackageDependenciesProtocolMock()
                 disk.srcRootReturnValue = srcRootFolder
-                
+
                 sourceryExecutableFile = try! FileProtocolMock()
                 sourceryExecutableFolder = try! FolderProtocolMock()
-                sourceryExecutableFolder.fileNamedClosure = { path in
-                    return sourceryExecutableFile
+                sourceryExecutableFolder.fileNamedClosure = { _ in
+                    sourceryExecutableFile
                 }
-                
+
 //                disk.underlyingCarthage = Disk.Carthage(
 //                    checkouts: try! FolderProtocolMock(),
 //                    sourcery: sourceryExecutableFolder
 //                )
                 terminal = TerminalWorkerProtocolMock()
                 signPost = SignPostProtocolMock()
-                
-                expect {
+
+                expect
+                {
                     sut = try SourceryBuilder(
                         terminalWorker: terminal,
                         disk: disk,
                         signPost: signPost
                     )
                 }.toNot(throwError())
-                
-                
             }
-            
-            context("no sourcery build") {
-                
-                beforeEach {
+
+            context("no sourcery build")
+            {
+                beforeEach
+                {
                     var throwCount = 0
-                    sourceryExecutableFolder.subfolderNamedClosure  = { path in
-                        
-                        guard throwCount == 0 else {
-                            
+                    sourceryExecutableFolder.subfolderNamedClosure = { _ in
+
+                        guard throwCount == 0 else
+                        {
                             // Fake success file after faked build
                             return sourceryExecutableFolder
                         }
-                        
+
                         throwCount += 1
 
                         throw ZFile.FileSystem.Item.PathError.invalid("mocking out build of sourcery")
                     }
-                    
-                    // Faking build sourcery success
-                    terminal.runProcessClosure = { _ in return [""] }
-                    
-                    expect { try sut?.attemptToBuildSourceryIfNeeded() }.toNot(throwError())
 
+                    // Faking build sourcery success
+                    terminal.runProcessClosure = { _ in [""] }
+
+                    expect { try sut?.attemptToBuildSourceryIfNeeded() }.toNot(throwError())
                 }
-                
-                it("builds sourcery") {
+
+                it("builds sourcery")
+                {
                     expect(terminal.runProcessCalled) == true
                 }
-                
-                it("signpost missing build to verbose") {
+
+                it("signpost missing build to verbose")
+                {
                     expect { signPost.verboseCalled } == true
                 }
-                
             }
-            
-            context("sourcery has build") {
-                
-                beforeEach {
-                    sourceryExecutableFolder.subfolderNamedClosure  = { path in
-                        return sourceryExecutableFolder
+
+            context("sourcery has build")
+            {
+                beforeEach
+                {
+                    sourceryExecutableFolder.subfolderNamedClosure = { _ in
+                        sourceryExecutableFolder
                     }
-                    
+
                     expect { try sut?.attemptToBuildSourceryIfNeeded() }.toNot(throwError())
-                    
                 }
-                
-                it("does not build sourcery") {
+
+                it("does not build sourcery")
+                {
                     expect(terminal.runProcessCalled) == false
                 }
-                
-                it("NO sign missing build to verbose") {
+
+                it("NO sign missing build to verbose")
+                {
                     expect { signPost.verboseCalled } == false
                 }
-                
             }
-            
         }
     }
 }

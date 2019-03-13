@@ -113,6 +113,132 @@ open class ArgumentExecutableProtocolMock: ArgumentExecutableProtocol
     }
 }
 
+// MARK: - DependenciesServiceProtocolMock
+
+open class DependenciesServiceProtocolMock: DependenciesServiceProtocol
+{
+    public init() {}
+
+    public var dependency: DependencyProtocol
+    {
+        get { return underlyingDependency }
+        set(value) { underlyingDependency = value }
+    }
+
+    public var underlyingDependency: DependencyProtocol!
+
+    // MARK: - <init> - parameters
+
+    public var initTerminalThrowableError: Error?
+    public var initTerminalReceivedTerminal: TerminalWorkerProtocol?
+
+    // MARK: - <init> - closure mocks
+
+    public var initTerminalClosure: ((TerminalWorkerProtocol) throws -> Void)?
+
+    // MARK: - <init> - initializer mocked
+
+    public required init(terminal: TerminalWorkerProtocol) throws
+    {
+        initTerminalReceivedTerminal = terminal
+        try? initTerminalClosure?(terminal)
+    }
+
+    // MARK: - <writeToStubFile> - parameters
+
+    public var writeToStubFileThrowableError: Error?
+    public var writeToStubFileCallsCount = 0
+    public var writeToStubFileCalled: Bool
+    {
+        return writeToStubFileCallsCount > 0
+    }
+
+    // MARK: - <writeToStubFile> - closure mocks
+
+    public var writeToStubFileClosure: (() throws -> Void)?
+
+    // MARK: - <writeToStubFile> - method mocked
+
+    open func writeToStubFile() throws
+    {
+        // <writeToStubFile> - Throwable method implementation
+
+        if let error = writeToStubFileThrowableError
+        {
+            throw error
+        }
+
+        writeToStubFileCallsCount += 1
+
+        // <writeToStubFile> - Void return mock implementation
+
+        try writeToStubFileClosure?()
+    }
+}
+
+// MARK: - DumpServiceProtocolMock
+
+open class DumpServiceProtocolMock: DumpServiceProtocol
+{
+    public init() {}
+
+    public var dump: DumpProtocol
+    {
+        get { return underlyingDump }
+        set(value) { underlyingDump = value }
+    }
+
+    public var underlyingDump: DumpProtocol!
+
+    // MARK: - <init> - parameters
+
+    public var initTerminalSwiftPackageDependenciesThrowableError: Error?
+    public var initTerminalSwiftPackageDependenciesReceivedArguments: (terminal: TerminalWorkerProtocol, swiftPackageDependencies: DependencyProtocol)?
+
+    // MARK: - <init> - closure mocks
+
+    public var initTerminalSwiftPackageDependenciesClosure: ((TerminalWorkerProtocol, DependencyProtocol) throws -> Void)?
+
+    // MARK: - <init> - initializer mocked
+
+    public required init(terminal: TerminalWorkerProtocol, swiftPackageDependencies: DependencyProtocol) throws
+    {
+        initTerminalSwiftPackageDependenciesReceivedArguments = (terminal: terminal, swiftPackageDependencies: swiftPackageDependencies)
+        try? initTerminalSwiftPackageDependenciesClosure?(terminal, swiftPackageDependencies)
+    }
+
+    // MARK: - <writeToStubFile> - parameters
+
+    public var writeToStubFileThrowableError: Error?
+    public var writeToStubFileCallsCount = 0
+    public var writeToStubFileCalled: Bool
+    {
+        return writeToStubFileCallsCount > 0
+    }
+
+    // MARK: - <writeToStubFile> - closure mocks
+
+    public var writeToStubFileClosure: (() throws -> Void)?
+
+    // MARK: - <writeToStubFile> - method mocked
+
+    open func writeToStubFile() throws
+    {
+        // <writeToStubFile> - Throwable method implementation
+
+        if let error = writeToStubFileThrowableError
+        {
+            throw error
+        }
+
+        writeToStubFileCallsCount += 1
+
+        // <writeToStubFile> - Void return mock implementation
+
+        try writeToStubFileClosure?()
+    }
+}
+
 // MARK: - ExecutableProtocolMock
 
 open class ExecutableProtocolMock: ExecutableProtocol
@@ -174,132 +300,6 @@ open class PathEnvironmentParserProtocolMock: PathEnvironmentParserProtocol
     public init() {}
 
     public var urls: [FolderProtocol] = []
-}
-
-// MARK: - SwiftPackageDependencyServiceProtocolMock
-
-open class SwiftPackageDependencyServiceProtocolMock: DependenciesServiceProtocol
-{
-    public init() {}
-
-    public var dependency: DependencyProtocol
-    {
-        get { return underlyingSwiftPackage }
-        set(value) { underlyingSwiftPackage = value }
-    }
-
-    public var underlyingSwiftPackage: DependencyProtocol!
-
-    // MARK: - <init> - parameters
-
-    public var initTerminalThrowableError: Error?
-    public var initTerminalReceivedTerminal: TerminalWorkerProtocol?
-
-    // MARK: - <init> - closure mocks
-
-    public var initTerminalClosure: ((TerminalWorkerProtocol) throws -> Void)?
-
-    // MARK: - <init> - initializer mocked
-
-    public required init(terminal: TerminalWorkerProtocol) throws
-    {
-        initTerminalReceivedTerminal = terminal
-        try? initTerminalClosure?(terminal)
-    }
-
-    // MARK: - <writeToStubFile> - parameters
-
-    public var writeToStubFileThrowableError: Error?
-    public var writeToStubFileCallsCount = 0
-    public var writeToStubFileCalled: Bool
-    {
-        return writeToStubFileCallsCount > 0
-    }
-
-    // MARK: - <writeToStubFile> - closure mocks
-
-    public var writeToStubFileClosure: (() throws -> Void)?
-
-    // MARK: - <writeToStubFile> - method mocked
-
-    open func writeToStubFile() throws
-    {
-        // <writeToStubFile> - Throwable method implementation
-
-        if let error = writeToStubFileThrowableError
-        {
-            throw error
-        }
-
-        writeToStubFileCallsCount += 1
-
-        // <writeToStubFile> - Void return mock implementation
-
-        try writeToStubFileClosure?()
-    }
-}
-
-// MARK: - SwiftPackageDumpServiceProtocolMock
-
-open class SwiftPackageDumpServiceProtocolMock: DumpServiceProtocol
-{
-    public init() {}
-
-    public var swiftPackageDump: DumpProtocol
-    {
-        get { return underlyingSwiftPackageDump }
-        set(value) { underlyingSwiftPackageDump = value }
-    }
-
-    public var underlyingSwiftPackageDump: DumpProtocol!
-
-    // MARK: - <init> - parameters
-
-    public var initTerminalSwiftPackageDependenciesThrowableError: Error?
-    public var initTerminalSwiftPackageDependenciesReceivedArguments: (terminal: TerminalWorkerProtocol, swiftPackageDependencies: DependencyProtocol)?
-
-    // MARK: - <init> - closure mocks
-
-    public var initTerminalSwiftPackageDependenciesClosure: ((TerminalWorkerProtocol, DependencyProtocol) throws -> Void)?
-
-    // MARK: - <init> - initializer mocked
-
-    public required init(terminal: TerminalWorkerProtocol, swiftPackageDependencies: DependencyProtocol) throws
-    {
-        initTerminalSwiftPackageDependenciesReceivedArguments = (terminal: terminal, swiftPackageDependencies: swiftPackageDependencies)
-        try? initTerminalSwiftPackageDependenciesClosure?(terminal, swiftPackageDependencies)
-    }
-
-    // MARK: - <writeToStubFile> - parameters
-
-    public var writeToStubFileThrowableError: Error?
-    public var writeToStubFileCallsCount = 0
-    public var writeToStubFileCalled: Bool
-    {
-        return writeToStubFileCallsCount > 0
-    }
-
-    // MARK: - <writeToStubFile> - closure mocks
-
-    public var writeToStubFileClosure: (() throws -> Void)?
-
-    // MARK: - <writeToStubFile> - method mocked
-
-    open func writeToStubFile() throws
-    {
-        // <writeToStubFile> - Throwable method implementation
-
-        if let error = writeToStubFileThrowableError
-        {
-            throw error
-        }
-
-        writeToStubFileCallsCount += 1
-
-        // <writeToStubFile> - Void return mock implementation
-
-        try writeToStubFileClosure?()
-    }
 }
 
 // MARK: - SystemExecutableProviderProtocolMock

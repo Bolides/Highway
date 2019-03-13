@@ -12,9 +12,9 @@ import SignPost
 
 let signPost = SignPost.shared
 
-// MARK: - SwiftPackageDependenciesProtocolMock
+// MARK: - DependencyProtocolMock
 
-open class SwiftPackageDependenciesProtocolMock: DependencyProtocol
+open class DependencyProtocolMock: DependencyProtocol
 {
     public init() {}
 
@@ -291,9 +291,9 @@ open class SwiftPackageDependenciesProtocolMock: DependencyProtocol
     }
 }
 
-// MARK: - SwiftPackageDumpProtocolMock
+// MARK: - DumpProtocolMock
 
-open class SwiftPackageDumpProtocolMock: DumpProtocol
+open class DumpProtocolMock: DumpProtocol
 {
     public init() {}
 

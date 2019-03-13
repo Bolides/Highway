@@ -33,7 +33,6 @@ final class SwiftBuildSystem_HighwayBundleTests: XCTestCase
 
         let executor = ExecutorMock
         { _ in
-            return
         }
         let context = Context(executableProvider: finder, executor: executor, fileSystem: fs)
         let buildSystem = SwiftBuildSystem(context: context)

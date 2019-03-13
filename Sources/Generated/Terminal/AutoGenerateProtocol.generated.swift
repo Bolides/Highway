@@ -16,22 +16,22 @@ import Foundation
 
 /*
 
- // Generated protocol inline for SwiftPackageDependencyService -> See code in the file of that type
- // sourcery:inline:SwiftPackageDependencyService.AutoGenerateProtocol
- var swiftPackage: SwiftPackageDependenciesProtocol { get }
+ // Generated protocol inline for DependencyService -> See code in the file of that type
+ // sourcery:inline:DependencyService.AutoGenerateProtocol
+ var dependency: DependencyProtocol { get }
 
  init(
    terminal: TerminalWorkerProtocol
  )  throws
  func writeToStubFile() throws
  // sourcery:end
- // Generated protocol inline for SwiftPackageDumpService -> See code in the file of that type
- // sourcery:inline:SwiftPackageDumpService.AutoGenerateProtocol
- var swiftPackageDump: SwiftPackageDumpProtocol { get }
+ // Generated protocol inline for DumpService -> See code in the file of that type
+ // sourcery:inline:DumpService.AutoGenerateProtocol
+ var dump: DumpProtocol { get }
 
  init(
    terminal: TerminalWorkerProtocol,
-   swiftPackageDependencies: SwiftPackageDependenciesProtocol
+   swiftPackageDependencies: DependencyProtocol
  )  throws
  func writeToStubFile() throws
  // sourcery:end

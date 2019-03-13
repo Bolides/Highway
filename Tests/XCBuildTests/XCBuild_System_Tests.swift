@@ -1,71 +1,72 @@
 import Nimble
 import Quick
 
-import Terminal
-import XCBuild
-import TerminalMock
 import Arguments
 import ArgumentsMock
+import Terminal
+import TerminalMock
+import XCBuild
 import XCBuildMock
 import ZFileMock
 
-class XCBuildSpec: QuickSpec {
-    
-    override func spec() {
-        
-        describe("XCBuild") {
-            
+class XCBuildSpec: QuickSpec
+{
+    override func spec()
+    {
+        describe("XCBuild")
+        {
             var sut: XCBuild?
-            
-        
+
             var terminal: TerminalWorkerProtocolMock!
             var xcbuildExecutable: MinimalTestOptionsProtocolMock!
             var system: SystemExecutableProviderProtocolMock!
-            
-            beforeEach {
+
+            beforeEach
+            {
                 xcbuildExecutable = MinimalTestOptionsProtocolMock()
                 terminal = TerminalWorkerProtocolMock()
                 system = SystemExecutableProviderProtocolMock()
-                
+
                 sut = XCBuild(systemExecutableProvider: system, terminalWorker: terminal)
             }
-            
-            context("build and test") {
-                
-                beforeEach {
+
+            context("build and test")
+            {
+                beforeEach
+                {
                     xcbuildExecutable.argumentsReturnValue = Arguments([""])
                     system.executableWithReturnValue = try? FileProtocolMock()
-                    
-                    terminal.runProcessClosure = { process in
-                        return ["mocked process response success"]
+
+                    terminal.runProcessClosure = { _ in
+                        ["mocked process response success"]
                     }
                     expect { try sut?.buildAndTest(using: xcbuildExecutable) }.toNot(throwError())
                 }
-                
-                it("call terminal") {
+
+                it("call terminal")
+                {
                     expect(terminal.runProcessCalled) == true
                 }
-               
             }
-            
-            context("get possible destinations") {
-                
+
+            context("get possible destinations")
+            {
                 let expected = "{mocked destination}"
-                
-                beforeEach {
+
+                beforeEach
+                {
                     xcbuildExecutable.argumentsReturnValue = Arguments([""])
                     system.executableWithReturnValue = try? FileProtocolMock()
-                    
-                    terminal.runProcessClosure = { process in
-                        return [expected]
+
+                    terminal.runProcessClosure = { _ in
+                        [expected]
                     }
                 }
-                
-                it("returns detinations") {
-                    expect { try sut?.findPosibleDestinations(for: "bla", in: try FolderProtocolMock()) } == [expected]
 
+                it("returns detinations")
+                {
+                    expect { try sut?.findPosibleDestinations(for: "bla", in: try FolderProtocolMock()) } == [expected]
                 }
-                
             }
         }
     }

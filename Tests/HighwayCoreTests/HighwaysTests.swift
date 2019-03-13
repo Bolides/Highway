@@ -79,7 +79,7 @@ final class HighwaysTests: XCTestCase
         let cleanExecuted = expectation(description: "clean executed")
         let testExecuted = expectation(description: "test executed")
 
-        highway[.build].depends(on: .build) ==> { return "" }
+        highway[.build].depends(on: .build) ==> { "" }
         highway[.build] ==> { XCTFail("should never be executed"); return }
         highway[.test] ==> { testExecuted.fulfill(); throw "test error" }
         highway[.clean] ==> { cleanExecuted.fulfill() }
