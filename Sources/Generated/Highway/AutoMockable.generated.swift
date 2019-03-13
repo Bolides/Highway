@@ -1,6 +1,12 @@
+import Arguments
 import Foundation
+import GitHooks
 import Highway
+import HighwayDispatch
+import SignPost
 import SourceryAutoProtocols
+import SourceryWorker
+import SwiftFormatWorker
 
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
@@ -15,7 +21,7 @@ open class HighwayProtocolMock: HighwayProtocol
 {
     public init() {}
 
-    public var packages: [Highway.Package] = []
+    public var packages: [PackageProtocol] = []
     public var srcRootDependencies: DependencyProtocol
     {
         get { return underlyingSrcRootDependencies }

@@ -165,7 +165,7 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
     {
         try fileSequence.forEach
         { file in
-            guard file.extension == "swift", file.name != "SourceryWorker.swift" else
+            guard file.extension == "swift", file.name != "SourceryWorker.swift", file.name != "SourceryWorkerSpec.swift" else
             {
                 return
             }

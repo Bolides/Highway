@@ -13,6 +13,8 @@ import SignPostMock
 import SourceryWorker
 import SourceryWorkerMock
 import TerminalMock
+import ZFile
+import ZFileMock
 
 class SourceryWorkerSpec: QuickSpec
 {
@@ -41,7 +43,17 @@ class SourceryWorkerSpec: QuickSpec
             beforeEach
             {
                 sourcery = SourceryProtocolMock()
+                let sourcesFolder = try! FolderProtocolMock()
+                sourcery.sourcesFolders = [sourcesFolder]
+                let file = try! File(path: #file)
+                sourcery.executableFileReturnValue = file
+                sourcesFolder.makeFileSequenceRecursiveIncludeHiddenReturnValue = try! file.parent?.createSubfolderIfNeeded(withName: "MockTestOutput").makeFileSequence(recursive: false, includeHidden: true)
+                sourcery.outputFolder = sourcesFolder
+                sourcery.underlyingImports = Set([TemplatePrepend(name: Set([TemplatePrepend.Import(name: "MockImport")]), template: "MockTemplate")])
+
                 terminalWorker = TerminalWorkerProtocolMock()
+                terminalWorker.terminalTaskReturnValue = ["mocked terminal output"]
+
                 signPost = SignPostProtocolMock()
                 queue = HighwayDispatchProtocolMock()
                 queue.asyncSyncClosure = { $0() }
@@ -62,21 +74,14 @@ class SourceryWorkerSpec: QuickSpec
                 expect(sut).toNot(beNil())
             }
 
-            pending("🚨 should have a result")
+            it("should have a result")
             {
-                var result: [String]?
-                var _error: Swift.Error?
+                var result: SourceryWorker.SyncOutput?
 
-                sut?.attempt
-                { _result in
-                    do { result = try _result() } catch
-                    {
-                        _error = error
-                    }
-                }
+                sut?.attempt { result = $0 }
 
-                expect(_error).toNot(beNil())
-                expect(signPost.verboseCalled).toEventually(beTrue())
+                expect(result).toNot(beNil())
+                expect { try result?() }.toNot(throwError())
             }
         }
     }

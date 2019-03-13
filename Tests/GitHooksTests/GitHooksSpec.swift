@@ -29,18 +29,18 @@ class GitHooksWorkerSpec: QuickSpec
 
             var gitHooksFolder: FolderProtocolMock!
             var prePushFile: FileProtocolMock!
-            var swiftPackageDependencies: SwiftPackageDependenciesProtocolMock!
-            var swiftPackageDump: SwiftPackageDumpProtocolMock!
+            var swiftPackageDependencies: DependencyProtocolMock!
+            var swiftPackageDump: DumpProtocolMock!
 
             beforeEach
             {
                 gitHooksFolder = try! FolderProtocolMock()
                 prePushFile = try! FileProtocolMock()
 
-                swiftPackageDependencies = SwiftPackageDependenciesProtocolMock()
+                swiftPackageDependencies = DependencyProtocolMock()
                 swiftPackageDependencies.gitHooksClosure = { return gitHooksFolder }
 
-                swiftPackageDump = SwiftPackageDumpProtocolMock()
+                swiftPackageDump = DumpProtocolMock()
                 let executable = SwiftProduct(name: "GitHooksWorkerSpec", product_type: "executable")
                 swiftPackageDump.products = Set([executable])
 

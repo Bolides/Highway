@@ -131,11 +131,21 @@ public let package = Package(
                 "HighwayDispatch",
                 "GitHooks",
                 "SwiftFormatWorker",
+                "XCBuild",
             ]
         ),
         .target(
             name: "HighwayMock",
-            dependencies: ["Highway"],
+            dependencies: [
+                "Highway",
+                "SourceryAutoProtocols",
+                "SignPost",
+                "Arguments",
+                "SourceryWorker",
+                "HighwayDispatch",
+                "GitHooks",
+                "SwiftFormatWorker",
+            ],
             path: "Sources/Generated/Highway"
         ),
         .target(
@@ -162,6 +172,7 @@ public let package = Package(
                 "ArgumentsMock",
                 "ZFileMock",
                 "Errors",
+                "GitHooksMock",
             ]
         ),
         .target(
@@ -309,7 +320,25 @@ public let package = Package(
                 "Highway",
             ]
         ),
-        .testTarget(name: "HWSetupTests", dependencies: ["HWSetup", "Quick", "Nimble"]),
+        .testTarget(
+            name: "HWSetupTests",
+            dependencies: [
+                "Nimble",
+                "Quick",
+                "ArgumentsMock",
+                "Highway",
+                "HighwayDispatchMock",
+                "HighwayMock",
+                "SignPostMock",
+                "SourceryWorker",
+                "SourceryWorkerMock",
+                "SwiftFormatWorkerMock",
+                "Terminal",
+                "TerminalMock",
+                "ZFileMock",
+                "GitHooksMock",
+            ]
+        ),
         .target(
             name: "HighwayDispatch",
             dependencies: ["Errors", "SignPost"]

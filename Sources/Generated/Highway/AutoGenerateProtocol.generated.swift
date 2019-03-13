@@ -19,7 +19,7 @@ import Foundation
  // Generated protocol inline for Highway -> See code in the file of that type
  // sourcery:inline:Highway.AutoGenerateProtocol
  static var queue: HighwayDispatchProtocol { get }
- var packages: [Highway.Package] { get }
+ var packages: [PackageProtocol] { get }
  var srcRootDependencies: DependencyProtocol { get }
  var sourceryBuilder: SourceryBuilderProtocol { get }
  var sourceryWorkers: [SourceryWorkerProtocol] { get }

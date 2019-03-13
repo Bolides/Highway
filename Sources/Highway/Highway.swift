@@ -19,7 +19,7 @@ import ZFile
 public protocol HighwayProtocol: AutoMockable
 {
     // sourcery:inline:Packages.AutoGenerateProtocol
-    var packages: [Highway.Package] { get }
+    var packages: [PackageProtocol] { get }
     var srcRootDependencies: DependencyProtocol { get }
     var sourceryBuilder: SourceryBuilderProtocol { get }
     var sourceryWorkers: [SourceryWorkerProtocol] { get }
@@ -49,7 +49,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         public let dump: DumpProtocol
     }
 
-    public let packages: [Highway.Package]
+    public let packages: [PackageProtocol]
     public let srcRootDependencies: DependencyProtocol
     public let sourceryBuilder: SourceryBuilderProtocol
     public let sourceryWorkers: [SourceryWorkerProtocol]

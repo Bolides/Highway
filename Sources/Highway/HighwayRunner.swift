@@ -143,7 +143,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
 
     // MARK: - Private
 
-    private func test(package: Highway.Package, _ async: @escaping (@escaping HighwayRunner.SyncTestOutput) -> Void)
+    private func test(package: PackageProtocol, _ async: @escaping (@escaping HighwayRunner.SyncTestOutput) -> Void)
     {
         let context = (signPost: signPost, addError: addError, terminal: terminal)
 
