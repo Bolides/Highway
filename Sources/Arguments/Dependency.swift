@@ -49,9 +49,15 @@ public struct Dependency: Decodable, DependencyProtocol, CustomStringConvertible
 
     public func templateFolder() throws -> FolderProtocol
     {
-        guard let templatePackage = (dependencies.first { $0.name == "template-sourcery" }) else
+        let expectedName = "template-sourcery"
+
+        guard let templatePackage = (dependencies.first { $0.name == expectedName }) else
         {
-            throw HighwayError.missingTemplateFolder("\(Dependency.self) \(#function) \(#line):")
+            guard name == expectedName else
+            {
+                throw HighwayError.missingTemplateFolder("\(Dependency.self) \(#function) \(#line):")
+            }
+            return try srcRoot().subfolder(named: "Sources/stencil")
         }
         return try Folder(path: templatePackage.path)
     }

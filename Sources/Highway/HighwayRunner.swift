@@ -160,6 +160,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
 
             do
             {
+                let originalFolder = FileSystem.shared.currentFolder
                 FileManager.default.changeCurrentDirectoryPath(try package.dependencies.srcRoot().path)
 
                 context.signPost.message("🧪 swift test in  \(package.name) ... ")
@@ -170,6 +171,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
                 context.signPost.verbose("\(testReport)")
                 context.signPost.message("🧪 swift test in  \(package.name) ✅")
                 async { testReport }
+                FileManager.default.changeCurrentDirectoryPath(originalFolder.path)
             }
             catch let TerminalWorker.Error.unknownTask(errorOutput: output)
             {

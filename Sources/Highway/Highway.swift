@@ -61,9 +61,11 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
 
     public static func package(for folder: FolderProtocol, terminal: TerminalWorkerProtocol) throws -> Highway.Package
     {
+        let originalFolder = FileSystem.shared.currentFolder
         FileManager.default.changeCurrentDirectoryPath(folder.path)
 
         let dependencies = try DependencyService(terminal: terminal).dependency
+        FileManager.default.changeCurrentDirectoryPath(originalFolder.path)
         return Highway.Package(
             name: folder.name,
             dependencies: dependencies,

@@ -72,6 +72,7 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 
             do
             {
+                let originalDirectory = FileSystem.shared.currentFolder
                 let srcRoot = try disk.srcRoot()
 
                 FileManager.default.changeCurrentDirectoryPath(srcRoot.path)
@@ -88,7 +89,7 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 
                 signPost.verbose("cd \(srcRoot)")
 
-                FileManager.default.changeCurrentDirectoryPath(srcRoot.path)
+                FileManager.default.changeCurrentDirectoryPath(originalDirectory.path)
 
                 return try findSourceryExecutableFile()
             }

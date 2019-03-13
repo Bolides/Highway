@@ -96,7 +96,7 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
             sourcesFolders: [productFolder],
             templateFolder: templateFolder,
             outputFolder: outputFolder,
-            sourceryAutoProtocolsFile: try swiftPackageDependencies.sourceryAutoProtocolFile(),
+            sourceryAutoProtocolsFile: swiftPackageDependencies.name == "template-sourcery" ? try swiftPackageDependencies.srcRoot().subfolder(named: "Sources/SourceryAutoProtocols").file(named: "SourceryAutoProtocols.swift") : try swiftPackageDependencies.sourceryAutoProtocolFile(),
             sourceryYMLFile: try sourcesFolder.createFileIfNeeded(named: ".sourcery-\(productName).yml"),
             imports: Set([prepend]),
             sourceryExecutableFile: sourceryExecutable
