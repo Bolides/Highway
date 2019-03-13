@@ -113,9 +113,9 @@ open class ArgumentExecutableProtocolMock: ArgumentExecutableProtocol
     }
 }
 
-// MARK: - DependenciesServiceProtocolMock
+// MARK: - DependencyServiceProtocolMock
 
-open class DependenciesServiceProtocolMock: DependenciesServiceProtocol
+open class DependencyServiceProtocolMock: DependencyServiceProtocol
 {
     public init() {}
 
@@ -129,19 +129,19 @@ open class DependenciesServiceProtocolMock: DependenciesServiceProtocol
 
     // MARK: - <init> - parameters
 
-    public var initTerminalThrowableError: Error?
-    public var initTerminalReceivedTerminal: TerminalWorkerProtocol?
+    public var initTerminalSignPostThrowableError: Error?
+    public var initTerminalSignPostReceivedArguments: (terminal: TerminalWorkerProtocol, signPost: SignPostProtocol)?
 
     // MARK: - <init> - closure mocks
 
-    public var initTerminalClosure: ((TerminalWorkerProtocol) throws -> Void)?
+    public var initTerminalSignPostClosure: ((TerminalWorkerProtocol, SignPostProtocol) throws -> Void)?
 
     // MARK: - <init> - initializer mocked
 
-    public required init(terminal: TerminalWorkerProtocol) throws
+    public required init(terminal: TerminalWorkerProtocol, signPost: SignPostProtocol) throws
     {
-        initTerminalReceivedTerminal = terminal
-        try? initTerminalClosure?(terminal)
+        initTerminalSignPostReceivedArguments = (terminal: terminal, signPost: signPost)
+        try? initTerminalSignPostClosure?(terminal, signPost)
     }
 
     // MARK: - <writeToStubFile> - parameters

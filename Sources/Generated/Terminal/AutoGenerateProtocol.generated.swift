@@ -21,7 +21,8 @@ import Foundation
  var dependency: DependencyProtocol { get }
 
  init(
-   terminal: TerminalWorkerProtocol
+   terminal: TerminalWorkerProtocol,
+   signPost: SignPostProtocol
  )  throws
  func writeToStubFile() throws
  // sourcery:end

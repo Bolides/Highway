@@ -8,46 +8,60 @@
 import Arguments
 import Errors
 import Foundation
+import SignPost
 import SourceryAutoProtocols
 import ZFile
 
-public protocol DependenciesServiceProtocol: AutoMockable
+public protocol DependencyServiceProtocol: AutoMockable
 {
-    // sourcery:inline:DependenciesService.AutoGenerateProtocol
+    // sourcery:inline:DependencyService.AutoGenerateProtocol
     var dependency: DependencyProtocol { get }
 
     init(
-        terminal: TerminalWorkerProtocol
+        terminal: TerminalWorkerProtocol,
+        signPost: SignPostProtocol
     ) throws
     func writeToStubFile() throws
     // sourcery:end
 }
 
-public struct DependencyService: DependenciesServiceProtocol, AutoGenerateProtocol
+public struct DependencyService: DependencyServiceProtocol, AutoGenerateProtocol
 {
     public let dependency: DependencyProtocol
 
     private let data: Data
 
     // sourcery:includeInitInProtocol
-    public init(terminal: TerminalWorkerProtocol = TerminalWorker.shared) throws
+    public init(terminal: TerminalWorkerProtocol = TerminalWorker.shared, signPost: SignPostProtocol = SignPost.shared) throws
     {
         do
         {
             let task = try Task(commandName: "swift")
             task.arguments = Arguments(["package", "show-dependencies", "--format", "json"])
 
-            let output: String = try terminal.runProcess(task.toProcess).joined()
+            let all = try terminal.runProcess(task.toProcess)
+            let warnings = all.filter { $0.hasPrefix("warning") }
+            let json = all.filter { !$0.hasPrefix("warning") }
+            let output: String = json.joined()
+
             data = output.data(using: .utf8)!
 
+            if warnings.count > 0 {
+                signPost.message("""
+                ⚠️ \(warnings.count) warnings in \(DependencyService.self) \(#function)
+                \(warnings.enumerated().map { " \($0.offset) \($0.element)" }.joined(separator: "\n"))
+                """)
+            }
             do
             {
+                signPost.verbose("\(json.joined(separator: "\n"))")
                 dependency = try JSONDecoder().decode(Dependency.self, from: data)
             }
             catch
             {
+                signPost.verbose("\(output)")
                 let location = "\(DependencyService.self) \(#function) \(#line)"
-                let error = HighwayError.swiftPackageShowDependencies(output)
+                let error = HighwayError.swiftPackageShowDependencies("\(error)")
                 throw HighwayError.highwayError(atLocation: location, error: error)
             }
         }
