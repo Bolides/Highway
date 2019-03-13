@@ -6,6 +6,7 @@
 //
 
 import Arguments
+import Errors
 import Foundation
 import os
 import SignPost
@@ -71,36 +72,46 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
         productName: String,
         swiftPackageDependencies: DependencyProtocol,
         swiftPackageDump: DumpProtocol,
-        sourceryExecutable: FileProtocol
+        sourceryExecutable: FileProtocol,
+        signPost: SignPostProtocol = SignPost.shared
     ) throws
     {
-        let sourcesFolder = try swiftPackageDependencies.srcRoot().subfolder(named: "Sources")
-        let productFolder = try sourcesFolder.subfolder(named: productName)
-        let templateFolder = try swiftPackageDependencies.templateFolder()
-        let outputFolder = try sourcesFolder
-            .createSubfolderIfNeeded(withName: "Generated")
-            .createSubfolderIfNeeded(withName: productName)
+        signPost.message("\(Sourcery.self) for \(productName)")
 
-        let nameAutoMockable = "AutoMockable"
-        var prepend = TemplatePrepend(name: Set([]), template: nameAutoMockable)
-
-        if var imports = (swiftPackageDump.targets.first { $0.name == "\(productName)Mock" }?.dependencies.map { TemplatePrepend.Import(name: $0.name) })
+        do
         {
-            imports.append(contentsOf: Sourcery.commonImportAutoMockable)
-            imports.append(TemplatePrepend.Import(name: productName))
+            let sourcesFolder = try swiftPackageDependencies.srcRoot().subfolder(named: "Sources")
+            let productFolder = try sourcesFolder.subfolder(named: productName)
+            let templateFolder = try swiftPackageDependencies.templateFolder()
+            let outputFolder = try sourcesFolder
+                .createSubfolderIfNeeded(withName: "Generated")
+                .createSubfolderIfNeeded(withName: productName)
 
-            prepend = TemplatePrepend(name: Set(imports), template: nameAutoMockable)
+            let nameAutoMockable = "AutoMockable"
+            var prepend = TemplatePrepend(name: Set([]), template: nameAutoMockable)
+
+            if var imports = (swiftPackageDump.targets.first { $0.name == "\(productName)Mock" }?.dependencies.map { TemplatePrepend.Import(name: $0.name) })
+            {
+                imports.append(contentsOf: Sourcery.commonImportAutoMockable)
+                imports.append(TemplatePrepend.Import(name: productName))
+
+                prepend = TemplatePrepend(name: Set(imports), template: nameAutoMockable)
+            }
+
+            try self.init(
+                sourcesFolders: [productFolder],
+                templateFolder: templateFolder,
+                outputFolder: outputFolder,
+                sourceryAutoProtocolsFile: swiftPackageDependencies.name == "template-sourcery" ? try swiftPackageDependencies.srcRoot().subfolder(named: "Sources/SourceryAutoProtocols").file(named: "SourceryAutoProtocols.swift") : try swiftPackageDependencies.sourceryAutoProtocolFile(),
+                sourceryYMLFile: try sourcesFolder.createFileIfNeeded(named: ".sourcery-\(productName).yml"),
+                imports: Set([prepend]),
+                sourceryExecutableFile: sourceryExecutable
+            )
         }
-
-        try self.init(
-            sourcesFolders: [productFolder],
-            templateFolder: templateFolder,
-            outputFolder: outputFolder,
-            sourceryAutoProtocolsFile: swiftPackageDependencies.name == "template-sourcery" ? try swiftPackageDependencies.srcRoot().subfolder(named: "Sources/SourceryAutoProtocols").file(named: "SourceryAutoProtocols.swift") : try swiftPackageDependencies.sourceryAutoProtocolFile(),
-            sourceryYMLFile: try sourcesFolder.createFileIfNeeded(named: ".sourcery-\(productName).yml"),
-            imports: Set([prepend]),
-            sourceryExecutableFile: sourceryExecutable
-        )
+        catch
+        {
+            throw HighwayError.highwayError(atLocation: "\(Sourcery.self) \(#function) \(#line) - \(productName) - depencies \(swiftPackageDependencies.name) at path \(try swiftPackageDependencies.srcRoot().name)", error: error)
+        }
     }
 
     init(

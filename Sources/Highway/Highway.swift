@@ -65,12 +65,13 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         FileManager.default.changeCurrentDirectoryPath(folder.path)
 
         let dependencies = try DependencyService(terminal: terminal).dependency
-        FileManager.default.changeCurrentDirectoryPath(originalFolder.path)
-        return Highway.Package(
+        let highwayPackage =  Highway.Package(
             name: folder.name,
             dependencies: dependencies,
             dump: try DumpService(terminal: terminal, swiftPackageDependencies: dependencies).dump
         )
+        FileManager.default.changeCurrentDirectoryPath(originalFolder.path)
+        return highwayPackage
     }
 
     // MARK: - Init
@@ -117,20 +118,23 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         let temp: [[SourceryWorkerProtocol]] = try packages
             .compactMap
         { package in
-            let products = package.dump.products.filter { !$0.name.hasSuffix("Mock") }
-
+            let dump = package.dump
+            let dependencies = package.dependencies
+            let products = dump.products.filter { !$0.name.hasSuffix("Mock") }
+            
             let sourceryModels: [SourceryProtocol] = try products
                 .map
-            { product in
-                try Sourcery(
-                    productName: product.name,
-                    swiftPackageDependencies: package.dependencies,
-                    swiftPackageDump: package.dump,
-                    sourceryExecutable: sourcery
-                )
+                { product in
+                    try Sourcery(
+                        productName: product.name,
+                        swiftPackageDependencies: dependencies,
+                        swiftPackageDump: dump,
+                        sourceryExecutable: sourcery
+                    )
             }
             return try sourceryModels.map { try sourceryWorkerType.init(sourcery: $0, terminalWorker: terminal, signPost: signPost, queue: queue) }
         }
+        
         sourceryWorkers = temp.flatMap { $0 }
 
         githooks = githooksType.init(
