@@ -10,14 +10,14 @@ import Foundation
 import SourceryAutoProtocols
 import ZFile
 
-public protocol SwiftPackageDependenciesProtocol: AutoMockable
+public protocol DependencyProtocol: AutoMockable
 {
-    // sourcery:inline:SwiftPackageDependencies.AutoGenerateProtocol
+    // sourcery:inline:Dependency.AutoGenerateProtocol
     var name: String { get }
     var path: String { get }
     var url: URL { get }
     var version: String { get }
-    var dependencies: [SwiftPackageDependencies] { get }
+    var dependencies: [Dependency] { get }
     var description: String { get }
 
     func gitHooks() throws -> FolderProtocol
@@ -28,14 +28,14 @@ public protocol SwiftPackageDependenciesProtocol: AutoMockable
     // sourcery:end
 }
 
-public struct SwiftPackageDependencies: Decodable, SwiftPackageDependenciesProtocol, CustomStringConvertible, AutoGenerateProtocol
+public struct Dependency: Decodable, DependencyProtocol, CustomStringConvertible, AutoGenerateProtocol
 {
     public let name: String
     public let path: String
     public let url: URL
     public let version: String
 
-    public let dependencies: [SwiftPackageDependencies]
+    public let dependencies: [Dependency]
 
     public func gitHooks() throws -> FolderProtocol
     {
@@ -51,7 +51,7 @@ public struct SwiftPackageDependencies: Decodable, SwiftPackageDependenciesProto
     {
         guard let templatePackage = (dependencies.first { $0.name == "template-sourcery" }) else
         {
-            throw HighwayError.missingTemplateFolder("\(SwiftPackageDependencies.self) \(#function) \(#line):")
+            throw HighwayError.missingTemplateFolder("\(Dependency.self) \(#function) \(#line):")
         }
         return try Folder(path: templatePackage.path)
     }
@@ -60,7 +60,7 @@ public struct SwiftPackageDependencies: Decodable, SwiftPackageDependenciesProto
     {
         guard let sourceryPackage = (dependencies.first { $0.name == "Sourcery" }) else
         {
-            throw HighwayError.highwayError(atLocation: "\(SwiftPackageDependencies.self) \(#function) \(#line):", error: HighwayError.missingSourcery(""))
+            throw HighwayError.highwayError(atLocation: "\(Dependency.self) \(#function) \(#line):", error: HighwayError.missingSourcery(""))
         }
         return try Folder(path: sourceryPackage.path)
     }
@@ -73,7 +73,7 @@ public struct SwiftPackageDependencies: Decodable, SwiftPackageDependenciesProto
     public var description: String
     {
         return """
-        \(SwiftPackageDependencies.self)
+        \(Dependency.self)
         
         * name: \(name)
         * path: \(path)

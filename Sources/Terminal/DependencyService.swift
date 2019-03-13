@@ -11,10 +11,10 @@ import Foundation
 import SourceryAutoProtocols
 import ZFile
 
-public protocol SwiftPackageDependencyServiceProtocol: AutoMockable
+public protocol DependenciesServiceProtocol: AutoMockable
 {
-    // sourcery:inline:SwiftPackageDependencyService.AutoGenerateProtocol
-    var swiftPackage: SwiftPackageDependenciesProtocol { get }
+    // sourcery:inline:DependenciesService.AutoGenerateProtocol
+    var dependency: DependencyProtocol { get }
 
     init(
         terminal: TerminalWorkerProtocol
@@ -23,9 +23,9 @@ public protocol SwiftPackageDependencyServiceProtocol: AutoMockable
     // sourcery:end
 }
 
-public struct SwiftPackageDependencyService: SwiftPackageDependencyServiceProtocol, AutoGenerateProtocol
+public struct DependencyService: DependenciesServiceProtocol, AutoGenerateProtocol
 {
-    public let swiftPackage: SwiftPackageDependenciesProtocol
+    public let dependency: DependencyProtocol
 
     private let data: Data
 
@@ -42,24 +42,24 @@ public struct SwiftPackageDependencyService: SwiftPackageDependencyServiceProtoc
 
             do
             {
-                swiftPackage = try JSONDecoder().decode(SwiftPackageDependencies.self, from: data)
+                dependency = try JSONDecoder().decode(Dependency.self, from: data)
             }
             catch
             {
-                let location = "\(SwiftPackageDependencyService.self) \(#function) \(#line)"
+                let location = "\(DependencyService.self) \(#function) \(#line)"
                 let error = HighwayError.swiftPackageShowDependencies(output)
                 throw HighwayError.highwayError(atLocation: location, error: error)
             }
         }
         catch
         {
-            throw HighwayError.highwayError(atLocation: "\(SwiftPackageDependencyService.self) \(#function) \(#line)", error: error)
+            throw HighwayError.highwayError(atLocation: "\(DependencyService.self) \(#function) \(#line)", error: error)
         }
     }
 
     public func writeToStubFile() throws
     {
-        let stubFile = try swiftPackage.srcRoot().subfolder(named: "Sources/Stub").createFileIfNeeded(named: "\(SwiftPackageDependencyService.self).json")
+        let stubFile = try dependency.srcRoot().subfolder(named: "Sources/Stub").createFileIfNeeded(named: "\(DependencyService.self).json")
         try stubFile.write(data: data)
     }
 }

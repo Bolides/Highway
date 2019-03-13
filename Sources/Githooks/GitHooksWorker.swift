@@ -19,8 +19,8 @@ public protocol GitHooksWorkerProtocol: AutoMockable
     static var prepushBashScript: String { get }
 
     init(
-        swiftPackageDependencies: SwiftPackageDependenciesProtocol,
-        swiftPackageDump: SwiftPackageDumpProtocol,
+        swiftPackageDependencies: DependencyProtocol,
+        swiftPackageDump: DumpProtocol,
         hwSetupExecutableProductName: String?,
         gitHooksFolder: FolderProtocol?,
         signPost: SignPostProtocol
@@ -47,17 +47,17 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
     # Allow push on success
     """
 
-    private let swiftPackageDependencies: SwiftPackageDependenciesProtocol
+    private let swiftPackageDependencies: DependencyProtocol
     private let signPost: SignPostProtocol
-    private let swiftPackageDump: SwiftPackageDumpProtocol
+    private let swiftPackageDump: DumpProtocol
     private let hwSetupExecutableProductName: String?
     private let gitHooksFolder: FolderProtocol?
 
     /// Will take the first executable it can find in the swifPackage if you do not provice a HWSetup executable name
     // sourcery:includeInitInProtocol
     public init(
-        swiftPackageDependencies: SwiftPackageDependenciesProtocol,
-        swiftPackageDump: SwiftPackageDumpProtocol,
+        swiftPackageDependencies: DependencyProtocol,
+        swiftPackageDump: DumpProtocol,
         hwSetupExecutableProductName: String? = nil,
         gitHooksFolder: FolderProtocol? = nil,
         signPost: SignPostProtocol = SignPost.shared

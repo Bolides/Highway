@@ -69,8 +69,8 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
 
     public init(
         productName: String,
-        swiftPackageDependencies: SwiftPackageDependenciesProtocol,
-        swiftPackageDump: SwiftPackageDumpProtocol,
+        swiftPackageDependencies: DependencyProtocol,
+        swiftPackageDump: DumpProtocol,
         sourceryExecutable: FileProtocol
     ) throws
     {

@@ -10,7 +10,7 @@ import Foundation
 import SourceryAutoProtocols
 import ZFile
 
-public protocol SwiftPackageDumpProtocol: AutoMockable
+public protocol DumpProtocol: AutoMockable
 {
     // sourcery:inline:SwiftPackageDump.AutoGenerateProtocol
     var products: Set<SwiftProduct> { get }
@@ -18,7 +18,7 @@ public protocol SwiftPackageDumpProtocol: AutoMockable
     // sourcery:end
 }
 
-public struct SwiftPackageDump: Decodable, SwiftPackageDumpProtocol, CustomStringConvertible
+public struct Dump: Decodable, DumpProtocol, CustomStringConvertible
 {
     public let products: Set<SwiftProduct>
     public let targets: Set<SwiftTarget>
@@ -27,7 +27,7 @@ public struct SwiftPackageDump: Decodable, SwiftPackageDumpProtocol, CustomStrin
     public var description: String
     {
         return """
-        \(SwiftPackageDump.self)
+        \(Dump.self)
         
         Products
         \(products.map { $0.description }.joined(separator: "\n"))

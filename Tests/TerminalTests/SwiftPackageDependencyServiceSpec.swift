@@ -13,14 +13,14 @@ class SwiftPackageDependencyServiceSpec: QuickSpec {
         
         describe("SwiftPackageDependencyService") {
                         
-            var expectedSwiftPackage: SwiftPackageDependenciesProtocol?
+            var expectedSwiftPackage: DependencyProtocol?
             
             beforeSuite {
                 // get real dependencies
                 expect {
                     let srcroot = try File(path: #file).parentFolder().parentFolder().parentFolder()
                     FileManager.default.changeCurrentDirectoryPath(srcroot.path)
-                    expectedSwiftPackage = try SwiftPackageDependencyService().swiftPackage
+                    expectedSwiftPackage = try DependencyService().dependency
                     
                     return true
                 }.toNot(throwError())

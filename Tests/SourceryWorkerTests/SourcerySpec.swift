@@ -28,16 +28,16 @@ class SourcerySpec: QuickSpec {
             var sut: Sourcery?
             
             
-            var swiftPackageDependencies: SwiftPackageDependenciesProtocol?
-            var swiftPackageDump: SwiftPackageDumpProtocol?
+            var swiftPackageDependencies: DependencyProtocol?
+            var swiftPackageDump: DumpProtocol?
             
             beforeSuite {
                 // get real dependencies
                 expect {
                     let srcroot = try File(path: #file).parentFolder().parentFolder().parentFolder()
                     FileManager.default.changeCurrentDirectoryPath(srcroot.path)
-                    swiftPackageDependencies = try SwiftPackageDependencyService().swiftPackage
-                    swiftPackageDump = try SwiftPackageDumpService(swiftPackageDependencies: swiftPackageDependencies!).swiftPackageDump
+                    swiftPackageDependencies = try DependencyService().dependency
+                    swiftPackageDump = try DumpService(swiftPackageDependencies: swiftPackageDependencies!).dump
                     
                     return true
                     }.toNot(throwError())

@@ -14,7 +14,7 @@ let signPost = SignPost.shared
 
 // MARK: - SwiftPackageDependenciesProtocolMock
 
-open class SwiftPackageDependenciesProtocolMock: SwiftPackageDependenciesProtocol
+open class SwiftPackageDependenciesProtocolMock: DependencyProtocol
 {
     public init() {}
 
@@ -46,7 +46,7 @@ open class SwiftPackageDependenciesProtocolMock: SwiftPackageDependenciesProtoco
     }
 
     public var underlyingVersion: String = "AutoMockable filled value"
-    public var dependencies: [SwiftPackageDependencies] = []
+    public var dependencies: [Dependency] = []
     public var description: String
     {
         get { return underlyingDescription }
@@ -293,7 +293,7 @@ open class SwiftPackageDependenciesProtocolMock: SwiftPackageDependenciesProtoco
 
 // MARK: - SwiftPackageDumpProtocolMock
 
-open class SwiftPackageDumpProtocolMock: SwiftPackageDumpProtocol
+open class SwiftPackageDumpProtocolMock: DumpProtocol
 {
     public init() {}
 

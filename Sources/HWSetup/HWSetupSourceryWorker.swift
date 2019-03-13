@@ -42,9 +42,9 @@ public class HWSetupSourceryWorker: HWSetupSourceryWorkerWorkerProtocol, AutoGen
     // MARK: - Init
 
     public init(
-        swiftPackageDependencies: SwiftPackageDependenciesProtocol,
+        swiftPackageDependencies: DependencyProtocol,
         dispatchGroup: DispatchGroup,
-        swiftPackageDump: SwiftPackageDumpProtocol,
+        swiftPackageDump: DumpProtocol,
         signPost: SignPostProtocol = SignPost.shared,
         queue: DispatchQueue = HWSetupSourceryWorker.queue
     ) throws

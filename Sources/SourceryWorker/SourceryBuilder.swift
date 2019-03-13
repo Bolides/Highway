@@ -20,7 +20,7 @@ public protocol SourceryBuilderProtocol: AutoMockable
 
     init(
         terminalWorker: TerminalWorkerProtocol,
-        disk: SwiftPackageDependenciesProtocol?,
+        disk: DependencyProtocol?,
         signPost: SignPostProtocol,
         systemExecutableProvider: SystemExecutableProviderProtocol
     ) throws
@@ -34,7 +34,7 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
     public static let executalbeName: String = "./.build/x86_64-apple-macosx10.10/release/Sourcery"
 
     private let terminalWorker: TerminalWorkerProtocol
-    private let disk: SwiftPackageDependenciesProtocol
+    private let disk: DependencyProtocol
     private let signPost: SignPostProtocol
     private let systemExecutableProvider: SystemExecutableProviderProtocol
 
@@ -42,7 +42,7 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
     // sourcery:includeInitInProtocol
     public init(
         terminalWorker: TerminalWorkerProtocol = TerminalWorker(),
-        disk: SwiftPackageDependenciesProtocol? = nil,
+        disk: DependencyProtocol? = nil,
         signPost: SignPostProtocol = SignPost.shared,
         systemExecutableProvider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared
     ) throws
@@ -53,7 +53,7 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 
         guard let disk = disk else
         {
-            self.disk = try SwiftPackageDependencyService().swiftPackage
+            self.disk = try DependencyService().dependency
             return
         }
 

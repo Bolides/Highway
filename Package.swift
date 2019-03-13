@@ -11,6 +11,14 @@ public let package = Package(
             name: "HWSetup",
             targets: ["HWSetup"]),
         .library(
+            name: "Highway",
+            targets: ["Highway"]
+        ),
+        .library(
+            name: "HighwayMock",
+            targets: ["HighwayMock"]
+        ),
+        .library(
             name: "Errors",
             targets: ["Errors"]),
         .library(
@@ -89,6 +97,24 @@ public let package = Package(
         .target(
             name: "Errors",
             dependencies: ["SourceryAutoProtocols"]
+        ),
+        .target(
+            name: "Highway",
+            dependencies: [
+                "SourceryAutoProtocols",
+                "Terminal",
+                "Arguments",
+                "SignPost",
+                "ZFile",
+                "SourceryWorker",
+                "HighwayDispatch",
+                "GitHooks"
+            ]
+        ),
+        .target(
+            name: "HighwayMock",
+            dependencies: ["Highway"],
+            path: "Sources/Generated/Highway"
         ),
         .target(
             name: "Arguments",
@@ -248,7 +274,8 @@ public let package = Package(
                     "Terminal",
                     "ZFile",
                     "XCBuild",
-                    "GitHooks"
+                    "GitHooks",
+                    "Highway"
             ]
         ),
         .testTarget(name: "HWSetupTests", dependencies: ["HWSetup", "Quick","Nimble"]),

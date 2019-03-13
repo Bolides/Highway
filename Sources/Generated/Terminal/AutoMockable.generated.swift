@@ -178,17 +178,17 @@ open class PathEnvironmentParserProtocolMock: PathEnvironmentParserProtocol
 
 // MARK: - SwiftPackageDependencyServiceProtocolMock
 
-open class SwiftPackageDependencyServiceProtocolMock: SwiftPackageDependencyServiceProtocol
+open class SwiftPackageDependencyServiceProtocolMock: DependenciesServiceProtocol
 {
     public init() {}
 
-    public var swiftPackage: SwiftPackageDependenciesProtocol
+    public var dependency: DependencyProtocol
     {
         get { return underlyingSwiftPackage }
         set(value) { underlyingSwiftPackage = value }
     }
 
-    public var underlyingSwiftPackage: SwiftPackageDependenciesProtocol!
+    public var underlyingSwiftPackage: DependencyProtocol!
 
     // MARK: - <init> - parameters
 
@@ -241,30 +241,30 @@ open class SwiftPackageDependencyServiceProtocolMock: SwiftPackageDependencyServ
 
 // MARK: - SwiftPackageDumpServiceProtocolMock
 
-open class SwiftPackageDumpServiceProtocolMock: SwiftPackageDumpServiceProtocol
+open class SwiftPackageDumpServiceProtocolMock: DumpServiceProtocol
 {
     public init() {}
 
-    public var swiftPackageDump: SwiftPackageDumpProtocol
+    public var swiftPackageDump: DumpProtocol
     {
         get { return underlyingSwiftPackageDump }
         set(value) { underlyingSwiftPackageDump = value }
     }
 
-    public var underlyingSwiftPackageDump: SwiftPackageDumpProtocol!
+    public var underlyingSwiftPackageDump: DumpProtocol!
 
     // MARK: - <init> - parameters
 
     public var initTerminalSwiftPackageDependenciesThrowableError: Error?
-    public var initTerminalSwiftPackageDependenciesReceivedArguments: (terminal: TerminalWorkerProtocol, swiftPackageDependencies: SwiftPackageDependenciesProtocol)?
+    public var initTerminalSwiftPackageDependenciesReceivedArguments: (terminal: TerminalWorkerProtocol, swiftPackageDependencies: DependencyProtocol)?
 
     // MARK: - <init> - closure mocks
 
-    public var initTerminalSwiftPackageDependenciesClosure: ((TerminalWorkerProtocol, SwiftPackageDependenciesProtocol) throws -> Void)?
+    public var initTerminalSwiftPackageDependenciesClosure: ((TerminalWorkerProtocol, DependencyProtocol) throws -> Void)?
 
     // MARK: - <init> - initializer mocked
 
-    public required init(terminal: TerminalWorkerProtocol, swiftPackageDependencies: SwiftPackageDependenciesProtocol) throws
+    public required init(terminal: TerminalWorkerProtocol, swiftPackageDependencies: DependencyProtocol) throws
     {
         initTerminalSwiftPackageDependenciesReceivedArguments = (terminal: terminal, swiftPackageDependencies: swiftPackageDependencies)
         try? initTerminalSwiftPackageDependenciesClosure?(terminal, swiftPackageDependencies)

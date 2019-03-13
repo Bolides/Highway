@@ -54,15 +54,15 @@ open class SourceryBuilderProtocolMock: SourceryBuilderProtocol
     // MARK: - <init> - parameters
 
     public var initTerminalWorkerDiskSignPostSystemExecutableProviderThrowableError: Error?
-    public var initTerminalWorkerDiskSignPostSystemExecutableProviderReceivedArguments: (terminalWorker: TerminalWorkerProtocol, disk: SwiftPackageDependenciesProtocol?, signPost: SignPostProtocol, systemExecutableProvider: SystemExecutableProviderProtocol)?
+    public var initTerminalWorkerDiskSignPostSystemExecutableProviderReceivedArguments: (terminalWorker: TerminalWorkerProtocol, disk: DependencyProtocol?, signPost: SignPostProtocol, systemExecutableProvider: SystemExecutableProviderProtocol)?
 
     // MARK: - <init> - closure mocks
 
-    public var initTerminalWorkerDiskSignPostSystemExecutableProviderClosure: ((TerminalWorkerProtocol, SwiftPackageDependenciesProtocol?, SignPostProtocol, SystemExecutableProviderProtocol) throws -> Void)?
+    public var initTerminalWorkerDiskSignPostSystemExecutableProviderClosure: ((TerminalWorkerProtocol, DependencyProtocol?, SignPostProtocol, SystemExecutableProviderProtocol) throws -> Void)?
 
     // MARK: - <init> - initializer mocked
 
-    public required init(terminalWorker: TerminalWorkerProtocol, disk: SwiftPackageDependenciesProtocol?, signPost: SignPostProtocol, systemExecutableProvider: SystemExecutableProviderProtocol) throws
+    public required init(terminalWorker: TerminalWorkerProtocol, disk: DependencyProtocol?, signPost: SignPostProtocol, systemExecutableProvider: SystemExecutableProviderProtocol) throws
     {
         initTerminalWorkerDiskSignPostSystemExecutableProviderReceivedArguments = (terminalWorker: terminalWorker, disk: disk, signPost: signPost, systemExecutableProvider: systemExecutableProvider)
         try? initTerminalWorkerDiskSignPostSystemExecutableProviderClosure?(terminalWorker, disk, signPost, systemExecutableProvider)
