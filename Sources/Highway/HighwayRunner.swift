@@ -67,10 +67,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
 
     public func runTests(_ async: @escaping (@escaping HighwayRunner.SyncTestOutput) -> Void)
     {
-        highway.packages.forEach
-        {
-            test(package: $0, async)
-        }
+        test(package: highway.package.package, async)
     }
 
     public func runSourcery(_ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
@@ -109,7 +106,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
 
     public func addGithooksPrePush() throws
     {
-        try highway.githooks.addPrePushToGitHooks()
+        try highway.githooks?.addPrePushToGitHooks()
     }
 
     public func runSwiftformat(_ async: @escaping (@escaping HighwayRunner.SyncSwiftformat) -> Void)

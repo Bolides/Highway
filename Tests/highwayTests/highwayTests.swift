@@ -182,9 +182,7 @@ class HighwaySpec: QuickSpec
                     self.queue.asyncSyncClosure = { $0() }
 
                     self.sut = try Highway(
-                        rootPackage: self.rootPackage,
-                        highwaySetupPackage: self.highwaySetupPackage,
-                        extraFolders: self.extraFolders,
+                        package: (package: self.rootPackage, executable: "MockedSetup"),
                         swiftformatType: SWM.self,
                         githooksType: GHWM.self,
                         sourceryWorkerType: SourceryWorkerMock.self,

@@ -31,7 +31,7 @@ do
     let rootPackage = try Highway.package(for: FileSystem.shared.currentFolder)
     let setupPackage = (package: rootPackage, executable: "HWSetup")
 
-    let highway = try Highway(rootPackage: rootPackage, highwaySetupPackage: setupPackage)
+    let highway = try Highway(package: setupPackage)
 
     highwayRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
 

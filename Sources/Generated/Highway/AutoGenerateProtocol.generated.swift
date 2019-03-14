@@ -19,12 +19,11 @@ import Foundation
  // Generated protocol inline for Highway -> See code in the file of that type
  // sourcery:inline:Highway.AutoGenerateProtocol
  static var queue: HighwayDispatchProtocol { get }
- var packages: [PackageProtocol] { get }
- var rootPackage: PackageProtocol { get }
+ var package: (package: PackageProtocol, executable: String) { get }
  var sourceryBuilder: SourceryBuilderProtocol { get }
  var sourceryWorkers: [SourceryWorkerProtocol] { get }
  var queue: HighwayDispatchProtocol { get }
- var githooks: GitHooksWorkerProtocol { get }
+ var githooks: GitHooksWorkerProtocol? { get }
  var swiftformat: SwiftFormatWorkerProtocol { get }
 
  static func package(for folder: FolderProtocol, terminal: TerminalProtocol = Terminal.shared) throws  -> PackageProtocol

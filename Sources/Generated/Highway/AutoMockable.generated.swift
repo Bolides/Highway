@@ -21,7 +21,13 @@ open class HighwayProtocolMock: HighwayProtocol
 {
     public init() {}
 
-    public var packages: [PackageProtocol] = []
+    public var package: (package: PackageProtocol, executable: String)
+    {
+        get { return underlyingPackage }
+        set(value) { underlyingPackage = value }
+    }
+
+    public var underlyingPackage: (package: PackageProtocol, executable: String)!
     public var sourceryBuilder: SourceryBuilderProtocol
     {
         get { return underlyingSourceryBuilder }
@@ -37,13 +43,7 @@ open class HighwayProtocolMock: HighwayProtocol
     }
 
     public var underlyingQueue: HighwayDispatchProtocol!
-    public var githooks: GitHooksWorkerProtocol
-    {
-        get { return underlyingGithooks }
-        set(value) { underlyingGithooks = value }
-    }
-
-    public var underlyingGithooks: GitHooksWorkerProtocol!
+    public var githooks: GitHooksWorkerProtocol?
     public var swiftformat: SwiftFormatWorkerProtocol
     {
         get { return underlyingSwiftformat }

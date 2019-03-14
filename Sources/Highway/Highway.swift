@@ -19,11 +19,11 @@ import ZFile
 public protocol HighwayProtocol: AutoMockable
 {
     // sourcery:inline:Packages.AutoGenerateProtocol
-    var packages: [PackageProtocol] { get }
+    var package: (package: PackageProtocol, executable: String) { get }
     var sourceryBuilder: SourceryBuilderProtocol { get }
     var sourceryWorkers: [SourceryWorkerProtocol] { get }
     var queue: HighwayDispatchProtocol { get }
-    var githooks: GitHooksWorkerProtocol { get }
+    var githooks: GitHooksWorkerProtocol? { get }
     var swiftformat: SwiftFormatWorkerProtocol { get }
     // sourcery:end
 }
@@ -48,12 +48,11 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         public let dump: DumpProtocol
     }
 
-    public let packages: [PackageProtocol]
-    public let rootPackage: PackageProtocol
+    public let package: (package: PackageProtocol, executable: String)
     public let sourceryBuilder: SourceryBuilderProtocol
     public let sourceryWorkers: [SourceryWorkerProtocol]
     public let queue: HighwayDispatchProtocol
-    public let githooks: GitHooksWorkerProtocol
+    public let githooks: GitHooksWorkerProtocol?
     public let swiftformat: SwiftFormatWorkerProtocol
 
     // MARK: - STATIC - Generate Packages for Folders
@@ -75,13 +74,10 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
 
     // MARK: - Init
 
-    // Will setup Highway in folder of srcRootDependencies and optionaly in the extra folders provided
     public init(
-        rootPackage: PackageProtocol,
-        highwaySetupPackage: (package: PackageProtocol, executable: String)?, // use the static function to optionally create package if it is not in the srcRootDependencies. This package will be used to create
-        extraFolders: [FolderProtocol]? = nil, // Packages in these folders will be created
+        package: (package: PackageProtocol, executable: String),
         swiftformatType: SwiftFormatWorkerProtocol.Type = SwiftFormatWorker.self,
-        githooksType: GitHooksWorkerProtocol.Type = GitHooksWorker.self,
+        githooksType: GitHooksWorkerProtocol.Type? = GitHooksWorker.self, // if set to nil githooks will not be added
         sourceryWorkerType: SourceryWorkerProtocol.Type = SourceryWorker.self,
         sourceryBuilderType: SourceryBuilderProtocol.Type = SourceryBuilder.self,
         terminal: TerminalProtocol = Terminal.shared,
@@ -93,73 +89,39 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         self.queue = queue
         signPost.message("📦 \(Highway.self) ...")
 
-        var packages = [PackageProtocol]()
+        self.package = package
 
-        self.rootPackage = rootPackage
-
-        packages.append(rootPackage)
-
-        try extraFolders?.forEach { packages.append(try Highway.package(for: $0, terminal: terminal)) }
-
-        signPost.message(
-            """
-            📦 \(Highway.self) for
-            \(try packages.map { "  * \(try $0.dependencies.srcRoot().path)" }.joined(separator: "\n"))
-            ✅
-            """
-        )
-        self.packages = packages
-
-        let builder = try sourceryBuilderType.init(terminalWorker: terminal, disk: rootPackage.dependencies, signPost: signPost, systemExecutableProvider: SystemExecutableProvider())
+        let builder = try sourceryBuilderType.init(terminalWorker: terminal, disk: package.package.dependencies, signPost: signPost, systemExecutableProvider: SystemExecutableProvider())
         sourceryBuilder = builder
         let sourcery = try builder.attemptToBuildSourceryIfNeeded()
 
-        let temp: [[SourceryWorkerProtocol]] = try packages
-            .compactMap
-        { package in
-            let dump = package.dump
-            let dependencies = package.dependencies
-            let products = dump.products.filter { !$0.name.hasSuffix("Mock") }
+        let dump = package.package.dump
+        let dependencies = package.package.dependencies
+        let products = dump.products.filter { !$0.name.hasSuffix("Mock") }
 
-            let sourceryModels: [SourceryProtocol] = try products
-                .map
-            { product in
-                try sourceryType.init(
-                    productName: product.name,
-                    swiftPackageDependencies: dependencies,
-                    swiftPackageDump: dump,
-                    sourceryExecutable: sourcery,
-                    signPost: signPost
-                )
-            }
-            return try sourceryModels.map { try sourceryWorkerType.init(sourcery: $0, terminalWorker: terminal, signPost: signPost, queue: queue) }
-        }
-
-        sourceryWorkers = temp.flatMap { $0 }
-
-        if let highwaySetupPackage = highwaySetupPackage
-        {
-            githooks = githooksType.init(
-                swiftPackageDependencies: highwaySetupPackage.package.dependencies,
-                swiftPackageDump: highwaySetupPackage.package.dump,
-                hwSetupExecutableProductName: highwaySetupPackage.executable,
-                gitHooksFolder: try rootPackage.dependencies.srcRoot().subfolder(named: ".git/hooks"),
+        let sourceryModels: [SourceryProtocol] = try products
+            .map
+        { product in
+            try sourceryType.init(
+                productName: product.name,
+                swiftPackageDependencies: dependencies,
+                swiftPackageDump: dump,
+                sourceryExecutable: sourcery,
                 signPost: signPost
             )
         }
-        else
-        {
-            githooks = githooksType.init(
-                swiftPackageDependencies: rootPackage.dependencies,
-                swiftPackageDump: rootPackage.dump,
-                hwSetupExecutableProductName: rootPackage.name,
-                gitHooksFolder: try rootPackage.dependencies.srcRoot().subfolder(named: ".git/hooks"),
-                signPost: signPost
-            )
-        }
+        sourceryWorkers = try sourceryModels.map { try sourceryWorkerType.init(sourcery: $0, terminalWorker: terminal, signPost: signPost, queue: queue) }
+
+        githooks = githooksType?.init(
+            swiftPackageDependencies: package.package.dependencies,
+            swiftPackageDump: package.package.dump,
+            hwSetupExecutableProductName: package.executable,
+            gitHooksFolder: try package.package.dependencies.srcRoot().subfolder(named: ".git/hooks"),
+            signPost: signPost
+        )
 
         swiftformat = try swiftformatType.init(
-            folderToFormatRecursive: try rootPackage.dependencies.srcRoot(),
+            folderToFormatRecursive: try package.package.dependencies.srcRoot(),
             queue: queue,
             signPost: signPost
         )
