@@ -20,14 +20,14 @@ import Foundation
  // sourcery:inline:Highway.AutoGenerateProtocol
  static var queue: HighwayDispatchProtocol { get }
  var packages: [PackageProtocol] { get }
- var srcRootDependencies: DependencyProtocol { get }
+ var rootPackage: PackageProtocol { get }
  var sourceryBuilder: SourceryBuilderProtocol { get }
  var sourceryWorkers: [SourceryWorkerProtocol] { get }
  var queue: HighwayDispatchProtocol { get }
  var githooks: GitHooksWorkerProtocol { get }
  var swiftformat: SwiftFormatWorkerProtocol { get }
 
- static func package(for folder: FolderProtocol, terminal: TerminalProtocol) throws  -> Highway.Package
+ static func package(for folder: FolderProtocol, terminal: TerminalProtocol = Terminal.shared) throws  -> PackageProtocol
  // sourcery:end
  // Generated protocol inline for Highway.Package -> See code in the file of that type
  // sourcery:inline:Highway.Package.AutoGenerateProtocol

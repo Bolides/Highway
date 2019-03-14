@@ -5,6 +5,7 @@ import Foundation
 import GitHooksMock
 import Highway
 import HighwayDispatchMock
+import HighwayMock
 import Nimble
 import Quick
 import SignPost
@@ -50,9 +51,10 @@ class HighwaySpec: QuickSpec
 {
     var sut: Highway?
 
-    var srcRootDependencies: DependencyProtocolMock!
+    var rootPackage: PackageProtocolMock!
     var extraFolders: [FolderProtocolMock]!
-    var highwaySetupProductName: String?
+    var highwaySetupPackage: (package: PackageProtocol, executable: String)?
+    var highwaySetupPackageMock: PackageProtocolMock!
     var swiftformat: SwiftFormatWorkerProtocolMock!
     var githooks: GitHooksWorkerProtocolMock!
     var sourceryWorker: SourceryWorkerProtocolMock!
@@ -69,14 +71,28 @@ class HighwaySpec: QuickSpec
             {
                 expect
                 {
-                    self.srcRootDependencies = DependencyProtocolMock()
                     let srcRoot = try FolderProtocolMock()
-                    self.srcRootDependencies.srcRootReturnValue = srcRoot
+                    srcRoot.subfolderNamedClosure = { _ in
+                        try! FolderProtocolMock()
+                    }
+                    let dependencies = DependencyProtocolMock()
+                    dependencies.srcRootReturnValue = srcRoot
+
+                    let dump = DumpProtocolMock()
+                    dump.underlyingProducts = Set([SwiftProduct(name: "MockProduct", product_type: "library")])
+
+                    self.rootPackage = PackageProtocolMock()
+                    self.rootPackage.underlyingDependencies = dependencies
+                    self.rootPackage.underlyingDump = dump
+
+                    self.highwaySetupPackageMock = PackageProtocolMock()
+                    self.highwaySetupPackageMock.underlyingDependencies = dependencies
+                    self.highwaySetupPackageMock.underlyingDump = dump
+
+                    self.highwaySetupPackage = (package: self.highwaySetupPackageMock, executable: "Mock")
 
                     let extraFolder = try FolderProtocolMock()
                     self.extraFolders = [extraFolder]
-
-                    self.highwaySetupProductName = "Mock"
 
                     self.terminal = TerminalProtocolMock()
                     let terminalShowDependenciesRepsonse = """
@@ -166,9 +182,9 @@ class HighwaySpec: QuickSpec
                     self.queue.asyncSyncClosure = { $0() }
 
                     self.sut = try Highway(
-                        srcRootDependencies: self.srcRootDependencies,
+                        rootPackage: self.rootPackage,
+                        highwaySetupPackage: self.highwaySetupPackage,
                         extraFolders: self.extraFolders,
-                        highwaySetupProductName: self.highwaySetupProductName,
                         swiftformatType: SWM.self,
                         githooksType: GHWM.self,
                         sourceryWorkerType: SourceryWorkerMock.self,

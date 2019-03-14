@@ -20,7 +20,6 @@ public protocol HighwayProtocol: AutoMockable
 {
     // sourcery:inline:Packages.AutoGenerateProtocol
     var packages: [PackageProtocol] { get }
-    var srcRootDependencies: DependencyProtocol { get }
     var sourceryBuilder: SourceryBuilderProtocol { get }
     var sourceryWorkers: [SourceryWorkerProtocol] { get }
     var queue: HighwayDispatchProtocol { get }
@@ -31,7 +30,7 @@ public protocol HighwayProtocol: AutoMockable
 
 public protocol PackageProtocol: AutoMockable
 {
-    // sourcery:inline:SignPostPackages.Package.AutoGenerateProtocol
+    // sourcery:inline:Highway.Package.AutoGenerateProtocol
     var name: String { get }
     var dependencies: DependencyProtocol { get }
     var dump: DumpProtocol { get }
@@ -50,7 +49,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
     }
 
     public let packages: [PackageProtocol]
-    public let srcRootDependencies: DependencyProtocol
+    public let rootPackage: PackageProtocol
     public let sourceryBuilder: SourceryBuilderProtocol
     public let sourceryWorkers: [SourceryWorkerProtocol]
     public let queue: HighwayDispatchProtocol
@@ -59,7 +58,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
 
     // MARK: - STATIC - Generate Packages for Folders
 
-    public static func package(for folder: FolderProtocol, terminal: TerminalProtocol) throws -> Highway.Package
+    public static func package(for folder: FolderProtocol, terminal: TerminalProtocol = Terminal.shared) throws -> PackageProtocol
     {
         let originalFolder = FileSystem.shared.currentFolder
         FileManager.default.changeCurrentDirectoryPath(folder.path)
@@ -78,9 +77,9 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
 
     // Will setup Highway in folder of srcRootDependencies and optionaly in the extra folders provided
     public init(
-        srcRootDependencies: DependencyProtocol,
-        extraFolders: [FolderProtocol]? = nil,
-        highwaySetupProductName: String? = nil, // if nothing provided the name or the root package is taken
+        rootPackage: PackageProtocol,
+        highwaySetupPackage: (package: PackageProtocol, executable: String)?, // use the static function to optionally create package if it is not in the srcRootDependencies. This package will be used to create
+        extraFolders: [FolderProtocol]? = nil, // Packages in these folders will be created
         swiftformatType: SwiftFormatWorkerProtocol.Type = SwiftFormatWorker.self,
         githooksType: GitHooksWorkerProtocol.Type = GitHooksWorker.self,
         sourceryWorkerType: SourceryWorkerProtocol.Type = SourceryWorker.self,
@@ -92,12 +91,11 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
     ) throws
     {
         self.queue = queue
-        self.srcRootDependencies = srcRootDependencies
         signPost.message("📦 \(Highway.self) ...")
 
-        var packages = [Highway.Package]()
+        var packages = [PackageProtocol]()
 
-        let rootPackage = try Highway.package(for: try srcRootDependencies.srcRoot(), terminal: terminal)
+        self.rootPackage = rootPackage
 
         packages.append(rootPackage)
 
@@ -112,7 +110,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         )
         self.packages = packages
 
-        let builder = try sourceryBuilderType.init(terminalWorker: terminal, disk: srcRootDependencies, signPost: signPost, systemExecutableProvider: SystemExecutableProvider())
+        let builder = try sourceryBuilderType.init(terminalWorker: terminal, disk: rootPackage.dependencies, signPost: signPost, systemExecutableProvider: SystemExecutableProvider())
         sourceryBuilder = builder
         let sourcery = try builder.attemptToBuildSourceryIfNeeded()
 
@@ -139,13 +137,27 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
 
         sourceryWorkers = temp.flatMap { $0 }
 
-        githooks = githooksType.init(
-            swiftPackageDependencies: rootPackage.dependencies,
-            swiftPackageDump: rootPackage.dump,
-            hwSetupExecutableProductName: highwaySetupProductName == nil ? rootPackage.name : highwaySetupProductName!,
-            gitHooksFolder: try rootPackage.dependencies.srcRoot().subfolder(named: ".git/hooks"),
-            signPost: signPost
-        )
+        if let highwaySetupPackage = highwaySetupPackage
+        {
+            githooks = githooksType.init(
+                swiftPackageDependencies: highwaySetupPackage.package.dependencies,
+                swiftPackageDump: highwaySetupPackage.package.dump,
+                hwSetupExecutableProductName: highwaySetupPackage.executable,
+                gitHooksFolder: try rootPackage.dependencies.srcRoot().subfolder(named: ".git/hooks"),
+                signPost: signPost
+            )
+        }
+        else
+        {
+            githooks = githooksType.init(
+                swiftPackageDependencies: rootPackage.dependencies,
+                swiftPackageDump: rootPackage.dump,
+                hwSetupExecutableProductName: rootPackage.name,
+                gitHooksFolder: try rootPackage.dependencies.srcRoot().subfolder(named: ".git/hooks"),
+                signPost: signPost
+            )
+        }
+
         swiftformat = try swiftformatType.init(
             folderToFormatRecursive: try rootPackage.dependencies.srcRoot(),
             queue: queue,

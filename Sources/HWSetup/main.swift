@@ -8,6 +8,7 @@ import SourceryWorker
 import SwiftFormatWorker
 import Terminal
 import XCBuild
+import ZFile
 
 // MARK: - PREPARE
 
@@ -27,7 +28,10 @@ do
 
     // Swift Package
 
-    let highway = try Highway(srcRootDependencies: try DependencyService().dependency, highwaySetupProductName: "HWSetup")
+    let rootPackage = try Highway.package(for: FileSystem.shared.currentFolder)
+    let setupPackage = (package: rootPackage, executable: "HWSetup")
+
+    let highway = try Highway(rootPackage: rootPackage, highwaySetupPackage: setupPackage)
 
     highwayRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
 

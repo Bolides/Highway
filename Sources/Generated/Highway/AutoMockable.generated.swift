@@ -22,13 +22,6 @@ open class HighwayProtocolMock: HighwayProtocol
     public init() {}
 
     public var packages: [PackageProtocol] = []
-    public var srcRootDependencies: DependencyProtocol
-    {
-        get { return underlyingSrcRootDependencies }
-        set(value) { underlyingSrcRootDependencies = value }
-    }
-
-    public var underlyingSrcRootDependencies: DependencyProtocol!
     public var sourceryBuilder: SourceryBuilderProtocol
     {
         get { return underlyingSourceryBuilder }
