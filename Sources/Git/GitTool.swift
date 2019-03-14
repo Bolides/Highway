@@ -9,13 +9,13 @@ public struct GitTool: AutoGenerateProtocol
     // MARK: - Properties
 
     private let systemExecutableProvider: SystemExecutableProviderProtocol
-    private let terminal: TerminalWorkerProtocol
+    private let terminal: TerminalProtocol
 
     // MARK: - Init
 
     public init(
         systemExecutableProvider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared,
-        terminal: TerminalWorkerProtocol = TerminalWorker.shared
+        terminal: TerminalProtocol = Terminal.shared
     )
     {
         self.systemExecutableProvider = systemExecutableProvider

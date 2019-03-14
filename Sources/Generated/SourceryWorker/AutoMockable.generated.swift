@@ -54,15 +54,15 @@ open class SourceryBuilderProtocolMock: SourceryBuilderProtocol
     // MARK: - <init> - parameters
 
     public var initTerminalWorkerDiskSignPostSystemExecutableProviderThrowableError: Error?
-    public var initTerminalWorkerDiskSignPostSystemExecutableProviderReceivedArguments: (terminalWorker: TerminalWorkerProtocol, disk: DependencyProtocol?, signPost: SignPostProtocol, systemExecutableProvider: SystemExecutableProviderProtocol)?
+    public var initTerminalWorkerDiskSignPostSystemExecutableProviderReceivedArguments: (terminalWorker: TerminalProtocol, disk: DependencyProtocol?, signPost: SignPostProtocol, systemExecutableProvider: SystemExecutableProviderProtocol)?
 
     // MARK: - <init> - closure mocks
 
-    public var initTerminalWorkerDiskSignPostSystemExecutableProviderClosure: ((TerminalWorkerProtocol, DependencyProtocol?, SignPostProtocol, SystemExecutableProviderProtocol) throws -> Void)?
+    public var initTerminalWorkerDiskSignPostSystemExecutableProviderClosure: ((TerminalProtocol, DependencyProtocol?, SignPostProtocol, SystemExecutableProviderProtocol) throws -> Void)?
 
     // MARK: - <init> - initializer mocked
 
-    public required init(terminalWorker: TerminalWorkerProtocol, disk: DependencyProtocol?, signPost: SignPostProtocol, systemExecutableProvider: SystemExecutableProviderProtocol) throws
+    public required init(terminalWorker: TerminalProtocol, disk: DependencyProtocol?, signPost: SignPostProtocol, systemExecutableProvider: SystemExecutableProviderProtocol) throws
     {
         initTerminalWorkerDiskSignPostSystemExecutableProviderReceivedArguments = (terminalWorker: terminalWorker, disk: disk, signPost: signPost, systemExecutableProvider: systemExecutableProvider)
         try? initTerminalWorkerDiskSignPostSystemExecutableProviderClosure?(terminalWorker, disk, signPost, systemExecutableProvider)
@@ -214,15 +214,15 @@ open class SourceryWorkerProtocolMock: SourceryWorkerProtocol
     // MARK: - <init> - parameters
 
     public var initSourceryTerminalWorkerSignPostQueueThrowableError: Error?
-    public var initSourceryTerminalWorkerSignPostQueueReceivedArguments: (sourcery: SourceryProtocol, terminalWorker: TerminalWorkerProtocol, signPost: SignPostProtocol, queue: HighwayDispatchProtocol)?
+    public var initSourceryTerminalWorkerSignPostQueueReceivedArguments: (sourcery: SourceryProtocol, terminalWorker: TerminalProtocol, signPost: SignPostProtocol, queue: HighwayDispatchProtocol)?
 
     // MARK: - <init> - closure mocks
 
-    public var initSourceryTerminalWorkerSignPostQueueClosure: ((SourceryProtocol, TerminalWorkerProtocol, SignPostProtocol, HighwayDispatchProtocol) throws -> Void)?
+    public var initSourceryTerminalWorkerSignPostQueueClosure: ((SourceryProtocol, TerminalProtocol, SignPostProtocol, HighwayDispatchProtocol) throws -> Void)?
 
     // MARK: - <init> - initializer mocked
 
-    public required init(sourcery: SourceryProtocol, terminalWorker: TerminalWorkerProtocol, signPost: SignPostProtocol, queue: HighwayDispatchProtocol) throws
+    public required init(sourcery: SourceryProtocol, terminalWorker: TerminalProtocol, signPost: SignPostProtocol, queue: HighwayDispatchProtocol) throws
     {
         initSourceryTerminalWorkerSignPostQueueReceivedArguments = (sourcery: sourcery, terminalWorker: terminalWorker, signPost: signPost, queue: queue)
         try? initSourceryTerminalWorkerSignPostQueueClosure?(sourcery, terminalWorker, signPost, queue)

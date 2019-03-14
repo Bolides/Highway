@@ -8,14 +8,14 @@ public final class GitAutotag
 {
     // MARK: - Properties
 
-    public let terminal: TerminalWorkerProtocol
+    public let terminal: TerminalProtocol
     public let systemExecutableProvider: SystemExecutableProviderProtocol
 
     // MARK: - Init
 
     public init(
         systemExecutableProvider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared,
-        terminal: TerminalWorkerProtocol = TerminalWorker.shared
+        terminal: TerminalProtocol = Terminal.shared
     ) throws
     {
         self.terminal = terminal

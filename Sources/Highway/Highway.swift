@@ -59,7 +59,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
 
     // MARK: - STATIC - Generate Packages for Folders
 
-    public static func package(for folder: FolderProtocol, terminal: TerminalWorkerProtocol) throws -> Highway.Package
+    public static func package(for folder: FolderProtocol, terminal: TerminalProtocol) throws -> Highway.Package
     {
         let originalFolder = FileSystem.shared.currentFolder
         FileManager.default.changeCurrentDirectoryPath(folder.path)
@@ -85,7 +85,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         githooksType: GitHooksWorkerProtocol.Type = GitHooksWorker.self,
         sourceryWorkerType: SourceryWorkerProtocol.Type = SourceryWorker.self,
         sourceryBuilderType: SourceryBuilderProtocol.Type = SourceryBuilder.self,
-        terminal: TerminalWorkerProtocol = TerminalWorker.shared,
+        terminal: TerminalProtocol = Terminal.shared,
         signPost: SignPostProtocol = SignPost.shared,
         queue: HighwayDispatchProtocol = Highway.queue,
         sourceryType: SourceryProtocol.Type = Sourcery.self

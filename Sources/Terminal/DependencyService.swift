@@ -18,7 +18,7 @@ public protocol DependencyServiceProtocol: AutoMockable
     var dependency: DependencyProtocol { get }
 
     init(
-        terminal: TerminalWorkerProtocol,
+        terminal: TerminalProtocol,
         signPost: SignPostProtocol
     ) throws
     func writeToStubFile() throws
@@ -32,7 +32,7 @@ public struct DependencyService: DependencyServiceProtocol, AutoGenerateProtocol
     private let data: Data
 
     // sourcery:includeInitInProtocol
-    public init(terminal: TerminalWorkerProtocol = TerminalWorker.shared, signPost: SignPostProtocol = SignPost.shared) throws
+    public init(terminal: TerminalProtocol = Terminal.shared, signPost: SignPostProtocol = SignPost.shared) throws
     {
         do
         {

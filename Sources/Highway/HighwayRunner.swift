@@ -45,7 +45,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
 
     // MARK: - Private
 
-    private let terminal: TerminalWorkerProtocol
+    private let terminal: TerminalProtocol
     private let signPost: SignPostProtocol
     private let queue: HighwayDispatchProtocol
     private let dispatchGroup: DispatchGroup
@@ -54,7 +54,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
         highway: HighwayProtocol,
         dispatchGroup: DispatchGroup,
         queue: HighwayDispatchProtocol = HighwayRunner.queue,
-        terminal: TerminalWorkerProtocol = TerminalWorker.shared,
+        terminal: TerminalProtocol = Terminal.shared,
         signPost: SignPostProtocol = SignPost.shared
     )
     {
@@ -173,7 +173,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
                 async { testReport }
                 FileManager.default.changeCurrentDirectoryPath(originalFolder.path)
             }
-            catch let TerminalWorker.Error.unknownTask(errorOutput: output)
+            catch let Terminal.Error.unknownTask(errorOutput: output)
             {
                 let testReport = TestReport(output: output)
                 _error = HighwayError.failedToCompleteTask(

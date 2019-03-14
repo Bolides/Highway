@@ -29,7 +29,7 @@ public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol
 
     private let systemExecutableProvider: SystemExecutableProviderProtocol
     private let fileSystem: FileSystemProtocol
-    private let terminalWorker: TerminalWorkerProtocol
+    private let terminalWorker: TerminalProtocol
 
     private let signPost: SignPostProtocol
 
@@ -37,7 +37,7 @@ public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol
 
     public init(
         systemExecutableProvider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared,
-        terminalWorker: TerminalWorkerProtocol = TerminalWorker.shared,
+        terminalWorker: TerminalProtocol = Terminal.shared,
         fileSystem: FileSystemProtocol = FileSystem.shared,
         signPost: SignPostProtocol = SignPost.shared
     )
@@ -127,7 +127,7 @@ public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol
             let output = try terminalWorker.runProcess(xcbuild.toProcess)
             return TestReport(output: output)
         }
-        catch let Terminal.TerminalWorker.Error.unknownTask(errorOutput: errorOutput)
+        catch let Terminal.Error.unknownTask(errorOutput: errorOutput)
         {
             let report = TestReport(output: errorOutput)
             throw TestRunError.testsFailed(report: report)

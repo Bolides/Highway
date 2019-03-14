@@ -19,7 +19,7 @@ public protocol SourceryBuilderProtocol: AutoMockable
     static var executalbeName: String { get }
 
     init(
-        terminalWorker: TerminalWorkerProtocol,
+        terminalWorker: TerminalProtocol,
         disk: DependencyProtocol?,
         signPost: SignPostProtocol,
         systemExecutableProvider: SystemExecutableProviderProtocol
@@ -33,7 +33,7 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 {
     public static let executalbeName: String = "./.build/x86_64-apple-macosx10.10/release/Sourcery"
 
-    private let terminalWorker: TerminalWorkerProtocol
+    private let terminalWorker: TerminalProtocol
     private let disk: DependencyProtocol
     private let signPost: SignPostProtocol
     private let systemExecutableProvider: SystemExecutableProviderProtocol
@@ -41,7 +41,7 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
     /// Will try to init Disk when no dis provided
     // sourcery:includeInitInProtocol
     public init(
-        terminalWorker: TerminalWorkerProtocol = TerminalWorker(),
+        terminalWorker: TerminalProtocol = Terminal.shared,
         disk: DependencyProtocol? = nil,
         signPost: SignPostProtocol = SignPost.shared,
         systemExecutableProvider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared

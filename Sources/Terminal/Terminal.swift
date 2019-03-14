@@ -4,9 +4,9 @@ import SignPost
 import SourceryAutoProtocols
 import ZFile
 
-// MARK: - TerminalWorker
+// MARK: - Terminal
 
-public protocol TerminalWorkerProtocol: AutoMockable
+public protocol TerminalProtocol: AutoMockable
 {
     @discardableResult
     func terminal(task: TerminalTask) throws -> [String]
@@ -18,9 +18,9 @@ public protocol TerminalWorkerProtocol: AutoMockable
     func runProcess(_ processTask: Process) throws -> [String]
 }
 
-public struct TerminalWorker: TerminalWorkerProtocol
+public struct Terminal: TerminalProtocol
 {
-    public static let shared: TerminalWorkerProtocol = TerminalWorker()
+    public static let shared: TerminalProtocol = Terminal()
 
     public let signPost: SignPostProtocol
 
@@ -77,16 +77,16 @@ public struct TerminalWorker: TerminalWorkerProtocol
         {
             if let task = task
             {
-                throw TerminalWorker.Error.errorUnkownExitCode(code: Int(processTask.terminationStatus), task: task, output: output ?? [])
+                throw Terminal.Error.errorUnkownExitCode(code: Int(processTask.terminationStatus), task: task, output: output ?? [])
             }
             else if let output = output
             {
                 finalResult.append(contentsOf: output)
-                throw TerminalWorker.Error.unknownTask(errorOutput: finalResult)
+                throw Terminal.Error.unknownTask(errorOutput: finalResult)
             }
             else
             {
-                throw TerminalWorker.Error.unknownTask(errorOutput: ["No exit code or output"])
+                throw Terminal.Error.unknownTask(errorOutput: ["No exit code or output"])
             }
         }
 
@@ -94,16 +94,16 @@ public struct TerminalWorker: TerminalWorkerProtocol
         {
             if let task = task
             {
-                throw TerminalWorker.Error.errorExitCode(code: exitCode, task: task, output: output ?? [])
+                throw Terminal.Error.errorExitCode(code: exitCode, task: task, output: output ?? [])
             }
             else if let output = output
             {
                 finalResult.append(contentsOf: output)
-                throw TerminalWorker.Error.unknownTask(errorOutput: finalResult)
+                throw Terminal.Error.unknownTask(errorOutput: finalResult)
             }
             else
             {
-                throw TerminalWorker.Error.unknownTask(errorOutput: ["No exit code or output"])
+                throw Terminal.Error.unknownTask(errorOutput: ["No exit code or output"])
             }
         }
 
@@ -111,16 +111,16 @@ public struct TerminalWorker: TerminalWorkerProtocol
         {
             if let task = task
             {
-                throw TerminalWorker.Error.emptyOutputFromTask(task)
+                throw Terminal.Error.emptyOutputFromTask(task)
             }
             else if let output = output
             {
                 finalResult.append(contentsOf: output)
-                throw TerminalWorker.Error.unknownTask(errorOutput: finalResult)
+                throw Terminal.Error.unknownTask(errorOutput: finalResult)
             }
             else
             {
-                throw TerminalWorker.Error.unknownTask(errorOutput: ["No exit code or output"])
+                throw Terminal.Error.unknownTask(errorOutput: ["No exit code or output"])
             }
         }
 

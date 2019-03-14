@@ -5,6 +5,7 @@
 //  Created by Stijn on 15/12/2018.
 //
 
+import ArgumentsMock
 import Foundation
 import HighwayDispatchMock
 import Nimble
@@ -15,7 +16,6 @@ import SourceryWorkerMock
 import TerminalMock
 import ZFile
 import ZFileMock
-import ArgumentsMock
 
 class SourceryWorkerSpec: QuickSpec
 {
@@ -37,14 +37,12 @@ class SourceryWorkerSpec: QuickSpec
             var sut: SourceryWorker?
 
             var sourcery: SourceryProtocolMock!
-            var terminalWorker: TerminalWorkerProtocolMock!
+            var terminalWorker: TerminalProtocolMock!
             var signPost: SignPostProtocolMock!
             var queue: HighwayDispatchProtocolMock!
 
             beforeEach
             {
-                
-
                 expect
                 {
                     signPost = SignPostProtocolMock()
@@ -56,13 +54,13 @@ class SourceryWorkerSpec: QuickSpec
                     sourcesFolder.makeFileSequenceRecursiveIncludeHiddenReturnValue = try! file.parent?.createSubfolderIfNeeded(withName: "MockTestOutput").makeFileSequence(recursive: false, includeHidden: true)
                     sourcery.outputFolder = sourcesFolder
                     sourcery.underlyingImports = Set([TemplatePrepend(name: Set([TemplatePrepend.Import(name: "MockImport")]), template: "MockTemplate")])
-                    
-                    terminalWorker = TerminalWorkerProtocolMock()
+
+                    terminalWorker = TerminalProtocolMock()
                     terminalWorker.terminalTaskReturnValue = ["mocked terminal output"]
-                    
+
                     queue = HighwayDispatchProtocolMock()
                     queue.asyncSyncClosure = { $0() }
-                    
+
                     sut = try SourceryWorker(
                         sourcery: sourcery,
                         terminalWorker: terminalWorker,

@@ -17,14 +17,14 @@ class XCBuildSpec: QuickSpec
         {
             var sut: XCBuild?
 
-            var terminal: TerminalWorkerProtocolMock!
+            var terminal: TerminalProtocolMock!
             var xcbuildExecutable: MinimalTestOptionsProtocolMock!
             var system: SystemExecutableProviderProtocolMock!
 
             beforeEach
             {
                 xcbuildExecutable = MinimalTestOptionsProtocolMock()
-                terminal = TerminalWorkerProtocolMock()
+                terminal = TerminalProtocolMock()
                 system = SystemExecutableProviderProtocolMock()
 
                 sut = XCBuild(systemExecutableProvider: system, terminalWorker: terminal)

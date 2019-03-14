@@ -25,7 +25,7 @@ class SourceryBuilderSpec: QuickSpec
         {
             var sut: SourceryBuilder?
 
-            var terminal: TerminalWorkerProtocolMock!
+            var terminal: TerminalProtocolMock!
             var disk: DependencyProtocolMock!
             var signPost: SignPostProtocolMock!
             var srcRootFolder: FolderProtocolMock!
@@ -48,7 +48,7 @@ class SourceryBuilderSpec: QuickSpec
 //                    checkouts: try! FolderProtocolMock(),
 //                    sourcery: sourceryExecutableFolder
 //                )
-                terminal = TerminalWorkerProtocolMock()
+                terminal = TerminalProtocolMock()
                 signPost = SignPostProtocolMock()
 
                 expect

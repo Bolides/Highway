@@ -21,7 +21,7 @@ import Foundation
  var dependency: DependencyProtocol { get }
 
  init(
-   terminal: TerminalWorkerProtocol,
+   terminal: TerminalProtocol,
    signPost: SignPostProtocol
  )  throws
  func writeToStubFile() throws
@@ -31,7 +31,7 @@ import Foundation
  var dump: DumpProtocol { get }
 
  init(
-   terminal: TerminalWorkerProtocol,
+   terminal: TerminalProtocol,
    swiftPackageDependencies: DependencyProtocol
  )  throws
  func writeToStubFile() throws

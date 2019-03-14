@@ -29,7 +29,7 @@ private class SourceryBuilderMock: SourceryBuilderProtocolMock
 {
     let executable = try! FileProtocolMock()
 
-    required init(terminalWorker: TerminalWorkerProtocol, disk: DependencyProtocol?, signPost: SignPostProtocol, systemExecutableProvider: SystemExecutableProviderProtocol) throws
+    required init(terminalWorker: TerminalProtocol, disk: DependencyProtocol?, signPost: SignPostProtocol, systemExecutableProvider: SystemExecutableProviderProtocol) throws
     {
         try super.init(terminalWorker: terminalWorker, disk: disk, signPost: signPost, systemExecutableProvider: systemExecutableProvider)
         attemptToBuildSourceryIfNeededClosure = {
@@ -57,7 +57,7 @@ class HighwaySpec: QuickSpec
     var githooks: GitHooksWorkerProtocolMock!
     var sourceryWorker: SourceryWorkerProtocolMock!
     var sourceryBuilder: SourceryBuilderProtocolMock!
-    var terminal: TerminalWorkerProtocolMock!
+    var terminal: TerminalProtocolMock!
     var signPost: SignPostProtocolMock!
     var queue: HighwayDispatchProtocolMock!
 
@@ -78,7 +78,7 @@ class HighwaySpec: QuickSpec
 
                     self.highwaySetupProductName = "Mock"
 
-                    self.terminal = TerminalWorkerProtocolMock()
+                    self.terminal = TerminalProtocolMock()
                     let terminalShowDependenciesRepsonse = """
                     {
                       "name": "Highway",

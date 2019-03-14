@@ -40,12 +40,12 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
     private let queue: HighwayDispatchProtocol
 
     private let signPost: SignPostProtocol
-    private let terminalWorker: TerminalWorkerProtocol
+    private let terminalWorker: TerminalProtocol
 
     // sourcery:includeInitInProtocol
     public init(
         sourcery: SourceryProtocol,
-        terminalWorker: TerminalWorkerProtocol = TerminalWorker(),
+        terminalWorker: TerminalProtocol = Terminal.shared,
         signPost: SignPostProtocol = SignPost.shared,
         queue: HighwayDispatchProtocol = SourceryWorker.queue
     ) throws

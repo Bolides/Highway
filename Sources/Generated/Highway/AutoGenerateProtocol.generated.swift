@@ -27,7 +27,7 @@ import Foundation
  var githooks: GitHooksWorkerProtocol { get }
  var swiftformat: SwiftFormatWorkerProtocol { get }
 
- static func package(for folder: FolderProtocol, terminal: TerminalWorkerProtocol) throws  -> Highway.Package
+ static func package(for folder: FolderProtocol, terminal: TerminalProtocol) throws  -> Highway.Package
  // sourcery:end
  // Generated protocol inline for Highway.Package -> See code in the file of that type
  // sourcery:inline:Highway.Package.AutoGenerateProtocol

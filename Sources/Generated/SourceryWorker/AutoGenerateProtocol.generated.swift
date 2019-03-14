@@ -42,7 +42,7 @@ import Foundation
  static var executalbeName: String { get }
 
  init(
-   terminalWorker: TerminalWorkerProtocol,
+   terminalWorker: TerminalProtocol,
    disk: DependencyProtocol?,
    signPost: SignPostProtocol,
    systemExecutableProvider: SystemExecutableProviderProtocol
@@ -55,7 +55,7 @@ import Foundation
 
  init(
    sourcery: SourceryProtocol,
-   terminalWorker: TerminalWorkerProtocol,
+   terminalWorker: TerminalProtocol,
    signPost: SignPostProtocol,
    queue: HighwayDispatchProtocol
  )  throws

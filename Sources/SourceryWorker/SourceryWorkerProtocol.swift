@@ -18,7 +18,7 @@ public protocol SourceryWorkerProtocol: AutoMockable
 
     init(
         sourcery: SourceryProtocol,
-        terminalWorker: TerminalWorkerProtocol,
+        terminalWorker: TerminalProtocol,
         signPost: SignPostProtocol,
         queue: HighwayDispatchProtocol
     ) throws
