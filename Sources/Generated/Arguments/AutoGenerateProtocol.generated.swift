@@ -22,14 +22,9 @@ import Foundation
  var path: String { get }
  var url: URL { get }
  var version: String { get }
- var dependencies: [Dependency] { get }
- var description: String { get }
+ var dependencies: [SubDependency] { get }
 
- func gitHooks() throws  -> FolderProtocol
- func srcRoot() throws  -> FolderProtocol
- func templateFolder() throws  -> FolderProtocol
- func sourceryFolder() throws  -> FolderProtocol
- func sourceryAutoProtocolFile() throws  -> FileProtocol
+ func folderType() -> FolderProtocol.Type
  // sourcery:end
  // Generated protocol inline for SwiftProduct -> See code in the file of that type
  // sourcery:inline:SwiftProduct.AutoGenerateProtocol

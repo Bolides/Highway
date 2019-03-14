@@ -20,10 +20,6 @@ import Foundation
  // sourcery:inline:DependencyService.AutoGenerateProtocol
  var dependency: DependencyProtocol { get }
 
- init(
-   terminal: TerminalWorkerProtocol,
-   signPost: SignPostProtocol
- )  throws
  func writeToStubFile() throws
  // sourcery:end
  // Generated protocol inline for DumpService -> See code in the file of that type

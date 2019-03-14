@@ -53,7 +53,7 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 
         guard let disk = disk else
         {
-            self.disk = try DependencyService().dependency
+            self.disk = try DependencyService(folderType: Folder.self).dependency
             return
         }
 

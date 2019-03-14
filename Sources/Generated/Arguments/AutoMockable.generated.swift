@@ -46,14 +46,48 @@ open class DependencyProtocolMock: DependencyProtocol
     }
 
     public var underlyingVersion: String = "AutoMockable filled value"
-    public var dependencies: [Dependency] = []
-    public var description: String
+    public var dependencies: [SubDependency] = []
+
+    // MARK: - <folderType> - parameters
+
+    public var folderTypeCallsCount = 0
+    public var folderTypeCalled: Bool
     {
-        get { return underlyingDescription }
-        set(value) { underlyingDescription = value }
+        return folderTypeCallsCount > 0
     }
 
-    public var underlyingDescription: String = "AutoMockable filled value"
+    public var folderTypeReturnValue: FolderProtocol.Type?
+
+    // MARK: - <folderType> - closure mocks
+
+    public var folderTypeClosure: (() -> FolderProtocol.Type)?
+
+    // MARK: - <folderType> - method mocked
+
+    open func folderType() -> FolderProtocol.Type
+    {
+        folderTypeCallsCount += 1
+
+        // <folderType> - Return Value mock implementation
+
+        guard let closureReturn = folderTypeClosure else
+        {
+            guard let returnValue = folderTypeReturnValue else
+            {
+                let message = "No returnValue implemented for folderTypeClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement FolderProtocol.Type
+
+                signPost.error("❌ \(error)")
+
+                fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
+            }
+            return returnValue
+        }
+
+        return closureReturn()
+    }
 
     // MARK: - <gitHooks> - parameters
 

@@ -46,6 +46,37 @@ private class SourceryMock: SourceryProtocolMock
     }
 }
 
+private class FolderMock: FolderProtocolMock
+{
+    let githooks = try! FolderProtocolMock()
+
+    required init() throws
+    {
+        throw "mock not working"
+    }
+
+    required init(path: String) throws
+    {
+        try super.init(path: path)
+
+        subfolderNamedClosure = { foldername in
+
+            switch foldername
+            {
+            case ".git/hooks":
+                return self.githooks
+            default:
+                throw "FolderMock cannot deliver subfolder \(foldername) "
+            }
+        }
+    }
+
+    required init?(possbilyInvalidPath: String)
+    {
+        fatalError("init(possbilyInvalidPath:) has not been implemented")
+    }
+}
+
 class HighwaySpec: QuickSpec
 {
     var sut: Highway?
@@ -175,7 +206,8 @@ class HighwaySpec: QuickSpec
                         terminal: self.terminal,
                         signPost: self.signPost,
                         queue: self.queue,
-                        sourceryType: SourceryMock.self
+                        sourceryType: SourceryMock.self,
+                        folderType: FolderMock.self
                     )
                     return self.sut
                 }.toNot(throwError())

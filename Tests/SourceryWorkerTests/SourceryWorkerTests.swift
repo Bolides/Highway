@@ -15,6 +15,7 @@ import SourceryWorkerMock
 import TerminalMock
 import ZFile
 import ZFileMock
+import ArgumentsMock
 
 class SourceryWorkerSpec: QuickSpec
 {
@@ -42,31 +43,32 @@ class SourceryWorkerSpec: QuickSpec
 
             beforeEach
             {
-                sourcery = SourceryProtocolMock()
-                let sourcesFolder = try! FolderProtocolMock()
-                sourcery.sourcesFolders = [sourcesFolder]
-                let file = try! File(path: #file)
-                sourcery.executableFileReturnValue = file
-                sourcesFolder.makeFileSequenceRecursiveIncludeHiddenReturnValue = try! file.parent?.createSubfolderIfNeeded(withName: "MockTestOutput").makeFileSequence(recursive: false, includeHidden: true)
-                sourcery.outputFolder = sourcesFolder
-                sourcery.underlyingImports = Set([TemplatePrepend(name: Set([TemplatePrepend.Import(name: "MockImport")]), template: "MockTemplate")])
-
-                terminalWorker = TerminalWorkerProtocolMock()
-                terminalWorker.terminalTaskReturnValue = ["mocked terminal output"]
-
-                signPost = SignPostProtocolMock()
-                queue = HighwayDispatchProtocolMock()
-                queue.asyncSyncClosure = { $0() }
-
-                expect
-                {
-                    sut = try SourceryWorker(
-                        sourcery: sourcery,
-                        terminalWorker: terminalWorker,
-                        signPost: signPost,
-                        queue: queue
-                    )
-                }.toNot(throwError())
+                    expect
+                    {
+                        signPost = SignPostProtocolMock()
+                        
+                        sourcery = try SourceryProtocolMock(productName: "Mock", swiftPackageDependencies: DependencyProtocolMock(), swiftPackageDump: DumpProtocolMock(), sourceryExecutable: try! FileProtocolMock(), signPost: signPost)
+                        let sourcesFolder = try! FolderProtocolMock()
+                        sourcery.sourcesFolders = [sourcesFolder]
+                        let file = try! File(path: #file)
+                        sourcery.executableFileReturnValue = file
+                        sourcesFolder.makeFileSequenceRecursiveIncludeHiddenReturnValue = try! file.parent?.createSubfolderIfNeeded(withName: "MockTestOutput").makeFileSequence(recursive: false, includeHidden: true)
+                        sourcery.outputFolder = sourcesFolder
+                        sourcery.underlyingImports = Set([TemplatePrepend(name: Set([TemplatePrepend.Import(name: "MockImport")]), template: "MockTemplate")])
+                        
+                        terminalWorker = TerminalWorkerProtocolMock()
+                        terminalWorker.terminalTaskReturnValue = ["mocked terminal output"]
+                        
+                        queue = HighwayDispatchProtocolMock()
+                        queue.asyncSyncClosure = { $0() }
+                        sut = try SourceryWorker(
+                            sourcery: sourcery,
+                            terminalWorker: terminalWorker,
+                            signPost: signPost,
+                            queue: queue
+                        )
+                        return sut
+                    }.toNot(throwError())
             }
 
             it("sut should be a valid SourceryWorker")

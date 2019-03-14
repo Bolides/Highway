@@ -12,17 +12,21 @@ import SignPost
 import SourceryAutoProtocols
 import ZFile
 
+// sourcery:generic=F
 public protocol DependencyServiceProtocol: AutoMockable
 {
     // sourcery:inline:DependencyService.AutoGenerateProtocol
     var dependency: DependencyProtocol { get }
 
-    init(
-        terminal: TerminalWorkerProtocol,
-        signPost: SignPostProtocol
-    ) throws
     func writeToStubFile() throws
     // sourcery:end
+
+    // sourcery:implementMockByThrowingOverrideRequest
+    init<F: FolderProtocol>(
+        terminal: TerminalWorkerProtocol,
+        signPost: SignPostProtocol,
+        folderType: F.Type
+    ) throws
 }
 
 public struct DependencyService: DependencyServiceProtocol, AutoGenerateProtocol
@@ -31,8 +35,7 @@ public struct DependencyService: DependencyServiceProtocol, AutoGenerateProtocol
 
     private let data: Data
 
-    // sourcery:includeInitInProtocol
-    public init(terminal: TerminalWorkerProtocol = TerminalWorker.shared, signPost: SignPostProtocol = SignPost.shared) throws
+    public init<F>(terminal: TerminalWorkerProtocol = TerminalWorker.shared, signPost: SignPostProtocol = SignPost.shared, folderType: F.Type) throws where F: FolderProtocol
     {
         do
         {
@@ -55,7 +58,7 @@ public struct DependencyService: DependencyServiceProtocol, AutoGenerateProtocol
             do
             {
                 signPost.verbose("\(json.joined(separator: "\n"))")
-                dependency = try JSONDecoder().decode(Dependency.self, from: data)
+                dependency = try JSONDecoder().decode(Dependency<F>.self, from: data)
             }
             catch
             {

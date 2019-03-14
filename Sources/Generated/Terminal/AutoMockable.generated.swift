@@ -115,7 +115,7 @@ open class ArgumentExecutableProtocolMock: ArgumentExecutableProtocol
 
 // MARK: - DependencyServiceProtocolMock
 
-open class DependencyServiceProtocolMock: DependencyServiceProtocol
+open class DependencyServiceProtocolMock<F>: DependencyServiceProtocol
 {
     public init() {}
 
@@ -126,23 +126,6 @@ open class DependencyServiceProtocolMock: DependencyServiceProtocol
     }
 
     public var underlyingDependency: DependencyProtocol!
-
-    // MARK: - <init> - parameters
-
-    public var initTerminalSignPostThrowableError: Error?
-    public var initTerminalSignPostReceivedArguments: (terminal: TerminalWorkerProtocol, signPost: SignPostProtocol)?
-
-    // MARK: - <init> - closure mocks
-
-    public var initTerminalSignPostClosure: ((TerminalWorkerProtocol, SignPostProtocol) throws -> Void)?
-
-    // MARK: - <init> - initializer mocked
-
-    public required init(terminal: TerminalWorkerProtocol, signPost: SignPostProtocol) throws
-    {
-        initTerminalSignPostReceivedArguments = (terminal: terminal, signPost: signPost)
-        try? initTerminalSignPostClosure?(terminal, signPost)
-    }
 
     // MARK: - <writeToStubFile> - parameters
 
@@ -173,6 +156,13 @@ open class DependencyServiceProtocolMock: DependencyServiceProtocol
         // <writeToStubFile> - Void return mock implementation
 
         try writeToStubFileClosure?()
+    }
+
+    // MARK: - <init<F: FolderProtocol>> - initializer mocked
+
+    public required init<F: FolderProtocol>(terminal: TerminalWorkerProtocol, signPost: SignPostProtocol, folderType: F.Type) throws
+    {
+        throw SourceryMockError.subclassMockBeforeUsing("\(self) should be overridden as a mock to mock function \(#function).")
     }
 }
 

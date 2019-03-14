@@ -59,12 +59,12 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
 
     // MARK: - STATIC - Generate Packages for Folders
 
-    public static func package(for folder: FolderProtocol, terminal: TerminalWorkerProtocol) throws -> Highway.Package
+    public static func package<F>(for folder: FolderProtocol, terminal: TerminalWorkerProtocol, folderType: F.Type) throws -> Highway.Package where F: FolderProtocol
     {
         let originalFolder = FileSystem.shared.currentFolder
         FileManager.default.changeCurrentDirectoryPath(folder.path)
 
-        let dependencies = try DependencyService(terminal: terminal).dependency
+        let dependencies = try DependencyService(terminal: terminal, folderType: folderType).dependency
         let highwayPackage = Highway.Package(
             name: folder.name,
             dependencies: dependencies,
@@ -77,7 +77,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
     // MARK: - Init
 
     // Will setup Highway in folder of srcRootDependencies and optionaly in the extra folders provided
-    public init(
+    public init<F>(
         srcRootDependencies: DependencyProtocol,
         extraFolders: [FolderProtocol]? = nil,
         highwaySetupProductName: String? = nil, // if nothing provided the name or the root package is taken
@@ -88,8 +88,9 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         terminal: TerminalWorkerProtocol = TerminalWorker.shared,
         signPost: SignPostProtocol = SignPost.shared,
         queue: HighwayDispatchProtocol = Highway.queue,
-        sourceryType: SourceryProtocol.Type = Sourcery.self
-    ) throws
+        sourceryType: SourceryProtocol.Type = Sourcery.self,
+        folderType: F.Type
+    ) throws where F: FolderProtocol
     {
         self.queue = queue
         self.srcRootDependencies = srcRootDependencies
@@ -97,11 +98,11 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
 
         var packages = [Highway.Package]()
 
-        let rootPackage = try Highway.package(for: try srcRootDependencies.srcRoot(), terminal: terminal)
+        let rootPackage = try Highway.package(for: try srcRootDependencies.srcRoot(), terminal: terminal, folderType: folderType)
 
         packages.append(rootPackage)
 
-        try extraFolders?.forEach { packages.append(try Highway.package(for: $0, terminal: terminal)) }
+        try extraFolders?.forEach { packages.append(try Highway.package(for: $0, terminal: terminal, folderType: folderType)) }
 
         signPost.message(
             """
