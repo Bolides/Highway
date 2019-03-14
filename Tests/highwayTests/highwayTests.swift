@@ -84,7 +84,7 @@ class HighwaySpec: QuickSpec
                       "name": "Highway",
                       "url": "https://www.highway.com",
                       "version": "unspecified",
-                      "path": "˜/Highway",
+                        "path": "\(try File(path: #file).parentFolder().parentFolder().parentFolder().path)",
                       "dependencies": [
                         {
                           "name": "ZFile",
@@ -139,11 +139,12 @@ class HighwaySpec: QuickSpec
 
                     self.terminal.runProcessClosure = { (process: Process) in
 
-                        guard let command = process.executableURL?.absoluteString,
+                        let command = try process.executableFile().path
+                        guard
                             let arguments = process.arguments,
                             command.hasSuffix("swift") else
                         {
-                            throw "terminal cannot respond to \(String(describing: process.executableURL))"
+                            throw "terminal cannot respond to \(command)"
                         }
 
                         if arguments.contains("show-dependencies")

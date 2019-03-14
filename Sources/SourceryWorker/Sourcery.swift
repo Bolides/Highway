@@ -30,6 +30,14 @@ public protocol SourceryProtocol: ExecutableProtocol
     var sourceryExecutableFile: FileProtocol { get }
     var imports: Set<TemplatePrepend> { get }
 
+    init(
+        productName: String,
+        swiftPackageDependencies: DependencyProtocol,
+        swiftPackageDump: DumpProtocol,
+        sourceryExecutable: FileProtocol,
+        signPost: SignPostProtocol
+    ) throws
+
     // sourcery:end
 }
 
@@ -68,6 +76,7 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
 
     // MARK: - Init
 
+    // sourcery:includeInitInProtocol
     public init(
         productName: String,
         swiftPackageDependencies: DependencyProtocol,

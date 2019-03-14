@@ -29,6 +29,13 @@ import Foundation
  var sourceryExecutableFile: FileProtocol { get }
  var imports: Set<TemplatePrepend> { get }
 
+ init(
+   productName: String,
+   swiftPackageDependencies: DependencyProtocol,
+   swiftPackageDump: DumpProtocol,
+   sourceryExecutable: FileProtocol,
+   signPost: SignPostProtocol
+ )  throws
  // sourcery:end
  // Generated protocol inline for SourceryBuilder -> See code in the file of that type
  // sourcery:inline:SourceryBuilder.AutoGenerateProtocol

@@ -44,7 +44,7 @@ public struct Dependency: Decodable, DependencyProtocol, CustomStringConvertible
 
     public func srcRoot() throws -> FolderProtocol
     {
-        return try Folder(path: url.absoluteString)
+        return try Folder(path: path)
     }
 
     public func templateFolder() throws -> FolderProtocol

@@ -178,6 +178,23 @@ open class SourceryProtocolMock: ExecutableProtocolMock, SourceryProtocol
     }
 
     public var underlyingImports: Set<TemplatePrepend>!
+
+    // MARK: - <init> - parameters
+
+    public var initProductNameSwiftPackageDependenciesSwiftPackageDumpSourceryExecutableSignPostThrowableError: Error?
+    public var initProductNameSwiftPackageDependenciesSwiftPackageDumpSourceryExecutableSignPostReceivedArguments: (productName: String, swiftPackageDependencies: DependencyProtocol, swiftPackageDump: DumpProtocol, sourceryExecutable: FileProtocol, signPost: SignPostProtocol)?
+
+    // MARK: - <init> - closure mocks
+
+    public var initProductNameSwiftPackageDependenciesSwiftPackageDumpSourceryExecutableSignPostClosure: ((String, DependencyProtocol, DumpProtocol, FileProtocol, SignPostProtocol) throws -> Void)?
+
+    // MARK: - <init> - initializer mocked
+
+    public required init(productName: String, swiftPackageDependencies: DependencyProtocol, swiftPackageDump: DumpProtocol, sourceryExecutable: FileProtocol, signPost: SignPostProtocol) throws
+    {
+        initProductNameSwiftPackageDependenciesSwiftPackageDumpSourceryExecutableSignPostReceivedArguments = (productName: productName, swiftPackageDependencies: swiftPackageDependencies, swiftPackageDump: swiftPackageDump, sourceryExecutable: sourceryExecutable, signPost: signPost)
+        try? initProductNameSwiftPackageDependenciesSwiftPackageDumpSourceryExecutableSignPostClosure?(productName, swiftPackageDependencies, swiftPackageDump, sourceryExecutable, signPost)
+    }
 }
 
 // MARK: - SourceryWorkerProtocolMock
