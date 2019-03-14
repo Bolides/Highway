@@ -321,7 +321,7 @@ public let package = Package(
             ]
         ),
         .testTarget(
-            name: "HWSetupTests",
+            name: "HighwayTests",
             dependencies: [
                 "Nimble",
                 "Quick",

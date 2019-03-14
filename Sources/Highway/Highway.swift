@@ -87,7 +87,8 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         sourceryBuilderType: SourceryBuilderProtocol.Type = SourceryBuilder.self,
         terminal: TerminalWorkerProtocol = TerminalWorker.shared,
         signPost: SignPostProtocol = SignPost.shared,
-        queue: HighwayDispatchProtocol = Highway.queue
+        queue: HighwayDispatchProtocol = Highway.queue,
+        sourceryType: SourceryProtocol.Type = Sourcery.self
     ) throws
     {
         self.queue = queue
@@ -125,11 +126,12 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
             let sourceryModels: [SourceryProtocol] = try products
                 .map
             { product in
-                try Sourcery(
+                try sourceryType.init(
                     productName: product.name,
                     swiftPackageDependencies: dependencies,
                     swiftPackageDump: dump,
-                    sourceryExecutable: sourcery
+                    sourceryExecutable: sourcery,
+                    signPost: signPost
                 )
             }
             return try sourceryModels.map { try sourceryWorkerType.init(sourcery: $0, terminalWorker: terminal, signPost: signPost, queue: queue) }
