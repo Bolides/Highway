@@ -114,7 +114,7 @@ public let package = Package(
 
         .package(url: "https://www.github.com/doozMen/ZFile", "2.2.0" ..< "3.1.0"),
         .package(url: "https://www.github.com/doozMen/SignPost", from: "1.0.0"),
-        .package(url: "https://www.github.com/doozMen/template-sourcery", "1.3.4" ..< "2.0.0"),
+        .package(url: "https://www.github.com/doozMen/template-sourcery", "1.3.7" ..< "2.0.0"),
         .package(url: "https://www.github.com/antitypical/Result", "4.1.0" ..< "5.1.0"),
         .package(url: "https://github.com/nicklockwood/SwiftFormat", "0.39.4" ..< "0.40.0"),
         .package(url: "https://www.github.com/Quick/Quick", "1.3.4" ..< "2.1.0"),
