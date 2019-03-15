@@ -126,7 +126,7 @@ public let package = Package(
 
         .target(
             name: "Errors",
-            dependencies: ["SourceryAutoProtocols"]
+            dependencies: ["SourceryAutoProtocols", "ZFile"]
         ),
         .target(
             name: "Highway",
@@ -141,11 +141,12 @@ public let package = Package(
                 "GitHooks",
                 "SwiftFormatWorker",
                 "XCBuild",
+                "Errors",
             ]
         ),
         .target(
             name: "Arguments",
-            dependencies: ["SourceryAutoProtocols", "ZFile", "SignPost"]
+            dependencies: ["SourceryAutoProtocols", "ZFile", "SignPost", "Errors"]
         ),
         .target(
             name: "GitHooks",
@@ -157,37 +158,6 @@ public let package = Package(
                 "Arguments",
                 "Errors",
             ]
-        ),
-        .testTarget(
-            name: "GitHooksTests",
-            dependencies: [
-                "GitHooks",
-                "Quick",
-                "Nimble",
-                "ArgumentsMock",
-                "ZFileMock",
-                "Errors",
-                "GitHooksMock",
-            ]
-        ),
-        .target(
-            name: "GitHooksMock",
-            dependencies: [
-                "SourceryAutoProtocols",
-                "ZFile",
-                "ZFileMock",
-                "SignPost",
-                "GitHooks",
-                "Terminal",
-                "Arguments",
-                "SignPost",
-            ],
-            path: "Sources/Generated/GitHooks"
-        ),
-        .target(
-            name: "ArgumentsMock",
-            dependencies: ["SourceryAutoProtocols", "ZFile", "ZFileMock", "SignPost", "Arguments"],
-            path: "Sources/Generated/Arguments"
         ),
         .target(
             name: "Url",
@@ -203,7 +173,7 @@ public let package = Package(
         ),
         .target(
             name: "Terminal",
-            dependencies: ["POSIX", "Arguments"]
+            dependencies: ["POSIX", "Arguments", "Errors"]
         ),
         .target(
             name: "Git",
@@ -212,7 +182,7 @@ public let package = Package(
 
         .target(
             name: "SourceryWorker",
-            dependencies: ["Terminal", "HighwayDispatch"]
+            dependencies: ["Terminal", "HighwayDispatch", "Errors"]
         ),
         .target(
             name: "SwiftFormatWorker",
@@ -223,17 +193,37 @@ public let package = Package(
             dependencies: ["Errors", "SignPost"]
         ),
         .target(
-            name: "HighwayDispatchMock",
-            dependencies: ["HighwayDispatch", "SignPost", "ZFileMock", "SourceryAutoProtocols", "SignPost"],
-            path: "Sources/Generated/HighwayDispatch"
-        ),
-        .target(
             name: "Stub",
             dependencies: []
         ),
 
         // MARK: - Mocks
 
+        .target(
+            name: "HighwayDispatchMock",
+            dependencies: ["HighwayDispatch", "SignPost", "ZFileMock", "SourceryAutoProtocols", "Errors"],
+            path: "Sources/Generated/HighwayDispatch"
+        ),
+        .target(
+            name: "GitHooksMock",
+            dependencies: [
+                "SourceryAutoProtocols",
+                "ZFile",
+                "ZFileMock",
+                "SignPost",
+                "GitHooks",
+                "Terminal",
+                "Arguments",
+                "SignPost",
+                "Errors",
+            ],
+            path: "Sources/Generated/GitHooks"
+        ),
+        .target(
+            name: "ArgumentsMock",
+            dependencies: ["SourceryAutoProtocols", "ZFile", "ZFileMock", "SignPost", "Arguments"],
+            path: "Sources/Generated/Arguments"
+        ),
         .target(
             name: "XCBuildMock",
             dependencies: ["ZFile", "ZFileMock", "XCBuild", "Arguments", "SignPost"],
@@ -272,6 +262,18 @@ public let package = Package(
 
         // MARK: - Tests
 
+        .testTarget(
+            name: "GitHooksTests",
+            dependencies: [
+                "GitHooks",
+                "Quick",
+                "Nimble",
+                "ArgumentsMock",
+                "ZFileMock",
+                "Errors",
+                "GitHooksMock",
+            ]
+        ),
         .testTarget(
             name: "POSIXTests",
             dependencies: ["POSIX", "Quick", "Nimble"]

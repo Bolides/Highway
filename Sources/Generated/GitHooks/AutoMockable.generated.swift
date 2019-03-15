@@ -1,4 +1,5 @@
 import Arguments
+import Errors
 import Foundation
 import GitHooks
 import SignPost

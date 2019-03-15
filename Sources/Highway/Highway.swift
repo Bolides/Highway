@@ -58,12 +58,12 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
 
     // MARK: - STATIC - Generate Packages for Folders
 
-    public static func package(for folder: FolderProtocol, terminal: TerminalProtocol = Terminal.shared) throws -> PackageProtocol
+    public static func package(for folder: FolderProtocol, dependencyService: DependencyServiceProtocol, terminal: TerminalProtocol = Terminal.shared) throws -> PackageProtocol
     {
         let originalFolder = FileSystem.shared.currentFolder
         FileManager.default.changeCurrentDirectoryPath(folder.path)
 
-        let dependencies = try DependencyService(terminal: terminal).dependency
+        let dependencies = try dependencyService.generateDependency()
         let highwayPackage = Highway.Package(
             name: folder.name,
             dependencies: dependencies,
@@ -80,6 +80,8 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         rootPackage: PackageProtocol,
         highwaySetupPackage: (package: PackageProtocol, executable: String)?, // use the static function to optionally create package if it is not in the srcRootDependencies. This package will be used to create
         extraFolders: [FolderProtocol]? = nil, // Packages in these folders will be created
+        dependencyService: DependencyServiceProtocol,
+        swiftPackageWithSourceryFolder: FolderProtocol,
         swiftformatType: SwiftFormatWorkerProtocol.Type = SwiftFormatWorker.self,
         githooksType: GitHooksWorkerProtocol.Type = GitHooksWorker.self,
         sourceryWorkerType: SourceryWorkerProtocol.Type = SourceryWorker.self,
@@ -99,7 +101,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
 
         packages.append(rootPackage)
 
-        try extraFolders?.forEach { packages.append(try Highway.package(for: $0, terminal: terminal)) }
+        try extraFolders?.forEach { packages.append(try Highway.package(for: $0, dependencyService: dependencyService, terminal: terminal)) }
 
         signPost.message(
             """
@@ -110,7 +112,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         )
         self.packages = packages
 
-        let builder = try sourceryBuilderType.init(terminalWorker: terminal, disk: rootPackage.dependencies, signPost: signPost, systemExecutableProvider: SystemExecutableProvider())
+        let builder = sourceryBuilderType.init(swiftPackageWithSourceryFolder: swiftPackageWithSourceryFolder, terminal: terminal, signPost: signPost, systemExecutableProvider: SystemExecutableProvider())
         sourceryBuilder = builder
         let sourcery = try builder.attemptToBuildSourceryIfNeeded()
 

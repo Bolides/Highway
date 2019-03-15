@@ -1,3 +1,4 @@
+import Errors
 import Foundation
 import HighwayDispatch
 import SignPost
