@@ -189,7 +189,6 @@ class HighwaySpec: QuickSpec
 
                     self.sut = try Highway(
                         package: (package: self.rootPackage, executable: "MockedSetup"),
-                        highwaySetupPackage: self.highwaySetupPackage,
                         extraFolders: self.extraFolders,
                         dependencyService: self.dependencyService,
                         swiftPackageWithSourceryFolder: swiftPackageWithSourceryFolder,

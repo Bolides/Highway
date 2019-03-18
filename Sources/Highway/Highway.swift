@@ -92,64 +92,27 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
     {
         self.queue = queue
         signPost.message("📦 \(Highway.self) ...")
-
-        var packages = [PackageProtocol]()
-
         self.package = package
-
-        packages.append(rootPackage)
-
-        try extraFolders?.forEach { packages.append(try Highway.package(for: $0, dependencyService: dependencyService, terminal: terminal)) }
 
         signPost.message(
             """
             📦 \(Highway.self) for
-            \(try packages.map { "  * \(try $0.dependencies.srcRoot().path)" }.joined(separator: "\n"))
+            \(try package.package.dependencies.srcRoot())
             ✅
             """
         )
-        self.packages = packages
+        signPost.verbose("\(package)")
 
         let builder = sourceryBuilderType.init(swiftPackageWithSourceryFolder: swiftPackageWithSourceryFolder, terminal: terminal, signPost: signPost, systemExecutableProvider: SystemExecutableProvider())
         sourceryBuilder = builder
         let sourcery = try builder.attemptToBuildSourceryIfNeeded()
-
-        let temp: [[SourceryWorkerProtocol]] = try packages
-            .compactMap
-        { package in
-            let dump = package.dump
-            let dependencies = package.dependencies
-            let products = dump.products.filter { !$0.name.hasSuffix("Mock") }
-
-            let sourceryModels: [SourceryProtocol] = try products
-                .map
-            { product in
-                try sourceryType.init(
-                    productName: product.name,
-                    swiftPackageDependencies: dependencies,
-                    swiftPackageDump: dump,
-                    sourceryExecutable: sourcery,
-                    signPost: signPost
-                )
-            }
-            return try sourceryModels.map { try sourceryWorkerType.init(sourcery: $0, terminalWorker: terminal, signPost: signPost, queue: queue) }
-        }
 
         let dump = package.package.dump
         let dependencies = package.package.dependencies
         let products = dump.products.filter { !$0.name.hasSuffix("Mock") }
 
         let sourceryModels: [SourceryProtocol] = try products
-        {
-            githooks = githooksType.init(
-                swiftPackageDependencies: highwaySetupPackage.package.dependencies,
-                swiftPackageDump: highwaySetupPackage.package.dump,
-                hwSetupExecutableProductName: highwaySetupPackage.executable,
-                gitHooksFolder: try rootPackage.dependencies.srcRoot().subfolder(named: ".git/hooks"),
-                signPost: signPost
             .map
-        }
-        else
         { product in
             try sourceryType.init(
                 productName: product.name,
@@ -159,6 +122,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
                 signPost: signPost
             )
         }
+
         sourceryWorkers = try sourceryModels.map { try sourceryWorkerType.init(sourcery: $0, terminalWorker: terminal, signPost: signPost, queue: queue) }
 
         githooks = githooksType?.init(
