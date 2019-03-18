@@ -6,18 +6,18 @@ import PackageDescription
 public let package = Package(
     name: "Highway",
     products: [
-        // Products define the executables and libraries produced by a package, and make them visible to other packages.
+        // MARK: - Executable
+
         .executable(
             name: "HWSetup",
             targets: ["HWSetup"]
         ),
+
+        // MARK: - Library
+
         .library(
             name: "Highway",
             targets: ["Highway"]
-        ),
-        .library(
-            name: "HighwayMock",
-            targets: ["HighwayMock"]
         ),
         .library(
             name: "Errors",
@@ -27,25 +27,14 @@ public let package = Package(
             name: "HighwayDispatch",
             targets: ["HighwayDispatch"]
         ),
-        .library(
-            name: "HighwayDispatchMock",
-            targets: ["HighwayDispatchMock"]
-        ),
+
         .library(
             name: "GitHooks",
             targets: ["GitHooks"]
         ),
         .library(
-            name: "GitHooksMock",
-            targets: ["GitHooksMock"]
-        ),
-        .library(
             name: "Arguments",
             targets: ["Arguments"]
-        ),
-        .library(
-            name: "ArgumentsMock",
-            targets: ["ArgumentsMock"]
         ),
         .library(
             name: "Url",
@@ -60,16 +49,8 @@ public let package = Package(
             targets: ["XCBuild"]
         ),
         .library(
-            name: "XCBuildMock",
-            targets: ["XCBuildMock"]
-        ),
-        .library(
             name: "Terminal",
             targets: ["Terminal"]
-        ),
-        .library(
-            name: "TerminalMock",
-            targets: ["TerminalMock"]
         ),
         .library(
             name: "Git",
@@ -80,16 +61,8 @@ public let package = Package(
             targets: ["SourceryWorker"]
         ),
         .library(
-            name: "SourceryWorkerMock",
-            targets: ["SourceryWorkerMock"]
-        ),
-        .library(
             name: "SwiftFormatWorker",
             targets: ["SwiftFormatWorker"]
-        ),
-        .library(
-            name: "SwiftFormatWorkerMock",
-            targets: ["SwiftFormatWorkerMock"]
         ),
         .library(
             name: "CarthageWorker",
@@ -100,24 +73,60 @@ public let package = Package(
             targets: ["Stub"]
         ),
 
+        // MARK: - Library - Mocks
+
+        .library(
+            name: "HighwayDispatchMock",
+            targets: ["HighwayDispatchMock"]
+        ),
+        .library(
+            name: "SwiftFormatWorkerMock",
+            targets: ["SwiftFormatWorkerMock"]
+        ),
+        .library(
+            name: "SourceryWorkerMock",
+            targets: ["SourceryWorkerMock"]
+        ),
+        .library(
+            name: "TerminalMock",
+            targets: ["TerminalMock"]
+        ),
+        .library(
+            name: "XCBuildMock",
+            targets: ["XCBuildMock"]
+        ),
+        .library(
+            name: "ArgumentsMock",
+            targets: ["ArgumentsMock"]
+        ),
+        .library(
+            name: "GitHooksMock",
+            targets: ["GitHooksMock"]
+        ),
+        .library(
+            name: "HighwayMock",
+            targets: ["HighwayMock"]
+        ),
+
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
+        // MARK: - External Dependencies
+
         .package(url: "https://www.github.com/doozMen/ZFile", "2.2.0" ..< "3.1.0"),
         .package(url: "https://www.github.com/doozMen/SignPost", from: "1.0.0"),
-        .package(url: "https://www.github.com/doozMen/template-sourcery", "1.3.2" ..< "2.1.0"),
+        .package(url: "https://www.github.com/doozMen/template-sourcery", "1.3.7" ..< "2.0.0"),
         .package(url: "https://www.github.com/antitypical/Result", "4.1.0" ..< "5.1.0"),
-        .package(url: "https://github.com/nicklockwood/SwiftFormat", from: "0.39.4"),
+        .package(url: "https://github.com/nicklockwood/SwiftFormat", "0.39.4" ..< "0.40.0"),
         .package(url: "https://www.github.com/Quick/Quick", "1.3.4" ..< "2.1.0"),
         .package(url: "https://www.github.com/Quick/Nimble", "7.3.4" ..< "8.1.0"),
         .package(url: "https://www.github.com/doozMen/Sourcery", "0.16.3" ..< "1.0.0"),
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages which this package depends on.
+        // MARK: - Targets
+
         .target(
             name: "Errors",
-            dependencies: ["SourceryAutoProtocols"]
+            dependencies: ["SourceryAutoProtocols", "ZFile"]
         ),
         .target(
             name: "Highway",
@@ -132,25 +141,12 @@ public let package = Package(
                 "GitHooks",
                 "SwiftFormatWorker",
                 "XCBuild",
+                "Errors",
             ]
         ),
         .target(
-            name: "HighwayMock",
-            dependencies: [
-                "Highway",
-                "SourceryAutoProtocols",
-                "SignPost",
-                "Arguments",
-                "SourceryWorker",
-                "HighwayDispatch",
-                "GitHooks",
-                "SwiftFormatWorker",
-            ],
-            path: "Sources/Generated/Highway"
-        ),
-        .target(
             name: "Arguments",
-            dependencies: ["SourceryAutoProtocols", "ZFile", "SignPost"]
+            dependencies: ["SourceryAutoProtocols", "ZFile", "SignPost", "Errors"]
         ),
         .target(
             name: "GitHooks",
@@ -163,6 +159,109 @@ public let package = Package(
                 "Errors",
             ]
         ),
+        .target(
+            name: "Url",
+            dependencies: []
+        ),
+        .target(
+            name: "POSIX",
+            dependencies: ["Url"]
+        ),
+        .target(
+            name: "XCBuild",
+            dependencies: ["Arguments", "Errors", "Url", "POSIX", "Terminal", "Result"]
+        ),
+        .target(
+            name: "Terminal",
+            dependencies: ["POSIX", "Arguments", "Errors"]
+        ),
+        .target(
+            name: "Git",
+            dependencies: ["Terminal", "Url", "Arguments", "Errors"]
+        ),
+
+        .target(
+            name: "SourceryWorker",
+            dependencies: ["Terminal", "HighwayDispatch", "Errors"]
+        ),
+        .target(
+            name: "SwiftFormatWorker",
+            dependencies: ["Errors", "Arguments", "ZFile", "SwiftFormat", "HighwayDispatch"]
+        ),
+        .target(
+            name: "HighwayDispatch",
+            dependencies: ["Errors", "SignPost"]
+        ),
+        .target(
+            name: "Stub",
+            dependencies: []
+        ),
+
+        // MARK: - Mocks
+
+        .target(
+            name: "HighwayDispatchMock",
+            dependencies: ["HighwayDispatch", "SignPost", "ZFileMock", "SourceryAutoProtocols", "Errors"],
+            path: "Sources/Generated/HighwayDispatch"
+        ),
+        .target(
+            name: "GitHooksMock",
+            dependencies: [
+                "SourceryAutoProtocols",
+                "ZFile",
+                "ZFileMock",
+                "SignPost",
+                "GitHooks",
+                "Terminal",
+                "Arguments",
+                "SignPost",
+                "Errors",
+            ],
+            path: "Sources/Generated/GitHooks"
+        ),
+        .target(
+            name: "ArgumentsMock",
+            dependencies: ["SourceryAutoProtocols", "ZFile", "ZFileMock", "SignPost", "Arguments"],
+            path: "Sources/Generated/Arguments"
+        ),
+        .target(
+            name: "XCBuildMock",
+            dependencies: ["ZFile", "ZFileMock", "XCBuild", "Arguments", "SignPost"],
+            path: "Sources/Generated/XCBuild"
+        ),
+        .target(
+            name: "TerminalMock",
+            dependencies: ["Terminal", "ZFile", "ZFileMock", "Arguments", "SourceryAutoProtocols", "SignPost"],
+            path: "Sources/Generated/Terminal"
+        ),
+        .target(
+            name: "SwiftFormatWorkerMock",
+            dependencies: ["SwiftFormatWorker", "ZFileMock", "ZFile", "SwiftFormatWorker", "HighwayDispatch", "SignPost"],
+            path: "Sources/Generated/SwiftFormatWorker"
+        ),
+        .target(
+            name: "SourceryWorkerMock",
+            dependencies: ["SourceryWorker", "ZFile", "Terminal", "ZFileMock", "TerminalMock", "HighwayDispatch", "Arguments", "SignPost"],
+            path: "Sources/Generated/SourceryWorker"
+        ),
+        .target(
+            name: "HighwayMock",
+            dependencies: [
+                "Highway",
+                "SourceryAutoProtocols",
+                "SignPost",
+                "Arguments",
+                "SourceryWorker",
+                "HighwayDispatch",
+                "GitHooks",
+                "SwiftFormatWorker",
+                "SignPost",
+            ],
+            path: "Sources/Generated/Highway"
+        ),
+
+        // MARK: - Tests
+
         .testTarget(
             name: "GitHooksTests",
             dependencies: [
@@ -175,39 +274,9 @@ public let package = Package(
                 "GitHooksMock",
             ]
         ),
-        .target(
-            name: "GitHooksMock",
-            dependencies: [
-                "SourceryAutoProtocols",
-                "ZFile",
-                "ZFileMock",
-                "SignPost",
-                "GitHooks",
-                "Terminal",
-                "Arguments",
-            ],
-            path: "Sources/Generated/GitHooks"
-        ),
-        .target(
-            name: "ArgumentsMock",
-            dependencies: ["SourceryAutoProtocols", "ZFile", "ZFileMock", "SignPost", "Arguments"],
-            path: "Sources/Generated/Arguments"
-        ),
-        .target(
-            name: "Url",
-            dependencies: []
-        ),
-        .target(
-            name: "POSIX",
-            dependencies: ["Url"]
-        ),
         .testTarget(
             name: "POSIXTests",
             dependencies: ["POSIX", "Quick", "Nimble"]
-        ),
-        .target(
-            name: "XCBuild",
-            dependencies: ["Arguments", "Errors", "Url", "POSIX", "Terminal", "Result"]
         ),
         .testTarget(
             name: "XCBuildTests",
@@ -219,43 +288,17 @@ public let package = Package(
                 "ArgumentsMock",
                 "XCBuildMock",
                 "ZFileMock",
-                "Quick", "Nimble",
+                "Quick",
+                "Nimble",
             ]
-        ),
-        .target(
-            name: "XCBuildMock",
-            dependencies: ["ZFile", "ZFileMock", "XCBuild", "Arguments", "SignPost"],
-            path: "Sources/Generated/XCBuild"
-        ),
-        .target(
-            name: "Terminal",
-            dependencies: ["POSIX", "Arguments"]
-        ),
-        .target(
-            name: "TerminalMock",
-            dependencies: ["Terminal", "ZFile", "ZFileMock", "Arguments", "SourceryAutoProtocols"],
-            path: "Sources/Generated/Terminal"
         ),
         .testTarget(
             name: "TerminalTests",
             dependencies: ["Terminal", "TerminalMock", "Arguments", "Quick", "Nimble", "Stub"]
         ),
-        .target(
-            name: "Git",
-            dependencies: ["Terminal", "Url", "Arguments", "Errors"]
-        ),
         .testTarget(
             name: "GitTests",
             dependencies: ["Git", "Quick", "Nimble"]
-        ),
-        .target(
-            name: "SourceryWorker",
-            dependencies: ["Terminal", "HighwayDispatch"]
-        ),
-        .target(
-            name: "SourceryWorkerMock",
-            dependencies: ["SourceryWorker", "ZFile", "Terminal", "ZFileMock", "TerminalMock", "HighwayDispatch", "Arguments"],
-            path: "Sources/Generated/SourceryWorker"
         ),
         .testTarget(
             name: "SourceryWorkerTests",
@@ -275,15 +318,6 @@ public let package = Package(
                 "Errors",
                 "HWSetup",
             ]
-        ),
-        .target(
-            name: "SwiftFormatWorker",
-            dependencies: ["Errors", "Arguments", "ZFile", "SwiftFormat", "HighwayDispatch"]
-        ),
-        .target(
-            name: "SwiftFormatWorkerMock",
-            dependencies: ["SwiftFormatWorker", "ZFileMock", "ZFile", "SwiftFormatWorker", "HighwayDispatch"],
-            path: "Sources/Generated/SwiftFormatWorker"
         ),
         .testTarget(
             name: "SwiftFormatWorkerTests",
@@ -338,19 +372,6 @@ public let package = Package(
                 "ZFileMock",
                 "GitHooksMock",
             ]
-        ),
-        .target(
-            name: "HighwayDispatch",
-            dependencies: ["Errors", "SignPost"]
-        ),
-        .target(
-            name: "HighwayDispatchMock",
-            dependencies: ["HighwayDispatch", "SignPost", "ZFileMock", "SourceryAutoProtocols"],
-            path: "Sources/Generated/HighwayDispatch"
-        ),
-        .target(
-            name: "Stub",
-            dependencies: []
         ),
     ]
 )

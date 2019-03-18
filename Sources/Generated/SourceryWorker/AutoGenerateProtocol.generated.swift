@@ -42,11 +42,11 @@ import Foundation
  static var executalbeName: String { get }
 
  init(
-   terminalWorker: TerminalProtocol,
-   disk: DependencyProtocol?,
+   swiftPackageWithSourceryFolder: FolderProtocol,
+   terminal: TerminalProtocol,
    signPost: SignPostProtocol,
    systemExecutableProvider: SystemExecutableProviderProtocol
- )  throws
+ )
  func attemptToBuildSourceryIfNeeded() throws  -> FileProtocol
  // sourcery:end
  // Generated protocol inline for SourceryWorker -> See code in the file of that type

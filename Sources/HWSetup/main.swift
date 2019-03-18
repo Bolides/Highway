@@ -22,16 +22,20 @@ func handleSwiftformat(_ output: @escaping HighwayRunner.SyncSwiftformat) { do {
 
 // MARK: - RUN
 
+let dependencyService: DependencyServiceProtocol!
+
 do
 {
-    signPost.message("🚀 \(HighwayRunner.self) ...")
+    let srcRoot = try File(path: #file).parentFolder().parentFolder().parentFolder()
+    signPost.message("🚀 \(srcRoot.name) ...")
+    dependencyService = DependencyService(in: srcRoot)
 
     // Swift Package
 
-    let rootPackage = try Highway.package(for: FileSystem.shared.currentFolder)
+    let rootPackage = try Highway.package(for: srcRoot, dependencyService: dependencyService)
     let setupPackage = (package: rootPackage, executable: "HWSetup")
 
-    let highway = try Highway(package: setupPackage)
+    let highway = try Highway(rootPackage: rootPackage, highwaySetupPackage: setupPackage, dependencyService: dependencyService, swiftPackageWithSourceryFolder: srcRoot)
 
     highwayRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
 

@@ -1,5 +1,6 @@
 import Arguments
 import Foundation
+import SignPost
 import SourceryAutoProtocols
 import Terminal
 import ZFile
@@ -7,10 +8,6 @@ import ZFileMock
 
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
-
-import SignPost
-
-let signPost = SignPost.shared
 
 // MARK: - ArgumentExecutableProtocolMock
 
@@ -119,13 +116,7 @@ open class DependencyServiceProtocolMock: DependencyServiceProtocol
 {
     public init() {}
 
-    public var dependency: DependencyProtocol
-    {
-        get { return underlyingDependency }
-        set(value) { underlyingDependency = value }
-    }
-
-    public var underlyingDependency: DependencyProtocol!
+    public var dependency: DependencyProtocol?
 
     // MARK: - <init> - parameters
 
@@ -142,6 +133,53 @@ open class DependencyServiceProtocolMock: DependencyServiceProtocol
     {
         initTerminalSignPostReceivedArguments = (terminal: terminal, signPost: signPost)
         try? initTerminalSignPostClosure?(terminal, signPost)
+    }
+
+    // MARK: - <generateDependency> - parameters
+
+    public var generateDependencyThrowableError: Error?
+    public var generateDependencyCallsCount = 0
+    public var generateDependencyCalled: Bool
+    {
+        return generateDependencyCallsCount > 0
+    }
+
+    public var generateDependencyReturnValue: DependencyProtocol?
+
+    // MARK: - <generateDependency> - closure mocks
+
+    public var generateDependencyClosure: (() throws -> DependencyProtocol)?
+
+    // MARK: - <generateDependency> - method mocked
+
+    open func generateDependency() throws -> DependencyProtocol
+    {
+        // <generateDependency> - Throwable method implementation
+
+        if let error = generateDependencyThrowableError
+        {
+            throw error
+        }
+
+        generateDependencyCallsCount += 1
+
+        // <generateDependency> - Return Value mock implementation
+
+        guard let closureReturn = generateDependencyClosure else
+        {
+            guard let returnValue = generateDependencyReturnValue else
+            {
+                let message = "No returnValue implemented for generateDependencyClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement DependencyProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
     }
 
     // MARK: - <writeToStubFile> - parameters

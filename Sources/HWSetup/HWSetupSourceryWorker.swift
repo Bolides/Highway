@@ -55,7 +55,7 @@ public class HWSetupSourceryWorker: HWSetupSourceryWorkerWorkerProtocol, AutoGen
 
         do
         {
-            let sourceryExecutable = try SourceryBuilder().attemptToBuildSourceryIfNeeded()
+            let sourceryExecutable = try SourceryBuilder(swiftPackageWithSourceryFolder: try swiftPackageDependencies.srcRoot()).attemptToBuildSourceryIfNeeded()
             let sourcerySequence: [Sourcery] = try swiftPackageDump.products.compactMap
             { product in
 

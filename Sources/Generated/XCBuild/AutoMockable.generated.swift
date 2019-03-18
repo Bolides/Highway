@@ -9,10 +9,6 @@ import ZFileMock
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
-import SignPost
-
-let signPost = SignPost.shared
-
 // MARK: - ArchiveOptionsProtocolMock
 
 open class ArchiveOptionsProtocolMock: ArchiveOptionsProtocol
@@ -139,7 +135,7 @@ open class DestinationFactoryProtocolMock: DestinationFactoryProtocol
 
                 // You should implement Destination
 
-                signPost.error("❌ \(error)")
+                print("❌ \(error)")
 
                 fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
             }
@@ -182,7 +178,7 @@ open class DestinationFactoryProtocolMock: DestinationFactoryProtocol
 
                 // You should implement Destination
 
-                signPost.error("❌ \(error)")
+                print("❌ \(error)")
 
                 fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
             }
@@ -225,7 +221,7 @@ open class DestinationFactoryProtocolMock: DestinationFactoryProtocol
 
                 // You should implement Destination
 
-                signPost.error("❌ \(error)")
+                print("❌ \(error)")
 
                 fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
             }
@@ -440,7 +436,7 @@ open class TestReportProtocolMock: TestReportProtocol
 
                 // You should implement String
 
-                signPost.error("❌ \(error)")
+                print("❌ \(error)")
 
                 fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
             }

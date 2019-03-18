@@ -30,11 +30,11 @@ private class SourceryBuilderMock: SourceryBuilderProtocolMock
 {
     let executable = try! FileProtocolMock()
 
-    required init(terminalWorker: TerminalProtocol, disk: DependencyProtocol?, signPost: SignPostProtocol, systemExecutableProvider: SystemExecutableProviderProtocol) throws
+    required init(swiftPackageWithSourceryFolder: FolderProtocol, terminal: TerminalProtocol, signPost: SignPostProtocol, systemExecutableProvider: SystemExecutableProviderProtocol)
     {
-        try super.init(terminalWorker: terminalWorker, disk: disk, signPost: signPost, systemExecutableProvider: systemExecutableProvider)
+        super.init(swiftPackageWithSourceryFolder: swiftPackageWithSourceryFolder, terminal: terminal, signPost: signPost, systemExecutableProvider: systemExecutableProvider)
         attemptToBuildSourceryIfNeededClosure = {
-            return self.executable
+            self.executable
         }
     }
 }
@@ -62,6 +62,7 @@ class HighwaySpec: QuickSpec
     var terminal: TerminalProtocolMock!
     var signPost: SignPostProtocolMock!
     var queue: HighwayDispatchProtocolMock!
+    var dependencyService: DependencyServiceProtocolMock!
 
     override func spec()
     {
@@ -181,8 +182,17 @@ class HighwaySpec: QuickSpec
                     self.queue = HighwayDispatchProtocolMock()
                     self.queue.asyncSyncClosure = { $0() }
 
+                    self.dependencyService = DependencyServiceProtocolMock()
+                    self.dependencyService.generateDependencyReturnValue = dependencies
+
+                    let swiftPackageWithSourceryFolder = try FolderProtocolMock()
+
                     self.sut = try Highway(
                         package: (package: self.rootPackage, executable: "MockedSetup"),
+                        highwaySetupPackage: self.highwaySetupPackage,
+                        extraFolders: self.extraFolders,
+                        dependencyService: self.dependencyService,
+                        swiftPackageWithSourceryFolder: swiftPackageWithSourceryFolder,
                         swiftformatType: SWM.self,
                         githooksType: GHWM.self,
                         sourceryWorkerType: SourceryWorkerMock.self,

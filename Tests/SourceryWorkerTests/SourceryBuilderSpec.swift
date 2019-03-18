@@ -53,9 +53,9 @@ class SourceryBuilderSpec: QuickSpec
 
                 expect
                 {
-                    sut = try SourceryBuilder(
-                        terminalWorker: terminal,
-                        disk: disk,
+                    sut = SourceryBuilder(
+                        swiftPackageWithSourceryFolder: try FolderProtocolMock(),
+                        terminal: terminal,
                         signPost: signPost
                     )
                 }.toNot(throwError())

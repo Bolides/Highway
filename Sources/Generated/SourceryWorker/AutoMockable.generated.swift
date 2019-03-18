@@ -1,6 +1,7 @@
 import Arguments
 import Foundation
 import HighwayDispatch
+import SignPost
 import SourceryAutoProtocols
 import SourceryWorker
 import Terminal
@@ -10,10 +11,6 @@ import ZFileMock
 
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
-
-import SignPost
-
-let signPost = SignPost.shared
 
 // MARK: - ImportProtocolMock
 
@@ -53,19 +50,18 @@ open class SourceryBuilderProtocolMock: SourceryBuilderProtocol
 
     // MARK: - <init> - parameters
 
-    public var initTerminalWorkerDiskSignPostSystemExecutableProviderThrowableError: Error?
-    public var initTerminalWorkerDiskSignPostSystemExecutableProviderReceivedArguments: (terminalWorker: TerminalProtocol, disk: DependencyProtocol?, signPost: SignPostProtocol, systemExecutableProvider: SystemExecutableProviderProtocol)?
+    public var initSwiftPackageWithSourceryFolderTerminalSignPostSystemExecutableProviderReceivedArguments: (swiftPackageWithSourceryFolder: FolderProtocol, terminal: TerminalProtocol, signPost: SignPostProtocol, systemExecutableProvider: SystemExecutableProviderProtocol)?
 
     // MARK: - <init> - closure mocks
 
-    public var initTerminalWorkerDiskSignPostSystemExecutableProviderClosure: ((TerminalProtocol, DependencyProtocol?, SignPostProtocol, SystemExecutableProviderProtocol) throws -> Void)?
+    public var initSwiftPackageWithSourceryFolderTerminalSignPostSystemExecutableProviderClosure: ((FolderProtocol, TerminalProtocol, SignPostProtocol, SystemExecutableProviderProtocol) -> Void)?
 
     // MARK: - <init> - initializer mocked
 
-    public required init(terminalWorker: TerminalProtocol, disk: DependencyProtocol?, signPost: SignPostProtocol, systemExecutableProvider: SystemExecutableProviderProtocol) throws
+    public required init(swiftPackageWithSourceryFolder: FolderProtocol, terminal: TerminalProtocol, signPost: SignPostProtocol, systemExecutableProvider: SystemExecutableProviderProtocol)
     {
-        initTerminalWorkerDiskSignPostSystemExecutableProviderReceivedArguments = (terminalWorker: terminalWorker, disk: disk, signPost: signPost, systemExecutableProvider: systemExecutableProvider)
-        try? initTerminalWorkerDiskSignPostSystemExecutableProviderClosure?(terminalWorker, disk, signPost, systemExecutableProvider)
+        initSwiftPackageWithSourceryFolderTerminalSignPostSystemExecutableProviderReceivedArguments = (swiftPackageWithSourceryFolder: swiftPackageWithSourceryFolder, terminal: terminal, signPost: signPost, systemExecutableProvider: systemExecutableProvider)
+        initSwiftPackageWithSourceryFolderTerminalSignPostSystemExecutableProviderClosure?(swiftPackageWithSourceryFolder, terminal, signPost, systemExecutableProvider)
     }
 
     // MARK: - <attemptToBuildSourceryIfNeeded> - parameters
