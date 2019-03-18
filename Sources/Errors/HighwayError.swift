@@ -66,11 +66,7 @@ public enum HighwayError: Swift.Error, CustomStringConvertible
             """
         case let .highwayError(atLocation, error):
             return """
-            ❌ highwayError
-            location
-            \(atLocation)
-            
-            error
+            ❌ \(atLocation)
 
             \(error)
             """
