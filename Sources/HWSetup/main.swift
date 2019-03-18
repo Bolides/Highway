@@ -16,10 +16,6 @@ let highwayRunner: HighwayRunner!
 let dispatchGroup = DispatchGroup()
 let signPost = SignPost.shared
 
-func handleSourceryOutput(_ output: @escaping SourceryWorker.SyncOutput) { do { _ = try output() } catch { signPost.error("\(error)") } }
-func handleTestOutput(_ output: @escaping HighwayRunner.SyncTestOutput) { do { _ = try output() } catch { signPost.error("\(error)") } }
-func handleSwiftformat(_ output: @escaping HighwayRunner.SyncSwiftformat) { do { try output() } catch { signPost.error("\(error)") } }
-
 // MARK: - RUN
 
 let dependencyService: DependencyServiceProtocol!
@@ -51,6 +47,8 @@ do
         highwayRunner.runSwiftformat(handleSwiftformat)
         dispatchGroup.wait()
         highwayRunner.runTests(handleTestOutput)
+        dispatchGroup.wait()
+        highwayRunner.runSwiftPackageGenerateXcodeProject(handleSwiftPackageGenerateXcodeProject)
         dispatchGroup.wait()
         guard let errors = highwayRunner.errors, errors.count > 0 else
         {

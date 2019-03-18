@@ -6,6 +6,7 @@
 //
 
 import Arguments
+import Errors
 import Foundation
 import GitHooks
 import HighwayDispatch
@@ -57,8 +58,10 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
 
     // MARK: - STATIC - Generate Packages for Folders
 
-    public static func package(for folder: FolderProtocol, dependencyService: DependencyServiceProtocol, terminal: TerminalProtocol = Terminal.shared) throws -> PackageProtocol
+    public static func package(for folder: FolderProtocol, dependencyService: DependencyServiceProtocol, terminal: TerminalProtocol = Terminal.shared, signPost: SignPostProtocol = SignPost.shared) throws -> PackageProtocol
     {
+        signPost.message("📦 \(folder.name) ...")
+
         let originalFolder = FileSystem.shared.currentFolder
         FileManager.default.changeCurrentDirectoryPath(folder.path)
 
@@ -69,6 +72,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
             dump: try DumpService(terminal: terminal, swiftPackageDependencies: dependencies).dump
         )
         FileManager.default.changeCurrentDirectoryPath(originalFolder.path)
+        signPost.message("📦 \(folder.name) ✅")
         return highwayPackage
     }
 
@@ -91,12 +95,11 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
     ) throws
     {
         self.queue = queue
-        signPost.message("📦 \(Highway.self) ...")
         self.package = package
 
         signPost.message(
             """
-            📦 \(Highway.self) for
+            📦 \(pretty_function()) for
             \(try package.package.dependencies.srcRoot())
             ✅
             """

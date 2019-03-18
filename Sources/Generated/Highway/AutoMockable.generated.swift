@@ -179,6 +179,32 @@ open class HighwayRunnerProtocolMock: HighwayRunnerProtocol
 
         runSwiftformatClosure?(async)
     }
+
+    // MARK: - <runSwiftPackageGenerateXcodeProject> - parameters
+
+    public var runSwiftPackageGenerateXcodeProjectCallsCount = 0
+    public var runSwiftPackageGenerateXcodeProjectCalled: Bool
+    {
+        return runSwiftPackageGenerateXcodeProjectCallsCount > 0
+    }
+
+    public var runSwiftPackageGenerateXcodeProjectReceivedAsync: ((@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)?
+
+    // MARK: - <runSwiftPackageGenerateXcodeProject> - closure mocks
+
+    public var runSwiftPackageGenerateXcodeProjectClosure: ((@escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void) -> Void)?
+
+    // MARK: - <runSwiftPackageGenerateXcodeProject> - method mocked
+
+    open func runSwiftPackageGenerateXcodeProject(_ async: @escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)
+    {
+        runSwiftPackageGenerateXcodeProjectCallsCount += 1
+        runSwiftPackageGenerateXcodeProjectReceivedAsync = async
+
+        // <runSwiftPackageGenerateXcodeProject> - Void return mock implementation
+
+        runSwiftPackageGenerateXcodeProjectClosure?(async)
+    }
 }
 
 // MARK: - PackageProtocolMock

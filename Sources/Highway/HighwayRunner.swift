@@ -28,6 +28,7 @@ public protocol HighwayRunnerProtocol: AutoMockable
     func runSourcery(_ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
     func addGithooksPrePush() throws
     func runSwiftformat(_ async: @escaping (@escaping HighwayRunner.SyncSwiftformat) -> Void)
+    func runSwiftPackageGenerateXcodeProject(_ async: @escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)
     // sourcery:end
 }
 
@@ -35,6 +36,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
 {
     public typealias SyncTestOutput = () throws -> TestReportProtocol
     public typealias SyncSwiftformat = () throws -> Void
+    public typealias SyncSwiftPackageGenerateXcodeProj = () throws -> [String]
 
     public static let queue: HighwayDispatchProtocol = DispatchQueue(label: "be.dooz.signpost.sprunner")
 
@@ -131,7 +133,40 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
         }
     }
 
-    // MARK: - Test Package
+    public func runSwiftPackageGenerateXcodeProject(_ async: @escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)
+    {
+        signPost.message("🛠 \(pretty_function()) ...")
+
+        dispatchGroup.enter()
+        queue.async
+        { [weak self] in
+            guard let `self` = self else
+            {
+                async { throw HighwayError.prematureRelease(in: pretty_function()) }
+                return
+            }
+
+            do
+            {
+                let originalFolder = FileSystem.shared.currentFolder
+                FileManager.default.changeCurrentDirectoryPath(try self.highway.package.package.dependencies.srcRoot().path)
+
+                let task = try Task(commandName: "swift")
+                task.arguments = Arguments(["test"])
+
+                let output = try self.terminal.runProcess(task.toProcess)
+                FileManager.default.changeCurrentDirectoryPath(originalFolder.path)
+                self.signPost.message("🛠 \(pretty_function()) ✅")
+                async { output }
+            }
+            catch
+            {
+                async { throw HighwayError.highwayError(atLocation: pretty_function(), error: error) }
+            }
+
+            self.dispatchGroup.leave()
+        }
+    }
 
     private func addError(_ error: Swift.Error?)
     {

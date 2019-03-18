@@ -9,11 +9,11 @@ extension String: LocalizedError
 
 public typealias ErrorMessage = String
 
-public func pretty_function(file: String = #file, line: Int = #line, colomn: Int = #column, queue: Bool = Thread.isMainThread) -> String
+public func pretty_function(file: String = #file, function: String = #function, line: Int = #line, colomn: Int = #column, queue: Bool = Thread.isMainThread) -> String
 {
     do
     {
-        return "\(try File(path: file).name) (\(line), \(colomn)) mainQueue: \(queue)"
+        return "\(try File(path: file).name) \(function) (\(line), \(colomn)) mainQueue: \(queue)"
     }
     catch
     {
