@@ -112,7 +112,7 @@ public let package = Package(
     dependencies: [
         // MARK: - External Dependencies
 
-        .package(url: "https://www.github.com/Bolides/ZFile", "2.2.0" ..< "3.1.0"),
+        .package(url: "https://www.github.com/dooZdev/ZFile", "2.2.0" ..< "3.1.0"),
         .package(url: "https://www.github.com/doozMen/SignPost", from: "1.0.0"),
         .package(url: "https://www.github.com/dooZdev/template-sourcery", "1.3.7" ..< "2.0.0"),
         .package(url: "https://www.github.com/antitypical/Result", "4.1.0" ..< "5.1.0"),
