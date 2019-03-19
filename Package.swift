@@ -150,6 +150,10 @@ public let package = Package(
         // MARK: - Logging
 
         .package(url: "https://www.github.com/doozMen/SignPost", "1.0.0" ..< "2.0.0"),
+        
+        // MARK: - Carthage
+        
+        .package(url: "https://www.github.com/Carthage/Carthage", .revision("34db22ce1ea461462e598a4104b40a7946c901bf")),
 
         // MARK: - Carthage
 
