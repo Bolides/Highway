@@ -131,7 +131,7 @@ public let package = Package(
 
         // MARK: - Sourcery
 
-        .package(url: "https://www.github.com/doozMen/Sourcery", "0.16.3" ..< "1.0.0"),
+        .package(url: "https://www.github.com/doozMen/Sourcery", "0.17.0" ..< "1.0.0"),
         .package(url: "https://www.github.com/dooZdev/template-sourcery", "1.3.7" ..< "2.0.0"),
 
         // MARK: - Errors
@@ -150,6 +150,10 @@ public let package = Package(
         // MARK: - Logging
 
         .package(url: "https://www.github.com/doozMen/SignPost", "1.0.0" ..< "2.0.0"),
+
+        // MARK: - Carthage
+
+        .package(url: "https://www.github.com/Carthage/Carthage", .revision("34db22ce1ea461462e598a4104b40a7946c901bf")),
 
     ],
     targets: [
@@ -313,7 +317,7 @@ public let package = Package(
 
         .testTarget(
             name: "HWCarthageTests",
-            dependencies: ["HWCarthage", "ArgumentsMock", "HighwayMock", "HighwayDispatchMock", "HWCarthageMock", "Quick", "Nimble"]
+            dependencies: ["HWCarthage", "SignPostMock", "ArgumentsMock", "Arguments", "HighwayMock", "HighwayDispatchMock", "HWCarthageMock", "Quick", "Nimble"]
         ),
         .testTarget(
             name: "HWPodTests",
