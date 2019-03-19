@@ -54,3 +54,6 @@ Carthage
 /Sources/.sourcery-XCBuild.yml
 /Sources/Stub/SwiftPackageDumpService.json
 /Sources/.sourcery-Highway.yml
+/Sources/.sourcery-HWCarthage.yml
+/Sources/.sourcery-HWPod.yml
+/Sources/.sourcery-HWPOSIX.yml
