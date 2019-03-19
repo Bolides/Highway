@@ -56,7 +56,7 @@ import Foundation
  var readOutputString: String? { get }
  var trimmedOutput: String? { get }
  var capturedOutputString: String? { get }
- var toProcess: Process { get }
+ var toProcess: ProcessProtocol { get }
  var description: String { get }
 
  func enableReadableOutputDataCapturing()

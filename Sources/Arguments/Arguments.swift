@@ -1,11 +1,27 @@
 import Foundation
+import SourceryAutoProtocols
 
 public protocol ArgumentsConvertible
 {
     func arguments() -> Arguments?
 }
 
-public struct Arguments
+public protocol ArgumentsProtocol: AutoMockable
+{
+    // sourcery:inline:Arguments.AutoGenerateProtocol
+    var all: [String] { get set }
+    var description: String { get }
+
+    mutating func append(_ arg: String)
+    mutating func append(contentsOf args: [String])
+    mutating func append(_ arguments: Arguments)
+    mutating func appendOption(_ name: String, value: String)
+    mutating func append(_ option: ArgumentsConvertible)
+
+    // sourcery:end
+}
+
+public struct Arguments: AutoGenerateProtocol
 {
     // MARK: - Properties
 
@@ -46,6 +62,7 @@ public struct Arguments
         append(args)
     }
 
+    // sourcery:begin:skipProtocol
     public static func += (lhs: inout Arguments, rhs: ArgumentsConvertible)
     {
         var result = lhs
@@ -94,10 +111,13 @@ public struct Arguments
         result += rhs
         return result
     }
+
+    // sourcery:end
 }
 
 extension Arguments: Equatable
 {
+    // sourcery:skipProtocol
     public static func == (l: Arguments, r: Arguments) -> Bool
     {
         return l.all == r.all

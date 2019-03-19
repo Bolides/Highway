@@ -8,6 +8,152 @@ import ZFileMock
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
+// MARK: - ArgumentsProtocolMock
+
+open class ArgumentsProtocolMock: ArgumentsProtocol
+{
+    public init() {}
+
+    public var all: [String] = []
+    public var description: String
+    {
+        get { return underlyingDescription }
+        set(value) { underlyingDescription = value }
+    }
+
+    public var underlyingDescription: String = "AutoMockable filled value"
+
+    // MARK: - <append> - parameters
+
+    public var appendCallsCount = 0
+    public var appendCalled: Bool
+    {
+        return appendCallsCount > 0
+    }
+
+    public var appendReceivedArg: String?
+
+    // MARK: - <append> - closure mocks
+
+    public var appendClosure: ((String) -> Void)?
+
+    // MARK: - <append> - method mocked
+
+    open func append(_ arg: String)
+    {
+        appendCallsCount += 1
+        appendReceivedArg = arg
+
+        // <append> - Void return mock implementation
+
+        appendClosure?(arg)
+    }
+
+    // MARK: - <append> - parameters
+
+    public var appendContentsOfCallsCount = 0
+    public var appendContentsOfCalled: Bool
+    {
+        return appendContentsOfCallsCount > 0
+    }
+
+    public var appendContentsOfReceivedArgs: [String]?
+
+    // MARK: - <append> - closure mocks
+
+    public var appendContentsOfClosure: (([String]) -> Void)?
+
+    // MARK: - <append> - method mocked
+
+    open func append(contentsOf args: [String])
+    {
+        appendContentsOfCallsCount += 1
+        appendContentsOfReceivedArgs = args
+
+        // <append> - Void return mock implementation
+
+        appendContentsOfClosure?(args)
+    }
+
+    // MARK: - <append> - parameters
+
+    public var appendCallsCount = 0
+    public var appendCalled: Bool
+    {
+        return appendCallsCount > 0
+    }
+
+    public var appendReceivedArguments: Arguments?
+
+    // MARK: - <append> - closure mocks
+
+    public var appendClosure: ((Arguments) -> Void)?
+
+    // MARK: - <append> - method mocked
+
+    open func append(_ arguments: Arguments)
+    {
+        appendCallsCount += 1
+        appendReceivedArguments = arguments
+
+        // <append> - Void return mock implementation
+
+        appendClosure?(arguments)
+    }
+
+    // MARK: - <appendOption> - parameters
+
+    public var appendOptionValueCallsCount = 0
+    public var appendOptionValueCalled: Bool
+    {
+        return appendOptionValueCallsCount > 0
+    }
+
+    public var appendOptionValueReceivedArguments: (name: String, value: String)?
+
+    // MARK: - <appendOption> - closure mocks
+
+    public var appendOptionValueClosure: ((String, String) -> Void)?
+
+    // MARK: - <appendOption> - method mocked
+
+    open func appendOption(_ name: String, value: String)
+    {
+        appendOptionValueCallsCount += 1
+        appendOptionValueReceivedArguments = (name: name, value: value)
+
+        // <appendOption> - Void return mock implementation
+
+        appendOptionValueClosure?(name, value)
+    }
+
+    // MARK: - <append> - parameters
+
+    public var appendCallsCount = 0
+    public var appendCalled: Bool
+    {
+        return appendCallsCount > 0
+    }
+
+    public var appendReceivedOption: ArgumentsConvertible?
+
+    // MARK: - <append> - closure mocks
+
+    public var appendClosure: ((ArgumentsConvertible) -> Void)?
+
+    // MARK: - <append> - method mocked
+
+    open func append(_ option: ArgumentsConvertible)
+    {
+        appendCallsCount += 1
+        appendReceivedOption = option
+
+        // <append> - Void return mock implementation
+
+        appendClosure?(option)
+    }
+}
+
 // MARK: - DependencyProtocolMock
 
 open class DependencyProtocolMock: DependencyProtocol

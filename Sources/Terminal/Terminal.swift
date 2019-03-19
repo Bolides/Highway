@@ -15,7 +15,7 @@ public protocol TerminalProtocol: AutoMockable
     func runExecutable(_ executable: ExecutableProtocol) throws -> [String]
 
     @discardableResult
-    func runProcess(_ processTask: Process) throws -> [String]
+    func runProcess(_ processTask: ProcessProtocol) throws -> [String]
 }
 
 public struct Terminal: TerminalProtocol
@@ -54,18 +54,18 @@ public struct Terminal: TerminalProtocol
         return try runProcess(processTask)
     }
 
-    public func runProcess(_ processTask: Process) throws -> [String]
+    public func runProcess(_ processTask: ProcessProtocol) throws -> [String]
     {
         return try runProcess(processTask, task: nil)
     }
 
-    public func runProcess(_ processTask: Process, task: TerminalTask?) throws -> [String]
+    public func runProcess(_ processTask: ProcessProtocol, task: TerminalTask?) throws -> [String]
     {
         var finalResult = [String]()
 
         let pipe = Pipe()
-        processTask.standardOutput = pipe
-        processTask.standardError = pipe
+        processTask.standardOutput = pipe.fileHandleForWriting
+        processTask.standardError = pipe.fileHandleForWriting
         processTask.launch()
         processTask.waitUntilExit()
 

@@ -16,6 +16,16 @@ import Foundation
 
 /*
 
+ // Generated protocol inline for Arguments -> See code in the file of that type
+ // sourcery:inline:Arguments.AutoGenerateProtocol
+ var all: [String] { get set }
+
+ mutating func append(_ arg: String)
+ mutating func append(contentsOf args: [String])
+ mutating func append(_ arguments: Arguments)
+ mutating func appendOption(_ name: String, value: String)
+ mutating func append(_ option: ArgumentsConvertible)
+ // sourcery:end
  // Generated protocol inline for Dependency -> See code in the file of that type
  // sourcery:inline:Dependency.AutoGenerateProtocol
  var name: String { get }

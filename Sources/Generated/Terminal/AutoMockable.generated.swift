@@ -340,6 +340,70 @@ open class PathEnvironmentParserProtocolMock: PathEnvironmentParserProtocol
     public var urls: [FolderProtocol] = []
 }
 
+// MARK: - ProcessProtocolMock
+
+open class ProcessProtocolMock: ProcessProtocol
+{
+    public init() {}
+
+    public var standardInput: Any?
+    public var standardOutput: Any?
+    public var standardError: Any?
+    public var terminationStatus: Int32
+    {
+        get { return underlyingTerminationStatus }
+        set(value) { underlyingTerminationStatus = value }
+    }
+
+    public var underlyingTerminationStatus: Int32!
+
+    // MARK: - <launch> - parameters
+
+    public var launchCallsCount = 0
+    public var launchCalled: Bool
+    {
+        return launchCallsCount > 0
+    }
+
+    // MARK: - <launch> - closure mocks
+
+    public var launchClosure: (() -> Void)?
+
+    // MARK: - <launch> - method mocked
+
+    open func launch()
+    {
+        launchCallsCount += 1
+
+        // <launch> - Void return mock implementation
+
+        launchClosure?()
+    }
+
+    // MARK: - <waitUntilExit> - parameters
+
+    public var waitUntilExitCallsCount = 0
+    public var waitUntilExitCalled: Bool
+    {
+        return waitUntilExitCallsCount > 0
+    }
+
+    // MARK: - <waitUntilExit> - closure mocks
+
+    public var waitUntilExitClosure: (() -> Void)?
+
+    // MARK: - <waitUntilExit> - method mocked
+
+    open func waitUntilExit()
+    {
+        waitUntilExitCallsCount += 1
+
+        // <waitUntilExit> - Void return mock implementation
+
+        waitUntilExitClosure?()
+    }
+}
+
 // MARK: - SystemExecutableProviderProtocolMock
 
 open class SystemExecutableProviderProtocolMock: SystemExecutableProviderProtocol
@@ -463,13 +527,13 @@ open class TaskProtocolMock: TaskProtocol
     public var readOutputString: String?
     public var trimmedOutput: String?
     public var capturedOutputString: String?
-    public var toProcess: Process
+    public var toProcess: ProcessProtocol
     {
         get { return underlyingToProcess }
         set(value) { underlyingToProcess = value }
     }
 
-    public var underlyingToProcess: Process!
+    public var underlyingToProcess: ProcessProtocol!
     public var description: String
     {
         get { return underlyingDescription }
@@ -615,16 +679,16 @@ open class TerminalProtocolMock: TerminalProtocol
         return runProcessCallsCount > 0
     }
 
-    public var runProcessReceivedProcessTask: Process?
+    public var runProcessReceivedProcessTask: ProcessProtocol?
     public var runProcessReturnValue: [String]?
 
     // MARK: - <runProcess> - closure mocks
 
-    public var runProcessClosure: ((Process) throws -> [String])?
+    public var runProcessClosure: ((ProcessProtocol) throws -> [String])?
 
     // MARK: - <runProcess> - method mocked
 
-    open func runProcess(_ processTask: Process) throws -> [String]
+    open func runProcess(_ processTask: ProcessProtocol) throws -> [String]
     {
         // <runProcess> - Throwable method implementation
 
