@@ -154,7 +154,7 @@ class HighwaySpec: QuickSpec
                     }
                     """.components(separatedBy: "\n")
 
-                    self.terminal.runProcessClosure = { (process: Process) in
+                    self.terminal.runProcessClosure = { process in
 
                         let command = try process.executableFile().path
                         guard

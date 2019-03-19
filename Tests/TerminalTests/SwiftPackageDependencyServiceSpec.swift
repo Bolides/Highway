@@ -38,7 +38,7 @@ class SwiftPackageDependencyServiceSpec: QuickSpec
                 it("ZFile")
                 {
                     let zfile = expectedSwiftPackage?.dependencies.first { $0.name == "ZFile" }
-                    expect(zfile?.dependencies.map { $0.name }.sorted().joined(separator: ", ")) == "Nimble, Quick, SignPost, template-sourcery"
+                    expect(zfile?.dependencies.map { $0.name }.sorted().joined(separator: ", ")) == "Nimble, Quick"
                 }
             }
         }

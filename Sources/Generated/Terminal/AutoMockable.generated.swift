@@ -356,6 +356,7 @@ open class ProcessProtocolMock: ProcessProtocol
     }
 
     public var underlyingTerminationStatus: Int32!
+    public var arguments: [String]?
 
     // MARK: - <launch> - parameters
 
@@ -401,6 +402,53 @@ open class ProcessProtocolMock: ProcessProtocol
         // <waitUntilExit> - Void return mock implementation
 
         waitUntilExitClosure?()
+    }
+
+    // MARK: - <executableFile> - parameters
+
+    public var executableFileThrowableError: Error?
+    public var executableFileCallsCount = 0
+    public var executableFileCalled: Bool
+    {
+        return executableFileCallsCount > 0
+    }
+
+    public var executableFileReturnValue: FileProtocol?
+
+    // MARK: - <executableFile> - closure mocks
+
+    public var executableFileClosure: (() throws -> FileProtocol)?
+
+    // MARK: - <executableFile> - method mocked
+
+    open func executableFile() throws -> FileProtocol
+    {
+        // <executableFile> - Throwable method implementation
+
+        if let error = executableFileThrowableError
+        {
+            throw error
+        }
+
+        executableFileCallsCount += 1
+
+        // <executableFile> - Return Value mock implementation
+
+        guard let closureReturn = executableFileClosure else
+        {
+            guard let returnValue = executableFileReturnValue else
+            {
+                let message = "No returnValue implemented for executableFileClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement FileProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
     }
 }
 

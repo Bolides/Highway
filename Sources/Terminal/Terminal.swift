@@ -64,8 +64,8 @@ public struct Terminal: TerminalProtocol
         var finalResult = [String]()
 
         let pipe = Pipe()
-        processTask.standardOutput = pipe.fileHandleForWriting
-        processTask.standardError = pipe.fileHandleForWriting
+        processTask.standardOutput = pipe
+        processTask.standardError = pipe
         processTask.launch()
         processTask.waitUntilExit()
 

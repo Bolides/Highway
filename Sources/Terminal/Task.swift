@@ -10,9 +10,11 @@ public protocol ProcessProtocol: class, AutoMockable
     var standardOutput: Any? { get set }
     var standardError: Any? { get set }
     var terminationStatus: Int32 { get }
+    var arguments: [String]? { get set }
 
     func launch()
     func waitUntilExit()
+    func executableFile() throws -> FileProtocol
 }
 
 public protocol TaskProtocol: AutoMockable

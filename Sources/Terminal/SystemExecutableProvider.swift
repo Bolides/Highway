@@ -12,6 +12,7 @@ public protocol SystemExecutableProviderProtocol: AutoMockable
     var fileSystem: FileSystemProtocol { get }
 
     func executable(with executableName: String) throws -> FileProtocol
+
     // sourcery:end
 }
 
