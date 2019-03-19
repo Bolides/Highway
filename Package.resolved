@@ -141,8 +141,8 @@
         "repositoryURL": "https://www.github.com/doozMen/Sourcery",
         "state": {
           "branch": null,
-          "revision": "71e34e576d1723d710b66655d22e67db38229a39",
-          "version": "0.16.4"
+          "revision": "92693581341f575a8e024f8329da6a9f49899de4",
+          "version": "0.17.0"
         }
       },
       {
@@ -197,15 +197,6 @@
           "branch": null,
           "revision": "543df82383ebfae4696c70809ae36ff3df63e9c6",
           "version": "0.39.5"
-        }
-      },
-      {
-        "package": "SwiftTryCatch",
-        "repositoryURL": "https://github.com/doozMen/SwiftTryCatch.git",
-        "state": {
-          "branch": null,
-          "revision": "6a177252cfa2ef649b0aa7b2d16ab221386ca51c",
-          "version": "1.0.1"
         }
       },
       {
