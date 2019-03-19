@@ -112,14 +112,32 @@ public let package = Package(
     dependencies: [
         // MARK: - External Dependencies
 
+        // MARK: - Filesystem
+        
         .package(url: "https://www.github.com/Bolides/ZFile", "2.2.0" ..< "3.1.0"),
-        .package(url: "https://www.github.com/doozMen/SignPost", from: "1.0.0"),
+        
+        // MARK: - Sourcery
+        
+        .package(url: "https://www.github.com/doozMen/Sourcery", "0.16.3" ..< "1.0.0"),
         .package(url: "https://www.github.com/dooZdev/template-sourcery", "1.3.7" ..< "2.0.0"),
+        
+        // MARK: - Errors
+        
         .package(url: "https://www.github.com/antitypical/Result", "4.1.0" ..< "5.1.0"),
+        
+        // MARK: - Formatting
+        
         .package(url: "https://github.com/nicklockwood/SwiftFormat", "0.39.4" ..< "0.40.0"),
+        
+        // MARK: - Testing
+        
         .package(url: "https://www.github.com/Quick/Quick", "1.3.4" ..< "2.1.0"),
         .package(url: "https://www.github.com/Quick/Nimble", "7.3.4" ..< "8.1.0"),
-        .package(url: "https://www.github.com/doozMen/Sourcery", "0.16.3" ..< "1.0.0"),
+        
+        // MARK: - Logging
+        
+        .package(url: "https://www.github.com/doozMen/SignPost", "1.0.0" ..< "2.0.0"),
+
     ],
     targets: [
         // MARK: - Targets
