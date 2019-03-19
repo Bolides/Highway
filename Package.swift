@@ -249,7 +249,7 @@ public let package = Package(
         ),
         .target(
             name: "HWPodMock",
-            dependencies: ["HighwayDispatch", "SignPost", "ZFileMock", "SourceryAutoProtocols", "Errors"],
+            dependencies: ["HighwayDispatch", "HWPod", "SignPost", "ZFileMock", "SourceryAutoProtocols", "Errors"],
             path: "Sources/Generated/HWPod"
         ),
         .target(

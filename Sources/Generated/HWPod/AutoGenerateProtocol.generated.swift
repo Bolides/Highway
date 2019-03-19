@@ -16,8 +16,8 @@ import Foundation
 
 /*
 
- // Generated protocol inline for PodInstallWorker -> See code in the file of that type
- // sourcery:inline:PodInstallWorker.AutoGenerateProtocol
+ // Generated protocol inline for HWPod -> See code in the file of that type
+ // sourcery:inline:HWPod.AutoGenerateProtocol
  static var expectedCocoapodsVersion: String { get }
 
  func attempt() throws

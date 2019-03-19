@@ -144,9 +144,9 @@ class SourcerySpec: QuickSpec
                         }
                     }
 
-                    context("POSIX")
+                    context("HWPOSIX")
                     {
-                        beforeEach { setup(for: "POSIX") }
+                        beforeEach { setup(for: "HWPOSIX") }
 
                         it("has imports for automockable")
                         {

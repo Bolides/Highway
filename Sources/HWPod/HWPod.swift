@@ -14,41 +14,39 @@ import SourceryAutoProtocols
 import Terminal
 import ZFile
 
-public protocol PodInstallWorkerProtocol: AutoMockable
+public protocol HWPodProtocol: AutoMockable
 {
-    // sourcery:inline:PodInstallWorker.AutoGenerateProtocol
+    // sourcery:inline:HWPod.AutoGenerateProtocol
     static var expectedCocoapodsVersion: String { get }
 
     func attempt() throws
     // sourcery:end
 }
 
-public struct PodInstallWorker: PodInstallWorkerProtocol, AutoGenerateProtocol
+public struct HWPod: HWPodProtocol, AutoGenerateProtocol
 {
     public static let expectedCocoapodsVersion: String = "1.5.3"
 
     private let terminal: TerminalProtocol
-    private let system: SystemExecutableProviderProtocol
     private let signPost: SignPostProtocol
-    private let reactNativeRootFolder: FolderProtocol
+    private let podFolder: FolderProtocol
 
     public init(
-        reactNativeRootFolder: FolderProtocol,
-        system: SystemExecutableProviderProtocol = SystemExecutableProvider.shared,
-        terminalWorker: TerminalProtocol = Terminal.shared,
+        podFolder: FolderProtocol,
+        strictPodVersion: String = HWPod.expectedCocoapodsVersion,
+        terminal: TerminalProtocol = Terminal.shared,
         signPost: SignPostProtocol = SignPost.shared
     )
     {
-        terminal = terminalWorker
-        self.system = system
+        self.terminal = terminal
         self.signPost = signPost
-        self.reactNativeRootFolder = reactNativeRootFolder
+        self.podFolder = podFolder
     }
 
     public func attempt() throws
     {
         let originalFolder = FileSystem.shared.currentFolder
-        let iosFolder = try reactNativeRootFolder.subfolder(named: "ios")
+        let iosFolder = podFolder
         FileManager.default.changeCurrentDirectoryPath(iosFolder.path)
 
         // MARK: - Check cocoapods version
@@ -60,7 +58,7 @@ public struct PodInstallWorker: PodInstallWorkerProtocol, AutoGenerateProtocol
         versionTask.arguments = ["--version"]
         let versionOutput = try terminal.runProcess(versionTask)
 
-        guard let version = versionOutput.first, version == PodInstallWorker.expectedCocoapodsVersion else
+        guard let version = versionOutput.first, version == HWPod.expectedCocoapodsVersion else
         {
             throw Error.invalidCocoapodsVersion
         }
@@ -70,7 +68,7 @@ public struct PodInstallWorker: PodInstallWorkerProtocol, AutoGenerateProtocol
             signPost.message("run `pod install`...")
 
             let task = try Task(commandName: "pod").toProcess
-            task.arguments = ["_\(PodInstallWorker.expectedCocoapodsVersion)_", "install"]
+            task.arguments = ["_\(HWPod.expectedCocoapodsVersion)_", "install"]
 
             let output = try terminal.runProcess(task)
             FileManager.default.changeCurrentDirectoryPath(originalFolder.path)
@@ -93,7 +91,7 @@ public struct PodInstallWorker: PodInstallWorkerProtocol, AutoGenerateProtocol
             
             ``` bash
             sudo gem uninstall cocoapods
-            sudo gem install cocoapods -v "\(PodInstallWorker.expectedCocoapodsVersion)"
+            sudo gem install cocoapods -v "\(HWPod.expectedCocoapodsVersion)"
             ```
             
             then try again

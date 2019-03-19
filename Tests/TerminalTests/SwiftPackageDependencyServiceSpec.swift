@@ -30,16 +30,7 @@ class SwiftPackageDependencyServiceSpec: QuickSpec
 
             it("have dependencies of Highway package")
             {
-                expect(expectedSwiftPackage?.dependencies.map { $0.name }.sorted()) == [
-                    "Nimble",
-                    "Quick",
-                    "Result",
-                    "SignPost",
-                    "Sourcery",
-                    "SwiftFormat",
-                    "ZFile",
-                    "template-sourcery",
-                ]
+                expect(expectedSwiftPackage?.dependencies.map { $0.name }.sorted().joined(separator: ",")) == "Carthage,Nimble,Quick,Result,SignPost,Sourcery,SwiftFormat,ZFile,template-sourcery"
             }
 
             context("its dependencies have dependencies")
