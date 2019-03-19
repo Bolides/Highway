@@ -12,6 +12,7 @@ import Nimble
 import Quick
 import SignPostMock
 import TerminalMock
+import ZFile
 import ZFileMock
 
 class HWPodSpec: QuickSpec
@@ -25,21 +26,35 @@ class HWPodSpec: QuickSpec
             var folder: FolderProtocolMock!
             var terminal: TerminalProtocolMock!
             var signPost: SignPostProtocolMock!
+            var fileSystem: FileSystemProtocolMock!
+            var system: SystemExecutableProviderProtocolMock!
 
             beforeEach
             {
                 folder = try! FolderProtocolMock()
                 terminal = TerminalProtocolMock()
                 signPost = SignPostProtocolMock()
+                fileSystem = FileSystemProtocolMock()
+                system = SystemExecutableProviderProtocolMock()
 
-                terminal.runProcessClosure = {_ in return ["1.5.3"] }
-                
-                sut = HWPod(podFolder: folder, terminal: terminal, signPost: signPost)
+                system.executableWithReturnValue = try! FileProtocolMock()
+                fileSystem.underlyingCurrentFolder = try! File(path: #file).parentFolder().parentFolder() as! Folder
+
+                terminal.runProcessClosure = { _ in ["1.5.3"] }
+
+                sut = HWPod(
+                    podFolder: folder,
+                    terminal: terminal,
+                    signPost: signPost,
+                    fileSystem: fileSystem,
+                    system: system
+                )
             }
 
             it("runs cocoapods")
             {
                 expect { try sut?.attempt() }.toNot(throwError())
+                expect(terminal.runProcessReceivedProcessTask?.arguments?.joined(separator: ",")) == "_1.5.3_,install"
             }
         }
     }

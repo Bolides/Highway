@@ -16,6 +16,7 @@ import HWCarthageMock
 import Nimble
 import Quick
 import Terminal
+import TerminalMock
 import ZFile
 
 class HWCarthageSpec: QuickSpec
@@ -34,6 +35,7 @@ class HWCarthageSpec: QuickSpec
             var builder: CarthageBuilderProtocol!
             var queue: HighwayDispatchProtocolMock!
             var highway: HighwayProtocolMock!
+            var terminal: TerminalProtocolMock!
 
             beforeSuite
             {
@@ -49,6 +51,8 @@ class HWCarthageSpec: QuickSpec
                 expect
                 {
                     let srcRoot = try File(path: #file).parentFolder().parentFolder().parentFolder()
+                    FileManager.default.changeCurrentDirectoryPath(srcRoot.path)
+
                     self.cartfile = try srcRoot.createFileIfNeeded(named: "Cartfile")
                     self.cartfileResolved = try srcRoot.createFileIfNeeded(named: "Cartfile.resolved")
 
@@ -57,11 +61,12 @@ class HWCarthageSpec: QuickSpec
 
                     package.underlyingDependencies = dependency
 
-                    FileManager.default.changeCurrentDirectoryPath(srcRoot.path)
-
                     queue.asyncSyncClosure = { $0() }
 
-                    sut = HWCarthage(highway: highway, dispatchGroup: dispatchGroup, carthageBuilder: builder, queue: queue)
+                    terminal = TerminalProtocolMock()
+                    terminal.runProcessClosure = { _ in ["mock success"] }
+
+                    sut = HWCarthage(highway: highway, dispatchGroup: dispatchGroup, carthageBuilder: builder, queue: queue, terminal: terminal)
 
                     return true
                 }.toNot(throwError())
@@ -87,6 +92,8 @@ class HWCarthageSpec: QuickSpec
                 sut?.attemptToBuildCarthageIfNeeded { result = $0 }
 
                 expect { try result?() }.toNot(throwError())
+                expect { try terminal.runProcessReceivedProcessTask?.executableFile().path }.to(endWith(CarthageBuilder.carthageExecutablePath))
+                expect(terminal.runProcessReceivedProcessTask?.arguments?.joined(separator: ",")) == "update,--no-build"
             }
         }
     }

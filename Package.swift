@@ -321,7 +321,7 @@ public let package = Package(
         ),
         .testTarget(
             name: "HWPodTests",
-            dependencies: ["HWPod", "HWPodMock", "Quick", "Nimble"]
+            dependencies: ["HWPod", "HWPodMock", "ZFileMock", "ZFile", "TerminalMock", "Quick", "Nimble"]
         ),
         .testTarget(
             name: "GitHooksTests",

@@ -30,17 +30,23 @@ public struct HWPod: HWPodProtocol, AutoGenerateProtocol
     private let terminal: TerminalProtocol
     private let signPost: SignPostProtocol
     private let podFolder: FolderProtocol
+    private let fileSystem: FileSystemProtocol
+    private let system: SystemExecutableProviderProtocol
 
     public init(
         podFolder: FolderProtocol,
         strictPodVersion: String = HWPod.expectedCocoapodsVersion,
         terminal: TerminalProtocol = Terminal.shared,
-        signPost: SignPostProtocol = SignPost.shared
+        signPost: SignPostProtocol = SignPost.shared,
+        fileSystem: FileSystemProtocol = FileSystem.shared,
+        system: SystemExecutableProviderProtocol = SystemExecutableProvider.shared
     )
     {
         self.terminal = terminal
         self.signPost = signPost
         self.podFolder = podFolder
+        self.fileSystem = fileSystem
+        self.system = system
     }
 
     public func attempt() throws
@@ -67,7 +73,7 @@ public struct HWPod: HWPodProtocol, AutoGenerateProtocol
         {
             signPost.message("run `pod install`...")
 
-            let task = try Task(commandName: "pod").toProcess
+            let task = try Task(commandName: "pod", fileSystem: fileSystem, provider: system, signPost: signPost).toProcess
             task.arguments = ["_\(HWPod.expectedCocoapodsVersion)_", "install"]
 
             let output = try terminal.runProcess(task)
