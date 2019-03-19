@@ -50,18 +50,18 @@ open class SourceryBuilderProtocolMock: SourceryBuilderProtocol
 
     // MARK: - <init> - parameters
 
-    public var initSwiftPackageWithSourceryFolderTerminalSignPostSystemExecutableProviderReceivedArguments: (swiftPackageWithSourceryFolder: FolderProtocol, terminal: TerminalProtocol, signPost: SignPostProtocol, systemExecutableProvider: SystemExecutableProviderProtocol)?
+    public var initSwiftPackageWithSourceryFolderTerminalSignPostSystemReceivedArguments: (swiftPackageWithSourceryFolder: FolderProtocol, terminal: TerminalProtocol, signPost: SignPostProtocol, system: SystemProtocol)?
 
     // MARK: - <init> - closure mocks
 
-    public var initSwiftPackageWithSourceryFolderTerminalSignPostSystemExecutableProviderClosure: ((FolderProtocol, TerminalProtocol, SignPostProtocol, SystemExecutableProviderProtocol) -> Void)?
+    public var initSwiftPackageWithSourceryFolderTerminalSignPostSystemClosure: ((FolderProtocol, TerminalProtocol, SignPostProtocol, SystemProtocol) -> Void)?
 
     // MARK: - <init> - initializer mocked
 
-    public required init(swiftPackageWithSourceryFolder: FolderProtocol, terminal: TerminalProtocol, signPost: SignPostProtocol, systemExecutableProvider: SystemExecutableProviderProtocol)
+    public required init(swiftPackageWithSourceryFolder: FolderProtocol, terminal: TerminalProtocol, signPost: SignPostProtocol, system: SystemProtocol)
     {
-        initSwiftPackageWithSourceryFolderTerminalSignPostSystemExecutableProviderReceivedArguments = (swiftPackageWithSourceryFolder: swiftPackageWithSourceryFolder, terminal: terminal, signPost: signPost, systemExecutableProvider: systemExecutableProvider)
-        initSwiftPackageWithSourceryFolderTerminalSignPostSystemExecutableProviderClosure?(swiftPackageWithSourceryFolder, terminal, signPost, systemExecutableProvider)
+        initSwiftPackageWithSourceryFolderTerminalSignPostSystemReceivedArguments = (swiftPackageWithSourceryFolder: swiftPackageWithSourceryFolder, terminal: terminal, signPost: signPost, system: system)
+        initSwiftPackageWithSourceryFolderTerminalSignPostSystemClosure?(swiftPackageWithSourceryFolder, terminal, signPost, system)
     }
 
     // MARK: - <attemptToBuildSourceryIfNeeded> - parameters

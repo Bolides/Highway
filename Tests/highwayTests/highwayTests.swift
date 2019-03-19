@@ -30,9 +30,9 @@ private class SourceryBuilderMock: SourceryBuilderProtocolMock
 {
     let executable = try! FileProtocolMock()
 
-    required init(swiftPackageWithSourceryFolder: FolderProtocol, terminal: TerminalProtocol, signPost: SignPostProtocol, systemExecutableProvider: SystemExecutableProviderProtocol)
+    required init(swiftPackageWithSourceryFolder: FolderProtocol, terminal: TerminalProtocol, signPost: SignPostProtocol, system: SystemProtocol)
     {
-        super.init(swiftPackageWithSourceryFolder: swiftPackageWithSourceryFolder, terminal: terminal, signPost: signPost, systemExecutableProvider: systemExecutableProvider)
+        super.init(swiftPackageWithSourceryFolder: swiftPackageWithSourceryFolder, terminal: terminal, signPost: signPost, system: system)
         attemptToBuildSourceryIfNeededClosure = {
             self.executable
         }

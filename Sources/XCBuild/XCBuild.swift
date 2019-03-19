@@ -27,7 +27,7 @@ public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol
 {
     // MARK: - Properties
 
-    private let systemExecutableProvider: SystemExecutableProviderProtocol
+    private let systemExecutableProvider: SystemProtocol
     private let fileSystem: FileSystemProtocol
     private let terminalWorker: TerminalProtocol
 
@@ -36,7 +36,7 @@ public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol
     // MARK: - Init
 
     public init(
-        systemExecutableProvider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared,
+        systemExecutableProvider: SystemProtocol = System.shared,
         terminalWorker: TerminalProtocol = Terminal.shared,
         fileSystem: FileSystemProtocol = FileSystem.shared,
         signPost: SignPostProtocol = SignPost.shared

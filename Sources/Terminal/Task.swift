@@ -52,7 +52,7 @@ public class Task: TaskProtocol, AutoGenerateProtocol
 
     // MARK: - Init
 
-    public convenience init(commandName: String, arguments: Arguments = Arguments([]), fileSystem: FileSystemProtocol = FileSystem.shared, provider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared, signPost: SignPostProtocol = SignPost.shared) throws
+    public convenience init(commandName: String, arguments: Arguments = Arguments([]), fileSystem: FileSystemProtocol = FileSystem.shared, provider: SystemProtocol = System.shared, signPost: SignPostProtocol = SignPost.shared) throws
     {
         self.init(
             executable: try provider.executable(with: commandName),

@@ -37,12 +37,13 @@ import Foundation
  )  throws
  func writeToStubFile() throws
  // sourcery:end
- // Generated protocol inline for SystemExecutableProvider -> See code in the file of that type
- // sourcery:inline:SystemExecutableProvider.AutoGenerateProtocol
- static var shared: SystemExecutableProviderProtocol { get }
+ // Generated protocol inline for System -> See code in the file of that type
+ // sourcery:inline:System.AutoGenerateProtocol
+ static var shared: SystemProtocol { get }
  var pathEnvironmentParser: PathEnvironmentParserProtocol { get }
  var fileSystem: FileSystemProtocol { get }
 
+ func process(_ executableName: String) throws  -> ProcessProtocol
  func executable(with executableName: String) throws  -> FileProtocol
  // sourcery:end
  // Generated protocol inline for Task -> See code in the file of that type

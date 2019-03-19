@@ -22,7 +22,7 @@ public protocol SourceryBuilderProtocol: AutoMockable
         swiftPackageWithSourceryFolder: FolderProtocol,
         terminal: TerminalProtocol,
         signPost: SignPostProtocol,
-        systemExecutableProvider: SystemExecutableProviderProtocol
+        system: SystemProtocol
     )
     func attemptToBuildSourceryIfNeeded() throws -> FileProtocol
     // sourcery:end
@@ -35,7 +35,7 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 
     private let terminal: TerminalProtocol
     private let signPost: SignPostProtocol
-    private let systemExecutableProvider: SystemExecutableProviderProtocol
+    private let system: SystemProtocol
     private let swiftPackageWithSourceryFolder: FolderProtocol
 
     /// Will try to init Disk when no dis provided
@@ -44,12 +44,12 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
         swiftPackageWithSourceryFolder: FolderProtocol,
         terminal: TerminalProtocol = Terminal.shared,
         signPost: SignPostProtocol = SignPost.shared,
-        systemExecutableProvider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared
+        system: SystemProtocol = System.shared
     )
     {
         self.terminal = terminal
         self.signPost = signPost
-        self.systemExecutableProvider = systemExecutableProvider
+        self.system = system
         self.swiftPackageWithSourceryFolder = swiftPackageWithSourceryFolder
     }
 
@@ -72,10 +72,10 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
                 FileManager.default.changeCurrentDirectoryPath(srcRoot.path)
 
                 signPost.message("🚀 Start building sourcery (😅 this can take some time ☕️) ...")
-                let task = try Task(commandName: "swift")
-                task.arguments = Arguments(["build", "--product", "Sourcery", "-c", "release", "--static-swift-stdlib"])
+                let task = try system.process("swift")
+                task.arguments = ["build", "--product", "Sourcery", "-c", "release", "--static-swift-stdlib"]
 
-                let output = try terminal.runProcess(task.toProcess)
+                let output = try terminal.runProcess(task)
 
                 signPost.message("\(output.joined(separator: "\n"))")
 

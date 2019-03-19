@@ -9,12 +9,12 @@ public final class GitAutotag
     // MARK: - Properties
 
     public let terminal: TerminalProtocol
-    public let systemExecutableProvider: SystemExecutableProviderProtocol
+    public let systemExecutableProvider: SystemProtocol
 
     // MARK: - Init
 
     public init(
-        systemExecutableProvider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared,
+        systemExecutableProvider: SystemProtocol = System.shared,
         terminal: TerminalProtocol = Terminal.shared
     ) throws
     {

@@ -452,19 +452,19 @@ open class ProcessProtocolMock: ProcessProtocol
     }
 }
 
-// MARK: - SystemExecutableProviderProtocolMock
+// MARK: - SystemProtocolMock
 
-open class SystemExecutableProviderProtocolMock: SystemExecutableProviderProtocol
+open class SystemProtocolMock: SystemProtocol
 {
     public init() {}
 
-    public static var shared: SystemExecutableProviderProtocol
+    public static var shared: SystemProtocol
     {
         get { return underlyingShared }
         set(value) { underlyingShared = value }
     }
 
-    public static var underlyingShared: SystemExecutableProviderProtocol!
+    public static var underlyingShared: SystemProtocol!
     public var pathEnvironmentParser: PathEnvironmentParserProtocol
     {
         get { return underlyingPathEnvironmentParser }
@@ -479,6 +479,55 @@ open class SystemExecutableProviderProtocolMock: SystemExecutableProviderProtoco
     }
 
     public var underlyingFileSystem: FileSystemProtocol!
+
+    // MARK: - <process> - parameters
+
+    public var processThrowableError: Error?
+    public var processCallsCount = 0
+    public var processCalled: Bool
+    {
+        return processCallsCount > 0
+    }
+
+    public var processReceivedExecutableName: String?
+    public var processReturnValue: ProcessProtocol?
+
+    // MARK: - <process> - closure mocks
+
+    public var processClosure: ((String) throws -> ProcessProtocol)?
+
+    // MARK: - <process> - method mocked
+
+    open func process(_ executableName: String) throws -> ProcessProtocol
+    {
+        // <process> - Throwable method implementation
+
+        if let error = processThrowableError
+        {
+            throw error
+        }
+
+        processCallsCount += 1
+        processReceivedExecutableName = executableName
+
+        // <process> - Return Value mock implementation
+
+        guard let closureReturn = processClosure else
+        {
+            guard let returnValue = processReturnValue else
+            {
+                let message = "No returnValue implemented for processClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement ProcessProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(executableName)
+    }
 
     // MARK: - <executable> - parameters
 

@@ -45,7 +45,7 @@ import Foundation
    swiftPackageWithSourceryFolder: FolderProtocol,
    terminal: TerminalProtocol,
    signPost: SignPostProtocol,
-   systemExecutableProvider: SystemExecutableProviderProtocol
+   system: SystemProtocol
  )
  func attemptToBuildSourceryIfNeeded() throws  -> FileProtocol
  // sourcery:end

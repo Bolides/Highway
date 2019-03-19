@@ -106,7 +106,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         )
         signPost.verbose("\(package)")
 
-        let builder = sourceryBuilderType.init(swiftPackageWithSourceryFolder: swiftPackageWithSourceryFolder, terminal: terminal, signPost: signPost, systemExecutableProvider: SystemExecutableProvider())
+        let builder = sourceryBuilderType.init(swiftPackageWithSourceryFolder: swiftPackageWithSourceryFolder, terminal: terminal, signPost: signPost, system: System())
         sourceryBuilder = builder
         let sourcery = try builder.attemptToBuildSourceryIfNeeded()
 
