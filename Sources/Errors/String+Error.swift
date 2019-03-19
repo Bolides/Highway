@@ -13,7 +13,7 @@ public func pretty_function(file: String = #file, function: String = #function, 
 {
     do
     {
-        return "\(try File(path: file).name) \(function) (\(line), \(colomn)) mainQueue: \(queue)"
+        return "\(queue ? "M" : "B") \(try File(path: file).name) \(function) (\(line), \(colomn))"
     }
     catch
     {

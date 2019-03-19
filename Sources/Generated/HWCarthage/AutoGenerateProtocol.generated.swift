@@ -18,14 +18,15 @@ import Foundation
 
  // Generated protocol inline for CarthageBuilder -> See code in the file of that type
  // sourcery:inline:CarthageBuilder.AutoGenerateProtocol
+ static var carthageExecutablePath: String { get }
 
- func attempt(_ async: @escaping (@escaping CarthageBuilder.SyncOutput) -> Void)
+ func attempt() throws  -> FileProtocol
  // sourcery:end
  // Generated protocol inline for HWCarthage -> See code in the file of that type
  // sourcery:inline:HWCarthage.AutoGenerateProtocol
  static var queue: HighwayDispatchProtocol { get }
 
- func attempt(_ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
+ func attemptToBuildCarthageIfNeeded(_ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
  // sourcery:end
  // Generated protocol inline for  -> See code in the file of that type
 

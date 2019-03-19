@@ -10,6 +10,7 @@ import Foundation
 
 import Arguments
 import Errors
+import Highway
 import HighwayDispatch
 import Result
 import SignPost
@@ -22,8 +23,7 @@ public protocol HWCarthageProtocol: AutoMockable
     // sourcery:inline:HWCarthage.AutoGenerateProtocol
     static var queue: HighwayDispatchProtocol { get }
 
-    func attempt(_ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
-
+    func attemptToBuildCarthageIfNeeded(_ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
     // sourcery:end
 }
 
@@ -36,44 +36,45 @@ public struct HWCarthage: HWCarthageProtocol, AutoGenerateProtocol
 
     private let signPost: SignPostProtocol
     private let terminal: TerminalProtocol
-    private let executableProvicer: SystemExecutableProviderProtocol
-    private let srcRoot: FolderProtocol
+    private let highway: HighwayProtocol
     private let dispatchGroup: DispatchGroup
     private let queue: HighwayDispatchProtocol
+    private let carthageBuilder: CarthageBuilderProtocol
 
     // MARK: - Init
 
     public init(
-        srcRoot: FolderProtocol,
+        highway: HighwayProtocol,
         dispatchGroup: DispatchGroup,
         carthageBuilder: CarthageBuilderProtocol,
         queue: HighwayDispatchProtocol = HWCarthage.queue,
         signPost: SignPostProtocol = SignPost.shared,
-        terminal: TerminalProtocol = Terminal.shared,
-        executableProvicer: SystemExecutableProviderProtocol = SystemExecutableProvider.shared
+        terminal: TerminalProtocol = Terminal.shared
     )
     {
         self.signPost = signPost
         self.terminal = terminal
-        self.executableProvicer = executableProvicer
-        self.srcRoot = srcRoot
+        self.highway = highway
         self.dispatchGroup = dispatchGroup
         self.queue = queue
+        self.carthageBuilder = carthageBuilder
     }
 
     // MARK: - Public functions
 
-    public func attempt(_ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
+    public func attemptToBuildCarthageIfNeeded(_ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
     {
         dispatchGroup.enter()
         queue.async
         {
             do
             {
-                let carthage = try Task(commandName: "carthage").toProcess
+                let carthageExecutable = try self.carthageBuilder.attempt()
+                let carthage = Task(executable: carthageExecutable).toProcess
+                let srcRoot = try self.highway.package.package.dependencies.srcRoot()
 
                 let currentFolder = FileSystem.shared.currentFolder
-                FileManager.default.changeCurrentDirectoryPath(self.srcRoot.path)
+                FileManager.default.changeCurrentDirectoryPath(srcRoot.path)
 
                 carthage.arguments = ["update", "--no-build"]
 

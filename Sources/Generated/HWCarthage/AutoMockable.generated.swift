@@ -4,6 +4,7 @@ import HighwayDispatch
 import HWCarthage
 import SignPost
 import SourceryAutoProtocols
+import ZFile
 import ZFileMock
 
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
@@ -15,30 +16,59 @@ open class CarthageBuilderProtocolMock: CarthageBuilderProtocol
 {
     public init() {}
 
+    public static var carthageExecutablePath: String
+    {
+        get { return underlyingCarthageExecutablePath }
+        set(value) { underlyingCarthageExecutablePath = value }
+    }
+
+    public static var underlyingCarthageExecutablePath: String = "AutoMockable filled value"
+
     // MARK: - <attempt> - parameters
 
+    public var attemptThrowableError: Error?
     public var attemptCallsCount = 0
     public var attemptCalled: Bool
     {
         return attemptCallsCount > 0
     }
 
-    public var attemptReceivedAsync: ((@escaping CarthageBuilder.SyncOutput) -> Void)?
+    public var attemptReturnValue: FileProtocol?
 
     // MARK: - <attempt> - closure mocks
 
-    public var attemptClosure: ((@escaping (@escaping CarthageBuilder.SyncOutput) -> Void) -> Void)?
+    public var attemptClosure: (() throws -> FileProtocol)?
 
     // MARK: - <attempt> - method mocked
 
-    open func attempt(_ async: @escaping (@escaping CarthageBuilder.SyncOutput) -> Void)
+    open func attempt() throws -> FileProtocol
     {
+        // <attempt> - Throwable method implementation
+
+        if let error = attemptThrowableError
+        {
+            throw error
+        }
+
         attemptCallsCount += 1
-        attemptReceivedAsync = async
 
-        // <attempt> - Void return mock implementation
+        // <attempt> - Return Value mock implementation
 
-        attemptClosure?(async)
+        guard let closureReturn = attemptClosure else
+        {
+            guard let returnValue = attemptReturnValue else
+            {
+                let message = "No returnValue implemented for attemptClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement FileProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
     }
 }
 
@@ -56,30 +86,30 @@ open class HWCarthageProtocolMock: HWCarthageProtocol
 
     public static var underlyingQueue: HighwayDispatchProtocol!
 
-    // MARK: - <attempt> - parameters
+    // MARK: - <attemptToBuildCarthageIfNeeded> - parameters
 
-    public var attemptCallsCount = 0
-    public var attemptCalled: Bool
+    public var attemptToBuildCarthageIfNeededCallsCount = 0
+    public var attemptToBuildCarthageIfNeededCalled: Bool
     {
-        return attemptCallsCount > 0
+        return attemptToBuildCarthageIfNeededCallsCount > 0
     }
 
-    public var attemptReceivedAsync: ((@escaping HWCarthage.SyncOutput) -> Void)?
+    public var attemptToBuildCarthageIfNeededReceivedAsync: ((@escaping HWCarthage.SyncOutput) -> Void)?
 
-    // MARK: - <attempt> - closure mocks
+    // MARK: - <attemptToBuildCarthageIfNeeded> - closure mocks
 
-    public var attemptClosure: ((@escaping (@escaping HWCarthage.SyncOutput) -> Void) -> Void)?
+    public var attemptToBuildCarthageIfNeededClosure: ((@escaping (@escaping HWCarthage.SyncOutput) -> Void) -> Void)?
 
-    // MARK: - <attempt> - method mocked
+    // MARK: - <attemptToBuildCarthageIfNeeded> - method mocked
 
-    open func attempt(_ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
+    open func attemptToBuildCarthageIfNeeded(_ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
     {
-        attemptCallsCount += 1
-        attemptReceivedAsync = async
+        attemptToBuildCarthageIfNeededCallsCount += 1
+        attemptToBuildCarthageIfNeededReceivedAsync = async
 
-        // <attempt> - Void return mock implementation
+        // <attemptToBuildCarthageIfNeeded> - Void return mock implementation
 
-        attemptClosure?(async)
+        attemptToBuildCarthageIfNeededClosure?(async)
     }
 }
 

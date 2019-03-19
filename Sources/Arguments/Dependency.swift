@@ -36,6 +36,20 @@ public struct Dependency: Decodable, DependencyProtocol, CustomStringConvertible
     public let version: String
 
     public let dependencies: [Dependency]
+    
+    public init(
+        name: String,
+        path: String,
+        url: URL,
+        version: String,
+        dependencies: [Dependency]
+    ) {
+        self.name = name
+        self.path = path
+        self.url = url
+        self.version = version
+        self.dependencies = dependencies
+    }
 
     public func gitHooks() throws -> FolderProtocol
     {

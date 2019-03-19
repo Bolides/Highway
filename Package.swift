@@ -244,7 +244,7 @@ public let package = Package(
 
         .target(
             name: "HWCarthageMock",
-            dependencies: ["HighwayDispatch", "HWCarthage", "SignPost", "ZFileMock", "SourceryAutoProtocols", "Errors"],
+            dependencies: ["HighwayDispatch", "HWCarthage", "SignPost", "ZFileMock", "ZFile", "SourceryAutoProtocols", "Errors"],
             path: "Sources/Generated/HWCarthage"
         ),
         .target(
@@ -317,7 +317,7 @@ public let package = Package(
 
         .testTarget(
             name: "HWCarthageTests",
-            dependencies: ["HWCarthage", "HWCarthageMock", "Quick", "Nimble"]
+            dependencies: ["HWCarthage", "ArgumentsMock", "HighwayMock", "HighwayDispatchMock", "HWCarthageMock", "Quick", "Nimble"]
         ),
         .testTarget(
             name: "HWPodTests",
