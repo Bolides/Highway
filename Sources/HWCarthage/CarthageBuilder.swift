@@ -18,7 +18,7 @@ public protocol CarthageBuilderProtocol: AutoMockable
     // sourcery:inline:CarthageBuilder.AutoGenerateProtocol
     static var carthageExecutablePath: String { get }
 
-    func attempt() throws -> FileProtocol
+    func attemptBuildCarthageIfNeeded() throws -> FileProtocol
 
     // sourcery:end
 }
@@ -34,23 +34,26 @@ public struct CarthageBuilder: CarthageBuilderProtocol, AutoGenerateProtocol
     private let terminal: TerminalProtocol
     private let signPost: SignPostProtocol
     private let highway: HighwayProtocol
+    private let system: SystemProtocol
 
     // MARK: - Init
 
     public init(
         highway: HighwayProtocol,
         terminal: TerminalProtocol = Terminal.shared,
-        signPost: SignPostProtocol = SignPost.shared
+        signPost: SignPostProtocol = SignPost.shared,
+        system: SystemProtocol = System.shared
     )
     {
         self.terminal = terminal
         self.signPost = signPost
         self.highway = highway
+        self.system = system
     }
 
     // MARK: - Public Funtions
 
-    public func attempt() throws -> FileProtocol
+    public func attemptBuildCarthageIfNeeded() throws -> FileProtocol
     {
         guard (highway.package.package.dependencies.dependencies.first { $0.name == "Carthage" }) != nil else
         {
@@ -72,14 +75,14 @@ public struct CarthageBuilder: CarthageBuilderProtocol, AutoGenerateProtocol
             FileManager.default.changeCurrentDirectoryPath(srcRoot.path)
 
             signPost.message("🚀 \(pretty_function()) (😅 this can take some time ☕️) ...")
-            let task = try Task(commandName: "swift").toProcess
-            task.arguments = ["build", "--product", "Sourcery", "-c", "release", "--static-swift-stdlib"]
+            let task = try system.process("swift")
+            task.arguments = ["build", "--product", "Carthage", "-c", "release", "--static-swift-stdlib"]
 
             let output = try terminal.runProcess(task)
 
             signPost.verbose("\(output.joined(separator: "\n"))")
 
-            signPost.message("🚀 finished sourcery swift build ✅")
+            signPost.message("🚀 \(pretty_function()) ✅")
 
             FileManager.default.changeCurrentDirectoryPath(originalDirectory.path)
 

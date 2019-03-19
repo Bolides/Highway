@@ -20,13 +20,13 @@ import Foundation
  // sourcery:inline:CarthageBuilder.AutoGenerateProtocol
  static var carthageExecutablePath: String { get }
 
- func attempt() throws  -> FileProtocol
+ func attemptBuildCarthageIfNeeded() throws  -> FileProtocol
  // sourcery:end
  // Generated protocol inline for HWCarthage -> See code in the file of that type
  // sourcery:inline:HWCarthage.AutoGenerateProtocol
  static var queue: HighwayDispatchProtocol { get }
 
- func attemptToBuildCarthageIfNeeded(_ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
+ func attemptRunCarthage(in folder: FolderProtocol, _ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
  // sourcery:end
  // Generated protocol inline for  -> See code in the file of that type
 

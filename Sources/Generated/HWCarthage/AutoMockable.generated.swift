@@ -24,41 +24,41 @@ open class CarthageBuilderProtocolMock: CarthageBuilderProtocol
 
     public static var underlyingCarthageExecutablePath: String = "AutoMockable filled value"
 
-    // MARK: - <attempt> - parameters
+    // MARK: - <attemptBuildCarthageIfNeeded> - parameters
 
-    public var attemptThrowableError: Error?
-    public var attemptCallsCount = 0
-    public var attemptCalled: Bool
+    public var attemptBuildCarthageIfNeededThrowableError: Error?
+    public var attemptBuildCarthageIfNeededCallsCount = 0
+    public var attemptBuildCarthageIfNeededCalled: Bool
     {
-        return attemptCallsCount > 0
+        return attemptBuildCarthageIfNeededCallsCount > 0
     }
 
-    public var attemptReturnValue: FileProtocol?
+    public var attemptBuildCarthageIfNeededReturnValue: FileProtocol?
 
-    // MARK: - <attempt> - closure mocks
+    // MARK: - <attemptBuildCarthageIfNeeded> - closure mocks
 
-    public var attemptClosure: (() throws -> FileProtocol)?
+    public var attemptBuildCarthageIfNeededClosure: (() throws -> FileProtocol)?
 
-    // MARK: - <attempt> - method mocked
+    // MARK: - <attemptBuildCarthageIfNeeded> - method mocked
 
-    open func attempt() throws -> FileProtocol
+    open func attemptBuildCarthageIfNeeded() throws -> FileProtocol
     {
-        // <attempt> - Throwable method implementation
+        // <attemptBuildCarthageIfNeeded> - Throwable method implementation
 
-        if let error = attemptThrowableError
+        if let error = attemptBuildCarthageIfNeededThrowableError
         {
             throw error
         }
 
-        attemptCallsCount += 1
+        attemptBuildCarthageIfNeededCallsCount += 1
 
-        // <attempt> - Return Value mock implementation
+        // <attemptBuildCarthageIfNeeded> - Return Value mock implementation
 
-        guard let closureReturn = attemptClosure else
+        guard let closureReturn = attemptBuildCarthageIfNeededClosure else
         {
-            guard let returnValue = attemptReturnValue else
+            guard let returnValue = attemptBuildCarthageIfNeededReturnValue else
             {
-                let message = "No returnValue implemented for attemptClosure"
+                let message = "No returnValue implemented for attemptBuildCarthageIfNeededClosure"
                 let error = SourceryMockError.implementErrorCaseFor(message)
 
                 // You should implement FileProtocol
@@ -86,30 +86,30 @@ open class HWCarthageProtocolMock: HWCarthageProtocol
 
     public static var underlyingQueue: HighwayDispatchProtocol!
 
-    // MARK: - <attemptToBuildCarthageIfNeeded> - parameters
+    // MARK: - <attemptRunCarthage> - parameters
 
-    public var attemptToBuildCarthageIfNeededCallsCount = 0
-    public var attemptToBuildCarthageIfNeededCalled: Bool
+    public var attemptRunCarthageInCallsCount = 0
+    public var attemptRunCarthageInCalled: Bool
     {
-        return attemptToBuildCarthageIfNeededCallsCount > 0
+        return attemptRunCarthageInCallsCount > 0
     }
 
-    public var attemptToBuildCarthageIfNeededReceivedAsync: ((@escaping HWCarthage.SyncOutput) -> Void)?
+    public var attemptRunCarthageInReceivedArguments: (folder: FolderProtocol, async: (@escaping HWCarthage.SyncOutput) -> Void)?
 
-    // MARK: - <attemptToBuildCarthageIfNeeded> - closure mocks
+    // MARK: - <attemptRunCarthage> - closure mocks
 
-    public var attemptToBuildCarthageIfNeededClosure: ((@escaping (@escaping HWCarthage.SyncOutput) -> Void) -> Void)?
+    public var attemptRunCarthageInClosure: ((FolderProtocol, @escaping (@escaping HWCarthage.SyncOutput) -> Void) -> Void)?
 
-    // MARK: - <attemptToBuildCarthageIfNeeded> - method mocked
+    // MARK: - <attemptRunCarthage> - method mocked
 
-    open func attemptToBuildCarthageIfNeeded(_ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
+    open func attemptRunCarthage(in folder: FolderProtocol, _ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
     {
-        attemptToBuildCarthageIfNeededCallsCount += 1
-        attemptToBuildCarthageIfNeededReceivedAsync = async
+        attemptRunCarthageInCallsCount += 1
+        attemptRunCarthageInReceivedArguments = (folder: folder, async: async)
 
-        // <attemptToBuildCarthageIfNeeded> - Void return mock implementation
+        // <attemptRunCarthage> - Void return mock implementation
 
-        attemptToBuildCarthageIfNeededClosure?(async)
+        attemptRunCarthageInClosure?(folder, async)
     }
 }
 

@@ -55,7 +55,9 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 
     public func attemptToBuildSourceryIfNeeded() throws -> FileProtocol
     {
-        let dependency = try DependencyService.generateDepedency(in: swiftPackageWithSourceryFolder, terminal: terminal, signPost: signPost).dep
+        let package = try DependencyService.generateDepedency(in: swiftPackageWithSourceryFolder, terminal: terminal, signPost: signPost)
+        let dependency = package.dep
+
         do
         {
             return try findSourceryExecutableFile()
@@ -71,7 +73,7 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 
                 FileManager.default.changeCurrentDirectoryPath(srcRoot.path)
 
-                signPost.message("🚀 Start building sourcery (😅 this can take some time ☕️) ...")
+                signPost.message("🚀 \(pretty_function()) (😅 this can take some time ☕️) ...")
                 let task = try system.process("swift")
                 task.arguments = ["build", "--product", "Sourcery", "-c", "release", "--static-swift-stdlib"]
 
@@ -79,7 +81,7 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 
                 signPost.message("\(output.joined(separator: "\n"))")
 
-                signPost.message("🚀 finished sourcery swift build ✅")
+                signPost.message("🚀 \(pretty_function()) ✅")
 
                 signPost.verbose("cd \(srcRoot)")
 

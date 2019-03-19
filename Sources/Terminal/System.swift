@@ -48,7 +48,7 @@ public struct System: SystemProtocol, AutoGenerateProtocol
 
     public func process(_ executableName: String) throws -> ProcessProtocol
     {
-        return try Task(commandName: "pod", fileSystem: fileSystem, provider: self, signPost: signPost).toProcess
+        return try Task(commandName: executableName, fileSystem: fileSystem, provider: self, signPost: signPost).toProcess
     }
 
     public func executable(with executableName: String) throws -> FileProtocol

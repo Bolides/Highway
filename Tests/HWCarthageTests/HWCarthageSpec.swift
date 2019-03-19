@@ -55,7 +55,7 @@ class HWCarthageSpec: QuickSpec
                 carthageExecutable.underlyingPath = CarthageBuilder.carthageExecutablePath
 
                 builder = CarthageBuilderProtocolMock()
-                builder.attemptReturnValue = carthageExecutable
+                builder.attemptBuildCarthageIfNeededReturnValue = carthageExecutable
 
                 expect
                 {
@@ -78,11 +78,12 @@ class HWCarthageSpec: QuickSpec
             it("runs after building carthage")
             {
                 var result: HWCarthage.SyncOutput?
+                let folder = try! FolderProtocolMock()
 
-                sut?.attemptToBuildCarthageIfNeeded { result = $0 }
+                sut?.attemptRunCarthage(in: folder) { result = $0 }
 
                 expect { try result?() }.toNot(throwError())
-                expect { try terminal.runProcessReceivedProcessTask }.toNot(beNil())
+                expect { terminal.runProcessReceivedProcessTask }.toNot(beNil())
                 expect(terminal.runProcessReceivedProcessTask?.arguments?.joined(separator: ",")) == "update,--no-build"
             }
         }

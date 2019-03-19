@@ -23,7 +23,7 @@ public protocol HWCarthageProtocol: AutoMockable
     // sourcery:inline:HWCarthage.AutoGenerateProtocol
     static var queue: HighwayDispatchProtocol { get }
 
-    func attemptToBuildCarthageIfNeeded(_ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
+    func attemptRunCarthage(in folder: FolderProtocol, _ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
     // sourcery:end
 }
 
@@ -62,19 +62,18 @@ public struct HWCarthage: HWCarthageProtocol, AutoGenerateProtocol
 
     // MARK: - Public functions
 
-    public func attemptToBuildCarthageIfNeeded(_ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
+    public func attemptRunCarthage(in folder: FolderProtocol, _ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
     {
         dispatchGroup.enter()
         queue.async
         {
             do
             {
-                let carthageExecutable = try self.carthageBuilder.attempt()
+                let carthageExecutable = try self.carthageBuilder.attemptBuildCarthageIfNeeded()
                 let carthage = Task(executable: carthageExecutable).toProcess
-                let srcRoot = try self.highway.package.package.dependencies.srcRoot()
 
                 let currentFolder = FileSystem.shared.currentFolder
-                FileManager.default.changeCurrentDirectoryPath(srcRoot.path)
+                FileManager.default.changeCurrentDirectoryPath(folder.path)
 
                 carthage.arguments = ["update", "--no-build"]
 
