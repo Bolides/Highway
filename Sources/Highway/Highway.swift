@@ -58,7 +58,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
 
     // MARK: - STATIC - Generate Packages for Folders
 
-    public static func package(for folder: FolderProtocol, dependencyService: DependencyServiceProtocol, terminal: TerminalProtocol = Terminal.shared, signPost: SignPostProtocol = SignPost.shared) throws -> PackageProtocol
+    public static func package(for folder: FolderProtocol, dependencyService: DependencyServiceProtocol, dumpService: DumpService, terminal: TerminalProtocol = Terminal.shared, signPost: SignPostProtocol = SignPost.shared) throws -> PackageProtocol
     {
         signPost.message("📦 \(folder.name) ...")
 
@@ -66,7 +66,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         let highwayPackage = Highway.Package(
             name: folder.name,
             dependencies: dependencies,
-            dump: try DumpService(terminal: terminal, swiftPackageDependencies: dependencies).dump
+            dump: try dumpService.generateDump()
         )
         signPost.message("📦 \(folder.name) ✅")
         return highwayPackage

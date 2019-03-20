@@ -23,13 +23,8 @@ import Foundation
  // sourcery:end
  // Generated protocol inline for DumpService -> See code in the file of that type
  // sourcery:inline:DumpService.AutoGenerateProtocol
- var dump: DumpProtocol { get }
 
- init(
-   terminal: TerminalProtocol,
-   swiftPackageDependencies: DependencyProtocol
- )  throws
- func writeToStubFile() throws
+ func generateDump() throws  -> DumpProtocol
  // sourcery:end
  // Generated protocol inline for System -> See code in the file of that type
  // sourcery:inline:System.AutoGenerateProtocol

@@ -170,60 +170,51 @@ open class DumpServiceProtocolMock: DumpServiceProtocol
 {
     public init() {}
 
-    public var dump: DumpProtocol
+    // MARK: - <generateDump> - parameters
+
+    public var generateDumpThrowableError: Error?
+    public var generateDumpCallsCount = 0
+    public var generateDumpCalled: Bool
     {
-        get { return underlyingDump }
-        set(value) { underlyingDump = value }
+        return generateDumpCallsCount > 0
     }
 
-    public var underlyingDump: DumpProtocol!
+    public var generateDumpReturnValue: DumpProtocol?
 
-    // MARK: - <init> - parameters
+    // MARK: - <generateDump> - closure mocks
 
-    public var initTerminalSwiftPackageDependenciesThrowableError: Error?
-    public var initTerminalSwiftPackageDependenciesReceivedArguments: (terminal: TerminalProtocol, swiftPackageDependencies: DependencyProtocol)?
+    public var generateDumpClosure: (() throws -> DumpProtocol)?
 
-    // MARK: - <init> - closure mocks
+    // MARK: - <generateDump> - method mocked
 
-    public var initTerminalSwiftPackageDependenciesClosure: ((TerminalProtocol, DependencyProtocol) throws -> Void)?
-
-    // MARK: - <init> - initializer mocked
-
-    public required init(terminal: TerminalProtocol, swiftPackageDependencies: DependencyProtocol) throws
+    open func generateDump() throws -> DumpProtocol
     {
-        initTerminalSwiftPackageDependenciesReceivedArguments = (terminal: terminal, swiftPackageDependencies: swiftPackageDependencies)
-        try? initTerminalSwiftPackageDependenciesClosure?(terminal, swiftPackageDependencies)
-    }
+        // <generateDump> - Throwable method implementation
 
-    // MARK: - <writeToStubFile> - parameters
-
-    public var writeToStubFileThrowableError: Error?
-    public var writeToStubFileCallsCount = 0
-    public var writeToStubFileCalled: Bool
-    {
-        return writeToStubFileCallsCount > 0
-    }
-
-    // MARK: - <writeToStubFile> - closure mocks
-
-    public var writeToStubFileClosure: (() throws -> Void)?
-
-    // MARK: - <writeToStubFile> - method mocked
-
-    open func writeToStubFile() throws
-    {
-        // <writeToStubFile> - Throwable method implementation
-
-        if let error = writeToStubFileThrowableError
+        if let error = generateDumpThrowableError
         {
             throw error
         }
 
-        writeToStubFileCallsCount += 1
+        generateDumpCallsCount += 1
 
-        // <writeToStubFile> - Void return mock implementation
+        // <generateDump> - Return Value mock implementation
 
-        try writeToStubFileClosure?()
+        guard let closureReturn = generateDumpClosure else
+        {
+            guard let returnValue = generateDumpReturnValue else
+            {
+                let message = "No returnValue implemented for generateDumpClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement DumpProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
     }
 }
 
