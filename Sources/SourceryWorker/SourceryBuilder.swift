@@ -68,14 +68,12 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 
             do
             {
-                let originalDirectory = FileSystem.shared.currentFolder
                 let srcRoot = try dependency.srcRoot()
-
-                FileManager.default.changeCurrentDirectoryPath(srcRoot.path)
 
                 signPost.message("🚀 \(pretty_function()) (😅 this can take some time ☕️) ...")
                 let task = try system.process("swift")
                 task.arguments = ["build", "--product", "Sourcery", "-c", "release", "--static-swift-stdlib"]
+                task.currentDirectoryPath = srcRoot.path
 
                 let output = try terminal.runProcess(task)
 
@@ -84,8 +82,6 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
                 signPost.message("🚀 \(pretty_function()) ✅")
 
                 signPost.verbose("cd \(srcRoot)")
-
-                FileManager.default.changeCurrentDirectoryPath(originalDirectory.path)
 
                 return try findSourceryExecutableFile()
             }

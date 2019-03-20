@@ -51,13 +51,15 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
     private let signPost: SignPostProtocol
     private let queue: HighwayDispatchProtocol
     private let dispatchGroup: DispatchGroup
+    private let system: SystemProtocol
 
     public init(
         highway: HighwayProtocol,
         dispatchGroup: DispatchGroup,
         queue: HighwayDispatchProtocol = HighwayRunner.queue,
         terminal: TerminalProtocol = Terminal.shared,
-        signPost: SignPostProtocol = SignPost.shared
+        signPost: SignPostProtocol = SignPost.shared,
+        system: SystemProtocol = System.shared
     )
     {
         self.terminal = terminal
@@ -65,6 +67,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
         self.highway = highway
         self.dispatchGroup = dispatchGroup
         self.queue = queue
+        self.system = system
     }
 
     public func runTests(_ async: @escaping (@escaping HighwayRunner.SyncTestOutput) -> Void)
@@ -148,14 +151,11 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
 
             do
             {
-                let originalFolder = FileSystem.shared.currentFolder
-                FileManager.default.changeCurrentDirectoryPath(try self.highway.package.package.dependencies.srcRoot().path)
+                let task = try self.system.process("swift")
+                task.arguments = ["test"]
+                task.currentDirectoryPath = try self.highway.package.package.dependencies.srcRoot().path
 
-                let task = try Task(commandName: "swift")
-                task.arguments = Arguments(["test"])
-
-                let output = try self.terminal.runProcess(task.toProcess)
-                FileManager.default.changeCurrentDirectoryPath(originalFolder.path)
+                let output = try self.terminal.runProcess(task)
                 self.signPost.message("🛠 \(pretty_function()) ✅")
                 async { output }
             }
@@ -192,18 +192,15 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
 
             do
             {
-                let originalFolder = FileSystem.shared.currentFolder
-                FileManager.default.changeCurrentDirectoryPath(try package.dependencies.srcRoot().path)
-
                 context.signPost.message("🧪 swift test in  \(package.name) ... ")
-                let task = try Task(commandName: "swift")
-                task.arguments = Arguments(["test"])
+                let task = try self.system.process("swift")
+                task.arguments = ["test"]
+                task.currentDirectoryPath = try package.dependencies.srcRoot().path
 
-                let testReport = TestReport(output: try context.terminal.runProcess(task.toProcess))
+                let testReport = TestReport(output: try context.terminal.runProcess(task))
                 context.signPost.verbose("\(testReport)")
                 context.signPost.message("🧪 swift test in  \(package.name) ✅")
                 async { testReport }
-                FileManager.default.changeCurrentDirectoryPath(originalFolder.path)
             }
             catch let Terminal.Error.unknownTask(errorOutput: output)
             {

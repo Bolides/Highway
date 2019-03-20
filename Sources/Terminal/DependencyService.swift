@@ -30,14 +30,15 @@ extension DependencyServiceProtocol
 {
     // MARK: - Static
 
-    public static func generateDepedency(in folder: FolderProtocol, terminal: TerminalProtocol = Terminal.shared, signPost: SignPostProtocol = SignPost.shared) throws -> (dep: DependencyProtocol, data: Data)
+    public static func generateDepedency(in folder: FolderProtocol, system: SystemProtocol = System.shared, terminal: TerminalProtocol = Terminal.shared, signPost: SignPostProtocol = SignPost.shared) throws -> (dep: DependencyProtocol, data: Data)
     {
         do
         {
-            let task = try Task(commandName: "swift")
-            task.arguments = Arguments(["package", "show-dependencies", "--format", "json"])
+            let task = try system.process("swift")
+            task.arguments = ["package", "show-dependencies", "--format", "json"]
+            task.currentDirectoryPath = folder.path
 
-            let all = try terminal.runProcess(task.toProcess)
+            let all = try terminal.runProcess(task)
             let warnings = all.filter { $0.hasPrefix("warning") }
             let json = all.filter { !$0.hasPrefix("warning") }
             let output: String = json.joined()

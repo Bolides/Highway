@@ -62,16 +62,12 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
     {
         signPost.message("📦 \(folder.name) ...")
 
-        let originalFolder = FileSystem.shared.currentFolder
-        FileManager.default.changeCurrentDirectoryPath(folder.path)
-
         let dependencies = try dependencyService.generateDependency()
         let highwayPackage = Highway.Package(
             name: folder.name,
             dependencies: dependencies,
             dump: try DumpService(terminal: terminal, swiftPackageDependencies: dependencies).dump
         )
-        FileManager.default.changeCurrentDirectoryPath(originalFolder.path)
         signPost.message("📦 \(folder.name) ✅")
         return highwayPackage
     }

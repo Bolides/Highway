@@ -16,13 +16,13 @@ open class CarthageBuilderProtocolMock: CarthageBuilderProtocol
 {
     public init() {}
 
-    public static var carthageExecutablePath: String
+    public static var carthageExecutableFolderPath: String
     {
-        get { return underlyingCarthageExecutablePath }
-        set(value) { underlyingCarthageExecutablePath = value }
+        get { return underlyingCarthageExecutableFolderPath }
+        set(value) { underlyingCarthageExecutableFolderPath = value }
     }
 
-    public static var underlyingCarthageExecutablePath: String = "AutoMockable filled value"
+    public static var underlyingCarthageExecutableFolderPath: String = "AutoMockable filled value"
 
     // MARK: - <attemptBuildCarthageIfNeeded> - parameters
 

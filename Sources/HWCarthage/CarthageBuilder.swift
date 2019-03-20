@@ -16,7 +16,7 @@ import ZFile
 public protocol CarthageBuilderProtocol: AutoMockable
 {
     // sourcery:inline:CarthageBuilder.AutoGenerateProtocol
-    static var carthageExecutablePath: String { get }
+    static var carthageExecutableFolderPath: String { get }
 
     func attemptBuildCarthageIfNeeded() throws -> FileProtocol
 
@@ -27,7 +27,7 @@ public protocol CarthageBuilderProtocol: AutoMockable
 public struct CarthageBuilder: CarthageBuilderProtocol, AutoGenerateProtocol
 {
     public typealias SyncOutput = () throws -> FileProtocol
-    public static let carthageExecutablePath: String = "./.build/x86_64-apple-macosx10.10/release/carthage"
+    public static let carthageExecutableFolderPath: String = "./.build/x86_64-apple-macosx10.10/release"
 
     // MARK: - Private
 
@@ -62,31 +62,26 @@ public struct CarthageBuilder: CarthageBuilderProtocol, AutoGenerateProtocol
 
         do
         {
-            let carthageExecutable = try File(path: CarthageBuilder.carthageExecutablePath)
+            let carthageExecutable = try carthagePackage.dependencies.srcRoot().subfolder(named: CarthageBuilder.carthageExecutableFolderPath).file(named: "carthage")
             return carthageExecutable
         }
         catch FileSystem.Item.PathError.invalid(_)
         {
             // Build carthage
 
-            let originalDirectory = FileSystem.shared.currentFolder
             let srcRoot = try carthagePackage.dependencies.srcRoot()
-
-            FileManager.default.changeCurrentDirectoryPath(srcRoot.path)
 
             signPost.message("🚀 \(pretty_function()) (😅 this can take some time ☕️) ...")
             let task = try system.process("swift")
             task.arguments = ["build", "--product", "Carthage", "-c", "release", "--static-swift-stdlib"]
-
+            task.currentDirectoryPath = srcRoot.path
             let output = try terminal.runProcess(task)
 
             signPost.verbose("\(output.joined(separator: "\n"))")
 
             signPost.message("🚀 \(pretty_function()) ✅")
 
-            FileManager.default.changeCurrentDirectoryPath(originalDirectory.path)
-
-            return try File(path: CarthageBuilder.carthageExecutablePath)
+            return try carthagePackage.dependencies.srcRoot().subfolder(named: CarthageBuilder.carthageExecutableFolderPath).file(named: "carthage")
         }
         catch
         {

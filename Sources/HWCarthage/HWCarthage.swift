@@ -68,15 +68,11 @@ public struct HWCarthage: HWCarthageProtocol, AutoGenerateProtocol
             {
                 let carthageExecutable = try self.carthageBuilder.attemptBuildCarthageIfNeeded()
                 let carthage = Task(executable: carthageExecutable).toProcess
-
-                let currentFolder = FileSystem.shared.currentFolder
-                FileManager.default.changeCurrentDirectoryPath(folder.path)
-
+                carthage.currentDirectoryPath = folder.path
                 carthage.arguments = ["update", "--no-build"]
 
                 let output = try self.terminal.runProcess(carthage)
 
-                FileManager.default.changeCurrentDirectoryPath(currentFolder.path)
                 async { output }
             }
             catch

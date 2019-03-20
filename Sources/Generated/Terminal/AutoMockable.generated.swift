@@ -357,6 +357,13 @@ open class ProcessProtocolMock: ProcessProtocol
 
     public var underlyingTerminationStatus: Int32!
     public var arguments: [String]?
+    public var currentDirectoryPath: String
+    {
+        get { return underlyingCurrentDirectoryPath }
+        set(value) { underlyingCurrentDirectoryPath = value }
+    }
+
+    public var underlyingCurrentDirectoryPath: String = "AutoMockable filled value"
 
     // MARK: - <launch> - parameters
 

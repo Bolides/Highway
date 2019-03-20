@@ -51,9 +51,7 @@ public struct HWPod: HWPodProtocol, AutoGenerateProtocol
 
     public func attempt() throws
     {
-        let originalFolder = FileSystem.shared.currentFolder
         let iosFolder = podFolder
-        FileManager.default.changeCurrentDirectoryPath(iosFolder.path)
 
         // MARK: - Check cocoapods version
 
@@ -75,9 +73,9 @@ public struct HWPod: HWPodProtocol, AutoGenerateProtocol
 
             let task = try system.process("pod")
             task.arguments = ["_\(HWPod.expectedCocoapodsVersion)_", "install"]
+            task.currentDirectoryPath = iosFolder.path
 
             let output = try terminal.runProcess(task)
-            FileManager.default.changeCurrentDirectoryPath(originalFolder.path)
 
             signPost.verbose("\(output)")
             signPost.message("\(pretty_function()) ✅")
