@@ -30,9 +30,12 @@ class SourcerySpec: QuickSpec
 
             var swiftPackageDependencies: DependencyProtocol?
             var swiftPackageDump: DumpProtocol?
+            var sourceryBuilder: SourceryBuilderProtocolMock!
 
             beforeSuite
             {
+                sourceryBuilder = SourceryBuilderProtocolMock()
+
                 // get real dependencies
                 expect
                 {
@@ -41,6 +44,7 @@ class SourcerySpec: QuickSpec
                     swiftPackageDependencies = try DependencyService(in: srcroot).generateDependency()
                     swiftPackageDump = try DumpService(swiftPackageFolder: srcroot).generateDump()
 
+                    sourceryBuilder.dependenciesReturnValue = swiftPackageDependencies
                     return true
                 }.toNot(throwError())
             }
@@ -59,7 +63,7 @@ class SourcerySpec: QuickSpec
                                 productName: productName,
                                 swiftPackageDependencies: swiftPackageDependencies,
                                 swiftPackageDump: swiftPackageDump,
-                                sourceryBuilder: SourceryBuilderProtocolMock()
+                                sourceryBuilder: sourceryBuilder
                             )
                             return sut
                         }.toNot(throwError())

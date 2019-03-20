@@ -91,7 +91,7 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
         {
             let sourcesFolder = try swiftPackageDependencies.srcRoot().subfolder(named: "Sources")
             let productFolder = try sourcesFolder.subfolder(named: productName)
-            let templateFolder = try swiftPackageDependencies.templateFolder()
+            let templateFolder = try sourceryBuilder.dependencies().templateFolder()
             let outputFolder = try sourcesFolder
                 .createSubfolderIfNeeded(withName: "Generated")
                 .createSubfolderIfNeeded(withName: productName)
@@ -111,10 +111,10 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
                 sourcesFolders: [productFolder],
                 templateFolder: templateFolder,
                 outputFolder: outputFolder,
-                sourceryAutoProtocolsFile: swiftPackageDependencies.name == "template-sourcery" ? try swiftPackageDependencies.srcRoot().subfolder(named: "Sources/SourceryAutoProtocols").file(named: "SourceryAutoProtocols.swift") : try swiftPackageDependencies.sourceryAutoProtocolFile(),
+                sourceryAutoProtocolsFile: swiftPackageDependencies.name == "template-sourcery" ? try swiftPackageDependencies.srcRoot().subfolder(named: "Sources/SourceryAutoProtocols").file(named: "SourceryAutoProtocols.swift") : try sourceryBuilder.dependencies().sourceryAutoProtocolFile(),
                 sourceryYMLFile: try sourcesFolder.createFileIfNeeded(named: ".sourcery-\(productName).yml"),
                 imports: Set([prepend]),
-                sourceryExecutableFile: sourceryExecutable
+                sourceryBuilder: sourceryBuilder
             )
         }
         catch
