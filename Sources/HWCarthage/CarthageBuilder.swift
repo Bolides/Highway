@@ -33,13 +33,13 @@ public struct CarthageBuilder: CarthageBuilderProtocol, AutoGenerateProtocol
 
     private let terminal: TerminalProtocol
     private let signPost: SignPostProtocol
-    private let highway: HighwayProtocol
+    private let carthagePackage: PackageProtocol
     private let system: SystemProtocol
 
     // MARK: - Init
 
     public init(
-        highway: HighwayProtocol,
+        carthagePackage: PackageProtocol,
         terminal: TerminalProtocol = Terminal.shared,
         signPost: SignPostProtocol = SignPost.shared,
         system: SystemProtocol = System.shared
@@ -47,7 +47,7 @@ public struct CarthageBuilder: CarthageBuilderProtocol, AutoGenerateProtocol
     {
         self.terminal = terminal
         self.signPost = signPost
-        self.highway = highway
+        self.carthagePackage = carthagePackage
         self.system = system
     }
 
@@ -55,7 +55,7 @@ public struct CarthageBuilder: CarthageBuilderProtocol, AutoGenerateProtocol
 
     public func attemptBuildCarthageIfNeeded() throws -> FileProtocol
     {
-        guard (highway.package.package.dependencies.dependencies.first { $0.name == "Carthage" }) != nil else
+        guard (carthagePackage.dependencies.dependencies.first { $0.name == "Carthage" }) != nil else
         {
             throw HighwayError.highwayError(atLocation: pretty_function(), error: Error.missingCarthageDepencyInPackage)
         }
@@ -70,7 +70,7 @@ public struct CarthageBuilder: CarthageBuilderProtocol, AutoGenerateProtocol
             // Build carthage
 
             let originalDirectory = FileSystem.shared.currentFolder
-            let srcRoot = try highway.package.package.dependencies.srcRoot()
+            let srcRoot = try carthagePackage.dependencies.srcRoot()
 
             FileManager.default.changeCurrentDirectoryPath(srcRoot.path)
 
