@@ -55,7 +55,7 @@ public struct CarthageBuilder: CarthageBuilderProtocol, AutoGenerateProtocol
 
     public func attemptBuildCarthageIfNeeded() throws -> FileProtocol
     {
-        guard (carthagePackage.dependencies.dependencies.first { $0.name == "Carthage" }) != nil else
+        guard (carthagePackage.dump.products.first { $0.name == "carthage" }) != nil else
         {
             throw HighwayError.highwayError(atLocation: pretty_function(), error: Error.missingCarthageDepencyInPackage)
         }
