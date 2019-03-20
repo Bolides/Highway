@@ -46,7 +46,6 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
     // sourcery:skipProtocol
     static let commonImportAutoMockable: Set<TemplatePrepend.Import> = Set(
         [
-            TemplatePrepend.Import(name: "SourceryAutoProtocols"),
             TemplatePrepend.Import(name: "Foundation"),
         ]
     )
