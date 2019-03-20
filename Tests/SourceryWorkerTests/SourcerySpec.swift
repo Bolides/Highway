@@ -32,6 +32,9 @@ class SourcerySpec: QuickSpec
             var swiftPackageDump: DumpProtocol?
             var sourceryBuilder: SourceryBuilderProtocolMock!
 
+            var templateFolder: FolderProtocolMock!
+            var autoProtocolsFile: FileProtocolMock!
+
             beforeSuite
             {
                 sourceryBuilder = SourceryBuilderProtocolMock()
@@ -45,6 +48,13 @@ class SourcerySpec: QuickSpec
                     swiftPackageDump = try DumpService(swiftPackageFolder: srcroot).generateDump()
 
                     sourceryBuilder.dependenciesReturnValue = swiftPackageDependencies
+
+                    templateFolder = try FolderProtocolMock()
+                    autoProtocolsFile = try FileProtocolMock()
+
+                    sourceryBuilder.templateFolderReturnValue = templateFolder
+                    sourceryBuilder.sourceryAutoProtocolFileReturnValue = autoProtocolsFile
+
                     return true
                 }.toNot(throwError())
             }

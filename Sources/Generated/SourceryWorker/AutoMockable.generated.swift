@@ -48,6 +48,100 @@ open class SourceryBuilderProtocolMock: SourceryBuilderProtocol
 
     public static var underlyingExecutalbeFolderPath: String = "AutoMockable filled value"
 
+    // MARK: - <templateFolder> - parameters
+
+    public var templateFolderThrowableError: Error?
+    public var templateFolderCallsCount = 0
+    public var templateFolderCalled: Bool
+    {
+        return templateFolderCallsCount > 0
+    }
+
+    public var templateFolderReturnValue: FolderProtocol?
+
+    // MARK: - <templateFolder> - closure mocks
+
+    public var templateFolderClosure: (() throws -> FolderProtocol)?
+
+    // MARK: - <templateFolder> - method mocked
+
+    open func templateFolder() throws -> FolderProtocol
+    {
+        // <templateFolder> - Throwable method implementation
+
+        if let error = templateFolderThrowableError
+        {
+            throw error
+        }
+
+        templateFolderCallsCount += 1
+
+        // <templateFolder> - Return Value mock implementation
+
+        guard let closureReturn = templateFolderClosure else
+        {
+            guard let returnValue = templateFolderReturnValue else
+            {
+                let message = "No returnValue implemented for templateFolderClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement FolderProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
+    }
+
+    // MARK: - <sourceryAutoProtocolFile> - parameters
+
+    public var sourceryAutoProtocolFileThrowableError: Error?
+    public var sourceryAutoProtocolFileCallsCount = 0
+    public var sourceryAutoProtocolFileCalled: Bool
+    {
+        return sourceryAutoProtocolFileCallsCount > 0
+    }
+
+    public var sourceryAutoProtocolFileReturnValue: FileProtocol?
+
+    // MARK: - <sourceryAutoProtocolFile> - closure mocks
+
+    public var sourceryAutoProtocolFileClosure: (() throws -> FileProtocol)?
+
+    // MARK: - <sourceryAutoProtocolFile> - method mocked
+
+    open func sourceryAutoProtocolFile() throws -> FileProtocol
+    {
+        // <sourceryAutoProtocolFile> - Throwable method implementation
+
+        if let error = sourceryAutoProtocolFileThrowableError
+        {
+            throw error
+        }
+
+        sourceryAutoProtocolFileCallsCount += 1
+
+        // <sourceryAutoProtocolFile> - Return Value mock implementation
+
+        guard let closureReturn = sourceryAutoProtocolFileClosure else
+        {
+            guard let returnValue = sourceryAutoProtocolFileReturnValue else
+            {
+                let message = "No returnValue implemented for sourceryAutoProtocolFileClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement FileProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
+    }
+
     // MARK: - <dependencies> - parameters
 
     public var dependenciesThrowableError: Error?

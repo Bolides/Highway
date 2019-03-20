@@ -18,6 +18,8 @@ public protocol SourceryBuilderProtocol: class, AutoMockable
     // sourcery:inline:SourceryBuilder.AutoGenerateProtocol
     static var executalbeFolderPath: String { get }
 
+    func templateFolder() throws -> FolderProtocol
+    func sourceryAutoProtocolFile() throws -> FileProtocol
     func dependencies() throws -> DependencyProtocol
     func attemptToBuildSourceryIfNeeded() throws -> FileProtocol
     // sourcery:end
@@ -50,6 +52,16 @@ public class SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
     }
 
     // MARK: - Public functions
+
+    public func templateFolder() throws -> FolderProtocol
+    {
+        return try dependencies().templateFolder()
+    }
+
+    public func sourceryAutoProtocolFile() throws -> FileProtocol
+    {
+        return try dependencies().sourceryAutoProtocolFile()
+    }
 
     public func dependencies() throws -> DependencyProtocol
     {

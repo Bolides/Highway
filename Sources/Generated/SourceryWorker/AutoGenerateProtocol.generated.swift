@@ -42,6 +42,8 @@ import Foundation
  // sourcery:inline:SourceryBuilder.AutoGenerateProtocol
  static var executalbeFolderPath: String { get }
 
+ func templateFolder() throws  -> FolderProtocol
+ func sourceryAutoProtocolFile() throws  -> FileProtocol
  func dependencies() throws  -> DependencyProtocol
  func attemptToBuildSourceryIfNeeded() throws  -> FileProtocol
  // sourcery:end
