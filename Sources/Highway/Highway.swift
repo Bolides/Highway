@@ -22,7 +22,7 @@ public protocol HighwayProtocol: AutoMockable
     // sourcery:inline:Packages.AutoGenerateProtocol
     var package: (package: PackageProtocol, executable: String) { get }
     var sourceryBuilder: SourceryBuilderProtocol { get }
-    var sourceryWorkers: [SourceryWorkerProtocol] { get }
+    var sourceryWorkers: [SourceryWorkerProtocol] { get set }
     var queue: HighwayDispatchProtocol { get }
     var githooks: GitHooksWorkerProtocol? { get }
     var swiftformat: SwiftFormatWorkerProtocol { get }
@@ -51,7 +51,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
 
     public let package: (package: PackageProtocol, executable: String)
     public let sourceryBuilder: SourceryBuilderProtocol
-    public let sourceryWorkers: [SourceryWorkerProtocol]
+    public var sourceryWorkers: [SourceryWorkerProtocol]
     public let queue: HighwayDispatchProtocol
     public let githooks: GitHooksWorkerProtocol?
     public let swiftformat: SwiftFormatWorkerProtocol
@@ -102,7 +102,6 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         signPost.verbose("\(package)")
 
         self.sourceryBuilder = sourceryBuilder
-        let sourcery = try sourceryBuilder.attemptToBuildSourceryIfNeeded()
 
         let dump = package.package.dump
         let dependencies = package.package.dependencies
@@ -115,12 +114,12 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
                 productName: product.name,
                 swiftPackageDependencies: dependencies,
                 swiftPackageDump: dump,
-                sourceryExecutable: sourcery,
+                sourceryBuilder: sourceryBuilder,
                 signPost: signPost
             )
         }
 
-        sourceryWorkers = try sourceryModels.map { try sourceryWorkerType.init(sourcery: $0, terminalWorker: terminal, signPost: signPost, queue: queue) }
+        sourceryWorkers = sourceryModels.map { sourceryWorkerType.init(sourcery: $0, terminal: terminal, signPost: signPost, queue: queue) }
 
         githooks = githooksType?.init(
             swiftPackageDependencies: package.package.dependencies,

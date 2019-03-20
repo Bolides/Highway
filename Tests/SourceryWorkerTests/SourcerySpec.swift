@@ -13,6 +13,7 @@ import Errors
 import Nimble
 import Quick
 import SourceryWorker
+import SourceryWorkerMock
 import Stub
 import Terminal
 import TerminalMock
@@ -58,7 +59,7 @@ class SourcerySpec: QuickSpec
                                 productName: productName,
                                 swiftPackageDependencies: swiftPackageDependencies,
                                 swiftPackageDump: swiftPackageDump,
-                                sourceryExecutable: FileProtocolMock()
+                                sourceryBuilder: SourceryBuilderProtocolMock()
                             )
                             return sut
                         }.toNot(throwError())

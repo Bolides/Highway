@@ -10,6 +10,7 @@ import Nimble
 import Quick
 import SignPost
 import SignPostMock
+import SourceryWorker
 import SourceryWorkerMock
 import SwiftFormatWorkerMock
 import Terminal
@@ -41,9 +42,9 @@ private class SourceryBuilderMock: SourceryBuilderProtocolMock
 
 private class SourceryMock: SourceryProtocolMock
 {
-    required init(productName: String, swiftPackageDependencies: DependencyProtocol, swiftPackageDump: DumpProtocol, sourceryExecutable: FileProtocol, signPost: SignPostProtocol) throws
+    required init(productName: String, swiftPackageDependencies: DependencyProtocol, swiftPackageDump: DumpProtocol, sourceryBuilder: SourceryBuilderProtocol, signPost: SignPostProtocol) throws
     {
-        try super.init(productName: productName, swiftPackageDependencies: swiftPackageDependencies, swiftPackageDump: swiftPackageDump, sourceryExecutable: sourceryExecutable, signPost: signPost)
+        try super.init(productName: productName, swiftPackageDependencies: swiftPackageDependencies, swiftPackageDump: swiftPackageDump, sourceryBuilder: sourceryBuilder, signPost: signPost)
     }
 }
 

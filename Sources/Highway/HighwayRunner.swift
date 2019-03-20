@@ -77,36 +77,37 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
 
     public func runSourcery(_ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
     {
-        dispatchGroup.enter()
-        highway.sourceryWorkers.forEach
-        { [weak self] worker in
-            guard let `self` = self else
-            {
-                async { throw "SPRunner released before it could 🧙🏻‍♂️ on \(worker.sourcery.name)" }
-                return
-            }
+        do
+        {
+            try highway.sourceryWorkers.forEach
+            { worker in
+                signPost.message("🧙🏻‍♂️ \(worker.name) ...")
 
-            dispatchGroup.enter()
-            signPost.message("🧙🏻‍♂️ \(worker.sourcery.name) ...")
-            worker.attempt
-            {
-                do
-                {
-                    let output = try $0()
-                    async { output }
-                    self.signPost.message("🧙🏻‍♂️ \(worker.sourcery.name) ✅")
+                dispatchGroup.enter()
+                worker.attempt(in: try worker.sourceryYMLFile.parentFolder())
+                { [weak self] in
+
+                    do
+                    {
+                        let output = try $0()
+                        async { output }
+                        self?.signPost.message("🧙🏻‍♂️ \(worker.name) ✅")
+                    }
+                    catch
+                    {
+                        let _error = HighwayError.highwayError(atLocation: "\(HighwayRunner.self) \(#function) \(#line) - \(worker.name)", error: error)
+                        self?.addError(_error)
+                        async { throw _error }
+                        self?.signPost.message("🧙🏻‍♂️ \(worker.name) ❌")
+                    }
+                    self?.dispatchGroup.leave()
                 }
-                catch
-                {
-                    let _error = HighwayError.highwayError(atLocation: "\(HighwayRunner.self) \(#function) \(#line) - \(worker.sourcery.name)", error: error)
-                    self.addError(_error)
-                    async { throw _error }
-                    self.signPost.message("🧙🏻‍♂️ \(worker.sourcery.name) ❌")
-                }
-                self.dispatchGroup.leave()
             }
         }
-        dispatchGroup.leave()
+        catch
+        {
+            async { throw HighwayError.highwayError(atLocation: pretty_function(), error: error) }
+        }
     }
 
     public func addGithooksPrePush() throws

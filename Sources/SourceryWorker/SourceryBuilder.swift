@@ -13,17 +13,18 @@ import SourceryAutoProtocols
 import Terminal
 import ZFile
 
-public protocol SourceryBuilderProtocol: AutoMockable
+public protocol SourceryBuilderProtocol: class, AutoMockable
 {
     // sourcery:inline:SourceryBuilder.AutoGenerateProtocol
     static var executalbeFolderPath: String { get }
 
+    func dependencies() throws -> DependencyProtocol
     func attemptToBuildSourceryIfNeeded() throws -> FileProtocol
     // sourcery:end
 }
 
 /// Will build sourcery from carthage if it is not found in the project
-public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
+public class SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 {
     public static let executalbeFolderPath: String = "./.build/x86_64-apple-macosx10.10/release"
 
@@ -31,8 +32,10 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
     private let signPost: SignPostProtocol
     private let system: SystemProtocol
     private let dependencyService: DependencyServiceProtocol
+    private var dependency: DependencyProtocol?
 
-    /// Will try to init Disk when no dis provided
+    // MARK: - Init
+
     public init(
         dependencyService: DependencyServiceProtocol,
         terminal: TerminalProtocol = Terminal.shared,
@@ -46,9 +49,22 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
         self.dependencyService = dependencyService
     }
 
+    // MARK: - Public functions
+
+    public func dependencies() throws -> DependencyProtocol
+    {
+        guard let dependency = dependency else
+        {
+            self.dependency = try dependencyService.generateDependency()
+            return self.dependency!
+        }
+
+        return dependency
+    }
+
     public func attemptToBuildSourceryIfNeeded() throws -> FileProtocol
     {
-        let dependency = try dependencyService.generateDependency()
+        let dependency = try dependencies()
 
         do
         {
@@ -79,7 +95,7 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
             }
             catch
             {
-                throw "\(self) \(#function) \n\(error)\n"
+                throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
             }
         }
     }

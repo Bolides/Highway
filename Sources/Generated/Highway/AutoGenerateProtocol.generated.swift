@@ -21,7 +21,7 @@ import Foundation
  static var queue: HighwayDispatchProtocol { get }
  var package: (package: PackageProtocol, executable: String) { get }
  var sourceryBuilder: SourceryBuilderProtocol { get }
- var sourceryWorkers: [SourceryWorkerProtocol] { get }
+ var sourceryWorkers: [SourceryWorkerProtocol] { get set }
  var queue: HighwayDispatchProtocol { get }
  var githooks: GitHooksWorkerProtocol? { get }
  var swiftformat: SwiftFormatWorkerProtocol { get }

@@ -26,35 +26,37 @@ import Foundation
  var individualSourceFiles: [File]? { get }
  var sourceryAutoProtocolsFile: FileProtocol { get }
  var sourceryYMLFile: FileProtocol { get }
- var sourceryExecutableFile: FileProtocol { get }
+ var sourceryBuilder: SourceryBuilderProtocol { get set }
  var imports: Set<TemplatePrepend> { get }
 
  init(
    productName: String,
    swiftPackageDependencies: DependencyProtocol,
    swiftPackageDump: DumpProtocol,
-   sourceryExecutable: FileProtocol,
+   sourceryBuilder: SourceryBuilderProtocol,
    signPost: SignPostProtocol
  )  throws
+ mutating func executableFile() throws  -> FileProtocol
  // sourcery:end
  // Generated protocol inline for SourceryBuilder -> See code in the file of that type
  // sourcery:inline:SourceryBuilder.AutoGenerateProtocol
  static var executalbeFolderPath: String { get }
 
+ func dependencies() throws  -> DependencyProtocol
  func attemptToBuildSourceryIfNeeded() throws  -> FileProtocol
  // sourcery:end
  // Generated protocol inline for SourceryWorker -> See code in the file of that type
  // sourcery:inline:SourceryWorker.AutoGenerateProtocol
- var sourcery: SourceryProtocol { get }
+ var name: String { get }
+ var sourceryYMLFile: FileProtocol { get }
 
  init(
    sourcery: SourceryProtocol,
-   terminalWorker: TerminalProtocol,
+   terminal: TerminalProtocol,
    signPost: SignPostProtocol,
    queue: HighwayDispatchProtocol
- )  throws
- func executor() throws  -> ArgumentExecutableProtocol
- func attempt(_ asyncSourceryWorkerOutput: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
+ )
+ func attempt(in folder: FolderProtocol, _ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
  // sourcery:end
  // Generated protocol inline for TemplatePrepend -> See code in the file of that type
  // sourcery:inline:TemplatePrepend.AutoGenerateProtocol

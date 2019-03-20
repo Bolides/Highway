@@ -221,7 +221,7 @@ public let package = Package(
 
         .target(
             name: "SourceryWorker",
-            dependencies: ["Terminal", "HighwayDispatch", "Errors"]
+            dependencies: ["Terminal", "HighwayDispatch", "Errors", "ZFile", "HighwayDispatch", "SourceryAutoProtocols"]
         ),
         .target(
             name: "SwiftFormatWorker",

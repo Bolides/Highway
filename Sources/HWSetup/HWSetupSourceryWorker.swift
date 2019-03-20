@@ -56,7 +56,6 @@ public class HWSetupSourceryWorker: HWSetupSourceryWorkerWorkerProtocol, AutoGen
 
         do
         {
-            let sourceryExecutable = try sourceryBuilder.attemptToBuildSourceryIfNeeded()
             let sourcerySequence: [Sourcery] = try swiftPackageDump.products.compactMap
             { product in
 
@@ -75,10 +74,10 @@ public class HWSetupSourceryWorker: HWSetupSourceryWorkerWorkerProtocol, AutoGen
                     throw HighwayError.highwayError(atLocation: location, error: error)
                 }
 
-                return try Sourcery(productName: hwProduct.rawValue, swiftPackageDependencies: swiftPackageDependencies, swiftPackageDump: swiftPackageDump, sourceryExecutable: sourceryExecutable)
+                return try Sourcery(productName: hwProduct.rawValue, swiftPackageDependencies: swiftPackageDependencies, swiftPackageDump: swiftPackageDump, sourceryBuilder: sourceryBuilder)
             }
 
-            workers = try sourcerySequence.map { try SourceryWorker(sourcery: $0, queue: HWSetupSourceryWorker.queue) }
+            workers = sourcerySequence.map { SourceryWorker(sourcery: $0, queue: HWSetupSourceryWorker.queue) }
         }
         catch
         {
@@ -99,13 +98,13 @@ public class HWSetupSourceryWorker: HWSetupSourceryWorkerWorkerProtocol, AutoGen
                 throw HighwayError.prematureRelease(in: "\(HWSetupSourceryWorker.self) \(#function) \(#line)")
             }
             self.dispatchGroup.enter()
-            $0.attempt
-            { syncOutput in
+            $0.attempt(in: try $0.sourceryYMLFile.parentFolder())
+            { [weak self] syncOutput in
 
                 async
                 {
                     let output = try syncOutput()
-                    self.signPost.verbose("\(output.joined(separator: "\n"))")
+                    self?.signPost.verbose("\(output.joined(separator: "\n"))")
                     return output
                 }
             }
