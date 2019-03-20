@@ -30,7 +30,8 @@ do
 
     let rootPackage = try Highway.package(for: srcRoot, dependencyService: dependencyService)
 
-    let highway = try Highway(package: (package: rootPackage, executable: "HWSetup"), dependencyService: dependencyService, swiftPackageWithSourceryFolder: srcRoot)
+    let sourceryBuilder = SourceryBuilder(dependencyService: dependencyService)
+    let highway = try Highway(package: (package: rootPackage, executable: "HWSetup"), dependencyService: dependencyService, sourceryBuilder: sourceryBuilder)
 
     highwayRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
 

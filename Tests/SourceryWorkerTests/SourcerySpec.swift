@@ -37,7 +37,7 @@ class SourcerySpec: QuickSpec
                 {
                     let srcroot = try File(path: #file).parentFolder().parentFolder().parentFolder()
                     FileManager.default.changeCurrentDirectoryPath(srcroot.path)
-                    swiftPackageDependencies = try DependencyService().dependency
+                    swiftPackageDependencies = try DependencyService(in: srcroot).generateDependency()
                     swiftPackageDump = try DumpService(swiftPackageDependencies: swiftPackageDependencies!).dump
 
                     return true

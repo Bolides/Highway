@@ -40,29 +40,13 @@ open class SourceryBuilderProtocolMock: SourceryBuilderProtocol
 {
     public init() {}
 
-    public static var executalbeName: String
+    public static var executalbeFolderPath: String
     {
-        get { return underlyingExecutalbeName }
-        set(value) { underlyingExecutalbeName = value }
+        get { return underlyingExecutalbeFolderPath }
+        set(value) { underlyingExecutalbeFolderPath = value }
     }
 
-    public static var underlyingExecutalbeName: String = "AutoMockable filled value"
-
-    // MARK: - <init> - parameters
-
-    public var initSwiftPackageWithSourceryFolderTerminalSignPostSystemReceivedArguments: (swiftPackageWithSourceryFolder: FolderProtocol, terminal: TerminalProtocol, signPost: SignPostProtocol, system: SystemProtocol)?
-
-    // MARK: - <init> - closure mocks
-
-    public var initSwiftPackageWithSourceryFolderTerminalSignPostSystemClosure: ((FolderProtocol, TerminalProtocol, SignPostProtocol, SystemProtocol) -> Void)?
-
-    // MARK: - <init> - initializer mocked
-
-    public required init(swiftPackageWithSourceryFolder: FolderProtocol, terminal: TerminalProtocol, signPost: SignPostProtocol, system: SystemProtocol)
-    {
-        initSwiftPackageWithSourceryFolderTerminalSignPostSystemReceivedArguments = (swiftPackageWithSourceryFolder: swiftPackageWithSourceryFolder, terminal: terminal, signPost: signPost, system: system)
-        initSwiftPackageWithSourceryFolderTerminalSignPostSystemClosure?(swiftPackageWithSourceryFolder, terminal, signPost, system)
-    }
+    public static var underlyingExecutalbeFolderPath: String = "AutoMockable filled value"
 
     // MARK: - <attemptToBuildSourceryIfNeeded> - parameters
 

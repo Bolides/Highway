@@ -22,7 +22,7 @@ class SwiftPackageDependencyServiceSpec: QuickSpec
                 {
                     let srcroot = try File(path: #file).parentFolder().parentFolder().parentFolder()
                     FileManager.default.changeCurrentDirectoryPath(srcroot.path)
-                    expectedSwiftPackage = try DependencyService().dependency
+                    expectedSwiftPackage = try DependencyService(in: srcroot).generateDependency()
 
                     return true
                 }.toNot(throwError())

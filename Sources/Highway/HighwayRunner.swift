@@ -192,14 +192,14 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
 
             do
             {
-                context.signPost.message("🧪 swift test in  \(package.name) ... ")
+                context.signPost.message("🧪 swift test package \(package.name) ... ")
                 let task = try self.system.process("swift")
                 task.arguments = ["test"]
                 task.currentDirectoryPath = try package.dependencies.srcRoot().path
 
                 let testReport = TestReport(output: try context.terminal.runProcess(task))
                 context.signPost.verbose("\(testReport)")
-                context.signPost.message("🧪 swift test in  \(package.name) ✅")
+                context.signPost.message("🧪 swift test package \(package.name) ✅")
                 async { testReport }
             }
             catch let Terminal.Error.unknownTask(errorOutput: output)

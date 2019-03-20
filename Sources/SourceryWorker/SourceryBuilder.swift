@@ -16,14 +16,8 @@ import ZFile
 public protocol SourceryBuilderProtocol: AutoMockable
 {
     // sourcery:inline:SourceryBuilder.AutoGenerateProtocol
-    static var executalbeName: String { get }
+    static var executalbeFolderPath: String { get }
 
-    init(
-        swiftPackageWithSourceryFolder: FolderProtocol,
-        terminal: TerminalProtocol,
-        signPost: SignPostProtocol,
-        system: SystemProtocol
-    )
     func attemptToBuildSourceryIfNeeded() throws -> FileProtocol
     // sourcery:end
 }
@@ -31,17 +25,16 @@ public protocol SourceryBuilderProtocol: AutoMockable
 /// Will build sourcery from carthage if it is not found in the project
 public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 {
-    public static let executalbeName: String = "./.build/x86_64-apple-macosx10.10/release/Sourcery"
+    public static let executalbeFolderPath: String = "./.build/x86_64-apple-macosx10.10/release"
 
     private let terminal: TerminalProtocol
     private let signPost: SignPostProtocol
     private let system: SystemProtocol
-    private let swiftPackageWithSourceryFolder: FolderProtocol
+    private let dependencyService: DependencyServiceProtocol
 
     /// Will try to init Disk when no dis provided
-    // sourcery:includeInitInProtocol
     public init(
-        swiftPackageWithSourceryFolder: FolderProtocol,
+        dependencyService: DependencyServiceProtocol,
         terminal: TerminalProtocol = Terminal.shared,
         signPost: SignPostProtocol = SignPost.shared,
         system: SystemProtocol = System.shared
@@ -50,17 +43,16 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
         self.terminal = terminal
         self.signPost = signPost
         self.system = system
-        self.swiftPackageWithSourceryFolder = swiftPackageWithSourceryFolder
+        self.dependencyService = dependencyService
     }
 
     public func attemptToBuildSourceryIfNeeded() throws -> FileProtocol
     {
-        let package = try DependencyService.generateDepedency(in: swiftPackageWithSourceryFolder, terminal: terminal, signPost: signPost)
-        let dependency = package.dep
+        let dependency = try dependencyService.generateDependency()
 
         do
         {
-            return try findSourceryExecutableFile()
+            return try dependency.srcRoot().subfolder(named: SourceryBuilder.executalbeFolderPath).file(named: "Sourcery")
         }
         catch ZFile.FileSystem.Item.PathError.invalid
         {
@@ -83,19 +75,12 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 
                 signPost.verbose("cd \(srcRoot)")
 
-                return try findSourceryExecutableFile()
+                return try dependency.srcRoot().subfolder(named: SourceryBuilder.executalbeFolderPath).file(named: "Sourcery")
             }
             catch
             {
                 throw "\(self) \(#function) \n\(error)\n"
             }
         }
-    }
-
-    // MARK: Private
-
-    private func findSourceryExecutableFile() throws -> FileProtocol
-    {
-        return try swiftPackageWithSourceryFolder.file(named: SourceryBuilder.executalbeName)
     }
 }

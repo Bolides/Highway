@@ -79,11 +79,10 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         package: (package: PackageProtocol, executable: String),
         extraFolders: [FolderProtocol]? = nil, // Packages in these folders will be created
         dependencyService: DependencyServiceProtocol,
-        swiftPackageWithSourceryFolder: FolderProtocol,
         swiftformatType: SwiftFormatWorkerProtocol.Type = SwiftFormatWorker.self,
         githooksType: GitHooksWorkerProtocol.Type? = GitHooksWorker.self, // if set to nil githooks will not be added
         sourceryWorkerType: SourceryWorkerProtocol.Type = SourceryWorker.self,
-        sourceryBuilderType: SourceryBuilderProtocol.Type = SourceryBuilder.self,
+        sourceryBuilder: SourceryBuilderProtocol,
         terminal: TerminalProtocol = Terminal.shared,
         signPost: SignPostProtocol = SignPost.shared,
         queue: HighwayDispatchProtocol = Highway.queue,
@@ -102,9 +101,8 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         )
         signPost.verbose("\(package)")
 
-        let builder = sourceryBuilderType.init(swiftPackageWithSourceryFolder: swiftPackageWithSourceryFolder, terminal: terminal, signPost: signPost, system: System())
-        sourceryBuilder = builder
-        let sourcery = try builder.attemptToBuildSourceryIfNeeded()
+        self.sourceryBuilder = sourceryBuilder
+        let sourcery = try sourceryBuilder.attemptToBuildSourceryIfNeeded()
 
         let dump = package.package.dump
         let dependencies = package.package.dependencies

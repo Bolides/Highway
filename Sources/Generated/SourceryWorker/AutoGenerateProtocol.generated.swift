@@ -39,14 +39,8 @@ import Foundation
  // sourcery:end
  // Generated protocol inline for SourceryBuilder -> See code in the file of that type
  // sourcery:inline:SourceryBuilder.AutoGenerateProtocol
- static var executalbeName: String { get }
+ static var executalbeFolderPath: String { get }
 
- init(
-   swiftPackageWithSourceryFolder: FolderProtocol,
-   terminal: TerminalProtocol,
-   signPost: SignPostProtocol,
-   system: SystemProtocol
- )
  func attemptToBuildSourceryIfNeeded() throws  -> FileProtocol
  // sourcery:end
  // Generated protocol inline for SourceryWorker -> See code in the file of that type

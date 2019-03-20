@@ -30,9 +30,9 @@ private class SourceryBuilderMock: SourceryBuilderProtocolMock
 {
     let executable = try! FileProtocolMock()
 
-    required init(swiftPackageWithSourceryFolder: FolderProtocol, terminal: TerminalProtocol, signPost: SignPostProtocol, system: SystemProtocol)
+    override init()
     {
-        super.init(swiftPackageWithSourceryFolder: swiftPackageWithSourceryFolder, terminal: terminal, signPost: signPost, system: system)
+        super.init()
         attemptToBuildSourceryIfNeededClosure = {
             self.executable
         }
@@ -191,11 +191,10 @@ class HighwaySpec: QuickSpec
                         package: (package: self.rootPackage, executable: "MockedSetup"),
                         extraFolders: self.extraFolders,
                         dependencyService: self.dependencyService,
-                        swiftPackageWithSourceryFolder: swiftPackageWithSourceryFolder,
                         swiftformatType: SWM.self,
                         githooksType: GHWM.self,
                         sourceryWorkerType: SourceryWorkerMock.self,
-                        sourceryBuilderType: SourceryBuilderMock.self,
+                        sourceryBuilder: SourceryBuilderMock(),
                         terminal: self.terminal,
                         signPost: self.signPost,
                         queue: self.queue,

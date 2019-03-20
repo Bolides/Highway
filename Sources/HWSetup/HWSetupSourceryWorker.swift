@@ -43,6 +43,7 @@ public class HWSetupSourceryWorker: HWSetupSourceryWorkerWorkerProtocol, AutoGen
 
     public init(
         swiftPackageDependencies: DependencyProtocol,
+        sourceryBuilder: SourceryBuilderProtocol,
         dispatchGroup: DispatchGroup,
         swiftPackageDump: DumpProtocol,
         signPost: SignPostProtocol = SignPost.shared,
@@ -55,7 +56,7 @@ public class HWSetupSourceryWorker: HWSetupSourceryWorkerWorkerProtocol, AutoGen
 
         do
         {
-            let sourceryExecutable = try SourceryBuilder(swiftPackageWithSourceryFolder: try swiftPackageDependencies.srcRoot()).attemptToBuildSourceryIfNeeded()
+            let sourceryExecutable = try sourceryBuilder.attemptToBuildSourceryIfNeeded()
             let sourcerySequence: [Sourcery] = try swiftPackageDump.products.compactMap
             { product in
 

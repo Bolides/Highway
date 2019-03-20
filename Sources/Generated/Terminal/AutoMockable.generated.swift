@@ -116,25 +116,6 @@ open class DependencyServiceProtocolMock: DependencyServiceProtocol
 {
     public init() {}
 
-    public var dependency: DependencyProtocol?
-
-    // MARK: - <init> - parameters
-
-    public var initTerminalSignPostThrowableError: Error?
-    public var initTerminalSignPostReceivedArguments: (terminal: TerminalProtocol, signPost: SignPostProtocol)?
-
-    // MARK: - <init> - closure mocks
-
-    public var initTerminalSignPostClosure: ((TerminalProtocol, SignPostProtocol) throws -> Void)?
-
-    // MARK: - <init> - initializer mocked
-
-    public required init(terminal: TerminalProtocol, signPost: SignPostProtocol) throws
-    {
-        initTerminalSignPostReceivedArguments = (terminal: terminal, signPost: signPost)
-        try? initTerminalSignPostClosure?(terminal, signPost)
-    }
-
     // MARK: - <generateDependency> - parameters
 
     public var generateDependencyThrowableError: Error?
@@ -180,37 +161,6 @@ open class DependencyServiceProtocolMock: DependencyServiceProtocol
         }
 
         return try closureReturn()
-    }
-
-    // MARK: - <writeToStubFile> - parameters
-
-    public var writeToStubFileThrowableError: Error?
-    public var writeToStubFileCallsCount = 0
-    public var writeToStubFileCalled: Bool
-    {
-        return writeToStubFileCallsCount > 0
-    }
-
-    // MARK: - <writeToStubFile> - closure mocks
-
-    public var writeToStubFileClosure: (() throws -> Void)?
-
-    // MARK: - <writeToStubFile> - method mocked
-
-    open func writeToStubFile() throws
-    {
-        // <writeToStubFile> - Throwable method implementation
-
-        if let error = writeToStubFileThrowableError
-        {
-            throw error
-        }
-
-        writeToStubFileCallsCount += 1
-
-        // <writeToStubFile> - Void return mock implementation
-
-        try writeToStubFileClosure?()
     }
 }
 

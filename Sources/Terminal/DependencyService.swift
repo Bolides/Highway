@@ -15,22 +15,33 @@ import ZFile
 public protocol DependencyServiceProtocol: AutoMockable
 {
     // sourcery:inline:DependencyService.AutoGenerateProtocol
-    var dependency: DependencyProtocol? { get set }
 
-    init(
-        terminal: TerminalProtocol,
-        signPost: SignPostProtocol
-    ) throws
     func generateDependency() throws -> DependencyProtocol
-    func writeToStubFile() throws
     // sourcery:end
 }
 
-extension DependencyServiceProtocol
+public class DependencyService: DependencyServiceProtocol, AutoGenerateProtocol
 {
-    // MARK: - Static
+    // MARK: - Private
 
-    public static func generateDepedency(in folder: FolderProtocol, system: SystemProtocol = System.shared, terminal: TerminalProtocol = Terminal.shared, signPost: SignPostProtocol = SignPost.shared) throws -> (dep: DependencyProtocol, data: Data)
+    private var terminal: TerminalProtocol
+    private var signPost: SignPostProtocol
+    private var folder: FolderProtocol
+    private var system: SystemProtocol
+
+    // MARK: - Init
+
+    public init(in folder: FolderProtocol, system: SystemProtocol = System.shared, terminal: TerminalProtocol = Terminal.shared, signPost: SignPostProtocol = SignPost.shared)
+    {
+        self.terminal = terminal
+        self.signPost = signPost
+        self.folder = folder
+        self.system = system
+    }
+
+    // MARK: - Functions
+
+    public func generateDependency() throws -> DependencyProtocol
     {
         do
         {
@@ -57,8 +68,7 @@ extension DependencyServiceProtocol
             do
             {
                 signPost.verbose("\(json.joined(separator: "\n"))")
-                let dependency = try JSONDecoder().decode(Dependency.self, from: data)
-                return (dep: dependency, data: data)
+                return try JSONDecoder().decode(Dependency.self, from: data)
             }
             catch
             {
@@ -69,63 +79,5 @@ extension DependencyServiceProtocol
         {
             throw HighwayError.highwayError(atLocation: "\(DependencyService.self) \(#function) \(#line)", error: error)
         }
-    }
-}
-
-public class DependencyService: DependencyServiceProtocol, AutoGenerateProtocol
-{
-    // MARK: - Public
-
-    public var dependency: DependencyProtocol?
-
-    // MARK: - Private
-
-    private var data: Data?
-    private var terminal: TerminalProtocol
-    private var signPost: SignPostProtocol
-    private var srcRoot: FolderProtocol
-
-    // MARK: - Init
-
-    public init(in srcRoot: FolderProtocol, terminal: TerminalProtocol = Terminal.shared, signPost: SignPostProtocol = SignPost.shared)
-    {
-        data = nil
-        dependency = nil
-        self.terminal = terminal
-        self.signPost = signPost
-        self.srcRoot = srcRoot
-    }
-
-    // sourcery:includeInitInProtocol
-    public required init(terminal: TerminalProtocol = Terminal.shared, signPost: SignPostProtocol = SignPost.shared) throws
-    {
-        self.terminal = terminal
-        self.signPost = signPost
-        let dep = try DependencyService.generateDepedency(in: FileSystem.shared.currentFolder, terminal: terminal, signPost: signPost)
-        dependency = dep.dep
-        data = dep.data
-
-        srcRoot = try dependency!.srcRoot()
-    }
-
-    // MARK: - Functions
-
-    public func generateDependency() throws -> DependencyProtocol
-    {
-        let dep = try DependencyService.generateDepedency(in: FileSystem.shared.currentFolder, terminal: terminal, signPost: signPost)
-        dependency = dep.dep
-        data = dep.data
-        return dep.dep
-    }
-
-    public func writeToStubFile() throws
-    {
-        guard let data = data else
-        {
-            throw HighwayError.highwayError(atLocation: pretty_function(), error: "missing data")
-        }
-
-        let stubFile = try srcRoot.subfolder(named: "Sources/Stub").createFileIfNeeded(named: "\(DependencyService.self).json")
-        try stubFile.write(data: data)
     }
 }
