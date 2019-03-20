@@ -69,7 +69,7 @@ class HWCarthageSpec: QuickSpec
                     terminal = TerminalProtocolMock()
                     terminal.runProcessClosure = { _ in ["mock success"] }
 
-                    sut = HWCarthage(highway: highway, dispatchGroup: dispatchGroup, carthageBuilder: builder, queue: queue, signPost: signPost, terminal: terminal)
+                    sut = HWCarthage(dispatchGroup: dispatchGroup, carthageBuilder: builder, queue: queue, signPost: signPost, terminal: terminal)
 
                     return true
                 }.toNot(throwError())

@@ -36,7 +36,6 @@ public struct HWCarthage: HWCarthageProtocol, AutoGenerateProtocol
 
     private let signPost: SignPostProtocol
     private let terminal: TerminalProtocol
-    private let highway: HighwayProtocol
     private let dispatchGroup: DispatchGroup
     private let queue: HighwayDispatchProtocol
     private let carthageBuilder: CarthageBuilderProtocol
@@ -44,7 +43,6 @@ public struct HWCarthage: HWCarthageProtocol, AutoGenerateProtocol
     // MARK: - Init
 
     public init(
-        highway: HighwayProtocol,
         dispatchGroup: DispatchGroup,
         carthageBuilder: CarthageBuilderProtocol,
         queue: HighwayDispatchProtocol = HWCarthage.queue,
@@ -54,7 +52,6 @@ public struct HWCarthage: HWCarthageProtocol, AutoGenerateProtocol
     {
         self.signPost = signPost
         self.terminal = terminal
-        self.highway = highway
         self.dispatchGroup = dispatchGroup
         self.queue = queue
         self.carthageBuilder = carthageBuilder
