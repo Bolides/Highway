@@ -75,6 +75,8 @@ class HWCarthageSpec: QuickSpec
                 }.toNot(throwError())
             }
 
+            
+            
             it("runs after building carthage")
             {
                 var result: HWCarthage.SyncOutput?

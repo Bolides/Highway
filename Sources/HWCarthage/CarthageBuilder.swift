@@ -28,7 +28,8 @@ public struct CarthageBuilder: CarthageBuilderProtocol, AutoGenerateProtocol
 {
     public typealias SyncOutput = () throws -> FileProtocol
     public static let carthageExecutableFolderPath: String = "./.build/x86_64-apple-macosx10.10/release"
-
+    public static let carthageExecutableName: String = "carthage"
+    
     // MARK: - Private
 
     private let terminal: TerminalProtocol
@@ -55,7 +56,7 @@ public struct CarthageBuilder: CarthageBuilderProtocol, AutoGenerateProtocol
 
     public func attemptBuildCarthageIfNeeded() throws -> FileProtocol
     {
-        guard (carthagePackage.dump.products.first { $0.name == "carthage" }) != nil else
+        guard (carthagePackage.dump.products.first { $0.name == CarthageBuilder.carthageExecutableName }) != nil else
         {
             throw HighwayError.highwayError(atLocation: pretty_function(), error: Error.missingCarthageDepencyInPackage)
         }
@@ -73,7 +74,7 @@ public struct CarthageBuilder: CarthageBuilderProtocol, AutoGenerateProtocol
 
             signPost.message("🚀 \(pretty_function()) (😅 this can take some time ☕️) ...")
             let task = try system.process("swift")
-            task.arguments = ["build", "--product", "Carthage", "-c", "release", "--static-swift-stdlib"]
+            task.arguments = ["build", "--product", CarthageBuilder.carthageExecutableName, "-c", "release", "--static-swift-stdlib"]
             task.currentDirectoryPath = srcRoot.path
             let output = try terminal.runProcess(task)
 
