@@ -169,6 +169,7 @@ public let package = Package(
                 "XCBuild",
                 "GitHooks",
                 "Highway",
+                "Git",
             ]
         ),
         .target(
@@ -390,7 +391,6 @@ public let package = Package(
                 "TerminalMock",
                 "Stub",
                 "Errors",
-                "HWSetup",
             ]
         ),
         .testTarget(
