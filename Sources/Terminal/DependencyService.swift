@@ -50,19 +50,20 @@ public class DependencyService: DependencyServiceProtocol, AutoGenerateProtocol
             task.currentDirectoryPath = folder.path
 
             let all = try terminal.runProcess(task)
-            
+
             let warnings: [String] = all.filter { $0.hasPrefix("warning") }
             let allNoWarnings: [String] = all.filter { !$0.hasPrefix("warning") }
-            
-            guard let jsonStartIndex = allNoWarnings.firstIndex(of: "{") else {
+
+            guard let jsonStartIndex = allNoWarnings.firstIndex(of: "{") else
+            {
                 throw HighwayError.highwayError(atLocation: pretty_function(), error: "No index of json start")
             }
-            
+
             let gitOutput: ArraySlice<String> = allNoWarnings[..<jsonStartIndex]
-            self.signPost.verbose("\(gitOutput.joined(separator: "\n"))")
-            
+            signPost.verbose("\(gitOutput.joined(separator: "\n"))")
+
             let json: ArraySlice<String> = allNoWarnings[jsonStartIndex...]
-            
+
             let output: String = json.joined()
 
             guard let data = output.data(using: .utf8) else
