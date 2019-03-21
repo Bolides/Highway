@@ -208,6 +208,55 @@ open class DependencyProtocolMock: DependencyProtocol
         return try closureReturn()
     }
 
+    // MARK: - <templateFolder> - parameters
+
+    public var templateFolderExpectedNameThrowableError: Error?
+    public var templateFolderExpectedNameCallsCount = 0
+    public var templateFolderExpectedNameCalled: Bool
+    {
+        return templateFolderExpectedNameCallsCount > 0
+    }
+
+    public var templateFolderExpectedNameReceivedExpectedName: String?
+    public var templateFolderExpectedNameReturnValue: FolderProtocol?
+
+    // MARK: - <templateFolder> - closure mocks
+
+    public var templateFolderExpectedNameClosure: ((String) throws -> FolderProtocol)?
+
+    // MARK: - <templateFolder> - method mocked
+
+    open func templateFolder(expectedName: String) throws -> FolderProtocol
+    {
+        // <templateFolder> - Throwable method implementation
+
+        if let error = templateFolderExpectedNameThrowableError
+        {
+            throw error
+        }
+
+        templateFolderExpectedNameCallsCount += 1
+        templateFolderExpectedNameReceivedExpectedName = expectedName
+
+        // <templateFolder> - Return Value mock implementation
+
+        guard let closureReturn = templateFolderExpectedNameClosure else
+        {
+            guard let returnValue = templateFolderExpectedNameReturnValue else
+            {
+                let message = "No returnValue implemented for templateFolderExpectedNameClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement FolderProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(expectedName)
+    }
+
     // MARK: - <sourceryFolder> - parameters
 
     public var sourceryFolderThrowableError: Error?

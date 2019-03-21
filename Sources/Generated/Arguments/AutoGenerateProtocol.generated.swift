@@ -33,6 +33,7 @@ import Foundation
  func gitHooks() throws  -> FolderProtocol
  func srcRoot() throws  -> FolderProtocol
  func templateFolder() throws  -> FolderProtocol
+ func templateFolder(expectedName: String) throws  -> FolderProtocol
  func sourceryFolder() throws  -> FolderProtocol
  func sourceryAutoProtocolFile() throws  -> FileProtocol
  // sourcery:end

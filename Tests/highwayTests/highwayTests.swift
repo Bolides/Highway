@@ -186,16 +186,12 @@ class HighwaySpec: QuickSpec
                     self.dependencyService = DependencyServiceProtocolMock()
                     self.dependencyService.generateDependencyReturnValue = dependencies
 
-                    let swiftPackageWithSourceryFolder = try FolderProtocolMock()
-
                     self.sut = try Highway(
-                        package: (package: self.rootPackage, executable: "MockedSetup"),
-                        extraFolders: self.extraFolders,
+                        package: self.rootPackage,
                         dependencyService: self.dependencyService,
-                        swiftformatType: SWM.self,
+                        sourceryBuilder: SourceryBuilderMock(), swiftformatType: SWM.self,
                         githooksType: GHWM.self,
                         sourceryWorkerType: SourceryWorkerMock.self,
-                        sourceryBuilder: SourceryBuilderMock(),
                         terminal: self.terminal,
                         signPost: self.signPost,
                         queue: self.queue,

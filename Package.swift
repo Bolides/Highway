@@ -321,6 +321,7 @@ public let package = Package(
                 "GitHooks",
                 "SwiftFormatWorker",
                 "SignPost",
+                "ZFile",
             ],
             path: "Sources/Generated/Highway"
         ),

@@ -72,7 +72,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
 
     public func runTests(_ async: @escaping (@escaping HighwayRunner.SyncTestOutput) -> Void)
     {
-        test(package: highway.package.package, async)
+        test(package: highway.package, async)
     }
 
     public func runSourcery(_ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
@@ -154,7 +154,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
             {
                 let task = try self.system.process("swift")
                 task.arguments = ["test"]
-                task.currentDirectoryPath = try self.highway.package.package.dependencies.srcRoot().path
+                task.currentDirectoryPath = try self.highway.package.dependencies.srcRoot().path
 
                 let output = try self.terminal.runProcess(task)
                 self.signPost.message("🛠 \(pretty_function()) ✅")

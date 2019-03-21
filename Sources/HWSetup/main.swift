@@ -29,10 +29,10 @@ do
     // Swift Package
 
     let dumpService = DumpService(swiftPackageFolder: srcRoot)
-    let rootPackage = try Highway.package(for: srcRoot, dependencyService: dependencyService, dumpService: dumpService)
+    let package = try Highway.package(for: srcRoot, dependencyService: dependencyService, dumpService: dumpService)
 
     let sourceryBuilder = SourceryBuilder(dependencyService: dependencyService)
-    let highway = try Highway(package: (package: rootPackage, executable: "HWSetup"), dependencyService: dependencyService, sourceryBuilder: sourceryBuilder)
+    let highway = try Highway(package: package, dependencyService: dependencyService, sourceryBuilder: sourceryBuilder, highwaySetupExecutableName: "HWSetup")
 
     highwayRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
 

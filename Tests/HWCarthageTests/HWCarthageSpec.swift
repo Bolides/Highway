@@ -49,7 +49,7 @@ class HWCarthageSpec: QuickSpec
                 highway = HighwayProtocolMock()
                 let package = PackageProtocolMock()
 
-                highway.underlyingPackage = (package: package, executable: "Mock")
+                highway.underlyingPackage =  package
 
                 carthageExecutable = try! FileProtocolMock()
                 carthageExecutable.underlyingPath = CarthageBuilder.carthageExecutableFolderPath + "/carthage"
