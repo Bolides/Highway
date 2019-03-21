@@ -127,7 +127,7 @@ public let package = Package(
 
         // MARK: - Filesystem
 
-        .package(url: "https://www.github.com/Bolides/ZFile", "2.3.1" ..< "3.1.0"),
+        .package(url: "https://www.github.com/Bolides/ZFile", "2.3.2" ..< "3.1.0"),
 
         // MARK: - Sourcery
 
@@ -155,6 +155,22 @@ public let package = Package(
     targets: [
         // MARK: - Targets
 
+        .target(
+            name: "HWSetup",
+            dependencies: [
+                "Arguments",
+                "Errors",
+                "SignPost",
+                "SourceryAutoProtocols",
+                "SourceryWorker",
+                "SwiftFormatWorker",
+                "Terminal",
+                "ZFile",
+                "XCBuild",
+                "GitHooks",
+                "Highway",
+            ]
+        ),
         .target(
             name: "HWCarthage",
             dependencies: ["SourceryAutoProtocols", "Highway", "ZFile", "SignPost", "Terminal"]
@@ -240,17 +256,17 @@ public let package = Package(
 
         .target(
             name: "HWCarthageMock",
-            dependencies: ["HighwayDispatch", "HWCarthage", "SignPost", "ZFileMock", "ZFile", "SourceryAutoProtocols", "Errors"],
+            dependencies: ["HighwayDispatch", "HWCarthage", "ZFileMock", "ZFile", "Errors"],
             path: "Sources/Generated/HWCarthage"
         ),
         .target(
             name: "HWPodMock",
-            dependencies: ["HighwayDispatch", "HWPod", "SignPost", "ZFileMock", "SourceryAutoProtocols", "Errors"],
+            dependencies: ["HighwayDispatch", "HWPod", "ZFileMock", "Errors"],
             path: "Sources/Generated/HWPod"
         ),
         .target(
             name: "HighwayDispatchMock",
-            dependencies: ["HighwayDispatch", "SignPost", "ZFileMock", "SourceryAutoProtocols", "Errors"],
+            dependencies: ["HighwayDispatch", "SignPost", "ZFileMock", "Errors"],
             path: "Sources/Generated/HighwayDispatch"
         ),
         .target(
@@ -280,7 +296,7 @@ public let package = Package(
         ),
         .target(
             name: "TerminalMock",
-            dependencies: ["Terminal", "ZFile", "ZFileMock", "Arguments", "SourceryAutoProtocols", "SignPost"],
+            dependencies: ["Terminal", "ZFile", "ZFileMock", "Arguments", "SignPost"],
             path: "Sources/Generated/Terminal"
         ),
         .target(
@@ -385,22 +401,6 @@ public let package = Package(
                 "Quick",
                 "Nimble",
                 "HighwayDispatchMock",
-            ]
-        ),
-        .target(
-            name: "HWSetup",
-            dependencies: [
-                "Arguments",
-                "Errors",
-                "SignPost",
-                "SourceryAutoProtocols",
-                "SourceryWorker",
-                "SwiftFormatWorker",
-                "Terminal",
-                "ZFile",
-                "XCBuild",
-                "GitHooks",
-                "Highway",
             ]
         ),
         .testTarget(

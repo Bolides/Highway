@@ -1,5 +1,6 @@
 
 import Arguments
+import Errors
 import Foundation
 import GitHooks
 import Highway
@@ -23,7 +24,6 @@ let dependencyService: DependencyServiceProtocol!
 do
 {
     let srcRoot = try File(path: #file).parentFolder().parentFolder().parentFolder()
-    signPost.message("🚀 \(srcRoot.name) ...")
     dependencyService = DependencyService(in: srcRoot)
 
     // Swift Package
@@ -42,8 +42,6 @@ do
 
     highwayRunner.runSourcery(handleSourceryOutput)
 
-    signPost.message("🧙🏻‍♂️ still running ... (this can take some time ☕️)")
-
     dispatchGroup.notify(queue: DispatchQueue.main)
     {
         highwayRunner.runSwiftformat(handleSwiftformat)
@@ -58,6 +56,19 @@ do
             exit(EXIT_SUCCESS)
         }
         signPost.message("🚀 \(HighwayRunner.self) has \(errors.count) ❌")
+
+        for error in errors.enumerated()
+        {
+            let message = """
+            ❌ \(error.offset + 1)
+            
+                \(error.element)
+            
+            ---
+            
+            """
+            signPost.error(message)
+        }
         exit(EXIT_FAILURE)
     }
     dispatchMain()

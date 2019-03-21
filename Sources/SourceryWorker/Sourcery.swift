@@ -84,8 +84,6 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
         signPost: SignPostProtocol = SignPost.shared
     ) throws
     {
-        signPost.message("\(Sourcery.self) for \(productName)")
-
         do
         {
             let sourcesFolder = try swiftPackageDependencies.srcRoot().subfolder(named: "Sources")

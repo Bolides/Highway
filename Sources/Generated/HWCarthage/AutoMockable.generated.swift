@@ -2,8 +2,6 @@ import Errors
 import Foundation
 import HighwayDispatch
 import HWCarthage
-import SignPost
-import SourceryAutoProtocols
 import ZFile
 import ZFileMock
 

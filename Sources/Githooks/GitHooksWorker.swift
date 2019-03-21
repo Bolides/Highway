@@ -38,13 +38,13 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
     cd <#srcroot#>
     # Build setup executable
     if [ ! -f ./.build/x86_64-apple-macosx10.10/release/<#executable name#> ]; then
-        echo "<#executable name#>, not found - building for source"
+        echo "<#executable name#>, not found - building ..."
         swift build --product <#executable name#> -c release --static-swift-stdlib
+        echo "<#executable name#>, not found - building ✅"
     fi
     
     # Execute the script
     ./.build/x86_64-apple-macosx10.10/release/<#executable name#>
-    # Allow push on success
     """
 
     private let swiftPackageDependencies: DependencyProtocol
@@ -72,7 +72,7 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
 
     public func addPrePushToGitHooks() throws
     {
-        signPost.message("💪🏻 \(GitHooksWorker.self) started ...")
+        signPost.message("👀 \(GitHooksWorker.self) ...")
         do
         {
             var executable: String!
@@ -108,8 +108,8 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
             }
 
             try prePushFile.write(string: script)
-            signPost.message("💪🏻\(prePushFile.path) \n contains script that will run before every push.")
-            signPost.message("💪🏻 \(GitHooksWorker.self) ✅")
+            signPost.verbose("👀 \(prePushFile.path) \n contains script that will run before every push.")
+            signPost.message("👀 \(GitHooksWorker.self) ✅")
         }
         catch
         {

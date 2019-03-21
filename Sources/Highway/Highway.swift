@@ -92,7 +92,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         self.queue = queue
         self.package = package
 
-        signPost.message(
+        signPost.verbose(
             """
             📦 \(pretty_function()) for
             \(try package.package.dependencies.srcRoot())
