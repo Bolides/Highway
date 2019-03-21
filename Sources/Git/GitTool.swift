@@ -34,29 +34,39 @@ public struct GitTool: AutoGenerateProtocol
 
 extension GitTool: GitToolProtocol
 {
-    public func addAll() throws
+    
+    public func isClean() throws -> Bool {
+        let _status = try status()
+        return _status.contains("")
+    }
+    public func status() throws -> [String]
     {
-        _ = try terminal.runProcess(try _git(with: ["add", "."]).toProcess)
+        return try terminal.runProcess(try _git(with: ["status"]).toProcess)
+    }
+    
+    public func addAll() throws -> [String]
+    {
+        return try terminal.runProcess(try _git(with: ["add", "."]).toProcess)
     }
 
-    public func commit(message: String) throws
+    public func commit(message: String) throws -> [String]
     {
-        _ = try terminal.runProcess(try _git(with: ["commit", "-m", message]).toProcess)
+        return try terminal.runProcess(try _git(with: ["commit", "-m", message]).toProcess)
     }
 
-    public func pushToMaster() throws
+    public func pushToMaster() throws -> [String]
     {
-        _ = try terminal.runProcess(try _git(with: ["push", "origin", "master"]).toProcess)
+        return try terminal.runProcess(try _git(with: ["push", "origin", "master"]).toProcess)
     }
 
-    public func pushTagsToMaster() throws
+    public func pushTagsToMaster() throws -> [String]
     {
-        _ = try terminal.runProcess(try _git(with: ["push", "--tags"]).toProcess)
+        return try terminal.runProcess(try _git(with: ["push", "--tags"]).toProcess)
     }
 
-    public func pull() throws
+    public func pull() throws -> [String]
     {
-        _ = try terminal.runProcess(try _git(with: ["pull"]).toProcess)
+        return try terminal.runProcess(try _git(with: ["pull"]).toProcess)
     }
 
     public func currentTag() throws -> [String]

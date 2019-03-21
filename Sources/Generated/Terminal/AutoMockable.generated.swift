@@ -476,6 +476,55 @@ open class SystemProtocolMock: SystemProtocol
         return try closureReturn(executableName)
     }
 
+    // MARK: - <process> - parameters
+
+    public var processForFromThrowableError: Error?
+    public var processForFromCallsCount = 0
+    public var processForFromCalled: Bool
+    {
+        return processForFromCallsCount > 0
+    }
+
+    public var processForFromReceivedArguments: (currentFolder: FolderProtocol, executableFile: FileProtocol)?
+    public var processForFromReturnValue: ProcessProtocol?
+
+    // MARK: - <process> - closure mocks
+
+    public var processForFromClosure: ((FolderProtocol, FileProtocol) throws -> ProcessProtocol)?
+
+    // MARK: - <process> - method mocked
+
+    open func process(for currentFolder: FolderProtocol, from executableFile: FileProtocol) throws -> ProcessProtocol
+    {
+        // <process> - Throwable method implementation
+
+        if let error = processForFromThrowableError
+        {
+            throw error
+        }
+
+        processForFromCallsCount += 1
+        processForFromReceivedArguments = (currentFolder: currentFolder, executableFile: executableFile)
+
+        // <process> - Return Value mock implementation
+
+        guard let closureReturn = processForFromClosure else
+        {
+            guard let returnValue = processForFromReturnValue else
+            {
+                let message = "No returnValue implemented for processForFromClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement ProcessProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(currentFolder, executableFile)
+    }
+
     // MARK: - <executable> - parameters
 
     public var executableWithThrowableError: Error?

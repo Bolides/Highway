@@ -13,6 +13,7 @@ public protocol SystemProtocol: AutoMockable
     var fileSystem: FileSystemProtocol { get }
 
     func process(_ executableName: String) throws -> ProcessProtocol
+    func process(for currentFolder: FolderProtocol, from executableFile: FileProtocol) throws -> ProcessProtocol
     func executable(with executableName: String) throws -> FileProtocol
 
     // sourcery:end
@@ -49,6 +50,15 @@ public struct System: SystemProtocol, AutoGenerateProtocol
     public func process(_ executableName: String) throws -> ProcessProtocol
     {
         return try Task(commandName: executableName, fileSystem: fileSystem, provider: self, signPost: signPost).toProcess
+    }
+
+    public func process(for currentFolder: FolderProtocol, from executableFile: FileProtocol) throws -> ProcessProtocol
+    {
+        let process = Process()
+        try process.executable(set: executableFile)
+        process.currentDirectoryPath = currentFolder.path
+
+        return process
     }
 
     public func executable(with executableName: String) throws -> FileProtocol

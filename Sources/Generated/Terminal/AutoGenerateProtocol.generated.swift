@@ -33,6 +33,7 @@ import Foundation
  var fileSystem: FileSystemProtocol { get }
 
  func process(_ executableName: String) throws  -> ProcessProtocol
+ func process(for currentFolder:FolderProtocol, from executableFile: FileProtocol) throws  -> ProcessProtocol
  func executable(with executableName: String) throws  -> FileProtocol
  // sourcery:end
  // Generated protocol inline for Task -> See code in the file of that type
