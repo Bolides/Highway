@@ -21,6 +21,13 @@ open class CarthageBuilderProtocolMock: CarthageBuilderProtocol
     }
 
     public static var underlyingCarthageExecutableFolderPath: String = "AutoMockable filled value"
+    public static var carthageExecutableName: String
+    {
+        get { return underlyingCarthageExecutableName }
+        set(value) { underlyingCarthageExecutableName = value }
+    }
+
+    public static var underlyingCarthageExecutableName: String = "AutoMockable filled value"
 
     // MARK: - <attemptBuildCarthageIfNeeded> - parameters
 

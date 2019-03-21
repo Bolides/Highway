@@ -19,6 +19,7 @@ import Foundation
  // Generated protocol inline for CarthageBuilder -> See code in the file of that type
  // sourcery:inline:CarthageBuilder.AutoGenerateProtocol
  static var carthageExecutableFolderPath: String { get }
+ static var carthageExecutableName: String { get }
 
  func attemptBuildCarthageIfNeeded() throws  -> FileProtocol
  // sourcery:end

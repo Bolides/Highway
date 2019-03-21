@@ -17,6 +17,7 @@ public protocol CarthageBuilderProtocol: AutoMockable
 {
     // sourcery:inline:CarthageBuilder.AutoGenerateProtocol
     static var carthageExecutableFolderPath: String { get }
+    static var carthageExecutableName: String { get }
 
     func attemptBuildCarthageIfNeeded() throws -> FileProtocol
 
@@ -29,7 +30,7 @@ public struct CarthageBuilder: CarthageBuilderProtocol, AutoGenerateProtocol
     public typealias SyncOutput = () throws -> FileProtocol
     public static let carthageExecutableFolderPath: String = "./.build/x86_64-apple-macosx10.10/release"
     public static let carthageExecutableName: String = "carthage"
-    
+
     // MARK: - Private
 
     private let terminal: TerminalProtocol
