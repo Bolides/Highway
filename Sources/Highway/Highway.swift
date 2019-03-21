@@ -159,16 +159,16 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
 
     public func templateFolder(expectedName: String) throws -> FolderProtocol
     {
-       return try package.dependencies.templateFolder(expectedName: expectedName)
+        return try package.dependencies.templateFolder(expectedName: expectedName)
     }
 
     public func sourceryFolder() throws -> FolderProtocol
     {
-       return try self.package.dependencies.sourceryFolder()
+        return try package.dependencies.sourceryFolder()
     }
 
     public func sourceryAutoProtocolFile() throws -> FileProtocol
     {
-        return try self.package.dependencies.sourceryAutoProtocolFile()
+        return try package.dependencies.sourceryAutoProtocolFile()
     }
 }
