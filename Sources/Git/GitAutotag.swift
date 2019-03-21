@@ -25,7 +25,7 @@ public final class GitAutotag
     // MARK: - Tagging
 
     @discardableResult
-    public func autotag(at url: FolderProtocol, dryRun: Bool = true) throws -> [String]
+    public func autotag(dryRun: Bool = true) throws -> [String]
     {
         let arguments = Arguments(dryRun ? ["-n"] : [])
         let executable = try systemExecutableProvider.executable(with: "git-autotag")

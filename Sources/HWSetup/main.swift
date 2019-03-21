@@ -2,6 +2,7 @@
 import Arguments
 import Errors
 import Foundation
+import Git
 import GitHooks
 import Highway
 import SignPost
@@ -52,6 +53,24 @@ do
         dispatchGroup.wait()
         guard let errors = highwayRunner.errors, errors.count > 0 else
         {
+            let git = GitTool()
+
+            do
+            {
+                guard try git.isClean() else
+                {
+                    signPost.error("changes not commited")
+                    signPost.message("🚀 \(HighwayRunner.self) ❌")
+                    exit(EXIT_FAILURE)
+                }
+            }
+            catch
+            {
+                signPost.error("\(error)")
+                signPost.message("🚀 \(HighwayRunner.self) ❌")
+                exit(EXIT_FAILURE)
+            }
+
             signPost.message("🚀 \(HighwayRunner.self) ✅")
             exit(EXIT_SUCCESS)
         }
@@ -69,6 +88,7 @@ do
             """
             signPost.error(message)
         }
+
         exit(EXIT_FAILURE)
     }
     dispatchMain()

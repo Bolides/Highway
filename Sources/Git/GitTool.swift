@@ -34,16 +34,17 @@ public struct GitTool: AutoGenerateProtocol
 
 extension GitTool: GitToolProtocol
 {
-    
-    public func isClean() throws -> Bool {
+    public func isClean() throws -> Bool
+    {
         let _status = try status()
-        return _status.contains("")
+        return _status.contains("Changes")
     }
+
     public func status() throws -> [String]
     {
         return try terminal.runProcess(try _git(with: ["status"]).toProcess)
     }
-    
+
     public func addAll() throws -> [String]
     {
         return try terminal.runProcess(try _git(with: ["add", "."]).toProcess)
