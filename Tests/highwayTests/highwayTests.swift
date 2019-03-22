@@ -65,7 +65,7 @@ class HighwaySpec: QuickSpec
     var queue: HighwayDispatchProtocolMock!
     var dependencyService: DependencyServiceProtocolMock!
     var dependencies: DependencyProtocolMock!
-    
+
     override func spec()
     {
         describe("Highway")
@@ -207,8 +207,8 @@ class HighwaySpec: QuickSpec
                 expect(self.sut).toNot(beNil())
             }
 
-            context("Dependency with name") {
-                
+            context("Dependency with name")
+            {
                 let location = "M (148, 72) Highway.swift dependency(with:)"
                 it("unknown")
                 {
@@ -216,16 +216,15 @@ class HighwaySpec: QuickSpec
                     let expectedError = Highway.Error.missingDepencencyNamed(name)
                     expect { try self.sut?.dependency(with: name) }.to(throwError { expect("\($0)") == "\(HighwayError.highwayError(atLocation: location, error: expectedError))" })
                 }
-                
+
                 it("knwon")
                 {
                     let name = "known dependency"
-                    let dependencies = [ Dependency(name: name, path: "", url: URL(string: "http://www.bolides.be")!, version: "", dependencies: [])]
+                    let dependencies = [Dependency(name: name, path: "", url: URL(string: "http://www.bolides.be")!, version: "", dependencies: [])]
                     self.dependencies.dependencies = dependencies
                     expect { try self.sut?.dependency(with: name).name } == name
                 }
             }
-           
         }
     }
 }
