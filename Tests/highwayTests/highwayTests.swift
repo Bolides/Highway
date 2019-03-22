@@ -64,7 +64,8 @@ class HighwaySpec: QuickSpec
     var signPost: SignPostProtocolMock!
     var queue: HighwayDispatchProtocolMock!
     var dependencyService: DependencyServiceProtocolMock!
-
+    var dependencies: DependencyProtocolMock!
+    
     override func spec()
     {
         describe("Highway")
@@ -77,18 +78,18 @@ class HighwaySpec: QuickSpec
                     srcRoot.subfolderNamedClosure = { _ in
                         try! FolderProtocolMock()
                     }
-                    let dependencies = DependencyProtocolMock()
-                    dependencies.srcRootReturnValue = srcRoot
+                    self.dependencies = DependencyProtocolMock()
+                    self.dependencies.srcRootReturnValue = srcRoot
 
                     let dump = DumpProtocolMock()
                     dump.underlyingProducts = Set([SwiftProduct(name: "MockProduct", product_type: "library")])
 
                     self.rootPackage = PackageProtocolMock()
-                    self.rootPackage.underlyingDependencies = dependencies
+                    self.rootPackage.underlyingDependencies = self.dependencies
                     self.rootPackage.underlyingDump = dump
 
                     self.highwaySetupPackageMock = PackageProtocolMock()
-                    self.highwaySetupPackageMock.underlyingDependencies = dependencies
+                    self.highwaySetupPackageMock.underlyingDependencies = self.dependencies
                     self.highwaySetupPackageMock.underlyingDump = dump
 
                     self.highwaySetupPackage = (package: self.highwaySetupPackageMock, executable: "Mock")
@@ -184,7 +185,7 @@ class HighwaySpec: QuickSpec
                     self.queue.asyncSyncClosure = { $0() }
 
                     self.dependencyService = DependencyServiceProtocolMock()
-                    self.dependencyService.generateDependencyReturnValue = dependencies
+                    self.dependencyService.generateDependencyReturnValue = self.dependencies
 
                     self.sut = try Highway(
                         package: self.rootPackage,
@@ -205,6 +206,26 @@ class HighwaySpec: QuickSpec
             {
                 expect(self.sut).toNot(beNil())
             }
+
+            context("Dependency with name") {
+                
+                let location = "M (148, 72) Highway.swift dependency(with:)"
+                it("unknown")
+                {
+                    let name = "unknown dependency"
+                    let expectedError = Highway.Error.missingDepencencyNamed(name)
+                    expect { try self.sut?.dependency(with: name) }.to(throwError { expect("\($0)") == "\(HighwayError.highwayError(atLocation: location, error: expectedError))" })
+                }
+                
+                it("knwon")
+                {
+                    let name = "known dependency"
+                    let dependencies = [ Dependency(name: name, path: "", url: URL(string: "http://www.bolides.be")!, version: "", dependencies: [])]
+                    self.dependencies.dependencies = dependencies
+                    expect { try self.sut?.dependency(with: name).name } == name
+                }
+            }
+           
         }
     }
 }

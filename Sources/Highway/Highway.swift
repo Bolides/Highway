@@ -141,6 +141,16 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
 
     // MARK: - Public Functions
 
+    public func dependency(with name: String) throws -> DependencyProtocol
+    {
+        guard let dependency = (package.dependencies.dependencies.first { $0.name == name }) else
+        {
+            throw HighwayError.highwayError(atLocation: pretty_function(), error: Error.missingDepencencyNamed(name))
+        }
+
+        return dependency
+    }
+
     public func gitHooks() throws -> FolderProtocol
     {
         return try srcRoot().subfolder(named: ".git/hooks")
@@ -170,5 +180,12 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
     public func sourceryAutoProtocolFile() throws -> FileProtocol
     {
         return try package.dependencies.sourceryAutoProtocolFile()
+    }
+
+    // MARK: - Error
+
+    public enum Error: Swift.Error
+    {
+        case missingDepencencyNamed(String)
     }
 }
