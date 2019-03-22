@@ -7,6 +7,7 @@ import SignPost
 import SourceryAutoProtocols
 import SourceryWorker
 import SwiftFormatWorker
+import Terminal
 import ZFile
 
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
@@ -18,6 +19,13 @@ open class HighwayProtocolMock: HighwayProtocol
 {
     public init() {}
 
+    public static var queue: HighwayDispatchProtocol
+    {
+        get { return underlyingQueue }
+        set(value) { underlyingQueue = value }
+    }
+
+    public static var underlyingQueue: HighwayDispatchProtocol!
     public var package: PackageProtocol
     {
         get { return underlyingPackage }
@@ -48,6 +56,56 @@ open class HighwayProtocolMock: HighwayProtocol
     }
 
     public var underlyingSwiftformat: SwiftFormatWorkerProtocol!
+    public var highwaySetupExecutableName: String?
+
+    // MARK: - <dependency> - parameters
+
+    public var dependencyWithThrowableError: Error?
+    public var dependencyWithCallsCount = 0
+    public var dependencyWithCalled: Bool
+    {
+        return dependencyWithCallsCount > 0
+    }
+
+    public var dependencyWithReceivedName: String?
+    public var dependencyWithReturnValue: DependencyProtocol?
+
+    // MARK: - <dependency> - closure mocks
+
+    public var dependencyWithClosure: ((String) throws -> DependencyProtocol)?
+
+    // MARK: - <dependency> - method mocked
+
+    open func dependency(with name: String) throws -> DependencyProtocol
+    {
+        // <dependency> - Throwable method implementation
+
+        if let error = dependencyWithThrowableError
+        {
+            throw error
+        }
+
+        dependencyWithCallsCount += 1
+        dependencyWithReceivedName = name
+
+        // <dependency> - Return Value mock implementation
+
+        guard let closureReturn = dependencyWithClosure else
+        {
+            guard let returnValue = dependencyWithReturnValue else
+            {
+                let message = "No returnValue implemented for dependencyWithClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement DependencyProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(name)
+    }
 
     // MARK: - <gitHooks> - parameters
 
@@ -190,6 +248,55 @@ open class HighwayProtocolMock: HighwayProtocol
         return try closureReturn()
     }
 
+    // MARK: - <templateFolder> - parameters
+
+    public var templateFolderExpectedNameThrowableError: Error?
+    public var templateFolderExpectedNameCallsCount = 0
+    public var templateFolderExpectedNameCalled: Bool
+    {
+        return templateFolderExpectedNameCallsCount > 0
+    }
+
+    public var templateFolderExpectedNameReceivedExpectedName: String?
+    public var templateFolderExpectedNameReturnValue: FolderProtocol?
+
+    // MARK: - <templateFolder> - closure mocks
+
+    public var templateFolderExpectedNameClosure: ((String) throws -> FolderProtocol)?
+
+    // MARK: - <templateFolder> - method mocked
+
+    open func templateFolder(expectedName: String) throws -> FolderProtocol
+    {
+        // <templateFolder> - Throwable method implementation
+
+        if let error = templateFolderExpectedNameThrowableError
+        {
+            throw error
+        }
+
+        templateFolderExpectedNameCallsCount += 1
+        templateFolderExpectedNameReceivedExpectedName = expectedName
+
+        // <templateFolder> - Return Value mock implementation
+
+        guard let closureReturn = templateFolderExpectedNameClosure else
+        {
+            guard let returnValue = templateFolderExpectedNameReturnValue else
+            {
+                let message = "No returnValue implemented for templateFolderExpectedNameClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement FolderProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(expectedName)
+    }
+
     // MARK: - <sourceryFolder> - parameters
 
     public var sourceryFolderThrowableError: Error?
@@ -282,6 +389,55 @@ open class HighwayProtocolMock: HighwayProtocol
         }
 
         return try closureReturn()
+    }
+
+    // MARK: - <package> - parameters
+
+    public static var packageForDependencyServiceDumpServiceTerminalSignPostThrowableError: Error?
+    public static var packageForDependencyServiceDumpServiceTerminalSignPostCallsCount = 0
+    public static var packageForDependencyServiceDumpServiceTerminalSignPostCalled: Bool
+    {
+        return packageForDependencyServiceDumpServiceTerminalSignPostCallsCount > 0
+    }
+
+    public static var packageForDependencyServiceDumpServiceTerminalSignPostReceivedArguments: (folder: FolderProtocol, dependencyService: DependencyServiceProtocol, dumpService: DumpService, terminal: TerminalProtocol, signPost: SignPostProtocol)?
+    public static var packageForDependencyServiceDumpServiceTerminalSignPostReturnValue: PackageProtocol?
+
+    // MARK: - <package> - closure mocks
+
+    public static var packageForDependencyServiceDumpServiceTerminalSignPostClosure: ((FolderProtocol, DependencyServiceProtocol, DumpService, TerminalProtocol, SignPostProtocol) throws -> PackageProtocol)?
+
+    // MARK: - <package> - method mocked
+
+    public static func package(for folder: FolderProtocol, dependencyService: DependencyServiceProtocol, dumpService: DumpService, terminal: TerminalProtocol, signPost: SignPostProtocol) throws -> PackageProtocol
+    {
+        // <package> - Throwable method implementation
+
+        if let error = packageForDependencyServiceDumpServiceTerminalSignPostThrowableError
+        {
+            throw error
+        }
+
+        packageForDependencyServiceDumpServiceTerminalSignPostCallsCount += 1
+        packageForDependencyServiceDumpServiceTerminalSignPostReceivedArguments = (folder: folder, dependencyService: dependencyService, dumpService: dumpService, terminal: terminal, signPost: signPost)
+
+        // <package> - Return Value mock implementation
+
+        guard let closureReturn = packageForDependencyServiceDumpServiceTerminalSignPostClosure else
+        {
+            guard let returnValue = packageForDependencyServiceDumpServiceTerminalSignPostReturnValue else
+            {
+                let message = "No returnValue implemented for packageForDependencyServiceDumpServiceTerminalSignPostClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement PackageProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(folder, dependencyService, dumpService, terminal, signPost)
     }
 }
 

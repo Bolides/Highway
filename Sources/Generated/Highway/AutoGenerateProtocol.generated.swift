@@ -27,7 +27,6 @@ import Foundation
  var swiftformat: SwiftFormatWorkerProtocol { get }
  var highwaySetupExecutableName: String? { get }
 
- static func package(for folder: FolderProtocol, dependencyService: DependencyServiceProtocol, dumpService: DumpService, terminal: TerminalProtocol = Terminal.shared, signPost: SignPostProtocol = SignPost.shared) throws  -> PackageProtocol
  func dependency(with name: String) throws  -> DependencyProtocol
  func gitHooks() throws  -> FolderProtocol
  func srcRoot() throws  -> FolderProtocol

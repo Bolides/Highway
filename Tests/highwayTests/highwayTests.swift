@@ -209,7 +209,7 @@ class HighwaySpec: QuickSpec
 
             context("Dependency with name")
             {
-                let location = "M (148, 72) Highway.swift dependency(with:)"
+                let location = "M (155, 72) Highway.swift dependency(with:)"
                 it("unknown")
                 {
                     let name = "unknown dependency"

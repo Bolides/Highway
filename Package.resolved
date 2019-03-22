@@ -150,8 +150,8 @@
         "repositoryURL": "https://www.github.com/dooZdev/template-sourcery",
         "state": {
           "branch": null,
-          "revision": "c2950d2587b7c498b946ce15016c744d15f56a27",
-          "version": "1.4.1"
+          "revision": "bbb267e5be95a9917cac1dcb548bbf1124239ae5",
+          "version": "1.4.2"
         }
       },
       {
@@ -177,8 +177,8 @@
         "repositoryURL": "https://www.github.com/Bolides/ZFile",
         "state": {
           "branch": null,
-          "revision": "e95eb4030d54aaa372b469635982164a07f7b90b",
-          "version": "2.3.2"
+          "revision": "e8aed66d29dc6b11dc75141f77857fbcbbd76e50",
+          "version": "2.3.3"
         }
       }
     ]
