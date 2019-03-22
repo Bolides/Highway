@@ -49,34 +49,43 @@ public struct HWPod: HWPodProtocol, AutoGenerateProtocol
         self.system = system
     }
 
+    /// Will throw HWPod.Error that you can choose to ignore
     public func attempt() throws
     {
         let iosFolder = podFolder
-
+        
         // MARK: - Check cocoapods version
-
+        
         signPost.message("\(pretty_function()) in folder: \(iosFolder.name) ...")
         signPost.message("check cocoapods version")
-
-        let versionTask = try system.process("pod")
+        
+        var versionTask: ProcessProtocol!
+        
+        do {
+           versionTask = try system.process("pod")
+        } catch {
+            throw Error.systemHasNoPodInstalled
+        }
+        
         versionTask.arguments = ["--version"]
         let versionOutput = try terminal.runProcess(versionTask)
-
+        signPost.verbose("\(versionOutput.joined(separator: "\n"))")
+        
         guard let version = versionOutput.first, version == HWPod.expectedCocoapodsVersion else
         {
             throw Error.invalidCocoapodsVersion
         }
-
+        
         do
         {
             signPost.message("run `pod install`...")
-
+            
             let task = try system.process("pod")
             task.arguments = ["_\(HWPod.expectedCocoapodsVersion)_", "install"]
             task.currentDirectoryPath = iosFolder.path
-
+            
             let output = try terminal.runProcess(task)
-
+            
             signPost.verbose("\(output)")
             signPost.message("\(pretty_function()) ✅")
         }
@@ -84,6 +93,7 @@ public struct HWPod: HWPodProtocol, AutoGenerateProtocol
         {
             throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
         }
+
     }
 
     public enum Error: Swift.Error, CustomStringConvertible
@@ -103,5 +113,6 @@ public struct HWPod: HWPodProtocol, AutoGenerateProtocol
         }
 
         case invalidCocoapodsVersion
+        case systemHasNoPodInstalled
     }
 }
