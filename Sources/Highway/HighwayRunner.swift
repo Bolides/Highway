@@ -51,13 +51,15 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
     private let signPost: SignPostProtocol
     private let queue: HighwayDispatchProtocol
     private let dispatchGroup: DispatchGroup
+    private let system: SystemProtocol
 
     public init(
         highway: HighwayProtocol,
         dispatchGroup: DispatchGroup,
         queue: HighwayDispatchProtocol = HighwayRunner.queue,
         terminal: TerminalProtocol = Terminal.shared,
-        signPost: SignPostProtocol = SignPost.shared
+        signPost: SignPostProtocol = SignPost.shared,
+        system: SystemProtocol = System.shared
     )
     {
         self.terminal = terminal
@@ -65,45 +67,47 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
         self.highway = highway
         self.dispatchGroup = dispatchGroup
         self.queue = queue
+        self.system = system
     }
 
     public func runTests(_ async: @escaping (@escaping HighwayRunner.SyncTestOutput) -> Void)
     {
-        test(package: highway.package.package, async)
+        test(package: highway.package, async)
     }
 
     public func runSourcery(_ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
     {
-        dispatchGroup.enter()
-        highway.sourceryWorkers.forEach
-        { [weak self] worker in
-            guard let `self` = self else
-            {
-                async { throw "SPRunner released before it could 🧙🏻‍♂️ on \(worker.sourcery.name)" }
-                return
-            }
+        do
+        {
+            try highway.sourceryWorkers.forEach
+            { worker in
+                signPost.message("🧙🏻‍♂️ \(worker.name) ...")
 
-            dispatchGroup.enter()
-            signPost.message("🧙🏻‍♂️ \(worker.sourcery.name) ...")
-            worker.attempt
-            {
-                do
-                {
-                    let output = try $0()
-                    async { output }
-                    self.signPost.message("🧙🏻‍♂️ \(worker.sourcery.name) ✅")
+                dispatchGroup.enter()
+                worker.attempt(in: try worker.sourceryYMLFile.parentFolder())
+                { [weak self] in
+
+                    do
+                    {
+                        let output = try $0()
+                        async { output }
+                        self?.signPost.message("🧙🏻‍♂️ \(worker.name) ✅")
+                    }
+                    catch
+                    {
+                        let _error = HighwayError.highwayError(atLocation: "\(HighwayRunner.self) \(#function) \(#line) - \(worker.name)", error: error)
+                        self?.addError(_error)
+                        async { throw _error }
+                        self?.signPost.message("🧙🏻‍♂️ \(worker.name) ❌")
+                    }
+                    self?.dispatchGroup.leave()
                 }
-                catch
-                {
-                    let _error = HighwayError.highwayError(atLocation: "\(HighwayRunner.self) \(#function) \(#line) - \(worker.sourcery.name)", error: error)
-                    self.addError(_error)
-                    async { throw _error }
-                    self.signPost.message("🧙🏻‍♂️ \(worker.sourcery.name) ❌")
-                }
-                self.dispatchGroup.leave()
             }
         }
-        dispatchGroup.leave()
+        catch
+        {
+            async { throw HighwayError.highwayError(atLocation: pretty_function(), error: error) }
+        }
     }
 
     public func addGithooksPrePush() throws
@@ -148,14 +152,11 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
 
             do
             {
-                let originalFolder = FileSystem.shared.currentFolder
-                FileManager.default.changeCurrentDirectoryPath(try self.highway.package.package.dependencies.srcRoot().path)
+                let task = try self.system.process("swift")
+                task.arguments = ["test"]
+                task.currentDirectoryPath = try self.highway.package.dependencies.srcRoot().path
 
-                let task = try Task(commandName: "swift")
-                task.arguments = Arguments(["test"])
-
-                let output = try self.terminal.runProcess(task.toProcess)
-                FileManager.default.changeCurrentDirectoryPath(originalFolder.path)
+                let output = try self.terminal.runProcess(task)
                 self.signPost.message("🛠 \(pretty_function()) ✅")
                 async { output }
             }
@@ -192,18 +193,15 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
 
             do
             {
-                let originalFolder = FileSystem.shared.currentFolder
-                FileManager.default.changeCurrentDirectoryPath(try package.dependencies.srcRoot().path)
+                context.signPost.message("🧪 swift test package \(package.name) ... ")
+                let task = try self.system.process("swift")
+                task.arguments = ["test"]
+                task.currentDirectoryPath = try package.dependencies.srcRoot().path
 
-                context.signPost.message("🧪 swift test in  \(package.name) ... ")
-                let task = try Task(commandName: "swift")
-                task.arguments = Arguments(["test"])
-
-                let testReport = TestReport(output: try context.terminal.runProcess(task.toProcess))
+                let testReport = TestReport(output: try context.terminal.runProcess(task))
                 context.signPost.verbose("\(testReport)")
-                context.signPost.message("🧪 swift test in  \(package.name) ✅")
+                context.signPost.message("🧪 swift test package \(package.name) ✅")
                 async { testReport }
-                FileManager.default.changeCurrentDirectoryPath(originalFolder.path)
             }
             catch let Terminal.Error.unknownTask(errorOutput: output)
             {

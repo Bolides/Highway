@@ -2,8 +2,6 @@ import Errors
 import Foundation
 import HighwayDispatch
 import HWPod
-import SignPost
-import SourceryAutoProtocols
 import ZFileMock
 
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
@@ -23,36 +21,62 @@ open class HWPodProtocolMock: HWPodProtocol
 
     public static var underlyingExpectedCocoapodsVersion: String = "AutoMockable filled value"
 
-    // MARK: - <attempt> - parameters
+    // MARK: - <attemptPodInstallIfOptionAddedToCommandline> - parameters
 
-    public var attemptThrowableError: Error?
-    public var attemptCallsCount = 0
-    public var attemptCalled: Bool
+    public var attemptPodInstallIfOptionAddedToCommandlineThrowableError: Error?
+    public var attemptPodInstallIfOptionAddedToCommandlineCallsCount = 0
+    public var attemptPodInstallIfOptionAddedToCommandlineCalled: Bool
     {
-        return attemptCallsCount > 0
+        return attemptPodInstallIfOptionAddedToCommandlineCallsCount > 0
     }
 
-    // MARK: - <attempt> - closure mocks
+    // MARK: - <attemptPodInstallIfOptionAddedToCommandline> - closure mocks
 
-    public var attemptClosure: (() throws -> Void)?
+    public var attemptPodInstallIfOptionAddedToCommandlineClosure: (() throws -> Void)?
 
-    // MARK: - <attempt> - method mocked
+    // MARK: - <attemptPodInstallIfOptionAddedToCommandline> - method mocked
 
-    open func attempt() throws
+    open func attemptPodInstallIfOptionAddedToCommandline() throws
     {
-        // <attempt> - Throwable method implementation
+        // <attemptPodInstallIfOptionAddedToCommandline> - Throwable method implementation
 
-        if let error = attemptThrowableError
+        if let error = attemptPodInstallIfOptionAddedToCommandlineThrowableError
         {
             throw error
         }
 
-        attemptCallsCount += 1
+        attemptPodInstallIfOptionAddedToCommandlineCallsCount += 1
 
-        // <attempt> - Void return mock implementation
+        // <attemptPodInstallIfOptionAddedToCommandline> - Void return mock implementation
 
-        try attemptClosure?()
+        try attemptPodInstallIfOptionAddedToCommandlineClosure?()
     }
 }
 
 // MARK: - OBJECTIVE-C
+
+// MARK: - Sourcery Errors
+
+public enum SourceryMockError: Swift.Error, Hashable
+{
+    case implementErrorCaseFor(String)
+    case subclassMockBeforeUsing(String)
+
+    public var debugDescription: String
+    {
+        switch self
+        {
+        case let .implementErrorCaseFor(message):
+            return """
+            🧙‍♂️ SourceryMockError.implementErrorCaseFor:
+            message: \(message)
+            """
+        case let .subclassMockBeforeUsing(message):
+            return """
+            \n
+            🧙‍♂️ SourceryMockError.subclassMockBeforeUsing:
+            message: \(message)
+            """
+        }
+    }
+}

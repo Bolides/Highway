@@ -1,7 +1,6 @@
 import Foundation
 import HighwayDispatch
 import SignPost
-import SourceryAutoProtocols
 import SwiftFormatWorker
 import ZFile
 import ZFileMock
@@ -68,3 +67,29 @@ open class SwiftFormatWorkerProtocolMock: SwiftFormatWorkerProtocol
 }
 
 // MARK: - OBJECTIVE-C
+
+// MARK: - Sourcery Errors
+
+public enum SourceryMockError: Swift.Error, Hashable
+{
+    case implementErrorCaseFor(String)
+    case subclassMockBeforeUsing(String)
+
+    public var debugDescription: String
+    {
+        switch self
+        {
+        case let .implementErrorCaseFor(message):
+            return """
+            🧙‍♂️ SourceryMockError.implementErrorCaseFor:
+            message: \(message)
+            """
+        case let .subclassMockBeforeUsing(message):
+            return """
+            \n
+            🧙‍♂️ SourceryMockError.subclassMockBeforeUsing:
+            message: \(message)
+            """
+        }
+    }
+}

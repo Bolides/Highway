@@ -9,12 +9,12 @@ public final class GitAutotag
     // MARK: - Properties
 
     public let terminal: TerminalProtocol
-    public let systemExecutableProvider: SystemExecutableProviderProtocol
+    public let systemExecutableProvider: SystemProtocol
 
     // MARK: - Init
 
     public init(
-        systemExecutableProvider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared,
+        systemExecutableProvider: SystemProtocol = System.shared,
         terminal: TerminalProtocol = Terminal.shared
     ) throws
     {
@@ -25,7 +25,7 @@ public final class GitAutotag
     // MARK: - Tagging
 
     @discardableResult
-    public func autotag(at url: FolderProtocol, dryRun: Bool = true) throws -> [String]
+    public func autotag(dryRun: Bool = true) throws -> [String]
     {
         let arguments = Arguments(dryRun ? ["-n"] : [])
         let executable = try systemExecutableProvider.executable(with: "git-autotag")

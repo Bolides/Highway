@@ -13,39 +13,34 @@ import ZFile
 public protocol DumpServiceProtocol: AutoMockable
 {
     // sourcery:inline:DumpService.AutoGenerateProtocol
-    var dump: DumpProtocol { get }
 
-    init(
-        terminal: TerminalProtocol,
-        swiftPackageDependencies: DependencyProtocol
-    ) throws
-    func writeToStubFile() throws
+    func generateDump() throws -> DumpProtocol
+
     // sourcery:end
 }
 
 public struct DumpService: DumpServiceProtocol, AutoGenerateProtocol
 {
-    public let dump: DumpProtocol
+    private let swiftPackageFolder: FolderProtocol
+    private let system: SystemProtocol
+    private let terminal: TerminalProtocol
 
-    private let swiftPackageDependencies: DependencyProtocol
-    private let data: Data
-
-    // sourcery:includeInitInProtocol
-    public init(terminal: TerminalProtocol = Terminal.shared, swiftPackageDependencies: DependencyProtocol) throws
+    public init(swiftPackageFolder: FolderProtocol, system: SystemProtocol = System.shared, terminal: TerminalProtocol = Terminal.shared)
     {
-        self.swiftPackageDependencies = swiftPackageDependencies
-        let task = try Task(commandName: "swift")
-        task.arguments = Arguments(["package", "dump-package"])
-
-        let output: String = try terminal.runProcess(task.toProcess).joined()
-        data = output.data(using: .utf8)!
-
-        dump = try JSONDecoder().decode(Dump.self, from: data)
+        self.swiftPackageFolder = swiftPackageFolder
+        self.terminal = terminal
+        self.system = system
     }
 
-    public func writeToStubFile() throws
+    public func generateDump() throws -> DumpProtocol
     {
-        let stubFile = try swiftPackageDependencies.srcRoot().subfolder(named: "Sources/Stub").createFileIfNeeded(named: "\(DumpService.self).json")
-        try stubFile.write(data: data)
+        let task = try system.process("swift")
+        task.arguments = ["package", "dump-package"]
+        task.currentDirectoryPath = swiftPackageFolder.path
+
+        let output: String = try terminal.runProcess(task).joined()
+        let data = output.data(using: .utf8)!
+
+        return try JSONDecoder().decode(Dump.self, from: data)
     }
 }

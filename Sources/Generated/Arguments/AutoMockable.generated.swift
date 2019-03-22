@@ -8,6 +8,22 @@ import ZFileMock
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
+// MARK: - ArgumentsProtocolMock
+
+open class ArgumentsProtocolMock: ArgumentsProtocol
+{
+    public init() {}
+
+    public var all: [String] = []
+    public var description: String
+    {
+        get { return underlyingDescription }
+        set(value) { underlyingDescription = value }
+    }
+
+    public var underlyingDescription: String = "AutoMockable filled value"
+}
+
 // MARK: - DependencyProtocolMock
 
 open class DependencyProtocolMock: DependencyProtocol
@@ -192,6 +208,55 @@ open class DependencyProtocolMock: DependencyProtocol
         return try closureReturn()
     }
 
+    // MARK: - <templateFolder> - parameters
+
+    public var templateFolderExpectedNameThrowableError: Error?
+    public var templateFolderExpectedNameCallsCount = 0
+    public var templateFolderExpectedNameCalled: Bool
+    {
+        return templateFolderExpectedNameCallsCount > 0
+    }
+
+    public var templateFolderExpectedNameReceivedExpectedName: String?
+    public var templateFolderExpectedNameReturnValue: FolderProtocol?
+
+    // MARK: - <templateFolder> - closure mocks
+
+    public var templateFolderExpectedNameClosure: ((String) throws -> FolderProtocol)?
+
+    // MARK: - <templateFolder> - method mocked
+
+    open func templateFolder(expectedName: String) throws -> FolderProtocol
+    {
+        // <templateFolder> - Throwable method implementation
+
+        if let error = templateFolderExpectedNameThrowableError
+        {
+            throw error
+        }
+
+        templateFolderExpectedNameCallsCount += 1
+        templateFolderExpectedNameReceivedExpectedName = expectedName
+
+        // <templateFolder> - Return Value mock implementation
+
+        guard let closureReturn = templateFolderExpectedNameClosure else
+        {
+            guard let returnValue = templateFolderExpectedNameReturnValue else
+            {
+                let message = "No returnValue implemented for templateFolderExpectedNameClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement FolderProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(expectedName)
+    }
+
     // MARK: - <sourceryFolder> - parameters
 
     public var sourceryFolderThrowableError: Error?
@@ -354,3 +419,29 @@ open class SwiftTargetProtocolMock: SwiftTargetProtocol
 }
 
 // MARK: - OBJECTIVE-C
+
+// MARK: - Sourcery Errors
+
+public enum SourceryMockError: Swift.Error, Hashable
+{
+    case implementErrorCaseFor(String)
+    case subclassMockBeforeUsing(String)
+
+    public var debugDescription: String
+    {
+        switch self
+        {
+        case let .implementErrorCaseFor(message):
+            return """
+            🧙‍♂️ SourceryMockError.implementErrorCaseFor:
+            message: \(message)
+            """
+        case let .subclassMockBeforeUsing(message):
+            return """
+            \n
+            🧙‍♂️ SourceryMockError.subclassMockBeforeUsing:
+            message: \(message)
+            """
+        }
+    }
+}

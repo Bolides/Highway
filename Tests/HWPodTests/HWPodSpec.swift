@@ -27,7 +27,8 @@ class HWPodSpec: QuickSpec
             var terminal: TerminalProtocolMock!
             var signPost: SignPostProtocolMock!
             var fileSystem: FileSystemProtocolMock!
-            var system: SystemExecutableProviderProtocolMock!
+            var system: SystemProtocolMock!
+            var podProcess: ProcessProtocolMock!
 
             beforeEach
             {
@@ -35,15 +36,19 @@ class HWPodSpec: QuickSpec
                 terminal = TerminalProtocolMock()
                 signPost = SignPostProtocolMock()
                 fileSystem = FileSystemProtocolMock()
-                system = SystemExecutableProviderProtocolMock()
+                system = SystemProtocolMock()
 
-                system.executableWithReturnValue = try! FileProtocolMock()
+                podProcess = ProcessProtocolMock()
+                system.processReturnValue = podProcess
+
                 fileSystem.underlyingCurrentFolder = try! File(path: #file).parentFolder().parentFolder() as! Folder
 
                 terminal.runProcessClosure = { _ in ["1.5.3"] }
 
                 sut = HWPod(
                     podFolder: folder,
+                    strictPodVersion: "1.5.3",
+                    commandLineOptions: Set([.podInstall]),
                     terminal: terminal,
                     signPost: signPost,
                     fileSystem: fileSystem,
@@ -53,7 +58,7 @@ class HWPodSpec: QuickSpec
 
             it("runs cocoapods")
             {
-                expect { try sut?.attempt() }.toNot(throwError())
+                expect { try sut?.attemptPodInstallIfOptionAddedToCommandline() }.toNot(throwError())
                 expect(terminal.runProcessReceivedProcessTask?.arguments?.joined(separator: ",")) == "_1.5.3_,install"
             }
         }

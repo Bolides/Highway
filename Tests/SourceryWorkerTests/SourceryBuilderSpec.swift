@@ -54,7 +54,7 @@ class SourceryBuilderSpec: QuickSpec
                 expect
                 {
                     sut = SourceryBuilder(
-                        swiftPackageWithSourceryFolder: try FolderProtocolMock(),
+                        dependencyService: DependencyServiceProtocolMock(),
                         terminal: terminal,
                         signPost: signPost
                     )

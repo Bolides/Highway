@@ -1,6 +1,8 @@
 
 import Arguments
+import Errors
 import Foundation
+import Git
 import GitHooks
 import Highway
 import SignPost
@@ -23,14 +25,15 @@ let dependencyService: DependencyServiceProtocol!
 do
 {
     let srcRoot = try File(path: #file).parentFolder().parentFolder().parentFolder()
-    signPost.message("🚀 \(srcRoot.name) ...")
     dependencyService = DependencyService(in: srcRoot)
 
     // Swift Package
 
-    let rootPackage = try Highway.package(for: srcRoot, dependencyService: dependencyService)
+    let dumpService = DumpService(swiftPackageFolder: srcRoot)
+    let package = try Highway.package(for: srcRoot, dependencyService: dependencyService, dumpService: dumpService)
 
-    let highway = try Highway(package: (package: rootPackage, executable: "HWSetup"), dependencyService: dependencyService, swiftPackageWithSourceryFolder: srcRoot)
+    let sourceryBuilder = SourceryBuilder(dependencyService: dependencyService)
+    let highway = try Highway(package: package, dependencyService: dependencyService, sourceryBuilder: sourceryBuilder, highwaySetupExecutableName: "HWSetup")
 
     highwayRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
 
@@ -39,8 +42,6 @@ do
     try highwayRunner.addGithooksPrePush()
 
     highwayRunner.runSourcery(handleSourceryOutput)
-
-    signPost.message("🧙🏻‍♂️ still running ... (this can take some time ☕️)")
 
     dispatchGroup.notify(queue: DispatchQueue.main)
     {
@@ -52,10 +53,42 @@ do
         dispatchGroup.wait()
         guard let errors = highwayRunner.errors, errors.count > 0 else
         {
+            let git = GitTool()
+
+            do
+            {
+                guard try git.isClean() else
+                {
+                    signPost.error("changes not commited")
+                    signPost.message("🚀 \(HighwayRunner.self) ❌")
+                    exit(EXIT_FAILURE)
+                }
+            }
+            catch
+            {
+                signPost.error("\(error)")
+                signPost.message("🚀 \(HighwayRunner.self) ❌")
+                exit(EXIT_FAILURE)
+            }
+
             signPost.message("🚀 \(HighwayRunner.self) ✅")
             exit(EXIT_SUCCESS)
         }
         signPost.message("🚀 \(HighwayRunner.self) has \(errors.count) ❌")
+
+        for error in errors.enumerated()
+        {
+            let message = """
+            ❌ \(error.offset + 1)
+            
+                \(error.element)
+            
+            ---
+            
+            """
+            signPost.error(message)
+        }
+
         exit(EXIT_FAILURE)
     }
     dispatchMain()

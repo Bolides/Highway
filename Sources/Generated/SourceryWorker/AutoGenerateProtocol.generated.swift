@@ -14,9 +14,10 @@ import Foundation
 //: - of the above it does not add it if  // sourcery:skipProtocol
 //: ---
 
+// version 5.5
 /*
 
- // Generated protocol inline for Sourcery -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for Sourcery ..
  // sourcery:inline:Sourcery.AutoGenerateProtocol
  var uuid: String { get }
  var name: String { get }
@@ -26,74 +27,56 @@ import Foundation
  var individualSourceFiles: [File]? { get }
  var sourceryAutoProtocolsFile: FileProtocol { get }
  var sourceryYMLFile: FileProtocol { get }
- var sourceryExecutableFile: FileProtocol { get }
+ var sourceryBuilder: SourceryBuilderProtocol { get set }
  var imports: Set<TemplatePrepend> { get }
 
  init(
    productName: String,
    swiftPackageDependencies: DependencyProtocol,
    swiftPackageDump: DumpProtocol,
-   sourceryExecutable: FileProtocol,
+   sourceryBuilder: SourceryBuilderProtocol,
    signPost: SignPostProtocol
  )  throws
+ mutating func executableFile() throws  -> FileProtocol
  // sourcery:end
- // Generated protocol inline for SourceryBuilder -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for Sourcery ✅
+ // types.implementing.AutoGenerateProtocol inline for SourceryBuilder ..
  // sourcery:inline:SourceryBuilder.AutoGenerateProtocol
- static var executalbeName: String { get }
+ static var executalbeFolderPath: String { get }
 
- init(
-   swiftPackageWithSourceryFolder: FolderProtocol,
-   terminal: TerminalProtocol,
-   signPost: SignPostProtocol,
-   systemExecutableProvider: SystemExecutableProviderProtocol
- )
+ func templateFolder() throws  -> FolderProtocol
+ func sourceryAutoProtocolFile() throws  -> FileProtocol
+ func dependencies() throws  -> DependencyProtocol
  func attemptToBuildSourceryIfNeeded() throws  -> FileProtocol
  // sourcery:end
- // Generated protocol inline for SourceryWorker -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for SourceryBuilder ✅
+ // types.implementing.AutoGenerateProtocol inline for SourceryWorker ..
  // sourcery:inline:SourceryWorker.AutoGenerateProtocol
- var sourcery: SourceryProtocol { get }
+ var name: String { get }
+ var sourceryYMLFile: FileProtocol { get }
 
  init(
    sourcery: SourceryProtocol,
-   terminalWorker: TerminalProtocol,
+   terminal: TerminalProtocol,
    signPost: SignPostProtocol,
    queue: HighwayDispatchProtocol
- )  throws
- func executor() throws  -> ArgumentExecutableProtocol
- func attempt(_ asyncSourceryWorkerOutput: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
+ )
+ func attempt(in folder: FolderProtocol, _ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
  // sourcery:end
- // Generated protocol inline for TemplatePrepend -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for SourceryWorker ✅
+ // types.implementing.AutoGenerateProtocol inline for TemplatePrepend ..
  // sourcery:inline:TemplatePrepend.AutoGenerateProtocol
  var names: Set<TemplatePrepend.Import> { get }
  var template: String { get }
 
  // sourcery:end
- // Generated protocol inline for TemplatePrepend.Import -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for TemplatePrepend ✅
+ // types.implementing.AutoGenerateProtocol inline for TemplatePrepend.Import ..
  // sourcery:inline:TemplatePrepend.Import.AutoGenerateProtocol
  var name: String { get }
  var testable: Bool { get }
 
  // sourcery:end
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for TemplatePrepend.Import ✅
 
  */

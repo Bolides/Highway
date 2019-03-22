@@ -13,52 +13,74 @@ import SourceryAutoProtocols
 import Terminal
 import ZFile
 
-public protocol SourceryBuilderProtocol: AutoMockable
+public protocol SourceryBuilderProtocol: class, AutoMockable
 {
     // sourcery:inline:SourceryBuilder.AutoGenerateProtocol
-    static var executalbeName: String { get }
+    static var executalbeFolderPath: String { get }
 
-    init(
-        swiftPackageWithSourceryFolder: FolderProtocol,
-        terminal: TerminalProtocol,
-        signPost: SignPostProtocol,
-        systemExecutableProvider: SystemExecutableProviderProtocol
-    )
+    func templateFolder() throws -> FolderProtocol
+    func sourceryAutoProtocolFile() throws -> FileProtocol
+    func dependencies() throws -> DependencyProtocol
     func attemptToBuildSourceryIfNeeded() throws -> FileProtocol
     // sourcery:end
 }
 
 /// Will build sourcery from carthage if it is not found in the project
-public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
+public class SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 {
-    public static let executalbeName: String = "./.build/x86_64-apple-macosx10.10/release/Sourcery"
+    public static let executalbeFolderPath: String = "./.build/x86_64-apple-macosx10.10/release"
 
     private let terminal: TerminalProtocol
     private let signPost: SignPostProtocol
-    private let systemExecutableProvider: SystemExecutableProviderProtocol
-    private let swiftPackageWithSourceryFolder: FolderProtocol
+    private let system: SystemProtocol
+    private let dependencyService: DependencyServiceProtocol
+    private var dependency: DependencyProtocol?
 
-    /// Will try to init Disk when no dis provided
-    // sourcery:includeInitInProtocol
+    // MARK: - Init
+
     public init(
-        swiftPackageWithSourceryFolder: FolderProtocol,
+        dependencyService: DependencyServiceProtocol,
         terminal: TerminalProtocol = Terminal.shared,
         signPost: SignPostProtocol = SignPost.shared,
-        systemExecutableProvider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared
+        system: SystemProtocol = System.shared
     )
     {
         self.terminal = terminal
         self.signPost = signPost
-        self.systemExecutableProvider = systemExecutableProvider
-        self.swiftPackageWithSourceryFolder = swiftPackageWithSourceryFolder
+        self.system = system
+        self.dependencyService = dependencyService
+    }
+
+    // MARK: - Public functions
+
+    public func templateFolder() throws -> FolderProtocol
+    {
+        return try dependencies().templateFolder()
+    }
+
+    public func sourceryAutoProtocolFile() throws -> FileProtocol
+    {
+        return try dependencies().sourceryAutoProtocolFile()
+    }
+
+    public func dependencies() throws -> DependencyProtocol
+    {
+        guard let dependency = dependency else
+        {
+            self.dependency = try dependencyService.generateDependency()
+            return self.dependency!
+        }
+
+        return dependency
     }
 
     public func attemptToBuildSourceryIfNeeded() throws -> FileProtocol
     {
-        let dependency = try DependencyService.generateDepedency(in: swiftPackageWithSourceryFolder, terminal: terminal, signPost: signPost).dep
+        let dependency = try dependencies()
+
         do
         {
-            return try findSourceryExecutableFile()
+            return try dependency.srcRoot().subfolder(named: SourceryBuilder.executalbeFolderPath).file(named: "Sourcery")
         }
         catch ZFile.FileSystem.Item.PathError.invalid
         {
@@ -66,38 +88,27 @@ public struct SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 
             do
             {
-                let originalDirectory = FileSystem.shared.currentFolder
                 let srcRoot = try dependency.srcRoot()
 
-                FileManager.default.changeCurrentDirectoryPath(srcRoot.path)
+                signPost.message("🚀 \(pretty_function()) (😅 this can take some time ☕️) ...")
+                let task = try system.process("swift")
+                task.arguments = ["build", "--product", "Sourcery", "-c", "release", "--static-swift-stdlib"]
+                task.currentDirectoryPath = srcRoot.path
 
-                signPost.message("🚀 Start building sourcery (😅 this can take some time ☕️) ...")
-                let task = try Task(commandName: "swift")
-                task.arguments = Arguments(["build", "--product", "Sourcery", "-c", "release", "--static-swift-stdlib"])
-
-                let output = try terminal.runProcess(task.toProcess)
+                let output = try terminal.runProcess(task)
 
                 signPost.message("\(output.joined(separator: "\n"))")
 
-                signPost.message("🚀 finished sourcery swift build ✅")
+                signPost.message("🚀 \(pretty_function()) ✅")
 
                 signPost.verbose("cd \(srcRoot)")
 
-                FileManager.default.changeCurrentDirectoryPath(originalDirectory.path)
-
-                return try findSourceryExecutableFile()
+                return try dependency.srcRoot().subfolder(named: SourceryBuilder.executalbeFolderPath).file(named: "Sourcery")
             }
             catch
             {
-                throw "\(self) \(#function) \n\(error)\n"
+                throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
             }
         }
-    }
-
-    // MARK: Private
-
-    private func findSourceryExecutableFile() throws -> FileProtocol
-    {
-        return try swiftPackageWithSourceryFolder.file(named: SourceryBuilder.executalbeName)
     }
 }

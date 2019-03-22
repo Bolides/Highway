@@ -13,6 +13,7 @@ import Errors
 import Nimble
 import Quick
 import SourceryWorker
+import SourceryWorkerMock
 import Stub
 import Terminal
 import TerminalMock
@@ -29,16 +30,30 @@ class SourcerySpec: QuickSpec
 
             var swiftPackageDependencies: DependencyProtocol?
             var swiftPackageDump: DumpProtocol?
+            var sourceryBuilder: SourceryBuilderProtocolMock!
+
+            var templateFolder: FolderProtocolMock!
+            var autoProtocolsFile: FileProtocolMock!
 
             beforeSuite
             {
+                sourceryBuilder = SourceryBuilderProtocolMock()
+
                 // get real dependencies
                 expect
                 {
                     let srcroot = try File(path: #file).parentFolder().parentFolder().parentFolder()
                     FileManager.default.changeCurrentDirectoryPath(srcroot.path)
-                    swiftPackageDependencies = try DependencyService().dependency
-                    swiftPackageDump = try DumpService(swiftPackageDependencies: swiftPackageDependencies!).dump
+                    swiftPackageDependencies = try DependencyService(in: srcroot).generateDependency()
+                    swiftPackageDump = try DumpService(swiftPackageFolder: srcroot).generateDump()
+
+                    sourceryBuilder.dependenciesReturnValue = swiftPackageDependencies
+
+                    templateFolder = try FolderProtocolMock()
+                    autoProtocolsFile = try FileProtocolMock()
+
+                    sourceryBuilder.templateFolderReturnValue = templateFolder
+                    sourceryBuilder.sourceryAutoProtocolFileReturnValue = autoProtocolsFile
 
                     return true
                 }.toNot(throwError())
@@ -58,7 +73,7 @@ class SourcerySpec: QuickSpec
                                 productName: productName,
                                 swiftPackageDependencies: swiftPackageDependencies,
                                 swiftPackageDump: swiftPackageDump,
-                                sourceryExecutable: FileProtocolMock()
+                                sourceryBuilder: sourceryBuilder
                             )
                             return sut
                         }.toNot(throwError())
@@ -100,7 +115,7 @@ class SourcerySpec: QuickSpec
 
                         it("has imports for automockable")
                         {
-                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "Arguments,Foundation,HighwayDispatch,SignPost,SourceryAutoProtocols,SourceryWorker,Terminal,TerminalMock,ZFile,ZFileMock"
+                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "Arguments,Foundation,HighwayDispatch,SignPost,SourceryWorker,Terminal,TerminalMock,ZFile,ZFileMock"
                         }
                     }
 
@@ -110,7 +125,7 @@ class SourcerySpec: QuickSpec
 
                         it("has imports for automockable")
                         {
-                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "Arguments,Foundation,SignPost,SourceryAutoProtocols,Terminal,ZFile,ZFileMock"
+                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "Arguments,Foundation,SignPost,Terminal,ZFile,ZFileMock"
                         }
                     }
 
@@ -130,7 +145,7 @@ class SourcerySpec: QuickSpec
 
                         it("has imports for automockable")
                         {
-                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "Arguments,Foundation,SignPost,SourceryAutoProtocols,XCBuild,ZFile,ZFileMock"
+                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "Arguments,Foundation,SignPost,XCBuild,ZFile,ZFileMock"
                         }
                     }
 
@@ -170,7 +185,7 @@ class SourcerySpec: QuickSpec
 
                         it("has imports for automockable")
                         {
-                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "Foundation,HighwayDispatch,SignPost,SourceryAutoProtocols,SwiftFormatWorker,ZFile,ZFileMock"
+                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "Foundation,HighwayDispatch,SignPost,SwiftFormatWorker,ZFile,ZFileMock"
                         }
                     }
 
@@ -210,7 +225,7 @@ class SourcerySpec: QuickSpec
 
                         it("has imports for automockable")
                         {
-                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "Errors,Foundation,HighwayDispatch,SignPost,SourceryAutoProtocols,ZFileMock"
+                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "Errors,Foundation,HighwayDispatch,SignPost,ZFileMock"
                         }
                     }
 

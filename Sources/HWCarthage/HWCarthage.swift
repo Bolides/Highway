@@ -23,7 +23,7 @@ public protocol HWCarthageProtocol: AutoMockable
     // sourcery:inline:HWCarthage.AutoGenerateProtocol
     static var queue: HighwayDispatchProtocol { get }
 
-    func attemptToBuildCarthageIfNeeded(_ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
+    func attemptRunCarthageIfCommandLineOptionAdded(in folder: FolderProtocol, _ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
     // sourcery:end
 }
 
@@ -36,17 +36,24 @@ public struct HWCarthage: HWCarthageProtocol, AutoGenerateProtocol
 
     private let signPost: SignPostProtocol
     private let terminal: TerminalProtocol
-    private let highway: HighwayProtocol
     private let dispatchGroup: DispatchGroup
     private let queue: HighwayDispatchProtocol
     private let carthageBuilder: CarthageBuilderProtocol
+    private let options: Set<CommandLineOption>
+
+    // MARK: - Commandline Options
+
+    public enum CommandLineOption: String, CaseIterable, Hashable, Equatable
+    {
+        case carhageUpdateNoBuild
+    }
 
     // MARK: - Init
 
     public init(
-        highway: HighwayProtocol,
         dispatchGroup: DispatchGroup,
         carthageBuilder: CarthageBuilderProtocol,
+        options: Set<CommandLineOption> = Set(CommandLine.arguments.compactMap { CommandLineOption(rawValue: $0) }),
         queue: HighwayDispatchProtocol = HWCarthage.queue,
         signPost: SignPostProtocol = SignPost.shared,
         terminal: TerminalProtocol = Terminal.shared
@@ -54,33 +61,34 @@ public struct HWCarthage: HWCarthageProtocol, AutoGenerateProtocol
     {
         self.signPost = signPost
         self.terminal = terminal
-        self.highway = highway
         self.dispatchGroup = dispatchGroup
         self.queue = queue
         self.carthageBuilder = carthageBuilder
+        self.options = options
     }
 
     // MARK: - Public functions
 
-    public func attemptToBuildCarthageIfNeeded(_ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
+    public func attemptRunCarthageIfCommandLineOptionAdded(in folder: FolderProtocol, _ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
     {
+        guard options.contains(.carhageUpdateNoBuild) else
+        {
+            signPost.message("⚠️ ignore \(pretty_function()) because no \(CommandLineOption.carhageUpdateNoBuild) added to commandline")
+            return
+        }
+
         dispatchGroup.enter()
         queue.async
         {
             do
             {
-                let carthageExecutable = try self.carthageBuilder.attempt()
+                let carthageExecutable = try self.carthageBuilder.attemptBuildCarthageIfNeeded()
                 let carthage = Task(executable: carthageExecutable).toProcess
-                let srcRoot = try self.highway.package.package.dependencies.srcRoot()
-
-                let currentFolder = FileSystem.shared.currentFolder
-                FileManager.default.changeCurrentDirectoryPath(srcRoot.path)
-
+                carthage.currentDirectoryPath = folder.path
                 carthage.arguments = ["update", "--no-build"]
 
                 let output = try self.terminal.runProcess(carthage)
 
-                FileManager.default.changeCurrentDirectoryPath(currentFolder.path)
                 async { output }
             }
             catch

@@ -23,6 +23,7 @@ public protocol DependencyProtocol: AutoMockable
     func gitHooks() throws -> FolderProtocol
     func srcRoot() throws -> FolderProtocol
     func templateFolder() throws -> FolderProtocol
+    func templateFolder(expectedName: String) throws -> FolderProtocol
     func sourceryFolder() throws -> FolderProtocol
     func sourceryAutoProtocolFile() throws -> FileProtocol
     // sourcery:end
@@ -52,6 +53,24 @@ public struct Dependency: Decodable, DependencyProtocol, CustomStringConvertible
         self.dependencies = dependencies
     }
 
+    public var description: String
+    {
+        return """
+        \(Dependency.self)
+        
+        * name: \(name)
+        * path: \(path)
+        * url: \(url)
+        
+        # Dependencies
+        
+        \(dependencies.map { "  * \($0.name)" }.joined(separator: "\n"))
+        
+        """
+    }
+
+    // MARK: - Public Functions
+
     public func gitHooks() throws -> FolderProtocol
     {
         return try srcRoot().subfolder(named: ".git/hooks")
@@ -62,17 +81,17 @@ public struct Dependency: Decodable, DependencyProtocol, CustomStringConvertible
         return try Folder(path: path)
     }
 
+    /// Will look for package named "template-sourcery"
     public func templateFolder() throws -> FolderProtocol
     {
-        let expectedName = "template-sourcery"
+        return try templateFolder(expectedName: "template-sourcery")
+    }
 
+    public func templateFolder(expectedName: String) throws -> FolderProtocol
+    {
         guard let templatePackage = (dependencies.first { $0.name == expectedName }) else
         {
-            guard name == expectedName else
-            {
-                throw HighwayError.missingTemplateFolder("\(Dependency.self) \(#function) \(#line):")
-            }
-            return try srcRoot().subfolder(named: "Sources/stencil")
+            throw HighwayError.missingTemplateFolder("\(Dependency.self) \(#function) \(#line):")
         }
         return try Folder(path: templatePackage.path)
     }
@@ -89,21 +108,5 @@ public struct Dependency: Decodable, DependencyProtocol, CustomStringConvertible
     public func sourceryAutoProtocolFile() throws -> FileProtocol
     {
         return try templateFolder().subfolder(named: "Sources/SourceryAutoProtocols").file(named: "SourceryAutoProtocols.swift")
-    }
-
-    public var description: String
-    {
-        return """
-        \(Dependency.self)
-        
-        * name: \(name)
-        * path: \(path)
-        * url: \(url)
-        
-        # Dependencies
-        
-        \(dependencies.map { "  * \($0.name)" }.joined(separator: "\n"))
-        
-        """
     }
 }

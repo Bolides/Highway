@@ -9,11 +9,13 @@ public protocol GitToolProtocol: AutoMockable
 {
     // sourcery:inline:GitTool.AutoGenerateProtocol
 
-    func addAll() throws
-    func commit(message: String) throws
-    func pushToMaster() throws
-    func pushTagsToMaster() throws
-    func pull() throws
+    func isClean() throws -> Bool
+    func status() throws -> [String]
+    func addAll() throws -> [String]
+    func commit(message: String) throws -> [String]
+    func pushToMaster() throws -> [String]
+    func pushTagsToMaster() throws -> [String]
+    func pull() throws -> [String]
     func currentTag() throws -> [String]
     func clone(with options: CloneOptions) throws -> [String]
     // sourcery:end

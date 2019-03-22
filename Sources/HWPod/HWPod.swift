@@ -19,7 +19,7 @@ public protocol HWPodProtocol: AutoMockable
     // sourcery:inline:HWPod.AutoGenerateProtocol
     static var expectedCocoapodsVersion: String { get }
 
-    func attempt() throws
+    func attemptPodInstallIfOptionAddedToCommandline() throws
     // sourcery:end
 }
 
@@ -31,15 +31,23 @@ public struct HWPod: HWPodProtocol, AutoGenerateProtocol
     private let signPost: SignPostProtocol
     private let podFolder: FolderProtocol
     private let fileSystem: FileSystemProtocol
-    private let system: SystemExecutableProviderProtocol
+    private let system: SystemProtocol
+    private let commandLineOptions: Set<CommandLineOption>
 
+    public enum CommandLineOption: String, CaseIterable, Hashable, Equatable
+    {
+        case podInstall
+    }
+
+    // By default if you do not add podInstall to the commandline as an argument this step will be ignored
     public init(
         podFolder: FolderProtocol,
         strictPodVersion: String = HWPod.expectedCocoapodsVersion,
+        commandLineOptions: Set<CommandLineOption> = Set(CommandLine.arguments.compactMap { CommandLineOption(rawValue: $0) }),
         terminal: TerminalProtocol = Terminal.shared,
         signPost: SignPostProtocol = SignPost.shared,
         fileSystem: FileSystemProtocol = FileSystem.shared,
-        system: SystemExecutableProviderProtocol = SystemExecutableProvider.shared
+        system: SystemProtocol = System.shared
     )
     {
         self.terminal = terminal
@@ -47,22 +55,39 @@ public struct HWPod: HWPodProtocol, AutoGenerateProtocol
         self.podFolder = podFolder
         self.fileSystem = fileSystem
         self.system = system
+        self.commandLineOptions = commandLineOptions
     }
 
-    public func attempt() throws
+    /// Will throw HWPod.Error that you can choose to ignore
+    public func attemptPodInstallIfOptionAddedToCommandline() throws
     {
-        let originalFolder = FileSystem.shared.currentFolder
+        guard (commandLineOptions.first { $0 == CommandLineOption.podInstall }) != nil else
+        {
+            signPost.message("⚠️ pod install ignored as you did not add option \(CommandLineOption.podInstall) to command line")
+            return
+        }
+
         let iosFolder = podFolder
-        FileManager.default.changeCurrentDirectoryPath(iosFolder.path)
 
         // MARK: - Check cocoapods version
 
         signPost.message("\(pretty_function()) in folder: \(iosFolder.name) ...")
         signPost.message("check cocoapods version")
 
-        let versionTask = try Task(commandName: "pod").toProcess
+        var versionTask: ProcessProtocol!
+
+        do
+        {
+            versionTask = try system.process("pod")
+        }
+        catch
+        {
+            throw Error.systemHasNoPodInstalled
+        }
+
         versionTask.arguments = ["--version"]
         let versionOutput = try terminal.runProcess(versionTask)
+        signPost.verbose("\(versionOutput.joined(separator: "\n"))")
 
         guard let version = versionOutput.first, version == HWPod.expectedCocoapodsVersion else
         {
@@ -73,11 +98,11 @@ public struct HWPod: HWPodProtocol, AutoGenerateProtocol
         {
             signPost.message("run `pod install`...")
 
-            let task = try Task(commandName: "pod", fileSystem: fileSystem, provider: system, signPost: signPost).toProcess
+            let task = try system.process("pod")
             task.arguments = ["_\(HWPod.expectedCocoapodsVersion)_", "install"]
+            task.currentDirectoryPath = iosFolder.path
 
             let output = try terminal.runProcess(task)
-            FileManager.default.changeCurrentDirectoryPath(originalFolder.path)
 
             signPost.verbose("\(output)")
             signPost.message("\(pretty_function()) ✅")
@@ -105,5 +130,6 @@ public struct HWPod: HWPodProtocol, AutoGenerateProtocol
         }
 
         case invalidCocoapodsVersion
+        case systemHasNoPodInstalled
     }
 }

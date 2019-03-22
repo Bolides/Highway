@@ -18,6 +18,7 @@ import ZFileMock
 private let expectedPrePushScript = GitHooksWorker.prepushBashScript
     .replacingOccurrences(of: "<#srcroot#>", with: "mockedRoot")
     .replacingOccurrences(of: "<#executable name#>", with: "GitHooksWorkerSpec")
+    .replacingOccurrences(of: "<#options#>", with: GitHooksWorker.defaultOptions)
 
 class GitHooksWorkerSpec: QuickSpec
 {

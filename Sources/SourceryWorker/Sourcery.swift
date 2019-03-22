@@ -15,8 +15,7 @@ import Terminal
 import ZFile
 
 // sourcery:AutoMockable
-// sourcery:mockInherit=ExecutableProtocolMock
-public protocol SourceryProtocol: ExecutableProtocol
+public protocol SourceryProtocol
 {
     // sourcery:inline:Sourcery.AutoGenerateProtocol
     var uuid: String { get }
@@ -27,16 +26,17 @@ public protocol SourceryProtocol: ExecutableProtocol
     var individualSourceFiles: [File]? { get }
     var sourceryAutoProtocolsFile: FileProtocol { get }
     var sourceryYMLFile: FileProtocol { get }
-    var sourceryExecutableFile: FileProtocol { get }
+    var sourceryBuilder: SourceryBuilderProtocol { get set }
     var imports: Set<TemplatePrepend> { get }
 
     init(
         productName: String,
         swiftPackageDependencies: DependencyProtocol,
         swiftPackageDump: DumpProtocol,
-        sourceryExecutable: FileProtocol,
+        sourceryBuilder: SourceryBuilderProtocol,
         signPost: SignPostProtocol
     ) throws
+    mutating func executableFile() throws -> FileProtocol
 
     // sourcery:end
 }
@@ -46,7 +46,6 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
     // sourcery:skipProtocol
     static let commonImportAutoMockable: Set<TemplatePrepend.Import> = Set(
         [
-            TemplatePrepend.Import(name: "SourceryAutoProtocols"),
             TemplatePrepend.Import(name: "Foundation"),
         ]
     )
@@ -64,7 +63,7 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
     public let individualSourceFiles: [File]?
     public let sourceryAutoProtocolsFile: FileProtocol
     public let sourceryYMLFile: FileProtocol
-    public let sourceryExecutableFile: FileProtocol
+    public var sourceryBuilder: SourceryBuilderProtocol
 
     // MARK: - Imports to be prepended to templates
 
@@ -81,17 +80,15 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
         productName: String,
         swiftPackageDependencies: DependencyProtocol,
         swiftPackageDump: DumpProtocol,
-        sourceryExecutable: FileProtocol,
+        sourceryBuilder: SourceryBuilderProtocol,
         signPost: SignPostProtocol = SignPost.shared
     ) throws
     {
-        signPost.message("\(Sourcery.self) for \(productName)")
-
         do
         {
             let sourcesFolder = try swiftPackageDependencies.srcRoot().subfolder(named: "Sources")
             let productFolder = try sourcesFolder.subfolder(named: productName)
-            let templateFolder = try swiftPackageDependencies.templateFolder()
+            let templateFolder = try sourceryBuilder.templateFolder()
             let outputFolder = try sourcesFolder
                 .createSubfolderIfNeeded(withName: "Generated")
                 .createSubfolderIfNeeded(withName: productName)
@@ -111,10 +108,10 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
                 sourcesFolders: [productFolder],
                 templateFolder: templateFolder,
                 outputFolder: outputFolder,
-                sourceryAutoProtocolsFile: swiftPackageDependencies.name == "template-sourcery" ? try swiftPackageDependencies.srcRoot().subfolder(named: "Sources/SourceryAutoProtocols").file(named: "SourceryAutoProtocols.swift") : try swiftPackageDependencies.sourceryAutoProtocolFile(),
+                sourceryAutoProtocolsFile: try sourceryBuilder.sourceryAutoProtocolFile(),
                 sourceryYMLFile: try sourcesFolder.createFileIfNeeded(named: ".sourcery-\(productName).yml"),
                 imports: Set([prepend]),
-                sourceryExecutableFile: sourceryExecutable
+                sourceryBuilder: sourceryBuilder
             )
         }
         catch
@@ -132,7 +129,7 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
         sourceryYMLFile: FileProtocol,
         imports: Set<TemplatePrepend>,
         signPost: SignPostProtocol = SignPost.shared,
-        sourceryExecutableFile: FileProtocol
+        sourceryBuilder: SourceryBuilderProtocol
     ) throws
     {
         self.templateFolder = templateFolder
@@ -142,7 +139,8 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
         self.sourceryAutoProtocolsFile = sourceryAutoProtocolsFile
         self.sourceryYMLFile = sourceryYMLFile
         self.imports = imports
-        self.sourceryExecutableFile = sourceryExecutableFile
+        self.sourceryBuilder = sourceryBuilder
+
         // generate .sourcery file
 
         try sourceryYMLFile.write(
@@ -165,10 +163,9 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
         name = sourcesFolders.map { $0.name }.joined(separator: "\n")
     }
 
-    // sourcery:skipProtocol
-    public func executableFile() throws -> FileProtocol
+    public mutating func executableFile() throws -> FileProtocol
     {
-        return sourceryExecutableFile
+        return try sourceryBuilder.attemptToBuildSourceryIfNeeded()
     }
 
     // MARK: - Error

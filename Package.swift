@@ -127,12 +127,12 @@ public let package = Package(
 
         // MARK: - Filesystem
 
-        .package(url: "https://www.github.com/Bolides/ZFile", "2.2.0" ..< "3.1.0"),
+        .package(url: "https://www.github.com/Bolides/ZFile", "2.4.1" ..< "3.1.0"),
 
         // MARK: - Sourcery
 
         .package(url: "https://www.github.com/doozMen/Sourcery", "0.17.0" ..< "1.0.0"),
-        .package(url: "https://www.github.com/dooZdev/template-sourcery", "1.3.7" ..< "2.0.0"),
+        .package(url: "https://www.github.com/dooZdev/template-sourcery", "1.4.3" ..< "2.0.0"),
 
         // MARK: - Errors
 
@@ -150,15 +150,28 @@ public let package = Package(
         // MARK: - Logging
 
         .package(url: "https://www.github.com/doozMen/SignPost", "1.0.0" ..< "2.0.0"),
-        
-        // MARK: - Carthage
-        
-        .package(url: "https://www.github.com/Carthage/Carthage", .revision("34db22ce1ea461462e598a4104b40a7946c901bf")),
 
     ],
     targets: [
         // MARK: - Targets
 
+        .target(
+            name: "HWSetup",
+            dependencies: [
+                "Arguments",
+                "Errors",
+                "SignPost",
+                "SourceryAutoProtocols",
+                "SourceryWorker",
+                "SwiftFormatWorker",
+                "Terminal",
+                "ZFile",
+                "XCBuild",
+                "GitHooks",
+                "Highway",
+                "Git",
+            ]
+        ),
         .target(
             name: "HWCarthage",
             dependencies: ["SourceryAutoProtocols", "Highway", "ZFile", "SignPost", "Terminal"]
@@ -225,7 +238,7 @@ public let package = Package(
 
         .target(
             name: "SourceryWorker",
-            dependencies: ["Terminal", "HighwayDispatch", "Errors"]
+            dependencies: ["Terminal", "HighwayDispatch", "Errors", "ZFile", "HighwayDispatch", "SourceryAutoProtocols"]
         ),
         .target(
             name: "SwiftFormatWorker",
@@ -244,17 +257,17 @@ public let package = Package(
 
         .target(
             name: "HWCarthageMock",
-            dependencies: ["HighwayDispatch", "HWCarthage", "SignPost", "ZFileMock", "ZFile", "SourceryAutoProtocols", "Errors"],
+            dependencies: ["HighwayDispatch", "HWCarthage", "ZFileMock", "ZFile", "Errors"],
             path: "Sources/Generated/HWCarthage"
         ),
         .target(
             name: "HWPodMock",
-            dependencies: ["HighwayDispatch", "HWPod", "SignPost", "ZFileMock", "SourceryAutoProtocols", "Errors"],
+            dependencies: ["HighwayDispatch", "HWPod", "ZFileMock", "Errors"],
             path: "Sources/Generated/HWPod"
         ),
         .target(
             name: "HighwayDispatchMock",
-            dependencies: ["HighwayDispatch", "SignPost", "ZFileMock", "SourceryAutoProtocols", "Errors"],
+            dependencies: ["HighwayDispatch", "SignPost", "ZFileMock", "Errors"],
             path: "Sources/Generated/HighwayDispatch"
         ),
         .target(
@@ -284,7 +297,7 @@ public let package = Package(
         ),
         .target(
             name: "TerminalMock",
-            dependencies: ["Terminal", "ZFile", "ZFileMock", "Arguments", "SourceryAutoProtocols", "SignPost"],
+            dependencies: ["Terminal", "ZFile", "ZFileMock", "Arguments", "SignPost"],
             path: "Sources/Generated/Terminal"
         ),
         .target(
@@ -309,6 +322,8 @@ public let package = Package(
                 "GitHooks",
                 "SwiftFormatWorker",
                 "SignPost",
+                "ZFile",
+                "Terminal",
             ],
             path: "Sources/Generated/Highway"
         ),
@@ -377,7 +392,6 @@ public let package = Package(
                 "TerminalMock",
                 "Stub",
                 "Errors",
-                "HWSetup",
             ]
         ),
         .testTarget(
@@ -389,22 +403,6 @@ public let package = Package(
                 "Quick",
                 "Nimble",
                 "HighwayDispatchMock",
-            ]
-        ),
-        .target(
-            name: "HWSetup",
-            dependencies: [
-                "Arguments",
-                "Errors",
-                "SignPost",
-                "SourceryAutoProtocols",
-                "SourceryWorker",
-                "SwiftFormatWorker",
-                "Terminal",
-                "ZFile",
-                "XCBuild",
-                "GitHooks",
-                "Highway",
             ]
         ),
         .testTarget(

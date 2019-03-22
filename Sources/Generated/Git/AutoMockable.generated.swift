@@ -9,6 +9,100 @@ open class GitToolProtocolMock: GitToolProtocol
 {
     public init() {}
 
+    // MARK: - <isClean> - parameters
+
+    public var isCleanThrowableError: Error?
+    public var isCleanCallsCount = 0
+    public var isCleanCalled: Bool
+    {
+        return isCleanCallsCount > 0
+    }
+
+    public var isCleanReturnValue: Bool?
+
+    // MARK: - <isClean> - closure mocks
+
+    public var isCleanClosure: (() throws -> Bool)?
+
+    // MARK: - <isClean> - method mocked
+
+    open func isClean() throws -> Bool
+    {
+        // <isClean> - Throwable method implementation
+
+        if let error = isCleanThrowableError
+        {
+            throw error
+        }
+
+        isCleanCallsCount += 1
+
+        // <isClean> - Return Value mock implementation
+
+        guard let closureReturn = isCleanClosure else
+        {
+            guard let returnValue = isCleanReturnValue else
+            {
+                let message = "No returnValue implemented for isCleanClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement Bool
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
+    }
+
+    // MARK: - <status> - parameters
+
+    public var statusThrowableError: Error?
+    public var statusCallsCount = 0
+    public var statusCalled: Bool
+    {
+        return statusCallsCount > 0
+    }
+
+    public var statusReturnValue: [String]?
+
+    // MARK: - <status> - closure mocks
+
+    public var statusClosure: (() throws -> [String])?
+
+    // MARK: - <status> - method mocked
+
+    open func status() throws -> [String]
+    {
+        // <status> - Throwable method implementation
+
+        if let error = statusThrowableError
+        {
+            throw error
+        }
+
+        statusCallsCount += 1
+
+        // <status> - Return Value mock implementation
+
+        guard let closureReturn = statusClosure else
+        {
+            guard let returnValue = statusReturnValue else
+            {
+                let message = "No returnValue implemented for statusClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement [String]
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
+    }
+
     // MARK: - <addAll> - parameters
 
     public var addAllThrowableError: Error?
@@ -18,13 +112,15 @@ open class GitToolProtocolMock: GitToolProtocol
         return addAllCallsCount > 0
     }
 
+    public var addAllReturnValue: [String]?
+
     // MARK: - <addAll> - closure mocks
 
-    public var addAllClosure: (() throws -> Void)?
+    public var addAllClosure: (() throws -> [String])?
 
     // MARK: - <addAll> - method mocked
 
-    open func addAll() throws
+    open func addAll() throws -> [String]
     {
         // <addAll> - Throwable method implementation
 
@@ -35,9 +131,23 @@ open class GitToolProtocolMock: GitToolProtocol
 
         addAllCallsCount += 1
 
-        // <addAll> - Void return mock implementation
+        // <addAll> - Return Value mock implementation
 
-        try addAllClosure?()
+        guard let closureReturn = addAllClosure else
+        {
+            guard let returnValue = addAllReturnValue else
+            {
+                let message = "No returnValue implemented for addAllClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement [String]
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
     }
 
     // MARK: - <commit> - parameters
@@ -50,14 +160,15 @@ open class GitToolProtocolMock: GitToolProtocol
     }
 
     public var commitMessageReceivedMessage: String?
+    public var commitMessageReturnValue: [String]?
 
     // MARK: - <commit> - closure mocks
 
-    public var commitMessageClosure: ((String) throws -> Void)?
+    public var commitMessageClosure: ((String) throws -> [String])?
 
     // MARK: - <commit> - method mocked
 
-    open func commit(message: String) throws
+    open func commit(message: String) throws -> [String]
     {
         // <commit> - Throwable method implementation
 
@@ -69,9 +180,23 @@ open class GitToolProtocolMock: GitToolProtocol
         commitMessageCallsCount += 1
         commitMessageReceivedMessage = message
 
-        // <commit> - Void return mock implementation
+        // <commit> - Return Value mock implementation
 
-        try commitMessageClosure?(message)
+        guard let closureReturn = commitMessageClosure else
+        {
+            guard let returnValue = commitMessageReturnValue else
+            {
+                let message = "No returnValue implemented for commitMessageClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement [String]
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(message)
     }
 
     // MARK: - <pushToMaster> - parameters
@@ -83,13 +208,15 @@ open class GitToolProtocolMock: GitToolProtocol
         return pushToMasterCallsCount > 0
     }
 
+    public var pushToMasterReturnValue: [String]?
+
     // MARK: - <pushToMaster> - closure mocks
 
-    public var pushToMasterClosure: (() throws -> Void)?
+    public var pushToMasterClosure: (() throws -> [String])?
 
     // MARK: - <pushToMaster> - method mocked
 
-    open func pushToMaster() throws
+    open func pushToMaster() throws -> [String]
     {
         // <pushToMaster> - Throwable method implementation
 
@@ -100,9 +227,23 @@ open class GitToolProtocolMock: GitToolProtocol
 
         pushToMasterCallsCount += 1
 
-        // <pushToMaster> - Void return mock implementation
+        // <pushToMaster> - Return Value mock implementation
 
-        try pushToMasterClosure?()
+        guard let closureReturn = pushToMasterClosure else
+        {
+            guard let returnValue = pushToMasterReturnValue else
+            {
+                let message = "No returnValue implemented for pushToMasterClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement [String]
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
     }
 
     // MARK: - <pushTagsToMaster> - parameters
@@ -114,13 +255,15 @@ open class GitToolProtocolMock: GitToolProtocol
         return pushTagsToMasterCallsCount > 0
     }
 
+    public var pushTagsToMasterReturnValue: [String]?
+
     // MARK: - <pushTagsToMaster> - closure mocks
 
-    public var pushTagsToMasterClosure: (() throws -> Void)?
+    public var pushTagsToMasterClosure: (() throws -> [String])?
 
     // MARK: - <pushTagsToMaster> - method mocked
 
-    open func pushTagsToMaster() throws
+    open func pushTagsToMaster() throws -> [String]
     {
         // <pushTagsToMaster> - Throwable method implementation
 
@@ -131,9 +274,23 @@ open class GitToolProtocolMock: GitToolProtocol
 
         pushTagsToMasterCallsCount += 1
 
-        // <pushTagsToMaster> - Void return mock implementation
+        // <pushTagsToMaster> - Return Value mock implementation
 
-        try pushTagsToMasterClosure?()
+        guard let closureReturn = pushTagsToMasterClosure else
+        {
+            guard let returnValue = pushTagsToMasterReturnValue else
+            {
+                let message = "No returnValue implemented for pushTagsToMasterClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement [String]
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
     }
 
     // MARK: - <pull> - parameters
@@ -145,13 +302,15 @@ open class GitToolProtocolMock: GitToolProtocol
         return pullCallsCount > 0
     }
 
+    public var pullReturnValue: [String]?
+
     // MARK: - <pull> - closure mocks
 
-    public var pullClosure: (() throws -> Void)?
+    public var pullClosure: (() throws -> [String])?
 
     // MARK: - <pull> - method mocked
 
-    open func pull() throws
+    open func pull() throws -> [String]
     {
         // <pull> - Throwable method implementation
 
@@ -162,9 +321,23 @@ open class GitToolProtocolMock: GitToolProtocol
 
         pullCallsCount += 1
 
-        // <pull> - Void return mock implementation
+        // <pull> - Return Value mock implementation
 
-        try pullClosure?()
+        guard let closureReturn = pullClosure else
+        {
+            guard let returnValue = pullReturnValue else
+            {
+                let message = "No returnValue implemented for pullClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement [String]
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
     }
 
     // MARK: - <currentTag> - parameters
@@ -265,3 +438,29 @@ open class GitToolProtocolMock: GitToolProtocol
 }
 
 // MARK: - OBJECTIVE-C
+
+// MARK: - Sourcery Errors
+
+public enum SourceryMockError: Swift.Error, Hashable
+{
+    case implementErrorCaseFor(String)
+    case subclassMockBeforeUsing(String)
+
+    public var debugDescription: String
+    {
+        switch self
+        {
+        case let .implementErrorCaseFor(message):
+            return """
+            🧙‍♂️ SourceryMockError.implementErrorCaseFor:
+            message: \(message)
+            """
+        case let .subclassMockBeforeUsing(message):
+            return """
+            \n
+            🧙‍♂️ SourceryMockError.subclassMockBeforeUsing:
+            message: \(message)
+            """
+        }
+    }
+}

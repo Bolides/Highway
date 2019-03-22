@@ -21,7 +21,7 @@ import ZFile
 /// 3. Revert Replace occurances
 /// 4. Run sourcery to generate the mocks
 /// 6. Add imports to output
-public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
+public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
 {
     public typealias SyncOutput = () throws -> [String]
 
@@ -33,51 +33,77 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
     public static let protocolGeneratalbeEnd = "// sourcery:end"
     // sourcery:end
 
-    public let sourcery: SourceryProtocol
+    public let name: String
+    public let sourceryYMLFile: FileProtocol
 
     // MARK: - Private
 
+    private var sourcery: SourceryProtocol
     private let queue: HighwayDispatchProtocol
 
     private let signPost: SignPostProtocol
-    private let terminalWorker: TerminalProtocol
+    private let terminal: TerminalProtocol
 
     // sourcery:includeInitInProtocol
-    public init(
+    public required init(
         sourcery: SourceryProtocol,
-        terminalWorker: TerminalProtocol = Terminal.shared,
+        terminal: TerminalProtocol = Terminal.shared,
         signPost: SignPostProtocol = SignPost.shared,
         queue: HighwayDispatchProtocol = SourceryWorker.queue
-    ) throws
+    )
     {
         self.sourcery = sourcery
-        self.terminalWorker = terminalWorker
+        self.terminal = terminal
         self.signPost = signPost
         self.queue = queue
+        sourceryYMLFile = self.sourcery.sourceryYMLFile
+        name = self.sourcery.name
     }
 
-    public func executor() throws -> ArgumentExecutableProtocol
+    fileprivate func createSourceryProcess(in folder: FolderProtocol, executableFile: FileProtocol) throws -> ProcessProtocol
     {
-        return SourceryExecutor(sourcery)
+        let sourceryProcess = Process()
+        try sourceryProcess.executable(set: executableFile)
+        sourceryProcess.currentDirectoryPath = folder.path
+        sourceryProcess.arguments = ["--config", sourcery.sourceryYMLFile.path]
+        return sourceryProcess
     }
 
-    public func attempt(_ asyncSourceryWorkerOutput: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
+    public func attempt(in folder: FolderProtocol, _ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
     {
+        var executableFile: FileProtocol!
+
+        do
+        {
+            executableFile = try sourcery.executableFile()
+        }
+        catch
+        {
+            async { throw HighwayError.highwayError(atLocation: pretty_function(), error: error) }
+            return
+        }
+
+        let context = (
+            sourcery: sourcery,
+            terminal: terminal,
+            replace: replace,
+            signPost: signPost,
+            createSourceryProcess: createSourceryProcess
+        )
+
         queue.async
         {
             do
             {
-                self.signPost.verbose("Executing sourcery from executable \(try self.executor().executableFile())")
-
-                self.signPost.verbose("🧙‍♂️ All files in Sources folders will be scanned for occurrences of `/// sourcery:` and replaced with `/// sourcery:` to be able generate protocols.")
-
+                let sourceryProcessGenerateProtocols = try context.createSourceryProcess(folder, executableFile)
+                let sourceryProcessGenerateMocks = try context.createSourceryProcess(folder, executableFile)
                 // 1. Store all files in a sequence
 
                 var fileSequences = [AnySequence<File>]()
 
-                for folder in self.sourcery.sourcesFolders
+                for folder in context.sourcery.sourcesFolders
                 {
-                    self.signPost.verbose("🧙‍♂️\(folder.name)")
+                    context.signPost.verbose("🧙‍♂️\(folder.name)")
 
                     let fileSequence = folder.makeFileSequence(recursive: true, includeHidden: false)
 
@@ -86,52 +112,52 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
 
                 // 1.1 (Optional) Replace also in individual files
 
-                if let individualFiles = self.sourcery.individualSourceFiles
+                if let individualFiles = context.sourcery.individualSourceFiles
                 {
                     fileSequences.append(AnySequence(individualFiles))
                 }
 
                 // 2. Run sourcery to generate the protocols
 
-                self.signPost.verbose("🧙‍♂️ Generating PROTOCOLS")
+                context.signPost.verbose("🧙‍♂️ Generating PROTOCOLS")
 
-                self.signPost.verbose("🧙‍♂️ \(try self.terminalWorker.terminal(task: .sourcery(try self.executor())).joined(separator: "\n"))")
+                context.signPost.verbose("🧙‍♂️ \(try context.terminal.runProcess(sourceryProcessGenerateProtocols).joined(separator: "\n"))")
 
                 // 3. Replace to be able to mock
 
-                self.signPost.verbose("🧙‍♂️ All files in Sources folders are reverted to status before generating protocols.")
+                context.signPost.verbose("🧙‍♂️ All files in Sources folders are reverted to status before generating protocols.")
 
                 try fileSequences.forEach
                 { fileSequence in
-                    try self.replace(
-                        in: fileSequence,
-                        inline: (current: SourceryWorker.protocolGeneratableInline, replace: SourceryWorker.mockableInline),
-                        end: (current: SourceryWorker.protocolGeneratalbeEnd, replace: SourceryWorker.mockableEnd)
+                    try context.replace(
+                        fileSequence,
+                        (current: SourceryWorker.protocolGeneratableInline, replace: SourceryWorker.mockableInline),
+                        (current: SourceryWorker.protocolGeneratalbeEnd, replace: SourceryWorker.mockableEnd)
                     )
                 }
 
                 // 4. Run sourcery to generate the mocks
 
-                self.signPost.verbose("🧙‍♂️ Generating MOCKS")
+                context.signPost.verbose("🧙‍♂️ Generating MOCKS")
 
-                let sourceryWorkerOutput = try self.terminalWorker.terminal(task: .sourcery(try self.executor()))
+                let sourceryWorkerOutput = try context.terminal.runProcess(sourceryProcessGenerateMocks)
 
                 // 5. Revert string replacements - Back to normal
 
                 try fileSequences.forEach
                 { fileSequence in
-                    try self.replace(
-                        in: fileSequence,
-                        inline: (current: SourceryWorker.mockableInline, replace: SourceryWorker.protocolGeneratableInline),
-                        end: (current: SourceryWorker.mockableEnd, replace: SourceryWorker.protocolGeneratalbeEnd)
+                    try context.replace(
+                        fileSequence,
+                        (current: SourceryWorker.mockableInline, replace: SourceryWorker.protocolGeneratableInline),
+                        (current: SourceryWorker.mockableEnd, replace: SourceryWorker.protocolGeneratalbeEnd)
                     )
                 }
 
                 // 6. Add imports to output
 
-                self.signPost.verbose("🧙‍♂️ Add imports to output")
+                context.signPost.verbose("🧙‍♂️ Add imports to output")
 
-                try self.sourcery.outputFolder.makeFileSequence(recursive: true, includeHidden: false).forEach
+                try context.sourcery.outputFolder.makeFileSequence(recursive: true, includeHidden: false).forEach
                 { file in
                     guard let _import = (self.sourcery.imports.first { file.name.hasPrefix($0.template) }) else { return }
 
@@ -150,11 +176,11 @@ public struct SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
                     try file.write(data: data)
                 }
 
-                asyncSourceryWorkerOutput { sourceryWorkerOutput }
+                async { sourceryWorkerOutput }
             }
             catch
             {
-                asyncSourceryWorkerOutput { throw error }
+                async { throw error }
             }
         }
     }
