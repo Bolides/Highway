@@ -29,7 +29,7 @@ import Foundation
  // sourcery:inline:HWCarthage.AutoGenerateProtocol
  static var queue: HighwayDispatchProtocol { get }
 
- func attemptRunCarthage(in folder: FolderProtocol, _ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
+ func attemptRunCarthageIfCommandLineOptionAdded(in folder: FolderProtocol, _ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
  // sourcery:end
  // types.implementing.AutoGenerateProtocol inline for HWCarthage ✅
 

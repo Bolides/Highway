@@ -16,12 +16,14 @@ import ZFile
 public protocol GitHooksWorkerProtocol: AutoMockable
 {
     // sourcery:inline:GitHooksWorker.AutoGenerateProtocol
+    static var defaultOptions: String { get }
     static var prepushBashScript: String { get }
 
     init(
         swiftPackageDependencies: DependencyProtocol,
         swiftPackageDump: DumpProtocol,
         hwSetupExecutableProductName: String?,
+        options: String?,
         gitHooksFolder: FolderProtocol?,
         signPost: SignPostProtocol
     )
@@ -32,6 +34,7 @@ public protocol GitHooksWorkerProtocol: AutoMockable
 /// Adds a swift build step and runs HighWay Setup <#your executable#> from .git>Hooks/pre-push
 public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
 {
+    public static let defaultOptions: String = "-path $PATH"
     public static let prepushBashScript = """
     #!/bin/sh
     
@@ -44,7 +47,7 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
     fi
     
     # Execute the script
-    ./.build/x86_64-apple-macosx10.10/release/<#executable name#>
+    ./.build/x86_64-apple-macosx10.10/release/<#executable name#> <#options#>
     """
 
     private let swiftPackageDependencies: DependencyProtocol
@@ -52,6 +55,7 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
     private let swiftPackageDump: DumpProtocol
     private let hwSetupExecutableProductName: String?
     private let gitHooksFolder: FolderProtocol?
+    private let options: String?
 
     /// Will take the first executable it can find in the swifPackage if you do not provice a HWSetup executable name
     // sourcery:includeInitInProtocol
@@ -59,6 +63,7 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
         swiftPackageDependencies: DependencyProtocol,
         swiftPackageDump: DumpProtocol,
         hwSetupExecutableProductName: String? = nil,
+        options: String? = GitHooksWorker.defaultOptions,
         gitHooksFolder: FolderProtocol? = nil,
         signPost: SignPostProtocol = SignPost.shared
     )
@@ -68,6 +73,7 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
         self.swiftPackageDump = swiftPackageDump
         self.hwSetupExecutableProductName = hwSetupExecutableProductName
         self.gitHooksFolder = gitHooksFolder
+        self.options = options
     }
 
     public func addPrePushToGitHooks() throws
@@ -93,6 +99,7 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
             let script = GitHooksWorker.prepushBashScript
                 .replacingOccurrences(of: "<#executable name#>", with: executable)
                 .replacingOccurrences(of: "<#srcroot#>", with: try swiftPackageDependencies.srcRoot().path)
+                .replacingOccurrences(of: "<#options#>", with: options ?? "")
 
             var prePushFile: FileProtocol!
             let gitHooksFolder = self.gitHooksFolder == nil ? try swiftPackageDependencies.gitHooks() : self.gitHooksFolder!

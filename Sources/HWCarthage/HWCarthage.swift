@@ -23,7 +23,7 @@ public protocol HWCarthageProtocol: AutoMockable
     // sourcery:inline:HWCarthage.AutoGenerateProtocol
     static var queue: HighwayDispatchProtocol { get }
 
-    func attemptRunCarthage(in folder: FolderProtocol, _ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
+    func attemptRunCarthageIfCommandLineOptionAdded(in folder: FolderProtocol, _ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
     // sourcery:end
 }
 
@@ -39,12 +39,21 @@ public struct HWCarthage: HWCarthageProtocol, AutoGenerateProtocol
     private let dispatchGroup: DispatchGroup
     private let queue: HighwayDispatchProtocol
     private let carthageBuilder: CarthageBuilderProtocol
+    private let options: Set<CommandLineOption>
+
+    // MARK: - Commandline Options
+
+    public enum CommandLineOption: String, CaseIterable, Hashable, Equatable
+    {
+        case carhageUpdateNoBuild
+    }
 
     // MARK: - Init
 
     public init(
         dispatchGroup: DispatchGroup,
         carthageBuilder: CarthageBuilderProtocol,
+        options: Set<CommandLineOption> = Set(CommandLine.arguments.compactMap { CommandLineOption(rawValue: $0) }),
         queue: HighwayDispatchProtocol = HWCarthage.queue,
         signPost: SignPostProtocol = SignPost.shared,
         terminal: TerminalProtocol = Terminal.shared
@@ -55,12 +64,19 @@ public struct HWCarthage: HWCarthageProtocol, AutoGenerateProtocol
         self.dispatchGroup = dispatchGroup
         self.queue = queue
         self.carthageBuilder = carthageBuilder
+        self.options = options
     }
 
     // MARK: - Public functions
 
-    public func attemptRunCarthage(in folder: FolderProtocol, _ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
+    public func attemptRunCarthageIfCommandLineOptionAdded(in folder: FolderProtocol, _ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
     {
+        guard options.contains(.carhageUpdateNoBuild) else
+        {
+            signPost.message("⚠️ ignore \(pretty_function()) because no \(CommandLineOption.carhageUpdateNoBuild) added to commandline")
+            return
+        }
+
         dispatchGroup.enter()
         queue.async
         {

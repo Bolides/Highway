@@ -91,30 +91,30 @@ open class HWCarthageProtocolMock: HWCarthageProtocol
 
     public static var underlyingQueue: HighwayDispatchProtocol!
 
-    // MARK: - <attemptRunCarthage> - parameters
+    // MARK: - <attemptRunCarthageIfCommandLineOptionAdded> - parameters
 
-    public var attemptRunCarthageInCallsCount = 0
-    public var attemptRunCarthageInCalled: Bool
+    public var attemptRunCarthageIfCommandLineOptionAddedInCallsCount = 0
+    public var attemptRunCarthageIfCommandLineOptionAddedInCalled: Bool
     {
-        return attemptRunCarthageInCallsCount > 0
+        return attemptRunCarthageIfCommandLineOptionAddedInCallsCount > 0
     }
 
-    public var attemptRunCarthageInReceivedArguments: (folder: FolderProtocol, async: (@escaping HWCarthage.SyncOutput) -> Void)?
+    public var attemptRunCarthageIfCommandLineOptionAddedInReceivedArguments: (folder: FolderProtocol, async: (@escaping HWCarthage.SyncOutput) -> Void)?
 
-    // MARK: - <attemptRunCarthage> - closure mocks
+    // MARK: - <attemptRunCarthageIfCommandLineOptionAdded> - closure mocks
 
-    public var attemptRunCarthageInClosure: ((FolderProtocol, @escaping (@escaping HWCarthage.SyncOutput) -> Void) -> Void)?
+    public var attemptRunCarthageIfCommandLineOptionAddedInClosure: ((FolderProtocol, @escaping (@escaping HWCarthage.SyncOutput) -> Void) -> Void)?
 
-    // MARK: - <attemptRunCarthage> - method mocked
+    // MARK: - <attemptRunCarthageIfCommandLineOptionAdded> - method mocked
 
-    open func attemptRunCarthage(in folder: FolderProtocol, _ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
+    open func attemptRunCarthageIfCommandLineOptionAdded(in folder: FolderProtocol, _ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
     {
-        attemptRunCarthageInCallsCount += 1
-        attemptRunCarthageInReceivedArguments = (folder: folder, async: async)
+        attemptRunCarthageIfCommandLineOptionAddedInCallsCount += 1
+        attemptRunCarthageIfCommandLineOptionAddedInReceivedArguments = (folder: folder, async: async)
 
-        // <attemptRunCarthage> - Void return mock implementation
+        // <attemptRunCarthageIfCommandLineOptionAdded> - Void return mock implementation
 
-        attemptRunCarthageInClosure?(folder, async)
+        attemptRunCarthageIfCommandLineOptionAddedInClosure?(folder, async)
     }
 }
 

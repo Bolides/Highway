@@ -47,6 +47,8 @@ class HWPodSpec: QuickSpec
 
                 sut = HWPod(
                     podFolder: folder,
+                    strictPodVersion: "1.5.3",
+                    commandLineOptions: Set([.podInstall]),
                     terminal: terminal,
                     signPost: signPost,
                     fileSystem: fileSystem,
@@ -56,7 +58,7 @@ class HWPodSpec: QuickSpec
 
             it("runs cocoapods")
             {
-                expect { try sut?.attempt() }.toNot(throwError())
+                expect { try sut?.attemptPodInstallIfOptionAddedToCommandline() }.toNot(throwError())
                 expect(terminal.runProcessReceivedProcessTask?.arguments?.joined(separator: ",")) == "_1.5.3_,install"
             }
         }

@@ -95,6 +95,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         dependencyService: DependencyServiceProtocol,
         sourceryBuilder: SourceryBuilderProtocol,
         highwaySetupExecutableName: String? = nil, // If set to nil the only product with type executable will be chosen
+        githooksPrePushScriptOptions: String? = nil, // Will be added after git hoops pre push script
         swiftformatType: SwiftFormatWorkerProtocol.Type = SwiftFormatWorker.self,
         githooksType: GitHooksWorkerProtocol.Type? = GitHooksWorker.self, // if set to nil githooks will not be added
         sourceryWorkerType: SourceryWorkerProtocol.Type = SourceryWorker.self,
@@ -135,6 +136,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
             swiftPackageDependencies: package.dependencies,
             swiftPackageDump: package.dump,
             hwSetupExecutableProductName: highwaySetupExecutableName,
+            options: githooksPrePushScriptOptions,
             gitHooksFolder: try srcRoot.subfolder(named: ".git/hooks"),
             signPost: signPost
         )

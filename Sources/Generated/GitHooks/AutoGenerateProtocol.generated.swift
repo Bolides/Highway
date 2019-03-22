@@ -19,12 +19,14 @@ import Foundation
 
  // types.implementing.AutoGenerateProtocol inline for GitHooksWorker ..
  // sourcery:inline:GitHooksWorker.AutoGenerateProtocol
+ static var defaultOptions: String { get }
  static var prepushBashScript: String { get }
 
  init(
    swiftPackageDependencies: DependencyProtocol,
    swiftPackageDump: DumpProtocol,
    hwSetupExecutableProductName: String?,
+   options: String?,
    gitHooksFolder: FolderProtocol?,
    signPost: SignPostProtocol
  )

@@ -17,6 +17,13 @@ open class GitHooksWorkerProtocolMock: GitHooksWorkerProtocol
 {
     public init() {}
 
+    public static var defaultOptions: String
+    {
+        get { return underlyingDefaultOptions }
+        set(value) { underlyingDefaultOptions = value }
+    }
+
+    public static var underlyingDefaultOptions: String = "AutoMockable filled value"
     public static var prepushBashScript: String
     {
         get { return underlyingPrepushBashScript }
@@ -27,18 +34,18 @@ open class GitHooksWorkerProtocolMock: GitHooksWorkerProtocol
 
     // MARK: - <init> - parameters
 
-    public var initSwiftPackageDependenciesSwiftPackageDumpHwSetupExecutableProductNameGitHooksFolderSignPostReceivedArguments: (swiftPackageDependencies: DependencyProtocol, swiftPackageDump: DumpProtocol, hwSetupExecutableProductName: String?, gitHooksFolder: FolderProtocol?, signPost: SignPostProtocol)?
+    public var initSwiftPackageDependenciesSwiftPackageDumpHwSetupExecutableProductNameOptionsGitHooksFolderSignPostReceivedArguments: (swiftPackageDependencies: DependencyProtocol, swiftPackageDump: DumpProtocol, hwSetupExecutableProductName: String?, options: String?, gitHooksFolder: FolderProtocol?, signPost: SignPostProtocol)?
 
     // MARK: - <init> - closure mocks
 
-    public var initSwiftPackageDependenciesSwiftPackageDumpHwSetupExecutableProductNameGitHooksFolderSignPostClosure: ((DependencyProtocol, DumpProtocol, String?, FolderProtocol?, SignPostProtocol) -> Void)?
+    public var initSwiftPackageDependenciesSwiftPackageDumpHwSetupExecutableProductNameOptionsGitHooksFolderSignPostClosure: ((DependencyProtocol, DumpProtocol, String?, String?, FolderProtocol?, SignPostProtocol) -> Void)?
 
     // MARK: - <init> - initializer mocked
 
-    public required init(swiftPackageDependencies: DependencyProtocol, swiftPackageDump: DumpProtocol, hwSetupExecutableProductName: String?, gitHooksFolder: FolderProtocol?, signPost: SignPostProtocol)
+    public required init(swiftPackageDependencies: DependencyProtocol, swiftPackageDump: DumpProtocol, hwSetupExecutableProductName: String?, options: String?, gitHooksFolder: FolderProtocol?, signPost: SignPostProtocol)
     {
-        initSwiftPackageDependenciesSwiftPackageDumpHwSetupExecutableProductNameGitHooksFolderSignPostReceivedArguments = (swiftPackageDependencies: swiftPackageDependencies, swiftPackageDump: swiftPackageDump, hwSetupExecutableProductName: hwSetupExecutableProductName, gitHooksFolder: gitHooksFolder, signPost: signPost)
-        initSwiftPackageDependenciesSwiftPackageDumpHwSetupExecutableProductNameGitHooksFolderSignPostClosure?(swiftPackageDependencies, swiftPackageDump, hwSetupExecutableProductName, gitHooksFolder, signPost)
+        initSwiftPackageDependenciesSwiftPackageDumpHwSetupExecutableProductNameOptionsGitHooksFolderSignPostReceivedArguments = (swiftPackageDependencies: swiftPackageDependencies, swiftPackageDump: swiftPackageDump, hwSetupExecutableProductName: hwSetupExecutableProductName, options: options, gitHooksFolder: gitHooksFolder, signPost: signPost)
+        initSwiftPackageDependenciesSwiftPackageDumpHwSetupExecutableProductNameOptionsGitHooksFolderSignPostClosure?(swiftPackageDependencies, swiftPackageDump, hwSetupExecutableProductName, options, gitHooksFolder, signPost)
     }
 
     // MARK: - <addPrePushToGitHooks> - parameters

@@ -21,7 +21,7 @@ import Foundation
  // sourcery:inline:HWPod.AutoGenerateProtocol
  static var expectedCocoapodsVersion: String { get }
 
- func attempt() throws
+ func attemptPodInstallIfOptionAddedToCommandline() throws
  // sourcery:end
  // types.implementing.AutoGenerateProtocol inline for HWPod ✅
 

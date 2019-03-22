@@ -69,7 +69,14 @@ class HWCarthageSpec: QuickSpec
                     terminal = TerminalProtocolMock()
                     terminal.runProcessClosure = { _ in ["mock success"] }
 
-                    sut = HWCarthage(dispatchGroup: dispatchGroup, carthageBuilder: builder, queue: queue, signPost: signPost, terminal: terminal)
+                    sut = HWCarthage(
+                        dispatchGroup: dispatchGroup,
+                        carthageBuilder: builder,
+                        options: Set([.carhageUpdateNoBuild]),
+                        queue: queue,
+                        signPost: signPost,
+                        terminal: terminal
+                    )
 
                     return true
                 }.toNot(throwError())
@@ -80,7 +87,7 @@ class HWCarthageSpec: QuickSpec
                 var result: HWCarthage.SyncOutput?
                 let folder = try! FolderProtocolMock()
 
-                sut?.attemptRunCarthage(in: folder) { result = $0 }
+                sut?.attemptRunCarthageIfCommandLineOptionAdded(in: folder) { result = $0 }
 
                 expect { try result?() }.toNot(throwError())
                 expect { terminal.runProcessReceivedProcessTask }.toNot(beNil())
