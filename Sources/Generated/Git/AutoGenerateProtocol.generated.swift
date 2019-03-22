@@ -14,9 +14,10 @@ import Foundation
 //: - of the above it does not add it if  // sourcery:skipProtocol
 //: ---
 
+// version 5.5
 /*
 
- // Generated protocol inline for GitTool -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for GitTool ..
  // sourcery:inline:GitTool.AutoGenerateProtocol
 
  func isClean() throws  -> Bool
@@ -29,26 +30,6 @@ import Foundation
  func currentTag() throws  -> [String]
  func clone(with options: CloneOptions) throws  -> [String]
  // sourcery:end
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for GitTool ✅
 
  */

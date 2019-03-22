@@ -14,41 +14,23 @@ import Foundation
 //: - of the above it does not add it if  // sourcery:skipProtocol
 //: ---
 
+// version 5.5
 /*
 
- // Generated protocol inline for CarthageBuilder -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for CarthageBuilder ..
  // sourcery:inline:CarthageBuilder.AutoGenerateProtocol
  static var carthageExecutableFolderPath: String { get }
  static var carthageExecutableName: String { get }
 
  func attemptBuildCarthageIfNeeded() throws  -> FileProtocol
  // sourcery:end
- // Generated protocol inline for HWCarthage -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for CarthageBuilder ✅
+ // types.implementing.AutoGenerateProtocol inline for HWCarthage ..
  // sourcery:inline:HWCarthage.AutoGenerateProtocol
  static var queue: HighwayDispatchProtocol { get }
 
  func attemptRunCarthage(in folder: FolderProtocol, _ async: @escaping (@escaping HWCarthage.SyncOutput) -> Void)
  // sourcery:end
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for HWCarthage ✅
 
  */

@@ -127,12 +127,12 @@ public let package = Package(
 
         // MARK: - Filesystem
 
-        .package(url: "https://www.github.com/Bolides/ZFile", "2.3.2" ..< "3.1.0"),
+        .package(url: "https://www.github.com/Bolides/ZFile", "2.4.1" ..< "3.1.0"),
 
         // MARK: - Sourcery
 
         .package(url: "https://www.github.com/doozMen/Sourcery", "0.17.0" ..< "1.0.0"),
-        .package(url: "https://www.github.com/dooZdev/template-sourcery", "1.4.2" ..< "2.0.0"),
+        .package(url: "https://www.github.com/dooZdev/template-sourcery", "1.4.3" ..< "2.0.0"),
 
         // MARK: - Errors
 

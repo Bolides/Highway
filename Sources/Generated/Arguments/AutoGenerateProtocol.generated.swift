@@ -14,14 +14,16 @@ import Foundation
 //: - of the above it does not add it if  // sourcery:skipProtocol
 //: ---
 
+// version 5.5
 /*
 
- // Generated protocol inline for Arguments -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for Arguments ..
  // sourcery:inline:Arguments.AutoGenerateProtocol
  var all: [String] { get set }
 
  // sourcery:end
- // Generated protocol inline for Dependency -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for Arguments ✅
+ // types.implementing.AutoGenerateProtocol inline for Dependency ..
  // sourcery:inline:Dependency.AutoGenerateProtocol
  var name: String { get }
  var path: String { get }
@@ -37,38 +39,20 @@ import Foundation
  func sourceryFolder() throws  -> FolderProtocol
  func sourceryAutoProtocolFile() throws  -> FileProtocol
  // sourcery:end
- // Generated protocol inline for SwiftProduct -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for Dependency ✅
+ // types.implementing.AutoGenerateProtocol inline for SwiftProduct ..
  // sourcery:inline:SwiftProduct.AutoGenerateProtocol
  var name: String { get }
  var product_type: String { get }
 
  // sourcery:end
- // Generated protocol inline for SwiftTarget -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for SwiftProduct ✅
+ // types.implementing.AutoGenerateProtocol inline for SwiftTarget ..
  // sourcery:inline:SwiftTarget.AutoGenerateProtocol
  var name: String { get }
  var dependencies: Set<SwiftTarget.Dependency> { get }
 
  // sourcery:end
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for SwiftTarget ✅
 
  */

@@ -478,41 +478,90 @@ open class SystemProtocolMock: SystemProtocol
 
     // MARK: - <process> - parameters
 
-    public var processForFromThrowableError: Error?
-    public var processForFromCallsCount = 0
-    public var processForFromCalled: Bool
+    public var processCurrentFolderExecutablePathThrowableError: Error?
+    public var processCurrentFolderExecutablePathCallsCount = 0
+    public var processCurrentFolderExecutablePathCalled: Bool
     {
-        return processForFromCallsCount > 0
+        return processCurrentFolderExecutablePathCallsCount > 0
     }
 
-    public var processForFromReceivedArguments: (currentFolder: FolderProtocol, executableFile: FileProtocol)?
-    public var processForFromReturnValue: ProcessProtocol?
+    public var processCurrentFolderExecutablePathReceivedArguments: (currentFolder: FolderProtocol, executablePath: String)?
+    public var processCurrentFolderExecutablePathReturnValue: ProcessProtocol?
 
     // MARK: - <process> - closure mocks
 
-    public var processForFromClosure: ((FolderProtocol, FileProtocol) throws -> ProcessProtocol)?
+    public var processCurrentFolderExecutablePathClosure: ((FolderProtocol, String) throws -> ProcessProtocol)?
 
     // MARK: - <process> - method mocked
 
-    open func process(for currentFolder: FolderProtocol, from executableFile: FileProtocol) throws -> ProcessProtocol
+    open func process(currentFolder: FolderProtocol, executablePath: String) throws -> ProcessProtocol
     {
         // <process> - Throwable method implementation
 
-        if let error = processForFromThrowableError
+        if let error = processCurrentFolderExecutablePathThrowableError
         {
             throw error
         }
 
-        processForFromCallsCount += 1
-        processForFromReceivedArguments = (currentFolder: currentFolder, executableFile: executableFile)
+        processCurrentFolderExecutablePathCallsCount += 1
+        processCurrentFolderExecutablePathReceivedArguments = (currentFolder: currentFolder, executablePath: executablePath)
 
         // <process> - Return Value mock implementation
 
-        guard let closureReturn = processForFromClosure else
+        guard let closureReturn = processCurrentFolderExecutablePathClosure else
         {
-            guard let returnValue = processForFromReturnValue else
+            guard let returnValue = processCurrentFolderExecutablePathReturnValue else
             {
-                let message = "No returnValue implemented for processForFromClosure"
+                let message = "No returnValue implemented for processCurrentFolderExecutablePathClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement ProcessProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(currentFolder, executablePath)
+    }
+
+    // MARK: - <process> - parameters
+
+    public var processCurrentFolderExecutableFileThrowableError: Error?
+    public var processCurrentFolderExecutableFileCallsCount = 0
+    public var processCurrentFolderExecutableFileCalled: Bool
+    {
+        return processCurrentFolderExecutableFileCallsCount > 0
+    }
+
+    public var processCurrentFolderExecutableFileReceivedArguments: (currentFolder: FolderProtocol, executableFile: FileProtocol)?
+    public var processCurrentFolderExecutableFileReturnValue: ProcessProtocol?
+
+    // MARK: - <process> - closure mocks
+
+    public var processCurrentFolderExecutableFileClosure: ((FolderProtocol, FileProtocol) throws -> ProcessProtocol)?
+
+    // MARK: - <process> - method mocked
+
+    open func process(currentFolder: FolderProtocol, executableFile: FileProtocol) throws -> ProcessProtocol
+    {
+        // <process> - Throwable method implementation
+
+        if let error = processCurrentFolderExecutableFileThrowableError
+        {
+            throw error
+        }
+
+        processCurrentFolderExecutableFileCallsCount += 1
+        processCurrentFolderExecutableFileReceivedArguments = (currentFolder: currentFolder, executableFile: executableFile)
+
+        // <process> - Return Value mock implementation
+
+        guard let closureReturn = processCurrentFolderExecutableFileClosure else
+        {
+            guard let returnValue = processCurrentFolderExecutableFileReturnValue else
+            {
+                let message = "No returnValue implemented for processCurrentFolderExecutableFileClosure"
                 let error = SourceryMockError.implementErrorCaseFor(message)
 
                 // You should implement ProcessProtocol

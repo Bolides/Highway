@@ -14,9 +14,10 @@ import Foundation
 //: - of the above it does not add it if  // sourcery:skipProtocol
 //: ---
 
+// version 5.5
 /*
 
- // Generated protocol inline for Highway -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for Highway ..
  // sourcery:inline:Highway.AutoGenerateProtocol
  static var queue: HighwayDispatchProtocol { get }
  var package: PackageProtocol { get }
@@ -35,14 +36,16 @@ import Foundation
  func sourceryFolder() throws  -> FolderProtocol
  func sourceryAutoProtocolFile() throws  -> FileProtocol
  // sourcery:end
- // Generated protocol inline for Highway.Package -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for Highway ✅
+ // types.implementing.AutoGenerateProtocol inline for Highway.Package ..
  // sourcery:inline:Highway.Package.AutoGenerateProtocol
  var name: String { get }
  var dependencies: DependencyProtocol { get }
  var dump: DumpProtocol { get }
 
  // sourcery:end
- // Generated protocol inline for HighwayRunner -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for Highway.Package ✅
+ // types.implementing.AutoGenerateProtocol inline for HighwayRunner ..
  // sourcery:inline:HighwayRunner.AutoGenerateProtocol
  static var queue: HighwayDispatchProtocol { get }
  var errors: [Swift.Error]? { get set }
@@ -54,26 +57,6 @@ import Foundation
  func runSwiftformat(_ async: @escaping (@escaping HighwayRunner.SyncSwiftformat) -> Void)
  func runSwiftPackageGenerateXcodeProject(_ async: @escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)
  // sourcery:end
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for HighwayRunner ✅
 
  */

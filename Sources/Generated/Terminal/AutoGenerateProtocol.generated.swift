@@ -14,29 +14,34 @@ import Foundation
 //: - of the above it does not add it if  // sourcery:skipProtocol
 //: ---
 
+// version 5.5
 /*
 
- // Generated protocol inline for DependencyService -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for DependencyService ..
  // sourcery:inline:DependencyService.AutoGenerateProtocol
 
  func generateDependency() throws  -> DependencyProtocol
  // sourcery:end
- // Generated protocol inline for DumpService -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for DependencyService ✅
+ // types.implementing.AutoGenerateProtocol inline for DumpService ..
  // sourcery:inline:DumpService.AutoGenerateProtocol
 
  func generateDump() throws  -> DumpProtocol
  // sourcery:end
- // Generated protocol inline for System -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for DumpService ✅
+ // types.implementing.AutoGenerateProtocol inline for System ..
  // sourcery:inline:System.AutoGenerateProtocol
  static var shared: SystemProtocol { get }
  var pathEnvironmentParser: PathEnvironmentParserProtocol { get }
  var fileSystem: FileSystemProtocol { get }
 
  func process(_ executableName: String) throws  -> ProcessProtocol
- func process(for currentFolder: FolderProtocol, from executableFile: FileProtocol) throws  -> ProcessProtocol
+ func process(currentFolder: FolderProtocol, executablePath: String) throws  -> ProcessProtocol
+ func process(currentFolder: FolderProtocol, executableFile: FileProtocol) throws  -> ProcessProtocol
  func executable(with executableName: String) throws  -> FileProtocol
  // sourcery:end
- // Generated protocol inline for Task -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for System ✅
+ // types.implementing.AutoGenerateProtocol inline for Task ..
  // sourcery:inline:Task.AutoGenerateProtocol
  var name: String { get }
  var executable: FileProtocol { get set }
@@ -52,26 +57,6 @@ import Foundation
 
  func enableReadableOutputDataCapturing()
  // sourcery:end
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for Task ✅
 
  */

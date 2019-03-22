@@ -14,9 +14,10 @@ import Foundation
 //: - of the above it does not add it if  // sourcery:skipProtocol
 //: ---
 
+// version 5.5
 /*
 
- // Generated protocol inline for GitHooksWorker -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for GitHooksWorker ..
  // sourcery:inline:GitHooksWorker.AutoGenerateProtocol
  static var prepushBashScript: String { get }
 
@@ -29,26 +30,6 @@ import Foundation
  )
  func addPrePushToGitHooks() throws
  // sourcery:end
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for GitHooksWorker ✅
 
  */
