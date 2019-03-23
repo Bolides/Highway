@@ -5,6 +5,7 @@ import Foundation
 import Git
 import GitHooks
 import Highway
+import HighwayDispatch
 import SignPost
 import SourceryWorker
 import SwiftFormatWorker
@@ -15,7 +16,7 @@ import ZFile
 // MARK: - PREPARE
 
 let highwayRunner: HighwayRunner!
-let dispatchGroup = DispatchGroup()
+let dispatchGroup: HWDispatchGroupProtocol = DispatchGroup()
 let signPost = SignPost.shared
 
 // MARK: - RUN
@@ -43,7 +44,7 @@ do
 
     highwayRunner.runSourcery(handleSourceryOutput)
 
-    dispatchGroup.notify(queue: DispatchQueue.main)
+    dispatchGroup.notifyMain
     {
         highwayRunner.runSwiftformat(handleSwiftformat)
         dispatchGroup.wait()

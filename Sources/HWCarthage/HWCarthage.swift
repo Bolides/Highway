@@ -36,7 +36,7 @@ public struct HWCarthage: HWCarthageProtocol, AutoGenerateProtocol
 
     private let signPost: SignPostProtocol
     private let terminal: TerminalProtocol
-    private let dispatchGroup: DispatchGroup
+    private let dispatchGroup: HWDispatchGroupProtocol
     private let queue: HighwayDispatchProtocol
     private let carthageBuilder: CarthageBuilderProtocol
     private let options: Set<CommandLineOption>
@@ -51,7 +51,7 @@ public struct HWCarthage: HWCarthageProtocol, AutoGenerateProtocol
     // MARK: - Init
 
     public init(
-        dispatchGroup: DispatchGroup,
+        dispatchGroup: HWDispatchGroupProtocol,
         carthageBuilder: CarthageBuilderProtocol,
         options: Set<CommandLineOption> = Set(CommandLine.arguments.compactMap { CommandLineOption(rawValue: $0) }),
         queue: HighwayDispatchProtocol = HWCarthage.queue,
