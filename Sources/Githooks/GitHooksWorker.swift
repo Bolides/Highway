@@ -22,8 +22,9 @@ public protocol GitHooksWorkerProtocol: AutoMockable
     init(
         swiftPackageDependencies: DependencyProtocol,
         swiftPackageDump: DumpProtocol,
+        commandlineOptions: Set<GitHooksWorker.Option>,
         hwSetupExecutableProductName: String?,
-        options: String?,
+        prePushScriptCommandlineOptions: String?,
         gitHooksFolder: FolderProtocol?,
         signPost: SignPostProtocol
     )
@@ -55,15 +56,28 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
     private let swiftPackageDump: DumpProtocol
     private let hwSetupExecutableProductName: String?
     private let gitHooksFolder: FolderProtocol?
-    private let options: String?
+    private let prePushScriptCommandlineOptions: String?
+    private let commandlineOptions: Set<GitHooksWorker.Option>
+
+    // MARK: - Options
+
+    /// Options to be set from the command line
+
+    public enum Option: String, Hashable, CaseIterable
+    {
+        case noGitHooksPrePush
+    }
+
+    // MARK: - Init
 
     /// Will take the first executable it can find in the swifPackage if you do not provice a HWSetup executable name
     // sourcery:includeInitInProtocol
     public init(
         swiftPackageDependencies: DependencyProtocol,
         swiftPackageDump: DumpProtocol,
+        commandlineOptions: Set<GitHooksWorker.Option> = Set(CommandLine.arguments.compactMap { Option(rawValue: $0) }), // Disable or enable githooks
         hwSetupExecutableProductName: String? = nil,
-        options: String? = GitHooksWorker.defaultOptions,
+        prePushScriptCommandlineOptions: String? = GitHooksWorker.defaultOptions, // Will be passed to commandline in script
         gitHooksFolder: FolderProtocol? = nil,
         signPost: SignPostProtocol = SignPost.shared
     )
@@ -73,11 +87,19 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
         self.swiftPackageDump = swiftPackageDump
         self.hwSetupExecutableProductName = hwSetupExecutableProductName
         self.gitHooksFolder = gitHooksFolder
-        self.options = options
+        self.prePushScriptCommandlineOptions = prePushScriptCommandlineOptions
+        self.commandlineOptions = commandlineOptions
     }
 
+    /// Will add pre push script by default unless you add GithooksWorker.Option.noGitHooksPrePush to commandline
     public func addPrePushToGitHooks() throws
     {
+        guard !commandlineOptions.contains(.noGitHooksPrePush) else
+        {
+            signPost.message("⚠️ 👀 \(GitHooksWorker.self) ignore \(pretty_function()) - remove \(GitHooksWorker.Option.noGitHooksPrePush) if you do not want this")
+            return
+        }
+
         signPost.message("👀 \(GitHooksWorker.self) ...")
         do
         {
@@ -99,7 +121,7 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
             let script = GitHooksWorker.prepushBashScript
                 .replacingOccurrences(of: "<#executable name#>", with: executable)
                 .replacingOccurrences(of: "<#srcroot#>", with: try swiftPackageDependencies.srcRoot().path)
-                .replacingOccurrences(of: "<#options#>", with: options ?? "")
+                .replacingOccurrences(of: "<#options#>", with: prePushScriptCommandlineOptions ?? "")
 
             var prePushFile: FileProtocol!
             let gitHooksFolder = self.gitHooksFolder == nil ? try swiftPackageDependencies.gitHooks() : self.gitHooksFolder!
