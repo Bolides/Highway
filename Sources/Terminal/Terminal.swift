@@ -107,21 +107,9 @@ public struct Terminal: TerminalProtocol
             }
         }
 
-        guard let result = output, result.count >= 2 else
+        guard let result = output else
         {
-            if let task = task
-            {
-                throw Terminal.Error.emptyOutputFromTask(task)
-            }
-            else if let output = output
-            {
-                finalResult.append(contentsOf: output)
-                throw Terminal.Error.unknownTask(errorOutput: finalResult)
-            }
-            else
-            {
-                throw Terminal.Error.unknownTask(errorOutput: ["No exit code or output"])
-            }
+            return finalResult
         }
 
         finalResult.append(contentsOf: result)
