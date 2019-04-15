@@ -16,6 +16,15 @@ public let package = Package(
         // MARK: - Library
 
         .library(
+            name: "HWCarthage",
+            targets: ["HWCarthage"]
+        ),
+
+        .library(
+            name: "HWPod",
+            targets: ["HWPod"]
+        ),
+        .library(
             name: "Highway",
             targets: ["Highway"]
         ),
@@ -41,8 +50,8 @@ public let package = Package(
             targets: ["Url"]
         ),
         .library(
-            name: "POSIX",
-            targets: ["POSIX"]
+            name: "HWPOSIX",
+            targets: ["HWPOSIX"]
         ),
         .library(
             name: "XCBuild",
@@ -63,10 +72,6 @@ public let package = Package(
         .library(
             name: "SwiftFormatWorker",
             targets: ["SwiftFormatWorker"]
-        ),
-        .library(
-            name: "CarthageWorker",
-            targets: ["CarthageWorker"]
         ),
         .library(
             name: "Stub",
@@ -107,23 +112,74 @@ public let package = Package(
             name: "HighwayMock",
             targets: ["HighwayMock"]
         ),
+        .library(
+            name: "HWCarthageMock",
+            targets: ["HWCarthageMock"]
+        ),
+        .library(
+            name: "HWPodMock",
+            targets: ["HWPodMock"]
+        ),
 
     ],
     dependencies: [
         // MARK: - External Dependencies
 
-        .package(url: "https://www.github.com/dooZdev/ZFile", "2.2.0" ..< "3.1.0"),
-        .package(url: "https://www.github.com/doozMen/SignPost", from: "1.0.0"),
-        .package(url: "https://www.github.com/dooZdev/template-sourcery", "1.3.7" ..< "2.0.0"),
+        // MARK: - Filesystem
+
+        .package(url: "https://www.github.com/Bolides/ZFile", "2.4.1" ..< "3.1.0"),
+
+        // MARK: - Sourcery
+
+        .package(url: "https://www.github.com/doozMen/Sourcery", "0.17.0" ..< "1.0.0"),
+        .package(url: "https://www.github.com/dooZdev/template-sourcery", "1.4.3" ..< "2.0.0"),
+
+        // MARK: - Errors
+
         .package(url: "https://www.github.com/antitypical/Result", "4.1.0" ..< "5.1.0"),
+
+        // MARK: - Formatting
+
         .package(url: "https://github.com/nicklockwood/SwiftFormat", "0.39.4" ..< "0.40.0"),
+
+        // MARK: - Testing
+
         .package(url: "https://www.github.com/Quick/Quick", "1.3.4" ..< "2.1.0"),
         .package(url: "https://www.github.com/Quick/Nimble", "7.3.4" ..< "8.1.0"),
-        .package(url: "https://www.github.com/doozMen/Sourcery", "0.16.3" ..< "1.0.0"),
+
+        // MARK: - Logging
+
+        .package(url: "https://www.github.com/doozMen/SignPost", "1.0.0" ..< "2.0.0"),
+
     ],
     targets: [
         // MARK: - Targets
 
+        .target(
+            name: "HWSetup",
+            dependencies: [
+                "Arguments",
+                "Errors",
+                "SignPost",
+                "SourceryAutoProtocols",
+                "SourceryWorker",
+                "SwiftFormatWorker",
+                "Terminal",
+                "ZFile",
+                "XCBuild",
+                "GitHooks",
+                "Highway",
+                "Git",
+            ]
+        ),
+        .target(
+            name: "HWCarthage",
+            dependencies: ["SourceryAutoProtocols", "Highway", "ZFile", "SignPost", "Terminal"]
+        ),
+        .target(
+            name: "HWPod",
+            dependencies: ["SourceryAutoProtocols", "ZFile", "SignPost", "Terminal"]
+        ),
         .target(
             name: "Errors",
             dependencies: ["SourceryAutoProtocols", "ZFile"]
@@ -164,16 +220,16 @@ public let package = Package(
             dependencies: []
         ),
         .target(
-            name: "POSIX",
+            name: "HWPOSIX",
             dependencies: ["Url"]
         ),
         .target(
             name: "XCBuild",
-            dependencies: ["Arguments", "Errors", "Url", "POSIX", "Terminal", "Result"]
+            dependencies: ["Arguments", "Errors", "Url", "HWPOSIX", "Terminal", "Result"]
         ),
         .target(
             name: "Terminal",
-            dependencies: ["POSIX", "Arguments", "Errors"]
+            dependencies: ["HWPOSIX", "Arguments", "Errors"]
         ),
         .target(
             name: "Git",
@@ -182,7 +238,7 @@ public let package = Package(
 
         .target(
             name: "SourceryWorker",
-            dependencies: ["Terminal", "HighwayDispatch", "Errors"]
+            dependencies: ["Terminal", "HighwayDispatch", "Errors", "ZFile", "HighwayDispatch", "SourceryAutoProtocols"]
         ),
         .target(
             name: "SwiftFormatWorker",
@@ -200,8 +256,18 @@ public let package = Package(
         // MARK: - Mocks
 
         .target(
+            name: "HWCarthageMock",
+            dependencies: ["HighwayDispatch", "HWCarthage", "ZFileMock", "ZFile", "Errors"],
+            path: "Sources/Generated/HWCarthage"
+        ),
+        .target(
+            name: "HWPodMock",
+            dependencies: ["HighwayDispatch", "HWPod", "ZFileMock", "Errors"],
+            path: "Sources/Generated/HWPod"
+        ),
+        .target(
             name: "HighwayDispatchMock",
-            dependencies: ["HighwayDispatch", "SignPost", "ZFileMock", "SourceryAutoProtocols", "Errors"],
+            dependencies: ["HighwayDispatch", "SignPost", "ZFileMock", "Errors"],
             path: "Sources/Generated/HighwayDispatch"
         ),
         .target(
@@ -231,7 +297,7 @@ public let package = Package(
         ),
         .target(
             name: "TerminalMock",
-            dependencies: ["Terminal", "ZFile", "ZFileMock", "Arguments", "SourceryAutoProtocols", "SignPost"],
+            dependencies: ["Terminal", "ZFile", "ZFileMock", "Arguments", "SignPost"],
             path: "Sources/Generated/Terminal"
         ),
         .target(
@@ -256,12 +322,22 @@ public let package = Package(
                 "GitHooks",
                 "SwiftFormatWorker",
                 "SignPost",
+                "ZFile",
+                "Terminal",
             ],
             path: "Sources/Generated/Highway"
         ),
 
         // MARK: - Tests
 
+        .testTarget(
+            name: "HWCarthageTests",
+            dependencies: ["HWCarthage", "SignPostMock", "ArgumentsMock", "Arguments", "HighwayMock", "HighwayDispatchMock", "HWCarthageMock", "Quick", "Nimble"]
+        ),
+        .testTarget(
+            name: "HWPodTests",
+            dependencies: ["HWPod", "HWPodMock", "ZFileMock", "ZFile", "TerminalMock", "Quick", "Nimble"]
+        ),
         .testTarget(
             name: "GitHooksTests",
             dependencies: [
@@ -272,11 +348,12 @@ public let package = Package(
                 "ZFileMock",
                 "Errors",
                 "GitHooksMock",
+                "SignPostMock",
             ]
         ),
         .testTarget(
-            name: "POSIXTests",
-            dependencies: ["POSIX", "Quick", "Nimble"]
+            name: "HWPOSIXTests",
+            dependencies: ["HWPOSIX", "Quick", "Nimble"]
         ),
         .testTarget(
             name: "XCBuildTests",
@@ -316,7 +393,6 @@ public let package = Package(
                 "TerminalMock",
                 "Stub",
                 "Errors",
-                "HWSetup",
             ]
         ),
         .testTarget(
@@ -328,30 +404,6 @@ public let package = Package(
                 "Quick",
                 "Nimble",
                 "HighwayDispatchMock",
-            ]
-        ),
-        .target(
-            name: "CarthageWorker",
-            dependencies: ["SourceryAutoProtocols"]
-        ),
-        .testTarget(
-            name: "CarthageWorkerTests",
-            dependencies: ["CarthageWorker", "SignPostMock", "Quick", "Nimble"]
-        ),
-        .target(
-            name: "HWSetup",
-            dependencies: [
-                "Arguments",
-                "Errors",
-                "SignPost",
-                "SourceryAutoProtocols",
-                "SourceryWorker",
-                "SwiftFormatWorker",
-                "Terminal",
-                "ZFile",
-                "XCBuild",
-                "GitHooks",
-                "Highway",
             ]
         ),
         .testTarget(

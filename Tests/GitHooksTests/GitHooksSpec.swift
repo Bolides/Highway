@@ -13,11 +13,13 @@ import Errors
 import GitHooks
 import Nimble
 import Quick
+import SignPostMock
 import ZFileMock
 
 private let expectedPrePushScript = GitHooksWorker.prepushBashScript
     .replacingOccurrences(of: "<#srcroot#>", with: "mockedRoot")
     .replacingOccurrences(of: "<#executable name#>", with: "GitHooksWorkerSpec")
+    .replacingOccurrences(of: "<#options#>", with: GitHooksWorker.defaultOptions)
 
 class GitHooksWorkerSpec: QuickSpec
 {
@@ -31,9 +33,12 @@ class GitHooksWorkerSpec: QuickSpec
             var prePushFile: FileProtocolMock!
             var swiftPackageDependencies: DependencyProtocolMock!
             var swiftPackageDump: DumpProtocolMock!
+            var signPost: SignPostProtocolMock!
 
             beforeEach
             {
+                signPost = SignPostProtocolMock()
+
                 gitHooksFolder = try! FolderProtocolMock()
                 prePushFile = try! FileProtocolMock()
 
@@ -103,7 +108,7 @@ class GitHooksWorkerSpec: QuickSpec
                         throw "mock gitHooksFolder has no file for name \(filename)"
                     }
 
-                    sut = GitHooksWorker(swiftPackageDependencies: swiftPackageDependencies, swiftPackageDump: swiftPackageDump)
+                    sut = GitHooksWorker(swiftPackageDependencies: swiftPackageDependencies, swiftPackageDump: swiftPackageDump, signPost: signPost)
                     expect { try sut?.addPrePushToGitHooks() }.toNot(throwError())
                 }
 
@@ -115,6 +120,31 @@ class GitHooksWorkerSpec: QuickSpec
                 it("writes script")
                 {
                     expect(prePushFile.writeStringReceivedString) == expectedPrePushScript
+                }
+            }
+
+            context("githooks disabled from commandline")
+            {
+                beforeEach
+                {
+                    sut = GitHooksWorker(
+                        swiftPackageDependencies: swiftPackageDependencies,
+                        swiftPackageDump: swiftPackageDump,
+                        commandlineOptions: Set([.noGitHooksPrePush]),
+                        signPost: signPost
+                    )
+
+                    expect { try sut?.addPrePushToGitHooks() }.toNot(throwError())
+                }
+
+                it("should not ask package for the githooks folder")
+                {
+                    expect(swiftPackageDependencies.gitHooksCalled) == false
+                }
+
+                it("warns about the disabling")
+                {
+                    expect(signPost.messageReceivedText) == "⚠️ 👀 GitHooksWorker ignore M (99, 90) GitHooksWorker.swift addPrePushToGitHooks() - remove noGitHooksPrePush if you do not want this"
                 }
             }
         }

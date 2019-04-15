@@ -15,7 +15,7 @@ public protocol TerminalProtocol: AutoMockable
     func runExecutable(_ executable: ExecutableProtocol) throws -> [String]
 
     @discardableResult
-    func runProcess(_ processTask: Process) throws -> [String]
+    func runProcess(_ processTask: ProcessProtocol) throws -> [String]
 }
 
 public struct Terminal: TerminalProtocol
@@ -54,12 +54,12 @@ public struct Terminal: TerminalProtocol
         return try runProcess(processTask)
     }
 
-    public func runProcess(_ processTask: Process) throws -> [String]
+    public func runProcess(_ processTask: ProcessProtocol) throws -> [String]
     {
         return try runProcess(processTask, task: nil)
     }
 
-    public func runProcess(_ processTask: Process, task: TerminalTask?) throws -> [String]
+    public func runProcess(_ processTask: ProcessProtocol, task: TerminalTask?) throws -> [String]
     {
         var finalResult = [String]()
 
@@ -107,21 +107,9 @@ public struct Terminal: TerminalProtocol
             }
         }
 
-        guard let result = output, result.count >= 2 else
+        guard let result = output else
         {
-            if let task = task
-            {
-                throw Terminal.Error.emptyOutputFromTask(task)
-            }
-            else if let output = output
-            {
-                finalResult.append(contentsOf: output)
-                throw Terminal.Error.unknownTask(errorOutput: finalResult)
-            }
-            else
-            {
-                throw Terminal.Error.unknownTask(errorOutput: ["No exit code or output"])
-            }
+            return finalResult
         }
 
         finalResult.append(contentsOf: result)

@@ -27,7 +27,7 @@ public struct TestOptions: TestOptionsProtocol, AutoGenerateProtocol
     public let resultBundlePath: String // -resultBundlePath
     public let derivedDataPath: FolderProtocol?
 
-    private let executableProvider: SystemExecutableProviderProtocol
+    private let executableProvider: SystemProtocol
 
     public init(
         scheme: String,
@@ -36,7 +36,7 @@ public struct TestOptions: TestOptionsProtocol, AutoGenerateProtocol
         resultBundlePath: String,
         fileSystem: FileSystem = FileSystem(),
         derivedDataPath: FolderProtocol?,
-        executableProvider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared
+        executableProvider: SystemProtocol = System.shared
     ) throws
     {
         guard fileSystem.itemKind(at: resultBundlePath) == nil else

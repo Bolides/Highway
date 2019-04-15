@@ -8,13 +8,13 @@ public struct GitTool: AutoGenerateProtocol
 {
     // MARK: - Properties
 
-    private let systemExecutableProvider: SystemExecutableProviderProtocol
+    private let systemExecutableProvider: SystemProtocol
     private let terminal: TerminalProtocol
 
     // MARK: - Init
 
     public init(
-        systemExecutableProvider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared,
+        systemExecutableProvider: SystemProtocol = System.shared,
         terminal: TerminalProtocol = Terminal.shared
     )
     {
@@ -34,29 +34,40 @@ public struct GitTool: AutoGenerateProtocol
 
 extension GitTool: GitToolProtocol
 {
-    public func addAll() throws
+    public func isClean() throws -> Bool
     {
-        _ = try terminal.runProcess(try _git(with: ["add", "."]).toProcess)
+        let _status = try status()
+        return !_status.contains("Changes")
     }
 
-    public func commit(message: String) throws
+    public func status() throws -> [String]
     {
-        _ = try terminal.runProcess(try _git(with: ["commit", "-m", message]).toProcess)
+        return try terminal.runProcess(try _git(with: ["status"]).toProcess)
     }
 
-    public func pushToMaster() throws
+    public func addAll() throws -> [String]
     {
-        _ = try terminal.runProcess(try _git(with: ["push", "origin", "master"]).toProcess)
+        return try terminal.runProcess(try _git(with: ["add", "."]).toProcess)
     }
 
-    public func pushTagsToMaster() throws
+    public func commit(message: String) throws -> [String]
     {
-        _ = try terminal.runProcess(try _git(with: ["push", "--tags"]).toProcess)
+        return try terminal.runProcess(try _git(with: ["commit", "-m", message]).toProcess)
     }
 
-    public func pull() throws
+    public func pushToMaster() throws -> [String]
     {
-        _ = try terminal.runProcess(try _git(with: ["pull"]).toProcess)
+        return try terminal.runProcess(try _git(with: ["push", "origin", "master"]).toProcess)
+    }
+
+    public func pushTagsToMaster() throws -> [String]
+    {
+        return try terminal.runProcess(try _git(with: ["push", "--tags"]).toProcess)
+    }
+
+    public func pull() throws -> [String]
+    {
+        return try terminal.runProcess(try _git(with: ["pull"]).toProcess)
     }
 
     public func currentTag() throws -> [String]

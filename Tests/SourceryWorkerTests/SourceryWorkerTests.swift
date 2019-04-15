@@ -37,7 +37,7 @@ class SourceryWorkerSpec: QuickSpec
             var sut: SourceryWorker?
 
             var sourcery: SourceryProtocolMock!
-            var terminalWorker: TerminalProtocolMock!
+            var terminal: TerminalProtocolMock!
             var signPost: SignPostProtocolMock!
             var queue: HighwayDispatchProtocolMock!
 
@@ -46,7 +46,7 @@ class SourceryWorkerSpec: QuickSpec
                 expect
                 {
                     signPost = SignPostProtocolMock()
-                    sourcery = try SourceryProtocolMock(productName: "Mock", swiftPackageDependencies: DependencyProtocolMock(), swiftPackageDump: DumpProtocolMock(), sourceryExecutable: try! FileProtocolMock(), signPost: signPost)
+                    sourcery = try SourceryProtocolMock(productName: "Mock", swiftPackageDependencies: DependencyProtocolMock(), swiftPackageDump: DumpProtocolMock(), sourceryBuilder: SourceryBuilderProtocolMock(), signPost: signPost)
                     let sourcesFolder = try! FolderProtocolMock()
                     sourcery.sourcesFolders = [sourcesFolder]
                     let file = try! File(path: #file)
@@ -55,15 +55,16 @@ class SourceryWorkerSpec: QuickSpec
                     sourcery.outputFolder = sourcesFolder
                     sourcery.underlyingImports = Set([TemplatePrepend(name: Set([TemplatePrepend.Import(name: "MockImport")]), template: "MockTemplate")])
 
-                    terminalWorker = TerminalProtocolMock()
-                    terminalWorker.terminalTaskReturnValue = ["mocked terminal output"]
+                    terminal = TerminalProtocolMock()
+                    terminal.terminalTaskReturnValue = ["mocked terminal output"]
 
                     queue = HighwayDispatchProtocolMock()
                     queue.asyncSyncClosure = { $0() }
 
-                    sut = try SourceryWorker(
+                    sourcery.underlyingSourceryYMLFile = try! FileProtocolMock()
+                    sut = SourceryWorker(
                         sourcery: sourcery,
-                        terminalWorker: terminalWorker,
+                        terminal: terminal,
                         signPost: signPost,
                         queue: queue
                     )
@@ -80,7 +81,9 @@ class SourceryWorkerSpec: QuickSpec
             {
                 var result: SourceryWorker.SyncOutput?
 
-                sut?.attempt { result = $0 }
+                terminal.runProcessClosure = { _ in ["mocked success"] }
+
+                sut?.attempt(in: try! FolderProtocolMock()) { result = $0 }
 
                 expect(result).toNot(beNil())
                 expect { try result?() }.toNot(throwError())

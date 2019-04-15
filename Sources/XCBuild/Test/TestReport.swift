@@ -74,7 +74,7 @@ public struct TestReport: TestReportProtocol, AutoGenerateProtocol, CustomString
             return """
             \(TestReport.self) build failed with errors \(buildErrors.count)
             
-            \(buildErrors.enumerated().map { "    \($0.offset + 1) - \($0.element) " }.joined(separator: "\n"))
+            \(buildErrors.enumerated().map { "    \($0.offset + 1) - \($0.element.components(separatedBy: ": failed -").joined(separator: "\n")) " }.joined(separator: "\n"))
             
             """
         }

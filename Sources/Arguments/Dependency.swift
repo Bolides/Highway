@@ -23,6 +23,7 @@ public protocol DependencyProtocol: AutoMockable
     func gitHooks() throws -> FolderProtocol
     func srcRoot() throws -> FolderProtocol
     func templateFolder() throws -> FolderProtocol
+    func templateFolder(expectedName: String) throws -> FolderProtocol
     func sourceryFolder() throws -> FolderProtocol
     func sourceryAutoProtocolFile() throws -> FileProtocol
     // sourcery:end
@@ -37,43 +38,19 @@ public struct Dependency: Decodable, DependencyProtocol, CustomStringConvertible
 
     public let dependencies: [Dependency]
 
-    public func gitHooks() throws -> FolderProtocol
+    public init(
+        name: String,
+        path: String,
+        url: URL,
+        version: String,
+        dependencies: [Dependency]
+    )
     {
-        return try srcRoot().subfolder(named: ".git/hooks")
-    }
-
-    public func srcRoot() throws -> FolderProtocol
-    {
-        return try Folder(path: path)
-    }
-
-    public func templateFolder() throws -> FolderProtocol
-    {
-        let expectedName = "template-sourcery"
-
-        guard let templatePackage = (dependencies.first { $0.name == expectedName }) else
-        {
-            guard name == expectedName else
-            {
-                throw HighwayError.missingTemplateFolder("\(Dependency.self) \(#function) \(#line):")
-            }
-            return try srcRoot().subfolder(named: "Sources/stencil")
-        }
-        return try Folder(path: templatePackage.path)
-    }
-
-    public func sourceryFolder() throws -> FolderProtocol
-    {
-        guard let sourceryPackage = (dependencies.first { $0.name == "Sourcery" }) else
-        {
-            throw HighwayError.highwayError(atLocation: "\(Dependency.self) \(#function) \(#line):", error: HighwayError.missingSourcery(""))
-        }
-        return try Folder(path: sourceryPackage.path)
-    }
-
-    public func sourceryAutoProtocolFile() throws -> FileProtocol
-    {
-        return try templateFolder().subfolder(named: "Sources/SourceryAutoProtocols").file(named: "SourceryAutoProtocols.swift")
+        self.name = name
+        self.path = path
+        self.url = url
+        self.version = version
+        self.dependencies = dependencies
     }
 
     public var description: String
@@ -90,5 +67,46 @@ public struct Dependency: Decodable, DependencyProtocol, CustomStringConvertible
         \(dependencies.map { "  * \($0.name)" }.joined(separator: "\n"))
         
         """
+    }
+
+    // MARK: - Public Functions
+
+    public func gitHooks() throws -> FolderProtocol
+    {
+        return try srcRoot().subfolder(named: ".git/hooks")
+    }
+
+    public func srcRoot() throws -> FolderProtocol
+    {
+        return try Folder(path: path)
+    }
+
+    /// Will look for package named "template-sourcery"
+    public func templateFolder() throws -> FolderProtocol
+    {
+        return try templateFolder(expectedName: "template-sourcery")
+    }
+
+    public func templateFolder(expectedName: String) throws -> FolderProtocol
+    {
+        guard let templatePackage = (dependencies.first { $0.name == expectedName }) else
+        {
+            throw HighwayError.missingTemplateFolder("\(Dependency.self) \(#function) \(#line):")
+        }
+        return try Folder(path: templatePackage.path)
+    }
+
+    public func sourceryFolder() throws -> FolderProtocol
+    {
+        guard let sourceryPackage = (dependencies.first { $0.name == "Sourcery" }) else
+        {
+            throw HighwayError.highwayError(atLocation: "\(Dependency.self) \(#function) \(#line):", error: HighwayError.missingSourcery(""))
+        }
+        return try Folder(path: sourceryPackage.path)
+    }
+
+    public func sourceryAutoProtocolFile() throws -> FileProtocol
+    {
+        return try templateFolder().subfolder(named: "Sources/SourceryAutoProtocols").file(named: "SourceryAutoProtocols.swift")
     }
 }

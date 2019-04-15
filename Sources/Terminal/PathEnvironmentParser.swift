@@ -1,7 +1,7 @@
 import Arguments
 import Errors
 import Foundation
-import POSIX
+import HWPOSIX
 import SignPost
 import SourceryAutoProtocols
 import Url

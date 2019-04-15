@@ -4,6 +4,20 @@ import SignPost
 import SourceryAutoProtocols
 import ZFile
 
+public protocol ProcessProtocol: class, AutoMockable
+{
+    var standardInput: Any? { get set }
+    var standardOutput: Any? { get set }
+    var standardError: Any? { get set }
+    var terminationStatus: Int32 { get }
+    var arguments: [String]? { get set }
+    var currentDirectoryPath: String { get set }
+
+    func launch()
+    func waitUntilExit()
+    func executableFile() throws -> FileProtocol
+}
+
 public protocol TaskProtocol: AutoMockable
 {
     // sourcery:inline:Task.AutoGenerateProtocol
@@ -16,7 +30,7 @@ public protocol TaskProtocol: AutoMockable
     var readOutputString: String? { get }
     var trimmedOutput: String? { get }
     var capturedOutputString: String? { get }
-    var toProcess: Process { get }
+    var toProcess: ProcessProtocol { get }
     var description: String { get }
 
     func enableReadableOutputDataCapturing()
@@ -39,7 +53,7 @@ public class Task: TaskProtocol, AutoGenerateProtocol
 
     // MARK: - Init
 
-    public convenience init(commandName: String, arguments: Arguments = Arguments([]), fileSystem: FileSystemProtocol = FileSystem.shared, provider: SystemExecutableProviderProtocol = SystemExecutableProvider.shared, signPost: SignPostProtocol = SignPost.shared) throws
+    public convenience init(commandName: String, arguments: Arguments = Arguments([]), fileSystem: FileSystemProtocol = FileSystem.shared, provider: SystemProtocol = System.shared, signPost: SignPostProtocol = SignPost.shared) throws
     {
         self.init(
             executable: try provider.executable(with: commandName),
@@ -95,7 +109,7 @@ public class Task: TaskProtocol, AutoGenerateProtocol
         return String(data: data, encoding: .utf8)
     }
 
-    public var toProcess: Process
+    public var toProcess: ProcessProtocol
     {
         let result = Process()
         result.arguments = arguments.all
@@ -111,6 +125,9 @@ public class Task: TaskProtocol, AutoGenerateProtocol
 
     private var io = IO()
 }
+
+extension Process: ProcessProtocol
+{}
 
 extension Task: CustomStringConvertible
 {

@@ -10,20 +10,21 @@ import HighwayDispatch
 import SignPost
 import SourceryAutoProtocols
 import Terminal
+import ZFile
 
-public protocol SourceryWorkerProtocol: AutoMockable
+public protocol SourceryWorkerProtocol: class, AutoMockable
 {
     // sourcery:inline:SourceryWorker.AutoGenerateProtocol
-    var sourcery: SourceryProtocol { get }
+    var name: String { get }
+    var sourceryYMLFile: FileProtocol { get }
 
     init(
         sourcery: SourceryProtocol,
-        terminalWorker: TerminalProtocol,
+        terminal: TerminalProtocol,
         signPost: SignPostProtocol,
         queue: HighwayDispatchProtocol
-    ) throws
-    func executor() throws -> ArgumentExecutableProtocol
-    func attempt(_ asyncSourceryWorkerOutput: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
+    )
+    func attempt(in folder: FolderProtocol, _ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
 
     // sourcery:end
 }

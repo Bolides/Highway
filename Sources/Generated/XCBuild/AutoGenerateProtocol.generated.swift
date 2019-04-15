@@ -14,16 +14,18 @@ import Foundation
 //: - of the above it does not add it if  // sourcery:skipProtocol
 //: ---
 
+// version 5.5
 /*
 
- // Generated protocol inline for Archive -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for Archive ..
  // sourcery:inline:Archive.AutoGenerateProtocol
  var archiveFolder: FolderProtocol { get }
  var appFolder: FolderProtocol { get }
  var plist: ArchivePlistProtocol { get }
 
  // sourcery:end
- // Generated protocol inline for ArchiveOptions -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for Archive ✅
+ // types.implementing.AutoGenerateProtocol inline for ArchiveOptions ..
  // sourcery:inline:ArchiveOptions.AutoGenerateProtocol
  var scheme: String { get }
  var project: String { get }
@@ -31,45 +33,52 @@ import Foundation
  var archivePath: String { get }
 
  // sourcery:end
- // Generated protocol inline for ArchivePlist -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for ArchiveOptions ✅
+ // types.implementing.AutoGenerateProtocol inline for ArchivePlist ..
  // sourcery:inline:ArchivePlist.AutoGenerateProtocol
  var applicationProperties: String { get }
  var applicationPath: String { get }
 
  // sourcery:end
- // Generated protocol inline for Destination -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for ArchivePlist ✅
+ // types.implementing.AutoGenerateProtocol inline for Destination ..
  // sourcery:inline:Destination.AutoGenerateProtocol
  var raw: [String: String] { get set }
  var asString: String { get }
 
  // sourcery:end
- // Generated protocol inline for DestinationFactory -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for Destination ✅
+ // types.implementing.AutoGenerateProtocol inline for DestinationFactory ..
  // sourcery:inline:DestinationFactory.AutoGenerateProtocol
 
  func macOS(architecture: Destination.Architecture) -> Destination
  func device(_ device: Destination.Device, name: String?, isGeneric: Bool, id: String?) -> Destination
  func simulator(_ simulator: Destination.Simulator, name: String, os: Destination.OS, id: String?) -> Destination
  // sourcery:end
- // Generated protocol inline for Export -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for DestinationFactory ✅
+ // types.implementing.AutoGenerateProtocol inline for Export ..
  // sourcery:inline:Export.AutoGenerateProtocol
  var folder: FolderProtocol { get }
  var ipa: FileProtocol { get }
 
  // sourcery:end
- // Generated protocol inline for ExportArchiveOptions -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for Export ✅
+ // types.implementing.AutoGenerateProtocol inline for ExportArchiveOptions ..
  // sourcery:inline:ExportArchiveOptions.AutoGenerateProtocol
  var archivePath: FolderProtocol { get }
  var exportPath: String { get }
 
  func encode(to encoder: Encoder) throws
  // sourcery:end
- // Generated protocol inline for MinimalTestOptions -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for ExportArchiveOptions ✅
+ // types.implementing.AutoGenerateProtocol inline for MinimalTestOptions ..
  // sourcery:inline:MinimalTestOptions.AutoGenerateProtocol
  var description: String { get }
 
  func arguments() throws  -> Arguments
  // sourcery:end
- // Generated protocol inline for TestOptions -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for MinimalTestOptions ✅
+ // types.implementing.AutoGenerateProtocol inline for TestOptions ..
  // sourcery:inline:TestOptions.AutoGenerateProtocol
  var scheme: String { get }
  var project: String { get }
@@ -80,7 +89,8 @@ import Foundation
  func arguments() throws  -> Arguments
  func executableFile() throws  -> FileProtocol
  // sourcery:end
- // Generated protocol inline for TestReport -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for TestOptions ✅
+ // types.implementing.AutoGenerateProtocol inline for TestReport ..
  // sourcery:inline:TestReport.AutoGenerateProtocol
  var failingTests: ArraySlice<String>? { get }
  var buildErrors: [String]? { get }
@@ -89,7 +99,8 @@ import Foundation
 
  func failedTests() -> String
  // sourcery:end
- // Generated protocol inline for XCBuild -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for TestReport ✅
+ // types.implementing.AutoGenerateProtocol inline for XCBuild ..
  // sourcery:inline:XCBuild.AutoGenerateProtocol
 
  func findPosibleDestinations(for scheme: String, in workspace: FolderProtocol) throws  -> [String]
@@ -97,7 +108,8 @@ import Foundation
  func export(using options: ExportArchiveOptionsProtocol) throws  -> ExportProtocol
  func buildAndTest(using options: MinimalTestOptionsProtocol) throws  -> TestReportProtocol
  // sourcery:end
- // Generated protocol inline for XCBuildDestinations -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for XCBuild ✅
+ // types.implementing.AutoGenerateProtocol inline for XCBuildDestinations ..
  // sourcery:inline:XCBuildDestinations.AutoGenerateProtocol
  var platform: Destination.Platform { get }
  var id: String { get }
@@ -105,26 +117,6 @@ import Foundation
  var os: Destination.OS { get }
 
  // sourcery:end
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
-
- // Generated protocol inline for  -> See code in the file of that type
+ // types.implementing.AutoGenerateProtocol inline for XCBuildDestinations ✅
 
  */

@@ -14,10 +14,10 @@ import ZFile
 public struct PodExecutable: ArgumentExecutableProtocol
 {
     private let signPost: SignPostProtocol
-    private let system: SystemExecutableProviderProtocol
+    private let system: SystemProtocol
 
     public init(
-        system: SystemExecutableProviderProtocol = SystemExecutableProvider.shared,
+        system: SystemProtocol = System.shared,
         signPost: SignPostProtocol = SignPost.shared
     )
     {

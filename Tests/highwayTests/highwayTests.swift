@@ -10,6 +10,7 @@ import Nimble
 import Quick
 import SignPost
 import SignPostMock
+import SourceryWorker
 import SourceryWorkerMock
 import SwiftFormatWorkerMock
 import Terminal
@@ -30,9 +31,9 @@ private class SourceryBuilderMock: SourceryBuilderProtocolMock
 {
     let executable = try! FileProtocolMock()
 
-    required init(swiftPackageWithSourceryFolder: FolderProtocol, terminal: TerminalProtocol, signPost: SignPostProtocol, systemExecutableProvider: SystemExecutableProviderProtocol)
+    override init()
     {
-        super.init(swiftPackageWithSourceryFolder: swiftPackageWithSourceryFolder, terminal: terminal, signPost: signPost, systemExecutableProvider: systemExecutableProvider)
+        super.init()
         attemptToBuildSourceryIfNeededClosure = {
             self.executable
         }
@@ -41,9 +42,9 @@ private class SourceryBuilderMock: SourceryBuilderProtocolMock
 
 private class SourceryMock: SourceryProtocolMock
 {
-    required init(productName: String, swiftPackageDependencies: DependencyProtocol, swiftPackageDump: DumpProtocol, sourceryExecutable: FileProtocol, signPost: SignPostProtocol) throws
+    required init(productName: String, swiftPackageDependencies: DependencyProtocol, swiftPackageDump: DumpProtocol, sourceryBuilder: SourceryBuilderProtocol, signPost: SignPostProtocol) throws
     {
-        try super.init(productName: productName, swiftPackageDependencies: swiftPackageDependencies, swiftPackageDump: swiftPackageDump, sourceryExecutable: sourceryExecutable, signPost: signPost)
+        try super.init(productName: productName, swiftPackageDependencies: swiftPackageDependencies, swiftPackageDump: swiftPackageDump, sourceryBuilder: sourceryBuilder, signPost: signPost)
     }
 }
 
@@ -63,6 +64,7 @@ class HighwaySpec: QuickSpec
     var signPost: SignPostProtocolMock!
     var queue: HighwayDispatchProtocolMock!
     var dependencyService: DependencyServiceProtocolMock!
+    var dependencies: DependencyProtocolMock!
 
     override func spec()
     {
@@ -76,18 +78,18 @@ class HighwaySpec: QuickSpec
                     srcRoot.subfolderNamedClosure = { _ in
                         try! FolderProtocolMock()
                     }
-                    let dependencies = DependencyProtocolMock()
-                    dependencies.srcRootReturnValue = srcRoot
+                    self.dependencies = DependencyProtocolMock()
+                    self.dependencies.srcRootReturnValue = srcRoot
 
                     let dump = DumpProtocolMock()
                     dump.underlyingProducts = Set([SwiftProduct(name: "MockProduct", product_type: "library")])
 
                     self.rootPackage = PackageProtocolMock()
-                    self.rootPackage.underlyingDependencies = dependencies
+                    self.rootPackage.underlyingDependencies = self.dependencies
                     self.rootPackage.underlyingDump = dump
 
                     self.highwaySetupPackageMock = PackageProtocolMock()
-                    self.highwaySetupPackageMock.underlyingDependencies = dependencies
+                    self.highwaySetupPackageMock.underlyingDependencies = self.dependencies
                     self.highwaySetupPackageMock.underlyingDump = dump
 
                     self.highwaySetupPackage = (package: self.highwaySetupPackageMock, executable: "Mock")
@@ -154,7 +156,7 @@ class HighwaySpec: QuickSpec
                     }
                     """.components(separatedBy: "\n")
 
-                    self.terminal.runProcessClosure = { (process: Process) in
+                    self.terminal.runProcessClosure = { process in
 
                         let command = try process.executableFile().path
                         guard
@@ -183,19 +185,14 @@ class HighwaySpec: QuickSpec
                     self.queue.asyncSyncClosure = { $0() }
 
                     self.dependencyService = DependencyServiceProtocolMock()
-                    self.dependencyService.generateDependencyReturnValue = dependencies
-
-                    let swiftPackageWithSourceryFolder = try FolderProtocolMock()
+                    self.dependencyService.generateDependencyReturnValue = self.dependencies
 
                     self.sut = try Highway(
-                        package: (package: self.rootPackage, executable: "MockedSetup"),
-                        extraFolders: self.extraFolders,
+                        package: self.rootPackage,
                         dependencyService: self.dependencyService,
-                        swiftPackageWithSourceryFolder: swiftPackageWithSourceryFolder,
-                        swiftformatType: SWM.self,
+                        sourceryBuilder: SourceryBuilderMock(), swiftformatType: SWM.self,
                         githooksType: GHWM.self,
                         sourceryWorkerType: SourceryWorkerMock.self,
-                        sourceryBuilderType: SourceryBuilderMock.self,
                         terminal: self.terminal,
                         signPost: self.signPost,
                         queue: self.queue,
@@ -208,6 +205,25 @@ class HighwaySpec: QuickSpec
             it("highway setup and mocked")
             {
                 expect(self.sut).toNot(beNil())
+            }
+
+            context("Dependency with name")
+            {
+                let location = "M (159, 72) Highway.swift dependency(with:)"
+                it("unknown")
+                {
+                    let name = "unknown dependency"
+                    let expectedError = Highway.Error.missingDepencencyNamed(name)
+                    expect { try self.sut?.dependency(with: name) }.to(throwError { expect("\($0)") == "\(HighwayError.highwayError(atLocation: location, error: expectedError))" })
+                }
+
+                it("knwon")
+                {
+                    let name = "known dependency"
+                    let dependencies = [Dependency(name: name, path: "", url: URL(string: "http://www.bolides.be")!, version: "", dependencies: [])]
+                    self.dependencies.dependencies = dependencies
+                    expect { try self.sut?.dependency(with: name).name } == name
+                }
             }
         }
     }

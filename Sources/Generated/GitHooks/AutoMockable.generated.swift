@@ -17,6 +17,13 @@ open class GitHooksWorkerProtocolMock: GitHooksWorkerProtocol
 {
     public init() {}
 
+    public static var defaultOptions: String
+    {
+        get { return underlyingDefaultOptions }
+        set(value) { underlyingDefaultOptions = value }
+    }
+
+    public static var underlyingDefaultOptions: String = "AutoMockable filled value"
     public static var prepushBashScript: String
     {
         get { return underlyingPrepushBashScript }
@@ -27,18 +34,18 @@ open class GitHooksWorkerProtocolMock: GitHooksWorkerProtocol
 
     // MARK: - <init> - parameters
 
-    public var initSwiftPackageDependenciesSwiftPackageDumpHwSetupExecutableProductNameGitHooksFolderSignPostReceivedArguments: (swiftPackageDependencies: DependencyProtocol, swiftPackageDump: DumpProtocol, hwSetupExecutableProductName: String?, gitHooksFolder: FolderProtocol?, signPost: SignPostProtocol)?
+    public var initSwiftPackageDependenciesSwiftPackageDumpCommandlineOptionsHwSetupExecutableProductNamePrePushScriptCommandlineOptionsGitHooksFolderSignPostReceivedArguments: (swiftPackageDependencies: DependencyProtocol, swiftPackageDump: DumpProtocol, commandlineOptions: Set<GitHooksWorker.Option>, hwSetupExecutableProductName: String?, prePushScriptCommandlineOptions: String?, gitHooksFolder: FolderProtocol?, signPost: SignPostProtocol)?
 
     // MARK: - <init> - closure mocks
 
-    public var initSwiftPackageDependenciesSwiftPackageDumpHwSetupExecutableProductNameGitHooksFolderSignPostClosure: ((DependencyProtocol, DumpProtocol, String?, FolderProtocol?, SignPostProtocol) -> Void)?
+    public var initSwiftPackageDependenciesSwiftPackageDumpCommandlineOptionsHwSetupExecutableProductNamePrePushScriptCommandlineOptionsGitHooksFolderSignPostClosure: ((DependencyProtocol, DumpProtocol, Set<GitHooksWorker.Option>, String?, String?, FolderProtocol?, SignPostProtocol) -> Void)?
 
     // MARK: - <init> - initializer mocked
 
-    public required init(swiftPackageDependencies: DependencyProtocol, swiftPackageDump: DumpProtocol, hwSetupExecutableProductName: String?, gitHooksFolder: FolderProtocol?, signPost: SignPostProtocol)
+    public required init(swiftPackageDependencies: DependencyProtocol, swiftPackageDump: DumpProtocol, commandlineOptions: Set<GitHooksWorker.Option>, hwSetupExecutableProductName: String?, prePushScriptCommandlineOptions: String?, gitHooksFolder: FolderProtocol?, signPost: SignPostProtocol)
     {
-        initSwiftPackageDependenciesSwiftPackageDumpHwSetupExecutableProductNameGitHooksFolderSignPostReceivedArguments = (swiftPackageDependencies: swiftPackageDependencies, swiftPackageDump: swiftPackageDump, hwSetupExecutableProductName: hwSetupExecutableProductName, gitHooksFolder: gitHooksFolder, signPost: signPost)
-        initSwiftPackageDependenciesSwiftPackageDumpHwSetupExecutableProductNameGitHooksFolderSignPostClosure?(swiftPackageDependencies, swiftPackageDump, hwSetupExecutableProductName, gitHooksFolder, signPost)
+        initSwiftPackageDependenciesSwiftPackageDumpCommandlineOptionsHwSetupExecutableProductNamePrePushScriptCommandlineOptionsGitHooksFolderSignPostReceivedArguments = (swiftPackageDependencies: swiftPackageDependencies, swiftPackageDump: swiftPackageDump, commandlineOptions: commandlineOptions, hwSetupExecutableProductName: hwSetupExecutableProductName, prePushScriptCommandlineOptions: prePushScriptCommandlineOptions, gitHooksFolder: gitHooksFolder, signPost: signPost)
+        initSwiftPackageDependenciesSwiftPackageDumpCommandlineOptionsHwSetupExecutableProductNamePrePushScriptCommandlineOptionsGitHooksFolderSignPostClosure?(swiftPackageDependencies, swiftPackageDump, commandlineOptions, hwSetupExecutableProductName, prePushScriptCommandlineOptions, gitHooksFolder, signPost)
     }
 
     // MARK: - <addPrePushToGitHooks> - parameters
@@ -74,3 +81,29 @@ open class GitHooksWorkerProtocolMock: GitHooksWorkerProtocol
 }
 
 // MARK: - OBJECTIVE-C
+
+// MARK: - Sourcery Errors
+
+public enum SourceryMockError: Swift.Error, Hashable
+{
+    case implementErrorCaseFor(String)
+    case subclassMockBeforeUsing(String)
+
+    public var debugDescription: String
+    {
+        switch self
+        {
+        case let .implementErrorCaseFor(message):
+            return """
+            🧙‍♂️ SourceryMockError.implementErrorCaseFor:
+            message: \(message)
+            """
+        case let .subclassMockBeforeUsing(message):
+            return """
+            \n
+            🧙‍♂️ SourceryMockError.subclassMockBeforeUsing:
+            message: \(message)
+            """
+        }
+    }
+}
