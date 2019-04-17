@@ -354,35 +354,35 @@ open class ProcessProtocolMock: ProcessProtocol
         return closureReturn()
     }
 
-    // MARK: - <run> - parameters
+    // MARK: - <_run> - parameters
 
-    public var runThrowableError: Error?
-    public var runCallsCount = 0
-    public var runCalled: Bool
+    public var _RunThrowableError: Error?
+    public var _RunCallsCount = 0
+    public var _RunCalled: Bool
     {
-        return runCallsCount > 0
+        return _RunCallsCount > 0
     }
 
-    // MARK: - <run> - closure mocks
+    // MARK: - <_run> - closure mocks
 
-    public var runClosure: (() throws -> Void)?
+    public var _RunClosure: (() throws -> Void)?
 
-    // MARK: - <run> - method mocked
+    // MARK: - <_run> - method mocked
 
-    open func run() throws
+    open func _run() throws
     {
-        // <run> - Throwable method implementation
+        // <_run> - Throwable method implementation
 
-        if let error = runThrowableError
+        if let error = _RunThrowableError
         {
             throw error
         }
 
-        runCallsCount += 1
+        _RunCallsCount += 1
 
-        // <run> - Void return mock implementation
+        // <_run> - Void return mock implementation
 
-        try runClosure?()
+        try _RunClosure?()
     }
 
     // MARK: - <waitUntilExit> - parameters

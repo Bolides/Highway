@@ -80,7 +80,7 @@ public struct Terminal: TerminalProtocol
         processTask.standardOutput = pipe
         processTask.standardError = pipe
 
-        try processTask.run()
+        try processTask._run()
 
         dispatchGroup.enter()
 
