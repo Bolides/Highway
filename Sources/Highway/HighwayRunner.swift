@@ -153,7 +153,10 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
             do
             {
                 let task = try self.system.process("swift")
-                task.arguments = ["test"]
+                let config = try self.highway.package.dependencies.srcRoot().subfolder(named: "Sources").createFileIfNeeded(named: "macos.xcconfig")
+                try config.write(string: "MACOSX_DEPLOYMENT_TARGET = 10.13")
+
+                task.arguments = ["package", "generate-xcodeproj", "--xcconfig-overrides", "Sources/macos.xcconfig"]
                 task.currentDirectoryPath = try self.highway.package.dependencies.srcRoot().path
 
                 let output = try self.terminal.runProcess(task)
