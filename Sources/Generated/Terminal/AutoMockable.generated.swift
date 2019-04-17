@@ -304,28 +304,85 @@ open class ProcessProtocolMock: ProcessProtocol
     }
 
     public var underlyingCurrentDirectoryPath: String = "AutoMockable filled value"
-
-    // MARK: - <launch> - parameters
-
-    public var launchCallsCount = 0
-    public var launchCalled: Bool
+    public var isRunning: Bool
     {
-        return launchCallsCount > 0
+        get { return underlyingIsRunning }
+        set(value) { underlyingIsRunning = value }
     }
 
-    // MARK: - <launch> - closure mocks
+    public var underlyingIsRunning: Bool = false
+    public var terminationHandler: ((Process) -> Void)?
 
-    public var launchClosure: (() -> Void)?
+    // MARK: - <resume> - parameters
 
-    // MARK: - <launch> - method mocked
-
-    open func launch()
+    public var resumeCallsCount = 0
+    public var resumeCalled: Bool
     {
-        launchCallsCount += 1
+        return resumeCallsCount > 0
+    }
 
-        // <launch> - Void return mock implementation
+    public var resumeReturnValue: Bool?
 
-        launchClosure?()
+    // MARK: - <resume> - closure mocks
+
+    public var resumeClosure: (() -> Bool)?
+
+    // MARK: - <resume> - method mocked
+
+    open func resume() -> Bool
+    {
+        resumeCallsCount += 1
+
+        // <resume> - Return Value mock implementation
+
+        guard let closureReturn = resumeClosure else
+        {
+            guard let returnValue = resumeReturnValue else
+            {
+                let message = "No returnValue implemented for resumeClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement Bool
+
+                print("❌ \(error)")
+
+                fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
+            }
+            return returnValue
+        }
+
+        return closureReturn()
+    }
+
+    // MARK: - <run> - parameters
+
+    public var runThrowableError: Error?
+    public var runCallsCount = 0
+    public var runCalled: Bool
+    {
+        return runCallsCount > 0
+    }
+
+    // MARK: - <run> - closure mocks
+
+    public var runClosure: (() throws -> Void)?
+
+    // MARK: - <run> - method mocked
+
+    open func run() throws
+    {
+        // <run> - Throwable method implementation
+
+        if let error = runThrowableError
+        {
+            throw error
+        }
+
+        runCallsCount += 1
+
+        // <run> - Void return mock implementation
+
+        try runClosure?()
     }
 
     // MARK: - <waitUntilExit> - parameters

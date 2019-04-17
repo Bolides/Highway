@@ -13,7 +13,11 @@ public protocol ProcessProtocol: class, AutoMockable
     var arguments: [String]? { get set }
     var currentDirectoryPath: String { get set }
 
-    func launch()
+    var isRunning: Bool { get }
+    var terminationHandler: ((Process) -> Void)? { get set }
+
+    func resume() -> Bool
+    func run() throws
     func waitUntilExit()
     func executableFile() throws -> FileProtocol
 }

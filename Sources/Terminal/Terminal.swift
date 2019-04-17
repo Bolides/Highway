@@ -1,5 +1,6 @@
 import Errors
 import Foundation
+import HighwayDispatch
 import SignPost
 import SourceryAutoProtocols
 import ZFile
@@ -23,10 +24,23 @@ public struct Terminal: TerminalProtocol
     public static let shared: TerminalProtocol = Terminal()
 
     public let signPost: SignPostProtocol
+    public let dispatchGroup: HWDispatchGroupProtocol
 
-    public init(signPost: SignPostProtocol = SignPost.shared)
+    // MARK: - Private
+
+    private let outputFile: FileProtocol
+
+    // MARK: - Init
+
+    public init(
+        signPost: SignPostProtocol = SignPost.shared,
+        dispatchGroup: HWDispatchGroupProtocol = DispatchGroup(),
+        outputFile: FileProtocol = try! FileSystem.shared.temporaryFolder.createFileIfNeeded(named: "be.dooz.terminal - \(UUID().uuidString)")
+    )
     {
         self.signPost = signPost
+        self.dispatchGroup = dispatchGroup
+        self.outputFile = outputFile
     }
 
     @discardableResult
@@ -48,7 +62,7 @@ public struct Terminal: TerminalProtocol
         let processTask = Process()
         processTask.arguments = try task.executable.arguments().all
         try processTask.executable(set: try task.executable.executableFile())
-        let message = "👾  \(task.rawValue): \(processTask.executableFile)\n"
+        let message = "👾  \(task.rawValue): \(String(describing: processTask.executableFile))\n"
         signPost.verbose(message)
 
         return try runProcess(processTask)
@@ -59,62 +73,101 @@ public struct Terminal: TerminalProtocol
         return try runProcess(processTask, task: nil)
     }
 
+    // Waits in the pipe until on output of 0 length is found and reports output on success or throws failiure
     public func runProcess(_ processTask: ProcessProtocol, task: TerminalTask?) throws -> [String]
     {
-        var finalResult = [String]()
-
         let pipe = Pipe()
         processTask.standardOutput = pipe
         processTask.standardError = pipe
-        processTask.launch()
-        processTask.waitUntilExit()
 
-        let data = pipe.fileHandleForReading.readDataToEndOfFile()
-        let outputData = String(data: data, encoding: String.Encoding.utf8)
-        let output = outputData?.components(separatedBy: "\n")
+        try processTask.run()
 
-        guard let exitCode = TerminalSysExitCode(rawValue: processTask.terminationStatus) else
-        {
-            if let task = task
+        dispatchGroup.enter()
+
+        var receivedError: Swift.Error?
+
+        pipe.fileHandleForReading.readabilityHandler = { fh in
+            let data = fh.availableData
+            // process data ...
+            let outputData = String(data: data, encoding: String.Encoding.utf8)
+            let output = outputData?.components(separatedBy: "\n")
+
+            guard let result = output else
             {
-                throw Terminal.Error.errorUnkownExitCode(code: Int(processTask.terminationStatus), task: task, output: output ?? [])
+                pipe.fileHandleForReading.closeFile()
+                self.dispatchGroup.leave()
+                return
             }
-            else if let output = output
+
+            do
             {
-                finalResult.append(contentsOf: output)
-                throw Terminal.Error.unknownTask(errorOutput: finalResult)
+                try self.outputFile.append(string: result.joined(separator: "\n"))
+                if result.count == 1, result[0].count == 0 {
+                    pipe.fileHandleForReading.closeFile()
+                    self.dispatchGroup.leave()
+                }
+                else
+                {
+                    self.signPost.verbose(result.joined(separator: "\n"))
+                }
             }
-            else
+            catch
             {
-                throw Terminal.Error.unknownTask(errorOutput: ["No exit code or output"])
+                receivedError = error
+                pipe.fileHandleForReading.closeFile()
+                self.dispatchGroup.leave()
             }
         }
 
-        guard exitCode == .ok else
-        {
-            if let task = task
+        processTask.terminationHandler = { process in
+
+            guard !process.isRunning else
             {
-                throw Terminal.Error.errorExitCode(code: exitCode, task: task, output: output ?? [])
+                return
             }
-            else if let output = output
+
+            let code = process.terminationStatus
+            let exit = TerminalSysExitCode(rawValue: code)
+            let outputIfError = ["⚠️ add --verbose to inspect error output"]
+
+            guard let exitCode = exit else
             {
-                finalResult.append(contentsOf: output)
-                throw Terminal.Error.unknownTask(errorOutput: finalResult)
+                if let task = task
+                {
+                    receivedError = Terminal.Error.errorUnkownExitCode(code: Int(processTask.terminationStatus), task: task, output: outputIfError)
+                }
+                else
+                {
+                    receivedError = Terminal.Error.unknownTask(errorOutput: ["No exit code"] + outputIfError)
+                }
+                return
             }
-            else
+
+            guard exitCode == .ok else
             {
-                throw Terminal.Error.unknownTask(errorOutput: ["No exit code or output"])
+                if let task = task
+                {
+                    receivedError = Terminal.Error.errorExitCode(code: exitCode, task: task, output: outputIfError)
+                }
+                else
+                {
+                    receivedError = Terminal.Error.unknownTask(errorOutput: ["No exit code"] + outputIfError)
+                }
+
+                return
             }
         }
 
-        guard let result = output else
+        dispatchGroup.wait()
+
+        guard let exitError = receivedError else
         {
-            return finalResult
+            let output = try outputFile.readAllLines()
+            try outputFile.write(string: "")
+            return output
         }
 
-        finalResult.append(contentsOf: result)
-
-        return finalResult
+        throw exitError
     }
 
     // MARK: - Error
