@@ -162,6 +162,8 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
             }
             catch
             {
+                self.signPost.message("🛠 \(pretty_function()) ❌")
+                self.addError(error)
                 async { throw HighwayError.highwayError(atLocation: pretty_function(), error: error) }
             }
 
@@ -171,7 +173,11 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
 
     private func addError(_ error: Swift.Error?)
     {
-        if let error = error { errors?.append(error) }
+        if let error = error
+        {
+            if errors == nil { errors = [Swift.Error]() }
+            errors?.append(error)
+        }
     }
 
     // MARK: - Private
@@ -209,7 +215,9 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
                 _error = HighwayError.failedToCompleteTask(
                     "🧪 \(package.name) ❌ \n\(testReport)"
                 )
+
                 async { throw _error! }
+                context.signPost.message("🧪 swift test package \(package.name) ❌")
             }
             catch
             {
@@ -218,6 +226,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
                     error: error
                 )
                 async { throw _error! }
+                context.signPost.message("🧪 swift test package \(package.name) ❌")
             }
             context.addError(_error)
 

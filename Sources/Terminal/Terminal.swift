@@ -128,7 +128,7 @@ public struct Terminal: TerminalProtocol
 
             let code = process.terminationStatus
             let exit = TerminalSysExitCode(rawValue: code)
-            let outputIfError = ["⚠️ add --verbose to inspect error output"]
+            let outputIfError = ["⚠️ add --verbose to inspect error output"] + ((try? self.outputFile.readAllLines()) ?? [])
 
             guard let exitCode = exit else
             {
