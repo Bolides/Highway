@@ -90,7 +90,7 @@ open class HWDispatchGroupProtocolMock: HWDispatchGroupProtocol
         return notifyMainExecuteCallsCount > 0
     }
 
-    public var notifyMainExecuteReceivedWork: (() -> Void)?
+    public var notifyMainExecuteReceivedWork: (@convention(block) () -> Void)?
 
     // MARK: - <notifyMain> - closure mocks
 

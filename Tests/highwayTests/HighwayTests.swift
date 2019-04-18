@@ -17,6 +17,7 @@ import Terminal
 import TerminalMock
 import ZFile
 import ZFileMock
+import XCTest
 
 private class SWM: SwiftFormatWorkerProtocolMock
 {}
@@ -68,6 +69,16 @@ class HighwaySpec: QuickSpec
 
     override func spec()
     {
+        describe("Conditional compilation from xcconfigOverride") {
+            
+            it("should run macOS flag test") {
+                #if MacOS
+                expect(true) == true
+                #else
+                XCTFail("Should have MacOS flag when running test from command line and in xcode")
+                #endif
+            }
+        }
         describe("Highway")
         {
             beforeEach
@@ -209,7 +220,7 @@ class HighwaySpec: QuickSpec
 
             context("Dependency with name")
             {
-                let location = "M (159, 72) Highway.swift dependency(with:)"
+                let location = "M (175, 72) Highway.swift dependency(with:)"
                 it("unknown")
                 {
                     let name = "unknown dependency"

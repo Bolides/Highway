@@ -27,6 +27,8 @@ public protocol HighwayProtocol: AutoMockable
     var queue: HighwayDispatchProtocol { get }
     var githooks: GitHooksWorkerProtocol? { get }
     var swiftformat: SwiftFormatWorkerProtocol { get }
+    var xcodeConfigOverride: [String] { get }
+    var swiftCFlags: String { get }
     var highwaySetupExecutableName: String? { get }
 
     func dependency(with name: String) throws -> DependencyProtocol
@@ -67,6 +69,8 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
     public let queue: HighwayDispatchProtocol
     public let githooks: GitHooksWorkerProtocol?
     public let swiftformat: SwiftFormatWorkerProtocol
+    public let xcodeConfigOverride: [String]
+    public let swiftCFlags: String
 
     // If set to nil the only executable in the package will be used
     public let highwaySetupExecutableName: String?
@@ -104,9 +108,16 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         terminal: TerminalProtocol = Terminal.shared,
         signPost: SignPostProtocol = SignPost.shared,
         queue: HighwayDispatchProtocol = Highway.queue,
-        sourceryType: SourceryProtocol.Type = Sourcery.self
+        sourceryType: SourceryProtocol.Type = Sourcery.self,
+        xcodeConfigOverride: [String] = [
+            "MACOSX_DEPLOYMENT_TARGET = 10.13",
+            "OTHER_SWIFT_FLAGS = -DXcode -DMacOS",
+        ],
+        swiftCFlags: String = "-Xswiftc -DXcode -Xswiftc -DMacOS"
     ) throws
     {
+        self.swiftCFlags = swiftCFlags
+        self.xcodeConfigOverride = xcodeConfigOverride
         self.highwaySetupExecutableName = highwaySetupExecutableName
         self.queue = queue
         self.package = package
