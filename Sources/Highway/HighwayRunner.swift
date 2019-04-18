@@ -79,7 +79,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
     {
         do
         {
-            try highway.sourceryWorkers.forEach
+            try highway.sourceryWorkers?.forEach
             { worker in
                 signPost.message("🧙🏻‍♂️ \(worker.name) ...")
 

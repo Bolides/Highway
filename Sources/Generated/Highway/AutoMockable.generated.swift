@@ -33,14 +33,8 @@ open class HighwayProtocolMock: HighwayProtocol
     }
 
     public var underlyingPackage: PackageProtocol!
-    public var sourceryBuilder: SourceryBuilderProtocol
-    {
-        get { return underlyingSourceryBuilder }
-        set(value) { underlyingSourceryBuilder = value }
-    }
-
-    public var underlyingSourceryBuilder: SourceryBuilderProtocol!
-    public var sourceryWorkers: [SourceryWorkerProtocol] = []
+    public var sourceryBuilder: SourceryBuilderProtocol?
+    public var sourceryWorkers: [SourceryWorkerProtocol]?
     public var queue: HighwayDispatchProtocol
     {
         get { return underlyingQueue }
