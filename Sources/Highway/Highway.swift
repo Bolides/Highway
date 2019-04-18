@@ -28,7 +28,7 @@ public protocol HighwayProtocol: AutoMockable
     var githooks: GitHooksWorkerProtocol? { get }
     var swiftformat: SwiftFormatWorkerProtocol { get }
     static var xcodeConfigOverride: [String] { get set }
-    static var swiftCFlags: String { get set }
+    static var swiftCFlags: [String] { get set }
     var highwaySetupExecutableName: String? { get }
 
     func dependency(with name: String) throws -> DependencyProtocol
@@ -71,9 +71,9 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
     public let swiftformat: SwiftFormatWorkerProtocol
     public static var xcodeConfigOverride: [String] = [
         "MACOSX_DEPLOYMENT_TARGET = 10.13",
-        "OTHER_SWIFT_FLAGS = -DXcode -DMacOS",
+        "OTHER_SWIFT_FLAGS = -DMacOS",
     ]
-    public static var swiftCFlags: String = "-Xswiftc -DXcode -Xswiftc -DMacOS"
+    public static var swiftCFlags: [String] = ["-Xswiftc", "-DMacOS"]
 
     // If set to nil the only executable in the package will be used
     public let highwaySetupExecutableName: String?

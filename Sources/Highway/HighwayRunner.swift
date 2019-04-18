@@ -204,7 +204,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
             {
                 context.signPost.message("🧪 swift test package \(package.name) ... ")
                 let task = try self.system.process("swift")
-                task.arguments = ["test", Highway.swiftCFlags]
+                task.arguments = ["test"] + Highway.swiftCFlags
                 task.currentDirectoryPath = try package.dependencies.srcRoot().path
 
                 let testReport = TestReport(output: try context.terminal.runProcess(task))

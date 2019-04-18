@@ -51,13 +51,7 @@ open class HighwayProtocolMock: HighwayProtocol
 
     public var underlyingSwiftformat: SwiftFormatWorkerProtocol!
     public static var xcodeConfigOverride: [String] = []
-    public static var swiftCFlags: String
-    {
-        get { return underlyingSwiftCFlags }
-        set(value) { underlyingSwiftCFlags = value }
-    }
-
-    public static var underlyingSwiftCFlags: String = "AutoMockable filled value"
+    public static var swiftCFlags: [String] = []
     public var highwaySetupExecutableName: String?
 
     // MARK: - <dependency> - parameters

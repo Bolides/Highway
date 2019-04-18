@@ -49,16 +49,17 @@ public struct HWSetup
         dependencies: [
             "Arguments",
             "Errors",
-            "SignPost",
-            "SourceryAutoProtocols",
-            "SourceryWorker",
-            "SwiftFormatWorker",
-            "Terminal",
-            "ZFile",
-            "XCBuild",
+            "Git",
             "GitHooks",
             "Highway",
-            "Git",
+            HighwayDispatch.dependency,
+            "SignPost",
+            "SourceryWorker",
+            "SourceryAutoProtocols",
+            "SwiftFormatWorker",
+            "Terminal",
+            "XCBuild",
+            "ZFile",
         ]
     )
 }
@@ -67,16 +68,33 @@ public struct HighwayDispatch
 {
     public static let name = "\(HighwayDispatch.self)"
 
-    public static let product = Product.executable(
+    public static let product = Product.library(
         name: name,
         targets: [name]
     )
 
     public static let target = Target.target(
         name: name,
-        dependencies: ["Errors", "SignPost"]
+        dependencies: ["SourceryAutoProtocols"]
     )
 
+    public struct Mock
+    {
+        public static let name = "\(HighwayDispatch.name)Mock"
+
+        public static let product = Product.library(
+            name: name,
+            targets: [name]
+        )
+
+        public static let target = Target.target(
+            name: name,
+            dependencies: [HighwayDispatch.dependency] + HighwayDispatch.target.dependencies,
+            path: "Sources/Generated/\(HighwayDispatch.name)"
+        )
+    }
+
+    public static let mock = Mock()
     public static let dependency = Target.Dependency(stringLiteral: name)
 }
 
@@ -84,7 +102,7 @@ public struct Terminal
 {
     public static let name = "\(Terminal.self)"
 
-    public static let product = Product.executable(
+    public static let product = Product.library(
         name: name,
         targets: [name]
     )
@@ -165,10 +183,7 @@ public let package = Package(
 
         // MARK: - Library - Mocks
 
-        .library(
-            name: "HighwayDispatchMock",
-            targets: ["HighwayDispatchMock"]
-        ),
+        HighwayDispatch.Mock.product,
         .library(
             name: "SwiftFormatWorkerMock",
             targets: ["SwiftFormatWorkerMock"]
@@ -299,11 +314,7 @@ public let package = Package(
             dependencies: ["HighwayDispatch", "HWPod", "ZFileMock", "Errors"],
             path: "Sources/Generated/HWPod"
         ),
-        .target(
-            name: "HighwayDispatchMock",
-            dependencies: ["HighwayDispatch", "SignPost", "ZFileMock", "Errors"],
-            path: "Sources/Generated/HighwayDispatch"
-        ),
+        HighwayDispatch.Mock.target,
         .target(
             name: "GitHooksMock",
             dependencies: [
