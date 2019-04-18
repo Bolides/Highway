@@ -57,3 +57,4 @@ Carthage
 /Sources/.sourcery-HWCarthage.yml
 /Sources/.sourcery-HWPod.yml
 /Sources/.sourcery-HWPOSIX.yml
+.build

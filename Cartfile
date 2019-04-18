@@ -1,0 +1,4 @@
+# temporarily until iOS is fully supported
+
+github "doozMen/SignPost" ~> 1.0.2
+github "dooZdev/ZFile" ~> 2.4.5
