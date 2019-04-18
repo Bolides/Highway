@@ -26,8 +26,8 @@ import Foundation
  var queue: HighwayDispatchProtocol { get }
  var githooks: GitHooksWorkerProtocol? { get }
  var swiftformat: SwiftFormatWorkerProtocol { get }
- var xcodeConfigOverride: [String] { get }
- var swiftCFlags: String { get }
+ static var xcodeConfigOverride: [String] { get set }
+ static var swiftCFlags: String { get set }
  var highwaySetupExecutableName: String? { get }
 
  func dependency(with name: String) throws  -> DependencyProtocol

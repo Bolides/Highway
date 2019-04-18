@@ -15,9 +15,9 @@ import SourceryWorkerMock
 import SwiftFormatWorkerMock
 import Terminal
 import TerminalMock
+import XCTest
 import ZFile
 import ZFileMock
-import XCTest
 
 private class SWM: SwiftFormatWorkerProtocolMock
 {}
@@ -69,13 +69,14 @@ class HighwaySpec: QuickSpec
 
     override func spec()
     {
-        describe("Conditional compilation from xcconfigOverride") {
-            
-            it("should run macOS flag test") {
+        describe("Conditional compilation from xcconfigOverride")
+        {
+            it("should run macOS flag test")
+            {
                 #if MacOS
-                expect(true) == true
+                    expect(true) == true
                 #else
-                XCTFail("Should have MacOS flag when running test from command line and in xcode")
+                    XCTFail("Should have MacOS flag when running test from command line and in xcode")
                 #endif
             }
         }
