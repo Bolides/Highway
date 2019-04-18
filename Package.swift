@@ -3,15 +3,106 @@
 
 import PackageDescription
 
+// MARK: - External
+
+let external: [Package.Dependency] = [
+    // MARK: - External Dependencies
+
+    // MARK: - Filesystem
+
+    .package(url: "https://www.github.com/dooZdev/ZFile", "2.4.3" ..< "3.1.0"),
+
+    // MARK: - Sourcery
+
+    .package(url: "https://www.github.com/doozMen/Sourcery", "0.17.0" ..< "1.0.0"),
+    .package(url: "https://www.github.com/dooZdev/template-sourcery", "1.4.3" ..< "2.0.0"),
+
+    // MARK: - Errors
+
+    .package(url: "https://www.github.com/antitypical/Result", "4.1.0" ..< "5.1.0"),
+
+    // MARK: - Formatting
+
+    .package(url: "https://github.com/nicklockwood/SwiftFormat", "0.39.4" ..< "0.40.0"),
+
+    // MARK: - Testing
+
+    .package(url: "https://www.github.com/Quick/Quick", "1.3.4" ..< "2.1.0"),
+    .package(url: "https://www.github.com/Quick/Nimble", "7.3.4" ..< "8.1.0"),
+
+    // MARK: - Logging
+
+    .package(url: "https://www.github.com/doozMen/SignPost", "1.0.0" ..< "2.0.0"),
+]
+
+public struct HWSetup
+{
+    public static let name = "\(HWSetup.self)"
+
+    public static let product = Product.executable(
+        name: name,
+        targets: [name]
+    )
+
+    public static let target = Target.target(
+        name: "HWSetup",
+        dependencies: [
+            "Arguments",
+            "Errors",
+            "SignPost",
+            "SourceryAutoProtocols",
+            "SourceryWorker",
+            "SwiftFormatWorker",
+            "Terminal",
+            "ZFile",
+            "XCBuild",
+            "GitHooks",
+            "Highway",
+            "Git",
+        ]
+    )
+}
+
+public struct HighwayDispatch
+{
+    public static let name = "\(HighwayDispatch.self)"
+
+    public static let product = Product.executable(
+        name: name,
+        targets: [name]
+    )
+
+    public static let target = Target.target(
+        name: name,
+        dependencies: ["Errors", "SignPost"]
+    )
+
+    public static let dependency = Target.Dependency(stringLiteral: name)
+}
+
+public struct Terminal
+{
+    public static let name = "\(Terminal.self)"
+
+    public static let product = Product.executable(
+        name: name,
+        targets: [name]
+    )
+
+    public static let target = Target.target(
+        name: name,
+        dependencies: ["HWPOSIX", "Arguments", "Errors", HighwayDispatch.dependency]
+    )
+}
+
+// MARK: - Package
+
 public let package = Package(
     name: "Highway",
     products: [
         // MARK: - Executable
 
-        .executable(
-            name: "HWSetup",
-            targets: ["HWSetup"]
-        ),
+        HWSetup.product,
 
         // MARK: - Library
 
@@ -32,10 +123,7 @@ public let package = Package(
             name: "Errors",
             targets: ["Errors"]
         ),
-        .library(
-            name: "HighwayDispatch",
-            targets: ["HighwayDispatch"]
-        ),
+        HighwayDispatch.product,
 
         .library(
             name: "GitHooks",
@@ -57,10 +145,7 @@ public let package = Package(
             name: "XCBuild",
             targets: ["XCBuild"]
         ),
-        .library(
-            name: "Terminal",
-            targets: ["Terminal"]
-        ),
+        Terminal.product,
         .library(
             name: "Git",
             targets: ["Git"]
@@ -122,56 +207,11 @@ public let package = Package(
         ),
 
     ],
-    dependencies: [
-        // MARK: - External Dependencies
-
-        // MARK: - Filesystem
-
-        .package(url: "https://www.github.com/dooZdev/ZFile", "2.4.3" ..< "3.1.0"),
-
-        // MARK: - Sourcery
-
-        .package(url: "https://www.github.com/doozMen/Sourcery", "0.17.0" ..< "1.0.0"),
-        .package(url: "https://www.github.com/dooZdev/template-sourcery", "1.4.3" ..< "2.0.0"),
-
-        // MARK: - Errors
-
-        .package(url: "https://www.github.com/antitypical/Result", "4.1.0" ..< "5.1.0"),
-
-        // MARK: - Formatting
-
-        .package(url: "https://github.com/nicklockwood/SwiftFormat", "0.39.4" ..< "0.40.0"),
-
-        // MARK: - Testing
-
-        .package(url: "https://www.github.com/Quick/Quick", "1.3.4" ..< "2.1.0"),
-        .package(url: "https://www.github.com/Quick/Nimble", "7.3.4" ..< "8.1.0"),
-
-        // MARK: - Logging
-
-        .package(url: "https://www.github.com/doozMen/SignPost", "1.0.0" ..< "2.0.0"),
-
-    ],
+    dependencies: external,
     targets: [
         // MARK: - Targets
 
-        .target(
-            name: "HWSetup",
-            dependencies: [
-                "Arguments",
-                "Errors",
-                "SignPost",
-                "SourceryAutoProtocols",
-                "SourceryWorker",
-                "SwiftFormatWorker",
-                "Terminal",
-                "ZFile",
-                "XCBuild",
-                "GitHooks",
-                "Highway",
-                "Git",
-            ]
-        ),
+        HWSetup.target,
         .target(
             name: "HWCarthage",
             dependencies: ["SourceryAutoProtocols", "Highway", "ZFile", "SignPost", "Terminal"]
@@ -227,10 +267,7 @@ public let package = Package(
             name: "XCBuild",
             dependencies: ["Arguments", "Errors", "Url", "HWPOSIX", "Terminal", "Result"]
         ),
-        .target(
-            name: "Terminal",
-            dependencies: ["HWPOSIX", "Arguments", "Errors"]
-        ),
+        Terminal.target,
         .target(
             name: "Git",
             dependencies: ["Terminal", "Url", "Arguments", "Errors"]
@@ -244,10 +281,7 @@ public let package = Package(
             name: "SwiftFormatWorker",
             dependencies: ["Errors", "Arguments", "ZFile", "SwiftFormat", "HighwayDispatch"]
         ),
-        .target(
-            name: "HighwayDispatch",
-            dependencies: ["Errors", "SignPost"]
-        ),
+        HighwayDispatch.target,
         .target(
             name: "Stub",
             dependencies: []
