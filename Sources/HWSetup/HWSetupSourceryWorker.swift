@@ -9,6 +9,7 @@
 import Arguments
 import Errors
 import Foundation
+import HighwayDispatch
 import SignPost
 import SourceryAutoProtocols
 import SourceryWorker
@@ -37,14 +38,14 @@ public class HWSetupSourceryWorker: HWSetupSourceryWorkerWorkerProtocol, AutoGen
 
     private let queue: DispatchQueue
 
-    private let dispatchGroup: DispatchGroup
+    private let dispatchGroup: HWDispatchGroupProtocol
 
     // MARK: - Init
 
     public init(
         swiftPackageDependencies: DependencyProtocol,
         sourceryBuilder: SourceryBuilderProtocol,
-        dispatchGroup: DispatchGroup,
+        dispatchGroup: HWDispatchGroupProtocol,
         swiftPackageDump: DumpProtocol,
         signPost: SignPostProtocol = SignPost.shared,
         queue: DispatchQueue = HWSetupSourceryWorker.queue

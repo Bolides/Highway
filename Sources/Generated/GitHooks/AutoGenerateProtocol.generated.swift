@@ -25,8 +25,9 @@ import Foundation
  init(
    swiftPackageDependencies: DependencyProtocol,
    swiftPackageDump: DumpProtocol,
+   commandlineOptions: Set<GitHooksWorker.Option>,
    hwSetupExecutableProductName: String?,
-   options: String?,
+   prePushScriptCommandlineOptions: String?,
    gitHooksFolder: FolderProtocol?,
    signPost: SignPostProtocol
  )

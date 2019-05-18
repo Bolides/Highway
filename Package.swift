@@ -348,6 +348,7 @@ public let package = Package(
                 "ZFileMock",
                 "Errors",
                 "GitHooksMock",
+                "SignPostMock",
             ]
         ),
         .testTarget(

@@ -50,12 +50,12 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
     private let terminal: TerminalProtocol
     private let signPost: SignPostProtocol
     private let queue: HighwayDispatchProtocol
-    private let dispatchGroup: DispatchGroup
+    private let dispatchGroup: HWDispatchGroupProtocol
     private let system: SystemProtocol
 
     public init(
         highway: HighwayProtocol,
-        dispatchGroup: DispatchGroup,
+        dispatchGroup: HWDispatchGroupProtocol,
         queue: HighwayDispatchProtocol = HighwayRunner.queue,
         terminal: TerminalProtocol = Terminal.shared,
         signPost: SignPostProtocol = SignPost.shared,
