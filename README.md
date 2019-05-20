@@ -5,7 +5,7 @@
 ## Develop on Highway
 
 ``` bash
-swift build --product HWSetup -c release --static-swift-stdlib
+swift build --configuration release --static-swift-stdlib -Xswiftc -DXcode -Xswiftc -DMacOS
 # will output where the executable is build, usually
 ./.build/x86_64-apple-macosx10.10/release/HWSetup
 # after running this sourcery is setup too and you can generate code when needed

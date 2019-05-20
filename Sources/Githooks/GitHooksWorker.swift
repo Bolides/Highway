@@ -113,7 +113,7 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
             {
                 guard let _executable: SwiftProduct = (swiftPackageDump.products.first { $0.product_type == "executable" }) else
                 {
-                    throw "swift package should contain an executable"
+                    throw "swift package should contain an executable, it has products\n \(swiftPackageDump.products.map { "\($0.name), \($0.product_type)" }.joined(separator: "\n"))"
                 }
                 executable = _executable.name
             }

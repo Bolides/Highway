@@ -1,13 +1,16 @@
 import Arguments
+import Errors
 import Foundation
 import GitHooks
 import Highway
 import HighwayDispatch
+import SecretsLibrary
 import SignPost
 import SourceryAutoProtocols
 import SourceryWorker
 import SwiftFormatWorker
 import Terminal
+import XCBuild
 import ZFile
 
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
@@ -33,14 +36,8 @@ open class HighwayProtocolMock: HighwayProtocol
     }
 
     public var underlyingPackage: PackageProtocol!
-    public var sourceryBuilder: SourceryBuilderProtocol
-    {
-        get { return underlyingSourceryBuilder }
-        set(value) { underlyingSourceryBuilder = value }
-    }
-
-    public var underlyingSourceryBuilder: SourceryBuilderProtocol!
-    public var sourceryWorkers: [SourceryWorkerProtocol] = []
+    public var sourceryBuilder: SourceryBuilderProtocol?
+    public var sourceryWorkers: [SourceryWorkerProtocol]?
     public var queue: HighwayDispatchProtocol
     {
         get { return underlyingQueue }
@@ -56,6 +53,8 @@ open class HighwayProtocolMock: HighwayProtocol
     }
 
     public var underlyingSwiftformat: SwiftFormatWorkerProtocol!
+    public static var xcodeConfigOverride: [String] = []
+    public static var swiftCFlags: [String] = []
     public var highwaySetupExecutableName: String?
 
     // MARK: - <dependency> - parameters
@@ -596,6 +595,58 @@ open class HighwayRunnerProtocolMock: HighwayRunnerProtocol
         // <runSwiftPackageGenerateXcodeProject> - Void return mock implementation
 
         runSwiftPackageGenerateXcodeProjectClosure?(async)
+    }
+
+    // MARK: - <hideSecrets> - parameters
+
+    public var hideSecretsInCallsCount = 0
+    public var hideSecretsInCalled: Bool
+    {
+        return hideSecretsInCallsCount > 0
+    }
+
+    public var hideSecretsInReceivedFolder: FolderProtocol?
+
+    // MARK: - <hideSecrets> - closure mocks
+
+    public var hideSecretsInClosure: ((FolderProtocol) -> Void)?
+
+    // MARK: - <hideSecrets> - method mocked
+
+    open func hideSecrets(in folder: FolderProtocol)
+    {
+        hideSecretsInCallsCount += 1
+        hideSecretsInReceivedFolder = folder
+
+        // <hideSecrets> - Void return mock implementation
+
+        hideSecretsInClosure?(folder)
+    }
+
+    // MARK: - <hideSecrets> - parameters
+
+    public var hideSecretsInAsyncCallsCount = 0
+    public var hideSecretsInAsyncCalled: Bool
+    {
+        return hideSecretsInAsyncCallsCount > 0
+    }
+
+    public var hideSecretsInAsyncReceivedArguments: (folder: FolderProtocol, async: (@escaping HighwayRunner.SyncHideSecret) -> Void)?
+
+    // MARK: - <hideSecrets> - closure mocks
+
+    public var hideSecretsInAsyncClosure: ((FolderProtocol, @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void) -> Void)?
+
+    // MARK: - <hideSecrets> - method mocked
+
+    open func hideSecrets(in folder: FolderProtocol, async: @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void)
+    {
+        hideSecretsInAsyncCallsCount += 1
+        hideSecretsInAsyncReceivedArguments = (folder: folder, async: async)
+
+        // <hideSecrets> - Void return mock implementation
+
+        hideSecretsInAsyncClosure?(folder, async)
     }
 }
 

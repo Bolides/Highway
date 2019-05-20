@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:../../Carthage/Checkouts/ZFile/Sources/ZFile-iOS/ZFile.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../Carthage/Checkouts/template-sourcery/Sources/SourceryAutoProtocols-iOS/SourceryAutoProtocols-iOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../Carthage/Checkouts/SignPost/Sources/SignPost-iOS/SignPost-iOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Highway-iOS.xcodeproj">
+   </FileRef>
+</Workspace>

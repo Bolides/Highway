@@ -21,11 +21,13 @@ import Foundation
  // sourcery:inline:Highway.AutoGenerateProtocol
  static var queue: HighwayDispatchProtocol { get }
  var package: PackageProtocol { get }
- var sourceryBuilder: SourceryBuilderProtocol { get }
- var sourceryWorkers: [SourceryWorkerProtocol] { get set }
+ var sourceryBuilder: SourceryBuilderProtocol? { get }
+ var sourceryWorkers: [SourceryWorkerProtocol]? { get set }
  var queue: HighwayDispatchProtocol { get }
  var githooks: GitHooksWorkerProtocol? { get }
  var swiftformat: SwiftFormatWorkerProtocol { get }
+ static var xcodeConfigOverride: [String] { get set }
+ static var swiftCFlags: [String] { get set }
  var highwaySetupExecutableName: String? { get }
 
  func dependency(with name: String) throws  -> DependencyProtocol
@@ -56,6 +58,8 @@ import Foundation
  func addGithooksPrePush() throws
  func runSwiftformat(_ async: @escaping (@escaping HighwayRunner.SyncSwiftformat) -> Void)
  func runSwiftPackageGenerateXcodeProject(_ async: @escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)
+ func hideSecrets(in folder: FolderProtocol)
+ func hideSecrets(in folder: FolderProtocol, async: @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void)
  // sourcery:end
  // types.implementing.AutoGenerateProtocol inline for HighwayRunner ✅
 

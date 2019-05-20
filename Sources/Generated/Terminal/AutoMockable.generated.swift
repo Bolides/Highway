@@ -304,28 +304,85 @@ open class ProcessProtocolMock: ProcessProtocol
     }
 
     public var underlyingCurrentDirectoryPath: String = "AutoMockable filled value"
-
-    // MARK: - <launch> - parameters
-
-    public var launchCallsCount = 0
-    public var launchCalled: Bool
+    public var isRunning: Bool
     {
-        return launchCallsCount > 0
+        get { return underlyingIsRunning }
+        set(value) { underlyingIsRunning = value }
     }
 
-    // MARK: - <launch> - closure mocks
+    public var underlyingIsRunning: Bool = false
+    public var terminationHandler: ((Process) -> Void)?
 
-    public var launchClosure: (() -> Void)?
+    // MARK: - <resume> - parameters
 
-    // MARK: - <launch> - method mocked
-
-    open func launch()
+    public var resumeCallsCount = 0
+    public var resumeCalled: Bool
     {
-        launchCallsCount += 1
+        return resumeCallsCount > 0
+    }
 
-        // <launch> - Void return mock implementation
+    public var resumeReturnValue: Bool?
 
-        launchClosure?()
+    // MARK: - <resume> - closure mocks
+
+    public var resumeClosure: (() -> Bool)?
+
+    // MARK: - <resume> - method mocked
+
+    open func resume() -> Bool
+    {
+        resumeCallsCount += 1
+
+        // <resume> - Return Value mock implementation
+
+        guard let closureReturn = resumeClosure else
+        {
+            guard let returnValue = resumeReturnValue else
+            {
+                let message = "No returnValue implemented for resumeClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement Bool
+
+                print("❌ \(error)")
+
+                fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
+            }
+            return returnValue
+        }
+
+        return closureReturn()
+    }
+
+    // MARK: - <_run> - parameters
+
+    public var _RunThrowableError: Error?
+    public var _RunCallsCount = 0
+    public var _RunCalled: Bool
+    {
+        return _RunCallsCount > 0
+    }
+
+    // MARK: - <_run> - closure mocks
+
+    public var _RunClosure: (() throws -> Void)?
+
+    // MARK: - <_run> - method mocked
+
+    open func _run() throws
+    {
+        // <_run> - Throwable method implementation
+
+        if let error = _RunThrowableError
+        {
+            throw error
+        }
+
+        _RunCallsCount += 1
+
+        // <_run> - Void return mock implementation
+
+        try _RunClosure?()
     }
 
     // MARK: - <waitUntilExit> - parameters
@@ -426,6 +483,55 @@ open class SystemProtocolMock: SystemProtocol
     }
 
     public var underlyingFileSystem: FileSystemProtocol!
+
+    // MARK: - <processFromBrew> - parameters
+
+    public var processFromBrewFormulaInThrowableError: Error?
+    public var processFromBrewFormulaInCallsCount = 0
+    public var processFromBrewFormulaInCalled: Bool
+    {
+        return processFromBrewFormulaInCallsCount > 0
+    }
+
+    public var processFromBrewFormulaInReceivedArguments: (formula: String, folder: FolderProtocol)?
+    public var processFromBrewFormulaInReturnValue: ProcessProtocol?
+
+    // MARK: - <processFromBrew> - closure mocks
+
+    public var processFromBrewFormulaInClosure: ((String, FolderProtocol) throws -> ProcessProtocol)?
+
+    // MARK: - <processFromBrew> - method mocked
+
+    open func processFromBrew(formula: String, in folder: FolderProtocol) throws -> ProcessProtocol
+    {
+        // <processFromBrew> - Throwable method implementation
+
+        if let error = processFromBrewFormulaInThrowableError
+        {
+            throw error
+        }
+
+        processFromBrewFormulaInCallsCount += 1
+        processFromBrewFormulaInReceivedArguments = (formula: formula, folder: folder)
+
+        // <processFromBrew> - Return Value mock implementation
+
+        guard let closureReturn = processFromBrewFormulaInClosure else
+        {
+            guard let returnValue = processFromBrewFormulaInReturnValue else
+            {
+                let message = "No returnValue implemented for processFromBrewFormulaInClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement ProcessProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(formula, folder)
+    }
 
     // MARK: - <process> - parameters
 

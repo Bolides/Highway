@@ -13,7 +13,11 @@ public protocol ProcessProtocol: class, AutoMockable
     var arguments: [String]? { get set }
     var currentDirectoryPath: String { get set }
 
-    func launch()
+    var isRunning: Bool { get }
+    var terminationHandler: ((Process) -> Void)? { get set }
+
+    func resume() -> Bool
+    func _run() throws
     func waitUntilExit()
     func executableFile() throws -> FileProtocol
 }
@@ -127,7 +131,19 @@ public class Task: TaskProtocol, AutoGenerateProtocol
 }
 
 extension Process: ProcessProtocol
-{}
+{
+    public func _run() throws
+    {
+        if #available(macOS 10.13, *)
+        {
+            try run()
+        }
+        else
+        {
+            launch()
+        }
+    }
+}
 
 extension Task: CustomStringConvertible
 {

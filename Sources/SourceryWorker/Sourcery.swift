@@ -116,7 +116,7 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
         }
         catch
         {
-            throw HighwayError.highwayError(atLocation: "\(Sourcery.self) \(#function) \(#line) - \(productName) - depencies \(swiftPackageDependencies.name) at path \(try swiftPackageDependencies.srcRoot().name)", error: error)
+            throw HighwayError.highwayError(atLocation: "\(Sourcery.self) \(#function) \(#line) - \(productName) - dependencies \(swiftPackageDependencies.name) at path \(try swiftPackageDependencies.srcRoot().name)", error: error)
         }
     }
 

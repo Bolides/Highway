@@ -22,11 +22,13 @@ public protocol HighwayProtocol: AutoMockable
     // sourcery:inline:Highway.AutoGenerateProtocol
     static var queue: HighwayDispatchProtocol { get }
     var package: PackageProtocol { get }
-    var sourceryBuilder: SourceryBuilderProtocol { get }
-    var sourceryWorkers: [SourceryWorkerProtocol] { get set }
+    var sourceryBuilder: SourceryBuilderProtocol? { get }
+    var sourceryWorkers: [SourceryWorkerProtocol]? { get set }
     var queue: HighwayDispatchProtocol { get }
     var githooks: GitHooksWorkerProtocol? { get }
     var swiftformat: SwiftFormatWorkerProtocol { get }
+    static var xcodeConfigOverride: [String] { get set }
+    static var swiftCFlags: [String] { get set }
     var highwaySetupExecutableName: String? { get }
 
     func dependency(with name: String) throws -> DependencyProtocol
@@ -62,11 +64,16 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
     }
 
     public let package: PackageProtocol
-    public let sourceryBuilder: SourceryBuilderProtocol
-    public var sourceryWorkers: [SourceryWorkerProtocol]
+    public let sourceryBuilder: SourceryBuilderProtocol?
+    public var sourceryWorkers: [SourceryWorkerProtocol]?
     public let queue: HighwayDispatchProtocol
     public let githooks: GitHooksWorkerProtocol?
     public let swiftformat: SwiftFormatWorkerProtocol
+    public static var xcodeConfigOverride: [String] = [
+        "MACOSX_DEPLOYMENT_TARGET = 10.13",
+        "OTHER_SWIFT_FLAGS = -DMacOS",
+    ]
+    public static var swiftCFlags: [String] = ["-Xswiftc", "-DMacOS"]
 
     // If set to nil the only executable in the package will be used
     public let highwaySetupExecutableName: String?
@@ -93,10 +100,11 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
     public init(
         package: PackageProtocol,
         dependencyService: DependencyServiceProtocol,
-        sourceryBuilder: SourceryBuilderProtocol,
+        sourceryBuilder: SourceryBuilderProtocol? = nil,
+        sourcerySkipProducts: Set<String>? = nil,
         githooksOption: Set<GitHooksWorker.Option> = Set(CommandLine.arguments.compactMap { GitHooksWorker.Option(rawValue: $0) }), // By default this takes arguments from command line and sees if they match anything usefull for GithookwWorker
         highwaySetupExecutableName: String? = nil, // If set to nil the only product with type executable will be chosen
-        githooksPrePushScriptOptions: String? = nil, // Will be added after git hoops pre push script
+        githooksPrePushScriptOptions: String? = nil, // Will be added after git hooks pre push script
         swiftformatType: SwiftFormatWorkerProtocol.Type = SwiftFormatWorker.self,
         githooksType: GitHooksWorkerProtocol.Type? = GitHooksWorker.self, // if set to nil githooks will not be added
         sourceryWorkerType: SourceryWorkerProtocol.Type = SourceryWorker.self,
@@ -116,22 +124,26 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
 
         let dump = package.dump
         let dependencies = package.dependencies
-        let products = dump.products.filter { !$0.name.hasSuffix("Mock") }
-
-        let sourceryModels: [SourceryProtocol] = try products
-            .map
-        { product in
-            try sourceryType.init(
-                productName: product.name,
-                swiftPackageDependencies: dependencies,
-                swiftPackageDump: dump,
-                sourceryBuilder: sourceryBuilder,
-                signPost: signPost
-            )
-        }
-
         let srcRoot = try package.dependencies.srcRoot()
-        sourceryWorkers = sourceryModels.map { sourceryWorkerType.init(sourcery: $0, terminal: terminal, signPost: signPost, queue: queue) }
+
+        if let sourceryBuilder = sourceryBuilder
+        {
+            let products = dump.products.filter { !$0.name.hasSuffix("Mock") && !(sourcerySkipProducts?.contains($0.name) ?? false) }
+
+            let sourceryModels: [SourceryProtocol] = try products
+                .map
+            { product in
+                try sourceryType.init(
+                    productName: product.name,
+                    swiftPackageDependencies: dependencies,
+                    swiftPackageDump: dump,
+                    sourceryBuilder: sourceryBuilder,
+                    signPost: signPost
+                )
+            }
+
+            sourceryWorkers = sourceryModels.map { sourceryWorkerType.init(sourcery: $0, terminal: terminal, signPost: signPost, queue: queue) }
+        }
 
         githooks = githooksType?.init(
             swiftPackageDependencies: package.dependencies,

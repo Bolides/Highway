@@ -10,6 +10,7 @@ import Foundation
 import Arguments
 import Errors
 import HighwayDispatch
+import SecretsLibrary
 import SignPost
 import SourceryAutoProtocols
 import SourceryWorker
@@ -29,6 +30,9 @@ public protocol HighwayRunnerProtocol: AutoMockable
     func addGithooksPrePush() throws
     func runSwiftformat(_ async: @escaping (@escaping HighwayRunner.SyncSwiftformat) -> Void)
     func runSwiftPackageGenerateXcodeProject(_ async: @escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)
+    func hideSecrets(in folder: FolderProtocol)
+    func hideSecrets(in folder: FolderProtocol, async: @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void)
+
     // sourcery:end
 }
 
@@ -37,6 +41,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
     public typealias SyncTestOutput = () throws -> TestReportProtocol
     public typealias SyncSwiftformat = () throws -> Void
     public typealias SyncSwiftPackageGenerateXcodeProj = () throws -> [String]
+    public typealias SyncHideSecret = () throws -> [String]
 
     public static let queue: HighwayDispatchProtocol = DispatchQueue(label: "be.dooz.signpost.sprunner")
 
@@ -52,6 +57,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
     private let queue: HighwayDispatchProtocol
     private let dispatchGroup: HWDispatchGroupProtocol
     private let system: SystemProtocol
+    private let secretsWorker: SecretsWorkerProtocol
 
     public init(
         highway: HighwayProtocol,
@@ -59,7 +65,8 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
         queue: HighwayDispatchProtocol = HighwayRunner.queue,
         terminal: TerminalProtocol = Terminal.shared,
         signPost: SignPostProtocol = SignPost.shared,
-        system: SystemProtocol = System.shared
+        system: SystemProtocol = System.shared,
+        secretsWorker: SecretsWorkerProtocol = SecretsWorker.shared
     )
     {
         self.terminal = terminal
@@ -68,6 +75,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
         self.dispatchGroup = dispatchGroup
         self.queue = queue
         self.system = system
+        self.secretsWorker = secretsWorker
     }
 
     public func runTests(_ async: @escaping (@escaping HighwayRunner.SyncTestOutput) -> Void)
@@ -79,7 +87,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
     {
         do
         {
-            try highway.sourceryWorkers.forEach
+            try highway.sourceryWorkers?.forEach
             { worker in
                 signPost.message("🧙🏻‍♂️ \(worker.name) ...")
 
@@ -153,7 +161,10 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
             do
             {
                 let task = try self.system.process("swift")
-                task.arguments = ["test"]
+                let config = try self.highway.package.dependencies.srcRoot().subfolder(named: "Sources").createFileIfNeeded(named: "macos.xcconfig")
+                try config.write(string: Highway.xcodeConfigOverride.joined(separator: "\n"))
+
+                task.arguments = ["package", "generate-xcodeproj", "--xcconfig-overrides", "Sources/macos.xcconfig"]
                 task.currentDirectoryPath = try self.highway.package.dependencies.srcRoot().path
 
                 let output = try self.terminal.runProcess(task)
@@ -162,6 +173,8 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
             }
             catch
             {
+                self.signPost.message("🛠 \(pretty_function()) ❌")
+                self.addError(error)
                 async { throw HighwayError.highwayError(atLocation: pretty_function(), error: error) }
             }
 
@@ -169,12 +182,41 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
         }
     }
 
-    private func addError(_ error: Swift.Error?)
+    public func hideSecrets(in folder: FolderProtocol)
     {
-        if let error = error { errors?.append(error) }
+        hideSecrets(in: folder, async: handleHideSecrets)
+    }
+
+    public func hideSecrets(in folder: FolderProtocol, async: @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void)
+    {
+        dispatchGroup.enter()
+        queue.async
+        {
+            do
+            {
+                let output = try self.secretsWorker.attemptHideSecrets(in: folder)
+                async { output }
+            }
+            catch
+            {
+                let _error = HighwayError.highwayError(atLocation: pretty_function(), error: error)
+                async { throw _error }
+            }
+
+            self.dispatchGroup.leave()
+        }
     }
 
     // MARK: - Private
+
+    private func addError(_ error: Swift.Error?)
+    {
+        if let error = error
+        {
+            if errors == nil { errors = [Swift.Error]() }
+            errors?.append(error)
+        }
+    }
 
     private func test(package: PackageProtocol, _ async: @escaping (@escaping HighwayRunner.SyncTestOutput) -> Void)
     {
@@ -195,7 +237,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
             {
                 context.signPost.message("🧪 swift test package \(package.name) ... ")
                 let task = try self.system.process("swift")
-                task.arguments = ["test"]
+                task.arguments = ["test"] + Highway.swiftCFlags
                 task.currentDirectoryPath = try package.dependencies.srcRoot().path
 
                 let testReport = TestReport(output: try context.terminal.runProcess(task))
@@ -209,7 +251,9 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
                 _error = HighwayError.failedToCompleteTask(
                     "🧪 \(package.name) ❌ \n\(testReport)"
                 )
+
                 async { throw _error! }
+                context.signPost.message("🧪 swift test package \(package.name) ❌")
             }
             catch
             {
@@ -218,6 +262,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
                     error: error
                 )
                 async { throw _error! }
+                context.signPost.message("🧪 swift test package \(package.name) ❌")
             }
             context.addError(_error)
 

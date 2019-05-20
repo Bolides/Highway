@@ -1,0 +1,8 @@
+sources:
+- "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/HighwaySourcery/"
+- "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/.build/checkouts/template-sourcery--9139697532982746078/Sources/SourceryAutoProtocols/SourceryAutoProtocols.swift"
+
+templates:
+- "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/.build/checkouts/template-sourcery--9139697532982746078/"
+output:
+ "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/HighwaySourcery/"

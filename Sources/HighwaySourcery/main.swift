@@ -38,10 +38,7 @@ do
 
     highwayRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
 
-//    // Githooks
-
-    try highwayRunner.addGithooksPrePush()
-    highwayRunner.hideSecrets(in: srcRoot)
+    //    // Githooks
 
     highwayRunner.runSourcery(handleSourceryOutput)
 
@@ -49,33 +46,13 @@ do
     {
         highwayRunner.runSwiftformat(handleSwiftformat)
         dispatchGroup.wait()
-        highwayRunner.runTests(handleTestOutput)
-        dispatchGroup.wait()
-        highwayRunner.runSwiftPackageGenerateXcodeProject(handleSwiftPackageGenerateXcodeProject)
-        dispatchGroup.wait()
+
         guard let errors = highwayRunner.errors, errors.count > 0 else
         {
-            let git = GitTool()
-
-            do
-            {
-                guard try git.isClean() else
-                {
-                    signPost.error("changes not commited")
-                    signPost.message("🚀 \(HighwayRunner.self) ❌")
-                    exit(EXIT_FAILURE)
-                }
-            }
-            catch
-            {
-                signPost.error("\(error)")
-                signPost.message("🚀 \(HighwayRunner.self) ❌")
-                exit(EXIT_FAILURE)
-            }
-
             signPost.message("🚀 \(HighwayRunner.self) ✅")
             exit(EXIT_SUCCESS)
         }
+
         signPost.message("🚀 \(HighwayRunner.self) has \(errors.count) ❌")
 
         for error in errors.enumerated()
@@ -83,7 +60,7 @@ do
             let message = """
             ❌ \(error.offset + 1)
             
-                \(error.element)
+            \(error.element)
             
             ---
             
