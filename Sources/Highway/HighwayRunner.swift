@@ -29,6 +29,8 @@ public protocol HighwayRunnerProtocol: AutoMockable
     func addGithooksPrePush() throws
     func runSwiftformat(_ async: @escaping (@escaping HighwayRunner.SyncSwiftformat) -> Void)
     func runSwiftPackageGenerateXcodeProject(_ async: @escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)
+    func hideSecrets()
+    func hideSecrets(async: @escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)
     // sourcery:end
 }
 
@@ -37,6 +39,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
     public typealias SyncTestOutput = () throws -> TestReportProtocol
     public typealias SyncSwiftformat = () throws -> Void
     public typealias SyncSwiftPackageGenerateXcodeProj = () throws -> [String]
+    public typealias SyncHideSecret = () throws -> [String]
 
     public static let queue: HighwayDispatchProtocol = DispatchQueue(label: "be.dooz.signpost.sprunner")
 
@@ -174,10 +177,16 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
         }
     }
 
-   
+    public func hideSecrets()
+    {
+        hideSecrets(async: handleHideSecrets)
+    }
+
+    public func hideSecrets(async: @escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)
+    {}
 
     // MARK: - Private
-    
+
     private func addError(_ error: Swift.Error?)
     {
         if let error = error
@@ -187,7 +196,6 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
         }
     }
 
-    
     private func test(package: PackageProtocol, _ async: @escaping (@escaping HighwayRunner.SyncTestOutput) -> Void)
     {
         let context = (signPost: signPost, addError: addError, terminal: terminal)

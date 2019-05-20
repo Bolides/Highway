@@ -1,4 +1,5 @@
 import Arguments
+import Errors
 import Foundation
 import GitHooks
 import Highway
@@ -8,6 +9,7 @@ import SourceryAutoProtocols
 import SourceryWorker
 import SwiftFormatWorker
 import Terminal
+import XCBuild
 import ZFile
 
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
@@ -592,6 +594,55 @@ open class HighwayRunnerProtocolMock: HighwayRunnerProtocol
         // <runSwiftPackageGenerateXcodeProject> - Void return mock implementation
 
         runSwiftPackageGenerateXcodeProjectClosure?(async)
+    }
+
+    // MARK: - <hideSecrets> - parameters
+
+    public var hideSecretsCallsCount = 0
+    public var hideSecretsCalled: Bool
+    {
+        return hideSecretsCallsCount > 0
+    }
+
+    // MARK: - <hideSecrets> - closure mocks
+
+    public var hideSecretsClosure: (() -> Void)?
+
+    // MARK: - <hideSecrets> - method mocked
+
+    open func hideSecrets()
+    {
+        hideSecretsCallsCount += 1
+
+        // <hideSecrets> - Void return mock implementation
+
+        hideSecretsClosure?()
+    }
+
+    // MARK: - <hideSecrets> - parameters
+
+    public var hideSecretsAsyncCallsCount = 0
+    public var hideSecretsAsyncCalled: Bool
+    {
+        return hideSecretsAsyncCallsCount > 0
+    }
+
+    public var hideSecretsAsyncReceivedAsync: ((@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)?
+
+    // MARK: - <hideSecrets> - closure mocks
+
+    public var hideSecretsAsyncClosure: ((@escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void) -> Void)?
+
+    // MARK: - <hideSecrets> - method mocked
+
+    open func hideSecrets(async: @escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)
+    {
+        hideSecretsAsyncCallsCount += 1
+        hideSecretsAsyncReceivedAsync = async
+
+        // <hideSecrets> - Void return mock implementation
+
+        hideSecretsAsyncClosure?(async)
     }
 }
 

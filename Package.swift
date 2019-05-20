@@ -51,7 +51,6 @@ public struct HWSetup
             "Errors",
             "Git",
             "GitHooks",
-            "Highway",
             HighwayDispatch.dependency,
             "SignPost",
             "SourceryWorker",
@@ -60,7 +59,7 @@ public struct HWSetup
             "Terminal",
             "XCBuild",
             "ZFile",
-        ]
+        ] + [Highway.product.asDependency()]
     )
 }
 
@@ -143,12 +142,11 @@ public struct GitSecrets
             dependencies: [
                 "ZFile",
                 "HighwayDispatch",
-                "Highway",
                 "SourceryAutoProtocols",
                 "SignPost",
                 "Terminal",
                 "Errors",
-            ]
+            ] + [Highway.product.asDependency()]
         )
 
         public struct Mock
@@ -156,7 +154,7 @@ public struct GitSecrets
             public static let name = Library.product.name + "Mock"
 
             public static let product = Product.library(
-                name: Library.product.name,
+                name: Library.product.name + "Mock",
                 targets: [name]
             )
 
@@ -166,6 +164,54 @@ public struct GitSecrets
                 path: "Sources/Generated/\(GitSecrets.Library.product.name)"
             )
         }
+    }
+
+    public static let tests = Target.testTarget(
+        name: name + "Tests",
+        dependencies: target.dependencies
+    )
+}
+
+public struct Highway
+{
+    public static let name = "\(Highway.self)"
+
+    public static let product = Product.library(
+        name: name,
+        targets: [name]
+    )
+
+    public static let target = Target.target(
+        name: name,
+        dependencies: [
+            "SourceryAutoProtocols",
+            "Terminal",
+            "Arguments",
+            "SignPost",
+            "ZFile",
+            "SourceryWorker",
+            "HighwayDispatch",
+            "GitHooks",
+            "SwiftFormatWorker",
+            "XCBuild",
+            "Errors",
+        ]
+    )
+
+    public struct Mock
+    {
+        public static let name = Highway.product.name + "Mock"
+
+        public static let product = Product.library(
+            name: Mock.name,
+            targets: [name]
+        )
+
+        public static let target = Target.target(
+            name: name,
+            dependencies: Highway.target.dependencies + [Highway.product.asDependency()],
+            path: "Sources/Generated/\(Highway.product.name)"
+        )
     }
 
     public static let tests = Target.testTarget(
@@ -197,6 +243,8 @@ public let package = Package(
         // MARK: - Library
 
         GitSecrets.Library.product,
+        Highway.product,
+
         .library(
             name: "HWCarthage",
             targets: ["HWCarthage"]
@@ -205,10 +253,6 @@ public let package = Package(
         .library(
             name: "HWPod",
             targets: ["HWPod"]
-        ),
-        .library(
-            name: "Highway",
-            targets: ["Highway"]
         ),
         .library(
             name: "Errors",
@@ -258,6 +302,7 @@ public let package = Package(
 
         HighwayDispatch.Mock.product,
         GitSecrets.Library.Mock.product,
+        Highway.Mock.product,
 
         .library(
             name: "SwiftFormatWorkerMock",
@@ -284,10 +329,6 @@ public let package = Package(
             targets: ["GitHooksMock"]
         ),
         .library(
-            name: "HighwayMock",
-            targets: ["HighwayMock"]
-        ),
-        .library(
             name: "HWCarthageMock",
             targets: ["HWCarthageMock"]
         ),
@@ -307,10 +348,11 @@ public let package = Package(
         // MARK: - Libraries
 
         GitSecrets.Library.target,
+        Highway.target,
 
         .target(
             name: "HWCarthage",
-            dependencies: ["SourceryAutoProtocols", "Highway", "ZFile", "SignPost", "Terminal"]
+            dependencies: ["SourceryAutoProtocols", "ZFile", "SignPost", "Terminal"] + [Highway.product.asDependency()]
         ),
         .target(
             name: "HWPod",
@@ -319,22 +361,6 @@ public let package = Package(
         .target(
             name: "Errors",
             dependencies: ["SourceryAutoProtocols", "ZFile"]
-        ),
-        .target(
-            name: "Highway",
-            dependencies: [
-                "SourceryAutoProtocols",
-                "Terminal",
-                "Arguments",
-                "SignPost",
-                "ZFile",
-                "SourceryWorker",
-                "HighwayDispatch",
-                "GitHooks",
-                "SwiftFormatWorker",
-                "XCBuild",
-                "Errors",
-            ]
         ),
         .target(
             name: "Arguments",
@@ -437,23 +463,7 @@ public let package = Package(
             dependencies: ["SourceryWorker", "ZFile", "Terminal", "ZFileMock", "TerminalMock", "HighwayDispatch", "Arguments", "SignPost"],
             path: "Sources/Generated/SourceryWorker"
         ),
-        .target(
-            name: "HighwayMock",
-            dependencies: [
-                "Highway",
-                "SourceryAutoProtocols",
-                "SignPost",
-                "Arguments",
-                "SourceryWorker",
-                "HighwayDispatch",
-                "GitHooks",
-                "SwiftFormatWorker",
-                "SignPost",
-                "ZFile",
-                "Terminal",
-            ],
-            path: "Sources/Generated/Highway"
-        ),
+        Highway.Mock.target,
 
         // MARK: - Tests
 
@@ -535,24 +545,6 @@ public let package = Package(
                 "HighwayDispatchMock",
             ]
         ),
-        .testTarget(
-            name: "HighwayTests",
-            dependencies: [
-                "Nimble",
-                "Quick",
-                "ArgumentsMock",
-                "Highway",
-                "HighwayDispatchMock",
-                "HighwayMock",
-                "SignPostMock",
-                "SourceryWorker",
-                "SourceryWorkerMock",
-                "SwiftFormatWorkerMock",
-                "Terminal",
-                "TerminalMock",
-                "ZFileMock",
-                "GitHooksMock",
-            ]
-        ),
+        Highway.tests,
     ]
 )

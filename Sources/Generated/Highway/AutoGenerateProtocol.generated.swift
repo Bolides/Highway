@@ -58,6 +58,8 @@ import Foundation
  func addGithooksPrePush() throws
  func runSwiftformat(_ async: @escaping (@escaping HighwayRunner.SyncSwiftformat) -> Void)
  func runSwiftPackageGenerateXcodeProject(_ async: @escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)
+ func hideSecrets()
+ func hideSecrets(async: @escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)
  // sourcery:end
  // types.implementing.AutoGenerateProtocol inline for HighwayRunner ✅
 
