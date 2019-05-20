@@ -174,6 +174,10 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
         }
     }
 
+   
+
+    // MARK: - Private
+    
     private func addError(_ error: Swift.Error?)
     {
         if let error = error
@@ -183,8 +187,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
         }
     }
 
-    // MARK: - Private
-
+    
     private func test(package: PackageProtocol, _ async: @escaping (@escaping HighwayRunner.SyncTestOutput) -> Void)
     {
         let context = (signPost: signPost, addError: addError, terminal: terminal)

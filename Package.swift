@@ -113,6 +113,77 @@ public struct Terminal
     )
 }
 
+// MARK: - ArmadaSecrets
+
+public struct GitSecrets
+{
+    public static let name = "\(GitSecrets.self)"
+
+    public static let product = Product.executable(
+        name: name,
+        targets: [name]
+    )
+
+    public static let target = Target.target(
+        name: name,
+        dependencies: [Library.product.asDependency()]
+    )
+
+    public struct Library
+    {
+        public static let nameExtension = "Library"
+
+        public static let product = Product.library(
+            name: name + nameExtension,
+            targets: [name + nameExtension]
+        )
+
+        public static let target = Target.target(
+            name: name + nameExtension,
+            dependencies: [
+                "ZFile",
+                "HighwayDispatch",
+                "Highway",
+                "SourceryAutoProtocols",
+                "SignPost",
+                "Terminal",
+                "Errors",
+            ]
+        )
+
+        public struct Mock
+        {
+            public static let name = Library.product.name + "Mock"
+
+            public static let product = Product.library(
+                name: Library.product.name,
+                targets: [name]
+            )
+
+            public static let target = Target.target(
+                name: name,
+                dependencies: Library.target.dependencies + [Library.product.asDependency()],
+                path: "Sources/Generated/\(GitSecrets.Library.product.name)"
+            )
+        }
+    }
+
+    public static let tests = Target.testTarget(
+        name: name + "Tests",
+        dependencies: target.dependencies
+    )
+}
+
+// MARK: - Product extensions
+
+extension Product
+{
+    func asDependency() -> Target.Dependency
+    {
+        return Target.Dependency(stringLiteral: name)
+    }
+}
+
 // MARK: - Package
 
 public let package = Package(
@@ -121,9 +192,11 @@ public let package = Package(
         // MARK: - Executable
 
         HWSetup.product,
+        GitSecrets.product,
 
         // MARK: - Library
 
+        GitSecrets.Library.product,
         .library(
             name: "HWCarthage",
             targets: ["HWCarthage"]
@@ -184,6 +257,8 @@ public let package = Package(
         // MARK: - Library - Mocks
 
         HighwayDispatch.Mock.product,
+        GitSecrets.Library.Mock.product,
+
         .library(
             name: "SwiftFormatWorkerMock",
             targets: ["SwiftFormatWorkerMock"]
@@ -224,9 +299,15 @@ public let package = Package(
     ],
     dependencies: external,
     targets: [
-        // MARK: - Targets
+        // MARK: - Executables
 
         HWSetup.target,
+        GitSecrets.target,
+
+        // MARK: - Libraries
+
+        GitSecrets.Library.target,
+
         .target(
             name: "HWCarthage",
             dependencies: ["SourceryAutoProtocols", "Highway", "ZFile", "SignPost", "Terminal"]
@@ -304,6 +385,7 @@ public let package = Package(
 
         // MARK: - Mocks
 
+        GitSecrets.Library.Mock.target,
         .target(
             name: "HWCarthageMock",
             dependencies: ["HighwayDispatch", "HWCarthage", "ZFileMock", "ZFile", "Errors"],
@@ -374,6 +456,8 @@ public let package = Package(
         ),
 
         // MARK: - Tests
+
+        GitSecrets.tests,
 
         .testTarget(
             name: "HWCarthageTests",

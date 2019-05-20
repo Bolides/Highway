@@ -484,6 +484,55 @@ open class SystemProtocolMock: SystemProtocol
 
     public var underlyingFileSystem: FileSystemProtocol!
 
+    // MARK: - <processFromBrew> - parameters
+
+    public var processFromBrewFormulaInThrowableError: Error?
+    public var processFromBrewFormulaInCallsCount = 0
+    public var processFromBrewFormulaInCalled: Bool
+    {
+        return processFromBrewFormulaInCallsCount > 0
+    }
+
+    public var processFromBrewFormulaInReceivedArguments: (formula: String, folder: FolderProtocol)?
+    public var processFromBrewFormulaInReturnValue: ProcessProtocol?
+
+    // MARK: - <processFromBrew> - closure mocks
+
+    public var processFromBrewFormulaInClosure: ((String, FolderProtocol) throws -> ProcessProtocol)?
+
+    // MARK: - <processFromBrew> - method mocked
+
+    open func processFromBrew(formula: String, in folder: FolderProtocol) throws -> ProcessProtocol
+    {
+        // <processFromBrew> - Throwable method implementation
+
+        if let error = processFromBrewFormulaInThrowableError
+        {
+            throw error
+        }
+
+        processFromBrewFormulaInCallsCount += 1
+        processFromBrewFormulaInReceivedArguments = (formula: formula, folder: folder)
+
+        // <processFromBrew> - Return Value mock implementation
+
+        guard let closureReturn = processFromBrewFormulaInClosure else
+        {
+            guard let returnValue = processFromBrewFormulaInReturnValue else
+            {
+                let message = "No returnValue implemented for processFromBrewFormulaInClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement ProcessProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(formula, folder)
+    }
+
     // MARK: - <process> - parameters
 
     public var processThrowableError: Error?

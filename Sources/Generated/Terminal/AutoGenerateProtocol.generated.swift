@@ -35,6 +35,7 @@ import Foundation
  var pathEnvironmentParser: PathEnvironmentParserProtocol { get }
  var fileSystem: FileSystemProtocol { get }
 
+ func processFromBrew(formula: String, in folder: FolderProtocol) throws  -> ProcessProtocol
  func process(_ executableName: String) throws  -> ProcessProtocol
  func process(currentFolder: FolderProtocol, executablePath: String) throws  -> ProcessProtocol
  func process(currentFolder: FolderProtocol, executableFile: FileProtocol) throws  -> ProcessProtocol
