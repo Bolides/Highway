@@ -9,6 +9,7 @@ import Foundation
 
 import Arguments
 import Errors
+import GitSecretsLibrary
 import HighwayDispatch
 import SignPost
 import SourceryAutoProtocols
@@ -29,8 +30,9 @@ public protocol HighwayRunnerProtocol: AutoMockable
     func addGithooksPrePush() throws
     func runSwiftformat(_ async: @escaping (@escaping HighwayRunner.SyncSwiftformat) -> Void)
     func runSwiftPackageGenerateXcodeProject(_ async: @escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)
-    func hideSecrets()
-    func hideSecrets(async: @escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)
+    func hideSecrets(in folder: FolderProtocol)
+    func hideSecrets(in folder: FolderProtocol, async: @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void)
+
     // sourcery:end
 }
 
@@ -55,6 +57,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
     private let queue: HighwayDispatchProtocol
     private let dispatchGroup: HWDispatchGroupProtocol
     private let system: SystemProtocol
+    private let secretsWorker: SecretsWorkerProtocol
 
     public init(
         highway: HighwayProtocol,
@@ -62,7 +65,8 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
         queue: HighwayDispatchProtocol = HighwayRunner.queue,
         terminal: TerminalProtocol = Terminal.shared,
         signPost: SignPostProtocol = SignPost.shared,
-        system: SystemProtocol = System.shared
+        system: SystemProtocol = System.shared,
+        secretsWorker: SecretsWorkerProtocol = SecretsWorker.shared
     )
     {
         self.terminal = terminal
@@ -71,6 +75,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
         self.dispatchGroup = dispatchGroup
         self.queue = queue
         self.system = system
+        self.secretsWorker = secretsWorker
     }
 
     public func runTests(_ async: @escaping (@escaping HighwayRunner.SyncTestOutput) -> Void)
@@ -177,13 +182,30 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
         }
     }
 
-    public func hideSecrets()
+    public func hideSecrets(in folder: FolderProtocol)
     {
-        hideSecrets(async: handleHideSecrets)
+        hideSecrets(in: folder, async: handleHideSecrets)
     }
 
-    public func hideSecrets(async: @escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)
-    {}
+    public func hideSecrets(in folder: FolderProtocol, async: @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void)
+    {
+        dispatchGroup.enter()
+        queue.async
+        {
+            do
+            {
+                let output = try self.secretsWorker.attemptHideSecrets(in: folder)
+                async { output }
+            }
+            catch
+            {
+                let _error = HighwayError.highwayError(atLocation: pretty_function(), error: error)
+                async { throw _error }
+            }
+
+            self.dispatchGroup.leave()
+        }
+    }
 
     // MARK: - Private
 

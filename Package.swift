@@ -112,7 +112,24 @@ public struct Terminal
     )
 }
 
-// MARK: - ArmadaSecrets
+// MARK: - HighwaySourcery
+
+public struct HighwaySourcery
+{
+    public static let name = "\(HighwaySourcery.self)"
+
+    public static let product = Product.executable(
+        name: name,
+        targets: [name]
+    )
+
+    public static let target = Target.target(
+        name: name,
+        dependencies: HWSetup.target.dependencies
+    )
+}
+
+// MARK: - GitSecrets
 
 public struct GitSecrets
 {
@@ -125,7 +142,7 @@ public struct GitSecrets
 
     public static let target = Target.target(
         name: name,
-        dependencies: [Library.product.asDependency()]
+        dependencies: [Library.product.asDependency(), Highway.product.asDependency()]
     )
 
     public struct Library
@@ -146,7 +163,7 @@ public struct GitSecrets
                 "SignPost",
                 "Terminal",
                 "Errors",
-            ] + [Highway.product.asDependency()]
+            ]
         )
 
         public struct Mock
@@ -195,7 +212,7 @@ public struct Highway
             "SwiftFormatWorker",
             "XCBuild",
             "Errors",
-        ]
+        ] + [GitSecrets.Library.product.asDependency()]
     )
 
     public struct Mock
@@ -239,6 +256,7 @@ public let package = Package(
 
         HWSetup.product,
         GitSecrets.product,
+        HighwaySourcery.product,
 
         // MARK: - Library
 
@@ -344,6 +362,7 @@ public let package = Package(
 
         HWSetup.target,
         GitSecrets.target,
+        HighwaySourcery.target,
 
         // MARK: - Libraries
 

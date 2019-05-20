@@ -1,7 +1,6 @@
 import Errors
 import Foundation
 import GitSecretsLibrary
-import Highway
 import HighwayDispatch
 import SignPost
 import SourceryAutoProtocols
@@ -11,11 +10,19 @@ import ZFile
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
-// MARK: - GitSecretWorkerProtocolMock
+// MARK: - SecretsWorkerProtocolMock
 
-open class GitSecretWorkerProtocolMock: GitSecretWorkerProtocol
+open class SecretsWorkerProtocolMock: SecretsWorkerProtocol
 {
     public init() {}
+
+    public static var shared: SecretsWorker
+    {
+        get { return underlyingShared }
+        set(value) { underlyingShared = value }
+    }
+
+    public static var underlyingShared: SecretsWorker!
 
     // MARK: - <attemptHideSecrets> - parameters
 
@@ -27,14 +34,15 @@ open class GitSecretWorkerProtocolMock: GitSecretWorkerProtocol
     }
 
     public var attemptHideSecretsInReceivedFolder: FolderProtocol?
+    public var attemptHideSecretsInReturnValue: [String]?
 
     // MARK: - <attemptHideSecrets> - closure mocks
 
-    public var attemptHideSecretsInClosure: ((FolderProtocol) throws -> Void)?
+    public var attemptHideSecretsInClosure: ((FolderProtocol) throws -> [String])?
 
     // MARK: - <attemptHideSecrets> - method mocked
 
-    open func attemptHideSecrets(in folder: FolderProtocol) throws
+    open func attemptHideSecrets(in folder: FolderProtocol) throws -> [String]
     {
         // <attemptHideSecrets> - Throwable method implementation
 
@@ -46,9 +54,23 @@ open class GitSecretWorkerProtocolMock: GitSecretWorkerProtocol
         attemptHideSecretsInCallsCount += 1
         attemptHideSecretsInReceivedFolder = folder
 
-        // <attemptHideSecrets> - Void return mock implementation
+        // <attemptHideSecrets> - Return Value mock implementation
 
-        try attemptHideSecretsInClosure?(folder)
+        guard let closureReturn = attemptHideSecretsInClosure else
+        {
+            guard let returnValue = attemptHideSecretsInReturnValue else
+            {
+                let message = "No returnValue implemented for attemptHideSecretsInClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement [String]
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(folder)
     }
 }
 

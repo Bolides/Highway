@@ -17,12 +17,4 @@ import Foundation
 // version 5.5
 /*
 
- // types.implementing.AutoGenerateProtocol inline for SecretsWorker ..
- // sourcery:inline:SecretsWorker.AutoGenerateProtocol
- static var shared: SecretsWorker { get }
-
- func attemptHideSecrets(in folder: FolderProtocol) throws  -> [String]
- // sourcery:end
- // types.implementing.AutoGenerateProtocol inline for SecretsWorker ✅
-
  */

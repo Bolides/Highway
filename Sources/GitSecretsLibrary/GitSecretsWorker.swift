@@ -4,17 +4,20 @@ import SourceryAutoProtocols
 import Terminal
 import ZFile
 
-public protocol GitSecretWorkerProtocol: AutoMockable
+public protocol SecretsWorkerProtocol: AutoMockable
 {
-    // sourcery:inline:GitSecretWorker.AutoGenerateProtocol
+    // sourcery:inline:SecretsWorker.AutoGenerateProtocol
+    static var shared: SecretsWorker { get }
 
-    func attemptHideSecrets(in folder: FolderProtocol) throws
+    func attemptHideSecrets(in folder: FolderProtocol) throws -> [String]
 
     // sourcery:end
 }
 
-public struct GitSecretWorker: GitSecretWorkerProtocol, AutoGenerateProtocol
+public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
 {
+    public static let shared = SecretsWorker()
+
     // MARK: - Private
 
     private let terminal: TerminalProtocol
@@ -35,7 +38,7 @@ public struct GitSecretWorker: GitSecretWorkerProtocol, AutoGenerateProtocol
     }
 
     // This relies on brew install git-secret
-    public func attemptHideSecrets(in folder: FolderProtocol) throws
+    public func attemptHideSecrets(in folder: FolderProtocol) throws -> [String]
     {
         signPost.message("\(pretty_function()) ...")
 
@@ -45,8 +48,8 @@ public struct GitSecretWorker: GitSecretWorkerProtocol, AutoGenerateProtocol
             git.arguments = ["hide"]
 
             let output = try terminal.runProcess(git)
-            signPost.verbose("\(output.joined(separator: "\n"))")
             signPost.message("\(pretty_function()) ✅")
+            return output
         }
         catch
         {

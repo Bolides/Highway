@@ -4,7 +4,7 @@ import SignPost
 import Terminal
 import ZFile
 
-let secretWorker = GitSecretWorker()
+let secretWorker = SecretsWorker()
 let signPost = SignPost.shared
 let terminal = Terminal.shared
 
