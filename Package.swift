@@ -131,9 +131,9 @@ public struct HighwaySourcery
 
 // MARK: - GitSecrets
 
-public struct GitSecrets
+public struct Secrets
 {
-    public static let name = "\(GitSecrets.self)"
+    public static let name = "\(Secrets.self)"
 
     public static let product = Product.executable(
         name: name,
@@ -155,7 +155,7 @@ public struct GitSecrets
         )
 
         public static let target = Target.target(
-            name: name + nameExtension,
+            name: Library.product.name,
             dependencies: [
                 "ZFile",
                 "HighwayDispatch",
@@ -178,7 +178,7 @@ public struct GitSecrets
             public static let target = Target.target(
                 name: name,
                 dependencies: Library.target.dependencies + [Library.product.asDependency()],
-                path: "Sources/Generated/\(GitSecrets.Library.product.name)"
+                path: "Sources/Generated/\(Secrets.Library.product.name)"
             )
         }
     }
@@ -212,7 +212,7 @@ public struct Highway
             "SwiftFormatWorker",
             "XCBuild",
             "Errors",
-        ] + [GitSecrets.Library.product.asDependency()]
+        ] + [Secrets.Library.product.asDependency()]
     )
 
     public struct Mock
@@ -255,13 +255,14 @@ public let package = Package(
         // MARK: - Executable
 
         HWSetup.product,
-        GitSecrets.product,
+        Secrets.product,
         HighwaySourcery.product,
 
         // MARK: - Library
 
-        GitSecrets.Library.product,
+        Secrets.Library.product,
         Highway.product,
+        Secrets.Library.Mock.product,
 
         .library(
             name: "HWCarthage",
@@ -319,7 +320,6 @@ public let package = Package(
         // MARK: - Library - Mocks
 
         HighwayDispatch.Mock.product,
-        GitSecrets.Library.Mock.product,
         Highway.Mock.product,
 
         .library(
@@ -361,12 +361,12 @@ public let package = Package(
         // MARK: - Executables
 
         HWSetup.target,
-        GitSecrets.target,
+        Secrets.target,
         HighwaySourcery.target,
 
         // MARK: - Libraries
 
-        GitSecrets.Library.target,
+        Secrets.Library.target,
         Highway.target,
 
         .target(
@@ -430,7 +430,7 @@ public let package = Package(
 
         // MARK: - Mocks
 
-        GitSecrets.Library.Mock.target,
+        Secrets.Library.Mock.target,
         .target(
             name: "HWCarthageMock",
             dependencies: ["HighwayDispatch", "HWCarthage", "ZFileMock", "ZFile", "Errors"],
@@ -486,7 +486,7 @@ public let package = Package(
 
         // MARK: - Tests
 
-        GitSecrets.tests,
+        Secrets.tests,
 
         .testTarget(
             name: "HWCarthageTests",

@@ -2,9 +2,9 @@ import Arguments
 import Errors
 import Foundation
 import GitHooks
-import GitSecretsLibrary
 import Highway
 import HighwayDispatch
+import SecretsLibrary
 import SignPost
 import SourceryAutoProtocols
 import SourceryWorker
