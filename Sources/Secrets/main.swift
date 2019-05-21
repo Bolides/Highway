@@ -15,7 +15,9 @@ do
 
     let srcRoot = try File(path: #file).parentFolder().parentFolder().parentFolder()
 
-//    try secretWorker.attemptHideSecrets(in: srcRoot)
+    let _output = try secretWorker.attemptHideSecrets(in: srcRoot)
+    signPost.message(_output.joined(separator: "\n"))
+
     let output = try secretWorker.attemptHideSecretsWithgpg(in: srcRoot)
     signPost.message(output.joined(separator: "\n"))
     exit(EXIT_SUCCESS)
