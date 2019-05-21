@@ -90,41 +90,41 @@ open class SecretsWorkerProtocolMock: SecretsWorkerProtocol
 
     // MARK: - <attemptHideSecretsWithgpg> - parameters
 
-    public var attemptHideSecretsWithgpgFromThrowableError: Error?
-    public var attemptHideSecretsWithgpgFromCallsCount = 0
-    public var attemptHideSecretsWithgpgFromCalled: Bool
+    public var attemptHideSecretsWithgpgInThrowableError: Error?
+    public var attemptHideSecretsWithgpgInCallsCount = 0
+    public var attemptHideSecretsWithgpgInCalled: Bool
     {
-        return attemptHideSecretsWithgpgFromCallsCount > 0
+        return attemptHideSecretsWithgpgInCallsCount > 0
     }
 
-    public var attemptHideSecretsWithgpgFromReceivedSecretsJson: FileProtocol?
-    public var attemptHideSecretsWithgpgFromReturnValue: [String]?
+    public var attemptHideSecretsWithgpgInReceivedFolder: FolderProtocol?
+    public var attemptHideSecretsWithgpgInReturnValue: [String]?
 
     // MARK: - <attemptHideSecretsWithgpg> - closure mocks
 
-    public var attemptHideSecretsWithgpgFromClosure: ((FileProtocol) throws -> [String])?
+    public var attemptHideSecretsWithgpgInClosure: ((FolderProtocol) throws -> [String])?
 
     // MARK: - <attemptHideSecretsWithgpg> - method mocked
 
-    open func attemptHideSecretsWithgpg(from secretsJson: FileProtocol) throws -> [String]
+    open func attemptHideSecretsWithgpg(in folder: FolderProtocol) throws -> [String]
     {
         // <attemptHideSecretsWithgpg> - Throwable method implementation
 
-        if let error = attemptHideSecretsWithgpgFromThrowableError
+        if let error = attemptHideSecretsWithgpgInThrowableError
         {
             throw error
         }
 
-        attemptHideSecretsWithgpgFromCallsCount += 1
-        attemptHideSecretsWithgpgFromReceivedSecretsJson = secretsJson
+        attemptHideSecretsWithgpgInCallsCount += 1
+        attemptHideSecretsWithgpgInReceivedFolder = folder
 
         // <attemptHideSecretsWithgpg> - Return Value mock implementation
 
-        guard let closureReturn = attemptHideSecretsWithgpgFromClosure else
+        guard let closureReturn = attemptHideSecretsWithgpgInClosure else
         {
-            guard let returnValue = attemptHideSecretsWithgpgFromReturnValue else
+            guard let returnValue = attemptHideSecretsWithgpgInReturnValue else
             {
-                let message = "No returnValue implemented for attemptHideSecretsWithgpgFromClosure"
+                let message = "No returnValue implemented for attemptHideSecretsWithgpgInClosure"
                 let error = SourceryMockError.implementErrorCaseFor(message)
 
                 // You should implement [String]
@@ -134,7 +134,7 @@ open class SecretsWorkerProtocolMock: SecretsWorkerProtocol
             return returnValue
         }
 
-        return try closureReturn(secretsJson)
+        return try closureReturn(folder)
     }
 
     // MARK: - <gitSecretProcess> - parameters

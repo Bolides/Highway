@@ -28,7 +28,7 @@ import Foundation
  static var shared: SecretsWorker { get }
 
  func attemptHideSecrets(in folder: FolderProtocol) throws  -> [String]
- func attemptHideSecretsWithgpg(from secretsJson: FileProtocol) throws  -> [String]
+ func attemptHideSecretsWithgpg(in folder: FolderProtocol) throws  -> [String]
  func gitSecretProcess(in folder: FolderProtocol) throws  -> ProcessProtocol
  // sourcery:end
  // types.implementing.AutoGenerateProtocol inline for SecretsWorker ✅

@@ -11,7 +11,7 @@ public protocol SecretsWorkerProtocol: AutoMockable
     static var shared: SecretsWorker { get }
 
     func attemptHideSecrets(in folder: FolderProtocol) throws -> [String]
-    func attemptHideSecretsWithgpg(from secretsJson: FileProtocol) throws -> [String]
+    func attemptHideSecretsWithgpg(in folder: FolderProtocol) throws -> [String]
     func gitSecretProcess(in folder: FolderProtocol) throws -> ProcessProtocol
 
     // sourcery:end
@@ -60,15 +60,26 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
         }
     }
 
-    /// Will hide all secrets added with git-secret add <#file name#> to `gpg -c <#file name#>`
-    /// with the passphrase in the json file with key `gpgPassphrase`
-    public func attemptHideSecretsWithgpg(from secretsJson: FileProtocol) throws -> [String]
+    public func attemptHideSecretsWithgpg(in folder: FolderProtocol) throws -> [String]
     {
         signPost.message("\(pretty_function()) ...")
 
         do
         {
-            let srcRoot: FolderProtocol = try secretsJson.parentFolder()
+            let srcRoot: FolderProtocol = folder
+
+            // Delete all .gpg files
+
+            try folder.makeFileSequence().forEach
+            { file in
+                if file.name.hasSuffix(".gpg")
+                {
+                    try file.delete()
+                }
+            }
+
+            // gpg --symetric all git secrets
+
             let git = try gitSecretProcess(in: srcRoot)
             git.arguments = ["list"]
 
@@ -81,8 +92,6 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
             }
 
             let files = try gitSecretListOutput.map { try srcRoot.file(named: $0) }
-
-            let secret = try JSONDecoder().decode(Secret.self, from: try secretsJson.read())
 
             for file in files
             {
