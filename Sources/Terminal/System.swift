@@ -58,30 +58,29 @@ public struct System: SystemProtocol, AutoGenerateProtocol
     {
         do
         {
-            let gitSecretName = "git-secret"
             let brewPath = "/usr/local/bin/brew"
 
             let brewList = try process(currentFolder: folder, executablePath: brewPath)
-            brewList.arguments = ["list", gitSecretName]
+            brewList.arguments = ["list", formula]
 
             var _output: String?
-            _output = try terminal.runProcess(brewList).first { $0.hasSuffix(gitSecretName) }
+            _output = try terminal.runProcess(brewList).first { $0.hasSuffix(formula) }
 
             if _output == nil
             {
-                signPost.error("\(pretty_function()) missing \(gitSecretName)")
-                signPost.message("install with `brew install \(gitSecretName)`")
+                signPost.error("\(pretty_function()) missing \(formula)")
+                signPost.message("install with `brew install \(formula)`")
 
                 let brewinstall = try process(currentFolder: folder, executablePath: brewPath)
-                brewinstall.arguments = ["install", gitSecretName]
+                brewinstall.arguments = ["install", formula]
 
                 try terminal.runProcess(brewinstall)
-                _output = try terminal.runProcess(brewList).first { $0.hasSuffix(gitSecretName) }
+                _output = try terminal.runProcess(brewList).first { $0.hasSuffix(formula) }
             }
 
             guard let output = _output else
             {
-                throw HighwayError.highwayError(atLocation: pretty_function(), error: "unable to find or install \(gitSecretName)")
+                throw HighwayError.highwayError(atLocation: pretty_function(), error: "unable to find or install \(formula)")
             }
 
             return try process(currentFolder: folder, executableFile: try File(path: output))

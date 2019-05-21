@@ -58,3 +58,4 @@ Carthage
 /Sources/.sourcery-HWPod.yml
 /Sources/.sourcery-HWPOSIX.yml
 .build
+/secrets.json
