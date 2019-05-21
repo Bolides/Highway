@@ -114,7 +114,9 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
         }
         catch
         {
-            async { throw HighwayError.highwayError(atLocation: pretty_function(), error: error) }
+            let _error = HighwayError.highwayError(atLocation: pretty_function(), error: error)
+            addError(_error)
+            async { throw _error }
         }
     }
 
@@ -182,6 +184,8 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
         }
     }
 
+    // MARK: - Secrets
+
     public func hideSecrets(in folder: FolderProtocol)
     {
         hideSecrets(in: folder, async: handleHideSecrets)
@@ -200,6 +204,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
             catch
             {
                 let _error = HighwayError.highwayError(atLocation: pretty_function(), error: error)
+                self.addError(error)
                 async { throw _error }
             }
 

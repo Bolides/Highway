@@ -28,19 +28,19 @@ public struct Terminal: TerminalProtocol
 
     // MARK: - Private
 
-    private let outputFile: FileProtocol
+    private let filesystem: FileSystemProtocol
 
     // MARK: - Init
 
     public init(
         signPost: SignPostProtocol = SignPost.shared,
         dispatchGroup: HWDispatchGroupProtocol = DispatchGroup(),
-        outputFile: FileProtocol = try! FileSystem.shared.temporaryFolder.createFileIfNeeded(named: "be.dooz.terminal - \(UUID().uuidString)")
+        filesystem: FileSystemProtocol = FileSystem.shared
     )
     {
         self.signPost = signPost
         self.dispatchGroup = dispatchGroup
-        self.outputFile = outputFile
+        self.filesystem = filesystem
     }
 
     @discardableResult
@@ -85,12 +85,14 @@ public struct Terminal: TerminalProtocol
         dispatchGroup.enter()
 
         var receivedError: Swift.Error?
+        let outputFile = try filesystem.temporaryFolder.createFileIfNeeded(named: "be.dooz.terminal - \(UUID().uuidString)")
 
         pipe.fileHandleForReading.readabilityHandler = { fh in
             let data = fh.availableData
             // process data ...
             let outputData = String(data: data, encoding: String.Encoding.utf8)
             let output = outputData?.components(separatedBy: "\n")
+            self.signPost.verbose(output?.joined(separator: "\n") ?? "")
 
             guard let result = output else
             {
@@ -101,7 +103,7 @@ public struct Terminal: TerminalProtocol
 
             do
             {
-                try self.outputFile.append(string: result.joined(separator: "\n"))
+                try outputFile.append(string: result.joined(separator: "\n"))
                 if result.count == 1, result[0].count == 0 {
                     pipe.fileHandleForReading.closeFile()
                     self.dispatchGroup.leave()
@@ -128,7 +130,7 @@ public struct Terminal: TerminalProtocol
 
             let code = process.terminationStatus
             let exit = TerminalSysExitCode(rawValue: code)
-            let outputIfError = ["⚠️ add --verbose to inspect error output"] + ((try? self.outputFile.readAllLines()) ?? [])
+            let outputIfError = ["⚠️ add --verbose to inspect error output"] + ((try? outputFile.readAllLines()) ?? [])
 
             guard let exitCode = exit else
             {
