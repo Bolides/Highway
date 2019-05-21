@@ -30,6 +30,8 @@ public protocol HighwayRunnerProtocol: AutoMockable
     func addGithooksPrePush() throws
     func runSwiftformat(_ async: @escaping (@escaping HighwayRunner.SyncSwiftformat) -> Void)
     func runSwiftPackageGenerateXcodeProject(_ async: @escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)
+    func hideSecretsAlsoWithGpg(in folder: FolderProtocol)
+    func hideSecretsAlsoWithGpg(in folder: FolderProtocol, async: @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void)
     func hideSecrets(in folder: FolderProtocol)
     func hideSecrets(in folder: FolderProtocol, async: @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void)
 
@@ -114,7 +116,9 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
         }
         catch
         {
-            async { throw HighwayError.highwayError(atLocation: pretty_function(), error: error) }
+            let _error = HighwayError.highwayError(atLocation: pretty_function(), error: error)
+            addError(_error)
+            async { throw _error }
         }
     }
 
@@ -182,6 +186,35 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
         }
     }
 
+    // MARK: - Secrets
+
+    public func hideSecretsAlsoWithGpg(in folder: FolderProtocol)
+    {
+        hideSecretsAlsoWithGpg(in: folder, async: handleHideSecrets)
+    }
+
+    /// first add secrets with git-secret add and then this function will add them to gpg too.
+    public func hideSecretsAlsoWithGpg(in folder: FolderProtocol, async: @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void)
+    {
+        dispatchGroup.enter()
+        queue.async
+        {
+            do
+            {
+                let output = try self.secretsWorker.attemptHideSecretsWithgpg(from: try folder.file(named: "secrets.json"))
+                async { output }
+            }
+            catch
+            {
+                let _error = HighwayError.highwayError(atLocation: pretty_function(), error: error)
+                self.addError(error)
+                async { throw _error }
+            }
+
+            self.dispatchGroup.leave()
+        }
+    }
+
     public func hideSecrets(in folder: FolderProtocol)
     {
         hideSecrets(in: folder, async: handleHideSecrets)
@@ -200,6 +233,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
             catch
             {
                 let _error = HighwayError.highwayError(atLocation: pretty_function(), error: error)
+                self.addError(error)
                 async { throw _error }
             }
 

@@ -17,11 +17,19 @@ import Foundation
 // version 5.5
 /*
 
+ // types.implementing.AutoGenerateProtocol inline for Secret ..
+ // sourcery:inline:Secret.AutoGenerateProtocol
+ var gpgPassphrase: String { get }
+
+ // sourcery:end
+ // types.implementing.AutoGenerateProtocol inline for Secret ✅
  // types.implementing.AutoGenerateProtocol inline for SecretsWorker ..
  // sourcery:inline:SecretsWorker.AutoGenerateProtocol
  static var shared: SecretsWorker { get }
 
  func attemptHideSecrets(in folder: FolderProtocol) throws  -> [String]
+ func attemptHideSecretsWithgpg(from secretsJson: FileProtocol) throws  -> [String]
+ func gitSecretProcess(in folder: FolderProtocol) throws  -> ProcessProtocol
  // sourcery:end
  // types.implementing.AutoGenerateProtocol inline for SecretsWorker ✅
 

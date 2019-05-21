@@ -10,6 +10,21 @@ import ZFile
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
+// MARK: - SecretProtocolMock
+
+open class SecretProtocolMock: SecretProtocol
+{
+    public init() {}
+
+    public var gpgPassphrase: String
+    {
+        get { return underlyingGpgPassphrase }
+        set(value) { underlyingGpgPassphrase = value }
+    }
+
+    public var underlyingGpgPassphrase: String = "AutoMockable filled value"
+}
+
 // MARK: - SecretsWorkerProtocolMock
 
 open class SecretsWorkerProtocolMock: SecretsWorkerProtocol
@@ -64,6 +79,104 @@ open class SecretsWorkerProtocolMock: SecretsWorkerProtocol
                 let error = SourceryMockError.implementErrorCaseFor(message)
 
                 // You should implement [String]
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(folder)
+    }
+
+    // MARK: - <attemptHideSecretsWithgpg> - parameters
+
+    public var attemptHideSecretsWithgpgFromThrowableError: Error?
+    public var attemptHideSecretsWithgpgFromCallsCount = 0
+    public var attemptHideSecretsWithgpgFromCalled: Bool
+    {
+        return attemptHideSecretsWithgpgFromCallsCount > 0
+    }
+
+    public var attemptHideSecretsWithgpgFromReceivedSecretsJson: FileProtocol?
+    public var attemptHideSecretsWithgpgFromReturnValue: [String]?
+
+    // MARK: - <attemptHideSecretsWithgpg> - closure mocks
+
+    public var attemptHideSecretsWithgpgFromClosure: ((FileProtocol) throws -> [String])?
+
+    // MARK: - <attemptHideSecretsWithgpg> - method mocked
+
+    open func attemptHideSecretsWithgpg(from secretsJson: FileProtocol) throws -> [String]
+    {
+        // <attemptHideSecretsWithgpg> - Throwable method implementation
+
+        if let error = attemptHideSecretsWithgpgFromThrowableError
+        {
+            throw error
+        }
+
+        attemptHideSecretsWithgpgFromCallsCount += 1
+        attemptHideSecretsWithgpgFromReceivedSecretsJson = secretsJson
+
+        // <attemptHideSecretsWithgpg> - Return Value mock implementation
+
+        guard let closureReturn = attemptHideSecretsWithgpgFromClosure else
+        {
+            guard let returnValue = attemptHideSecretsWithgpgFromReturnValue else
+            {
+                let message = "No returnValue implemented for attemptHideSecretsWithgpgFromClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement [String]
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(secretsJson)
+    }
+
+    // MARK: - <gitSecretProcess> - parameters
+
+    public var gitSecretProcessInThrowableError: Error?
+    public var gitSecretProcessInCallsCount = 0
+    public var gitSecretProcessInCalled: Bool
+    {
+        return gitSecretProcessInCallsCount > 0
+    }
+
+    public var gitSecretProcessInReceivedFolder: FolderProtocol?
+    public var gitSecretProcessInReturnValue: ProcessProtocol?
+
+    // MARK: - <gitSecretProcess> - closure mocks
+
+    public var gitSecretProcessInClosure: ((FolderProtocol) throws -> ProcessProtocol)?
+
+    // MARK: - <gitSecretProcess> - method mocked
+
+    open func gitSecretProcess(in folder: FolderProtocol) throws -> ProcessProtocol
+    {
+        // <gitSecretProcess> - Throwable method implementation
+
+        if let error = gitSecretProcessInThrowableError
+        {
+            throw error
+        }
+
+        gitSecretProcessInCallsCount += 1
+        gitSecretProcessInReceivedFolder = folder
+
+        // <gitSecretProcess> - Return Value mock implementation
+
+        guard let closureReturn = gitSecretProcessInClosure else
+        {
+            guard let returnValue = gitSecretProcessInReturnValue else
+            {
+                let message = "No returnValue implemented for gitSecretProcessInClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement ProcessProtocol
 
                 throw error
             }

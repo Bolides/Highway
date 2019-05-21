@@ -597,6 +597,58 @@ open class HighwayRunnerProtocolMock: HighwayRunnerProtocol
         runSwiftPackageGenerateXcodeProjectClosure?(async)
     }
 
+    // MARK: - <hideSecretsAlsoWithGpg> - parameters
+
+    public var hideSecretsAlsoWithGpgInCallsCount = 0
+    public var hideSecretsAlsoWithGpgInCalled: Bool
+    {
+        return hideSecretsAlsoWithGpgInCallsCount > 0
+    }
+
+    public var hideSecretsAlsoWithGpgInReceivedFolder: FolderProtocol?
+
+    // MARK: - <hideSecretsAlsoWithGpg> - closure mocks
+
+    public var hideSecretsAlsoWithGpgInClosure: ((FolderProtocol) -> Void)?
+
+    // MARK: - <hideSecretsAlsoWithGpg> - method mocked
+
+    open func hideSecretsAlsoWithGpg(in folder: FolderProtocol)
+    {
+        hideSecretsAlsoWithGpgInCallsCount += 1
+        hideSecretsAlsoWithGpgInReceivedFolder = folder
+
+        // <hideSecretsAlsoWithGpg> - Void return mock implementation
+
+        hideSecretsAlsoWithGpgInClosure?(folder)
+    }
+
+    // MARK: - <hideSecretsAlsoWithGpg> - parameters
+
+    public var hideSecretsAlsoWithGpgInAsyncCallsCount = 0
+    public var hideSecretsAlsoWithGpgInAsyncCalled: Bool
+    {
+        return hideSecretsAlsoWithGpgInAsyncCallsCount > 0
+    }
+
+    public var hideSecretsAlsoWithGpgInAsyncReceivedArguments: (folder: FolderProtocol, async: (@escaping HighwayRunner.SyncHideSecret) -> Void)?
+
+    // MARK: - <hideSecretsAlsoWithGpg> - closure mocks
+
+    public var hideSecretsAlsoWithGpgInAsyncClosure: ((FolderProtocol, @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void) -> Void)?
+
+    // MARK: - <hideSecretsAlsoWithGpg> - method mocked
+
+    open func hideSecretsAlsoWithGpg(in folder: FolderProtocol, async: @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void)
+    {
+        hideSecretsAlsoWithGpgInAsyncCallsCount += 1
+        hideSecretsAlsoWithGpgInAsyncReceivedArguments = (folder: folder, async: async)
+
+        // <hideSecretsAlsoWithGpg> - Void return mock implementation
+
+        hideSecretsAlsoWithGpgInAsyncClosure?(folder, async)
+    }
+
     // MARK: - <hideSecrets> - parameters
 
     public var hideSecretsInCallsCount = 0
