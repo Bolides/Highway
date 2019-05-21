@@ -92,6 +92,7 @@ public struct Terminal: TerminalProtocol
             // process data ...
             let outputData = String(data: data, encoding: String.Encoding.utf8)
             let output = outputData?.components(separatedBy: "\n")
+            self.signPost.verbose(output?.joined(separator: "\n") ?? "")
 
             guard let result = output else
             {

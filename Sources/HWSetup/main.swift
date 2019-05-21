@@ -42,7 +42,6 @@ do
 
     try highwayRunner.addGithooksPrePush()
     highwayRunner.hideSecrets(in: srcRoot)
-    highwayRunner.hideSecretsAlsoWithGpg(in: srcRoot)
 
     highwayRunner.runSourcery(handleSourceryOutput)
 

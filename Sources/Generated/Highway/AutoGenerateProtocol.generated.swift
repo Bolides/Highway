@@ -58,8 +58,6 @@ import Foundation
  func addGithooksPrePush() throws
  func runSwiftformat(_ async: @escaping (@escaping HighwayRunner.SyncSwiftformat) -> Void)
  func runSwiftPackageGenerateXcodeProject(_ async: @escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)
- func hideSecretsAlsoWithGpg(in folder: FolderProtocol)
- func hideSecretsAlsoWithGpg(in folder: FolderProtocol, async: @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void)
  func hideSecrets(in folder: FolderProtocol)
  func hideSecrets(in folder: FolderProtocol, async: @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void)
  // sourcery:end
