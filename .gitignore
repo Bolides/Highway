@@ -60,3 +60,4 @@ Carthage
 /Sources/.sourcery-HWPOSIX.yml
 .build
 /secrets.json
+/build

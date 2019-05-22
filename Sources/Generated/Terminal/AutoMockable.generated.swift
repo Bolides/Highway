@@ -589,6 +589,55 @@ open class SystemProtocolMock: SystemProtocol
         return try closureReturn(name, folder)
     }
 
+    // MARK: - <rbenvWhichProcess> - parameters
+
+    public var rbenvWhichProcessGemNameInThrowableError: Error?
+    public var rbenvWhichProcessGemNameInCallsCount = 0
+    public var rbenvWhichProcessGemNameInCalled: Bool
+    {
+        return rbenvWhichProcessGemNameInCallsCount > 0
+    }
+
+    public var rbenvWhichProcessGemNameInReceivedArguments: (gemName: String, folder: FolderProtocol)?
+    public var rbenvWhichProcessGemNameInReturnValue: ProcessProtocol?
+
+    // MARK: - <rbenvWhichProcess> - closure mocks
+
+    public var rbenvWhichProcessGemNameInClosure: ((String, FolderProtocol) throws -> ProcessProtocol)?
+
+    // MARK: - <rbenvWhichProcess> - method mocked
+
+    open func rbenvWhichProcess(gemName: String, in folder: FolderProtocol) throws -> ProcessProtocol
+    {
+        // <rbenvWhichProcess> - Throwable method implementation
+
+        if let error = rbenvWhichProcessGemNameInThrowableError
+        {
+            throw error
+        }
+
+        rbenvWhichProcessGemNameInCallsCount += 1
+        rbenvWhichProcessGemNameInReceivedArguments = (gemName: gemName, folder: folder)
+
+        // <rbenvWhichProcess> - Return Value mock implementation
+
+        guard let closureReturn = rbenvWhichProcessGemNameInClosure else
+        {
+            guard let returnValue = rbenvWhichProcessGemNameInReturnValue else
+            {
+                let message = "No returnValue implemented for rbenvWhichProcessGemNameInClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement ProcessProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(gemName, folder)
+    }
+
     // MARK: - <installOfFindGem> - parameters
 
     public var installOfFindGemNameInThrowableError: Error?

@@ -16,6 +16,7 @@ public protocol SystemProtocol: AutoMockable
 
     func rbenvProcess(in folder: FolderProtocol) throws -> ProcessProtocol
     func gemProcess(name: String, in folder: FolderProtocol) throws -> ProcessProtocol
+    func rbenvWhichProcess(gemName: String, in folder: FolderProtocol) throws -> ProcessProtocol
     func installOfFindGem(name: String, in folder: FolderProtocol) throws -> ProcessProtocol
     func processFromBrew(formula: String, in folder: FolderProtocol) throws -> ProcessProtocol
     func installOrGetProcessFromBrew(formula: String, in folder: FolderProtocol) throws -> ProcessProtocol
@@ -78,33 +79,38 @@ public struct System: SystemProtocol, AutoGenerateProtocol
     {
         do
         {
-            signPost.message("\(pretty_function()) rbenv init ...")
-            let rbenvInit = try rbenvProcess(in: folder)
-            rbenvInit.arguments = ["init"]
-            try terminal.runProcess(rbenvInit)
-            signPost.message("\(pretty_function()) rbenv init ✅")
-
             signPost.message("\(pretty_function()) gem process lookup ...")
 
-            let gemList = try installOrGetProcessFromBrew(formula: "gem", in: folder)
-            gemList.arguments = ["list", name]
+            let gemName = "gem"
+            let rbenv = try rbenvWhichProcess(gemName: gemName, in: folder)
 
-            let gemListOutput = try terminal.runProcess(gemList)
-
-            guard (gemListOutput.first { $0.hasPrefix(name) }) != nil else
+            guard let rbenvOutput = (try terminal.runProcess(rbenv).filter { !$0.isEmpty }.first) else
             {
-                throw Error.gemListNoGem(forName: name)
+                throw Error.executableNotFoundFor(executableName: gemName)
             }
 
-            let which = try process("which")
-            which.arguments = [name]
+            let gemList = try process(currentFolder: folder, executableFile: try File(path: rbenvOutput))
+            gemList.arguments = ["list", name]
 
-            guard let executableFile = (try terminal.runProcess(which).map { try File(path: $0) }.first) else
+            let gemListOutput = try terminal.runProcess(gemList).first { $0.hasPrefix(name) }
+
+            if (gemListOutput?.count ?? 0) == 0 {
+                
+                let gem = try process(currentFolder: folder, executableFile: try File(path: rbenvOutput))
+                gem.arguments = ["install", name]
+                let output = try terminal.runProcess(gem)
+                signPost.verbose(output.joined(separator: "\n"))
+            }
+
+            // run if installed yes
+            let rbenvWhichJazzy = try rbenvWhichProcess(gemName: name, in: folder)
+
+            guard let rbenvWhichJazzyOutput = (try terminal.runProcess(rbenvWhichJazzy).first { !$0.isEmpty }) else
             {
                 throw Error.executableNotFoundFor(executableName: name)
             }
 
-            return try process(currentFolder: folder, executableFile: executableFile)
+            return try process(currentFolder: folder, executableFile: try File(path: rbenvWhichJazzyOutput))
         }
         catch let error as System.Error
         {
@@ -114,6 +120,13 @@ public struct System: SystemProtocol, AutoGenerateProtocol
         {
             throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
         }
+    }
+
+    public func rbenvWhichProcess(gemName: String, in folder: FolderProtocol) throws -> ProcessProtocol
+    {
+        let rbenv = try installOrGetProcessFromBrew(formula: "rbenv", in: folder)
+        rbenv.arguments = ["which", gemName]
+        return rbenv
     }
 
     public func installOfFindGem(name: String, in folder: FolderProtocol) throws -> ProcessProtocol
