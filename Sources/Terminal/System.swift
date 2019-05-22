@@ -14,6 +14,9 @@ public protocol SystemProtocol: AutoMockable
     var pathEnvironmentParser: PathEnvironmentParserProtocol { get }
     var fileSystem: FileSystemProtocol { get }
 
+    func rbenvProcess(in folder: FolderProtocol) throws -> ProcessProtocol
+    func gemProcess(name: String, in folder: FolderProtocol) throws -> ProcessProtocol
+    func installOfFindGem(name: String, in folder: FolderProtocol) throws -> ProcessProtocol
     func processFromBrew(formula: String, in folder: FolderProtocol) throws -> ProcessProtocol
     func installOrGetProcessFromBrew(formula: String, in folder: FolderProtocol) throws -> ProcessProtocol
     // sourcery:Will throw error if the formula is not installed when you run this process
@@ -56,6 +59,88 @@ public struct System: SystemProtocol, AutoGenerateProtocol
         self.terminal = terminal
     }
 
+    // MARK: - Ruby and gem support
+
+    /// Will install rbenv with xcode if needed
+    public func rbenvProcess(in folder: FolderProtocol) throws -> ProcessProtocol
+    {
+        do
+        {
+            return try installOrGetProcessFromBrew(formula: "rbenv", in: folder)
+        }
+        catch
+        {
+            throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
+        }
+    }
+
+    public func gemProcess(name: String, in folder: FolderProtocol) throws -> ProcessProtocol
+    {
+        do
+        {
+            signPost.message("\(pretty_function()) rbenv init ...")
+            let rbenvInit = try rbenvProcess(in: folder)
+            rbenvInit.arguments = ["init"]
+            try terminal.runProcess(rbenvInit)
+            signPost.message("\(pretty_function()) rbenv init ✅")
+
+            signPost.message("\(pretty_function()) gem process lookup ...")
+
+            let gemList = try installOrGetProcessFromBrew(formula: "gem", in: folder)
+            gemList.arguments = ["list", name]
+
+            let gemListOutput = try terminal.runProcess(gemList)
+
+            guard (gemListOutput.first { $0.hasPrefix(name) }) != nil else
+            {
+                throw Error.gemListNoGem(forName: name)
+            }
+
+            let which = try process("which")
+            which.arguments = [name]
+
+            guard let executableFile = (try terminal.runProcess(which).map { try File(path: $0) }.first) else
+            {
+                throw Error.executableNotFoundFor(executableName: name)
+            }
+
+            return try process(currentFolder: folder, executableFile: executableFile)
+        }
+        catch let error as System.Error
+        {
+            throw Error.error(atLocation: pretty_function(), error: error)
+        }
+        catch
+        {
+            throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
+        }
+    }
+
+    public func installOfFindGem(name: String, in folder: FolderProtocol) throws -> ProcessProtocol
+    {
+        do
+        {
+            return try gemProcess(name: name, in: folder)
+        }
+        catch let error as System.Error
+        {
+            guard error == System.Error.gemListNoGem(forName: name) else
+            {
+                throw error
+            }
+
+            let gemInstall = try installOrGetProcessFromBrew(formula: "gem", in: folder)
+            gemInstall.arguments = ["install", name]
+
+            try terminal.runProcess(gemInstall)
+            return try gemProcess(name: name, in: folder)
+        }
+        catch
+        {
+            throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
+        }
+    }
+
     // MARK: - Brew support
 
     /// Will use `/usr/local/bin/brew` to find the executable file to setup the Process
@@ -82,8 +167,9 @@ public struct System: SystemProtocol, AutoGenerateProtocol
         catch let error as System.Error
         {
             throw System.Error.error(atLocation: pretty_function(), error: error)
-            
-        } catch {
+        }
+        catch
+        {
             throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
         }
     }
@@ -97,7 +183,7 @@ public struct System: SystemProtocol, AutoGenerateProtocol
         catch var error as System.Error
         {
             error = error.indirectError == nil ? error : error.indirectError!
-            
+
             guard
                 error == Error.brewListNoFormula(forName: formula) else
             {
@@ -177,15 +263,16 @@ public struct System: SystemProtocol, AutoGenerateProtocol
         case brewListNoFormula(forName: String)
         case general(String)
         case error(atLocation: String, error: System.Error)
-        
-        var indirectError: Error? {
-            
-            switch self {
+        case gemListNoGem(forName: String)
+
+        var indirectError: Error?
+        {
+            switch self
+            {
             case .error(atLocation: _, error: let error):
                 return error
             default:
                 return nil
-                
             }
         }
     }
