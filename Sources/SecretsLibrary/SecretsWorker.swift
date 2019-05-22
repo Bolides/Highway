@@ -65,7 +65,6 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
             
             let secretData = try JSONEncoder().encode(secret)
             
-            try fileDates.write(data: secretData)
             
             let result = try original?.secretFileDates.filter {
                 
@@ -76,7 +75,12 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
                 return date > $0.value
             }
             
-            return (result?.keys.count ?? 0) > 0
+            guard (result?.keys.count ?? 0) > 0 else {
+                return false
+            }
+            try fileDates.write(data: secretData)
+
+            return true
             
         } catch {
             throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
