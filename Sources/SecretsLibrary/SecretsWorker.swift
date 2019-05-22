@@ -12,10 +12,11 @@ public protocol SecretsWorkerProtocol: AutoMockable
     static var gitSecretname: String { get set }
     static var secretFileDateChangePath: String { get set }
 
-    func didSecretsChangeSinceLastPush(in folder: FolderProtocol) throws -> Bool
-    func attemptHideSecrets(in folder: FolderProtocol) throws -> [String]
+    mutating func didSecretsChangeSinceLastPush(in folder: FolderProtocol) throws -> Bool
+    mutating func writeNewSecretSavedData(in folder: FolderProtocol) throws
+    mutating func attemptHideSecrets(in folder: FolderProtocol) throws -> [String]
     func commitHiddenSecrets(in folder: FolderProtocol) throws -> [String]
-    func attemptHideSecretsWithgpg(in folder: FolderProtocol) throws -> [String]
+    mutating func attemptHideSecretsWithgpg(in folder: FolderProtocol) throws -> [String]
     func gitSecretProcess(in folder: FolderProtocol) throws -> ProcessProtocol
 
     // sourcery:end
@@ -32,6 +33,7 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
     private let terminal: TerminalProtocol
     private let system: SystemProtocol
     private let signPost: SignPostProtocol
+    private var secretSaved: Secret?
 
     // MARK: - init
 
@@ -46,7 +48,9 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
         self.signPost = signPost
     }
 
-    public func didSecretsChangeSinceLastPush(in folder: FolderProtocol) throws -> Bool
+    // MARK: - Secret changes
+
+    public mutating func didSecretsChangeSinceLastPush(in folder: FolderProtocol) throws -> Bool
     {
         do
         {
@@ -64,13 +68,11 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
 
             let original = try? JSONDecoder().decode(Secret.self, from: try fileDates.read())
 
-            let secret = Secret(secretFileDates: listDates)
-
-            let secretData = try JSONEncoder().encode(secret)
+            secretSaved = Secret(secretFileDates: listDates)
 
             let result = try original?.secretFileDates.filter
             {
-                guard let date = secret.secretFileDates[$0.key] else
+                guard let date = secretSaved?.secretFileDates[$0.key] else
                 {
                     throw HighwayError.highwayError(atLocation: pretty_function(), error: "missing secret file date \($0.key)")
                 }
@@ -80,9 +82,9 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
 
             guard (result?.keys.count ?? 0) > 0 else
             {
+                secretSaved = nil
                 return false
             }
-            try fileDates.write(data: secretData)
 
             return true
         }
@@ -92,7 +94,23 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
         }
     }
 
-    public func attemptHideSecrets(in folder: FolderProtocol) throws -> [String]
+    public mutating func writeNewSecretSavedData(in folder: FolderProtocol) throws
+    {
+        guard let secretSaved = secretSaved else
+        {
+            return
+        }
+
+        let secretData = try JSONEncoder().encode(secretSaved)
+        let fileDates = try folder.createFileIfNeeded(named: SecretsWorker.secretFileDateChangePath)
+        try fileDates.write(data: secretData)
+        self.secretSaved = nil
+    }
+
+    // MARK: - git-secret
+
+    // Will throw to make you run secrets to hide secrets with git-secret ang gpg
+    public mutating func attemptHideSecrets(in folder: FolderProtocol) throws -> [String]
     {
         guard try didSecretsChangeSinceLastPush(in: folder) else
         {
@@ -119,6 +137,8 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
             throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
         }
     }
+
+    // MARK: - Commit secret files
 
     @discardableResult
     public func commitHiddenSecrets(in folder: FolderProtocol) throws -> [String]
@@ -163,8 +183,15 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
         }
     }
 
-    public func attemptHideSecretsWithgpg(in folder: FolderProtocol) throws -> [String]
+    // MARK: - gpg secrets
+
+    public mutating func attemptHideSecretsWithgpg(in folder: FolderProtocol) throws -> [String]
     {
+        guard try didSecretsChangeSinceLastPush(in: folder) else
+        {
+            return ["\(pretty_function()) no secrets changed, skipping!"]
+        }
+
         signPost.message("\(pretty_function()) ...")
 
         do
@@ -216,8 +243,26 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
         }
     }
 
+    // MARK: - Processes
+
     public func gitSecretProcess(in folder: FolderProtocol) throws -> ProcessProtocol
     {
         return try system.installOrGetProcessFromBrew(formula: SecretsWorker.gitSecretname, in: folder)
+    }
+
+    // MARK: - Error
+
+    public enum Error: Swift.Error, Equatable, CustomStringConvertible
+    {
+        case runSecretsExecutable
+
+        public var description: String
+        {
+            switch self
+            {
+            case .runSecretsExecutable:
+                return "You should run ()"
+            }
+        }
     }
 }

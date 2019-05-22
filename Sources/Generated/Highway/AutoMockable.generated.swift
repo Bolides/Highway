@@ -597,56 +597,38 @@ open class HighwayRunnerProtocolMock: HighwayRunnerProtocol
         runSwiftPackageGenerateXcodeProjectClosure?(async)
     }
 
-    // MARK: - <hideSecrets> - parameters
+    // MARK: - <checkIfSecretsShouldBeHidden> - parameters
 
-    public var hideSecretsInCallsCount = 0
-    public var hideSecretsInCalled: Bool
+    public var checkIfSecretsShouldBeHiddenInThrowableError: Error?
+    public var checkIfSecretsShouldBeHiddenInCallsCount = 0
+    public var checkIfSecretsShouldBeHiddenInCalled: Bool
     {
-        return hideSecretsInCallsCount > 0
+        return checkIfSecretsShouldBeHiddenInCallsCount > 0
     }
 
-    public var hideSecretsInReceivedFolder: FolderProtocol?
+    public var checkIfSecretsShouldBeHiddenInReceivedFolder: FolderProtocol?
 
-    // MARK: - <hideSecrets> - closure mocks
+    // MARK: - <checkIfSecretsShouldBeHidden> - closure mocks
 
-    public var hideSecretsInClosure: ((FolderProtocol) -> Void)?
+    public var checkIfSecretsShouldBeHiddenInClosure: ((FolderProtocol) throws -> Void)?
 
-    // MARK: - <hideSecrets> - method mocked
+    // MARK: - <checkIfSecretsShouldBeHidden> - method mocked
 
-    open func hideSecrets(in folder: FolderProtocol)
+    open func checkIfSecretsShouldBeHidden(in folder: FolderProtocol) throws
     {
-        hideSecretsInCallsCount += 1
-        hideSecretsInReceivedFolder = folder
+        // <checkIfSecretsShouldBeHidden> - Throwable method implementation
 
-        // <hideSecrets> - Void return mock implementation
+        if let error = checkIfSecretsShouldBeHiddenInThrowableError
+        {
+            throw error
+        }
 
-        hideSecretsInClosure?(folder)
-    }
+        checkIfSecretsShouldBeHiddenInCallsCount += 1
+        checkIfSecretsShouldBeHiddenInReceivedFolder = folder
 
-    // MARK: - <hideSecrets> - parameters
+        // <checkIfSecretsShouldBeHidden> - Void return mock implementation
 
-    public var hideSecretsInAsyncCallsCount = 0
-    public var hideSecretsInAsyncCalled: Bool
-    {
-        return hideSecretsInAsyncCallsCount > 0
-    }
-
-    public var hideSecretsInAsyncReceivedArguments: (folder: FolderProtocol, async: (@escaping HighwayRunner.SyncHideSecret) -> Void)?
-
-    // MARK: - <hideSecrets> - closure mocks
-
-    public var hideSecretsInAsyncClosure: ((FolderProtocol, @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void) -> Void)?
-
-    // MARK: - <hideSecrets> - method mocked
-
-    open func hideSecrets(in folder: FolderProtocol, async: @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void)
-    {
-        hideSecretsInAsyncCallsCount += 1
-        hideSecretsInAsyncReceivedArguments = (folder: folder, async: async)
-
-        // <hideSecrets> - Void return mock implementation
-
-        hideSecretsInAsyncClosure?(folder, async)
+        try checkIfSecretsShouldBeHiddenInClosure?(folder)
     }
 }
 

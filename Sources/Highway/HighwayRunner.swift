@@ -30,8 +30,7 @@ public protocol HighwayRunnerProtocol: AutoMockable
     func addGithooksPrePush() throws
     func runSwiftformat(_ async: @escaping (@escaping HighwayRunner.SyncSwiftformat) -> Void)
     func runSwiftPackageGenerateXcodeProject(_ async: @escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)
-    func hideSecrets(in folder: FolderProtocol)
-    func hideSecrets(in folder: FolderProtocol, async: @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void)
+    func checkIfSecretsShouldBeHidden(in folder: FolderProtocol) throws
 
     // sourcery:end
 }
@@ -57,7 +56,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
     private let queue: HighwayDispatchProtocol
     private let dispatchGroup: HWDispatchGroupProtocol
     private let system: SystemProtocol
-    private let secretsWorker: SecretsWorkerProtocol
+    private var secretsWorker: SecretsWorkerProtocol
 
     public init(
         highway: HighwayProtocol,
@@ -186,30 +185,15 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
 
     // MARK: - Secrets
 
-    public func hideSecrets(in folder: FolderProtocol)
+    /// Will throw if secrets changed SecretsWorker.Error.runSecretsExecutable
+    public func checkIfSecretsShouldBeHidden(in folder: FolderProtocol) throws
     {
-        hideSecrets(in: folder, async: handleHideSecrets)
-    }
-
-    public func hideSecrets(in folder: FolderProtocol, async: @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void)
-    {
-        dispatchGroup.enter()
-        queue.async
+        guard try secretsWorker.didSecretsChangeSinceLastPush(in: folder) else
         {
-            do
-            {
-                let output = try self.secretsWorker.attemptHideSecrets(in: folder)
-                async { output }
-            }
-            catch
-            {
-                let _error = HighwayError.highwayError(atLocation: pretty_function(), error: error)
-                self.addError(error)
-                async { throw _error }
-            }
-
-            self.dispatchGroup.leave()
+            signPost.message("\(pretty_function()) no secrets to hide.")
+            return
         }
+        throw SecretsWorker.Error.runSecretsExecutable
     }
 
     // MARK: - Private

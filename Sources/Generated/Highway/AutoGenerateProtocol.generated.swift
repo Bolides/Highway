@@ -58,8 +58,7 @@ import Foundation
  func addGithooksPrePush() throws
  func runSwiftformat(_ async: @escaping (@escaping HighwayRunner.SyncSwiftformat) -> Void)
  func runSwiftPackageGenerateXcodeProject(_ async: @escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)
- func hideSecrets(in folder: FolderProtocol)
- func hideSecrets(in folder: FolderProtocol, async: @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void)
+ func checkIfSecretsShouldBeHidden(in folder: FolderProtocol) throws
  // sourcery:end
  // types.implementing.AutoGenerateProtocol inline for HighwayRunner ✅
 

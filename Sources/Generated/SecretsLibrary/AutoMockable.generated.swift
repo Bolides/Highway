@@ -96,6 +96,40 @@ open class SecretsWorkerProtocolMock: SecretsWorkerProtocol
         return try closureReturn(folder)
     }
 
+    // MARK: - <writeNewSecretSavedData> - parameters
+
+    public var writeNewSecretSavedDataInThrowableError: Error?
+    public var writeNewSecretSavedDataInCallsCount = 0
+    public var writeNewSecretSavedDataInCalled: Bool
+    {
+        return writeNewSecretSavedDataInCallsCount > 0
+    }
+
+    public var writeNewSecretSavedDataInReceivedFolder: FolderProtocol?
+
+    // MARK: - <writeNewSecretSavedData> - closure mocks
+
+    public var writeNewSecretSavedDataInClosure: ((FolderProtocol) throws -> Void)?
+
+    // MARK: - <writeNewSecretSavedData> - method mocked
+
+    open func writeNewSecretSavedData(in folder: FolderProtocol) throws
+    {
+        // <writeNewSecretSavedData> - Throwable method implementation
+
+        if let error = writeNewSecretSavedDataInThrowableError
+        {
+            throw error
+        }
+
+        writeNewSecretSavedDataInCallsCount += 1
+        writeNewSecretSavedDataInReceivedFolder = folder
+
+        // <writeNewSecretSavedData> - Void return mock implementation
+
+        try writeNewSecretSavedDataInClosure?(folder)
+    }
+
     // MARK: - <attemptHideSecrets> - parameters
 
     public var attemptHideSecretsInThrowableError: Error?
