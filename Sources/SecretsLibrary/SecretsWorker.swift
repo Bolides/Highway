@@ -58,6 +58,8 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
         }
         catch
         {
+            signPost.message("\(pretty_function()) ❌")
+
             throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
         }
     }
@@ -109,6 +111,7 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
         }
         catch
         {
+            signPost.message("\(pretty_function()) ❌")
             throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
         }
     }
