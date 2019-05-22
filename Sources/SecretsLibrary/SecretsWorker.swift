@@ -53,6 +53,8 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
             git.arguments = ["hide"]
 
             let output = try terminal.runProcess(git)
+            signPost.verbose("\(output.joined(separator: "\n"))")
+            try commitHiddenSecrets(in: folder)
             signPost.message("\(pretty_function()) ✅")
             return output
         }
@@ -60,6 +62,41 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
         {
             signPost.message("\(pretty_function()) ❌")
 
+            throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
+        }
+    }
+    
+    @discardableResult
+    public func commitHiddenSecrets(in folder: FolderProtocol) throws -> [String] {
+        signPost.message("\(pretty_function()) ...")
+        
+        do
+        {
+            let git = try system.process("git")
+            git.arguments = ["add"]
+            
+            let gitSecretList = try gitSecretProcess(in: folder)
+            gitSecretList.arguments = ["list"]
+            
+            let gitSecretListPaths = try terminal.runProcess(gitSecretList)
+            
+            git.arguments?.append(contentsOf: gitSecretListPaths)
+            
+            try terminal.runProcess(git)
+            
+            let gitCommit = try system.process("git")
+            git.arguments = ["-m", "\(pretty_function()) added and committed secrets \(gitSecretListPaths.joined(separator: ","))"]
+            
+            let output = try terminal.runProcess(gitCommit)
+            
+            signPost.message("\(pretty_function()) ✅")
+            
+            return output
+        }
+        catch
+        {
+            signPost.message("\(pretty_function()) ❌")
+            
             throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
         }
     }
