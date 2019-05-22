@@ -19,6 +19,18 @@ public enum HighwayError: Swift.Error, CustomStringConvertible
     case swiftPackageShowDependencies(String)
     case missingSourcery(String)
 
+    // MARK: - Indirect Error
+    
+    var indirectError: Swift.Error? {
+        
+        switch self {
+        case .highwayError(atLocation: _, error: let error):
+            return error
+        default:
+            return nil
+            
+        }
+    }
     // MARK: - CustomStringConvertible
 
     public var description: String

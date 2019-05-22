@@ -38,6 +38,13 @@ open class SecretsWorkerProtocolMock: SecretsWorkerProtocol
     }
 
     public static var underlyingShared: SecretsWorker!
+    public static var gitSecretname: String
+    {
+        get { return underlyingGitSecretname }
+        set(value) { underlyingGitSecretname = value }
+    }
+
+    public static var underlyingGitSecretname: String = "AutoMockable filled value"
 
     // MARK: - <attemptHideSecrets> - parameters
 

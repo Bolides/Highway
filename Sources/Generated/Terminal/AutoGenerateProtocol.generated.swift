@@ -32,10 +32,14 @@ import Foundation
  // types.implementing.AutoGenerateProtocol inline for System ..
  // sourcery:inline:System.AutoGenerateProtocol
  static var shared: SystemProtocol { get }
+ static var brewPath: String { get set }
  var pathEnvironmentParser: PathEnvironmentParserProtocol { get }
  var fileSystem: FileSystemProtocol { get }
 
  func processFromBrew(formula: String, in folder: FolderProtocol) throws  -> ProcessProtocol
+ func installOrGetProcessFromBrew(formula: String, in folder: FolderProtocol) throws  -> ProcessProtocol
+ // sourcery:Will throw error if the formula is not installed when you run this process
+ func brewListProcess(for formula: String, in folder: FolderProtocol) throws  -> ProcessProtocol
  func process(_ executableName: String) throws  -> ProcessProtocol
  func process(currentFolder: FolderProtocol, executablePath: String) throws  -> ProcessProtocol
  func process(currentFolder: FolderProtocol, executableFile: FileProtocol) throws  -> ProcessProtocol

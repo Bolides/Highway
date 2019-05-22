@@ -9,6 +9,7 @@ public protocol SecretsWorkerProtocol: AutoMockable
 {
     // sourcery:inline:SecretsWorker.AutoGenerateProtocol
     static var shared: SecretsWorker { get }
+    static var gitSecretname: String { get set }
 
     func attemptHideSecrets(in folder: FolderProtocol) throws -> [String]
     func attemptHideSecretsWithgpg(in folder: FolderProtocol) throws -> [String]
@@ -20,6 +21,7 @@ public protocol SecretsWorkerProtocol: AutoMockable
 public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
 {
     public static let shared = SecretsWorker()
+    public static var gitSecretname = "git-secret"
 
     // MARK: - Private
 
@@ -113,6 +115,6 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
 
     public func gitSecretProcess(in folder: FolderProtocol) throws -> ProcessProtocol
     {
-        return try system.processFromBrew(formula: "git-secret", in: folder)
+        return try system.installOrGetProcessFromBrew(formula: SecretsWorker.gitSecretname, in: folder)
     }
 }

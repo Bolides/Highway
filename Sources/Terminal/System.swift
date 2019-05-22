@@ -10,10 +10,14 @@ public protocol SystemProtocol: AutoMockable
 {
     // sourcery:inline:System.AutoGenerateProtocol
     static var shared: SystemProtocol { get }
+    static var brewPath: String { get set }
     var pathEnvironmentParser: PathEnvironmentParserProtocol { get }
     var fileSystem: FileSystemProtocol { get }
 
     func processFromBrew(formula: String, in folder: FolderProtocol) throws -> ProcessProtocol
+    func installOrGetProcessFromBrew(formula: String, in folder: FolderProtocol) throws -> ProcessProtocol
+    // sourcery:Will throw error if the formula is not installed when you run this process
+    func brewListProcess(for formula: String, in folder: FolderProtocol) throws -> ProcessProtocol
     func process(_ executableName: String) throws -> ProcessProtocol
     func process(currentFolder: FolderProtocol, executablePath: String) throws -> ProcessProtocol
     func process(currentFolder: FolderProtocol, executableFile: FileProtocol) throws -> ProcessProtocol
@@ -25,6 +29,7 @@ public protocol SystemProtocol: AutoMockable
 public struct System: SystemProtocol, AutoGenerateProtocol
 {
     public static let shared: SystemProtocol = System()
+    public static var brewPath = "/usr/local/bin/brew"
 
     // MARK: - Properties
 
@@ -58,32 +63,56 @@ public struct System: SystemProtocol, AutoGenerateProtocol
     {
         do
         {
-            let brewPath = "/usr/local/bin/brew"
+            let brewList = try brewListProcess(for: formula, in: folder)
 
-            let brewList = try process(currentFolder: folder, executablePath: brewPath)
-            brewList.arguments = ["list", formula]
+            let output = try terminal.runProcess(brewList)
 
-            var _output: String?
-            _output = try terminal.runProcess(brewList).first { $0.hasSuffix(formula) }
-
-            if _output == nil
+            guard (output.first { $0.hasPrefix("Error") }) == nil else
             {
-                signPost.error("\(pretty_function()) missing \(formula)")
-                signPost.message("install with `brew install \(formula)`")
-
-                let brewinstall = try process(currentFolder: folder, executablePath: brewPath)
-                brewinstall.arguments = ["install", formula]
-
-                try terminal.runProcess(brewinstall)
-                _output = try terminal.runProcess(brewList).first { $0.hasSuffix(formula) }
+                throw Error.brewListNoFormula(forName: formula)
             }
 
-            guard let output = _output else
+            guard let executablePath = (output.first { $0.hasSuffix(formula) }) else
             {
-                throw HighwayError.highwayError(atLocation: pretty_function(), error: "unable to find or install \(formula)")
+                throw Error.executableNotFoundFor(executableName: formula)
             }
 
-            return try process(currentFolder: folder, executableFile: try File(path: output))
+            return try process(currentFolder: folder, executableFile: try File(path: executablePath))
+        }
+        catch let error as System.Error
+        {
+            throw System.Error.error(atLocation: pretty_function(), error: error)
+            
+        } catch {
+            throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
+        }
+    }
+
+    public func installOrGetProcessFromBrew(formula: String, in folder: FolderProtocol) throws -> ProcessProtocol
+    {
+        do
+        {
+            return try processFromBrew(formula: formula, in: folder)
+        }
+        catch var error as System.Error
+        {
+            error = error.indirectError == nil ? error : error.indirectError!
+            
+            guard
+                error == Error.brewListNoFormula(forName: formula) else
+            {
+                throw System.Error.error(atLocation: pretty_function(), error: error)
+            }
+
+            signPost.error("\(pretty_function()) missing \(formula)")
+            signPost.message("`brew install \(formula)` ... ")
+
+            let brewinstall = try process(currentFolder: folder, executablePath: System.brewPath)
+            brewinstall.arguments = ["install", formula]
+
+            try terminal.runProcess(brewinstall)
+            signPost.message("`brew install \(formula)` ✅")
+            return try processFromBrew(formula: formula, in: folder)
         }
         catch
         {
@@ -91,7 +120,16 @@ public struct System: SystemProtocol, AutoGenerateProtocol
         }
     }
 
-    // MARK: - Public functions
+    // sourcery: Will throw error if the formula is not installed when you run this process
+    public func brewListProcess(for formula: String, in folder: FolderProtocol) throws -> ProcessProtocol
+    {
+        let brewList = try process(currentFolder: folder, executablePath: System.brewPath)
+        brewList.arguments = ["list", formula]
+
+        return brewList
+    }
+
+    // MARK: - Get processes already installed on the system
 
     public func process(_ executableName: String) throws -> ProcessProtocol
     {
@@ -133,8 +171,22 @@ public struct System: SystemProtocol, AutoGenerateProtocol
 
     // MARKL: - Error
 
-    public enum Error: Swift.Error
+    public indirect enum Error: Swift.Error, Equatable
     {
         case executableNotFoundFor(executableName: String)
+        case brewListNoFormula(forName: String)
+        case general(String)
+        case error(atLocation: String, error: System.Error)
+        
+        var indirectError: Error? {
+            
+            switch self {
+            case .error(atLocation: _, error: let error):
+                return error
+            default:
+                return nil
+                
+            }
+        }
     }
 }

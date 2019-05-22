@@ -469,6 +469,13 @@ open class SystemProtocolMock: SystemProtocol
     }
 
     public static var underlyingShared: SystemProtocol!
+    public static var brewPath: String
+    {
+        get { return underlyingBrewPath }
+        set(value) { underlyingBrewPath = value }
+    }
+
+    public static var underlyingBrewPath: String = "AutoMockable filled value"
     public var pathEnvironmentParser: PathEnvironmentParserProtocol
     {
         get { return underlyingPathEnvironmentParser }
@@ -521,6 +528,104 @@ open class SystemProtocolMock: SystemProtocol
             guard let returnValue = processFromBrewFormulaInReturnValue else
             {
                 let message = "No returnValue implemented for processFromBrewFormulaInClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement ProcessProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(formula, folder)
+    }
+
+    // MARK: - <installOrGetProcessFromBrew> - parameters
+
+    public var installOrGetProcessFromBrewFormulaInThrowableError: Error?
+    public var installOrGetProcessFromBrewFormulaInCallsCount = 0
+    public var installOrGetProcessFromBrewFormulaInCalled: Bool
+    {
+        return installOrGetProcessFromBrewFormulaInCallsCount > 0
+    }
+
+    public var installOrGetProcessFromBrewFormulaInReceivedArguments: (formula: String, folder: FolderProtocol)?
+    public var installOrGetProcessFromBrewFormulaInReturnValue: ProcessProtocol?
+
+    // MARK: - <installOrGetProcessFromBrew> - closure mocks
+
+    public var installOrGetProcessFromBrewFormulaInClosure: ((String, FolderProtocol) throws -> ProcessProtocol)?
+
+    // MARK: - <installOrGetProcessFromBrew> - method mocked
+
+    open func installOrGetProcessFromBrew(formula: String, in folder: FolderProtocol) throws -> ProcessProtocol
+    {
+        // <installOrGetProcessFromBrew> - Throwable method implementation
+
+        if let error = installOrGetProcessFromBrewFormulaInThrowableError
+        {
+            throw error
+        }
+
+        installOrGetProcessFromBrewFormulaInCallsCount += 1
+        installOrGetProcessFromBrewFormulaInReceivedArguments = (formula: formula, folder: folder)
+
+        // <installOrGetProcessFromBrew> - Return Value mock implementation
+
+        guard let closureReturn = installOrGetProcessFromBrewFormulaInClosure else
+        {
+            guard let returnValue = installOrGetProcessFromBrewFormulaInReturnValue else
+            {
+                let message = "No returnValue implemented for installOrGetProcessFromBrewFormulaInClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement ProcessProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(formula, folder)
+    }
+
+    // MARK: - <brewListProcess> - parameters
+
+    public var brewListProcessForInThrowableError: Error?
+    public var brewListProcessForInCallsCount = 0
+    public var brewListProcessForInCalled: Bool
+    {
+        return brewListProcessForInCallsCount > 0
+    }
+
+    public var brewListProcessForInReceivedArguments: (formula: String, folder: FolderProtocol)?
+    public var brewListProcessForInReturnValue: ProcessProtocol?
+
+    // MARK: - <brewListProcess> - closure mocks
+
+    public var brewListProcessForInClosure: ((String, FolderProtocol) throws -> ProcessProtocol)?
+
+    // MARK: - <brewListProcess> - method mocked
+
+    open func brewListProcess(for formula: String, in folder: FolderProtocol) throws -> ProcessProtocol
+    {
+        // <brewListProcess> - Throwable method implementation
+
+        if let error = brewListProcessForInThrowableError
+        {
+            throw error
+        }
+
+        brewListProcessForInCallsCount += 1
+        brewListProcessForInReceivedArguments = (formula: formula, folder: folder)
+
+        // <brewListProcess> - Return Value mock implementation
+
+        guard let closureReturn = brewListProcessForInClosure else
+        {
+            guard let returnValue = brewListProcessForInReturnValue else
+            {
+                let message = "No returnValue implemented for brewListProcessForInClosure"
                 let error = SourceryMockError.implementErrorCaseFor(message)
 
                 // You should implement ProcessProtocol

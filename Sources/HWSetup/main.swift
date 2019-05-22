@@ -38,7 +38,6 @@ do
 
     highwayRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
 
-
     try highwayRunner.addGithooksPrePush()
     highwayRunner.hideSecrets(in: srcRoot)
 

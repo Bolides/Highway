@@ -26,6 +26,7 @@ import Foundation
  // types.implementing.AutoGenerateProtocol inline for SecretsWorker ..
  // sourcery:inline:SecretsWorker.AutoGenerateProtocol
  static var shared: SecretsWorker { get }
+ static var gitSecretname: String { get set }
 
  func attemptHideSecrets(in folder: FolderProtocol) throws  -> [String]
  func attemptHideSecretsWithgpg(in folder: FolderProtocol) throws  -> [String]
