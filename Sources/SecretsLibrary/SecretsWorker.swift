@@ -261,7 +261,7 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
             switch self
             {
             case .runSecretsExecutable:
-                return "❌ secrets not commited\nYou should run ./.build/x86_64-apple-macosx10.10/release/Secrets\n❌"
+                return "❌ secrets not commited\nYou should run ./.build/x86_64-apple-macosx10.10/release/<#Your project#>Secrets\n❌"
             }
         }
     }
