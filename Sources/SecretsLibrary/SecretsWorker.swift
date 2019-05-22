@@ -72,20 +72,27 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
         
         do
         {
-            let git = try system.process("git")
-            git.arguments = ["add"]
+            let gitAdd = try system.process("git")
+            gitAdd.currentDirectoryPath = folder.path
+            gitAdd.arguments = ["add"]
             
             let gitSecretList = try gitSecretProcess(in: folder)
             gitSecretList.arguments = ["list"]
             
-            let gitSecretListPaths = try terminal.runProcess(gitSecretList)
+            let gitSecretListPaths = try terminal.runProcess(gitSecretList).filter {$0.count > 0 }
             
-            git.arguments?.append(contentsOf: gitSecretListPaths)
             
-            try terminal.runProcess(git)
+            var list = gitSecretListPaths.map { $0 + ".gpg"}
+            
+            list.append(contentsOf: gitSecretListPaths.map { $0 + ".secret"})
+            
+            gitAdd.arguments?.append(contentsOf: list)
+            
+            try terminal.runProcess(gitAdd)
             
             let gitCommit = try system.process("git")
-            git.arguments = ["-m", "\(pretty_function()) added and committed secrets \(gitSecretListPaths.joined(separator: ","))"]
+            gitCommit.currentDirectoryPath = folder.path
+            gitCommit.arguments = ["commit", "-m", "\(pretty_function()) added and committed secrets \(list.joined(separator: ","))"]
             
             let output = try terminal.runProcess(gitCommit)
             
@@ -144,6 +151,7 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
             }
 
             signPost.message("\(pretty_function()) ✅")
+            try commitHiddenSecrets(in: folder)
             return files.map { $0.path }
         }
         catch
