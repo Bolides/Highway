@@ -20,9 +20,9 @@ do
 
     let output = try secretWorker.attemptHideSecretsWithgpg(in: srcRoot)
     signPost.message(output.joined(separator: "\n"))
-    
+
     try secretWorker.writeNewSecretSavedData(in: srcRoot)
-    
+
     exit(EXIT_SUCCESS)
 }
 catch
