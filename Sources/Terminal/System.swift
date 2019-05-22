@@ -95,7 +95,6 @@ public struct System: SystemProtocol, AutoGenerateProtocol
             let gemListOutput = try terminal.runProcess(gemList).first { $0.hasPrefix(name) }
 
             if (gemListOutput?.count ?? 0) == 0 {
-                
                 let gem = try process(currentFolder: folder, executableFile: try File(path: rbenvOutput))
                 gem.arguments = ["install", name]
                 let output = try terminal.runProcess(gem)
