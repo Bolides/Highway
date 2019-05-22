@@ -29,6 +29,7 @@ import Foundation
  static var gitSecretname: String { get set }
 
  func attemptHideSecrets(in folder: FolderProtocol) throws  -> [String]
+ func commitHiddenSecrets(in folder: FolderProtocol) throws  -> [String]
  func attemptHideSecretsWithgpg(in folder: FolderProtocol) throws  -> [String]
  func gitSecretProcess(in folder: FolderProtocol) throws  -> ProcessProtocol
  // sourcery:end

@@ -12,6 +12,7 @@ public protocol SecretsWorkerProtocol: AutoMockable
     static var gitSecretname: String { get set }
 
     func attemptHideSecrets(in folder: FolderProtocol) throws -> [String]
+    func commitHiddenSecrets(in folder: FolderProtocol) throws -> [String]
     func attemptHideSecretsWithgpg(in folder: FolderProtocol) throws -> [String]
     func gitSecretProcess(in folder: FolderProtocol) throws -> ProcessProtocol
 
@@ -65,45 +66,45 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
             throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
         }
     }
-    
+
     @discardableResult
-    public func commitHiddenSecrets(in folder: FolderProtocol) throws -> [String] {
+    public func commitHiddenSecrets(in folder: FolderProtocol) throws -> [String]
+    {
         signPost.message("\(pretty_function()) ...")
-        
+
         do
         {
             let gitAdd = try system.process("git")
             gitAdd.currentDirectoryPath = folder.path
             gitAdd.arguments = ["add"]
-            
+
             let gitSecretList = try gitSecretProcess(in: folder)
             gitSecretList.arguments = ["list"]
-            
-            let gitSecretListPaths = try terminal.runProcess(gitSecretList).filter {$0.count > 0 }
-            
-            
-            var list = gitSecretListPaths.map { $0 + ".gpg"}
-            
-            list.append(contentsOf: gitSecretListPaths.map { $0 + ".secret"})
-            
+
+            let gitSecretListPaths = try terminal.runProcess(gitSecretList).filter { $0.count > 0 }
+
+            var list = gitSecretListPaths.map { $0 + ".gpg" }
+
+            list.append(contentsOf: gitSecretListPaths.map { $0 + ".secret" })
+
             gitAdd.arguments?.append(contentsOf: list)
-            
+
             try terminal.runProcess(gitAdd)
-            
+
             let gitCommit = try system.process("git")
             gitCommit.currentDirectoryPath = folder.path
             gitCommit.arguments = ["commit", "-m", "\(pretty_function()) added and committed secrets \(list.joined(separator: ","))"]
-            
+
             let output = try terminal.runProcess(gitCommit)
-            
+
             signPost.message("\(pretty_function()) ✅")
-            
+
             return output
         }
         catch
         {
             signPost.message("\(pretty_function()) ❌")
-            
+
             throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
         }
     }

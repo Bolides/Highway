@@ -95,6 +95,55 @@ open class SecretsWorkerProtocolMock: SecretsWorkerProtocol
         return try closureReturn(folder)
     }
 
+    // MARK: - <commitHiddenSecrets> - parameters
+
+    public var commitHiddenSecretsInThrowableError: Error?
+    public var commitHiddenSecretsInCallsCount = 0
+    public var commitHiddenSecretsInCalled: Bool
+    {
+        return commitHiddenSecretsInCallsCount > 0
+    }
+
+    public var commitHiddenSecretsInReceivedFolder: FolderProtocol?
+    public var commitHiddenSecretsInReturnValue: [String]?
+
+    // MARK: - <commitHiddenSecrets> - closure mocks
+
+    public var commitHiddenSecretsInClosure: ((FolderProtocol) throws -> [String])?
+
+    // MARK: - <commitHiddenSecrets> - method mocked
+
+    open func commitHiddenSecrets(in folder: FolderProtocol) throws -> [String]
+    {
+        // <commitHiddenSecrets> - Throwable method implementation
+
+        if let error = commitHiddenSecretsInThrowableError
+        {
+            throw error
+        }
+
+        commitHiddenSecretsInCallsCount += 1
+        commitHiddenSecretsInReceivedFolder = folder
+
+        // <commitHiddenSecrets> - Return Value mock implementation
+
+        guard let closureReturn = commitHiddenSecretsInClosure else
+        {
+            guard let returnValue = commitHiddenSecretsInReturnValue else
+            {
+                let message = "No returnValue implemented for commitHiddenSecretsInClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement [String]
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(folder)
+    }
+
     // MARK: - <attemptHideSecretsWithgpg> - parameters
 
     public var attemptHideSecretsWithgpgInThrowableError: Error?
