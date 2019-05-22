@@ -12,16 +12,16 @@ import SourceryAutoProtocols
 public protocol SecretProtocol: AutoMockable
 {
     // sourcery:inline:Secret.AutoGenerateProtocol
+    var secretFileDates: [String: Date] { get }
     // sourcery:end
 }
 
 public struct Secret: Codable, SecretProtocol, AutoGenerateProtocol
 {
     public let secretFileDates: [String: Date]
-    
-    
+
     public init(
-    secretFileDates: [String: Date]
+        secretFileDates: [String: Date]
     )
     {
         self.secretFileDates = secretFileDates

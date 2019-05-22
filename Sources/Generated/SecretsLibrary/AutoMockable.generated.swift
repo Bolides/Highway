@@ -16,13 +16,7 @@ open class SecretProtocolMock: SecretProtocol
 {
     public init() {}
 
-    public var gpgPassphrase: String
-    {
-        get { return underlyingGpgPassphrase }
-        set(value) { underlyingGpgPassphrase = value }
-    }
-
-    public var underlyingGpgPassphrase: String = "AutoMockable filled value"
+    public var secretFileDates: [String: Date] = [:]
 }
 
 // MARK: - SecretsWorkerProtocolMock
@@ -45,6 +39,62 @@ open class SecretsWorkerProtocolMock: SecretsWorkerProtocol
     }
 
     public static var underlyingGitSecretname: String = "AutoMockable filled value"
+    public static var secretFileDateChangePath: String
+    {
+        get { return underlyingSecretFileDateChangePath }
+        set(value) { underlyingSecretFileDateChangePath = value }
+    }
+
+    public static var underlyingSecretFileDateChangePath: String = "AutoMockable filled value"
+
+    // MARK: - <didSecretsChangeSinceLastPush> - parameters
+
+    public var didSecretsChangeSinceLastPushInThrowableError: Error?
+    public var didSecretsChangeSinceLastPushInCallsCount = 0
+    public var didSecretsChangeSinceLastPushInCalled: Bool
+    {
+        return didSecretsChangeSinceLastPushInCallsCount > 0
+    }
+
+    public var didSecretsChangeSinceLastPushInReceivedFolder: FolderProtocol?
+    public var didSecretsChangeSinceLastPushInReturnValue: Bool?
+
+    // MARK: - <didSecretsChangeSinceLastPush> - closure mocks
+
+    public var didSecretsChangeSinceLastPushInClosure: ((FolderProtocol) throws -> Bool)?
+
+    // MARK: - <didSecretsChangeSinceLastPush> - method mocked
+
+    open func didSecretsChangeSinceLastPush(in folder: FolderProtocol) throws -> Bool
+    {
+        // <didSecretsChangeSinceLastPush> - Throwable method implementation
+
+        if let error = didSecretsChangeSinceLastPushInThrowableError
+        {
+            throw error
+        }
+
+        didSecretsChangeSinceLastPushInCallsCount += 1
+        didSecretsChangeSinceLastPushInReceivedFolder = folder
+
+        // <didSecretsChangeSinceLastPush> - Return Value mock implementation
+
+        guard let closureReturn = didSecretsChangeSinceLastPushInClosure else
+        {
+            guard let returnValue = didSecretsChangeSinceLastPushInReturnValue else
+            {
+                let message = "No returnValue implemented for didSecretsChangeSinceLastPushInClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement Bool
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(folder)
+    }
 
     // MARK: - <attemptHideSecrets> - parameters
 
