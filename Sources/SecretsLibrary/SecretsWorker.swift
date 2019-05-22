@@ -43,9 +43,54 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
         self.signPost = signPost
     }
 
-    // This relies on brew install git-secret
+    
+    public func didSecretsChangeSinceLastPush(in folder: FolderProtocol) throws -> Bool {
+        
+        do {
+            let gitSecretList = try gitSecretProcess(in: folder)
+            gitSecretList.arguments = ["list"]
+            
+            let listOutput = try terminal.runProcess(gitSecretList).filter { !$0.isEmpty }
+            
+            let list = try listOutput.map { try folder.file(named: $0) }
+            var listDates = [String: Date]()
+            
+            list.forEach { listDates[$0.path] = $0.modificationDate }
+            
+            let fileDates = try folder.createFileIfNeeded(named: ".secretsChangeDates.json")
+
+            let original = try? JSONDecoder().decode(Secret.self, from: try fileDates.read())
+            
+            let secret = Secret(secretFileDates: listDates)
+            
+            let secretData = try JSONEncoder().encode(secret)
+            
+            try fileDates.write(data: secretData)
+            
+            let result = try original?.secretFileDates.filter {
+                
+                guard let date = secret.secretFileDates[$0.key] else {
+                    throw HighwayError.highwayError(atLocation: pretty_function(), error: "missing secret file date \($0.key)")
+                }
+                
+                return date > $0.value
+            }
+            
+            return (result?.keys.count ?? 0) > 0
+            
+        } catch {
+            throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
+        }
+    }
+    
+
     public func attemptHideSecrets(in folder: FolderProtocol) throws -> [String]
     {
+        
+        guard try didSecretsChangeSinceLastPush(in: folder) else {
+            return ["\(pretty_function()) no secret changes, skipping"]
+        }
+        
         signPost.message("\(pretty_function()) ...")
 
         do
