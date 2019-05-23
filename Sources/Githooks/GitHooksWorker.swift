@@ -20,15 +20,15 @@ public protocol GitHooksWorkerProtocol: AutoMockable
     static var prepushBashScript: String { get }
 
     init(
-        swiftPackageDependencies: DependencyProtocol,
-        swiftPackageDump: DumpProtocol,
-        commandlineOptions: Set<GitHooksWorker.Option>,
-        hwSetupExecutableProductName: String?,
-        prePushScriptCommandlineOptions: String?,
-        gitHooksFolder: FolderProtocol?,
-        signPost: SignPostProtocol
-    )
-    func addPrePushToGitHooks() throws
+      swiftPackageDependencies: DependencyProtocol,
+      swiftPackageDump: DumpProtocol,
+      commandlineOptions: Set<GitHooksWorker.Option>,
+      hwSetupExecutableProductName: String?,
+      prePushScriptCommandlineOptions: String?,
+      gitHooksFolder: FolderProtocol?,
+      signPost: SignPostProtocol
+    ) 
+    func addPrePushToGitHooks() throws 
     // sourcery:end
 }
 

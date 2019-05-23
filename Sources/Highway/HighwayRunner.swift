@@ -29,10 +29,10 @@ public protocol HighwayRunnerProtocol: AutoMockable
     func generateDocs(for products: Set<SwiftProduct>, _ async: @escaping (@escaping HighwayRunner.SyncDocs) -> Void)
     func runTests(_ async: @escaping (@escaping HighwayRunner.SyncTestOutput) -> Void)
     func runSourcery(_ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
-    func addGithooksPrePush() throws
+    func addGithooksPrePush() throws 
     func runSwiftformat(_ async: @escaping (@escaping HighwayRunner.SyncSwiftformat) -> Void)
     func runSwiftPackageGenerateXcodeProject(_ async: @escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)
-    func checkIfSecretsShouldBeHidden(in folder: FolderProtocol) throws
+    func checkIfSecretsShouldBeHidden(in folder: FolderProtocol) throws 
 
     // sourcery:end
 }

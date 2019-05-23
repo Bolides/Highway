@@ -18,7 +18,7 @@ public protocol DocumentationWorkerProtocol: AutoMockable
     // sourcery:inline:DocumentationWorker.AutoGenerateProtocol
     static var shared: DocumentationWorkerProtocol { get }
 
-    func attemptJazzyDocs(in folder: FolderProtocol, for products: Set<SwiftProduct>) throws -> [String]
+    func attemptJazzyDocs(in folder: FolderProtocol, for products: Set<SwiftProduct>) throws  -> [String]
 
     // sourcery:end
 }
@@ -26,6 +26,7 @@ public protocol DocumentationWorkerProtocol: AutoMockable
 /// Generates documentation per product you per product you pass to it. the docs are in the docs/<#productName#> folder
 /// To view the generated docs you do `open docs/<#productName#>/index.html`
 /// > The documentation is still very basic for now. Thanks for updating if you feel like it :).
+
 public struct DocumentationWorker: DocumentationWorkerProtocol, AutoGenerateProtocol
 {
     public static let shared: DocumentationWorkerProtocol = DocumentationWorker()

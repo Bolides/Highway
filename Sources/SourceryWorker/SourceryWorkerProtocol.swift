@@ -19,11 +19,11 @@ public protocol SourceryWorkerProtocol: class, AutoMockable
     var sourceryYMLFile: FileProtocol { get }
 
     init(
-        sourcery: SourceryProtocol,
-        terminal: TerminalProtocol,
-        signPost: SignPostProtocol,
-        queue: HighwayDispatchProtocol
-    )
+      sourcery: SourceryProtocol,
+      terminal: TerminalProtocol,
+      signPost: SignPostProtocol,
+      queue: HighwayDispatchProtocol
+    ) 
     func attempt(in folder: FolderProtocol, _ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
 
     // sourcery:end

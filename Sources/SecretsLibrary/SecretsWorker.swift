@@ -12,12 +12,12 @@ public protocol SecretsWorkerProtocol: AutoMockable
     static var gitSecretname: String { get set }
     static var secretFileDateChangePath: String { get set }
 
-    mutating func didSecretsChangeSinceLastPush(in folder: FolderProtocol) throws -> Bool
-    mutating func writeNewSecretSavedData(in folder: FolderProtocol) throws
-    mutating func attemptHideSecrets(in folder: FolderProtocol) throws -> [String]
-    func commitHiddenSecrets(in folder: FolderProtocol) throws -> [String]
-    mutating func attemptHideSecretsWithgpg(in folder: FolderProtocol) throws -> [String]
-    func gitSecretProcess(in folder: FolderProtocol) throws -> ProcessProtocol
+    mutating func didSecretsChangeSinceLastPush(in folder: FolderProtocol) throws  -> Bool
+    mutating func writeNewSecretSavedData(in folder: FolderProtocol) throws 
+    mutating func attemptHideSecrets(in folder: FolderProtocol) throws  -> [String]
+    func commitHiddenSecrets(in folder: FolderProtocol) throws  -> [String]
+    mutating func attemptHideSecretsWithgpg(in folder: FolderProtocol) throws  -> [String]
+    func gitSecretProcess(in folder: FolderProtocol) throws  -> ProcessProtocol
 
     // sourcery:end
 }

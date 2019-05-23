@@ -20,10 +20,10 @@ public protocol SwiftFormatWorkerProtocol: AutoMockable
     var queue: HighwayDispatchProtocol { get }
 
     init(
-        folderToFormatRecursive: FolderProtocol,
-        queue: HighwayDispatchProtocol,
-        signPost: SignPostProtocol
-    ) throws
+      folderToFormatRecursive: FolderProtocol,
+      queue: HighwayDispatchProtocol,
+      signPost: SignPostProtocol
+    )  throws
     func attempt(_ asyncSwiftFormatAttemptOutput: @escaping (@escaping SwiftFormatWorker.SyncOutput) -> Void)
     // sourcery:end
 }

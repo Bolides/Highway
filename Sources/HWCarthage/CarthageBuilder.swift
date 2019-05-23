@@ -19,7 +19,7 @@ public protocol CarthageBuilderProtocol: AutoMockable
     static var carthageExecutableFolderPath: String { get }
     static var carthageExecutableName: String { get }
 
-    func attemptBuildCarthageIfNeeded() throws -> FileProtocol
+    func attemptBuildCarthageIfNeeded() throws  -> FileProtocol
 
     // sourcery:end
 }

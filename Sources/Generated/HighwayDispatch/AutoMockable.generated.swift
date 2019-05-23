@@ -2,145 +2,178 @@ import Foundation
 import HighwayDispatch
 import SourceryAutoProtocols
 
+
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // MARK: - HWDispatchGroupProtocolMock
 
-open class HWDispatchGroupProtocolMock: HWDispatchGroupProtocol
-{
+open class HWDispatchGroupProtocolMock: HWDispatchGroupProtocol {
+
     public init() {}
 
-    // MARK: - <leave> - parameters
 
-    public var leaveCallsCount = 0
-    public var leaveCalled: Bool
-    {
-        return leaveCallsCount > 0
-    }
 
-    // MARK: - <leave> - closure mocks
+  // MARK: - <leave> - parameters
 
-    public var leaveClosure: (() -> Void)?
+  public var leaveCallsCount = 0
+  public var leaveCalled: Bool {
+    return leaveCallsCount > 0
+  }
 
-    // MARK: - <leave> - method mocked
+  // MARK: - <leave> - closure mocks
 
-    open func leave()
-    {
-        leaveCallsCount += 1
+  public var leaveClosure: (()  -> Void)? = nil
 
-        // <leave> - Void return mock implementation
+
+
+  // MARK: - <leave> - method mocked
+
+  open func leave() {
+
+      leaveCallsCount += 1
+
+      // <leave> - Void return mock implementation
 
         leaveClosure?()
-    }
 
-    // MARK: - <enter> - parameters
+  }
 
-    public var enterCallsCount = 0
-    public var enterCalled: Bool
-    {
-        return enterCallsCount > 0
-    }
+  // MARK: - <enter> - parameters
 
-    // MARK: - <enter> - closure mocks
+  public var enterCallsCount = 0
+  public var enterCalled: Bool {
+    return enterCallsCount > 0
+  }
 
-    public var enterClosure: (() -> Void)?
+  // MARK: - <enter> - closure mocks
 
-    // MARK: - <enter> - method mocked
+  public var enterClosure: (()  -> Void)? = nil
 
-    open func enter()
-    {
-        enterCallsCount += 1
 
-        // <enter> - Void return mock implementation
+
+  // MARK: - <enter> - method mocked
+
+  open func enter() {
+
+      enterCallsCount += 1
+
+      // <enter> - Void return mock implementation
 
         enterClosure?()
-    }
 
-    // MARK: - <wait> - parameters
+  }
 
-    public var waitCallsCount = 0
-    public var waitCalled: Bool
-    {
-        return waitCallsCount > 0
-    }
+  // MARK: - <wait> - parameters
 
-    // MARK: - <wait> - closure mocks
+  public var waitCallsCount = 0
+  public var waitCalled: Bool {
+    return waitCallsCount > 0
+  }
 
-    public var waitClosure: (() -> Void)?
+  // MARK: - <wait> - closure mocks
 
-    // MARK: - <wait> - method mocked
+  public var waitClosure: (()  -> Void)? = nil
 
-    open func wait()
-    {
-        waitCallsCount += 1
 
-        // <wait> - Void return mock implementation
+
+  // MARK: - <wait> - method mocked
+
+  open func wait() {
+
+      waitCallsCount += 1
+
+      // <wait> - Void return mock implementation
 
         waitClosure?()
-    }
 
-    // MARK: - <notifyMain> - parameters
+  }
 
-    public var notifyMainExecuteCallsCount = 0
-    public var notifyMainExecuteCalled: Bool
-    {
-        return notifyMainExecuteCallsCount > 0
-    }
+  // MARK: - <notifyMain> - parameters
 
-    public var notifyMainExecuteReceivedWork: (@convention(block) () -> Void)?
+  public var notifyMainExecuteCallsCount = 0
+  public var notifyMainExecuteCalled: Bool {
+    return notifyMainExecuteCallsCount > 0
+  }
+  public var notifyMainExecuteReceivedWork: (() -> Void)?
 
-    // MARK: - <notifyMain> - closure mocks
+  // MARK: - <notifyMain> - closure mocks
 
-    public var notifyMainExecuteClosure: ((@escaping @convention(block) () -> Void) -> Void)?
+  public var notifyMainExecuteClosure: ((@escaping @convention(block) () -> Void)  -> Void)? = nil
 
-    // MARK: - <notifyMain> - method mocked
 
-    open func notifyMain(execute work: @escaping @convention(block) () -> Void)
-    {
-        notifyMainExecuteCallsCount += 1
-        notifyMainExecuteReceivedWork = work
 
-        // <notifyMain> - Void return mock implementation
+  // MARK: - <notifyMain> - method mocked
+
+  open func notifyMain(execute work: @escaping @convention(block) () -> Void) {
+
+      notifyMainExecuteCallsCount += 1
+      notifyMainExecuteReceivedWork = work
+
+      // <notifyMain> - Void return mock implementation
 
         notifyMainExecuteClosure?(work)
-    }
+
+  }
 }
+
 
 // MARK: - HighwayDispatchProtocolMock
 
-open class HighwayDispatchProtocolMock: HighwayDispatchProtocol
-{
+open class HighwayDispatchProtocolMock: HighwayDispatchProtocol {
+
     public init() {}
 
-    // MARK: - <async> - parameters
 
-    public var asyncSyncCallsCount = 0
-    public var asyncSyncCalled: Bool
-    {
-        return asyncSyncCallsCount > 0
-    }
 
-    public var asyncSyncReceivedSync: (() -> Void)?
+  // MARK: - <async> - parameters
 
-    // MARK: - <async> - closure mocks
+  public var asyncSyncCallsCount = 0
+  public var asyncSyncCalled: Bool {
+    return asyncSyncCallsCount > 0
+  }
+  public var asyncSyncReceivedSync: (() -> Void)?
 
-    public var asyncSyncClosure: ((@escaping () -> Void) -> Void)?
+  // MARK: - <async> - closure mocks
 
-    // MARK: - <async> - method mocked
+  public var asyncSyncClosure: ((@escaping () -> Void)  -> Void)? = nil
 
-    open func async(sync: @escaping () -> Void)
-    {
-        asyncSyncCallsCount += 1
-        asyncSyncReceivedSync = sync
 
-        // <async> - Void return mock implementation
+
+  // MARK: - <async> - method mocked
+
+  open func async(sync: @escaping () -> Void) {
+
+      asyncSyncCallsCount += 1
+      asyncSyncReceivedSync = sync
+
+      // <async> - Void return mock implementation
 
         asyncSyncClosure?(sync)
-    }
+
+  }
 }
 
+
 // MARK: - OBJECTIVE-C
+
+
 
 // MARK: - Sourcery Errors
 

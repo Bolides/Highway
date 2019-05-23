@@ -41,10 +41,11 @@ do
     try highwayRunner.checkIfSecretsShouldBeHidden(in: srcRoot)
 
     highwayRunner.runSourcery(handleSourceryOutput)
-    
+
     let products = highway.package.dump.products.filter { !$0.name.hasSuffix("Mock") }
-    
-    highwayRunner.generateDocs(for: products, handleGenerateDocs)
+
+    // TODO: add when jazzy can handle xcodebuild output for swift packages, for now generate individually
+//    highwayRunner.generateDocs(for: products, handleGenerateDocs)
 
     dispatchGroup.notifyMain
     {

@@ -31,13 +31,13 @@ public protocol HighwayProtocol: AutoMockable
     static var swiftCFlags: [String] { get set }
     var highwaySetupExecutableName: String? { get }
 
-    func dependency(with name: String) throws -> DependencyProtocol
-    func gitHooks() throws -> FolderProtocol
-    func srcRoot() throws -> FolderProtocol
-    func templateFolder() throws -> FolderProtocol
-    func templateFolder(expectedName: String) throws -> FolderProtocol
-    func sourceryFolder() throws -> FolderProtocol
-    func sourceryAutoProtocolFile() throws -> FileProtocol
+    func dependency(with name: String) throws  -> DependencyProtocol
+    func gitHooks() throws  -> FolderProtocol
+    func srcRoot() throws  -> FolderProtocol
+    func templateFolder() throws  -> FolderProtocol
+    func templateFolder(expectedName: String) throws  -> FolderProtocol
+    func sourceryFolder() throws  -> FolderProtocol
+    func sourceryAutoProtocolFile() throws  -> FileProtocol
     // sourcery:end
 
     static func package(for folder: FolderProtocol, dependencyService: DependencyServiceProtocol, dumpService: DumpService, terminal: TerminalProtocol, signPost: SignPostProtocol) throws -> PackageProtocol

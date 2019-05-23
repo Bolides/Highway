@@ -61,8 +61,7 @@ public struct HWSetup
             "ZFile",
         ] +
             [
-                Highway.product.asDependency(),
-                Documentation.Library.product.asDependency(),
+                Highway.product.asDependency()
             ]
     )
 }
@@ -292,7 +291,12 @@ public struct Highway
             "SwiftFormatWorker",
             "XCBuild",
             "Errors",
-        ] + [Secrets.Library.product.asDependency()]
+            ]
+            +
+            [
+                Secrets.Library.product.asDependency(),
+                Documentation.Library.product.asDependency(),
+            ]
     )
 
     public struct Mock

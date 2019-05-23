@@ -19,7 +19,7 @@ public protocol HWPodProtocol: AutoMockable
     // sourcery:inline:HWPod.AutoGenerateProtocol
     static var expectedCocoapodsVersion: String { get }
 
-    func attemptPodInstallIfOptionAddedToCommandline() throws
+    func attemptPodInstallIfOptionAddedToCommandline() throws 
     // sourcery:end
 }
 
