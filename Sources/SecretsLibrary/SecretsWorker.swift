@@ -35,29 +35,53 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
     private let system: SystemProtocol
     private let signPost: SignPostProtocol
     private var secretSaved: Secret?
-
+    private let fileSystem: FileSystemProtocol
+    
     // MARK: - init
 
     public init(
         terminal: TerminalProtocol = Terminal.shared,
         system: SystemProtocol = System.shared,
-        signPost: SignPostProtocol = SignPost.shared
+        signPost: SignPostProtocol = SignPost.shared,
+        fileSystem: FileSystemProtocol = FileSystem.shared
     )
     {
         self.terminal = terminal
         self.system = system
         self.signPost = signPost
+        self.fileSystem = fileSystem
     }
 
     // MARK: - Seret reveal
 
+    /// reveals secrets if they are not already revealed
     public func revealSecrets(in folder: FolderProtocol) throws -> [String]
     {
         do
         {
-            let reveal = try system.installOrGetProcessFromBrew(formula: "git-secret", in: folder)
-            reveal.arguments = ["reveal"]
-            return try terminal.runProcess(reveal)
+            let list = try system.installOrGetProcessFromBrew(formula: SecretsWorker.gitSecretname, in: folder)
+            list.arguments = ["list"]
+            let listOutput = try terminal.runProcess(list)
+            var message = "revealing secrets \(listOutput.joined(separator: "\n")) ✅"
+            do {
+                try listOutput.forEach { file in
+                    
+                    guard fileSystem.file(possbilyInvalidPath: file) != nil else {
+                        throw "reveal secrets"
+                    }
+                    
+                }
+               
+                message = "no need to reveal secrets"
+            } catch {
+                signPost.message("revealing secrets \(listOutput.joined(separator: "\n")) ...")
+                let reveal = try system.installOrGetProcessFromBrew(formula: SecretsWorker.gitSecretname, in: folder)
+                reveal.arguments = ["reveal"]
+                try terminal.runProcess(reveal)
+                
+            }
+            
+            return [message]
         }
         catch
         {
