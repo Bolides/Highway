@@ -16,6 +16,14 @@ open class DocumentationWorkerProtocolMock: DocumentationWorkerProtocol
 {
     public init() {}
 
+    public static var shared: DocumentationWorkerProtocol
+    {
+        get { return underlyingShared }
+        set(value) { underlyingShared = value }
+    }
+
+    public static var underlyingShared: DocumentationWorkerProtocol!
+
     // MARK: - <attemptJazzyDocs> - parameters
 
     public var attemptJazzyDocsInForThrowableError: Error?

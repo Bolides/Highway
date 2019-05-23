@@ -462,6 +462,32 @@ open class HighwayRunnerProtocolMock: HighwayRunnerProtocol
 
     public var underlyingHighway: HighwayProtocol!
 
+    // MARK: - <generateDocs> - parameters
+
+    public var generateDocsForCallsCount = 0
+    public var generateDocsForCalled: Bool
+    {
+        return generateDocsForCallsCount > 0
+    }
+
+    public var generateDocsForReceivedArguments: (products: Set<SwiftProduct>, async: (@escaping HighwayRunner.SyncDocs) -> Void)?
+
+    // MARK: - <generateDocs> - closure mocks
+
+    public var generateDocsForClosure: ((Set<SwiftProduct>, @escaping (@escaping HighwayRunner.SyncDocs) -> Void) -> Void)?
+
+    // MARK: - <generateDocs> - method mocked
+
+    open func generateDocs(for products: Set<SwiftProduct>, _ async: @escaping (@escaping HighwayRunner.SyncDocs) -> Void)
+    {
+        generateDocsForCallsCount += 1
+        generateDocsForReceivedArguments = (products: products, async: async)
+
+        // <generateDocs> - Void return mock implementation
+
+        generateDocsForClosure?(products, async)
+    }
+
     // MARK: - <runTests> - parameters
 
     public var runTestsCallsCount = 0

@@ -16,6 +16,7 @@ import ZFile
 public protocol DocumentationWorkerProtocol: AutoMockable
 {
     // sourcery:inline:DocumentationWorker.AutoGenerateProtocol
+    static var shared: DocumentationWorkerProtocol { get }
 
     func attemptJazzyDocs(in folder: FolderProtocol, for products: Set<SwiftProduct>) throws -> [String]
 
@@ -27,6 +28,8 @@ public protocol DocumentationWorkerProtocol: AutoMockable
 /// > The documentation is still very basic for now. Thanks for updating if you feel like it :).
 public struct DocumentationWorker: DocumentationWorkerProtocol, AutoGenerateProtocol
 {
+    public static let shared: DocumentationWorkerProtocol = DocumentationWorker()
+
     // MARK: - Private
 
     private let terminal: TerminalProtocol

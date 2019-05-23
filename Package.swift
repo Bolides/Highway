@@ -67,6 +67,23 @@ public struct HWSetup
     )
 }
 
+/// Will be used to run on .git/hooks/pre-push and on bitrise for PR's
+/// It has the same dependencies as HWSetup but does not generate an xcode project and some other setup code.
+public struct PR
+{
+    public static let name = "\(PR.self)"
+
+    public static let product = Product.executable(
+        name: name,
+        targets: [name]
+    )
+
+    public static let target = Target.target(
+        name: name,
+        dependencies: HWSetup.target.dependencies
+    )
+}
+
 public struct HighwayDispatch
 {
     public static let name = "\(HighwayDispatch.self)"
@@ -321,6 +338,7 @@ public let package = Package(
         Secrets.product,
         HighwaySourcery.product,
         Documentation.product,
+        PR.product,
 
         // MARK: - Library
 
@@ -430,6 +448,7 @@ public let package = Package(
         Secrets.target,
         HighwaySourcery.target,
         Documentation.target,
+        PR.target,
 
         // MARK: - Libraries
 
