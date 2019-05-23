@@ -12,6 +12,7 @@ public protocol SecretsWorkerProtocol: AutoMockable
     static var gitSecretname: String { get set }
     static var secretFileDateChangePath: String { get set }
 
+    func revealSecrets(in folder: FolderProtocol) throws -> [String]
     mutating func didSecretsChangeSinceLastPush(in folder: FolderProtocol) throws -> Bool
     mutating func writeNewSecretSavedData(in folder: FolderProtocol) throws
     mutating func attemptHideSecrets(in folder: FolderProtocol) throws -> [String]
@@ -46,6 +47,22 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
         self.terminal = terminal
         self.system = system
         self.signPost = signPost
+    }
+
+    // MARK: - Seret reveal
+
+    public func revealSecrets(in folder: FolderProtocol) throws -> [String]
+    {
+        do
+        {
+            let reveal = try system.installOrGetProcessFromBrew(formula: "git-secret", in: folder)
+            reveal.arguments = ["reveal"]
+            return try terminal.runProcess(reveal)
+        }
+        catch
+        {
+            throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
+        }
     }
 
     // MARK: - Secret changes

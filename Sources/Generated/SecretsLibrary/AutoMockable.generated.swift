@@ -46,6 +46,55 @@ open class SecretsWorkerProtocolMock: SecretsWorkerProtocol
 
     public static var underlyingSecretFileDateChangePath: String = "AutoMockable filled value"
 
+    // MARK: - <revealSecrets> - parameters
+
+    public var revealSecretsInThrowableError: Error?
+    public var revealSecretsInCallsCount = 0
+    public var revealSecretsInCalled: Bool
+    {
+        return revealSecretsInCallsCount > 0
+    }
+
+    public var revealSecretsInReceivedFolder: FolderProtocol?
+    public var revealSecretsInReturnValue: [String]?
+
+    // MARK: - <revealSecrets> - closure mocks
+
+    public var revealSecretsInClosure: ((FolderProtocol) throws -> [String])?
+
+    // MARK: - <revealSecrets> - method mocked
+
+    open func revealSecrets(in folder: FolderProtocol) throws -> [String]
+    {
+        // <revealSecrets> - Throwable method implementation
+
+        if let error = revealSecretsInThrowableError
+        {
+            throw error
+        }
+
+        revealSecretsInCallsCount += 1
+        revealSecretsInReceivedFolder = folder
+
+        // <revealSecrets> - Return Value mock implementation
+
+        guard let closureReturn = revealSecretsInClosure else
+        {
+            guard let returnValue = revealSecretsInReturnValue else
+            {
+                let message = "No returnValue implemented for revealSecretsInClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement [String]
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(folder)
+    }
+
     // MARK: - <didSecretsChangeSinceLastPush> - parameters
 
     public var didSecretsChangeSinceLastPushInThrowableError: Error?

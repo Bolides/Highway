@@ -29,6 +29,7 @@ import Foundation
  static var gitSecretname: String { get set }
  static var secretFileDateChangePath: String { get set }
 
+ func revealSecrets(in folder: FolderProtocol) throws  -> [String]
  mutating func didSecretsChangeSinceLastPush(in folder: FolderProtocol) throws  -> Bool
  mutating func writeNewSecretSavedData(in folder: FolderProtocol) throws
  mutating func attemptHideSecrets(in folder: FolderProtocol) throws  -> [String]

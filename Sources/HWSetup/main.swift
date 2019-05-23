@@ -12,6 +12,7 @@ import SwiftFormatWorker
 import Terminal
 import XCBuild
 import ZFile
+import SecretsLibrary
 
 // MARK: - PREPARE
 
@@ -36,6 +37,10 @@ do
     let sourceryBuilder = SourceryBuilder(dependencyService: dependencyService)
     let highway = try Highway(package: package, dependencyService: dependencyService, sourceryBuilder: sourceryBuilder, highwaySetupExecutableName: "HWSetup")
 
+    let secrets = SecretsWorker.shared
+    let output = try secrets.revealSecrets(in: srcRoot)
+    signPost.message(output.joined(separator: "\n"))
+    
     highwayRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
 
     try highwayRunner.addGithooksPrePush()
