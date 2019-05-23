@@ -6,13 +6,13 @@ import Git
 import GitHooks
 import Highway
 import HighwayDispatch
+import SecretsLibrary
 import SignPost
 import SourceryWorker
 import SwiftFormatWorker
 import Terminal
 import XCBuild
 import ZFile
-import SecretsLibrary
 
 // MARK: - PREPARE
 
@@ -40,7 +40,7 @@ do
     let secrets = SecretsWorker.shared
     let output = try secrets.revealSecrets(in: srcRoot)
     signPost.message(output.joined(separator: "\n"))
-    
+
     highwayRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
 
     try highwayRunner.addGithooksPrePush()

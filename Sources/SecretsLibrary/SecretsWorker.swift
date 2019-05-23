@@ -36,7 +36,7 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
     private let signPost: SignPostProtocol
     private var secretSaved: Secret?
     private let fileSystem: FileSystemProtocol
-    
+
     // MARK: - init
 
     public init(
@@ -61,26 +61,28 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
         {
             let list = try system.installOrGetProcessFromBrew(formula: SecretsWorker.gitSecretname, in: folder)
             list.arguments = ["list"]
-            let listOutput = try terminal.runProcess(list)
+            let listOutput = try terminal.runProcess(list).filter { !$0.isEmpty }
             var message = "revealing secrets \(listOutput.joined(separator: "\n")) ✅"
-            do {
-                try listOutput.forEach { file in
-                    
-                    guard fileSystem.file(possbilyInvalidPath: file) != nil else {
+            do
+            {
+                try listOutput.forEach
+                { file in
+                    guard folder.containsFile(named: file) else
+                    {
                         throw "reveal secrets"
                     }
-                    
                 }
-               
+
                 message = "no need to reveal secrets"
-            } catch {
+            }
+            catch
+            {
                 signPost.message("revealing secrets \(listOutput.joined(separator: "\n")) ...")
                 let reveal = try system.installOrGetProcessFromBrew(formula: SecretsWorker.gitSecretname, in: folder)
                 reveal.arguments = ["reveal"]
                 try terminal.runProcess(reveal)
-                
             }
-            
+
             return [message]
         }
         catch

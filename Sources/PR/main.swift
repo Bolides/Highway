@@ -36,7 +36,6 @@ do
     let sourceryBuilder = SourceryBuilder(dependencyService: dependencyService)
     let highway = try Highway(package: package, dependencyService: dependencyService, sourceryBuilder: sourceryBuilder, highwaySetupExecutableName: "HWSetup")
 
-
     highwayRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
 
     try highwayRunner.checkIfSecretsShouldBeHidden(in: srcRoot)
