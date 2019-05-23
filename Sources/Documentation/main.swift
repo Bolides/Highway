@@ -8,7 +8,9 @@
 import DocumentationLibrary
 import Errors
 import Foundation
+import Highway
 import SignPost
+import Terminal
 import ZFile
 
 let signPost = SignPost.shared
@@ -19,7 +21,12 @@ do
     signPost.message("\(pretty_function()) ...")
     let srcRoot = try File(path: #file).parentFolder().parentFolder().parentFolder()
 
-    try documentation.attemptJazzyDocs(in: srcRoot)
+    // Swift Package
+
+    let dumpService = DumpService(swiftPackageFolder: srcRoot)
+    let dump = try dumpService.generateDump()
+
+    try documentation.attemptJazzyDocs(in: srcRoot, for: dump)
     signPost.message("\(pretty_function()) ✅")
 }
 catch

@@ -638,43 +638,43 @@ open class SystemProtocolMock: SystemProtocol
         return try closureReturn(gemName, folder)
     }
 
-    // MARK: - <installOfFindGem> - parameters
+    // MARK: - <installOrFindGemProcess> - parameters
 
-    public var installOfFindGemNameInThrowableError: Error?
-    public var installOfFindGemNameInCallsCount = 0
-    public var installOfFindGemNameInCalled: Bool
+    public var installOrFindGemProcessNameInThrowableError: Error?
+    public var installOrFindGemProcessNameInCallsCount = 0
+    public var installOrFindGemProcessNameInCalled: Bool
     {
-        return installOfFindGemNameInCallsCount > 0
+        return installOrFindGemProcessNameInCallsCount > 0
     }
 
-    public var installOfFindGemNameInReceivedArguments: (name: String, folder: FolderProtocol)?
-    public var installOfFindGemNameInReturnValue: ProcessProtocol?
+    public var installOrFindGemProcessNameInReceivedArguments: (name: String, folder: FolderProtocol)?
+    public var installOrFindGemProcessNameInReturnValue: ProcessProtocol?
 
-    // MARK: - <installOfFindGem> - closure mocks
+    // MARK: - <installOrFindGemProcess> - closure mocks
 
-    public var installOfFindGemNameInClosure: ((String, FolderProtocol) throws -> ProcessProtocol)?
+    public var installOrFindGemProcessNameInClosure: ((String, FolderProtocol) throws -> ProcessProtocol)?
 
-    // MARK: - <installOfFindGem> - method mocked
+    // MARK: - <installOrFindGemProcess> - method mocked
 
-    open func installOfFindGem(name: String, in folder: FolderProtocol) throws -> ProcessProtocol
+    open func installOrFindGemProcess(name: String, in folder: FolderProtocol) throws -> ProcessProtocol
     {
-        // <installOfFindGem> - Throwable method implementation
+        // <installOrFindGemProcess> - Throwable method implementation
 
-        if let error = installOfFindGemNameInThrowableError
+        if let error = installOrFindGemProcessNameInThrowableError
         {
             throw error
         }
 
-        installOfFindGemNameInCallsCount += 1
-        installOfFindGemNameInReceivedArguments = (name: name, folder: folder)
+        installOrFindGemProcessNameInCallsCount += 1
+        installOrFindGemProcessNameInReceivedArguments = (name: name, folder: folder)
 
-        // <installOfFindGem> - Return Value mock implementation
+        // <installOrFindGemProcess> - Return Value mock implementation
 
-        guard let closureReturn = installOfFindGemNameInClosure else
+        guard let closureReturn = installOrFindGemProcessNameInClosure else
         {
-            guard let returnValue = installOfFindGemNameInReturnValue else
+            guard let returnValue = installOrFindGemProcessNameInReturnValue else
             {
-                let message = "No returnValue implemented for installOfFindGemNameInClosure"
+                let message = "No returnValue implemented for installOrFindGemProcessNameInClosure"
                 let error = SourceryMockError.implementErrorCaseFor(message)
 
                 // You should implement ProcessProtocol

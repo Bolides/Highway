@@ -39,7 +39,7 @@ import Foundation
  func rbenvProcess(in folder: FolderProtocol) throws  -> ProcessProtocol
  func gemProcess(name: String, in folder: FolderProtocol) throws  -> ProcessProtocol
  func rbenvWhichProcess(gemName: String, in folder: FolderProtocol) throws  -> ProcessProtocol
- func installOfFindGem(name: String, in folder: FolderProtocol) throws  -> ProcessProtocol
+ func installOrFindGemProcess(name: String, in folder: FolderProtocol) throws  -> ProcessProtocol
  func processFromBrew(formula: String, in folder: FolderProtocol) throws  -> ProcessProtocol
  func installOrGetProcessFromBrew(formula: String, in folder: FolderProtocol) throws  -> ProcessProtocol
  // sourcery:Will throw error if the formula is not installed when you run this process

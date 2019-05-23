@@ -5,6 +5,7 @@
 //  Created by Stijn Willems on 22/05/2019.
 //
 
+import Arguments
 import Errors
 import Foundation
 import SignPost
@@ -16,7 +17,8 @@ public protocol DocumentationWorkerProtocol: AutoMockable
 {
     // sourcery:inline:DocumentationWorker.AutoGenerateProtocol
 
-    func attemptJazzyDocs(in folder: FolderProtocol) throws -> [String]
+    func attemptJazzyDocs(in folder: FolderProtocol, for dump: DumpProtocol) throws -> [String]
+
     // sourcery:end
 }
 
@@ -43,7 +45,8 @@ public struct DocumentationWorker: DocumentationWorkerProtocol, AutoGenerateProt
 
     // MARK: - Attempt to generate Docs
 
-    public func attemptJazzyDocs(in folder: FolderProtocol) throws -> [String]
+    /// Performs `jazzy -x -scheme,Highway-Package -m <#product#> --output docs/<#product#>` for every product in the swift package
+    public func attemptJazzyDocs(in folder: FolderProtocol, for dump: DumpProtocol) throws -> [String]
     {
         do
         {
@@ -57,12 +60,24 @@ public struct DocumentationWorker: DocumentationWorkerProtocol, AutoGenerateProt
 
             signPost.verbose("\(pretty_function()) ...")
 
-            let jazzy = try system.installOfFindGem(name: "jazzy", in: folder)
+            let products = dump.products
 
-            let output = try terminal.runProcess(jazzy)
-            signPost.message("\(pretty_function()) ✅")
+            let jazzyName = "jazzy"
+            var jazzy = try system.installOrFindGemProcess(name: jazzyName, in: folder)
 
-            return output
+            try products.forEach
+            { product in
+                signPost.message("\(pretty_function()) jazzy \(product) ...")
+
+                jazzy = try system.gemProcess(name: "jazzy", in: folder)
+                jazzy.arguments = ["-x", "-scheme,Highway-Package", "-m", "\(product)", "--output", "docs/\(product)"]
+
+                let output = try terminal.runProcess(jazzy)
+                signPost.verbose(output.joined(separator: "\n"))
+                signPost.message("\(pretty_function()) jazzy \(product) ✅")
+            }
+
+            return ["\(pretty_function()) ✅"]
         }
         catch
         {

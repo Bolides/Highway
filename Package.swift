@@ -33,7 +33,6 @@ let external: [Package.Dependency] = [
     // MARK: - Logging
 
     .package(url: "https://www.github.com/doozMen/SignPost", "1.0.0" ..< "2.0.0"),
-    
 ]
 
 public struct HWSetup
@@ -59,7 +58,7 @@ public struct HWSetup
             "SwiftFormatWorker",
             "Terminal",
             "XCBuild",
-            "ZFile"
+            "ZFile",
         ] +
             [
                 Highway.product.asDependency(),
@@ -167,6 +166,7 @@ public struct Documentation
                 "SignPost",
                 "Terminal",
                 "Errors",
+                "Highway",
             ]
         )
 
