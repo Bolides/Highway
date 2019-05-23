@@ -1,0 +1,89 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Errors/HighwayError.swift",
+      "line": 10,
+      "symbol": "HighwayError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Errors/HighwayError.swift",
+      "line": 12,
+      "symbol": "HighwayError.missingSrcroot(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Errors/HighwayError.swift",
+      "line": 13,
+      "symbol": "HighwayError.implement(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Errors/HighwayError.swift",
+      "line": 14,
+      "symbol": "HighwayError.failedToCompleteTask(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Errors/HighwayError.swift",
+      "line": 15,
+      "symbol": "HighwayError.processInfoMissingPath(processInfo:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Errors/HighwayError.swift",
+      "line": 16,
+      "symbol": "HighwayError.missingTemplateFolder(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Errors/HighwayError.swift",
+      "line": 17,
+      "symbol": "HighwayError.prematureRelease(in:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Errors/HighwayError.swift",
+      "line": 18,
+      "symbol": "HighwayError.highwayError(atLocation:error:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Errors/HighwayError.swift",
+      "line": 19,
+      "symbol": "HighwayError.swiftPackageShowDependencies(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Errors/HighwayError.swift",
+      "line": 20,
+      "symbol": "HighwayError.missingSourcery(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Errors/String+Error.swift",
+      "line": 10,
+      "symbol": "ErrorMessage",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Errors/String+Error.swift",
+      "line": 12,
+      "symbol": "pretty_function(file:function:line:colomn:queue:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway"
+}

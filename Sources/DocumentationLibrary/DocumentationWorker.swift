@@ -57,7 +57,7 @@ public struct DocumentationWorker: DocumentationWorkerProtocol, AutoGenerateProt
     {
         do
         {
-            signPost.message("\(pretty_function()) for \(products.count) ...")
+            signPost.message("🎺 \(pretty_function()) for \(products.count) ...")
             signPost.verbose(products.enumerated().map { "\($0.offset + 1). \($0.element)" }.joined(separator: "\n"))
 
             let jazzyName = "jazzy"
@@ -68,20 +68,22 @@ public struct DocumentationWorker: DocumentationWorkerProtocol, AutoGenerateProt
             try products.enumerated().forEach
             { product in
                 jazzy = try system.gemProcess(name: "jazzy", in: folder)
-                signPost.message("\(pretty_function()) jazzy \(product.offset + 1)/\(total) \(product.element.name) ...")
+                signPost.message("🎺 \(pretty_function()) jazzy \(product.offset + 1)/\(total) \(product.element.name) ...")
 
+                let outputFolder = try folder.createSubfolderIfNeeded(withName: "docs/\(product.element.name)")
                 jazzy.arguments = [
                     "-x",
                     "-scheme,Highway-Package",
-                    "-m", "\(product)",
-                    "--output", "docs/\(product)",
-                    "--xcodebuild-arguments", "-derivedDataPath \(try folder.subfolder(named: ".build").path)",
+                    "-m", "\(product.element.name)",
+                    "--output", outputFolder.path,
                     "--swift-version", "4.2.1",
                 ]
 
-                let output = try terminal.runProcess(jazzy)
-                signPost.verbose(output.joined(separator: "\n"))
-                signPost.message("\(pretty_function()) jazzy \n\(product)\n ✅")
+                signPost.verbose("\(try jazzy.executableFile().path) \(jazzy.arguments!.joined(separator: " "))")
+                _ = try terminal.runProcess(jazzy)
+                let indexFile = try outputFolder.file(named: "index.html")
+                signPost.message("🎺 open \(indexFile.path)")
+                signPost.message("🎺 \(pretty_function()) jazzy \n\(product)\n  ✅")
             }
 
             return ["\(pretty_function()) ✅"]

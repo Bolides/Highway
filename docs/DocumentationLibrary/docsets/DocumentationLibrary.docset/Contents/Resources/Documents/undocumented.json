@@ -1,0 +1,33 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/DocumentationLibrary/DocumentationWorker.swift",
+      "line": 16,
+      "symbol": "DocumentationWorkerProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/DocumentationLibrary/DocumentationWorker.swift",
+      "line": 20,
+      "symbol": "DocumentationWorkerProtocol.attemptJazzyDocs(in:for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/DocumentationLibrary/DocumentationWorker.swift",
+      "line": 25,
+      "symbol": "DocumentationWorker",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/DocumentationLibrary/DocumentationWorker.swift",
+      "line": 35,
+      "symbol": "DocumentationWorker.init(terminal:system:signPost:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway"
+}

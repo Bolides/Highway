@@ -9,21 +9,28 @@
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/DocumentationLibrary/DocumentationWorker.swift",
-      "line": 20,
+      "line": 19,
+      "symbol": "DocumentationWorkerProtocol.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/DocumentationLibrary/DocumentationWorker.swift",
+      "line": 21,
       "symbol": "DocumentationWorkerProtocol.attemptJazzyDocs(in:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/DocumentationLibrary/DocumentationWorker.swift",
-      "line": 25,
-      "symbol": "DocumentationWorker",
-      "symbol_kind": "source.lang.swift.decl.struct",
+      "line": 32,
+      "symbol": "DocumentationWorker.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/DocumentationLibrary/DocumentationWorker.swift",
-      "line": 35,
+      "line": 42,
       "symbol": "DocumentationWorker.init(terminal:system:signPost:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
