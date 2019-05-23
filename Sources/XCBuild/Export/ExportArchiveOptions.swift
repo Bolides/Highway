@@ -29,7 +29,7 @@ public protocol ExportArchiveOptionsProtocol: AutoMockable
     var archivePath: FolderProtocol { get }
     var exportPath: String { get }
 
-    func encode(to encoder: Encoder) throws 
+    func encode(to encoder: Encoder) throws
 
     // sourcery:end
 }

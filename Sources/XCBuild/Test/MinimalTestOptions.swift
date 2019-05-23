@@ -18,7 +18,7 @@ public protocol MinimalTestOptionsProtocol
     // sourcery:inline:MinimalTestOptions.AutoGenerateProtocol
     var description: String { get }
 
-    func arguments() throws  -> Arguments
+    func arguments() throws -> Arguments
     // sourcery:end
 }
 

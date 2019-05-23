@@ -16,7 +16,7 @@ public protocol DependencyServiceProtocol: AutoMockable
 {
     // sourcery:inline:DependencyService.AutoGenerateProtocol
 
-    func generateDependency() throws  -> DependencyProtocol
+    func generateDependency() throws -> DependencyProtocol
     // sourcery:end
 }
 

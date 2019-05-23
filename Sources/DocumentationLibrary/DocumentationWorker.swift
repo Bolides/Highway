@@ -18,7 +18,7 @@ public protocol DocumentationWorkerProtocol: AutoMockable
     // sourcery:inline:DocumentationWorker.AutoGenerateProtocol
     static var shared: DocumentationWorkerProtocol { get }
 
-    func attemptJazzyDocs(in folder: FolderProtocol, for products: Set<SwiftProduct>) throws  -> [String]
+    func attemptJazzyDocs(in folder: FolderProtocol, for products: Set<SwiftProduct>) throws -> [String]
 
     // sourcery:end
 }

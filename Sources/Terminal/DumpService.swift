@@ -14,7 +14,7 @@ public protocol DumpServiceProtocol: AutoMockable
 {
     // sourcery:inline:DumpService.AutoGenerateProtocol
 
-    func generateDump() throws  -> DumpProtocol
+    func generateDump() throws -> DumpProtocol
 
     // sourcery:end
 }

@@ -30,13 +30,13 @@ public protocol SourceryProtocol
     var imports: Set<TemplatePrepend> { get }
 
     init(
-      productName: String,
-      swiftPackageDependencies: DependencyProtocol,
-      swiftPackageDump: DumpProtocol,
-      sourceryBuilder: SourceryBuilderProtocol,
-      signPost: SignPostProtocol
-    )  throws
-    mutating func executableFile() throws  -> FileProtocol
+        productName: String,
+        swiftPackageDependencies: DependencyProtocol,
+        swiftPackageDump: DumpProtocol,
+        sourceryBuilder: SourceryBuilderProtocol,
+        signPost: SignPostProtocol
+    ) throws
+    mutating func executableFile() throws -> FileProtocol
 
     // sourcery:end
 }

@@ -61,7 +61,7 @@ public struct HWSetup
             "ZFile",
         ] +
             [
-                Highway.product.asDependency()
+                Highway.product.asDependency(),
             ]
     )
 }
@@ -291,7 +291,7 @@ public struct Highway
             "SwiftFormatWorker",
             "XCBuild",
             "Errors",
-            ]
+        ]
             +
             [
                 Secrets.Library.product.asDependency(),

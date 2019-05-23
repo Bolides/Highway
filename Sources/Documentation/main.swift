@@ -27,14 +27,15 @@ do
 
     let dump = try dumpService.generateDump()
     let possibleNames = dump.products.map { $0.name }
-    let arguments = CommandLine.arguments.filter { possibleNames.contains($0)  }
+    let arguments = CommandLine.arguments.filter { possibleNames.contains($0) }
 
     let products = dump.products.filter { arguments.contains($0.name) }
-    
-    guard products.count > 0 else {
+
+    guard products.count > 0 else
+    {
         throw "Please add one of the product names \n \(possibleNames.joined(separator: "\n"))"
     }
-    
+
     let output = try documentation.attemptJazzyDocs(in: srcRoot, for: products)
     signPost.message("\(pretty_function()) \(output.joined(separator: "\n")) ✅")
     exit(EXIT_SUCCESS)

@@ -21,7 +21,7 @@ public protocol HWSetupSourceryWorkerWorkerProtocol: AutoMockable
 {
     // sourcery:inline:HWSetupSourceryWorker.AutoGenerateProtocol
 
-    func attempt(_ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void) throws 
+    func attempt(_ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void) throws
 
     // sourcery:end
 }
