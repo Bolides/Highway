@@ -63,7 +63,12 @@ public struct DocumentationWorker: DocumentationWorkerProtocol, AutoGenerateProt
                 jazzy = try system.gemProcess(name: "jazzy", in: folder)
                 signPost.message("\(pretty_function()) jazzy \(product.offset + 1)/\(total) \(product.element.name) ...")
 
-                jazzy.arguments = ["-x", "-scheme,Highway-Package", "-m", "\(product)", "--output", "docs/\(product)"]
+                jazzy.arguments = ["-x",
+                                   "-scheme,Highway-Package",
+                                   "-m", "\(product)",
+                                   "--output", "docs/\(product)",
+                                   "--xcodebuild-arguments", "-derivedDataPath \(try folder.subfolder(named: ".build").path)",
+                                   "--swift-version", "4.2.1"]
 
                 let output = try terminal.runProcess(jazzy)
                 signPost.verbose(output.joined(separator: "\n"))
