@@ -34,8 +34,6 @@ let external: [Package.Dependency] = [
 
     .package(url: "https://www.github.com/doozMen/SignPost", "1.0.0" ..< "2.0.0"),
     
-    // MARK: - Documentation
-    .package(url: "https://github.com/SDGGiesbrecht/Workspace", .upToNextMinor(from: Version(0, 20, 0))),
 ]
 
 public struct HWSetup
@@ -61,8 +59,7 @@ public struct HWSetup
             "SwiftFormatWorker",
             "Terminal",
             "XCBuild",
-            "ZFile",
-            "WorkspaceConfiguration"
+            "ZFile"
         ] +
             [
                 Highway.product.asDependency(),
