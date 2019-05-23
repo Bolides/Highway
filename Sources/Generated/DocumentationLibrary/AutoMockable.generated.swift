@@ -1,7 +1,7 @@
+import Arguments
 import DocumentationLibrary
 import Errors
 import Foundation
-import Highway
 import SignPost
 import SourceryAutoProtocols
 import Terminal
@@ -25,16 +25,16 @@ open class DocumentationWorkerProtocolMock: DocumentationWorkerProtocol
         return attemptJazzyDocsInForCallsCount > 0
     }
 
-    public var attemptJazzyDocsInForReceivedArguments: (folder: FolderProtocol, dump: DumpProtocol)?
+    public var attemptJazzyDocsInForReceivedArguments: (folder: FolderProtocol, products: Set<SwiftProduct>)?
     public var attemptJazzyDocsInForReturnValue: [String]?
 
     // MARK: - <attemptJazzyDocs> - closure mocks
 
-    public var attemptJazzyDocsInForClosure: ((FolderProtocol, DumpProtocol) throws -> [String])?
+    public var attemptJazzyDocsInForClosure: ((FolderProtocol, Set<SwiftProduct>) throws -> [String])?
 
     // MARK: - <attemptJazzyDocs> - method mocked
 
-    open func attemptJazzyDocs(in folder: FolderProtocol, for dump: DumpProtocol) throws -> [String]
+    open func attemptJazzyDocs(in folder: FolderProtocol, for products: Set<SwiftProduct>) throws -> [String]
     {
         // <attemptJazzyDocs> - Throwable method implementation
 
@@ -44,7 +44,7 @@ open class DocumentationWorkerProtocolMock: DocumentationWorkerProtocol
         }
 
         attemptJazzyDocsInForCallsCount += 1
-        attemptJazzyDocsInForReceivedArguments = (folder: folder, dump: dump)
+        attemptJazzyDocsInForReceivedArguments = (folder: folder, products: products)
 
         // <attemptJazzyDocs> - Return Value mock implementation
 
@@ -62,7 +62,7 @@ open class DocumentationWorkerProtocolMock: DocumentationWorkerProtocol
             return returnValue
         }
 
-        return try closureReturn(folder, dump)
+        return try closureReturn(folder, products)
     }
 }
 

@@ -2,14 +2,10 @@ import Errors
 import Foundation
 import SecretsLibrary
 import SignPost
-import Terminal
 import ZFile
 
 var secretWorker = SecretsWorker()
 let signPost = SignPost.shared
-let terminal = Terminal.shared
-let highwayRunner: HighwayRunner!
-let dispatchGroup: HWDispatchGroupProtocol = DispatchGroup()
 
 do
 {

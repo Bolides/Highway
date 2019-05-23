@@ -166,7 +166,7 @@ public struct Documentation
                 "SignPost",
                 "Terminal",
                 "Errors",
-                "Highway",
+                "Arguments",
             ]
         )
 
@@ -222,7 +222,6 @@ public struct Secrets
             name: Library.product.name,
             dependencies: [
                 "ZFile",
-                "HighwayDispatch",
                 "SourceryAutoProtocols",
                 "SignPost",
                 "Terminal",

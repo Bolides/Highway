@@ -33,6 +33,7 @@ import Foundation
  // sourcery:inline:System.AutoGenerateProtocol
  static var shared: SystemProtocol { get }
  static var brewPath: String { get set }
+ static var jazzyPath: String { get set }
  var pathEnvironmentParser: PathEnvironmentParserProtocol { get }
  var fileSystem: FileSystemProtocol { get }
 

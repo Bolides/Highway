@@ -11,6 +11,7 @@ public protocol SystemProtocol: AutoMockable
     // sourcery:inline:System.AutoGenerateProtocol
     static var shared: SystemProtocol { get }
     static var brewPath: String { get set }
+    static var jazzyPath: String { get set }
     var pathEnvironmentParser: PathEnvironmentParserProtocol { get }
     var fileSystem: FileSystemProtocol { get }
 
@@ -34,6 +35,8 @@ public struct System: SystemProtocol, AutoGenerateProtocol
 {
     public static let shared: SystemProtocol = System()
     public static var brewPath = "/usr/local/bin/brew"
+    /// will be overridden if different for this session
+    public static var jazzyPath = "/usr/local/bin/jazzy"
 
     // MARK: - Properties
 
@@ -81,7 +84,17 @@ public struct System: SystemProtocol, AutoGenerateProtocol
     {
         do
         {
-            signPost.message("\(pretty_function()) gem process lookup ...")
+            signPost.verbose("\(pretty_function()) gem \(name) lookup ...")
+
+            guard fileSystem.file(possbilyInvalidPath: System.jazzyPath) == nil else
+            {
+                let jazzyExecutable = try fileSystem.file(path: System.jazzyPath)
+                let result = try process(currentFolder: folder, executableFile: jazzyExecutable)
+
+                signPost.verbose("\(pretty_function()) gem \(name) lookup ✅")
+
+                return result
+            }
 
             let gemName = "gem"
             let rbenv = try rbenvWhichProcess(gemName: gemName, in: folder)
@@ -96,22 +109,26 @@ public struct System: SystemProtocol, AutoGenerateProtocol
 
             let gemListOutput = try terminal.runProcess(gemList).first { $0.hasPrefix(name) }
 
-            if (gemListOutput?.count ?? 0) == 0 {
-                let gem = try process(currentFolder: folder, executableFile: try File(path: rbenvOutput))
-                gem.arguments = ["install", name]
-                let output = try terminal.runProcess(gem)
-                signPost.verbose(output.joined(separator: "\n"))
+            guard (gemListOutput?.count ?? 0) > 0 else
+            {
+                throw Error.gemListNoGem(forName: name)
             }
 
-            // run if installed yes
             let rbenvWhichJazzy = try rbenvWhichProcess(gemName: name, in: folder)
 
-            guard let rbenvWhichJazzyOutput = (try terminal.runProcess(rbenvWhichJazzy).first { !$0.isEmpty }) else
+            let rbenvWhichJazzyOutput = try terminal.runProcess(rbenvWhichJazzy)
+
+            guard let jazzyPath = (rbenvWhichJazzyOutput.first { !$0.isEmpty }) else
             {
                 throw Error.executableNotFoundFor(executableName: name)
             }
 
-            return try process(currentFolder: folder, executableFile: try File(path: rbenvWhichJazzyOutput))
+            System.jazzyPath = jazzyPath
+
+            let _process = try process(currentFolder: folder, executableFile: try File(path: jazzyPath))
+            signPost.verbose("\(pretty_function()) gem \(name) lookup ✅")
+
+            return _process
         }
         catch let error as System.Error
         {

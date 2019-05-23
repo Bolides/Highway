@@ -5,10 +5,10 @@
 //  Created by Stijn Willems on 22/05/2019.
 //
 
+import Arguments
 import DocumentationLibrary
 import Errors
 import Foundation
-import Highway
 import SignPost
 import Terminal
 import ZFile
@@ -26,8 +26,9 @@ do
     let dumpService = DumpService(swiftPackageFolder: srcRoot)
     let dump = try dumpService.generateDump()
 
-    try documentation.attemptJazzyDocs(in: srcRoot, for: dump)
-    signPost.message("\(pretty_function()) ✅")
+    let products = dump.products.filter { !$0.name.hasSuffix("Mock") && $0.product_type != "executable" }
+    let output = try documentation.attemptJazzyDocs(in: srcRoot, for: products)
+    signPost.message("\(pretty_function()) \(output.joined(separator: "\n")) ✅")
 }
 catch
 {

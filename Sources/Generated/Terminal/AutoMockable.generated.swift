@@ -476,6 +476,13 @@ open class SystemProtocolMock: SystemProtocol
     }
 
     public static var underlyingBrewPath: String = "AutoMockable filled value"
+    public static var jazzyPath: String
+    {
+        get { return underlyingJazzyPath }
+        set(value) { underlyingJazzyPath = value }
+    }
+
+    public static var underlyingJazzyPath: String = "AutoMockable filled value"
     public var pathEnvironmentParser: PathEnvironmentParserProtocol
     {
         get { return underlyingPathEnvironmentParser }

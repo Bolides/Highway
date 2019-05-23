@@ -20,7 +20,7 @@ import Foundation
  // types.implementing.AutoGenerateProtocol inline for DocumentationWorker ..
  // sourcery:inline:DocumentationWorker.AutoGenerateProtocol
 
- func attemptJazzyDocs(in folder: FolderProtocol, for dump: DumpProtocol) throws  -> [String]
+ func attemptJazzyDocs(in folder: FolderProtocol, for products:  Set<SwiftProduct>) throws  -> [String]
  // sourcery:end
  // types.implementing.AutoGenerateProtocol inline for DocumentationWorker ✅
 

@@ -1,6 +1,5 @@
 import Errors
 import Foundation
-import HighwayDispatch
 import SecretsLibrary
 import SignPost
 import SourceryAutoProtocols

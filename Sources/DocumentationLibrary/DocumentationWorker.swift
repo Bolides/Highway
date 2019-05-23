@@ -17,7 +17,7 @@ public protocol DocumentationWorkerProtocol: AutoMockable
 {
     // sourcery:inline:DocumentationWorker.AutoGenerateProtocol
 
-    func attemptJazzyDocs(in folder: FolderProtocol, for dump: DumpProtocol) throws -> [String]
+    func attemptJazzyDocs(in folder: FolderProtocol, for products: Set<SwiftProduct>) throws -> [String]
 
     // sourcery:end
 }
@@ -46,35 +46,28 @@ public struct DocumentationWorker: DocumentationWorkerProtocol, AutoGenerateProt
     // MARK: - Attempt to generate Docs
 
     /// Performs `jazzy -x -scheme,Highway-Package -m <#product#> --output docs/<#product#>` for every product in the swift package
-    public func attemptJazzyDocs(in folder: FolderProtocol, for dump: DumpProtocol) throws -> [String]
+    public func attemptJazzyDocs(in folder: FolderProtocol, for products: Set<SwiftProduct>) throws -> [String]
     {
         do
         {
-            signPost.message("\(pretty_function()) checking ruby install ...")
-            let rbenv = try system.rbenvProcess(in: folder)
-            rbenv.arguments = ["install", "-l"]
-
-            let rbenvOutput = try terminal.runProcess(rbenv)
-            signPost.message("\(rbenvOutput.joined(separator: "\n")) ")
-            signPost.message("\(pretty_function()) checking ruby install ✅")
-
-            signPost.verbose("\(pretty_function()) ...")
-
-            let products = dump.products
+            signPost.message("\(pretty_function()) for \(products.count) ...")
+            signPost.verbose(products.enumerated().map { "\($0.offset + 1). \($0.element)" }.joined(separator: "\n"))
 
             let jazzyName = "jazzy"
             var jazzy = try system.installOrFindGemProcess(name: jazzyName, in: folder)
 
-            try products.forEach
-            { product in
-                signPost.message("\(pretty_function()) jazzy \(product) ...")
+            let total = products.count
 
+            try products.enumerated().forEach
+            { product in
                 jazzy = try system.gemProcess(name: "jazzy", in: folder)
+                signPost.message("\(pretty_function()) jazzy \(product.offset + 1)/\(total) \(product.element.name) ...")
+
                 jazzy.arguments = ["-x", "-scheme,Highway-Package", "-m", "\(product)", "--output", "docs/\(product)"]
 
                 let output = try terminal.runProcess(jazzy)
                 signPost.verbose(output.joined(separator: "\n"))
-                signPost.message("\(pretty_function()) jazzy \(product) ✅")
+                signPost.message("\(pretty_function()) jazzy \n\(product)\n ✅")
             }
 
             return ["\(pretty_function()) ✅"]
