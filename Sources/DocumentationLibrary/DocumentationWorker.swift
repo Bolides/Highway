@@ -22,6 +22,9 @@ public protocol DocumentationWorkerProtocol: AutoMockable
     // sourcery:end
 }
 
+/// Generates documentation per product you per product you pass to it. the docs are in the docs/<#productName#> folder
+/// To view the generated docs you do `open docs/<#productName#>/index.html`
+/// > The documentation is still very basic for now. Thanks for updating if you feel like it :).
 public struct DocumentationWorker: DocumentationWorkerProtocol, AutoGenerateProtocol
 {
     // MARK: - Private
@@ -63,12 +66,14 @@ public struct DocumentationWorker: DocumentationWorkerProtocol, AutoGenerateProt
                 jazzy = try system.gemProcess(name: "jazzy", in: folder)
                 signPost.message("\(pretty_function()) jazzy \(product.offset + 1)/\(total) \(product.element.name) ...")
 
-                jazzy.arguments = ["-x",
-                                   "-scheme,Highway-Package",
-                                   "-m", "\(product)",
-                                   "--output", "docs/\(product)",
-                                   "--xcodebuild-arguments", "-derivedDataPath \(try folder.subfolder(named: ".build").path)",
-                                   "--swift-version", "4.2.1"]
+                jazzy.arguments = [
+                    "-x",
+                    "-scheme,Highway-Package",
+                    "-m", "\(product)",
+                    "--output", "docs/\(product)",
+                    "--xcodebuild-arguments", "-derivedDataPath \(try folder.subfolder(named: ".build").path)",
+                    "--swift-version", "4.2.1",
+                ]
 
                 let output = try terminal.runProcess(jazzy)
                 signPost.verbose(output.joined(separator: "\n"))
