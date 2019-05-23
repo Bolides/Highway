@@ -61,3 +61,8 @@ Carthage
 .build
 /secrets.json
 /build
+/Sources/.sourcery-SecretsLibrary.yml
+/Sources/.sourcery-Secrets.yml
+/Sources/.sourcery-HighwaySourcery.yml
+/Sources/.sourcery-DocumentationLibrary.yml
+/Sources/.sourcery-Documentation.yml
