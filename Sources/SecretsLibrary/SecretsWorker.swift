@@ -93,6 +93,9 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
 
     // MARK: - Secret changes
 
+    /// Returns with true if the secrets listed by git secret have changed
+    /// It stores a file with json named SecretsWorker.secretFileDateChangePath in the root folder
+    /// later it checks for dates with keys of the relative paths to the secrets files and returns with false if files have changed.
     public mutating func didSecretsChangeSinceLastPush(in folder: FolderProtocol) throws -> Bool
     {
         do
@@ -102,18 +105,26 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
 
             let listOutput = try terminal.runProcess(gitSecretList).filter { !$0.isEmpty }
 
+            let rootPath = folder.path
             let list = try listOutput.map { try folder.file(named: $0) }
             var listDates = [String: Date]()
 
-            list.forEach { listDates[$0.path] = $0.modificationDate }
+            list.forEach
+            {
+                let relativePath = $0.path.replacingOccurrences(of: rootPath, with: "")
+                listDates[relativePath] = $0.modificationDate
+            }
 
             let fileDates = try folder.createFileIfNeeded(named: SecretsWorker.secretFileDateChangePath)
-
-            let original = try? JSONDecoder().decode(Secret.self, from: try fileDates.read())
-
             secretSaved = Secret(secretFileDates: listDates)
 
-            let result = try original?.secretFileDates.filter
+            guard let original = (try? JSONDecoder().decode(Secret.self, from: try fileDates.read())) else
+            {
+                try writeNewSecretSavedData(in: folder)
+                return true
+            }
+
+            let result = try original.secretFileDates.filter
             {
                 guard let date = secretSaved?.secretFileDates[$0.key] else
                 {
@@ -123,7 +134,7 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
                 return date > $0.value
             }
 
-            guard (result?.keys.count ?? 0) > 0 else
+            guard result.keys.count > 0 else
             {
                 secretSaved = nil
                 return false
@@ -137,6 +148,8 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
         }
     }
 
+    /// Writes cached in memory private secretSaved to disk and sets it to nil
+    /// Output can be found in root folder json file named SecretsWorker.secretFileDateChangePath.
     public mutating func writeNewSecretSavedData(in folder: FolderProtocol) throws
     {
         guard let secretSaved = secretSaved else
