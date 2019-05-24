@@ -147,7 +147,7 @@ public struct HighwaySourcery
 
     public static let target = Target.target(
         name: name,
-        dependencies: HWSetup.target.dependencies
+        dependencies: ["Highway"]
     )
 }
 

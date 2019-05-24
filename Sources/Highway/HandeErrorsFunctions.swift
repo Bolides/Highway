@@ -15,7 +15,7 @@ public func handleTestOutput(_ output: @escaping HighwayRunner.SyncTestOutput)
     do
     {
         let output = try output()
-        SignPost.shared.message(output.testSuiteOutput.joined(separator: "\n"))
+        SignPost.shared.message("All \(output.totalNumberOfTests) tests succeed 💸")
     }
     catch { SignPost.shared.verbose("\(error)") }
 }

@@ -267,8 +267,6 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
                 return
             }
 
-            var _error: Swift.Error?
-
             do
             {
                 context.signPost.message("🧪 swift test package \(package.name) ... ")
@@ -278,19 +276,15 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
 
                 let testReport = try TestReport(output: try context.terminal.runProcess(task))
                 context.signPost.verbose("\(testReport)")
-                context.signPost.message("🧪 swift test package \(package.name) ✅")
                 async { testReport }
+                context.signPost.message("🧪 swift test package \(package.name) ✅")
             }
             catch
             {
-                _error = HighwayError.highwayError(
-                    atLocation: "\(HighwayRunner.self) \(#function) \(#line) - \(package.name)",
-                    error: error
-                )
-                async { throw _error! }
+                self.addError(error)
+                async { throw error }
                 context.signPost.message("🧪 swift test package \(package.name) ❌")
             }
-            context.addError(_error)
 
             self.dispatchGroup.leave()
         }
