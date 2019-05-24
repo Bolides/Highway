@@ -60,7 +60,7 @@ public struct HWPod: HWPodProtocol, AutoGenerateProtocol
 
     /**
      Will throw HWPod.Error that you can choose to ignore
-    */
+     */
     public func attemptPodInstallIfOptionAddedToCommandline() throws
     {
         guard (commandLineOptions.first { $0 == CommandLineOption.podInstall }) != nil else

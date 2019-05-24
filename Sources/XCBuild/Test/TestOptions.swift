@@ -20,7 +20,7 @@ public protocol TestOptionsProtocol: ArgumentExecutableProtocol
 
 /**
  Options for xcodebuild's build & test actions:
-*/
+ */
 public struct TestOptions: TestOptionsProtocol, AutoGenerateProtocol
 {
     public let scheme: String // -scheme

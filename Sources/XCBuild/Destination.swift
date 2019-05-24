@@ -11,7 +11,7 @@ public protocol DestinationProtocol: AutoMockable
 
 /**
  See https://developer.apple.com/library/content/technotes/tn2339/_index.html
- 
+
     also: http://www.mokacoding.com/blog/xcodebuild-destination-options/
     List all known devices:
     instruments -s devices

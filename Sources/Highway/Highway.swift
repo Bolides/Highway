@@ -102,7 +102,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
 
     /**
      This will init Highway. The parameters are mostly optional
-     
+
      - parameters:
         - package: PackageProtocol,
         - dependencyService: DependencyServiceProtocol will locate all the source code for the products so Highway can perfrom sourcery or other work on them
@@ -118,7 +118,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         - signPost: SignPostProtocol = SignPost.shared,
         - queue: HighwayDispatchProtocol = Highway.queue,
         - sourceryType: SourceryProtocol.Type = Sourcery.self
-    */
+     */
     public init(
         package: PackageProtocol,
         dependencyService: DependencyServiceProtocol,
@@ -136,7 +136,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         sourceryType: SourceryProtocol.Type = Sourcery.self
     ) throws
     {
-        self.highwaySetupExecutableName = gitHooksPrePushExecutableName
+        highwaySetupExecutableName = gitHooksPrePushExecutableName
         self.queue = queue
         self.package = package
 
@@ -208,7 +208,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
 
     /**
      Will look for package named "template-sourcery"
-    */
+     */
     public func templateFolder() throws -> FolderProtocol
     {
         return try package.dependencies.templateFolder()

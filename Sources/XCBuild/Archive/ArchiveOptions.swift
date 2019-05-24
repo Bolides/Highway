@@ -12,7 +12,7 @@ public protocol ArchiveOptionsProtocol: AutoMockable
 }
 
 /**
-     Options for xcodebuild's archive action:
+ Options for xcodebuild's archive action:
  */
 public struct ArchiveOptions: ArchiveOptionsProtocol, AutoGenerateProtocol
 {

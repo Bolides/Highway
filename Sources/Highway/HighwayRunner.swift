@@ -86,10 +86,10 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
     // MARK: - Documetation
 
     /**
-      Will run documentation on products passed to the function
-       You can use default handle fuction with name
-       If an error occurs it is added to the errors array of HighwayRunner and it is thrown in the async closure.
-    */
+     Will run documentation on products passed to the function
+      You can use default handle fuction with name
+      If an error occurs it is added to the errors array of HighwayRunner and it is thrown in the async closure.
+     */
     public func generateDocs(for products: Set<SwiftProduct>, _ async: @escaping (@escaping HighwayRunner.SyncDocs) -> Void)
     {
         dispatchGroup.enter()
@@ -121,9 +121,9 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
     // MARK: - Sourcery
 
     /**
-      Will run sourcery on every product in the swift package except the once you excluded.
-      Adds the imports from the SwiftPackageDescription.Target.dependencies to the generated mock file for every product
-    */
+     Will run sourcery on every product in the swift package except the once you excluded.
+     Adds the imports from the SwiftPackageDescription.Target.dependencies to the generated mock file for every product
+     */
     public func runSourcery(_ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
     {
         do
@@ -228,7 +228,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
     // MARK: - Secrets
 
     /** Will throw if secrets changed SecretsWorker.Error.runSecretsExecutable
-    */
+     */
     public func checkIfSecretsShouldBeHidden(in folder: FolderProtocol) throws
     {
         guard try secretsWorker.didSecretsChangeSinceLastPush(in: folder) else

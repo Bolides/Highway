@@ -82,7 +82,7 @@ public struct Dependency: Decodable, DependencyProtocol, CustomStringConvertible
     }
 
     /** Will look for package named "template-sourcery"
-    */
+     */
     public func templateFolder() throws -> FolderProtocol
     {
         return try templateFolder(expectedName: "template-sourcery")

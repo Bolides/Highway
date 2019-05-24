@@ -56,7 +56,7 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
 
     /**
      reveals secrets if they are not already revealed
-    */
+     */
     public func revealSecrets(in folder: FolderProtocol) throws -> [String]
     {
         do
@@ -96,10 +96,10 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
     // MARK: - Secret changes
 
     /**
-       Returns with true if the secrets listed by git secret have changed
-       It stores a file with json named SecretsWorker.secretFileDateChangePath in the root folder
-       later it checks for dates with keys of the relative paths to the secrets files and returns with false if files have changed.
-    */
+     Returns with true if the secrets listed by git secret have changed
+     It stores a file with json named SecretsWorker.secretFileDateChangePath in the root folder
+     later it checks for dates with keys of the relative paths to the secrets files and returns with false if files have changed.
+     */
     public mutating func didSecretsChangeSinceLastPush(in folder: FolderProtocol) throws -> Bool
     {
         do
@@ -153,9 +153,9 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
     }
 
     /**
-        Writes cached in memory private secretSaved to disk and sets it to nil
-        Output can be found in root folder json file named `SecretsWorker.secretFileDateChangePath.`
-    */
+     Writes cached in memory private secretSaved to disk and sets it to nil
+     Output can be found in root folder json file named `SecretsWorker.secretFileDateChangePath.`
+     */
     public mutating func writeNewSecretSavedData(in folder: FolderProtocol) throws
     {
         guard let secretSaved = secretSaved else
@@ -173,7 +173,7 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
 
     /**
      Will throw to make you run secrets to hide secrets with git-secret ang gpg
-    */
+     */
     public mutating func attemptHideSecrets(in folder: FolderProtocol) throws -> [String]
     {
         guard try didSecretsChangeSinceLastPush(in: folder) else

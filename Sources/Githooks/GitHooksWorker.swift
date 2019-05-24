@@ -65,7 +65,7 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
 
     /**
      Options to be set from the command line
-    */
+     */
     public enum Option: String, Hashable, CaseIterable
     {
         case noGitHooksPrePush
@@ -97,7 +97,7 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
 
     /**
      Will add pre push script by default unless you add GithooksWorker.Option.noGitHooksPrePush to commandline
-    */
+     */
     public func addPrePushToGitHooks() throws
     {
         guard !commandlineOptions.contains(.noGitHooksPrePush) else

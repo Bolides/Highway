@@ -29,7 +29,7 @@ public protocol DocumentationWorkerProtocol: AutoMockable
  To view the generated docs you do `open docs/<#productName#>/index.html`
 
  > The documentation is still very basic for now. Thanks for updating if you feel like it :).
-*/
+ */
 public struct DocumentationWorker: DocumentationWorkerProtocol, AutoGenerateProtocol
 {
     public static let shared: DocumentationWorkerProtocol = DocumentationWorker()
@@ -57,7 +57,7 @@ public struct DocumentationWorker: DocumentationWorkerProtocol, AutoGenerateProt
 
     /**
      Performs `jazzy -x -scheme,Highway-Package -m <#product#> --output docs/<#product#>` for every product in the swift package
-    */
+     */
     public func attemptJazzyDocs(in folder: FolderProtocol, for products: Set<SwiftProduct>) throws -> [String]
     {
         do

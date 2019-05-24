@@ -7,7 +7,7 @@ import ZFile
 
 /**
  Maps names command line tools/executables to file urls.
-*/
+ */
 public protocol SystemProtocol: AutoMockable
 {
     // sourcery:inline:System.AutoGenerateProtocol
@@ -68,7 +68,7 @@ public struct System: SystemProtocol, AutoGenerateProtocol
     // MARK: - Ruby and gem support
 
     /**
-         Will install rbenv with xcode if needed
+     Will install rbenv with xcode if needed
      */
     public func rbenvProcess(in folder: FolderProtocol) throws -> ProcessProtocol
     {
@@ -83,8 +83,8 @@ public struct System: SystemProtocol, AutoGenerateProtocol
     }
 
     /**
-         Looks up the gem and makes int a process
-         Throws `System.Error.gemListNoGem(name:)` if gem is not found
+     Looks up the gem and makes int a process
+     Throws `System.Error.gemListNoGem(name:)` if gem is not found
      */
     public func gemProcess(name: String, in folder: FolderProtocol) throws -> ProcessProtocol
     {
@@ -181,7 +181,7 @@ public struct System: SystemProtocol, AutoGenerateProtocol
     // MARK: - Brew support
 
     /**
-         Will use `/usr/local/bin/brew` to find the executable file to setup the Process
+     Will use `/usr/local/bin/brew` to find the executable file to setup the Process
      */
     public func processFromBrew(formula: String, in folder: FolderProtocol) throws -> ProcessProtocol
     {

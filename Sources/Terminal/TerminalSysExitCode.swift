@@ -43,7 +43,7 @@ public enum TerminalSysExitCode: Int32, CustomDebugStringConvertible
         case .baseOrUsage: // MARK: Exit Codes
 
             /**
-                 Exit code enum as defined in sysexits.h
+             Exit code enum as defined in sysexits.h
              */
             enum TerminalExitCode: Int32, CustomDebugStringConvertible
             {
