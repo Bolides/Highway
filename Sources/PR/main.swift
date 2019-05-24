@@ -70,7 +70,7 @@ do
             signPost.message("🚀 \(HighwayRunner.self) ✅")
             exit(EXIT_SUCCESS)
         }
-        signPost.message("🚀 \(HighwayRunner.self) has \(errors.count) ❌")
+        signPost.error("🚀 \(HighwayRunner.self) has \(errors.count) ❌")
 
         for error in errors.enumerated()
         {

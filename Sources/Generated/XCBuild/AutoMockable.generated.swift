@@ -402,6 +402,13 @@ open class TestReportProtocolMock: TestReportProtocol
     }
 
     public var underlyingTotalNumberOfTests: Int = -100
+    public var description: String
+    {
+        get { return underlyingDescription }
+        set(value) { underlyingDescription = value }
+    }
+
+    public var underlyingDescription: String = "AutoMockable filled value"
 }
 
 // MARK: - XCBuildDestinationsProtocolMock

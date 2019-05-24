@@ -95,6 +95,7 @@ import Foundation
  var testSuiteOutput: [String] { get }
  var output: [String] { get }
  var totalNumberOfTests: Int { get }
+ var description: String { get }
 
  // sourcery:end
  // types.implementing.AutoGenerateProtocol inline for TestReport ✅

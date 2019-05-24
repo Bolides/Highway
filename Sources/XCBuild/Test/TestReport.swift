@@ -9,11 +9,12 @@ public protocol TestReportProtocol: AutoMockable
     var testSuiteOutput: [String] { get }
     var output: [String] { get }
     var totalNumberOfTests: Int { get }
+    var description: String { get }
 
     // sourcery:end
 }
 
-public struct TestReport: TestReportProtocol, AutoGenerateProtocol, Encodable
+public struct TestReport: TestReportProtocol, AutoGenerateProtocol, Encodable, CustomStringConvertible
 {
     public let testSuiteOutput: [String]
     public let output: [String]
@@ -58,10 +59,49 @@ public struct TestReport: TestReportProtocol, AutoGenerateProtocol, Encodable
         totalNumberOfTests = total
     }
 
+    // MARK: - Description
+
+    public var description: String
+    {
+        return """
+        Test Suite report of \(totalNumberOfTests) tests
+        
+        \(testSuiteOutput.joined(separator: "\n"))
+        """
+    }
+
     // MARK: - Errors
 
-    public indirect enum Error: Swift.Error
+    public indirect enum Error: Swift.Error, CustomStringConvertible
     {
+        public var description: String
+        {
+            let header = "TestReport error"
+            switch self
+            {
+            case let .invalidTestOutput(output):
+                return """
+                \(header)
+                Invalid test output
+                \(output.joined(separator: "\n"))
+                """
+            case let .error(location, error):
+                return """
+                \(header)
+                Indirect error at location: \(location)
+                \(error)
+                """
+            case let .testsFailed(summary):
+                return """
+                \(header)
+                Test Failed with summary:
+                
+                \(summary.joined(separator: "\n"))
+                
+                """
+            }
+        }
+
         case invalidTestOutput([String])
         case error(_ atLocation: String, error: Error)
         case testsFailed(summary: [String])

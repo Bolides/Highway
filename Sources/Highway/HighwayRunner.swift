@@ -160,9 +160,8 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
         }
         catch
         {
-            let _error = HighwayError.highwayError(atLocation: pretty_function(), error: error)
-            addError(_error)
-            async { throw _error }
+            addError(error)
+            async { throw error }
         }
     }
 
