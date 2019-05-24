@@ -13,14 +13,16 @@ import SourceryAutoProtocols
 import Terminal
 import ZFile
 
-/// To generate mocks correctly we have to do a text replacement and run sourcery twice.
-/// This worker will perform the following tasks
-/// 1. Find all files in sourceFolder
-/// 1.1 (Optional) Replace also in individual files
-/// 2. Run sourcery to generate the protocols
-/// 3. Revert Replace occurances
-/// 4. Run sourcery to generate the mocks
-/// 6. Add imports to output
+/**
+ To generate mocks correctly we have to do a text replacement and run sourcery twice.
+    This worker will perform the following tasks
+    1. Find all files in sourceFolder
+    1.1 (Optional) Replace also in individual files
+    2. Run sourcery to generate the protocols
+    3. Revert Replace occurances
+    4. Run sourcery to generate the mocks
+    6. Add imports to output
+ */
 public class SourceryWorker: SourceryWorkerProtocol, AutoGenerateProtocol
 {
     public typealias SyncOutput = () throws -> [String]

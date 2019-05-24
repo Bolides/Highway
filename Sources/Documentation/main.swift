@@ -29,11 +29,13 @@ do
     let possibleNames = dump.products.map { $0.name }
     let arguments = CommandLine.arguments.filter { possibleNames.contains($0) }
 
-    let products = dump.products.filter { arguments.contains($0.name) }
+    var products = dump.products.filter { arguments.contains($0.name) }
 
-    guard products.count > 0 else
+    if products.count == 0
     {
-        throw "Please add one of the product names \n \(possibleNames.joined(separator: "\n"))"
+        signPost.message("Please add one of the product names \n \(possibleNames.joined(separator: "\n"))")
+        signPost.message("\n🎺starting all ...\n")
+        products = dump.products
     }
 
     let output = try documentation.attemptJazzyDocs(in: srcRoot, for: products)

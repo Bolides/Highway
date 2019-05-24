@@ -24,7 +24,9 @@ public protocol CarthageBuilderProtocol: AutoMockable
     // sourcery:end
 }
 
-/// Will build carthage in the .build folder if not installed
+/**
+ Will build carthage in the .build folder if not installed
+ */
 public struct CarthageBuilder: CarthageBuilderProtocol, AutoGenerateProtocol
 {
     public typealias SyncOutput = () throws -> FileProtocol

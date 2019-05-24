@@ -3,8 +3,6 @@ import SourceryAutoProtocols
 import Url
 import ZFile
 
-/// Git namespace
-
 public protocol GitToolProtocol: AutoMockable
 {
     // sourcery:inline:GitTool.AutoGenerateProtocol

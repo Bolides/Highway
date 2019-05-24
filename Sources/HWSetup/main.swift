@@ -35,7 +35,7 @@ do
     let package = try Highway.package(for: srcRoot, dependencyService: dependencyService, dumpService: dumpService)
 
     let sourceryBuilder = SourceryBuilder(dependencyService: dependencyService)
-    let highway = try Highway(package: package, dependencyService: dependencyService, sourceryBuilder: sourceryBuilder, highwaySetupExecutableName: "HWSetup")
+    let highway = try Highway(package: package, dependencyService: dependencyService, sourceryBuilder: sourceryBuilder, gitHooksPrePushExecutableName: "PR")
 
     let secrets = SecretsWorker.shared
     let output = try secrets.revealSecrets(in: srcRoot)

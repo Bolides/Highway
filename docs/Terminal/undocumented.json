@@ -408,21 +408,21 @@
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/PathEnvironmentParser.swift",
-      "line": 25,
+      "line": 26,
       "symbol": "PathEnvironmentParser.shared",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/PathEnvironmentParser.swift",
-      "line": 26,
+      "line": 27,
       "symbol": "PathEnvironmentParser.urls",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/PathEnvironmentParser.swift",
-      "line": 30,
+      "line": 31,
       "symbol": "PathEnvironmentParser.init(highwayCommandLineArguments:processInfoEnvironment:signPost:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -513,252 +513,252 @@
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 12,
+      "line": 14,
       "symbol": "SystemProtocol.shared",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 13,
+      "line": 15,
       "symbol": "SystemProtocol.brewPath",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 14,
+      "line": 16,
       "symbol": "SystemProtocol.jazzyPath",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 15,
+      "line": 17,
       "symbol": "SystemProtocol.pathEnvironmentParser",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 16,
+      "line": 18,
       "symbol": "SystemProtocol.fileSystem",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 18,
+      "line": 20,
       "symbol": "SystemProtocol.rbenvProcess(in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 19,
+      "line": 21,
       "symbol": "SystemProtocol.gemProcess(name:in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 20,
+      "line": 22,
       "symbol": "SystemProtocol.rbenvWhichProcess(gemName:in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 21,
+      "line": 23,
       "symbol": "SystemProtocol.installOrFindGemProcess(name:in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 22,
+      "line": 24,
       "symbol": "SystemProtocol.processFromBrew(formula:in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 23,
+      "line": 25,
       "symbol": "SystemProtocol.installOrGetProcessFromBrew(formula:in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 25,
+      "line": 27,
       "symbol": "SystemProtocol.brewListProcess(for:in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 26,
+      "line": 28,
       "symbol": "SystemProtocol.process(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 27,
+      "line": 29,
       "symbol": "SystemProtocol.process(currentFolder:executablePath:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 28,
+      "line": 30,
       "symbol": "SystemProtocol.process(currentFolder:executableFile:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 29,
+      "line": 31,
       "symbol": "SystemProtocol.executable(with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 34,
+      "line": 36,
       "symbol": "System",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 36,
+      "line": 38,
       "symbol": "System.shared",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 37,
+      "line": 39,
       "symbol": "System.brewPath",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 43,
+      "line": 45,
       "symbol": "System.pathEnvironmentParser",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 44,
+      "line": 46,
       "symbol": "System.fileSystem",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 53,
+      "line": 55,
       "symbol": "System.init(pathEnvironmentParser:fileSystem:signPost:terminal:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 143,
+      "line": 149,
       "symbol": "System.rbenvWhichProcess(gemName:in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 150,
+      "line": 156,
       "symbol": "System.installOrFindGemProcess(name:in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 208,
+      "line": 216,
       "symbol": "System.installOrGetProcessFromBrew(formula:in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 241,
+      "line": 249,
       "symbol": "System.brewListProcess(for:in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 251,
+      "line": 259,
       "symbol": "System.process(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 256,
+      "line": 264,
       "symbol": "System.process(currentFolder:executablePath:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 262,
+      "line": 270,
       "symbol": "System.process(currentFolder:executableFile:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 271,
+      "line": 279,
       "symbol": "System.executable(with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 291,
+      "line": 299,
       "symbol": "System.Error",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 293,
+      "line": 301,
       "symbol": "System.Error.executableNotFoundFor(executableName:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 294,
+      "line": 302,
       "symbol": "System.Error.brewListNoFormula(forName:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 295,
+      "line": 303,
       "symbol": "System.Error.general(_:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 296,
+      "line": 304,
       "symbol": "System.Error.error(atLocation:error:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/System.swift",
-      "line": 297,
+      "line": 305,
       "symbol": "System.Error.gemListNoGem(forName:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
@@ -1185,112 +1185,112 @@
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/TerminalSysExitCode.swift",
-      "line": 15,
+      "line": 17,
       "symbol": "TerminalSysExitCode.ok",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/TerminalSysExitCode.swift",
-      "line": 16,
+      "line": 18,
       "symbol": "TerminalSysExitCode.baseOrUsage",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/TerminalSysExitCode.swift",
-      "line": 17,
+      "line": 19,
       "symbol": "TerminalSysExitCode.dataError",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/TerminalSysExitCode.swift",
-      "line": 18,
+      "line": 20,
       "symbol": "TerminalSysExitCode.noInput",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/TerminalSysExitCode.swift",
-      "line": 19,
+      "line": 21,
       "symbol": "TerminalSysExitCode.noUser",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/TerminalSysExitCode.swift",
-      "line": 20,
+      "line": 22,
       "symbol": "TerminalSysExitCode.noHost",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/TerminalSysExitCode.swift",
-      "line": 21,
+      "line": 23,
       "symbol": "TerminalSysExitCode.unavailable",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/TerminalSysExitCode.swift",
-      "line": 22,
+      "line": 24,
       "symbol": "TerminalSysExitCode.software",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/TerminalSysExitCode.swift",
-      "line": 23,
+      "line": 25,
       "symbol": "TerminalSysExitCode.os",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/TerminalSysExitCode.swift",
-      "line": 24,
+      "line": 26,
       "symbol": "TerminalSysExitCode.osFile",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/TerminalSysExitCode.swift",
-      "line": 25,
+      "line": 27,
       "symbol": "TerminalSysExitCode.creation",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/TerminalSysExitCode.swift",
-      "line": 26,
+      "line": 28,
       "symbol": "TerminalSysExitCode.io",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/TerminalSysExitCode.swift",
-      "line": 27,
+      "line": 29,
       "symbol": "TerminalSysExitCode.temporary",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/TerminalSysExitCode.swift",
-      "line": 28,
+      "line": 30,
       "symbol": "TerminalSysExitCode.protocolFailiure",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/TerminalSysExitCode.swift",
-      "line": 29,
+      "line": 31,
       "symbol": "TerminalSysExitCode.noPermission",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Terminal/TerminalSysExitCode.swift",
-      "line": 30,
+      "line": 32,
       "symbol": "TerminalSysExitCode.configuration",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"

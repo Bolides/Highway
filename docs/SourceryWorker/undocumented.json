@@ -233,112 +233,112 @@
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SourceryWorker/SourceryBuilder.swift",
-      "line": 31,
+      "line": 33,
       "symbol": "SourceryBuilder.executalbeFolderPath",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SourceryWorker/SourceryBuilder.swift",
-      "line": 41,
+      "line": 43,
       "symbol": "SourceryBuilder.init(dependencyService:terminal:signPost:system:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SourceryWorker/SourceryBuilder.swift",
-      "line": 56,
+      "line": 58,
       "symbol": "SourceryBuilder.templateFolder()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SourceryWorker/SourceryBuilder.swift",
-      "line": 61,
+      "line": 63,
       "symbol": "SourceryBuilder.sourceryAutoProtocolFile()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SourceryWorker/SourceryBuilder.swift",
-      "line": 66,
+      "line": 68,
       "symbol": "SourceryBuilder.dependencies()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SourceryWorker/SourceryBuilder.swift",
-      "line": 77,
+      "line": 79,
       "symbol": "SourceryBuilder.attemptToBuildSourceryIfNeeded()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SourceryWorker/SourceryWorker.swift",
-      "line": 26,
+      "line": 28,
       "symbol": "SourceryWorker.SyncOutput",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SourceryWorker/SourceryWorker.swift",
-      "line": 29,
+      "line": 31,
       "symbol": "SourceryWorker.queue",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SourceryWorker/SourceryWorker.swift",
-      "line": 30,
+      "line": 32,
       "symbol": "SourceryWorker.mockableInline",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SourceryWorker/SourceryWorker.swift",
-      "line": 31,
+      "line": 33,
       "symbol": "SourceryWorker.mockableEnd",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SourceryWorker/SourceryWorker.swift",
-      "line": 32,
+      "line": 34,
       "symbol": "SourceryWorker.protocolGeneratableInline",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SourceryWorker/SourceryWorker.swift",
-      "line": 33,
+      "line": 35,
       "symbol": "SourceryWorker.protocolGeneratalbeEnd",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SourceryWorker/SourceryWorker.swift",
-      "line": 36,
+      "line": 38,
       "symbol": "SourceryWorker.name",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SourceryWorker/SourceryWorker.swift",
-      "line": 37,
+      "line": 39,
       "symbol": "SourceryWorker.sourceryYMLFile",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SourceryWorker/SourceryWorker.swift",
-      "line": 48,
+      "line": 50,
       "symbol": "SourceryWorker.init(sourcery:terminal:signPost:queue:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SourceryWorker/SourceryWorker.swift",
-      "line": 72,
+      "line": 74,
       "symbol": "SourceryWorker.attempt(in:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

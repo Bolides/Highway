@@ -11,7 +11,9 @@ public protocol ArchiveOptionsProtocol: AutoMockable
     // sourcery:end
 }
 
-/// Options for xcodebuild's archive action:
+/**
+     Options for xcodebuild's archive action:
+ */
 public struct ArchiveOptions: ArchiveOptionsProtocol, AutoGenerateProtocol
 {
     // MARK: - Properties

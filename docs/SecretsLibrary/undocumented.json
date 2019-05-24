@@ -149,42 +149,35 @@
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SecretsLibrary/SecretsWorker.swift",
-      "line": 165,
-      "symbol": "SecretsWorker.attemptHideSecrets(in:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SecretsLibrary/SecretsWorker.swift",
-      "line": 196,
+      "line": 208,
       "symbol": "SecretsWorker.commitHiddenSecrets(in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SecretsLibrary/SecretsWorker.swift",
-      "line": 240,
+      "line": 252,
       "symbol": "SecretsWorker.attemptHideSecretsWithgpg(in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SecretsLibrary/SecretsWorker.swift",
-      "line": 300,
+      "line": 312,
       "symbol": "SecretsWorker.gitSecretProcess(in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SecretsLibrary/SecretsWorker.swift",
-      "line": 307,
+      "line": 319,
       "symbol": "SecretsWorker.Error",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SecretsLibrary/SecretsWorker.swift",
-      "line": 309,
+      "line": 321,
       "symbol": "SecretsWorker.Error.runSecretsExecutable",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"

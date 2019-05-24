@@ -19,10 +19,12 @@ public protocol XCBuildProtocol: AutoMockable
     // sourcery:end
 }
 
-/// Low-level Wrapper around xcodebuild. This is a starting point for additonal wrappers that do things like auto detection
-/// of certain settings/options. However there are some things XCBuild already does which makes it a little bit more than
-/// just a wrapper. It offers a nice struct around the export-plist, it interprets the results of executed commands
-/// and finds generated files (ipas, ...). xcrun is also used throughout this class.
+/**
+ Low-level Wrapper around xcodebuild. This is a starting point for additonal wrappers that do things like auto detection
+    of certain settings/options. However there are some things XCBuild already does which makes it a little bit more than
+    just a wrapper. It offers a nice struct around the export-plist, it interprets the results of executed commands
+    and finds generated files (ipas, ...). xcrun is also used throughout this class.
+ */
 public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol
 {
     // MARK: - Properties

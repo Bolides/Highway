@@ -19,7 +19,7 @@ let highwayRunner: HighwayRunner!
 let dispatchGroup: HWDispatchGroupProtocol = DispatchGroup()
 let signPost = SignPost.shared
 
-// MARK: - RUN
+// MARK: - RUN on bitrise for PR
 
 let dependencyService: DependencyServiceProtocol!
 
@@ -34,16 +34,11 @@ do
     let package = try Highway.package(for: srcRoot, dependencyService: dependencyService, dumpService: dumpService)
 
     let sourceryBuilder = SourceryBuilder(dependencyService: dependencyService)
-    let highway = try Highway(package: package, dependencyService: dependencyService, sourceryBuilder: sourceryBuilder, highwaySetupExecutableName: "HWSetup")
+    let highway = try Highway(package: package, dependencyService: dependencyService, sourceryBuilder: sourceryBuilder, gitHooksPrePushExecutableName: "HWSetup")
 
     highwayRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
 
-    try highwayRunner.checkIfSecretsShouldBeHidden(in: srcRoot)
-
     highwayRunner.runSourcery(handleSourceryOutput)
-
-    let products = highway.package.dump.products.filter { !$0.name.hasSuffix("Mock") }
-    highwayRunner.generateDocs(for: products, handleGenerateDocs)
 
     dispatchGroup.notifyMain
     {
