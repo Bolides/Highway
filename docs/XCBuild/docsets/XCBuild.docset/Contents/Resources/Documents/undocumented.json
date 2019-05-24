@@ -100,35 +100,35 @@
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Archive/ArchiveOptions.swift",
-      "line": 19,
+      "line": 21,
       "symbol": "ArchiveOptions.scheme",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Archive/ArchiveOptions.swift",
-      "line": 20,
+      "line": 22,
       "symbol": "ArchiveOptions.project",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Archive/ArchiveOptions.swift",
-      "line": 21,
+      "line": 23,
       "symbol": "ArchiveOptions.destination",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Archive/ArchiveOptions.swift",
-      "line": 26,
+      "line": 28,
       "symbol": "ArchiveOptions.archivePath",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Archive/ArchiveOptions.swift",
-      "line": 30,
+      "line": 32,
       "symbol": "ArchiveOptions.init(scheme:project:destination:archivePath:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -198,189 +198,189 @@
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 19,
+      "line": 21,
       "symbol": "Destination.raw",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 20,
+      "line": 22,
       "symbol": "Destination.init(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 25,
+      "line": 27,
       "symbol": "Destination.asString",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 33,
+      "line": 35,
       "symbol": "Destination.Architecture",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 35,
+      "line": 37,
       "symbol": "Destination.Architecture.i386",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 36,
+      "line": 38,
       "symbol": "Destination.Architecture.x86_64",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 39,
+      "line": 41,
       "symbol": "Destination.OS",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 41,
+      "line": 43,
       "symbol": "Destination.OS.iOS(version:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 42,
+      "line": 44,
       "symbol": "Destination.OS.tvOS(version:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 43,
+      "line": 45,
       "symbol": "Destination.OS.latest",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 61,
+      "line": 63,
       "symbol": "Destination.PlatformType",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 63,
+      "line": 65,
       "symbol": "Destination.PlatformType.macOS",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 64,
+      "line": 66,
       "symbol": "Destination.PlatformType.iOS",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 64,
+      "line": 66,
       "symbol": "Destination.PlatformType.iOSSimulator",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 64,
+      "line": 66,
       "symbol": "Destination.PlatformType.tvOS",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 64,
+      "line": 66,
       "symbol": "Destination.PlatformType.tvOSSimulator",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 67,
+      "line": 69,
       "symbol": "Destination.Simulator",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 69,
+      "line": 71,
       "symbol": "Destination.Simulator.iOS",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 70,
+      "line": 72,
       "symbol": "Destination.Simulator.tvOS",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 72,
+      "line": 74,
       "symbol": "Destination.Simulator.name",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 75,
+      "line": 77,
       "symbol": "Destination.Device",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 77,
+      "line": 79,
       "symbol": "Destination.Device.iOS",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 78,
+      "line": 80,
       "symbol": "Destination.Device.tvOS",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 85,
+      "line": 87,
       "symbol": "Destination.Platform",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 87,
+      "line": 89,
       "symbol": "Destination.Platform.init(type:isGeneric:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 93,
+      "line": 95,
       "symbol": "Destination.Platform.type",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Destination.swift",
-      "line": 94,
+      "line": 96,
       "symbol": "Destination.Platform.isGeneric",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
@@ -562,266 +562,266 @@
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 7,
+      "line": 8,
       "symbol": "ExportOptions.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 11,
+      "line": 12,
       "symbol": "ExportOptions.compileBitcode",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 15,
+      "line": 16,
       "symbol": "ExportOptions.embedOnDemandResourcesAssetPacksInBundle",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 18,
+      "line": 19,
       "symbol": "ExportOptions.iCloudContainerEnvironment",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 21,
+      "line": 22,
       "symbol": "ExportOptions.installerSigningCertificate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 24,
+      "line": 25,
       "symbol": "ExportOptions.manifest",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 26,
+      "line": 27,
       "symbol": "ExportOptions.Method",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 28,
+      "line": 29,
       "symbol": "ExportOptions.Method.appStore",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 29,
+      "line": 30,
       "symbol": "ExportOptions.Method.package",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 30,
+      "line": 31,
       "symbol": "ExportOptions.Method.adhoc",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 31,
+      "line": 32,
       "symbol": "ExportOptions.Method.enterprise",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 32,
+      "line": 33,
       "symbol": "ExportOptions.Method.development",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 33,
+      "line": 34,
       "symbol": "ExportOptions.Method.developerId",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 34,
+      "line": 35,
       "symbol": "ExportOptions.Method.macApplication",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 38,
+      "line": 39,
       "symbol": "ExportOptions.method",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 41,
+      "line": 42,
       "symbol": "ExportOptions.onDemandResourcesAssetPacksBaseURL",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 44,
+      "line": 45,
       "symbol": "ExportOptions.ProvisioningProfiles",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 46,
+      "line": 47,
       "symbol": "ExportOptions.ProvisioningProfiles.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 48,
+      "line": 49,
       "symbol": "ExportOptions.ProvisioningProfiles.Profile",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 50,
+      "line": 51,
       "symbol": "ExportOptions.ProvisioningProfiles.Profile.UUIDString",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 51,
+      "line": 52,
       "symbol": "ExportOptions.ProvisioningProfiles.Profile.named(_:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 52,
+      "line": 53,
       "symbol": "ExportOptions.ProvisioningProfiles.Profile.identifiedBy(_:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 65,
+      "line": 66,
       "symbol": "ExportOptions.ProvisioningProfiles.addProfile(_:forBundleIdentifier:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 82,
+      "line": 83,
       "symbol": "ExportOptions.provisioningProfiles",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 85,
+      "line": 86,
       "symbol": "ExportOptions.signingCertificate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 88,
+      "line": 89,
       "symbol": "ExportOptions.SigningStyle",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 90,
+      "line": 91,
       "symbol": "ExportOptions.SigningStyle.automatic",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 90,
+      "line": 91,
       "symbol": "ExportOptions.SigningStyle.manual",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 93,
+      "line": 94,
       "symbol": "ExportOptions.signingStyle",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 96,
+      "line": 97,
       "symbol": "ExportOptions.stripSwiftSymbols",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 99,
+      "line": 100,
       "symbol": "ExportOptions.teamID",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 102,
+      "line": 103,
       "symbol": "ExportOptions.Thinning",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 104,
+      "line": 105,
       "symbol": "ExportOptions.Thinning.none",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 105,
+      "line": 106,
       "symbol": "ExportOptions.Thinning.all",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 106,
+      "line": 107,
       "symbol": "ExportOptions.Thinning.device(modelIdentifier:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 131,
+      "line": 132,
       "symbol": "ExportOptions.thinning",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 134,
+      "line": 135,
       "symbol": "ExportOptions.uploadBitcode",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Export/ExportOptions.swift",
-      "line": 137,
+      "line": 138,
       "symbol": "ExportOptions.uploadSymbols",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
@@ -926,56 +926,56 @@
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Test/TestOptions.swift",
-      "line": 24,
+      "line": 26,
       "symbol": "TestOptions.scheme",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Test/TestOptions.swift",
-      "line": 25,
+      "line": 27,
       "symbol": "TestOptions.project",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Test/TestOptions.swift",
-      "line": 26,
+      "line": 28,
       "symbol": "TestOptions.destination",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Test/TestOptions.swift",
-      "line": 27,
+      "line": 29,
       "symbol": "TestOptions.resultBundlePath",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Test/TestOptions.swift",
-      "line": 28,
+      "line": 30,
       "symbol": "TestOptions.derivedDataPath",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Test/TestOptions.swift",
-      "line": 32,
+      "line": 34,
       "symbol": "TestOptions.init(scheme:project:destination:resultBundlePath:fileSystem:derivedDataPath:executableProvider:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Test/TestOptions.swift",
-      "line": 55,
+      "line": 57,
       "symbol": "TestOptions.arguments()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Test/TestOptions.swift",
-      "line": 70,
+      "line": 72,
       "symbol": "TestOptions.executableFile()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -1108,70 +1108,70 @@
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/XCBuild.swift",
-      "line": 38,
+      "line": 40,
       "symbol": "XCBuild.init(systemExecutableProvider:terminalWorker:fileSystem:signPost:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/XCBuild.swift",
-      "line": 53,
+      "line": 55,
       "symbol": "XCBuild.findPosibleDestinations(for:in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/XCBuild.swift",
-      "line": 81,
+      "line": 83,
       "symbol": "XCBuild.archive(using:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/XCBuild.swift",
-      "line": 98,
+      "line": 100,
       "symbol": "XCBuild.export(using:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/XCBuild.swift",
-      "line": 115,
+      "line": 117,
       "symbol": "XCBuild.TestRunError",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/XCBuild.swift",
-      "line": 117,
+      "line": 119,
       "symbol": "XCBuild.TestRunError.testsFailed(report:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/XCBuild.swift",
-      "line": 121,
+      "line": 123,
       "symbol": "XCBuild.buildAndTest(using:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/XCBuild.swift",
-      "line": 152,
+      "line": 154,
       "symbol": "XCodeBuildOption",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/XCBuild.swift",
-      "line": 154,
+      "line": 156,
       "symbol": "XCodeBuildOption.init(name:value:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/XCBuild.swift",
-      "line": 166,
+      "line": 168,
       "symbol": "XCodeBuildOption.arguments()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

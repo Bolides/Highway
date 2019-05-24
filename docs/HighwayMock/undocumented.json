@@ -521,35 +521,35 @@
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Highway/AutoMockable.generated.swift",
       "line": 468,
-      "symbol": "HighwayRunnerProtocolMock.generateDocsForCallsCount",
+      "symbol": "HighwayRunnerProtocolMock.generateDocsForPackageNameCallsCount",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Highway/AutoMockable.generated.swift",
       "line": 469,
-      "symbol": "HighwayRunnerProtocolMock.generateDocsForCalled",
+      "symbol": "HighwayRunnerProtocolMock.generateDocsForPackageNameCalled",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Highway/AutoMockable.generated.swift",
       "line": 474,
-      "symbol": "HighwayRunnerProtocolMock.generateDocsForReceivedArguments",
+      "symbol": "HighwayRunnerProtocolMock.generateDocsForPackageNameReceivedArguments",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Highway/AutoMockable.generated.swift",
       "line": 478,
-      "symbol": "HighwayRunnerProtocolMock.generateDocsForClosure",
+      "symbol": "HighwayRunnerProtocolMock.generateDocsForPackageNameClosure",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Highway/AutoMockable.generated.swift",
       "line": 482,
-      "symbol": "HighwayRunnerProtocolMock.generateDocs(for:_:)",
+      "symbol": "HighwayRunnerProtocolMock.generateDocs(for:packageName:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },

@@ -982,22 +982,15 @@
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Test/TestReport.swift",
-      "line": 5,
+      "line": 6,
       "symbol": "TestReportProtocol",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Test/TestReport.swift",
-      "line": 8,
-      "symbol": "TestReportProtocol.failingTests",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Test/TestReport.swift",
       "line": 9,
-      "symbol": "TestReportProtocol.buildErrors",
+      "symbol": "TestReportProtocol.testSuiteOutput",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
@@ -1011,15 +1004,15 @@
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Test/TestReport.swift",
       "line": 11,
-      "symbol": "TestReportProtocol.description",
+      "symbol": "TestReportProtocol.totalNumberOfTests",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Test/TestReport.swift",
-      "line": 13,
-      "symbol": "TestReportProtocol.failedTests()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "line": 12,
+      "symbol": "TestReportProtocol.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
@@ -1032,36 +1025,57 @@
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Test/TestReport.swift",
       "line": 19,
-      "symbol": "TestReport.failingTests",
+      "symbol": "TestReport.testSuiteOutput",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Test/TestReport.swift",
       "line": 20,
-      "symbol": "TestReport.buildErrors",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Test/TestReport.swift",
-      "line": 21,
       "symbol": "TestReport.output",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Test/TestReport.swift",
-      "line": 25,
-      "symbol": "TestReport.init(output:signPost:)",
+      "line": 21,
+      "symbol": "TestReport.totalNumberOfTests",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Test/TestReport.swift",
+      "line": 23,
+      "symbol": "TestReport.init(output:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Test/TestReport.swift",
-      "line": 57,
-      "symbol": "TestReport.failedTests()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "line": 75,
+      "symbol": "TestReport.Error",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Test/TestReport.swift",
+      "line": 105,
+      "symbol": "TestReport.Error.invalidTestOutput(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Test/TestReport.swift",
+      "line": 106,
+      "symbol": "TestReport.Error.error(_:error:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/XCBuild/Test/TestReport.swift",
+      "line": 107,
+      "symbol": "TestReport.Error.testsFailed(summary:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {

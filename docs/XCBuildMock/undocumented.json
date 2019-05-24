@@ -556,377 +556,349 @@
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
       "line": 396,
-      "symbol": "TestReportProtocolMock.failingTests",
+      "symbol": "TestReportProtocolMock.testSuiteOutput",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
       "line": 397,
-      "symbol": "TestReportProtocolMock.buildErrors",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 398,
       "symbol": "TestReportProtocolMock.output",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 399,
-      "symbol": "TestReportProtocolMock.description",
+      "line": 398,
+      "symbol": "TestReportProtocolMock.totalNumberOfTests",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
+      "line": 404,
+      "symbol": "TestReportProtocolMock.underlyingTotalNumberOfTests",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
       "line": 405,
+      "symbol": "TestReportProtocolMock.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
+      "line": 411,
       "symbol": "TestReportProtocolMock.underlyingDescription",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 409,
-      "symbol": "TestReportProtocolMock.failedTestsCallsCount",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 410,
-      "symbol": "TestReportProtocolMock.failedTestsCalled",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 415,
-      "symbol": "TestReportProtocolMock.failedTestsReturnValue",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 419,
-      "symbol": "TestReportProtocolMock.failedTestsClosure",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 423,
-      "symbol": "TestReportProtocolMock.failedTests()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 451,
+      "line": 416,
       "symbol": "XCBuildDestinationsProtocolMock",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 453,
+      "line": 418,
       "symbol": "XCBuildDestinationsProtocolMock.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 455,
+      "line": 420,
       "symbol": "XCBuildDestinationsProtocolMock.platform",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 461,
+      "line": 426,
       "symbol": "XCBuildDestinationsProtocolMock.underlyingPlatform",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 462,
+      "line": 427,
       "symbol": "XCBuildDestinationsProtocolMock.id",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 468,
+      "line": 433,
       "symbol": "XCBuildDestinationsProtocolMock.underlyingId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 469,
+      "line": 434,
       "symbol": "XCBuildDestinationsProtocolMock.name",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 475,
+      "line": 440,
       "symbol": "XCBuildDestinationsProtocolMock.underlyingName",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 476,
+      "line": 441,
       "symbol": "XCBuildDestinationsProtocolMock.os",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 482,
+      "line": 447,
       "symbol": "XCBuildDestinationsProtocolMock.underlyingOs",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 487,
+      "line": 452,
       "symbol": "XCBuildProtocolMock",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 489,
+      "line": 454,
       "symbol": "XCBuildProtocolMock.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 493,
+      "line": 458,
       "symbol": "XCBuildProtocolMock.findPosibleDestinationsForInThrowableError",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 494,
+      "line": 459,
       "symbol": "XCBuildProtocolMock.findPosibleDestinationsForInCallsCount",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 495,
+      "line": 460,
       "symbol": "XCBuildProtocolMock.findPosibleDestinationsForInCalled",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 500,
+      "line": 465,
       "symbol": "XCBuildProtocolMock.findPosibleDestinationsForInReceivedArguments",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 501,
+      "line": 466,
       "symbol": "XCBuildProtocolMock.findPosibleDestinationsForInReturnValue",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 505,
+      "line": 470,
       "symbol": "XCBuildProtocolMock.findPosibleDestinationsForInClosure",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 509,
+      "line": 474,
       "symbol": "XCBuildProtocolMock.findPosibleDestinations(for:in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 542,
+      "line": 507,
       "symbol": "XCBuildProtocolMock.archiveUsingThrowableError",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 543,
+      "line": 508,
       "symbol": "XCBuildProtocolMock.archiveUsingCallsCount",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 544,
+      "line": 509,
       "symbol": "XCBuildProtocolMock.archiveUsingCalled",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 549,
+      "line": 514,
       "symbol": "XCBuildProtocolMock.archiveUsingReceivedOptions",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 550,
+      "line": 515,
       "symbol": "XCBuildProtocolMock.archiveUsingReturnValue",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 554,
+      "line": 519,
       "symbol": "XCBuildProtocolMock.archiveUsingClosure",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 558,
+      "line": 523,
       "symbol": "XCBuildProtocolMock.archive(using:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 591,
+      "line": 556,
       "symbol": "XCBuildProtocolMock.exportUsingThrowableError",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 592,
+      "line": 557,
       "symbol": "XCBuildProtocolMock.exportUsingCallsCount",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 593,
+      "line": 558,
       "symbol": "XCBuildProtocolMock.exportUsingCalled",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 598,
+      "line": 563,
       "symbol": "XCBuildProtocolMock.exportUsingReceivedOptions",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 599,
+      "line": 564,
       "symbol": "XCBuildProtocolMock.exportUsingReturnValue",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 603,
+      "line": 568,
       "symbol": "XCBuildProtocolMock.exportUsingClosure",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 607,
+      "line": 572,
       "symbol": "XCBuildProtocolMock.export(using:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 640,
+      "line": 605,
       "symbol": "XCBuildProtocolMock.buildAndTestUsingThrowableError",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 641,
+      "line": 606,
       "symbol": "XCBuildProtocolMock.buildAndTestUsingCallsCount",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 642,
+      "line": 607,
       "symbol": "XCBuildProtocolMock.buildAndTestUsingCalled",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 647,
+      "line": 612,
       "symbol": "XCBuildProtocolMock.buildAndTestUsingReceivedOptions",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 648,
+      "line": 613,
       "symbol": "XCBuildProtocolMock.buildAndTestUsingReturnValue",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 652,
+      "line": 617,
       "symbol": "XCBuildProtocolMock.buildAndTestUsingClosure",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 656,
+      "line": 621,
       "symbol": "XCBuildProtocolMock.buildAndTest(using:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 692,
+      "line": 657,
       "symbol": "SourceryMockError",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 694,
+      "line": 659,
       "symbol": "SourceryMockError.implementErrorCaseFor(_:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 695,
+      "line": 660,
       "symbol": "SourceryMockError.subclassMockBeforeUsing(_:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/XCBuild/AutoMockable.generated.swift",
-      "line": 697,
+      "line": 662,
       "symbol": "SourceryMockError.debugDescription",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"

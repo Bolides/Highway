@@ -16,28 +16,28 @@
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Highway/HandeErrorsFunctions.swift",
-      "line": 14,
+      "line": 23,
       "symbol": "handleSwiftformat(_:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Highway/HandeErrorsFunctions.swift",
-      "line": 15,
+      "line": 24,
       "symbol": "handleSwiftPackageGenerateXcodeProject(_:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Highway/HandeErrorsFunctions.swift",
-      "line": 16,
+      "line": 25,
       "symbol": "handleHideSecrets(_:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Highway/HandeErrorsFunctions.swift",
-      "line": 17,
+      "line": 26,
       "symbol": "handleGenerateDocs(_:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
@@ -520,21 +520,21 @@
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Highway/HighwayRunner.swift",
-      "line": 169,
+      "line": 168,
       "symbol": "HighwayRunner.addGithooksPrePush()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Highway/HighwayRunner.swift",
-      "line": 174,
+      "line": 173,
       "symbol": "HighwayRunner.runSwiftformat(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Highway/HighwayRunner.swift",
-      "line": 196,
+      "line": 195,
       "symbol": "HighwayRunner.runSwiftPackageGenerateXcodeProject(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

@@ -86,7 +86,7 @@
 <p>Test - Integrate - Build status: <a href="https://app.bitrise.io/app/74c2194000b08d9d">@dooZdev <img src="https://app.bitrise.io/app/74c2194000b08d9d/status.svg?token=IqTwBXnTwOzE2pc1p3-aHw" alt="Build Status"></a> <a href="https://app.bitrise.io/app/02016c93faf5b17b">@Bolides <img src="https://app.bitrise.io/app/02016c93faf5b17b/status.svg?token=-WGqOL_RvB5Ir43fRaMd0g&branch=master" alt="Build Status"></a></p>
 </blockquote>
 <h2 id='develop-on-highway' class='heading'>Develop on Highway</h2>
-<pre class="highlight shell"><code>swift build <span class="nt">--configuration</span> release <span class="nt">--static-swift-stdlib</span> <span class="nt">-Xswiftc</span> <span class="nt">-DXcode</span> <span class="nt">-Xswiftc</span> <span class="nt">-DMacOS</span>
+<pre class="highlight shell"><code>swift build <span class="nt">--configuration</span> release <span class="nt">--static-swift-stdlib</span> 
 <span class="c"># will output where the executable is build, usually</span>
 ./.build/x86_64-apple-macosx10.10/release/HWSetup
 <span class="c"># after running this sourcery is setup too and you can generate code when needed</span>
@@ -100,26 +100,120 @@
 <p>do <code>swift build</code></p>
 
 <p>choose frameworks to add. For example HWSetup runs sourcery for highway, swiftformat and performs tests.</p>
-<pre class="highlight swift"><code><span class="c1">// Add a target in Package.swift</span>
-<span class="o">.</span><span class="nf">target</span><span class="p">(</span>
-            <span class="nv">name</span><span class="p">:</span>   <span class="s">"HWSetup"</span><span class="p">,</span>
-            <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-                    <span class="s">"Arguments"</span><span class="p">,</span>
-                    <span class="s">"Errors"</span><span class="p">,</span>
-                    <span class="s">"SignPost"</span><span class="p">,</span>
-                    <span class="s">"SourceryAutoProtocols"</span><span class="p">,</span>
-                    <span class="s">"SourceryWorker"</span><span class="p">,</span>
-                    <span class="s">"SwiftFormatWorker"</span><span class="p">,</span>
-                    <span class="s">"Terminal"</span><span class="p">,</span>
-                    <span class="s">"ZFile"</span>
-            <span class="p">]</span>
+
+<p>Let&rsquo;s take the exampel or running sourcery</p>
+<pre class="highlight swift"><code><span class="cm">/**
+  Class can be aded to package in target and product.
+  You can run it from a main function you create
+*/</span>
+<span class="kd">public</span> <span class="kd">struct</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">Project</span><span class="err">#</span><span class="o">&gt;</span><span class="kt">Sourcery</span>
+<span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">"</span><span class="se">\(</span><span class="o">&lt;</span><span class="err">#</span><span class="kt">Project</span><span class="err">#</span><span class="o">&gt;</span><span class="kt">Sourcery</span><span class="o">.</span><span class="k">self</span><span class="se">)</span><span class="s">"</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">product</span> <span class="o">=</span> <span class="kt">Product</span><span class="o">.</span><span class="nf">executable</span><span class="p">(</span>
+        <span class="nv">name</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+        <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span><span class="n">name</span><span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">target</span> <span class="o">=</span> <span class="kt">Target</span><span class="o">.</span><span class="nf">target</span><span class="p">(</span>
+        <span class="nv">name</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+        <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span><span class="s">"Highway"</span><span class="p">]</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="k">let</span> <span class="nv">packageDependencies</span> <span class="o">=</span> 
+<span class="kd">public</span> <span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
+    <span class="nv">name</span><span class="p">:</span> <span class="s">"&lt;#Project#&gt;Sourcery"</span><span class="p">,</span>
+    <span class="nv">products</span><span class="p">:</span> <span class="p">[</span><span class="o">&lt;</span><span class="err">#</span><span class="kt">Project</span><span class="err">#</span><span class="o">&gt;</span><span class="kt">Sourcery</span><span class="o">.</span><span class="n">product</span><span class="p">],</span>
+    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://www.github.com/Bolides/Highway"</span><span class="p">,</span> <span class="s">"2.10.6"</span> <span class="o">..&lt;</span> <span class="s">"3.0.0"</span><span class="p">),],</span>
+    <span class="nv">targets</span><span class="p">:[</span><span class="o">&lt;</span><span class="err">#</span><span class="kt">Project</span><span class="err">#</span><span class="o">&gt;</span><span class="kt">Sourcery</span><span class="o">.</span><span class="n">target</span><span class="p">]</span>
+<span class="p">)</span>
 </code></pre>
 
-<p><code>swift package generate-xcodeproj</code></p>
+<p>A possible main function could be</p>
+<pre class="highlight plaintext"><code>
+import Arguments
+import Errors
+import Foundation
+import Git
+import GitHooks
+import Highway
+import HighwayDispatch
+import SignPost
+import SourceryWorker
+import SwiftFormatWorker
+import Terminal
+import XCBuild
+import ZFile
 
-<blockquote>
-<p>You should not add the generated xcode project to git, just use it to Develop</p>
-</blockquote>
+// MARK: - PREPARE
+
+let highwayRunner: HighwayRunner!
+let dispatchGroup: HWDispatchGroupProtocol = DispatchGroup()
+let signPost = SignPost.shared
+
+// MARK: - RUN
+
+let dependencyService: DependencyServiceProtocol!
+
+do
+{
+    let srcRoot = try File(path: #file).parentFolder().parentFolder().parentFolder()
+    dependencyService = DependencyService(in: srcRoot)
+
+    // Swift Package
+
+    let dumpService = DumpService(swiftPackageFolder: srcRoot)
+    let package = try Highway.package(for: srcRoot, dependencyService: dependencyService, dumpService: dumpService)
+
+    let sourceryBuilder = SourceryBuilder(dependencyService: dependencyService)
+    let highway = try Highway(package: package, dependencyService: dependencyService, sourceryBuilder: sourceryBuilder, gitHooksPrePushExecutableName: "HWSetup")
+
+    highwayRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
+
+    //    // Githooks
+
+    highwayRunner.runSourcery(handleSourceryOutput)
+
+    dispatchGroup.notifyMain
+    {
+        highwayRunner.runSwiftformat(handleSwiftformat)
+        dispatchGroup.wait()
+
+        guard let errors = highwayRunner.errors, errors.count &gt; 0 else
+        {
+            signPost.message("🚀 \(HighwayRunner.self) ✅")
+            exit(EXIT_SUCCESS)
+        }
+
+        signPost.message("🚀 \(HighwayRunner.self) has \(errors.count) ❌")
+
+        for error in errors.enumerated()
+        {
+            let message = """
+            ❌ \(error.offset + 1)
+
+            \(error.element)
+
+            ---
+
+            """
+            signPost.error(message)
+        }
+
+        exit(EXIT_FAILURE)
+    }
+    dispatchMain()
+}
+catch
+{
+    signPost.error("\(error)")
+    exit(EXIT_FAILURE)
+}
+
+</code></pre>
+
+<p>Then you can build this with <code>swift build</code>. Any other products you add to your swift package will get sourcery updates if you run the <code><a href="Structs/Sourcery.html">&lt;#Project#&gt;Sourcery</a></code>.</p>
 
 <p>🚀 Done</p>
 

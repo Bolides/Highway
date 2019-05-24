@@ -149,6 +149,9 @@
                 <a href="../Structs/TestReport.html">TestReport</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/TestReport/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/XCBuildDestinations.html">XCBuildDestinations</a>
               </li>
               <li class="nav-group-task">
@@ -164,7 +167,7 @@
             <h1>TestReport</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TestReport</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/TestReportProtocol.html">TestReportProtocol</a></span><span class="p">,</span> <span class="kt">AutoGenerateProtocol</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TestReport</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/TestReportProtocol.html">TestReportProtocol</a></span><span class="p">,</span> <span class="kt">AutoGenerateProtocol</span><span class="p">,</span> <span class="kt">Encodable</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
                 </div>
               </div>
@@ -177,9 +180,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7XCBuild10TestReportV12failingTestss10ArraySliceVySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/failingTests" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7XCBuild10TestReportV12failingTestss10ArraySliceVySSGSgvp">failingTests</a>
+                    <a name="/s:7XCBuild10TestReportV15testSuiteOutputSaySSGvp"></a>
+                    <a name="//apple_ref/swift/Property/testSuiteOutput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild10TestReportV15testSuiteOutputSaySSGvp">testSuiteOutput</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -194,34 +197,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">failingTests</span><span class="p">:</span> <span class="kt">ArraySlice</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7XCBuild10TestReportV11buildErrorsSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/buildErrors" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7XCBuild10TestReportV11buildErrorsSaySSGSgvp">buildErrors</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">buildErrors</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">testSuiteOutput</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -258,9 +234,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7XCBuild10TestReportV6output8signPostACSaySSG_04SignF00gF8Protocol_ptcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(output:signPost:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7XCBuild10TestReportV6output8signPostACSaySSG_04SignF00gF8Protocol_ptcfc">init(output:signPost:)</a>
+                    <a name="/s:7XCBuild10TestReportV18totalNumberOfTestsSivp"></a>
+                    <a name="//apple_ref/swift/Property/totalNumberOfTests" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild10TestReportV18totalNumberOfTestsSivp">totalNumberOfTests</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -275,7 +251,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">output</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span> <span class="nv">signPost</span><span class="p">:</span> <span class="kt">SignPostProtocol</span> <span class="o">=</span> <span class="kt">SignPost</span><span class="o">.</span><span class="n">shared</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">totalNumberOfTests</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -285,9 +261,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7XCBuild10TestReportV11failedTestsSSyF"></a>
-                    <a name="//apple_ref/swift/Method/failedTests()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7XCBuild10TestReportV11failedTestsSSyF">failedTests()</a>
+                    <a name="/s:7XCBuild10TestReportV6outputACSaySSG_tKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(output:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild10TestReportV6outputACSaySSG_tKcfc">init(output:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -302,13 +278,24 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">failedTests</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">output</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Description"></a>
+                <a name="//apple_ref/swift/Section/Description" class="dashAnchor"></a>
+                <a href="#/Description">
+                  <h3 class="section-name">Description</h3>
+                </a>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -329,6 +316,45 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Errors"></a>
+                <a name="//apple_ref/swift/Section/Errors" class="dashAnchor"></a>
+                <a href="#/Errors">
+                  <h3 class="section-name">Errors</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XCBuild10TestReportV5ErrorO"></a>
+                    <a name="//apple_ref/swift/Enum/Error" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild10TestReportV5ErrorO">Error</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/TestReport/Error.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">indirect</span> <span class="kd">enum</span> <span class="kt">Error</span> <span class="p">:</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
                         </div>
                       </div>

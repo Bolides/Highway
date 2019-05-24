@@ -31,49 +31,49 @@
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/DocumentationLibrary/AutoMockable.generated.swift",
       "line": 29,
-      "symbol": "DocumentationWorkerProtocolMock.attemptJazzyDocsInForThrowableError",
+      "symbol": "DocumentationWorkerProtocolMock.attemptJazzyDocsInPackageNameForThrowableError",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/DocumentationLibrary/AutoMockable.generated.swift",
       "line": 30,
-      "symbol": "DocumentationWorkerProtocolMock.attemptJazzyDocsInForCallsCount",
+      "symbol": "DocumentationWorkerProtocolMock.attemptJazzyDocsInPackageNameForCallsCount",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/DocumentationLibrary/AutoMockable.generated.swift",
       "line": 31,
-      "symbol": "DocumentationWorkerProtocolMock.attemptJazzyDocsInForCalled",
+      "symbol": "DocumentationWorkerProtocolMock.attemptJazzyDocsInPackageNameForCalled",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/DocumentationLibrary/AutoMockable.generated.swift",
       "line": 36,
-      "symbol": "DocumentationWorkerProtocolMock.attemptJazzyDocsInForReceivedArguments",
+      "symbol": "DocumentationWorkerProtocolMock.attemptJazzyDocsInPackageNameForReceivedArguments",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/DocumentationLibrary/AutoMockable.generated.swift",
       "line": 37,
-      "symbol": "DocumentationWorkerProtocolMock.attemptJazzyDocsInForReturnValue",
+      "symbol": "DocumentationWorkerProtocolMock.attemptJazzyDocsInPackageNameForReturnValue",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/DocumentationLibrary/AutoMockable.generated.swift",
       "line": 41,
-      "symbol": "DocumentationWorkerProtocolMock.attemptJazzyDocsInForClosure",
+      "symbol": "DocumentationWorkerProtocolMock.attemptJazzyDocsInPackageNameForClosure",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/DocumentationLibrary/AutoMockable.generated.swift",
       "line": 45,
-      "symbol": "DocumentationWorkerProtocolMock.attemptJazzyDocs(in:for:)",
+      "symbol": "DocumentationWorkerProtocolMock.attemptJazzyDocs(in:packageName:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
