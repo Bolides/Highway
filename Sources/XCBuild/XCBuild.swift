@@ -127,11 +127,11 @@ public final class XCBuild: XCBuildProtocol, AutoGenerateProtocol
         do
         {
             let output = try terminalWorker.runProcess(xcbuild.toProcess)
-            return TestReport(output: output)
+            return try TestReport(output: output)
         }
         catch let Terminal.Error.unknownTask(errorOutput: errorOutput)
         {
-            let report = TestReport(output: errorOutput)
+            let report = try TestReport(output: errorOutput)
             throw TestRunError.testsFailed(report: report)
         }
     }

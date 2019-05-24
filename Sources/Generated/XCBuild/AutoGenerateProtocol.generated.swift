@@ -92,12 +92,10 @@ import Foundation
  // types.implementing.AutoGenerateProtocol inline for TestOptions ✅
  // types.implementing.AutoGenerateProtocol inline for TestReport ..
  // sourcery:inline:TestReport.AutoGenerateProtocol
- var failingTests: ArraySlice<String>? { get }
- var buildErrors: [String]? { get }
+ var testSuiteOutput: [String] { get }
  var output: [String] { get }
- var description: String { get }
+ var totalNumberOfTests: Int { get }
 
- func failedTests() -> String
  // sourcery:end
  // types.implementing.AutoGenerateProtocol inline for TestReport ✅
  // types.implementing.AutoGenerateProtocol inline for XCBuild ..

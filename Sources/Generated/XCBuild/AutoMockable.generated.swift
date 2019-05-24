@@ -393,57 +393,15 @@ open class TestReportProtocolMock: TestReportProtocol
 {
     public init() {}
 
-    public var failingTests: ArraySlice<String>?
-    public var buildErrors: [String]?
+    public var testSuiteOutput: [String] = []
     public var output: [String] = []
-    public var description: String
+    public var totalNumberOfTests: Int
     {
-        get { return underlyingDescription }
-        set(value) { underlyingDescription = value }
+        get { return underlyingTotalNumberOfTests }
+        set(value) { underlyingTotalNumberOfTests = value }
     }
 
-    public var underlyingDescription: String = "AutoMockable filled value"
-
-    // MARK: - <failedTests> - parameters
-
-    public var failedTestsCallsCount = 0
-    public var failedTestsCalled: Bool
-    {
-        return failedTestsCallsCount > 0
-    }
-
-    public var failedTestsReturnValue: String?
-
-    // MARK: - <failedTests> - closure mocks
-
-    public var failedTestsClosure: (() -> String)?
-
-    // MARK: - <failedTests> - method mocked
-
-    open func failedTests() -> String
-    {
-        failedTestsCallsCount += 1
-
-        // <failedTests> - Return Value mock implementation
-
-        guard let closureReturn = failedTestsClosure else
-        {
-            guard let returnValue = failedTestsReturnValue else
-            {
-                let message = "No returnValue implemented for failedTestsClosure"
-                let error = SourceryMockError.implementErrorCaseFor(message)
-
-                // You should implement String
-
-                print("❌ \(error)")
-
-                fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
-            }
-            return returnValue
-        }
-
-        return closureReturn()
-    }
+    public var underlyingTotalNumberOfTests: Int = -100
 }
 
 // MARK: - XCBuildDestinationsProtocolMock

@@ -1,3 +1,4 @@
+import Errors
 import Foundation
 import SignPost
 import SourceryAutoProtocols
@@ -5,89 +6,86 @@ import SourceryAutoProtocols
 public protocol TestReportProtocol: AutoMockable
 {
     // sourcery:inline:TestReport.AutoGenerateProtocol
-    var failingTests: ArraySlice<String>? { get }
-    var buildErrors: [String]? { get }
+    var testSuiteOutput: [String] { get }
     var output: [String] { get }
-    var description: String { get }
+    var totalNumberOfTests: Int { get }
 
-    func failedTests() -> String
     // sourcery:end
 }
 
-public struct TestReport: TestReportProtocol, AutoGenerateProtocol, CustomStringConvertible
+public struct TestReport: TestReportProtocol, AutoGenerateProtocol, Encodable
 {
-    public let failingTests: ArraySlice<String>?
-    public let buildErrors: [String]?
+    public let testSuiteOutput: [String]
     public let output: [String]
+    public let totalNumberOfTests: Int
 
-    private let signPost: SignPostProtocol
-
-    public init(output: [String], signPost: SignPostProtocol = SignPost.shared)
+    public init(output: [String]) throws
     {
         self.output = output
-        self.signPost = signPost
 
-        signPost.verbose("making testreport from raw output \n\(output.joined(separator: "\n"))\n")
-
-        signPost.verbose("\(TestReport.self) generating test report ... ")
-        signPost.verbose("\(TestReport.self) checking failed tests ")
-
-        if let indexFailing = output.firstIndex(of: "Failing tests:"),
-            let failingEnd = output.firstIndex(of: "** TEST FAILED **")
+        let allTestSuites = output.filter
         {
-            failingTests = output[indexFailing ..< failingEnd]
-        }
-        else
-        {
-            failingTests = nil
+            $0.hasPrefix("Test Suite") || $0.contains("Executed")
         }
 
-        signPost.verbose("\(TestReport.self) checking build errors ")
-
-        if (output.first { $0.contains("error:") }) != nil
+        guard allTestSuites.count > 0 else
         {
-            buildErrors = output.filter { $0.contains("error:") }
+            throw Error.error(pretty_function(), error: .invalidTestOutput(output))
         }
-        else
-        {
-            buildErrors = nil
-        }
-    }
+        let testSuiteOutput = allTestSuites
+        let results = allTestSuites.filter { $0.contains("Executed") }
 
-    public func failedTests() -> String
-    {
-        return output.filter { $0.hasPrefix("failed") }.joined()
-    }
+        var total = 0
 
-    public var description: String
-    {
-        guard
-            let failingTests = self.failingTests?.dropFirst(),
-            let title = self.failingTests?.first
-        else
-        {
-            guard let buildErrors = buildErrors else
+        try results.forEach
+        { result in
+            let all = result.components(separatedBy: " ")
+            let numbers = all.compactMap { Int($0) }
+
+            guard numbers.count >= 2 else
             {
-                return "🧪 \(TestReport.self) ✅"
+                throw Error.error(pretty_function(), error: .invalidTestOutput(output))
             }
 
-            return """
-            \(TestReport.self) build failed with errors \(buildErrors.count)
-            
-            \(buildErrors.enumerated().map { "    \($0.offset + 1) - \($0.element.components(separatedBy: ": failed -").joined(separator: "\n")) " }.joined(separator: "\n"))
-            
-            """
+            total = total + numbers[0]
+
+            guard numbers[1] == 0 else
+            {
+                throw Error.error(pretty_function(), error: Error.testsFailed(summary: testSuiteOutput))
+            }
+        }
+        self.testSuiteOutput = testSuiteOutput
+        totalNumberOfTests = total
+    }
+
+    // MARK: - Errors
+
+    public indirect enum Error: Swift.Error
+    {
+        case invalidTestOutput([String])
+        case error(_ atLocation: String, error: Error)
+        case testsFailed(summary: [String])
+
+        public var indirectError: Error?
+        {
+            switch self
+            {
+            case let .error(_, error: error):
+                return error
+            default:
+                return nil
+            }
         }
 
-        return """
-        TestReport
-        
-        ⚠️ \(failingTests.count) \(title)
-        
-        \(failingTests.map { "    * \($0)" }.joined(separator: "\n"))
-        
-        🚀 go fix them and them and after ... 🍻
-        
-        """
+        public var testFailedSummary: [String]?
+        {
+            switch self
+            {
+            case let .testsFailed(summary: summary):
+                return summary
+            default:
+                return nil
+            }
+        }
     }
 }

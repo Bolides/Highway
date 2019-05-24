@@ -277,20 +277,10 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
                 task.arguments = ["test"] + Highway.swiftCFlags
                 task.currentDirectoryPath = try package.dependencies.srcRoot().path
 
-                let testReport = TestReport(output: try context.terminal.runProcess(task))
+                let testReport = try TestReport(output: try context.terminal.runProcess(task))
                 context.signPost.verbose("\(testReport)")
                 context.signPost.message("🧪 swift test package \(package.name) ✅")
                 async { testReport }
-            }
-            catch let Terminal.Error.unknownTask(errorOutput: output)
-            {
-                let testReport = TestReport(output: output)
-                _error = HighwayError.failedToCompleteTask(
-                    "🧪 \(package.name) ❌ \n\(testReport)"
-                )
-
-                async { throw _error! }
-                context.signPost.message("🧪 swift test package \(package.name) ❌")
             }
             catch
             {

@@ -3,6 +3,8 @@
 
 import PackageDescription
 
+let quickNimble: [Target.Dependency] = ["Quick", "Nimble"]
+
 // MARK: - External
 
 let external: [Package.Dependency] = [
@@ -205,7 +207,7 @@ public struct Documentation
 
     public static let tests = Target.testTarget(
         name: name + "Tests",
-        dependencies: target.dependencies
+        dependencies: target.dependencies + quickNimble
     )
 }
 
@@ -264,7 +266,7 @@ public struct Secrets
 
     public static let tests = Target.testTarget(
         name: name + "Tests",
-        dependencies: target.dependencies
+        dependencies: target.dependencies + quickNimble
     )
 }
 
@@ -317,7 +319,12 @@ public struct Highway
 
     public static let tests = Target.testTarget(
         name: name + "Tests",
-        dependencies: target.dependencies
+        dependencies: [
+            Highway.product.asDependency(),
+            Secrets.Library.Mock.product.asDependency(),
+            Documentation.Library.Mock.product.asDependency(),
+        ]
+            + quickNimble
     )
 }
 
@@ -581,6 +588,7 @@ public let package = Package(
 
         Secrets.tests,
         Documentation.tests,
+        Highway.tests,
 
         .testTarget(
             name: "HWCarthageTests",
@@ -658,6 +666,5 @@ public let package = Package(
                 "HighwayDispatchMock",
             ]
         ),
-        Highway.tests,
     ]
 )

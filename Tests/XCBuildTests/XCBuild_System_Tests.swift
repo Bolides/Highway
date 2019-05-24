@@ -38,7 +38,10 @@ class XCBuildSpec: QuickSpec
                     system.executableWithReturnValue = try? FileProtocolMock()
 
                     terminal.runProcessClosure = { _ in
-                        ["mocked process response success"]
+                        [
+                            "Test Suite 'XCBuildSpec' failed at 2019-05-24 18:32:54.809.",
+                            "   Executed 2 tests, with 0 failure (0 unexpected) in 0.002 (0.002) seconds",
+                        ]
                     }
                     expect { try sut?.buildAndTest(using: xcbuildExecutable) }.toNot(throwError())
                 }
