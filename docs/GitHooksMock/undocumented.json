@@ -1,0 +1,131 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/GitHooks/AutoMockable.generated.swift",
+      "line": 16,
+      "symbol": "GitHooksWorkerProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/GitHooks/AutoMockable.generated.swift",
+      "line": 18,
+      "symbol": "GitHooksWorkerProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/GitHooks/AutoMockable.generated.swift",
+      "line": 20,
+      "symbol": "GitHooksWorkerProtocolMock.defaultOptions",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/GitHooks/AutoMockable.generated.swift",
+      "line": 26,
+      "symbol": "GitHooksWorkerProtocolMock.underlyingDefaultOptions",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/GitHooks/AutoMockable.generated.swift",
+      "line": 27,
+      "symbol": "GitHooksWorkerProtocolMock.prepushBashScript",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/GitHooks/AutoMockable.generated.swift",
+      "line": 33,
+      "symbol": "GitHooksWorkerProtocolMock.underlyingPrepushBashScript",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/GitHooks/AutoMockable.generated.swift",
+      "line": 37,
+      "symbol": "GitHooksWorkerProtocolMock.initSwiftPackageDependenciesSwiftPackageDumpCommandlineOptionsHwSetupExecutableProductNamePrePushScriptCommandlineOptionsGitHooksFolderSignPostReceivedArguments",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/GitHooks/AutoMockable.generated.swift",
+      "line": 41,
+      "symbol": "GitHooksWorkerProtocolMock.initSwiftPackageDependenciesSwiftPackageDumpCommandlineOptionsHwSetupExecutableProductNamePrePushScriptCommandlineOptionsGitHooksFolderSignPostClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/GitHooks/AutoMockable.generated.swift",
+      "line": 45,
+      "symbol": "GitHooksWorkerProtocolMock.init(swiftPackageDependencies:swiftPackageDump:commandlineOptions:hwSetupExecutableProductName:prePushScriptCommandlineOptions:gitHooksFolder:signPost:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/GitHooks/AutoMockable.generated.swift",
+      "line": 53,
+      "symbol": "GitHooksWorkerProtocolMock.addPrePushToGitHooksThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/GitHooks/AutoMockable.generated.swift",
+      "line": 54,
+      "symbol": "GitHooksWorkerProtocolMock.addPrePushToGitHooksCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/GitHooks/AutoMockable.generated.swift",
+      "line": 55,
+      "symbol": "GitHooksWorkerProtocolMock.addPrePushToGitHooksCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/GitHooks/AutoMockable.generated.swift",
+      "line": 62,
+      "symbol": "GitHooksWorkerProtocolMock.addPrePushToGitHooksClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/GitHooks/AutoMockable.generated.swift",
+      "line": 66,
+      "symbol": "GitHooksWorkerProtocolMock.addPrePushToGitHooks()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/GitHooks/AutoMockable.generated.swift",
+      "line": 87,
+      "symbol": "SourceryMockError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/GitHooks/AutoMockable.generated.swift",
+      "line": 89,
+      "symbol": "SourceryMockError.implementErrorCaseFor(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/GitHooks/AutoMockable.generated.swift",
+      "line": 90,
+      "symbol": "SourceryMockError.subclassMockBeforeUsing(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/GitHooks/AutoMockable.generated.swift",
+      "line": 92,
+      "symbol": "SourceryMockError.debugDescription",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway"
+}

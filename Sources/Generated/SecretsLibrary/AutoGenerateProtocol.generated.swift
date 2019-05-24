@@ -19,7 +19,7 @@ import Foundation
 
  // types.implementing.AutoGenerateProtocol inline for Secret ..
  // sourcery:inline:Secret.AutoGenerateProtocol
- var gpgPassphrase: String { get }
+ var secretFileDates: [String: Date] { get }
 
  // sourcery:end
  // types.implementing.AutoGenerateProtocol inline for Secret ✅
@@ -27,9 +27,14 @@ import Foundation
  // sourcery:inline:SecretsWorker.AutoGenerateProtocol
  static var shared: SecretsWorker { get }
  static var gitSecretname: String { get set }
+ static var secretFileDateChangePath: String { get set }
 
- func attemptHideSecrets(in folder: FolderProtocol) throws  -> [String]
- func attemptHideSecretsWithgpg(in folder: FolderProtocol) throws  -> [String]
+ func revealSecrets(in folder: FolderProtocol) throws  -> [String]
+ mutating func didSecretsChangeSinceLastPush(in folder: FolderProtocol) throws  -> Bool
+ mutating func writeNewSecretSavedData(in folder: FolderProtocol) throws
+ mutating func attemptHideSecrets(in folder: FolderProtocol) throws  -> [String]
+ func commitHiddenSecrets(in folder: FolderProtocol) throws  -> [String]
+ mutating func attemptHideSecretsWithgpg(in folder: FolderProtocol) throws  -> [String]
  func gitSecretProcess(in folder: FolderProtocol) throws  -> ProcessProtocol
  // sourcery:end
  // types.implementing.AutoGenerateProtocol inline for SecretsWorker ✅

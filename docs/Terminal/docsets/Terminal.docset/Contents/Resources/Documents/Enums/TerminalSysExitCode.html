@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TerminalSysExitCode Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/TerminalSysExitCode" class="dashAnchor"></a>
+    <a title="TerminalSysExitCode Enumeration Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Terminal Docs</a> (9% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Terminal Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        TerminalSysExitCode Enumeration Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Channel.html">Channel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Channel/Reader.html">– Reader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Channel/Writer.html">– Writer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DependencyService.html">DependencyService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IO.html">IO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Task.html">Task</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/State.html">State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalSysExitCode.html">TerminalSysExitCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalTask.html">TerminalTask</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Process.html">Process</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Process/TerminationReason.html">– TerminationReason</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ArgumentExecutableProtocol.html">ArgumentExecutableProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DependencyServiceProtocol.html">DependencyServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DumpServiceProtocol.html">DumpServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ExecutableProtocol.html">ExecutableProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PathEnvironmentParserProtocol.html">PathEnvironmentParserProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ProcessProtocol.html">ProcessProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SystemProtocol.html">SystemProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TaskProtocol.html">TaskProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TerminalProtocol.html">TerminalProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/CDToFolderExecutable.html">CDToFolderExecutable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DumpService.html">DumpService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/GitBranchName.html">GitBranchName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/GitRootFolder.html">GitRootFolder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PathEnvironmentParser.html">PathEnvironmentParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PodExecutable.html">PodExecutable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/System.html">System</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/System/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Terminal.html">Terminal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Terminal/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Termination.html">Termination</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>TerminalSysExitCode</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">TerminalSysExitCode</span> <span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="kt">CustomDebugStringConvertible</span></code></pre>
+
+                </div>
+              </div>
+            <p>Exit code enum as defined in sysexits.h</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal0A11SysExitCodeO2okyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/ok" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal0A11SysExitCodeO2okyA2CmF">ok</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">ok</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal0A11SysExitCodeO11baseOrUsageyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/baseOrUsage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal0A11SysExitCodeO11baseOrUsageyA2CmF">baseOrUsage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">baseOrUsage</span> <span class="o">=</span> <span class="mi">64</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal0A11SysExitCodeO9dataErroryA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/dataError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal0A11SysExitCodeO9dataErroryA2CmF">dataError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">dataError</span> <span class="o">=</span> <span class="mi">65</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal0A11SysExitCodeO7noInputyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/noInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal0A11SysExitCodeO7noInputyA2CmF">noInput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">noInput</span> <span class="o">=</span> <span class="mi">66</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal0A11SysExitCodeO6noUseryA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/noUser" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal0A11SysExitCodeO6noUseryA2CmF">noUser</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">noUser</span> <span class="o">=</span> <span class="mi">67</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal0A11SysExitCodeO6noHostyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/noHost" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal0A11SysExitCodeO6noHostyA2CmF">noHost</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">noHost</span> <span class="o">=</span> <span class="mi">68</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal0A11SysExitCodeO11unavailableyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/unavailable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal0A11SysExitCodeO11unavailableyA2CmF">unavailable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unavailable</span> <span class="o">=</span> <span class="mi">69</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal0A11SysExitCodeO8softwareyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/software" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal0A11SysExitCodeO8softwareyA2CmF">software</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">software</span> <span class="o">=</span> <span class="mi">70</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal0A11SysExitCodeO2osyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/os" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal0A11SysExitCodeO2osyA2CmF">os</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">os</span> <span class="o">=</span> <span class="mi">71</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal0A11SysExitCodeO6osFileyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/osFile" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal0A11SysExitCodeO6osFileyA2CmF">osFile</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">osFile</span> <span class="o">=</span> <span class="mi">72</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal0A11SysExitCodeO8creationyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/creation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal0A11SysExitCodeO8creationyA2CmF">creation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">creation</span> <span class="o">=</span> <span class="mi">73</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal0A11SysExitCodeO2ioyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/io" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal0A11SysExitCodeO2ioyA2CmF">io</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">io</span> <span class="o">=</span> <span class="mi">74</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal0A11SysExitCodeO9temporaryyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/temporary" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal0A11SysExitCodeO9temporaryyA2CmF">temporary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">temporary</span> <span class="o">=</span> <span class="mi">75</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal0A11SysExitCodeO16protocolFailiureyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/protocolFailiure" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal0A11SysExitCodeO16protocolFailiureyA2CmF">protocolFailiure</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">protocolFailiure</span> <span class="o">=</span> <span class="mi">76</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal0A11SysExitCodeO12noPermissionyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/noPermission" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal0A11SysExitCodeO12noPermissionyA2CmF">noPermission</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">noPermission</span> <span class="o">=</span> <span class="mi">77</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal0A11SysExitCodeO13configurationyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/configuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal0A11SysExitCodeO13configurationyA2CmF">configuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">configuration</span> <span class="o">=</span> <span class="mi">78</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Description"></a>
+                <a name="//apple_ref/swift/Section/Description" class="dashAnchor"></a>
+                <a href="#/Description">
+                  <h3 class="section-name">Description</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s28CustomDebugStringConvertibleP16debugDescriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/debugDescription" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s28CustomDebugStringConvertibleP16debugDescriptionSSvp">debugDescription</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">debugDescription</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-05-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

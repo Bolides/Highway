@@ -1,4 +1,5 @@
 import Arguments
+import DocumentationLibrary
 import Errors
 import Foundation
 import GitHooks
@@ -462,6 +463,32 @@ open class HighwayRunnerProtocolMock: HighwayRunnerProtocol
 
     public var underlyingHighway: HighwayProtocol!
 
+    // MARK: - <generateDocs> - parameters
+
+    public var generateDocsForPackageNameCallsCount = 0
+    public var generateDocsForPackageNameCalled: Bool
+    {
+        return generateDocsForPackageNameCallsCount > 0
+    }
+
+    public var generateDocsForPackageNameReceivedArguments: (products: Set<SwiftProduct>, packageName: String, async: (@escaping HighwayRunner.SyncDocs) -> Void)?
+
+    // MARK: - <generateDocs> - closure mocks
+
+    public var generateDocsForPackageNameClosure: ((Set<SwiftProduct>, String, @escaping (@escaping HighwayRunner.SyncDocs) -> Void) -> Void)?
+
+    // MARK: - <generateDocs> - method mocked
+
+    open func generateDocs(for products: Set<SwiftProduct>, packageName: String, _ async: @escaping (@escaping HighwayRunner.SyncDocs) -> Void)
+    {
+        generateDocsForPackageNameCallsCount += 1
+        generateDocsForPackageNameReceivedArguments = (products: products, packageName: packageName, async: async)
+
+        // <generateDocs> - Void return mock implementation
+
+        generateDocsForPackageNameClosure?(products, packageName, async)
+    }
+
     // MARK: - <runTests> - parameters
 
     public var runTestsCallsCount = 0
@@ -597,56 +624,38 @@ open class HighwayRunnerProtocolMock: HighwayRunnerProtocol
         runSwiftPackageGenerateXcodeProjectClosure?(async)
     }
 
-    // MARK: - <hideSecrets> - parameters
+    // MARK: - <checkIfSecretsShouldBeHidden> - parameters
 
-    public var hideSecretsInCallsCount = 0
-    public var hideSecretsInCalled: Bool
+    public var checkIfSecretsShouldBeHiddenInThrowableError: Error?
+    public var checkIfSecretsShouldBeHiddenInCallsCount = 0
+    public var checkIfSecretsShouldBeHiddenInCalled: Bool
     {
-        return hideSecretsInCallsCount > 0
+        return checkIfSecretsShouldBeHiddenInCallsCount > 0
     }
 
-    public var hideSecretsInReceivedFolder: FolderProtocol?
+    public var checkIfSecretsShouldBeHiddenInReceivedFolder: FolderProtocol?
 
-    // MARK: - <hideSecrets> - closure mocks
+    // MARK: - <checkIfSecretsShouldBeHidden> - closure mocks
 
-    public var hideSecretsInClosure: ((FolderProtocol) -> Void)?
+    public var checkIfSecretsShouldBeHiddenInClosure: ((FolderProtocol) throws -> Void)?
 
-    // MARK: - <hideSecrets> - method mocked
+    // MARK: - <checkIfSecretsShouldBeHidden> - method mocked
 
-    open func hideSecrets(in folder: FolderProtocol)
+    open func checkIfSecretsShouldBeHidden(in folder: FolderProtocol) throws
     {
-        hideSecretsInCallsCount += 1
-        hideSecretsInReceivedFolder = folder
+        // <checkIfSecretsShouldBeHidden> - Throwable method implementation
 
-        // <hideSecrets> - Void return mock implementation
+        if let error = checkIfSecretsShouldBeHiddenInThrowableError
+        {
+            throw error
+        }
 
-        hideSecretsInClosure?(folder)
-    }
+        checkIfSecretsShouldBeHiddenInCallsCount += 1
+        checkIfSecretsShouldBeHiddenInReceivedFolder = folder
 
-    // MARK: - <hideSecrets> - parameters
+        // <checkIfSecretsShouldBeHidden> - Void return mock implementation
 
-    public var hideSecretsInAsyncCallsCount = 0
-    public var hideSecretsInAsyncCalled: Bool
-    {
-        return hideSecretsInAsyncCallsCount > 0
-    }
-
-    public var hideSecretsInAsyncReceivedArguments: (folder: FolderProtocol, async: (@escaping HighwayRunner.SyncHideSecret) -> Void)?
-
-    // MARK: - <hideSecrets> - closure mocks
-
-    public var hideSecretsInAsyncClosure: ((FolderProtocol, @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void) -> Void)?
-
-    // MARK: - <hideSecrets> - method mocked
-
-    open func hideSecrets(in folder: FolderProtocol, async: @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void)
-    {
-        hideSecretsInAsyncCallsCount += 1
-        hideSecretsInAsyncReceivedArguments = (folder: folder, async: async)
-
-        // <hideSecrets> - Void return mock implementation
-
-        hideSecretsInAsyncClosure?(folder, async)
+        try checkIfSecretsShouldBeHiddenInClosure?(folder)
     }
 }
 

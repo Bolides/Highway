@@ -12,11 +12,18 @@ import SourceryAutoProtocols
 public protocol SecretProtocol: AutoMockable
 {
     // sourcery:inline:Secret.AutoGenerateProtocol
-    var gpgPassphrase: String { get }
+    var secretFileDates: [String: Date] { get }
     // sourcery:end
 }
 
 public struct Secret: Codable, SecretProtocol, AutoGenerateProtocol
 {
-    public let gpgPassphrase: String
+    public let secretFileDates: [String: Date]
+
+    public init(
+        secretFileDates: [String: Date]
+    )
+    {
+        self.secretFileDates = secretFileDates
+    }
 }

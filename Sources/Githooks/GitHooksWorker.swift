@@ -32,7 +32,9 @@ public protocol GitHooksWorkerProtocol: AutoMockable
     // sourcery:end
 }
 
-/// Adds a swift build step and runs HighWay Setup <#your executable#> from .git>Hooks/pre-push
+/**
+ Adds a swift build step and runs HighWay Setup <#your executable#> from .git>Hooks/pre-push
+ */
 public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
 {
     public static let defaultOptions: String = "-path $PATH"
@@ -61,8 +63,9 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
 
     // MARK: - Options
 
-    /// Options to be set from the command line
-
+    /**
+     Options to be set from the command line
+     */
     public enum Option: String, Hashable, CaseIterable
     {
         case noGitHooksPrePush
@@ -70,7 +73,8 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
 
     // MARK: - Init
 
-    /// Will take the first executable it can find in the swifPackage if you do not provice a HWSetup executable name
+    /** Will take the first executable it can find in the swifPackage if you do not provice a HWSetup executable name
+     */
     // sourcery:includeInitInProtocol
     public init(
         swiftPackageDependencies: DependencyProtocol,
@@ -91,7 +95,9 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
         self.commandlineOptions = commandlineOptions
     }
 
-    /// Will add pre push script by default unless you add GithooksWorker.Option.noGitHooksPrePush to commandline
+    /**
+     Will add pre push script by default unless you add GithooksWorker.Option.noGitHooksPrePush to commandline
+     */
     public func addPrePushToGitHooks() throws
     {
         guard !commandlineOptions.contains(.noGitHooksPrePush) else
@@ -138,7 +144,7 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
 
             try prePushFile.write(string: script)
             signPost.verbose("👀 \(prePushFile.path) \n contains script that will run before every push.")
-            signPost.message("👀 \(GitHooksWorker.self) ✅")
+            signPost.message("👀 \(GitHooksWorker.self) added \(executable) to \(prePushFile.path). It will run before every push from now on. ✅")
         }
         catch
         {

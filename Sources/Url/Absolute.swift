@@ -1,8 +1,10 @@
 import Foundation
 
-/// This type ensured two things:
-/// 1. It always represents an absolute file url
-/// 2. It always works with standardized urls
+/**
+ This type ensured two things:
+    1. It always represents an absolute file url
+    2. It always works with standardized urls
+ */
 public struct Absolute
 {
     // MARK: - Globals

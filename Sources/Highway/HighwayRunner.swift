@@ -8,6 +8,7 @@
 import Foundation
 
 import Arguments
+import DocumentationLibrary
 import Errors
 import HighwayDispatch
 import SecretsLibrary
@@ -25,13 +26,13 @@ public protocol HighwayRunnerProtocol: AutoMockable
     var errors: [Swift.Error]? { get set }
     var highway: HighwayProtocol { get }
 
+    func generateDocs(for products: Set<SwiftProduct>, packageName: String, _ async: @escaping (@escaping HighwayRunner.SyncDocs) -> Void)
     func runTests(_ async: @escaping (@escaping HighwayRunner.SyncTestOutput) -> Void)
     func runSourcery(_ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
     func addGithooksPrePush() throws
     func runSwiftformat(_ async: @escaping (@escaping HighwayRunner.SyncSwiftformat) -> Void)
     func runSwiftPackageGenerateXcodeProject(_ async: @escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)
-    func hideSecrets(in folder: FolderProtocol)
-    func hideSecrets(in folder: FolderProtocol, async: @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void)
+    func checkIfSecretsShouldBeHidden(in folder: FolderProtocol) throws
 
     // sourcery:end
 }
@@ -42,6 +43,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
     public typealias SyncSwiftformat = () throws -> Void
     public typealias SyncSwiftPackageGenerateXcodeProj = () throws -> [String]
     public typealias SyncHideSecret = () throws -> [String]
+    public typealias SyncDocs = () throws -> [String]
 
     public static let queue: HighwayDispatchProtocol = DispatchQueue(label: "be.dooz.signpost.sprunner")
 
@@ -57,7 +59,8 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
     private let queue: HighwayDispatchProtocol
     private let dispatchGroup: HWDispatchGroupProtocol
     private let system: SystemProtocol
-    private let secretsWorker: SecretsWorkerProtocol
+    private var secretsWorker: SecretsWorkerProtocol
+    private let documentationWorker: DocumentationWorkerProtocol
 
     public init(
         highway: HighwayProtocol,
@@ -66,7 +69,8 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
         terminal: TerminalProtocol = Terminal.shared,
         signPost: SignPostProtocol = SignPost.shared,
         system: SystemProtocol = System.shared,
-        secretsWorker: SecretsWorkerProtocol = SecretsWorker.shared
+        secretsWorker: SecretsWorkerProtocol = SecretsWorker.shared,
+        documentationWorker: DocumentationWorkerProtocol = DocumentationWorker()
     )
     {
         self.terminal = terminal
@@ -76,13 +80,55 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
         self.queue = queue
         self.system = system
         self.secretsWorker = secretsWorker
+        self.documentationWorker = documentationWorker
     }
+
+    // MARK: - Documetation
+
+    /**
+      Will run documentation on products passed to the function
+
+     - parameters:
+         - package: PackageProtocol,
+         - products : set of products you want to generate docs for
+         - packageName : the swift package you want to generate docs for
+         - async : function that can default to handleSyncDocs function if you like to use that. handleSyncDocs is a global function in Highway
+
+     */
+    public func generateDocs(for products: Set<SwiftProduct>, packageName: String, _ async: @escaping (@escaping HighwayRunner.SyncDocs) -> Void)
+    {
+        dispatchGroup.enter()
+
+        queue.async
+        { [weak self] in
+            guard let `self` = self else { return }
+
+            do
+            {
+                let output = try self.documentationWorker.attemptJazzyDocs(in: try self.highway.srcRoot(), packageName: packageName, for: products)
+
+                async { output }
+            }
+            catch
+            {
+                async { throw error }
+            }
+        }
+    }
+
+    // MARK: - Tests
 
     public func runTests(_ async: @escaping (@escaping HighwayRunner.SyncTestOutput) -> Void)
     {
         test(package: highway.package, async)
     }
 
+    // MARK: - Sourcery
+
+    /**
+     Will run sourcery on every product in the swift package except the once you excluded.
+     Adds the imports from the SwiftPackageDescription.Target.dependencies to the generated mock file for every product
+     */
     public func runSourcery(_ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
     {
         do
@@ -186,30 +232,16 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
 
     // MARK: - Secrets
 
-    public func hideSecrets(in folder: FolderProtocol)
+    /** Will throw if secrets changed SecretsWorker.Error.runSecretsExecutable
+     */
+    public func checkIfSecretsShouldBeHidden(in folder: FolderProtocol) throws
     {
-        hideSecrets(in: folder, async: handleHideSecrets)
-    }
-
-    public func hideSecrets(in folder: FolderProtocol, async: @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void)
-    {
-        dispatchGroup.enter()
-        queue.async
+        guard try secretsWorker.didSecretsChangeSinceLastPush(in: folder) else
         {
-            do
-            {
-                let output = try self.secretsWorker.attemptHideSecrets(in: folder)
-                async { output }
-            }
-            catch
-            {
-                let _error = HighwayError.highwayError(atLocation: pretty_function(), error: error)
-                self.addError(error)
-                async { throw _error }
-            }
-
-            self.dispatchGroup.leave()
+            signPost.message("\(pretty_function()) no secrets to hide.")
+            return
         }
+        throw SecretsWorker.Error.runSecretsExecutable
     }
 
     // MARK: - Private

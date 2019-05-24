@@ -53,13 +53,13 @@ import Foundation
  var errors: [Swift.Error]? { get set }
  var highway: HighwayProtocol { get }
 
+ func generateDocs(for products: Set<SwiftProduct>, packageName: String, _ async: @escaping (@escaping HighwayRunner.SyncDocs) -> Void)
  func runTests(_ async: @escaping (@escaping HighwayRunner.SyncTestOutput) -> Void)
  func runSourcery(_ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
  func addGithooksPrePush() throws
  func runSwiftformat(_ async: @escaping (@escaping HighwayRunner.SyncSwiftformat) -> Void)
  func runSwiftPackageGenerateXcodeProject(_ async: @escaping (@escaping HighwayRunner.SyncSwiftPackageGenerateXcodeProj) -> Void)
- func hideSecrets(in folder: FolderProtocol)
- func hideSecrets(in folder: FolderProtocol, async: @escaping (@escaping HighwayRunner.SyncHideSecret) -> Void)
+ func checkIfSecretsShouldBeHidden(in folder: FolderProtocol) throws
  // sourcery:end
  // types.implementing.AutoGenerateProtocol inline for HighwayRunner ✅
 

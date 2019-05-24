@@ -1,7 +1,8 @@
 import Foundation
 
-/// Credits for documentation: man xcodebuild
-
+/**
+ Credits for documentation: man xcodebuild
+ */
 public struct ExportOptions: Codable
 {
     public init() {}

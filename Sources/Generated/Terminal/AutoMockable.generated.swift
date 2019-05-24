@@ -476,6 +476,13 @@ open class SystemProtocolMock: SystemProtocol
     }
 
     public static var underlyingBrewPath: String = "AutoMockable filled value"
+    public static var jazzyPath: String
+    {
+        get { return underlyingJazzyPath }
+        set(value) { underlyingJazzyPath = value }
+    }
+
+    public static var underlyingJazzyPath: String = "AutoMockable filled value"
     public var pathEnvironmentParser: PathEnvironmentParserProtocol
     {
         get { return underlyingPathEnvironmentParser }
@@ -490,6 +497,202 @@ open class SystemProtocolMock: SystemProtocol
     }
 
     public var underlyingFileSystem: FileSystemProtocol!
+
+    // MARK: - <rbenvProcess> - parameters
+
+    public var rbenvProcessInThrowableError: Error?
+    public var rbenvProcessInCallsCount = 0
+    public var rbenvProcessInCalled: Bool
+    {
+        return rbenvProcessInCallsCount > 0
+    }
+
+    public var rbenvProcessInReceivedFolder: FolderProtocol?
+    public var rbenvProcessInReturnValue: ProcessProtocol?
+
+    // MARK: - <rbenvProcess> - closure mocks
+
+    public var rbenvProcessInClosure: ((FolderProtocol) throws -> ProcessProtocol)?
+
+    // MARK: - <rbenvProcess> - method mocked
+
+    open func rbenvProcess(in folder: FolderProtocol) throws -> ProcessProtocol
+    {
+        // <rbenvProcess> - Throwable method implementation
+
+        if let error = rbenvProcessInThrowableError
+        {
+            throw error
+        }
+
+        rbenvProcessInCallsCount += 1
+        rbenvProcessInReceivedFolder = folder
+
+        // <rbenvProcess> - Return Value mock implementation
+
+        guard let closureReturn = rbenvProcessInClosure else
+        {
+            guard let returnValue = rbenvProcessInReturnValue else
+            {
+                let message = "No returnValue implemented for rbenvProcessInClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement ProcessProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(folder)
+    }
+
+    // MARK: - <gemProcess> - parameters
+
+    public var gemProcessNameInThrowableError: Error?
+    public var gemProcessNameInCallsCount = 0
+    public var gemProcessNameInCalled: Bool
+    {
+        return gemProcessNameInCallsCount > 0
+    }
+
+    public var gemProcessNameInReceivedArguments: (name: String, folder: FolderProtocol)?
+    public var gemProcessNameInReturnValue: ProcessProtocol?
+
+    // MARK: - <gemProcess> - closure mocks
+
+    public var gemProcessNameInClosure: ((String, FolderProtocol) throws -> ProcessProtocol)?
+
+    // MARK: - <gemProcess> - method mocked
+
+    open func gemProcess(name: String, in folder: FolderProtocol) throws -> ProcessProtocol
+    {
+        // <gemProcess> - Throwable method implementation
+
+        if let error = gemProcessNameInThrowableError
+        {
+            throw error
+        }
+
+        gemProcessNameInCallsCount += 1
+        gemProcessNameInReceivedArguments = (name: name, folder: folder)
+
+        // <gemProcess> - Return Value mock implementation
+
+        guard let closureReturn = gemProcessNameInClosure else
+        {
+            guard let returnValue = gemProcessNameInReturnValue else
+            {
+                let message = "No returnValue implemented for gemProcessNameInClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement ProcessProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(name, folder)
+    }
+
+    // MARK: - <rbenvWhichProcess> - parameters
+
+    public var rbenvWhichProcessGemNameInThrowableError: Error?
+    public var rbenvWhichProcessGemNameInCallsCount = 0
+    public var rbenvWhichProcessGemNameInCalled: Bool
+    {
+        return rbenvWhichProcessGemNameInCallsCount > 0
+    }
+
+    public var rbenvWhichProcessGemNameInReceivedArguments: (gemName: String, folder: FolderProtocol)?
+    public var rbenvWhichProcessGemNameInReturnValue: ProcessProtocol?
+
+    // MARK: - <rbenvWhichProcess> - closure mocks
+
+    public var rbenvWhichProcessGemNameInClosure: ((String, FolderProtocol) throws -> ProcessProtocol)?
+
+    // MARK: - <rbenvWhichProcess> - method mocked
+
+    open func rbenvWhichProcess(gemName: String, in folder: FolderProtocol) throws -> ProcessProtocol
+    {
+        // <rbenvWhichProcess> - Throwable method implementation
+
+        if let error = rbenvWhichProcessGemNameInThrowableError
+        {
+            throw error
+        }
+
+        rbenvWhichProcessGemNameInCallsCount += 1
+        rbenvWhichProcessGemNameInReceivedArguments = (gemName: gemName, folder: folder)
+
+        // <rbenvWhichProcess> - Return Value mock implementation
+
+        guard let closureReturn = rbenvWhichProcessGemNameInClosure else
+        {
+            guard let returnValue = rbenvWhichProcessGemNameInReturnValue else
+            {
+                let message = "No returnValue implemented for rbenvWhichProcessGemNameInClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement ProcessProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(gemName, folder)
+    }
+
+    // MARK: - <installOrFindGemProcess> - parameters
+
+    public var installOrFindGemProcessNameInThrowableError: Error?
+    public var installOrFindGemProcessNameInCallsCount = 0
+    public var installOrFindGemProcessNameInCalled: Bool
+    {
+        return installOrFindGemProcessNameInCallsCount > 0
+    }
+
+    public var installOrFindGemProcessNameInReceivedArguments: (name: String, folder: FolderProtocol)?
+    public var installOrFindGemProcessNameInReturnValue: ProcessProtocol?
+
+    // MARK: - <installOrFindGemProcess> - closure mocks
+
+    public var installOrFindGemProcessNameInClosure: ((String, FolderProtocol) throws -> ProcessProtocol)?
+
+    // MARK: - <installOrFindGemProcess> - method mocked
+
+    open func installOrFindGemProcess(name: String, in folder: FolderProtocol) throws -> ProcessProtocol
+    {
+        // <installOrFindGemProcess> - Throwable method implementation
+
+        if let error = installOrFindGemProcessNameInThrowableError
+        {
+            throw error
+        }
+
+        installOrFindGemProcessNameInCallsCount += 1
+        installOrFindGemProcessNameInReceivedArguments = (name: name, folder: folder)
+
+        // <installOrFindGemProcess> - Return Value mock implementation
+
+        guard let closureReturn = installOrFindGemProcessNameInClosure else
+        {
+            guard let returnValue = installOrFindGemProcessNameInReturnValue else
+            {
+                let message = "No returnValue implemented for installOrFindGemProcessNameInClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement ProcessProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(name, folder)
+    }
 
     // MARK: - <processFromBrew> - parameters
 

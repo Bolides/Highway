@@ -1,0 +1,124 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/SwiftformatWorker/AutoMockable.generated.swift",
+      "line": 13,
+      "symbol": "SwiftFormatWorkerProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/SwiftformatWorker/AutoMockable.generated.swift",
+      "line": 15,
+      "symbol": "SwiftFormatWorkerProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/SwiftformatWorker/AutoMockable.generated.swift",
+      "line": 17,
+      "symbol": "SwiftFormatWorkerProtocolMock.queue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/SwiftformatWorker/AutoMockable.generated.swift",
+      "line": 23,
+      "symbol": "SwiftFormatWorkerProtocolMock.underlyingQueue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/SwiftformatWorker/AutoMockable.generated.swift",
+      "line": 27,
+      "symbol": "SwiftFormatWorkerProtocolMock.initFolderToFormatRecursiveQueueSignPostThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/SwiftformatWorker/AutoMockable.generated.swift",
+      "line": 28,
+      "symbol": "SwiftFormatWorkerProtocolMock.initFolderToFormatRecursiveQueueSignPostReceivedArguments",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/SwiftformatWorker/AutoMockable.generated.swift",
+      "line": 32,
+      "symbol": "SwiftFormatWorkerProtocolMock.initFolderToFormatRecursiveQueueSignPostClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/SwiftformatWorker/AutoMockable.generated.swift",
+      "line": 36,
+      "symbol": "SwiftFormatWorkerProtocolMock.init(folderToFormatRecursive:queue:signPost:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/SwiftformatWorker/AutoMockable.generated.swift",
+      "line": 44,
+      "symbol": "SwiftFormatWorkerProtocolMock.attemptCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/SwiftformatWorker/AutoMockable.generated.swift",
+      "line": 45,
+      "symbol": "SwiftFormatWorkerProtocolMock.attemptCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/SwiftformatWorker/AutoMockable.generated.swift",
+      "line": 50,
+      "symbol": "SwiftFormatWorkerProtocolMock.attemptReceivedAsyncSwiftFormatAttemptOutput",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/SwiftformatWorker/AutoMockable.generated.swift",
+      "line": 54,
+      "symbol": "SwiftFormatWorkerProtocolMock.attemptClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/SwiftformatWorker/AutoMockable.generated.swift",
+      "line": 58,
+      "symbol": "SwiftFormatWorkerProtocolMock.attempt(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/SwiftformatWorker/AutoMockable.generated.swift",
+      "line": 73,
+      "symbol": "SourceryMockError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/SwiftformatWorker/AutoMockable.generated.swift",
+      "line": 75,
+      "symbol": "SourceryMockError.implementErrorCaseFor(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/SwiftformatWorker/AutoMockable.generated.swift",
+      "line": 76,
+      "symbol": "SourceryMockError.subclassMockBeforeUsing(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/SwiftformatWorker/AutoMockable.generated.swift",
+      "line": 78,
+      "symbol": "SourceryMockError.debugDescription",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway"
+}

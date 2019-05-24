@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TaskProtocol Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/TaskProtocol" class="dashAnchor"></a>
+    <a title="TaskProtocol Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Terminal Docs</a> (9% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Terminal Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        TaskProtocol Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Channel.html">Channel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Channel/Reader.html">– Reader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Channel/Writer.html">– Writer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DependencyService.html">DependencyService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IO.html">IO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Task.html">Task</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/State.html">State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalSysExitCode.html">TerminalSysExitCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalTask.html">TerminalTask</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Process.html">Process</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Process/TerminationReason.html">– TerminationReason</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ArgumentExecutableProtocol.html">ArgumentExecutableProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DependencyServiceProtocol.html">DependencyServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DumpServiceProtocol.html">DumpServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ExecutableProtocol.html">ExecutableProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PathEnvironmentParserProtocol.html">PathEnvironmentParserProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ProcessProtocol.html">ProcessProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SystemProtocol.html">SystemProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TaskProtocol.html">TaskProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TerminalProtocol.html">TerminalProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/CDToFolderExecutable.html">CDToFolderExecutable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DumpService.html">DumpService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/GitBranchName.html">GitBranchName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/GitRootFolder.html">GitRootFolder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PathEnvironmentParser.html">PathEnvironmentParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PodExecutable.html">PodExecutable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/System.html">System</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/System/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Terminal.html">Terminal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Terminal/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Termination.html">Termination</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>TaskProtocol</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">TaskProtocol</span> <span class="p">:</span> <span class="kt">AutoMockable</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal12TaskProtocolP4nameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal12TaskProtocolP4nameSSvp">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal12TaskProtocolP10executable5ZFile04FileC0_pvp"></a>
+                    <a name="//apple_ref/swift/Property/executable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal12TaskProtocolP10executable5ZFile04FileC0_pvp">executable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">executable</span><span class="p">:</span> <span class="kt">FileProtocol</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal12TaskProtocolP9arguments9ArgumentsAEVvp"></a>
+                    <a name="//apple_ref/swift/Property/arguments" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal12TaskProtocolP9arguments9ArgumentsAEVvp">arguments</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">arguments</span><span class="p">:</span> <span class="kt">Arguments</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal12TaskProtocolP5inputAA7ChannelCvp"></a>
+                    <a name="//apple_ref/swift/Property/input" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal12TaskProtocolP5inputAA7ChannelCvp">input</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Classes/Channel.html">Channel</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal12TaskProtocolP6outputAA7ChannelCvp"></a>
+                    <a name="//apple_ref/swift/Property/output" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal12TaskProtocolP6outputAA7ChannelCvp">output</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">output</span><span class="p">:</span> <span class="kt"><a href="../Classes/Channel.html">Channel</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal12TaskProtocolP18capturedOutputData10Foundation0F0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/capturedOutputData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal12TaskProtocolP18capturedOutputData10Foundation0F0VSgvp">capturedOutputData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">capturedOutputData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal12TaskProtocolP16readOutputStringSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/readOutputString" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal12TaskProtocolP16readOutputStringSSSgvp">readOutputString</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">readOutputString</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal12TaskProtocolP13trimmedOutputSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/trimmedOutput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal12TaskProtocolP13trimmedOutputSSSgvp">trimmedOutput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">trimmedOutput</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal12TaskProtocolP20capturedOutputStringSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/capturedOutputString" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal12TaskProtocolP20capturedOutputStringSSSgvp">capturedOutputString</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">capturedOutputString</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal12TaskProtocolP9toProcessAA0eC0_pvp"></a>
+                    <a name="//apple_ref/swift/Property/toProcess" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal12TaskProtocolP9toProcessAA0eC0_pvp">toProcess</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">toProcess</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ProcessProtocol.html">ProcessProtocol</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal12TaskProtocolP11descriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal12TaskProtocolP11descriptionSSvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal12TaskProtocolP33enableReadableOutputDataCapturingyyF"></a>
+                    <a name="//apple_ref/swift/Method/enableReadableOutputDataCapturing()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal12TaskProtocolP33enableReadableOutputDataCapturingyyF">enableReadableOutputDataCapturing()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">enableReadableOutputDataCapturing</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-05-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

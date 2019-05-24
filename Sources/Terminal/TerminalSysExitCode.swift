@@ -9,7 +9,9 @@ import Foundation
 
 // MARK: Exit Codes
 
-/// Exit code enum as defined in sysexits.h
+/**
+ Exit code enum as defined in sysexits.h
+ */
 public enum TerminalSysExitCode: Int32, CustomDebugStringConvertible
 {
     case ok = 0
@@ -40,7 +42,9 @@ public enum TerminalSysExitCode: Int32, CustomDebugStringConvertible
             return "\(prefix) successful termination."
         case .baseOrUsage: // MARK: Exit Codes
 
-            /// Exit code enum as defined in sysexits.h
+            /**
+             Exit code enum as defined in sysexits.h
+             */
             enum TerminalExitCode: Int32, CustomDebugStringConvertible
             {
                 var debugDescription: String

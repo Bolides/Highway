@@ -34,7 +34,7 @@ do
     let package = try Highway.package(for: srcRoot, dependencyService: dependencyService, dumpService: dumpService)
 
     let sourceryBuilder = SourceryBuilder(dependencyService: dependencyService)
-    let highway = try Highway(package: package, dependencyService: dependencyService, sourceryBuilder: sourceryBuilder, highwaySetupExecutableName: "HWSetup")
+    let highway = try Highway(package: package, dependencyService: dependencyService, sourceryBuilder: sourceryBuilder, gitHooksPrePushExecutableName: "HWSetup")
 
     highwayRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
 

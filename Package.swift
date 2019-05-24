@@ -59,7 +59,27 @@ public struct HWSetup
             "Terminal",
             "XCBuild",
             "ZFile",
-        ] + [Highway.product.asDependency()]
+        ] +
+            [
+                Highway.product.asDependency(),
+            ]
+    )
+}
+
+/// Will be used to run on .git/hooks/pre-push and on bitrise for PR's
+/// It has the same dependencies as HWSetup but does not generate an xcode project and some other setup code.
+public struct PR
+{
+    public static let name = "\(PR.self)"
+
+    public static let product = Product.executable(
+        name: name,
+        targets: [name]
+    )
+
+    public static let target = Target.target(
+        name: name,
+        dependencies: HWSetup.target.dependencies
     )
 }
 
@@ -129,6 +149,66 @@ public struct HighwaySourcery
     )
 }
 
+// MARK: - Documentation
+
+public struct Documentation
+{
+    public static let name = "\(Documentation.self)"
+
+    public static let product = Product.executable(
+        name: name,
+        targets: [name]
+    )
+
+    public static let target = Target.target(
+        name: name,
+        dependencies: [Documentation.Library.product.asDependency()]
+    )
+
+    public struct Library
+    {
+        public static let nameExtension = "Library"
+
+        public static let product = Product.library(
+            name: name + nameExtension,
+            targets: [name + nameExtension]
+        )
+
+        public static let target = Target.target(
+            name: Library.product.name,
+            dependencies: [
+                "ZFile",
+                "SourceryAutoProtocols",
+                "SignPost",
+                "Terminal",
+                "Errors",
+                "Arguments",
+            ]
+        )
+
+        public struct Mock
+        {
+            public static let name = Documentation.Library.product.name + "Mock"
+
+            public static let product = Product.library(
+                name: Documentation.Library.product.name + "Mock",
+                targets: [name]
+            )
+
+            public static let target = Target.target(
+                name: name,
+                dependencies: Library.target.dependencies + [Library.product.asDependency()],
+                path: "Sources/Generated/\(Documentation.Library.product.name)"
+            )
+        }
+    }
+
+    public static let tests = Target.testTarget(
+        name: name + "Tests",
+        dependencies: target.dependencies
+    )
+}
+
 // MARK: - GitSecrets
 
 public struct Secrets
@@ -158,7 +238,6 @@ public struct Secrets
             name: Library.product.name,
             dependencies: [
                 "ZFile",
-                "HighwayDispatch",
                 "SourceryAutoProtocols",
                 "SignPost",
                 "Terminal",
@@ -212,7 +291,12 @@ public struct Highway
             "SwiftFormatWorker",
             "XCBuild",
             "Errors",
-        ] + [Secrets.Library.product.asDependency()]
+        ]
+            +
+            [
+                Secrets.Library.product.asDependency(),
+                Documentation.Library.product.asDependency(),
+            ]
     )
 
     public struct Mock
@@ -257,12 +341,16 @@ public let package = Package(
         HWSetup.product,
         Secrets.product,
         HighwaySourcery.product,
+        Documentation.product,
+        PR.product,
 
         // MARK: - Library
 
         Secrets.Library.product,
         Highway.product,
         Secrets.Library.Mock.product,
+        Documentation.Library.Mock.product,
+        Documentation.Library.product,
 
         .library(
             name: "HWCarthage",
@@ -363,11 +451,14 @@ public let package = Package(
         HWSetup.target,
         Secrets.target,
         HighwaySourcery.target,
+        Documentation.target,
+        PR.target,
 
         // MARK: - Libraries
 
         Secrets.Library.target,
         Highway.target,
+        Documentation.Library.target,
 
         .target(
             name: "HWCarthage",
@@ -431,6 +522,8 @@ public let package = Package(
         // MARK: - Mocks
 
         Secrets.Library.Mock.target,
+        Documentation.Library.Mock.target,
+
         .target(
             name: "HWCarthageMock",
             dependencies: ["HighwayDispatch", "HWCarthage", "ZFileMock", "ZFile", "Errors"],
@@ -487,6 +580,7 @@ public let package = Package(
         // MARK: - Tests
 
         Secrets.tests,
+        Documentation.tests,
 
         .testTarget(
             name: "HWCarthageTests",

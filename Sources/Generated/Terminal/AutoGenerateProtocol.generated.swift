@@ -33,9 +33,14 @@ import Foundation
  // sourcery:inline:System.AutoGenerateProtocol
  static var shared: SystemProtocol { get }
  static var brewPath: String { get set }
+ static var jazzyPath: String { get set }
  var pathEnvironmentParser: PathEnvironmentParserProtocol { get }
  var fileSystem: FileSystemProtocol { get }
 
+ func rbenvProcess(in folder: FolderProtocol) throws  -> ProcessProtocol
+ func gemProcess(name: String, in folder: FolderProtocol) throws  -> ProcessProtocol
+ func rbenvWhichProcess(gemName: String, in folder: FolderProtocol) throws  -> ProcessProtocol
+ func installOrFindGemProcess(name: String, in folder: FolderProtocol) throws  -> ProcessProtocol
  func processFromBrew(formula: String, in folder: FolderProtocol) throws  -> ProcessProtocol
  func installOrGetProcessFromBrew(formula: String, in folder: FolderProtocol) throws  -> ProcessProtocol
  // sourcery:Will throw error if the formula is not installed when you run this process

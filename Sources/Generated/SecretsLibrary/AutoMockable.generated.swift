@@ -1,6 +1,5 @@
 import Errors
 import Foundation
-import HighwayDispatch
 import SecretsLibrary
 import SignPost
 import SourceryAutoProtocols
@@ -16,13 +15,7 @@ open class SecretProtocolMock: SecretProtocol
 {
     public init() {}
 
-    public var gpgPassphrase: String
-    {
-        get { return underlyingGpgPassphrase }
-        set(value) { underlyingGpgPassphrase = value }
-    }
-
-    public var underlyingGpgPassphrase: String = "AutoMockable filled value"
+    public var secretFileDates: [String: Date] = [:]
 }
 
 // MARK: - SecretsWorkerProtocolMock
@@ -45,6 +38,145 @@ open class SecretsWorkerProtocolMock: SecretsWorkerProtocol
     }
 
     public static var underlyingGitSecretname: String = "AutoMockable filled value"
+    public static var secretFileDateChangePath: String
+    {
+        get { return underlyingSecretFileDateChangePath }
+        set(value) { underlyingSecretFileDateChangePath = value }
+    }
+
+    public static var underlyingSecretFileDateChangePath: String = "AutoMockable filled value"
+
+    // MARK: - <revealSecrets> - parameters
+
+    public var revealSecretsInThrowableError: Error?
+    public var revealSecretsInCallsCount = 0
+    public var revealSecretsInCalled: Bool
+    {
+        return revealSecretsInCallsCount > 0
+    }
+
+    public var revealSecretsInReceivedFolder: FolderProtocol?
+    public var revealSecretsInReturnValue: [String]?
+
+    // MARK: - <revealSecrets> - closure mocks
+
+    public var revealSecretsInClosure: ((FolderProtocol) throws -> [String])?
+
+    // MARK: - <revealSecrets> - method mocked
+
+    open func revealSecrets(in folder: FolderProtocol) throws -> [String]
+    {
+        // <revealSecrets> - Throwable method implementation
+
+        if let error = revealSecretsInThrowableError
+        {
+            throw error
+        }
+
+        revealSecretsInCallsCount += 1
+        revealSecretsInReceivedFolder = folder
+
+        // <revealSecrets> - Return Value mock implementation
+
+        guard let closureReturn = revealSecretsInClosure else
+        {
+            guard let returnValue = revealSecretsInReturnValue else
+            {
+                let message = "No returnValue implemented for revealSecretsInClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement [String]
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(folder)
+    }
+
+    // MARK: - <didSecretsChangeSinceLastPush> - parameters
+
+    public var didSecretsChangeSinceLastPushInThrowableError: Error?
+    public var didSecretsChangeSinceLastPushInCallsCount = 0
+    public var didSecretsChangeSinceLastPushInCalled: Bool
+    {
+        return didSecretsChangeSinceLastPushInCallsCount > 0
+    }
+
+    public var didSecretsChangeSinceLastPushInReceivedFolder: FolderProtocol?
+    public var didSecretsChangeSinceLastPushInReturnValue: Bool?
+
+    // MARK: - <didSecretsChangeSinceLastPush> - closure mocks
+
+    public var didSecretsChangeSinceLastPushInClosure: ((FolderProtocol) throws -> Bool)?
+
+    // MARK: - <didSecretsChangeSinceLastPush> - method mocked
+
+    open func didSecretsChangeSinceLastPush(in folder: FolderProtocol) throws -> Bool
+    {
+        // <didSecretsChangeSinceLastPush> - Throwable method implementation
+
+        if let error = didSecretsChangeSinceLastPushInThrowableError
+        {
+            throw error
+        }
+
+        didSecretsChangeSinceLastPushInCallsCount += 1
+        didSecretsChangeSinceLastPushInReceivedFolder = folder
+
+        // <didSecretsChangeSinceLastPush> - Return Value mock implementation
+
+        guard let closureReturn = didSecretsChangeSinceLastPushInClosure else
+        {
+            guard let returnValue = didSecretsChangeSinceLastPushInReturnValue else
+            {
+                let message = "No returnValue implemented for didSecretsChangeSinceLastPushInClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement Bool
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(folder)
+    }
+
+    // MARK: - <writeNewSecretSavedData> - parameters
+
+    public var writeNewSecretSavedDataInThrowableError: Error?
+    public var writeNewSecretSavedDataInCallsCount = 0
+    public var writeNewSecretSavedDataInCalled: Bool
+    {
+        return writeNewSecretSavedDataInCallsCount > 0
+    }
+
+    public var writeNewSecretSavedDataInReceivedFolder: FolderProtocol?
+
+    // MARK: - <writeNewSecretSavedData> - closure mocks
+
+    public var writeNewSecretSavedDataInClosure: ((FolderProtocol) throws -> Void)?
+
+    // MARK: - <writeNewSecretSavedData> - method mocked
+
+    open func writeNewSecretSavedData(in folder: FolderProtocol) throws
+    {
+        // <writeNewSecretSavedData> - Throwable method implementation
+
+        if let error = writeNewSecretSavedDataInThrowableError
+        {
+            throw error
+        }
+
+        writeNewSecretSavedDataInCallsCount += 1
+        writeNewSecretSavedDataInReceivedFolder = folder
+
+        // <writeNewSecretSavedData> - Void return mock implementation
+
+        try writeNewSecretSavedDataInClosure?(folder)
+    }
 
     // MARK: - <attemptHideSecrets> - parameters
 
@@ -83,6 +215,55 @@ open class SecretsWorkerProtocolMock: SecretsWorkerProtocol
             guard let returnValue = attemptHideSecretsInReturnValue else
             {
                 let message = "No returnValue implemented for attemptHideSecretsInClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement [String]
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(folder)
+    }
+
+    // MARK: - <commitHiddenSecrets> - parameters
+
+    public var commitHiddenSecretsInThrowableError: Error?
+    public var commitHiddenSecretsInCallsCount = 0
+    public var commitHiddenSecretsInCalled: Bool
+    {
+        return commitHiddenSecretsInCallsCount > 0
+    }
+
+    public var commitHiddenSecretsInReceivedFolder: FolderProtocol?
+    public var commitHiddenSecretsInReturnValue: [String]?
+
+    // MARK: - <commitHiddenSecrets> - closure mocks
+
+    public var commitHiddenSecretsInClosure: ((FolderProtocol) throws -> [String])?
+
+    // MARK: - <commitHiddenSecrets> - method mocked
+
+    open func commitHiddenSecrets(in folder: FolderProtocol) throws -> [String]
+    {
+        // <commitHiddenSecrets> - Throwable method implementation
+
+        if let error = commitHiddenSecretsInThrowableError
+        {
+            throw error
+        }
+
+        commitHiddenSecretsInCallsCount += 1
+        commitHiddenSecretsInReceivedFolder = folder
+
+        // <commitHiddenSecrets> - Return Value mock implementation
+
+        guard let closureReturn = commitHiddenSecretsInClosure else
+        {
+            guard let returnValue = commitHiddenSecretsInReturnValue else
+            {
+                let message = "No returnValue implemented for commitHiddenSecretsInClosure"
                 let error = SourceryMockError.implementErrorCaseFor(message)
 
                 // You should implement [String]

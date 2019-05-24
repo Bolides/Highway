@@ -6,6 +6,7 @@ import Git
 import GitHooks
 import Highway
 import HighwayDispatch
+import SecretsLibrary
 import SignPost
 import SourceryWorker
 import SwiftFormatWorker
@@ -34,12 +35,16 @@ do
     let package = try Highway.package(for: srcRoot, dependencyService: dependencyService, dumpService: dumpService)
 
     let sourceryBuilder = SourceryBuilder(dependencyService: dependencyService)
-    let highway = try Highway(package: package, dependencyService: dependencyService, sourceryBuilder: sourceryBuilder, highwaySetupExecutableName: "HWSetup")
+    let highway = try Highway(package: package, dependencyService: dependencyService, sourceryBuilder: sourceryBuilder, gitHooksPrePushExecutableName: "PR")
+
+    let secrets = SecretsWorker.shared
+    let output = try secrets.revealSecrets(in: srcRoot)
+    signPost.message(output.joined(separator: "\n"))
 
     highwayRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
 
     try highwayRunner.addGithooksPrePush()
-    highwayRunner.hideSecrets(in: srcRoot)
+    try highwayRunner.checkIfSecretsShouldBeHidden(in: srcRoot)
 
     highwayRunner.runSourcery(handleSourceryOutput)
 

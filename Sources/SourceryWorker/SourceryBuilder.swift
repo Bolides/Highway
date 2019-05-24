@@ -25,7 +25,9 @@ public protocol SourceryBuilderProtocol: class, AutoMockable
     // sourcery:end
 }
 
-/// Will build sourcery from carthage if it is not found in the project
+/**
+ Will build sourcery from carthage if it is not found in the project
+ */
 public class SourceryBuilder: SourceryBuilderProtocol, AutoGenerateProtocol
 {
     public static let executalbeFolderPath: String = "./.build/x86_64-apple-macosx10.10/release"

@@ -18,7 +18,9 @@ public protocol TestOptionsProtocol: ArgumentExecutableProtocol
     // sourcery:end
 }
 
-/// Options for xcodebuild's build & test actions:
+/**
+ Options for xcodebuild's build & test actions:
+ */
 public struct TestOptions: TestOptionsProtocol, AutoGenerateProtocol
 {
     public let scheme: String // -scheme

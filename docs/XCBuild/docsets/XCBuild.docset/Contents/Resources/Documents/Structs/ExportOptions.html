@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ExportOptions Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/ExportOptions" class="dashAnchor"></a>
+    <a title="ExportOptions Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">XCBuild Docs</a> (9% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">XCBuild Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ExportOptions Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/XCBuild.html">XCBuild</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/XCBuild/TestRunError.html">– TestRunError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ArchiveOptionsProtocol.html">ArchiveOptionsProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ArchivePlistProtocol.html">ArchivePlistProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ArchiveProtocol.html">ArchiveProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DestinationFactoryProtocol.html">DestinationFactoryProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DestinationProtocol.html">DestinationProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ExportArchiveOptionsProtocol.html">ExportArchiveOptionsProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ExportProtocol.html">ExportProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MinimalTestOptionsProtocol.html">MinimalTestOptionsProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TestOptionsProtocol.html">TestOptionsProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TestReportProtocol.html">TestReportProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/XCBuildDestinationsProtocol.html">XCBuildDestinationsProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/XCBuildProtocol.html">XCBuildProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Archive.html">Archive</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ArchiveOptions.html">ArchiveOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ArchivePlist.html">ArchivePlist</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Destination.html">Destination</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Destination/Architecture.html">– Architecture</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Destination/OS.html">– OS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Destination/PlatformType.html">– PlatformType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Destination/Simulator.html">– Simulator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Destination/Device.html">– Device</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Destination/Platform.html">– Platform</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DestinationFactory.html">DestinationFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Export.html">Export</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ExportArchiveOptions.html">ExportArchiveOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ExportArchiveOptions/CodingKeys.html">– CodingKeys</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ExportOptions.html">ExportOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ExportOptions/Method.html">– Method</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ExportOptions/ProvisioningProfiles.html">– ProvisioningProfiles</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ExportOptions/SigningStyle.html">– SigningStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ExportOptions/Thinning.html">– Thinning</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MinimalTestOptions.html">MinimalTestOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TestOptions.html">TestOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TestReport.html">TestReport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/XCBuildDestinations.html">XCBuildDestinations</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/XCodeBuildOption.html">XCodeBuildOption</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ExportOptions</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ExportOptions</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                </div>
+              </div>
+            <p>Credits for documentation: man xcodebuild</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XCBuild13ExportOptionsVACycfc"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild13ExportOptionsVACycfc">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XCBuild13ExportOptionsV14compileBitcodeSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/compileBitcode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild13ExportOptionsV14compileBitcodeSbSgvp">compileBitcode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">compileBitcode</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XCBuild13ExportOptionsV40embedOnDemandResourcesAssetPacksInBundleSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/embedOnDemandResourcesAssetPacksInBundle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild13ExportOptionsV40embedOnDemandResourcesAssetPacksInBundleSbSgvp">embedOnDemandResourcesAssetPacksInBundle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">embedOnDemandResourcesAssetPacksInBundle</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XCBuild13ExportOptionsV26iCloudContainerEnvironmentSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/iCloudContainerEnvironment" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild13ExportOptionsV26iCloudContainerEnvironmentSSSgvp">iCloudContainerEnvironment</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">iCloudContainerEnvironment</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XCBuild13ExportOptionsV27installerSigningCertificateSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/installerSigningCertificate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild13ExportOptionsV27installerSigningCertificateSSSgvp">installerSigningCertificate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">installerSigningCertificate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XCBuild13ExportOptionsV8manifestSDyS2SGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/manifest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild13ExportOptionsV8manifestSDyS2SGSgvp">manifest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">manifest</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XCBuild13ExportOptionsV6MethodO"></a>
+                    <a name="//apple_ref/swift/Enum/Method" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild13ExportOptionsV6MethodO">Method</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ExportOptions/Method.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Method</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XCBuild13ExportOptionsV6methodAC6MethodOvp"></a>
+                    <a name="//apple_ref/swift/Property/method" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild13ExportOptionsV6methodAC6MethodOvp">method</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">method</span><span class="p">:</span> <span class="kt">ExportOptions</span><span class="o">.</span><span class="kt"><a href="../Structs/ExportOptions/Method.html">Method</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XCBuild13ExportOptionsV34onDemandResourcesAssetPacksBaseURLSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/onDemandResourcesAssetPacksBaseURL" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild13ExportOptionsV34onDemandResourcesAssetPacksBaseURLSSSgvp">onDemandResourcesAssetPacksBaseURL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">onDemandResourcesAssetPacksBaseURL</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XCBuild13ExportOptionsV20ProvisioningProfilesV"></a>
+                    <a name="//apple_ref/swift/Struct/ProvisioningProfiles" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild13ExportOptionsV20ProvisioningProfilesV">ProvisioningProfiles</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ExportOptions/ProvisioningProfiles.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ProvisioningProfiles</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XCBuild13ExportOptionsV20provisioningProfilesAC012ProvisioningE0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/provisioningProfiles" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild13ExportOptionsV20provisioningProfilesAC012ProvisioningE0VSgvp">provisioningProfiles</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">provisioningProfiles</span><span class="p">:</span> <span class="kt">ExportOptions</span><span class="o">.</span><span class="kt"><a href="../Structs/ExportOptions/ProvisioningProfiles.html">ProvisioningProfiles</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XCBuild13ExportOptionsV18signingCertificateSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/signingCertificate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild13ExportOptionsV18signingCertificateSSSgvp">signingCertificate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">signingCertificate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XCBuild13ExportOptionsV12SigningStyleO"></a>
+                    <a name="//apple_ref/swift/Enum/SigningStyle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild13ExportOptionsV12SigningStyleO">SigningStyle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ExportOptions/SigningStyle.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">SigningStyle</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XCBuild13ExportOptionsV12signingStyleAC07SigningE0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/signingStyle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild13ExportOptionsV12signingStyleAC07SigningE0OSgvp">signingStyle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">signingStyle</span><span class="p">:</span> <span class="kt">ExportOptions</span><span class="o">.</span><span class="kt"><a href="../Structs/ExportOptions/SigningStyle.html">SigningStyle</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XCBuild13ExportOptionsV17stripSwiftSymbolsSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/stripSwiftSymbols" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild13ExportOptionsV17stripSwiftSymbolsSbSgvp">stripSwiftSymbols</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">stripSwiftSymbols</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XCBuild13ExportOptionsV6teamIDSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/teamID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild13ExportOptionsV6teamIDSSSgvp">teamID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">teamID</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XCBuild13ExportOptionsV8ThinningO"></a>
+                    <a name="//apple_ref/swift/Enum/Thinning" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild13ExportOptionsV8ThinningO">Thinning</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ExportOptions/Thinning.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Thinning</span> <span class="p">:</span> <span class="kt">RawRepresentable</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XCBuild13ExportOptionsV8thinningAC8ThinningOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/thinning" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild13ExportOptionsV8thinningAC8ThinningOSgvp">thinning</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">thinning</span><span class="p">:</span> <span class="kt">ExportOptions</span><span class="o">.</span><span class="kt"><a href="../Structs/ExportOptions/Thinning.html">Thinning</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XCBuild13ExportOptionsV13uploadBitcodeSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/uploadBitcode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild13ExportOptionsV13uploadBitcodeSbSgvp">uploadBitcode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">uploadBitcode</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XCBuild13ExportOptionsV13uploadSymbolsSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/uploadSymbols" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XCBuild13ExportOptionsV13uploadSymbolsSbSgvp">uploadSymbols</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">uploadSymbols</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-05-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
