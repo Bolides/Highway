@@ -87,13 +87,13 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
 
     /**
       Will run documentation on products passed to the function
-     
+
      - parameters:
          - package: PackageProtocol,
          - products : set of products you want to generate docs for
          - packageName : the swift package you want to generate docs for
          - async : function that can default to handleSyncDocs function if you like to use that. handleSyncDocs is a global function in Highway
-     
+
      */
     public func generateDocs(for products: Set<SwiftProduct>, packageName: String, _ async: @escaping (@escaping HighwayRunner.SyncDocs) -> Void)
     {
