@@ -66,6 +66,7 @@ public struct DocumentationWorker: DocumentationWorkerProtocol, AutoGenerateProt
             signPost.verbose(products.enumerated().map { "\($0.offset + 1). \($0.element)" }.joined(separator: "\n"))
 
             let jazzyName = "jazzy"
+            let docsFolder = try folder.createSubfolderIfNeeded(withName: "docs")
             var jazzy = try system.installOrFindGemProcess(name: jazzyName, in: folder)
 
             let total = products.count
@@ -75,7 +76,7 @@ public struct DocumentationWorker: DocumentationWorkerProtocol, AutoGenerateProt
                 jazzy = try system.gemProcess(name: "jazzy", in: folder)
                 signPost.message("🎺 \(pretty_function()) jazzy \(product.offset + 1)/\(total) \(product.element.name) ...")
 
-                let outputFolder = try folder.createSubfolderIfNeeded(withName: "docs/\(product.element.name)")
+                let outputFolder = try docsFolder.createSubfolderIfNeeded(withName: "\(product.element.name)")
                 jazzy.arguments = [
                     "-x",
                     "-scheme,Highway-Package",
