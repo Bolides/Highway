@@ -465,28 +465,28 @@ open class HighwayRunnerProtocolMock: HighwayRunnerProtocol
 
     // MARK: - <generateDocs> - parameters
 
-    public var generateDocsForCallsCount = 0
-    public var generateDocsForCalled: Bool
+    public var generateDocsForPackageNameCallsCount = 0
+    public var generateDocsForPackageNameCalled: Bool
     {
-        return generateDocsForCallsCount > 0
+        return generateDocsForPackageNameCallsCount > 0
     }
 
-    public var generateDocsForReceivedArguments: (products: Set<SwiftProduct>, async: (@escaping HighwayRunner.SyncDocs) -> Void)?
+    public var generateDocsForPackageNameReceivedArguments: (products: Set<SwiftProduct>, packageName: String, async: (@escaping HighwayRunner.SyncDocs) -> Void)?
 
     // MARK: - <generateDocs> - closure mocks
 
-    public var generateDocsForClosure: ((Set<SwiftProduct>, @escaping (@escaping HighwayRunner.SyncDocs) -> Void) -> Void)?
+    public var generateDocsForPackageNameClosure: ((Set<SwiftProduct>, String, @escaping (@escaping HighwayRunner.SyncDocs) -> Void) -> Void)?
 
     // MARK: - <generateDocs> - method mocked
 
-    open func generateDocs(for products: Set<SwiftProduct>, _ async: @escaping (@escaping HighwayRunner.SyncDocs) -> Void)
+    open func generateDocs(for products: Set<SwiftProduct>, packageName: String, _ async: @escaping (@escaping HighwayRunner.SyncDocs) -> Void)
     {
-        generateDocsForCallsCount += 1
-        generateDocsForReceivedArguments = (products: products, async: async)
+        generateDocsForPackageNameCallsCount += 1
+        generateDocsForPackageNameReceivedArguments = (products: products, packageName: packageName, async: async)
 
         // <generateDocs> - Void return mock implementation
 
-        generateDocsForClosure?(products, async)
+        generateDocsForPackageNameClosure?(products, packageName, async)
     }
 
     // MARK: - <runTests> - parameters

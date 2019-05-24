@@ -17,7 +17,7 @@
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/DocumentationLibrary/DocumentationWorker.swift",
       "line": 21,
-      "symbol": "DocumentationWorkerProtocol.attemptJazzyDocs(in:for:)",
+      "symbol": "DocumentationWorkerProtocol.attemptJazzyDocs(in:packageName:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },

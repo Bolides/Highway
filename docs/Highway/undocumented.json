@@ -395,7 +395,7 @@
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Highway/HighwayRunner.swift",
       "line": 29,
-      "symbol": "HighwayRunnerProtocol.generateDocs(for:_:)",
+      "symbol": "HighwayRunnerProtocol.generateDocs(for:packageName:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -513,28 +513,28 @@
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Highway/HighwayRunner.swift",
-      "line": 116,
+      "line": 121,
       "symbol": "HighwayRunner.runTests(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Highway/HighwayRunner.swift",
-      "line": 164,
+      "line": 169,
       "symbol": "HighwayRunner.addGithooksPrePush()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Highway/HighwayRunner.swift",
-      "line": 169,
+      "line": 174,
       "symbol": "HighwayRunner.runSwiftformat(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Highway/HighwayRunner.swift",
-      "line": 191,
+      "line": 196,
       "symbol": "HighwayRunner.runSwiftPackageGenerateXcodeProject(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

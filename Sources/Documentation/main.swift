@@ -38,7 +38,7 @@ do
         products = dump.products
     }
 
-    let output = try documentation.attemptJazzyDocs(in: srcRoot, for: products)
+    let output = try documentation.attemptJazzyDocs(in: srcRoot, packageName: "Highway", for: products)
     signPost.message("\(pretty_function()) \(output.joined(separator: "\n")) ✅")
     exit(EXIT_SUCCESS)
 }

@@ -26,7 +26,7 @@ public protocol HighwayRunnerProtocol: AutoMockable
     var errors: [Swift.Error]? { get set }
     var highway: HighwayProtocol { get }
 
-    func generateDocs(for products: Set<SwiftProduct>, _ async: @escaping (@escaping HighwayRunner.SyncDocs) -> Void)
+    func generateDocs(for products: Set<SwiftProduct>, packageName: String, _ async: @escaping (@escaping HighwayRunner.SyncDocs) -> Void)
     func runTests(_ async: @escaping (@escaping HighwayRunner.SyncTestOutput) -> Void)
     func runSourcery(_ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
     func addGithooksPrePush() throws
@@ -86,11 +86,16 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
     // MARK: - Documetation
 
     /**
-     Will run documentation on products passed to the function
-      You can use default handle fuction with name
-      If an error occurs it is added to the errors array of HighwayRunner and it is thrown in the async closure.
+      Will run documentation on products passed to the function
+     
+     - parameters:
+         - package: PackageProtocol,
+         - products : set of products you want to generate docs for
+         - packageName : the swift package you want to generate docs for
+         - async : function that can default to handleSyncDocs function if you like to use that. handleSyncDocs is a global function in Highway
+     
      */
-    public func generateDocs(for products: Set<SwiftProduct>, _ async: @escaping (@escaping HighwayRunner.SyncDocs) -> Void)
+    public func generateDocs(for products: Set<SwiftProduct>, packageName: String, _ async: @escaping (@escaping HighwayRunner.SyncDocs) -> Void)
     {
         dispatchGroup.enter()
 
@@ -100,7 +105,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
 
             do
             {
-                let output = try self.documentationWorker.attemptJazzyDocs(in: try self.highway.srcRoot(), for: products)
+                let output = try self.documentationWorker.attemptJazzyDocs(in: try self.highway.srcRoot(), packageName: packageName, for: products)
 
                 async { output }
             }

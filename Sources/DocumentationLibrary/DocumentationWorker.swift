@@ -18,7 +18,7 @@ public protocol DocumentationWorkerProtocol: AutoMockable
     // sourcery:inline:DocumentationWorker.AutoGenerateProtocol
     static var shared: DocumentationWorkerProtocol { get }
 
-    func attemptJazzyDocs(in folder: FolderProtocol, for products: Set<SwiftProduct>) throws -> [String]
+    func attemptJazzyDocs(in folder: FolderProtocol, packageName: String, for products: Set<SwiftProduct>) throws -> [String]
 
     // sourcery:end
 }
@@ -57,8 +57,12 @@ public struct DocumentationWorker: DocumentationWorkerProtocol, AutoGenerateProt
 
     /**
      Performs `jazzy -x -scheme,Highway-Package -m <#product#> --output docs/<#product#>` for every product in the swift package
+     - parameters:
+         - folder: the folder containing the swift package and the sources
+         - packageName: the package the requested products belong too to generate docs for
+         - products: the selection of the products from the package to generated docs for
      */
-    public func attemptJazzyDocs(in folder: FolderProtocol, for products: Set<SwiftProduct>) throws -> [String]
+    public func attemptJazzyDocs(in folder: FolderProtocol, packageName: String, for products: Set<SwiftProduct>) throws -> [String]
     {
         do
         {
@@ -79,7 +83,7 @@ public struct DocumentationWorker: DocumentationWorkerProtocol, AutoGenerateProt
                 let outputFolder = try docsFolder.createSubfolderIfNeeded(withName: "\(product.element.name)")
                 jazzy.arguments = [
                     "-x",
-                    "-scheme,Highway-Package",
+                    "-scheme,\(packageName)-Package",
                     "-m", "\(product.element.name)",
                     "--output", outputFolder.path,
                     "--swift-version", "4.2.1",

@@ -53,7 +53,7 @@ import Foundation
  var errors: [Swift.Error]? { get set }
  var highway: HighwayProtocol { get }
 
- func generateDocs(for products: Set<SwiftProduct>, _ async: @escaping (@escaping HighwayRunner.SyncDocs) -> Void)
+ func generateDocs(for products: Set<SwiftProduct>, packageName: String, _ async: @escaping (@escaping HighwayRunner.SyncDocs) -> Void)
  func runTests(_ async: @escaping (@escaping HighwayRunner.SyncTestOutput) -> Void)
  func runSourcery(_ async: @escaping (@escaping SourceryWorker.SyncOutput) -> Void)
  func addGithooksPrePush() throws

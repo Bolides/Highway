@@ -26,41 +26,41 @@ open class DocumentationWorkerProtocolMock: DocumentationWorkerProtocol
 
     // MARK: - <attemptJazzyDocs> - parameters
 
-    public var attemptJazzyDocsInForThrowableError: Error?
-    public var attemptJazzyDocsInForCallsCount = 0
-    public var attemptJazzyDocsInForCalled: Bool
+    public var attemptJazzyDocsInPackageNameForThrowableError: Error?
+    public var attemptJazzyDocsInPackageNameForCallsCount = 0
+    public var attemptJazzyDocsInPackageNameForCalled: Bool
     {
-        return attemptJazzyDocsInForCallsCount > 0
+        return attemptJazzyDocsInPackageNameForCallsCount > 0
     }
 
-    public var attemptJazzyDocsInForReceivedArguments: (folder: FolderProtocol, products: Set<SwiftProduct>)?
-    public var attemptJazzyDocsInForReturnValue: [String]?
+    public var attemptJazzyDocsInPackageNameForReceivedArguments: (folder: FolderProtocol, packageName: String, products: Set<SwiftProduct>)?
+    public var attemptJazzyDocsInPackageNameForReturnValue: [String]?
 
     // MARK: - <attemptJazzyDocs> - closure mocks
 
-    public var attemptJazzyDocsInForClosure: ((FolderProtocol, Set<SwiftProduct>) throws -> [String])?
+    public var attemptJazzyDocsInPackageNameForClosure: ((FolderProtocol, String, Set<SwiftProduct>) throws -> [String])?
 
     // MARK: - <attemptJazzyDocs> - method mocked
 
-    open func attemptJazzyDocs(in folder: FolderProtocol, for products: Set<SwiftProduct>) throws -> [String]
+    open func attemptJazzyDocs(in folder: FolderProtocol, packageName: String, for products: Set<SwiftProduct>) throws -> [String]
     {
         // <attemptJazzyDocs> - Throwable method implementation
 
-        if let error = attemptJazzyDocsInForThrowableError
+        if let error = attemptJazzyDocsInPackageNameForThrowableError
         {
             throw error
         }
 
-        attemptJazzyDocsInForCallsCount += 1
-        attemptJazzyDocsInForReceivedArguments = (folder: folder, products: products)
+        attemptJazzyDocsInPackageNameForCallsCount += 1
+        attemptJazzyDocsInPackageNameForReceivedArguments = (folder: folder, packageName: packageName, products: products)
 
         // <attemptJazzyDocs> - Return Value mock implementation
 
-        guard let closureReturn = attemptJazzyDocsInForClosure else
+        guard let closureReturn = attemptJazzyDocsInPackageNameForClosure else
         {
-            guard let returnValue = attemptJazzyDocsInForReturnValue else
+            guard let returnValue = attemptJazzyDocsInPackageNameForReturnValue else
             {
-                let message = "No returnValue implemented for attemptJazzyDocsInForClosure"
+                let message = "No returnValue implemented for attemptJazzyDocsInPackageNameForClosure"
                 let error = SourceryMockError.implementErrorCaseFor(message)
 
                 // You should implement [String]
@@ -70,7 +70,7 @@ open class DocumentationWorkerProtocolMock: DocumentationWorkerProtocol
             return returnValue
         }
 
-        return try closureReturn(folder, products)
+        return try closureReturn(folder, packageName, products)
     }
 }
 

@@ -23,14 +23,14 @@
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/DocumentationLibrary/DocumentationWorker.swift",
-      "line": 32,
+      "line": 35,
       "symbol": "DocumentationWorker.shared",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/DocumentationLibrary/DocumentationWorker.swift",
-      "line": 42,
+      "line": 45,
       "symbol": "DocumentationWorker.init(terminal:system:signPost:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

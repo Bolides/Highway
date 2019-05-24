@@ -21,7 +21,7 @@ import Foundation
  // sourcery:inline:DocumentationWorker.AutoGenerateProtocol
  static var shared: DocumentationWorkerProtocol { get }
 
- func attemptJazzyDocs(in folder: FolderProtocol, for products: Set<SwiftProduct>) throws  -> [String]
+ func attemptJazzyDocs(in folder: FolderProtocol, packageName: String, for products: Set<SwiftProduct>) throws  -> [String]
  // sourcery:end
  // types.implementing.AutoGenerateProtocol inline for DocumentationWorker ✅
 
