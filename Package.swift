@@ -234,6 +234,23 @@ public struct HighwaySourcery
     )
 }
 
+public struct HighwayDocumentation {
+    public static let name = "\(HighwayDocumentation.self)"
+    
+    public static let executable = Product.executable(
+        name: name,
+        targets: [name]
+    )
+    
+    public static let target = Target.target(
+        name: name,
+        dependencies: [
+            Terminal.library.asDependency(),
+            Documentation.Library.product.asDependency()
+        ]
+    )
+}
+
 /**
  Can be used as a Library or as an executable
  */
@@ -649,6 +666,7 @@ public let package = Package(
         Documentation.executable,
         PR.executable,
         GitHooks.executable,
+        HighwayDocumentation.executable,
 
         // MARK: - Executable Examples - not needed for highway
 
@@ -689,6 +707,7 @@ public let package = Package(
         Documentation.target,
         PR.target,
         GitHooks.target,
+        HighwayDocumentation.target,
 
         // MARK: - Executable Examples - not needed for highway
 
