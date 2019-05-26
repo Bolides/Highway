@@ -17,18 +17,130 @@ import Foundation
 // version 5.5
 /*
 
+ // types.implementing.AutoGenerateProtocol inline for Archive ..
+ // sourcery:inline:Archive.AutoGenerateProtocol
+ var archiveFolder: FolderProtocol { get }
+ var appFolder: FolderProtocol { get }
+ var plist: ArchivePlistProtocol { get }
+
+ // sourcery:end
+ // types.implementing.AutoGenerateProtocol inline for Archive ✅
+ // types.implementing.AutoGenerateProtocol inline for ArchiveOptions ..
+ // sourcery:inline:ArchiveOptions.AutoGenerateProtocol
+ var scheme: String { get }
+ var project: String { get }
+ var destination: DestinationProtocol { get }
+ var archivePath: String { get }
+
+ // sourcery:end
+ // types.implementing.AutoGenerateProtocol inline for ArchiveOptions ✅
+ // types.implementing.AutoGenerateProtocol inline for ArchivePlist ..
+ // sourcery:inline:ArchivePlist.AutoGenerateProtocol
+ var applicationProperties: String { get }
+ var applicationPath: String { get }
+
+ // sourcery:end
+ // types.implementing.AutoGenerateProtocol inline for ArchivePlist ✅
+ // types.implementing.AutoGenerateProtocol inline for Arguments ..
+ // sourcery:inline:Arguments.AutoGenerateProtocol
+ var all: [String] { get set }
+
+ // sourcery:end
+ // types.implementing.AutoGenerateProtocol inline for Arguments ✅
+ // types.implementing.AutoGenerateProtocol inline for Dependency ..
+ // sourcery:inline:Dependency.AutoGenerateProtocol
+ var name: String { get }
+ var path: String { get }
+ var url: URL { get }
+ var version: String { get }
+ var dependencies: [Dependency] { get }
+ var description: String { get }
+
+ func gitHooks() throws  -> FolderProtocol
+ func srcRoot() throws  -> FolderProtocol
+ func templateFolder() throws  -> FolderProtocol
+ func templateFolder(expectedName: String) throws  -> FolderProtocol
+ func sourceryFolder() throws  -> FolderProtocol
+ func sourceryAutoProtocolFile() throws  -> FileProtocol
+ // sourcery:end
+ // types.implementing.AutoGenerateProtocol inline for Dependency ✅
  // types.implementing.AutoGenerateProtocol inline for DependencyService ..
  // sourcery:inline:DependencyService.AutoGenerateProtocol
 
  func generateDependency() throws  -> DependencyProtocol
  // sourcery:end
  // types.implementing.AutoGenerateProtocol inline for DependencyService ✅
+ // types.implementing.AutoGenerateProtocol inline for Destination ..
+ // sourcery:inline:Destination.AutoGenerateProtocol
+ var raw: [String: String] { get set }
+ var asString: String { get }
+
+ // sourcery:end
+ // types.implementing.AutoGenerateProtocol inline for Destination ✅
+ // types.implementing.AutoGenerateProtocol inline for DestinationFactory ..
+ // sourcery:inline:DestinationFactory.AutoGenerateProtocol
+
+ func macOS(architecture: Destination.Architecture) -> Destination
+ func device(_ device: Destination.Device, name: String?, isGeneric: Bool, id: String?) -> Destination
+ func simulator(_ simulator: Destination.Simulator, name: String, os: Destination.OS, id: String?) -> Destination
+ // sourcery:end
+ // types.implementing.AutoGenerateProtocol inline for DestinationFactory ✅
  // types.implementing.AutoGenerateProtocol inline for DumpService ..
  // sourcery:inline:DumpService.AutoGenerateProtocol
 
  func generateDump() throws  -> DumpProtocol
  // sourcery:end
  // types.implementing.AutoGenerateProtocol inline for DumpService ✅
+ // types.implementing.AutoGenerateProtocol inline for Export ..
+ // sourcery:inline:Export.AutoGenerateProtocol
+ var folder: FolderProtocol { get }
+ var ipa: FileProtocol { get }
+
+ // sourcery:end
+ // types.implementing.AutoGenerateProtocol inline for Export ✅
+ // types.implementing.AutoGenerateProtocol inline for ExportArchiveOptions ..
+ // sourcery:inline:ExportArchiveOptions.AutoGenerateProtocol
+ var archivePath: FolderProtocol { get }
+ var exportPath: String { get }
+
+ func encode(to encoder: Encoder) throws
+ // sourcery:end
+ // types.implementing.AutoGenerateProtocol inline for ExportArchiveOptions ✅
+ // types.implementing.AutoGenerateProtocol inline for GitTool ..
+ // sourcery:inline:GitTool.AutoGenerateProtocol
+
+ func isClean() throws  -> Bool
+ func status() throws  -> [String]
+ func addAll() throws  -> [String]
+ func commit(message: String) throws  -> [String]
+ func pushToMaster() throws  -> [String]
+ func pushTagsToMaster() throws  -> [String]
+ func pull() throws  -> [String]
+ func currentTag() throws  -> [String]
+ func clone(with options: CloneOptions) throws  -> [String]
+ // sourcery:end
+ // types.implementing.AutoGenerateProtocol inline for GitTool ✅
+ // types.implementing.AutoGenerateProtocol inline for MinimalTestOptions ..
+ // sourcery:inline:MinimalTestOptions.AutoGenerateProtocol
+ var description: String { get }
+
+ func arguments() throws  -> Arguments
+ // sourcery:end
+ // types.implementing.AutoGenerateProtocol inline for MinimalTestOptions ✅
+ // types.implementing.AutoGenerateProtocol inline for SwiftProduct ..
+ // sourcery:inline:SwiftProduct.AutoGenerateProtocol
+ var name: String { get }
+ var product_type: String { get }
+
+ // sourcery:end
+ // types.implementing.AutoGenerateProtocol inline for SwiftProduct ✅
+ // types.implementing.AutoGenerateProtocol inline for SwiftTarget ..
+ // sourcery:inline:SwiftTarget.AutoGenerateProtocol
+ var name: String { get }
+ var dependencies: Set<SwiftTarget.Dependency> { get }
+
+ // sourcery:end
+ // types.implementing.AutoGenerateProtocol inline for SwiftTarget ✅
  // types.implementing.AutoGenerateProtocol inline for System ..
  // sourcery:inline:System.AutoGenerateProtocol
  static var shared: SystemProtocol { get }
@@ -68,5 +180,44 @@ import Foundation
  func enableReadableOutputDataCapturing()
  // sourcery:end
  // types.implementing.AutoGenerateProtocol inline for Task ✅
+ // types.implementing.AutoGenerateProtocol inline for TestOptions ..
+ // sourcery:inline:TestOptions.AutoGenerateProtocol
+ var scheme: String { get }
+ var project: String { get }
+ var destination: DestinationProtocol { get }
+ var resultBundlePath: String { get }
+ var derivedDataPath: FolderProtocol? { get }
+
+ func arguments() throws  -> Arguments
+ func executableFile() throws  -> FileProtocol
+ // sourcery:end
+ // types.implementing.AutoGenerateProtocol inline for TestOptions ✅
+ // types.implementing.AutoGenerateProtocol inline for TestReport ..
+ // sourcery:inline:TestReport.AutoGenerateProtocol
+ var testSuiteOutput: [String] { get }
+ var output: [String] { get }
+ var totalNumberOfTests: Int { get }
+ var description: String { get }
+
+ // sourcery:end
+ // types.implementing.AutoGenerateProtocol inline for TestReport ✅
+ // types.implementing.AutoGenerateProtocol inline for XCBuild ..
+ // sourcery:inline:XCBuild.AutoGenerateProtocol
+
+ func findPosibleDestinations(for scheme: String, in workspace: FolderProtocol) throws  -> [String]
+ func archive(using options: ArchiveOptionsProtocol) throws  -> ArchiveProtocol
+ func export(using options: ExportArchiveOptionsProtocol) throws  -> ExportProtocol
+ func buildAndTest(using options: MinimalTestOptionsProtocol) throws  -> TestReportProtocol
+ // sourcery:end
+ // types.implementing.AutoGenerateProtocol inline for XCBuild ✅
+ // types.implementing.AutoGenerateProtocol inline for XCBuildDestinations ..
+ // sourcery:inline:XCBuildDestinations.AutoGenerateProtocol
+ var platform: Destination.Platform { get }
+ var id: String { get }
+ var name: String { get }
+ var os: Destination.OS { get }
+
+ // sourcery:end
+ // types.implementing.AutoGenerateProtocol inline for XCBuildDestinations ✅
 
  */

@@ -1,7 +1,6 @@
 import DocumentationLibrary
 import Errors
 import Foundation
-import Git
 import GitHooks
 import HighwayDispatch
 import HighwayLibrary
@@ -11,7 +10,6 @@ import SourceryAutoProtocols
 import SourceryWorker
 import SwiftFormatWorker
 import Terminal
-import XCBuild
 import ZFile
 
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery

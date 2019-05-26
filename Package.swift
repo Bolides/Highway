@@ -80,13 +80,12 @@ public struct HighwayDispatch
 
         public static let target = Target.target(
             name: name,
-            dependencies: [HighwayDispatch.dependency] + HighwayDispatch.target.dependencies,
+            dependencies: [HighwayDispatch.product.asDependency()] + HighwayDispatch.target.dependencies,
             path: "Sources/Generated/\(HighwayDispatch.name)"
         )
     }
 
     public static let mock = Mock()
-    public static let dependency = Target.Dependency(stringLiteral: name)
 }
 
 public struct Terminal
@@ -100,37 +99,13 @@ public struct Terminal
 
     public static let target = Target.target(
         name: name,
-        dependencies: ["Arguments", "Errors", HighwayDispatch.dependency]
-    )
-}
-
-public struct Arguments
-{
-    public static let name = "\(Arguments.self)"
-
-    public static let product = Product.library(
-        name: name,
-        targets: [name]
-    )
-
-    public static let target = Target.target(
-        name: name,
-        dependencies: ["SourceryAutoProtocols"]
-    )
-}
-
-public struct Git
-{
-    public static let name = "\(Git.self)"
-
-    public static let product = Product.library(
-        name: name,
-        targets: [name]
-    )
-
-    public static let target = Target.target(
-        name: name,
-        dependencies: ["SourceryAutoProtocols"] + [Terminal.product.asDependency()]
+        dependencies:
+        ["Result"]
+            +
+            [
+                Errors.product.asDependency(),
+                HighwayDispatch.product.asDependency(),
+            ]
     )
 }
 
@@ -145,7 +120,7 @@ public struct Errors
 
     public static let target = Target.target(
         name: name,
-        dependencies: []
+        dependencies: ["ZFile"]
     )
 }
 
@@ -190,22 +165,10 @@ public struct SwiftFormatWorker
 
     public static let target = Target.target(
         name: name,
-        dependencies: [Terminal.product.asDependency()]
-    )
-}
-
-public struct XCBuild
-{
-    public static let name = "\(XCBuild.self)"
-
-    public static let product = Product.library(
-        name: name,
-        targets: [name]
-    )
-
-    public static let target = Target.target(
-        name: name,
-        dependencies: [Terminal.product.asDependency()]
+        dependencies:
+        ["SwiftFormat"]
+            +
+            [Terminal.product.asDependency()]
     )
 }
 
@@ -259,7 +222,6 @@ public struct Documentation
                 "SignPost",
                 "Terminal",
                 "Errors",
-                "Arguments",
             ]
         )
 
@@ -395,8 +357,6 @@ public struct Highway
                     HighwayDispatch.product.asDependency(),
                     Secrets.Library.product.asDependency(),
                     Documentation.Library.product.asDependency(),
-                    XCBuild.product.asDependency(),
-                    Git.product.asDependency(),
                 ]
         )
 
@@ -449,14 +409,11 @@ public let package = Package(
         Documentation.Library.Mock.product,
         Documentation.Library.product,
         HighwayDispatch.product,
-        Arguments.product,
         Terminal.product,
         Errors.product,
         SourceryWorker.product,
         GitHooks.product,
         SwiftFormatWorker.product,
-        XCBuild.product,
-        Git.product,
 
         // MARK: - Library - Mocks
 
@@ -479,14 +436,11 @@ public let package = Package(
         Documentation.Library.target,
         Highway.Library.target,
         HighwayDispatch.target,
-        Arguments.target,
         Terminal.target,
         Errors.target,
         SourceryWorker.target,
         GitHooks.target,
         SwiftFormatWorker.target,
-        XCBuild.target,
-        Git.target,
 
         // MARK: - Mocks
 

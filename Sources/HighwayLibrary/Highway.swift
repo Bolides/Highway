@@ -5,7 +5,6 @@
 //  Created by Stijn Willems on 13/03/2019.
 //
 
-import Arguments
 import Errors
 import Foundation
 import GitHooks
