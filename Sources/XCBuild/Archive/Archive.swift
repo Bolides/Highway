@@ -1,6 +1,5 @@
 import Foundation
 import SourceryAutoProtocols
-import Url
 import ZFile
 
 public protocol ArchiveProtocol: AutoMockable

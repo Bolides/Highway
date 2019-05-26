@@ -5,7 +5,6 @@ import Result
 import SignPost
 import SourceryAutoProtocols
 import Terminal
-import Url
 import ZFile
 
 public protocol XCBuildProtocol: AutoMockable
