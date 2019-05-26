@@ -7,7 +7,7 @@
 
 import Errors
 import Foundation
-import GitHooks
+import GitHooksLibrary
 import HighwayDispatch
 import SignPost
 import SourceryAutoProtocols
@@ -170,7 +170,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
             swiftPackageDependencies: package.dependencies,
             swiftPackageDump: package.dump,
             commandlineOptions: githooksOption,
-            hwSetupExecutableProductName: gitHooksPrePushExecutableName,
+            executableName: gitHooksPrePushExecutableName,
             prePushScriptCommandlineOptions: githooksPrePushScriptOptions,
             gitHooksFolder: try srcRoot.subfolder(named: ".git/hooks"),
             signPost: signPost

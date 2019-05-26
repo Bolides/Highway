@@ -7,10 +7,10 @@
 
 import Foundation
 
-import HighwayDispatchMock
-import HighwayLibraryMock
 import CarthageWorker
 import CarthageWorkerMock
+import HighwayDispatchMock
+import HighwayLibraryMock
 import Nimble
 import Quick
 import SignPostMock

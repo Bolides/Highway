@@ -22,7 +22,7 @@ public protocol GitHooksWorkerProtocol: AutoMockable
         swiftPackageDependencies: DependencyProtocol,
         swiftPackageDump: DumpProtocol,
         commandlineOptions: Set<GitHooksWorker.Option>,
-        hwSetupExecutableProductName: String?,
+        executableName: String?,
         prePushScriptCommandlineOptions: String?,
         gitHooksFolder: FolderProtocol?,
         signPost: SignPostProtocol
@@ -72,14 +72,24 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
 
     // MARK: - Init
 
-    /** Will take the first executable it can find in the swifPackage if you do not provice a HWSetup executable name
+    /**
+     Will take the first executable it can find in the swifPackage if you do not provice a HWSetup executable name
+
+     - parameters:
+         - swiftPackageDependencies: DependencyProtocol
+         - swiftPackageDump: DumpProtocol
+         - commandlineOptions: Set<GitHooksWorker.Option> = Set(CommandLine.arguments.compactMap { Option(rawValue: $0) }), // Disable or enable githook
+         - executableName: String? = nil If set this will be the name from the package used to run on prepush
+         - prePushScriptCommandlineOptions: String? = GitHooksWorker.defaultOptions, // Will be passed to commandline in scrip
+         - gitHooksFolder: FolderProtocol? = nil
+         - signPost: SignPostProtocol = SignPost.share
      */
     // sourcery:includeInitInProtocol
     public init(
         swiftPackageDependencies: DependencyProtocol,
         swiftPackageDump: DumpProtocol,
         commandlineOptions: Set<GitHooksWorker.Option> = Set(CommandLine.arguments.compactMap { Option(rawValue: $0) }), // Disable or enable githooks
-        hwSetupExecutableProductName: String? = nil,
+        executableName: String? = nil,
         prePushScriptCommandlineOptions: String? = GitHooksWorker.defaultOptions, // Will be passed to commandline in script
         gitHooksFolder: FolderProtocol? = nil,
         signPost: SignPostProtocol = SignPost.shared
@@ -88,7 +98,7 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
         self.swiftPackageDependencies = swiftPackageDependencies
         self.signPost = signPost
         self.swiftPackageDump = swiftPackageDump
-        self.hwSetupExecutableProductName = hwSetupExecutableProductName
+        hwSetupExecutableProductName = executableName
         self.gitHooksFolder = gitHooksFolder
         self.prePushScriptCommandlineOptions = prePushScriptCommandlineOptions
         self.commandlineOptions = commandlineOptions

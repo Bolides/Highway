@@ -8,7 +8,7 @@
 import Foundation
 
 import Errors
-import GitHooks
+import GitHooksLibrary
 import Nimble
 import Quick
 import SignPostMock

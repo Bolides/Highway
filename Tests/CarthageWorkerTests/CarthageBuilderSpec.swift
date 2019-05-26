@@ -7,9 +7,9 @@
 
 import Foundation
 
+import CarthageWorker
 import Errors
 import HighwayLibraryMock
-import CarthageWorker
 import Nimble
 import Quick
 import SignPostMock

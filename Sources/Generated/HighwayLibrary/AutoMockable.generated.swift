@@ -1,7 +1,7 @@
 import DocumentationLibrary
 import Errors
 import Foundation
-import GitHooks
+import GitHooksLibrary
 import HighwayDispatch
 import HighwayLibrary
 import SecretsLibrary
