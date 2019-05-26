@@ -5,8 +5,6 @@
 
 The goal is to make the test and setup run on a build server also run before every push you do. So highway can be used on your dev machine, build server both for macOS and Linux (untested -> [#26](https://github.com/dooZdev/Highway/issues/26) ).
 
-## What do you have to have
-
 For now it is only tested on macOS with xcode 10.1 and swift version 4.2.1 installed. Linux and swift 5 are in the pipeline but currently on hold until this version is stable. 
 
 Follow up
@@ -20,6 +18,17 @@ So for now you need to have installed
 * [Homebrew 2.1.3](https://github.com/Homebrew/brew)
 * [swift version 4.2.1](https://www.swift.org) this is the version that comes with official release of xcode 10.1
 
+## Documentation
+
+Limited generated documentation is available per library in the folder docs.
+
+Generating documentation can be done 
+
+```bash
+swift build --product HighwayDocumentation --configuration release
+.build/x86_64-apple-macosx10.10/release/HighwayDocumentation
+```
+
 ## Use
 
 To use in your own project you need to add it to your swift package. Highway is build to be used as a library you can use to build executables for you project. If you know [fastlane](https://github.com/fastlane/fastlane) you could think of every executable as lane you can run.
@@ -28,7 +37,7 @@ To get started you could do the following steps below. By the end you have a gen
 
 In the swift package you will find the following example struct
 
-```
+```swift
 // MARK: - Examples
 
 struct Example
@@ -66,7 +75,7 @@ struct Example
 
 The code in main looks like
 
-```
+```swift
 import Errors
 import Foundation
 import SignPost
