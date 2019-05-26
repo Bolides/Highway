@@ -100,13 +100,32 @@ public struct Terminal
     public static let target = Target.target(
         name: name,
         dependencies:
-        ["Result"]
+        ["Result", "ZFile", "SignPost"]
             +
             [
                 Errors.product.asDependency(),
                 HighwayDispatch.product.asDependency(),
             ]
     )
+
+    public struct Mock
+    {
+        public static let name = Terminal.product.name + "Mock"
+
+        public static let product = Product.library(
+            name: name,
+            targets: [name]
+        )
+
+        public static let target = Target.target(
+            name: name,
+            dependencies:
+            Terminal.target.dependencies
+                + [Terminal.product.asDependency()]
+            ,
+            path: "Sources/Generated/\(Terminal.product.name)"
+        )
+    }
 }
 
 public struct Errors
@@ -135,8 +154,30 @@ public struct SourceryWorker
 
     public static let target = Target.target(
         name: name,
-        dependencies: [Terminal.product.asDependency()]
+        dependencies:
+        [Terminal.product.asDependency()]
     )
+
+    public struct Mock
+    {
+        public static let name = SourceryWorker.product.name + "Mock"
+
+        public static let product = Product.library(
+            name: Mock.name,
+            targets: [Mock.name]
+        )
+
+        public static let target = Target.target(
+            name: name,
+            dependencies:
+            Terminal.target.dependencies
+                + SourceryWorker.target.dependencies
+                + [
+                    SourceryWorker.product.asDependency(),
+                ],
+            path: "Sources/Generated/\(SourceryWorker.product.name)"
+        )
+    }
 }
 
 public struct GitHooks
@@ -170,6 +211,25 @@ public struct SwiftFormatWorker
             +
             [Terminal.product.asDependency()]
     )
+
+    public struct Mock
+    {
+        public static let name = SwiftFormatWorker.product.name + "Mock"
+
+        public static let product = Product.library(
+            name: name,
+            targets: [name]
+        )
+
+        public static let target = Target.target(
+            name: name,
+            dependencies:
+            SwiftFormatWorker.target.dependencies
+                + Terminal.target.dependencies
+                + [SwiftFormatWorker.product.asDependency()],
+            path: "Sources/Generated/\(SwiftFormatWorker.product.name)"
+        )
+    }
 }
 
 // MARK: - HighwaySourcery
@@ -225,6 +285,11 @@ public struct Documentation
             ]
         )
 
+        public static let tests = Target.testTarget(
+            name: name + "Tests",
+            dependencies: target.dependencies + quickNimble
+        )
+
         public struct Mock
         {
             public static let name = Documentation.Library.product.name + "Mock"
@@ -241,11 +306,6 @@ public struct Documentation
             )
         }
     }
-
-    public static let tests = Target.testTarget(
-        name: name + "Tests",
-        dependencies: target.dependencies + quickNimble
-    )
 }
 
 // MARK: - GitSecrets
@@ -284,6 +344,11 @@ public struct Secrets
             ]
         )
 
+        public static let tests = Target.testTarget(
+            name: name + "Tests",
+            dependencies: target.dependencies + quickNimble
+        )
+
         public struct Mock
         {
             public static let name = Library.product.name + "Mock"
@@ -300,11 +365,6 @@ public struct Secrets
             )
         }
     }
-
-    public static let tests = Target.testTarget(
-        name: name + "Tests",
-        dependencies: target.dependencies + quickNimble
-    )
 }
 
 public struct Highway
@@ -319,16 +379,6 @@ public struct Highway
     public static let target = Target.target(
         name: name,
         dependencies: [Highway.Library.product.asDependency()]
-    )
-
-    public static let tests = Target.testTarget(
-        name: name + "Tests",
-        dependencies: [
-            Secrets.Library.Mock.product.asDependency(),
-            Documentation.Library.Mock.product.asDependency(),
-        ]
-            + quickNimble
-            + [Library.product.asDependency()]
     )
 
     public struct Library
@@ -358,6 +408,20 @@ public struct Highway
                     Secrets.Library.product.asDependency(),
                     Documentation.Library.product.asDependency(),
                 ]
+        )
+
+        public static let tests = Target.testTarget(
+            name: Library.product.name + "Tests",
+            dependencies:
+            quickNimble
+                + [Library.product.asDependency()]
+                + [
+                    Secrets.Library.Mock.product.asDependency(),
+                    Documentation.Library.Mock.product.asDependency(),
+                    SourceryWorker.Mock.product.asDependency(),
+                    SwiftFormatWorker.Mock.product.asDependency(),
+                ]
+                + ["SignPostMock"]
         )
 
         public struct Mock
@@ -419,6 +483,9 @@ public let package = Package(
 
         HighwayDispatch.Mock.product,
         Highway.Library.Mock.product,
+        SourceryWorker.Mock.product,
+        SwiftFormatWorker.Mock.product,
+        Terminal.Mock.product,
     ],
     dependencies: external,
     targets: [
@@ -449,11 +516,14 @@ public let package = Package(
 
         HighwayDispatch.Mock.target,
         Highway.Library.Mock.target,
+        SourceryWorker.Mock.target,
+        SwiftFormatWorker.Mock.target,
+        Terminal.Mock.target,
 
         // MARK: - Tests
 
-        Secrets.tests,
-        Documentation.tests,
-        Highway.tests,
+        Secrets.Library.tests,
+        Documentation.Library.tests,
+        Highway.Library.tests,
     ]
 )
