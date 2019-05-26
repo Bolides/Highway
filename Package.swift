@@ -119,6 +119,21 @@ public struct Arguments
     )
 }
 
+public struct Git
+{
+    public static let name = "\(Git.self)"
+
+    public static let product = Product.library(
+        name: name,
+        targets: [name]
+    )
+
+    public static let target = Target.target(
+        name: name,
+        dependencies: ["SourceryAutoProtocols"] + [Terminal.product.asDependency()]
+    )
+}
+
 public struct Errors
 {
     public static let name = "\(Errors.self)"
@@ -367,21 +382,21 @@ public struct Highway
             name: Library.product.name,
             dependencies: [
                 "SourceryAutoProtocols",
-                "Terminal",
-                "Arguments",
                 "SignPost",
                 "ZFile",
-                "SourceryWorker",
-                "HighwayDispatch",
-                "GitHooks",
-                "SwiftFormatWorker",
-                "XCBuild",
                 "Errors",
             ]
                 +
                 [
+                    GitHooks.product.asDependency(),
+                    Terminal.product.asDependency(),
+                    SourceryWorker.product.asDependency(),
+                    SwiftFormatWorker.product.asDependency(),
+                    HighwayDispatch.product.asDependency(),
                     Secrets.Library.product.asDependency(),
                     Documentation.Library.product.asDependency(),
+                    XCBuild.product.asDependency(),
+                    Git.product.asDependency(),
                 ]
         )
 
@@ -441,6 +456,7 @@ public let package = Package(
         GitHooks.product,
         SwiftFormatWorker.product,
         XCBuild.product,
+        Git.product,
 
         // MARK: - Library - Mocks
 
@@ -470,6 +486,7 @@ public let package = Package(
         GitHooks.target,
         SwiftFormatWorker.target,
         XCBuild.target,
+        Git.target,
 
         // MARK: - Mocks
 

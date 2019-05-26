@@ -1,7 +1,6 @@
 import Arguments
 import Foundation
 import Terminal
-import Url
 import ZFile
 
 public final class GitAutotag
