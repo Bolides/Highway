@@ -64,17 +64,7 @@ public class HWSetupSourceryWorker: HWSetupSourceryWorkerWorkerProtocol, AutoGen
                     return nil
                 }
 
-                guard let hwProduct = HighwayProduct(rawValue: product.name) else
-                {
-                    let location = "\(HWSetupSourceryWorker.self) \(#function) \(#line)"
-                    let error = """
-                    \(product.name) is not a valid product name
-                    ℹ️ add it as a case to \(HighwayProduct.self) enum
-                    """
-                    throw HighwayError.highwayError(atLocation: location, error: error)
-                }
-
-                return try Sourcery(productName: hwProduct.rawValue, swiftPackageDependencies: swiftPackageDependencies, swiftPackageDump: swiftPackageDump, sourceryBuilder: sourceryBuilder)
+                return try Sourcery(productName: product.name, swiftPackageDependencies: swiftPackageDependencies, swiftPackageDump: swiftPackageDump, sourceryBuilder: sourceryBuilder)
             }
 
             workers = sourcerySequence.map { SourceryWorker(sourcery: $0, queue: HWSetupSourceryWorker.queue) }

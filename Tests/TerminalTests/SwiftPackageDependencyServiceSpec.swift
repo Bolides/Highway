@@ -2,7 +2,6 @@ import Foundation
 import Nimble
 import Quick
 import SignPostMock
-import Stub
 import Terminal
 import TerminalMock
 import ZFile

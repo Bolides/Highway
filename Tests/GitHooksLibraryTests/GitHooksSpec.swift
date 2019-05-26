@@ -144,7 +144,7 @@ class GitHooksWorkerSpec: QuickSpec
 
                 it("warns about the disabling")
                 {
-                    expect(signPost.messageReceivedText) == "⚠️ 👀 GitHooksWorker ignore M (104, 90) GitHooksWorker.swift addPrePushToGitHooks() - remove noGitHooksPrePush if you do not want this"
+                    expect(signPost.messageReceivedText) == "⚠️ 👀 GitHooksWorker ignore M (114, 90) GitHooksWorker.swift addPrePushToGitHooks() - remove noGitHooksPrePush if you do not want this"
                 }
             }
         }

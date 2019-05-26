@@ -12,7 +12,6 @@ import Nimble
 import Quick
 import SourceryWorker
 import SourceryWorkerMock
-import Stub
 import Terminal
 import TerminalMock
 import ZFile
@@ -123,7 +122,7 @@ class SourcerySpec: QuickSpec
 
                         it("has imports for automockable")
                         {
-                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "DocumentationLibrary,Errors,Foundation,GitHooks,HighwayDispatch,HighwayLibrary,SecretsLibrary,SignPost,SourceryAutoProtocols,SourceryWorker,SwiftFormatWorker,Terminal,ZFile"
+                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "DocumentationLibrary,Errors,Foundation,GitHooksLibrary,HighwayDispatch,HighwayLibrary,SecretsLibrary,SignPost,SourceryAutoProtocols,SourceryWorker,SwiftFormatWorker,Terminal,ZFile"
                         }
                     }
 
@@ -137,13 +136,13 @@ class SourcerySpec: QuickSpec
                         }
                     }
 
-                    context("GitHooks")
+                    context("GitHooksLibrary")
                     {
-                        beforeEach { setup(for: "GitHooks") }
+                        beforeEach { setup(for: "GitHooksLibrary") }
 
                         it("has imports for automockable")
                         {
-                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "Errors,Foundation,GitHooks,HighwayDispatch,Result,SignPost,Terminal,ZFile"
+                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "Errors,Foundation,GitHooksLibrary,HighwayDispatch,Result,SignPost,Terminal,ZFile"
                         }
                     }
 
@@ -154,16 +153,6 @@ class SourcerySpec: QuickSpec
                         it("has imports for automockable")
                         {
                             expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "Foundation,HighwayDispatch,SourceryAutoProtocols"
-                        }
-                    }
-
-                    context("Stub")
-                    {
-                        beforeEach { setup(for: "Stub") }
-
-                        it("has imports for automockable")
-                        {
-                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == ""
                         }
                     }
                 }

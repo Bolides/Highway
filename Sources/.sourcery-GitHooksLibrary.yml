@@ -1,8 +1,8 @@
 sources:
 - "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/GitHooksLibrary/"
-- "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/.build/checkouts/template-sourcery--108890666365077616/Sources/SourceryAutoProtocols/SourceryAutoProtocols.swift"
+- "AutoMockable filled value"
 
 templates:
-- "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/.build/checkouts/template-sourcery--108890666365077616/"
+- "AutoMockable filled value"
 output:
  "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/GitHooksLibrary/"

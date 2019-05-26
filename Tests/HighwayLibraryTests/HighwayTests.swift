@@ -1,6 +1,6 @@
 import Errors
 import Foundation
-import GitHooksMock
+import GitHooksLibraryMock
 import HighwayDispatchMock
 import HighwayLibrary
 import HighwayLibraryMock
