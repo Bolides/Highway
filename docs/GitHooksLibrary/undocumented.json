@@ -1,0 +1,68 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/GitHooksLibrary/GitHooksWorker.swift",
+      "line": 15,
+      "symbol": "GitHooksWorkerProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/GitHooksLibrary/GitHooksWorker.swift",
+      "line": 18,
+      "symbol": "GitHooksWorkerProtocol.defaultOptions",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/GitHooksLibrary/GitHooksWorker.swift",
+      "line": 19,
+      "symbol": "GitHooksWorkerProtocol.prepushBashScript",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/GitHooksLibrary/GitHooksWorker.swift",
+      "line": 21,
+      "symbol": "GitHooksWorkerProtocol.init(swiftPackageDependencies:swiftPackageDump:commandlineOptions:executableName:prePushScriptCommandlineOptions:gitHooksFolder:signPost:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/GitHooksLibrary/GitHooksWorker.swift",
+      "line": 30,
+      "symbol": "GitHooksWorkerProtocol.addPrePushToGitHooks()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/GitHooksLibrary/GitHooksWorker.swift",
+      "line": 39,
+      "symbol": "GitHooksWorker.defaultOptions",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/GitHooksLibrary/GitHooksWorker.swift",
+      "line": 40,
+      "symbol": "GitHooksWorker.prepushBashScript",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/GitHooksLibrary/GitHooksWorker.swift",
+      "line": 70,
+      "symbol": "GitHooksWorker.Option.noGitHooksPrePush",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/GitHooksLibrary/GitHooksWorker.swift",
+      "line": 88,
+      "symbol": "GitHooksWorker.init(swiftPackageDependencies:swiftPackageDump:commandlineOptions:executableName:prePushScriptCommandlineOptions:gitHooksFolder:signPost:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway"
+}

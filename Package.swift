@@ -234,19 +234,20 @@ public struct HighwaySourcery
     )
 }
 
-public struct HighwayDocumentation {
+public struct HighwayDocumentation
+{
     public static let name = "\(HighwayDocumentation.self)"
-    
+
     public static let executable = Product.executable(
         name: name,
         targets: [name]
     )
-    
+
     public static let target = Target.target(
         name: name,
         dependencies: [
             Terminal.library.asDependency(),
-            Documentation.Library.product.asDependency()
+            Documentation.Library.product.asDependency(),
         ]
     )
 }
