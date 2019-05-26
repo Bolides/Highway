@@ -13,9 +13,9 @@ import SourceryWorkerMock
 import SwiftFormatWorkerMock
 import Terminal
 import TerminalMock
+import XCTest
 import ZFile
 import ZFileMock
-import XCTest
 
 private class SWM: SwiftFormatWorkerProtocolMock
 {}
@@ -67,7 +67,6 @@ class HighwaySpec: QuickSpec
 
     override func spec()
     {
-
         describe("Highway")
         {
             beforeEach

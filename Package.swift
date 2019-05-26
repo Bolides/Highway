@@ -604,34 +604,35 @@ extension Product
 
 // MARK: - Examples
 
-struct Example {
+struct Example
+{
     /**
      Highway uses executables as the products you define to generate code or do some continuous integration.
      An executable can be taught of like a lane in fastlane. It has a main and imports libraries from Highway to perform its tasks
-     
+
      The following example lane tests runs the tests and interprets the output in a TestReport.
-     
+
      Steps to add HighwayTests executable
      1. add struct like HighwayTests with your project name to your swift package
      2. add static properties exectable to products and target to target of swift package
-     
+
      Run `swift package generate-xcodeproj --xcconfig-overrides Sources/macOS.xcconfig`
-     
+
      Open the xcode project and put your code in Sources/HighwayTests
      */
-    public struct HighwayTests {
+    public struct HighwayTests
+    {
         public static let name = "\(HighwayTests.self)"
-        
+
         public static let executable = Product.executable(
             name: name,
             targets: [name]
         )
-        
+
         public static let target = Target.target(
             name: name,
             dependencies: [Terminal.library.asDependency()]
         )
-        
     }
 }
 
@@ -648,9 +649,9 @@ public let package = Package(
         Documentation.executable,
         PR.executable,
         GitHooks.executable,
-        
+
         // MARK: - Executable Examples - not needed for highway
-        
+
         Example.HighwayTests.executable,
 
         // MARK: - Library
@@ -688,9 +689,9 @@ public let package = Package(
         Documentation.target,
         PR.target,
         GitHooks.target,
-        
+
         // MARK: - Executable Examples - not needed for highway
-        
+
         Example.HighwayTests.target,
 
         // MARK: - Libraries
