@@ -122,6 +122,7 @@ public struct Terminal
             dependencies:
             Terminal.target.dependencies
                 + [Terminal.product.asDependency()]
+                + ["ZFileMock"]
             ,
             path: "Sources/Generated/\(Terminal.product.name)"
         )
@@ -193,6 +194,25 @@ public struct GitHooks
         name: name,
         dependencies: [Terminal.product.asDependency()]
     )
+
+    public struct Mock
+    {
+        public static let name = GitHooks.product.name + "Mock"
+
+        public static let product = Product.library(
+            name: name,
+            targets: [name]
+        )
+
+        public static let target = Target.target(
+            name: name,
+            dependencies:
+            GitHooks.target.dependencies
+                + Terminal.target.dependencies
+                + [GitHooks.product.asDependency()],
+            path: "Sources/Generated/\(GitHooks.product.name)"
+        )
+    }
 }
 
 public struct SwiftFormatWorker
@@ -420,8 +440,11 @@ public struct Highway
                     Documentation.Library.Mock.product.asDependency(),
                     SourceryWorker.Mock.product.asDependency(),
                     SwiftFormatWorker.Mock.product.asDependency(),
+                    Highway.Library.Mock.product.asDependency(),
+                    Terminal.Mock.product.asDependency(),
+                    GitHooks.Mock.product.asDependency(),
                 ]
-                + ["SignPostMock"]
+                + ["SignPostMock", "ZFileMock"]
         )
 
         public struct Mock
@@ -486,6 +509,7 @@ public let package = Package(
         SourceryWorker.Mock.product,
         SwiftFormatWorker.Mock.product,
         Terminal.Mock.product,
+        GitHooks.Mock.product,
     ],
     dependencies: external,
     targets: [
@@ -519,6 +543,7 @@ public let package = Package(
         SourceryWorker.Mock.target,
         SwiftFormatWorker.Mock.target,
         Terminal.Mock.target,
+        GitHooks.Mock.target,
 
         // MARK: - Tests
 

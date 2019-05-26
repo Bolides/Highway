@@ -188,8 +188,6 @@ import Foundation
  var resultBundlePath: String { get }
  var derivedDataPath: FolderProtocol? { get }
 
- func arguments() throws  -> Arguments
- func executableFile() throws  -> FileProtocol
  // sourcery:end
  // types.implementing.AutoGenerateProtocol inline for TestOptions ✅
  // types.implementing.AutoGenerateProtocol inline for TestReport ..

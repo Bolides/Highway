@@ -1,11 +1,9 @@
-import Arguments
-import ArgumentsMock
 import Errors
 import Foundation
 import GitHooksMock
-import Highway
 import HighwayDispatchMock
-import HighwayMock
+import HighwayLibrary
+import HighwayLibraryMock
 import Nimble
 import Quick
 import SignPost
@@ -15,7 +13,6 @@ import SourceryWorkerMock
 import SwiftFormatWorkerMock
 import Terminal
 import TerminalMock
-import XCTest
 import ZFile
 import ZFileMock
 
@@ -221,7 +218,7 @@ class HighwaySpec: QuickSpec
 
             context("Dependency with name")
             {
-                let location = "M (193, 72) Highway.swift dependency(with:)"
+                let location = "M (192, 72) Highway.swift dependency(with:)"
                 it("unknown")
                 {
                     let name = "unknown dependency"

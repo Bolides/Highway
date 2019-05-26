@@ -13,8 +13,6 @@ public protocol TestOptionsProtocol: ArgumentExecutableProtocol
     var resultBundlePath: String { get }
     var derivedDataPath: FolderProtocol? { get }
 
-    func arguments() throws -> Arguments
-    func executableFile() throws -> FileProtocol
     // sourcery:end
 }
 
@@ -54,6 +52,7 @@ public struct TestOptions: TestOptionsProtocol, AutoGenerateProtocol
         self.executableProvider = executableProvider
     }
 
+    // sourcery:skipProtocol
     public func arguments() throws -> Arguments
     {
         var args = Arguments([])
@@ -69,6 +68,7 @@ public struct TestOptions: TestOptionsProtocol, AutoGenerateProtocol
         return args
     }
 
+    // sourcery:skipProtocol
     public func executableFile() throws -> FileProtocol
     {
         return try executableProvider.executable(with: "") // TODO: this is not yet used.

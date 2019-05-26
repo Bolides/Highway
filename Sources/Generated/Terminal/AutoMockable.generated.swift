@@ -5,6 +5,7 @@ import Result
 import SignPost
 import Terminal
 import ZFile
+import ZFileMock
 
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
@@ -2535,100 +2536,6 @@ open class TestOptionsProtocolMock: TestOptionsProtocol
 
     public var underlyingResultBundlePath: String = "AutoMockable filled value"
     public var derivedDataPath: FolderProtocol?
-
-    // MARK: - <arguments> - parameters
-
-    public var argumentsThrowableError: Error?
-    public var argumentsCallsCount = 0
-    public var argumentsCalled: Bool
-    {
-        return argumentsCallsCount > 0
-    }
-
-    public var argumentsReturnValue: Arguments?
-
-    // MARK: - <arguments> - closure mocks
-
-    public var argumentsClosure: (() throws -> Arguments)?
-
-    // MARK: - <arguments> - method mocked
-
-    open func arguments() throws -> Arguments
-    {
-        // <arguments> - Throwable method implementation
-
-        if let error = argumentsThrowableError
-        {
-            throw error
-        }
-
-        argumentsCallsCount += 1
-
-        // <arguments> - Return Value mock implementation
-
-        guard let closureReturn = argumentsClosure else
-        {
-            guard let returnValue = argumentsReturnValue else
-            {
-                let message = "No returnValue implemented for argumentsClosure"
-                let error = SourceryMockError.implementErrorCaseFor(message)
-
-                // You should implement Arguments
-
-                throw error
-            }
-            return returnValue
-        }
-
-        return try closureReturn()
-    }
-
-    // MARK: - <executableFile> - parameters
-
-    public var executableFileThrowableError: Error?
-    public var executableFileCallsCount = 0
-    public var executableFileCalled: Bool
-    {
-        return executableFileCallsCount > 0
-    }
-
-    public var executableFileReturnValue: FileProtocol?
-
-    // MARK: - <executableFile> - closure mocks
-
-    public var executableFileClosure: (() throws -> FileProtocol)?
-
-    // MARK: - <executableFile> - method mocked
-
-    open func executableFile() throws -> FileProtocol
-    {
-        // <executableFile> - Throwable method implementation
-
-        if let error = executableFileThrowableError
-        {
-            throw error
-        }
-
-        executableFileCallsCount += 1
-
-        // <executableFile> - Return Value mock implementation
-
-        guard let closureReturn = executableFileClosure else
-        {
-            guard let returnValue = executableFileReturnValue else
-            {
-                let message = "No returnValue implemented for executableFileClosure"
-                let error = SourceryMockError.implementErrorCaseFor(message)
-
-                // You should implement FileProtocol
-
-                throw error
-            }
-            return returnValue
-        }
-
-        return try closureReturn()
-    }
 
     // MARK: - <arguments> - parameters
 
