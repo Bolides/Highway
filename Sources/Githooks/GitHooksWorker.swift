@@ -108,7 +108,7 @@ public struct GitHooksWorker: GitHooksWorkerProtocol, AutoGenerateProtocol
         signPost.message("👀 \(GitHooksWorker.self) ...")
         do
         {
-            var executable: String!
+            var executable: String = ""
 
             if let hwSetupExecutableProductName = hwSetupExecutableProductName
             {

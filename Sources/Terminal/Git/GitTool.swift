@@ -1,6 +1,5 @@
 
 import SourceryAutoProtocols
-import Terminal
 import ZFile
 
 public struct GitTool: AutoGenerateProtocol

@@ -1,7 +1,7 @@
 import Nimble
 import Quick
 
-import XCBuild
+import Terminal
 
 final class DestinationFactoryTests: QuickSpec
 {

@@ -1,12 +1,8 @@
 import Nimble
 import Quick
 
-import Arguments
-import ArgumentsMock
 import Terminal
 import TerminalMock
-import XCBuild
-import XCBuildMock
 import ZFileMock
 
 class XCBuildSpec: QuickSpec

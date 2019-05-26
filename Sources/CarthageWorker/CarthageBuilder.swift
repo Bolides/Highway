@@ -7,7 +7,7 @@
 
 import Errors
 import Foundation
-import Highway
+import HighwayLibrary
 import SignPost
 import SourceryAutoProtocols
 import Terminal

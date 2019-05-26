@@ -8,7 +8,6 @@
 
 import Foundation
 
-import Arguments
 import Errors
 import Highway
 import HighwayDispatch

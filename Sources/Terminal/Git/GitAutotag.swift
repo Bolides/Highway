@@ -1,6 +1,5 @@
 
 import Foundation
-import Terminal
 import ZFile
 
 public final class GitAutotag

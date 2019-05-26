@@ -7,14 +7,13 @@
 
 import Foundation
 
-import Arguments
-import ArgumentsMock
 import Errors
-import HighwayMock
-import HWCarthage
+import HighwayLibraryMock
+import CarthageWorker
 import Nimble
 import Quick
 import SignPostMock
+import Terminal
 import TerminalMock
 import ZFile
 import ZFileMock

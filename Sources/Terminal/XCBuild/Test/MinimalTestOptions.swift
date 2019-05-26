@@ -8,7 +8,6 @@
 import Foundation
 import SignPost
 import SourceryAutoProtocols
-import Terminal
 import ZFile
 
 // sourcery:AutoMockable

@@ -1,7 +1,6 @@
 
 import Foundation
 import SourceryAutoProtocols
-import Terminal
 import ZFile
 
 public protocol TestOptionsProtocol: ArgumentExecutableProtocol

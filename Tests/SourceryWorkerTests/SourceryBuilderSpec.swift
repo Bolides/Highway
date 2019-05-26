@@ -5,8 +5,6 @@
 //  Created by Stijn on 28/02/2019.
 //
 
-@testable import Arguments
-import ArgumentsMock
 import Errors
 import Nimble
 import Quick

@@ -7,13 +7,13 @@
 
 import Foundation
 
-import Arguments
-import ArgumentsMock
 import Errors
 import GitHooks
 import Nimble
 import Quick
 import SignPostMock
+import Terminal
+import TerminalMock
 import ZFileMock
 
 private let expectedPrePushScript = GitHooksWorker.prepushBashScript
@@ -144,7 +144,7 @@ class GitHooksWorkerSpec: QuickSpec
 
                 it("warns about the disabling")
                 {
-                    expect(signPost.messageReceivedText) == "⚠️ 👀 GitHooksWorker ignore M (105, 90) GitHooksWorker.swift addPrePushToGitHooks() - remove noGitHooksPrePush if you do not want this"
+                    expect(signPost.messageReceivedText) == "⚠️ 👀 GitHooksWorker ignore M (104, 90) GitHooksWorker.swift addPrePushToGitHooks() - remove noGitHooksPrePush if you do not want this"
                 }
             }
         }

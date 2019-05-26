@@ -44,7 +44,7 @@ public struct PR
 {
     public static let name = "\(PR.self)"
 
-    public static let product = Product.executable(
+    public static let executable = Product.executable(
         name: name,
         targets: [name]
     )
@@ -69,6 +69,13 @@ public struct HighwayDispatch
         dependencies: ["SourceryAutoProtocols"]
     )
 
+    public static let tests = Target.testTarget(
+        name: name + "Tests",
+        dependencies:
+        [HighwayDispatch.product.asDependency()]
+            + quickNimble
+    )
+
     public struct Mock
     {
         public static let name = "\(HighwayDispatch.name)Mock"
@@ -84,15 +91,28 @@ public struct HighwayDispatch
             path: "Sources/Generated/\(HighwayDispatch.name)"
         )
     }
+}
 
-    public static let mock = Mock()
+public struct Stub
+{
+    public static let name = "\(Stub.self)"
+
+    public static let library = Product.library(
+        name: name,
+        targets: [name]
+    )
+
+    public static let target = Target.target(
+        name: name,
+        dependencies: []
+    )
 }
 
 public struct Terminal
 {
     public static let name = "\(Terminal.self)"
 
-    public static let product = Product.library(
+    public static let library = Product.library(
         name: name,
         targets: [name]
     )
@@ -103,16 +123,23 @@ public struct Terminal
         ["Result", "ZFile", "SignPost"]
             +
             [
-                Errors.product.asDependency(),
+                Errors.library.asDependency(),
                 HighwayDispatch.product.asDependency(),
             ]
     )
 
+    public static let tests = Target.testTarget(
+        name: name + "Tests",
+        dependencies:
+        [Terminal.library.asDependency()]
+            + quickNimble
+    )
+
     public struct Mock
     {
-        public static let name = Terminal.product.name + "Mock"
+        public static let name = Terminal.library.name + "Mock"
 
-        public static let product = Product.library(
+        public static let library = Product.library(
             name: name,
             targets: [name]
         )
@@ -121,10 +148,10 @@ public struct Terminal
             name: name,
             dependencies:
             Terminal.target.dependencies
-                + [Terminal.product.asDependency()]
+                + [Terminal.library.asDependency()]
                 + ["ZFileMock"]
             ,
-            path: "Sources/Generated/\(Terminal.product.name)"
+            path: "Sources/Generated/\(Terminal.library.name)"
         )
     }
 }
@@ -133,7 +160,7 @@ public struct Errors
 {
     public static let name = "\(Errors.self)"
 
-    public static let product = Product.library(
+    public static let library = Product.library(
         name: name,
         targets: [name]
     )
@@ -148,7 +175,7 @@ public struct SourceryWorker
 {
     public static let name = "\(SourceryWorker.self)"
 
-    public static let product = Product.library(
+    public static let library = Product.library(
         name: name,
         targets: [name]
     )
@@ -156,14 +183,21 @@ public struct SourceryWorker
     public static let target = Target.target(
         name: name,
         dependencies:
-        [Terminal.product.asDependency()]
+        [Terminal.library.asDependency()]
+    )
+
+    public static let tests = Target.testTarget(
+        name: name + "Tests",
+        dependencies:
+        [SourceryWorker.library.asDependency()]
+            + quickNimble
     )
 
     public struct Mock
     {
-        public static let name = SourceryWorker.product.name + "Mock"
+        public static let name = SourceryWorker.library.name + "Mock"
 
-        public static let product = Product.library(
+        public static let library = Product.library(
             name: Mock.name,
             targets: [Mock.name]
         )
@@ -174,9 +208,9 @@ public struct SourceryWorker
             Terminal.target.dependencies
                 + SourceryWorker.target.dependencies
                 + [
-                    SourceryWorker.product.asDependency(),
+                    SourceryWorker.library.asDependency(),
                 ],
-            path: "Sources/Generated/\(SourceryWorker.product.name)"
+            path: "Sources/Generated/\(SourceryWorker.library.name)"
         )
     }
 }
@@ -185,19 +219,26 @@ public struct GitHooks
 {
     public static let name = "\(GitHooks.self)"
 
-    public static let product = Product.library(
+    public static let library = Product.library(
         name: name,
         targets: [name]
     )
 
     public static let target = Target.target(
         name: name,
-        dependencies: [Terminal.product.asDependency()]
+        dependencies: [Terminal.library.asDependency()]
+    )
+
+    public static let tests = Target.testTarget(
+        name: name + "Tests",
+        dependencies:
+        [library.asDependency()]
+            + quickNimble
     )
 
     public struct Mock
     {
-        public static let name = GitHooks.product.name + "Mock"
+        public static let name = GitHooks.library.name + "Mock"
 
         public static let product = Product.library(
             name: name,
@@ -209,8 +250,8 @@ public struct GitHooks
             dependencies:
             GitHooks.target.dependencies
                 + Terminal.target.dependencies
-                + [GitHooks.product.asDependency()],
-            path: "Sources/Generated/\(GitHooks.product.name)"
+                + [GitHooks.library.asDependency()],
+            path: "Sources/Generated/\(GitHooks.library.name)"
         )
     }
 }
@@ -229,7 +270,14 @@ public struct SwiftFormatWorker
         dependencies:
         ["SwiftFormat"]
             +
-            [Terminal.product.asDependency()]
+            [Terminal.library.asDependency()]
+    )
+
+    public static let tests = Target.testTarget(
+        name: name + "Tests",
+        dependencies:
+        [Terminal.library.asDependency()]
+            + quickNimble
     )
 
     public struct Mock
@@ -258,7 +306,7 @@ public struct HighwaySourcery
 {
     public static let name = "\(HighwaySourcery.self)"
 
-    public static let product = Product.executable(
+    public static let executable = Product.executable(
         name: name,
         targets: [name]
     )
@@ -275,7 +323,7 @@ public struct Documentation
 {
     public static let name = "\(Documentation.self)"
 
-    public static let product = Product.executable(
+    public static let executable = Product.executable(
         name: name,
         targets: [name]
     )
@@ -307,7 +355,9 @@ public struct Documentation
 
         public static let tests = Target.testTarget(
             name: name + "Tests",
-            dependencies: target.dependencies + quickNimble
+            dependencies:
+            [Library.product.asDependency()]
+                + quickNimble
         )
 
         public struct Mock
@@ -325,6 +375,53 @@ public struct Documentation
                 path: "Sources/Generated/\(Documentation.Library.product.name)"
             )
         }
+    }
+}
+
+// MARK: - Carthage
+
+public struct CarthageWorker
+{
+    public static let name = "\(CarthageWorker.self)"
+
+    public static let library = Product.library(
+        name: name,
+        targets: [name]
+    )
+
+    public static let target = Target.target(
+        name: name,
+        dependencies: [Terminal.library.asDependency()]
+    )
+
+    public static let tests = Target.testTarget(
+        name: name + "Tests",
+        dependencies:
+            [library.asDependency()]
+            + quickNimble
+            + [
+                Highway.Library.Mock.product.asDependency(),
+                CarthageWorker.Mock.product.asDependency(),
+            ]
+    )
+
+    public struct Mock
+    {
+        public static let name = library.name + "Mock"
+
+        public static let product = Product.library(
+            name: library.name + "Mock",
+            targets: [name]
+        )
+
+        public static let target = Target.target(
+            name: name,
+            dependencies:
+            CarthageWorker.target.dependencies
+                + Terminal.target.dependencies
+                + [CarthageWorker.library.asDependency()],
+            path: "Sources/Generated/\(CarthageWorker.library.name)"
+        )
     }
 }
 
@@ -366,7 +463,7 @@ public struct Secrets
 
         public static let tests = Target.testTarget(
             name: name + "Tests",
-            dependencies: target.dependencies + quickNimble
+            dependencies: [product.asDependency()] + quickNimble
         )
 
         public struct Mock
@@ -420,9 +517,9 @@ public struct Highway
             ]
                 +
                 [
-                    GitHooks.product.asDependency(),
-                    Terminal.product.asDependency(),
-                    SourceryWorker.product.asDependency(),
+                    GitHooks.library.asDependency(),
+                    Terminal.library.asDependency(),
+                    SourceryWorker.library.asDependency(),
                     SwiftFormatWorker.product.asDependency(),
                     HighwayDispatch.product.asDependency(),
                     Secrets.Library.product.asDependency(),
@@ -438,10 +535,10 @@ public struct Highway
                 + [
                     Secrets.Library.Mock.product.asDependency(),
                     Documentation.Library.Mock.product.asDependency(),
-                    SourceryWorker.Mock.product.asDependency(),
+                    SourceryWorker.Mock.library.asDependency(),
                     SwiftFormatWorker.Mock.product.asDependency(),
                     Highway.Library.Mock.product.asDependency(),
-                    Terminal.Mock.product.asDependency(),
+                    Terminal.Mock.library.asDependency(),
                     GitHooks.Mock.product.asDependency(),
                     HighwayDispatch.Mock.product.asDependency(),
                 ]
@@ -485,9 +582,9 @@ public let package = Package(
 
         Highway.product,
         Secrets.product,
-        HighwaySourcery.product,
-        Documentation.product,
-        PR.product,
+        HighwaySourcery.executable,
+        Documentation.executable,
+        PR.executable,
 
         // MARK: - Library
 
@@ -497,20 +594,23 @@ public let package = Package(
         Documentation.Library.Mock.product,
         Documentation.Library.product,
         HighwayDispatch.product,
-        Terminal.product,
-        Errors.product,
-        SourceryWorker.product,
-        GitHooks.product,
+        Terminal.library,
+        Errors.library,
+        SourceryWorker.library,
+        GitHooks.library,
         SwiftFormatWorker.product,
+        Stub.library,
+        CarthageWorker.library,
 
         // MARK: - Library - Mocks
 
         HighwayDispatch.Mock.product,
         Highway.Library.Mock.product,
-        SourceryWorker.Mock.product,
+        SourceryWorker.Mock.library,
         SwiftFormatWorker.Mock.product,
-        Terminal.Mock.product,
+        Terminal.Mock.library,
         GitHooks.Mock.product,
+        CarthageWorker.Mock.product,
     ],
     dependencies: external,
     targets: [
@@ -533,23 +633,31 @@ public let package = Package(
         SourceryWorker.target,
         GitHooks.target,
         SwiftFormatWorker.target,
+        Stub.target,
+        CarthageWorker.target,
 
         // MARK: - Mocks
 
         Secrets.Library.Mock.target,
         Documentation.Library.Mock.target,
-
         HighwayDispatch.Mock.target,
         Highway.Library.Mock.target,
         SourceryWorker.Mock.target,
         SwiftFormatWorker.Mock.target,
         Terminal.Mock.target,
         GitHooks.Mock.target,
+        CarthageWorker.Mock.target,
 
         // MARK: - Tests
 
         Secrets.Library.tests,
         Documentation.Library.tests,
         Highway.Library.tests,
+        HighwayDispatch.tests,
+        Terminal.tests,
+        SourceryWorker.tests,
+        SwiftFormatWorker.tests,
+        GitHooks.tests,
+        CarthageWorker.tests,
     ]
 )
