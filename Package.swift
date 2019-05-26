@@ -482,7 +482,11 @@ public struct Terminal
     public static let tests = Target.testTarget(
         name: name + "Tests",
         dependencies:
-        [Terminal.library.asDependency()]
+        ["ZFileMock", "SignPostMock"]
+            + [
+                Terminal.library.asDependency(),
+            ]
+            + [Terminal.Mock.library.asDependency()]
             + quickNimble
     )
 

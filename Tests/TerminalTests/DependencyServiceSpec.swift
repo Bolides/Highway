@@ -7,7 +7,7 @@ import TerminalMock
 import ZFile
 import ZFileMock
 
-class SwiftPackageDependencyServiceSpec: QuickSpec
+class DependencyServiceSpec: QuickSpec
 {
     override func spec()
     {
