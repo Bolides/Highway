@@ -24,31 +24,82 @@ So for now you need to have installed
 
 To use in your own project you need to add it to your swift package. Highway is build to be used as a library you can use to build executables for you project. If you know [fastlane](https://github.com/fastlane/fastlane) you could think of every executable as lane you can run.
 
-To get started you could do the following steps below. By the end you have a generic Highway lane to run any available terminal program you have on your system, wether it is installed or not.
+To get started you could do the following steps below. By the end you have a generic Highway lane to run any available terminal program you have on your system.
 
-So we will add 2 executables and 1 library in an example swift package
+In the swift package you will find the following example struct
 
+```
+// MARK: - Examples
 
+struct Example
+{
+    /**
+     Highway uses executables as the products you define to generate code or do some continuous integration.
+     An executable can be taught of like a lane in fastlane. It has a main and imports libraries from Highway to perform its tasks
 
-```bash
+     The following example lane tests runs the tests and interprets the output in a TestReport.
 
-# go to your project or a fresh folder
+     Steps to add HighwayTests executable
+     1. add struct like HighwayTests with your project name to your swift package
+     2. add static properties exectable to products and target to target of swift package
 
-swift package init
-# will setup the 
+     Run `swift package generate-xcodeproj --xcconfig-overrides Sources/macOS.xcconfig`
+
+     Open the xcode project and put your code in Sources/HighwayTests
+     */
+    public struct HighwayTests
+    {
+        public static let name = "\(HighwayTests.self)"
+
+        public static let executable = Product.executable(
+            name: name,
+            targets: [name]
+        )
+
+        public static let target = Target.target(
+            name: name,
+            dependencies: [Terminal.library.asDependency()]
+        )
+    }
+}
 ```
 
-## Setup Highway
+The code in main looks like
 
-After cloning 
-
-``` bash
-swift build --configuration release --static-swift-stdlib 
-# will output where the executable is build, usually
-./.build/x86_64-apple-macosx10.10/release/HWSetup
-# after running this sourcery is setup too and you can generate code when needed
 ```
-# Used Highway in your project
+import Errors
+import Foundation
+import SignPost
+import Terminal
+
+let terminal = Terminal.shared
+let signPost = SignPost.shared
+let system = System.shared
+
+do
+{
+    signPost.message("\(pretty_function()) ...")
+
+    let swiftTest = try system.process("swift")
+    swiftTest.arguments = ["test"]
+
+    let output = try terminal.runProcess(swiftTest)
+    let testReport = try TestReport(output: output)
+
+    signPost.message("\(testReport)")
+    signPost.message("\(pretty_function()) ✅")
+    exit(EXIT_SUCCESS)
+}
+catch
+{
+    signPost.error("\(error)")
+    signPost.message("\(pretty_function()) ❌")
+    exit(EXIT_FAILURE)
+}
+
+```
+
+#### Use Highway in your project
 
 If you do not yet have a `Package.swift` run `swift package init`
 
@@ -58,7 +109,7 @@ do `swift build`
 
 choose frameworks to add. For example HWSetup runs sourcery for highway, swiftformat and performs tests.
 
-Let's take the exampel or running sourcery
+Let's take the example or running sourcery
 
 ``` swift
 /**
@@ -89,91 +140,33 @@ public let package = Package(
 )
 ```
 
-A possible main function could be
-
-```
-
-import Arguments
-import Errors
-import Foundation
-import Git
-import GitHooks
-import Highway
-import HighwayDispatch
-import SignPost
-import SourceryWorker
-import SwiftFormatWorker
-import Terminal
-import XCBuild
-import ZFile
-
-// MARK: - PREPARE
-
-let highwayRunner: HighwayRunner!
-let dispatchGroup: HWDispatchGroupProtocol = DispatchGroup()
-let signPost = SignPost.shared
-
-// MARK: - RUN
-
-let dependencyService: DependencyServiceProtocol!
-
-do
-{
-    let srcRoot = try File(path: #file).parentFolder().parentFolder().parentFolder()
-    dependencyService = DependencyService(in: srcRoot)
-
-    // Swift Package
-
-    let dumpService = DumpService(swiftPackageFolder: srcRoot)
-    let package = try Highway.package(for: srcRoot, dependencyService: dependencyService, dumpService: dumpService)
-
-    let sourceryBuilder = SourceryBuilder(dependencyService: dependencyService)
-    let highway = try Highway(package: package, dependencyService: dependencyService, sourceryBuilder: sourceryBuilder, gitHooksPrePushExecutableName: "HWSetup")
-
-    highwayRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
-
-    //    // Githooks
-
-    highwayRunner.runSourcery(handleSourceryOutput)
-
-    dispatchGroup.notifyMain
-    {
-        highwayRunner.runSwiftformat(handleSwiftformat)
-        dispatchGroup.wait()
-
-        guard let errors = highwayRunner.errors, errors.count > 0 else
-        {
-            signPost.message("🚀 \(HighwayRunner.self) ✅")
-            exit(EXIT_SUCCESS)
-        }
-
-        signPost.message("🚀 \(HighwayRunner.self) has \(errors.count) ❌")
-
-        for error in errors.enumerated()
-        {
-            let message = """
-            ❌ \(error.offset + 1)
-            
-            \(error.element)
-            
-            ---
-            
-            """
-            signPost.error(message)
-        }
-
-        exit(EXIT_FAILURE)
-    }
-    dispatchMain()
-}
-catch
-{
-    signPost.error("\(error)")
-    exit(EXIT_FAILURE)
-}
-
-```
 
 Then you can build this with `swift build`. Any other products you add to your swift package will get sourcery updates if you run the `<#Project#>Sourcery`.
 
 🚀 Done
+
+---
+
+# Contribute to Highway
+
+
+After cloning 
+
+``` bash
+swift build --configuration release --static-swift-stdlib 
+# will output where the executable is build, usually
+./.build/x86_64-apple-macosx10.10/release/Highway
+# after running this sourcery is setup too and you can generate code when needed
+```
+
+Open the generated Highway.xcodeproj or open the folder in any other tool like VSCode and send us a PR.
+
+Thanks!
+
+---
+
+# Projects using highway
+
+* Opensforyou.com
+* Bolides.be
+* https://www.vrt.be/vrtnws iOS mobile application ! Uses a very early version of highway and not sure if it is still used.
