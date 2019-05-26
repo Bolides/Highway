@@ -2,7 +2,45 @@
 # Highway 
 > Test - Integrate - Build status: [@dooZdev ![Build Status](https://app.bitrise.io/app/74c2194000b08d9d/status.svg?token=IqTwBXnTwOzE2pc1p3-aHw)](https://app.bitrise.io/app/74c2194000b08d9d) [@Bolides ![Build Status](https://app.bitrise.io/app/02016c93faf5b17b/status.svg?token=-WGqOL_RvB5Ir43fRaMd0g&branch=master)](https://app.bitrise.io/app/02016c93faf5b17b)
 
-## Develop on Highway
+
+The goal is to make the test and setup run on a build server also run before every push you do. So highway can be used on your dev machine, build server both for macOS and Linux (untested -> [#26](https://github.com/dooZdev/Highway/issues/26) ).
+
+## What do you have to have
+
+For now it is only tested on macOS with xcode 10.1 and swift version 4.2.1 installed. Linux and swift 5 are in the pipeline but currently on hold until this version is stable. 
+
+Follow up
+
+* swift 5 support [#26](https://github.com/dooZdev/Highway/issues/26)
+* linux support [#28](https://github.com/dooZdev/Highway/issues/28)
+
+So for now you need to have installed
+
+* macOS 10.13 or higher
+* [Homebrew 2.1.3](https://github.com/Homebrew/brew)
+* [swift version 4.2.1](https://www.swift.org) this is the version that comes with official release of xcode 10.1
+
+## Use
+
+To use in your own project you need to add it to your swift package. Highway is build to be used as a library you can use to build executables for you project. If you know [fastlane](https://github.com/fastlane/fastlane) you could think of every executable as lane you can run.
+
+To get started you could do the following steps below. By the end you have a generic Highway lane to run any available terminal program you have on your system, wether it is installed or not.
+
+So we will add 2 executables and 1 library in an example swift package
+
+
+
+```bash
+
+# go to your project or a fresh folder
+
+swift package init
+# will setup the 
+```
+
+## Setup Highway
+
+After cloning 
 
 ``` bash
 swift build --configuration release --static-swift-stdlib 
