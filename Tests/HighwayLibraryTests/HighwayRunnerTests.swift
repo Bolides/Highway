@@ -1,8 +1,8 @@
 import DocumentationLibraryMock
 import Errors
 import Foundation
-import HighwayLibrary
 import HighwayDispatchMock
+import HighwayLibrary
 import HighwayLibraryMock
 import Nimble
 import Quick
@@ -14,9 +14,9 @@ import SourceryWorkerMock
 import SwiftFormatWorkerMock
 import Terminal
 import TerminalMock
+import XCTest
 import ZFile
 import ZFileMock
-import XCTest
 
 class HighwayRunnerSpec: QuickSpec
 {

@@ -443,6 +443,7 @@ public struct Highway
                     Highway.Library.Mock.product.asDependency(),
                     Terminal.Mock.product.asDependency(),
                     GitHooks.Mock.product.asDependency(),
+                    HighwayDispatch.Mock.product.asDependency(),
                 ]
                 + ["SignPostMock", "ZFileMock"]
         )
