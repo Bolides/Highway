@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SourceryWorker Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/SourceryWorker" class="dashAnchor"></a>
+    <a title="SourceryWorker Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">SourceryWorker Docs</a> (4% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">SourceryWorker Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SourceryWorker Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/SourceryBuilder.html">SourceryBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SourceryWorker.html">SourceryWorker</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ImportProtocol.html">ImportProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SourceryBuilderProtocol.html">SourceryBuilderProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SourceryProtocol.html">SourceryProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SourceryWorkerProtocol.html">SourceryWorkerProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TemplatePrependProtocol.html">TemplatePrependProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Sourcery.html">Sourcery</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Sourcery/ExecutableNotFoundError.html">– ExecutableNotFoundError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplatePrepend.html">TemplatePrepend</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TemplatePrepend/Import.html">– Import</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SourceryWorker</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">SourceryWorker</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/SourceryWorkerProtocol.html">SourceryWorkerProtocol</a></span><span class="p">,</span> <span class="kt">AutoGenerateProtocol</span></code></pre>
+
+                </div>
+              </div>
+            <p>To generate mocks correctly we have to do a text replacement and run sourcery twice.
+   This worker will perform the following tasks</p>
+
+<ol>
+<li>Find all files in sourceFolder
+1.1 (Optional) Replace also in individual files</li>
+<li>Run sourcery to generate the protocols</li>
+<li>Revert Replace occurances</li>
+<li>Run sourcery to generate the mocks</li>
+<li>Add imports to output</li>
+</ol>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SourceryWorkerAAC10SyncOutputa"></a>
+                    <a name="//apple_ref/swift/Alias/SyncOutput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SourceryWorkerAAC10SyncOutputa">SyncOutput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">SyncOutput</span> <span class="o">=</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SourceryWorkerAAC5queueSo012OS_dispatch_C0CvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/queue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SourceryWorkerAAC5queueSo012OS_dispatch_C0CvpZ">queue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SourceryWorkerAAC14mockableInlineSSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/mockableInline" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SourceryWorkerAAC14mockableInlineSSvpZ">mockableInline</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">mockableInline</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SourceryWorkerAAC11mockableEndSSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/mockableEnd" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SourceryWorkerAAC11mockableEndSSvpZ">mockableEnd</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">mockableEnd</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SourceryWorkerAAC25protocolGeneratableInlineSSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/protocolGeneratableInline" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SourceryWorkerAAC25protocolGeneratableInlineSSvpZ">protocolGeneratableInline</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">protocolGeneratableInline</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SourceryWorkerAAC22protocolGeneratalbeEndSSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/protocolGeneratalbeEnd" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SourceryWorkerAAC22protocolGeneratalbeEndSSvpZ">protocolGeneratalbeEnd</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">protocolGeneratalbeEnd</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SourceryWorkerAAC4nameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SourceryWorkerAAC4nameSSvp">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SourceryWorkerAAC15sourceryYMLFile5ZFile12FileProtocol_pvp"></a>
+                    <a name="//apple_ref/swift/Property/sourceryYMLFile" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SourceryWorkerAAC15sourceryYMLFile5ZFile12FileProtocol_pvp">sourceryYMLFile</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sourceryYMLFile</span><span class="p">:</span> <span class="kt">FileProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Private"></a>
+                <a name="//apple_ref/swift/Section/Private" class="dashAnchor"></a>
+                <a href="#/Private">
+                  <h3 class="section-name">Private</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SourceryWorkerAAC8sourcery8terminal8signPost5queueAbA0A8Protocol_p_8Terminal0iH0_p04SignF00jfH0_p15HighwayDispatch0klH0_ptcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(sourcery:terminal:signPost:queue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SourceryWorkerAAC8sourcery8terminal8signPost5queueAbA0A8Protocol_p_8Terminal0iH0_p04SignF00jfH0_p15HighwayDispatch0klH0_ptcfc">init(sourcery:terminal:signPost:queue:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="nv">sourcery</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SourceryProtocol.html">SourceryProtocol</a></span><span class="p">,</span>
+    <span class="nv">terminal</span><span class="p">:</span> <span class="kt">TerminalProtocol</span> <span class="o">=</span> <span class="kt">Terminal</span><span class="o">.</span><span class="n">shared</span><span class="p">,</span>
+    <span class="nv">signPost</span><span class="p">:</span> <span class="kt">SignPostProtocol</span> <span class="o">=</span> <span class="kt">SignPost</span><span class="o">.</span><span class="n">shared</span><span class="p">,</span>
+    <span class="nv">queue</span><span class="p">:</span> <span class="kt">HighwayDispatchProtocol</span> <span class="o">=</span> <span class="kt">SourceryWorker</span><span class="o">.</span><span class="n"><a href="../Classes/SourceryWorker.html#/s:14SourceryWorkerAAC5queueSo012OS_dispatch_C0CvpZ">queue</a></span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SourceryWorkerAAC7attempt2in_y5ZFile14FolderProtocol_p_ySaySSGyKcctF"></a>
+                    <a name="//apple_ref/swift/Method/attempt(in:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SourceryWorkerAAC7attempt2in_y5ZFile14FolderProtocol_p_ySaySSGyKcctF">attempt(in:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">attempt</span><span class="p">(</span><span class="k">in</span> <span class="nv">folder</span><span class="p">:</span> <span class="kt">FolderProtocol</span><span class="p">,</span> <span class="n">_</span> <span class="nv">async</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kd">@escaping</span> <span class="kt">SourceryWorker</span><span class="o">.</span><span class="kt"><a href="../Classes/SourceryWorker.html#/s:14SourceryWorkerAAC10SyncOutputa">SyncOutput</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-05-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

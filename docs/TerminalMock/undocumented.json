@@ -1,0 +1,3456 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 15,
+      "symbol": "ArchiveOptionsProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 17,
+      "symbol": "ArchiveOptionsProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 19,
+      "symbol": "ArchiveOptionsProtocolMock.scheme",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 25,
+      "symbol": "ArchiveOptionsProtocolMock.underlyingScheme",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 26,
+      "symbol": "ArchiveOptionsProtocolMock.project",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 32,
+      "symbol": "ArchiveOptionsProtocolMock.underlyingProject",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 33,
+      "symbol": "ArchiveOptionsProtocolMock.destination",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 39,
+      "symbol": "ArchiveOptionsProtocolMock.underlyingDestination",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 40,
+      "symbol": "ArchiveOptionsProtocolMock.archivePath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 46,
+      "symbol": "ArchiveOptionsProtocolMock.underlyingArchivePath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 51,
+      "symbol": "ArchivePlistProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 53,
+      "symbol": "ArchivePlistProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 55,
+      "symbol": "ArchivePlistProtocolMock.applicationProperties",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 61,
+      "symbol": "ArchivePlistProtocolMock.underlyingApplicationProperties",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 62,
+      "symbol": "ArchivePlistProtocolMock.applicationPath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 68,
+      "symbol": "ArchivePlistProtocolMock.underlyingApplicationPath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 73,
+      "symbol": "ArchiveProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 75,
+      "symbol": "ArchiveProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 77,
+      "symbol": "ArchiveProtocolMock.archiveFolder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 83,
+      "symbol": "ArchiveProtocolMock.underlyingArchiveFolder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 84,
+      "symbol": "ArchiveProtocolMock.appFolder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 90,
+      "symbol": "ArchiveProtocolMock.underlyingAppFolder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 91,
+      "symbol": "ArchiveProtocolMock.plist",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 97,
+      "symbol": "ArchiveProtocolMock.underlyingPlist",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 102,
+      "symbol": "ArgumentExecutableProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 104,
+      "symbol": "ArgumentExecutableProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 108,
+      "symbol": "ArgumentExecutableProtocolMock.argumentsThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 109,
+      "symbol": "ArgumentExecutableProtocolMock.argumentsCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 110,
+      "symbol": "ArgumentExecutableProtocolMock.argumentsCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 115,
+      "symbol": "ArgumentExecutableProtocolMock.argumentsReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 119,
+      "symbol": "ArgumentExecutableProtocolMock.argumentsClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 123,
+      "symbol": "ArgumentExecutableProtocolMock.arguments()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 155,
+      "symbol": "ArgumentExecutableProtocolMock.executableFileThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 156,
+      "symbol": "ArgumentExecutableProtocolMock.executableFileCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 157,
+      "symbol": "ArgumentExecutableProtocolMock.executableFileCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 162,
+      "symbol": "ArgumentExecutableProtocolMock.executableFileReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 166,
+      "symbol": "ArgumentExecutableProtocolMock.executableFileClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 170,
+      "symbol": "ArgumentExecutableProtocolMock.executableFile()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 203,
+      "symbol": "ArgumentsProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 205,
+      "symbol": "ArgumentsProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 207,
+      "symbol": "ArgumentsProtocolMock.all",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 208,
+      "symbol": "ArgumentsProtocolMock.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 214,
+      "symbol": "ArgumentsProtocolMock.underlyingDescription",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 219,
+      "symbol": "DependencyProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 221,
+      "symbol": "DependencyProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 223,
+      "symbol": "DependencyProtocolMock.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 229,
+      "symbol": "DependencyProtocolMock.underlyingName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 230,
+      "symbol": "DependencyProtocolMock.path",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 236,
+      "symbol": "DependencyProtocolMock.underlyingPath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 237,
+      "symbol": "DependencyProtocolMock.url",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 243,
+      "symbol": "DependencyProtocolMock.underlyingUrl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 244,
+      "symbol": "DependencyProtocolMock.version",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 250,
+      "symbol": "DependencyProtocolMock.underlyingVersion",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 251,
+      "symbol": "DependencyProtocolMock.dependencies",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 252,
+      "symbol": "DependencyProtocolMock.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 258,
+      "symbol": "DependencyProtocolMock.underlyingDescription",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 262,
+      "symbol": "DependencyProtocolMock.gitHooksThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 263,
+      "symbol": "DependencyProtocolMock.gitHooksCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 264,
+      "symbol": "DependencyProtocolMock.gitHooksCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 269,
+      "symbol": "DependencyProtocolMock.gitHooksReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 273,
+      "symbol": "DependencyProtocolMock.gitHooksClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 277,
+      "symbol": "DependencyProtocolMock.gitHooks()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 309,
+      "symbol": "DependencyProtocolMock.srcRootThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 310,
+      "symbol": "DependencyProtocolMock.srcRootCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 311,
+      "symbol": "DependencyProtocolMock.srcRootCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 316,
+      "symbol": "DependencyProtocolMock.srcRootReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 320,
+      "symbol": "DependencyProtocolMock.srcRootClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 324,
+      "symbol": "DependencyProtocolMock.srcRoot()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 356,
+      "symbol": "DependencyProtocolMock.templateFolderThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 357,
+      "symbol": "DependencyProtocolMock.templateFolderCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 358,
+      "symbol": "DependencyProtocolMock.templateFolderCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 363,
+      "symbol": "DependencyProtocolMock.templateFolderReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 367,
+      "symbol": "DependencyProtocolMock.templateFolderClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 371,
+      "symbol": "DependencyProtocolMock.templateFolder()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 403,
+      "symbol": "DependencyProtocolMock.templateFolderExpectedNameThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 404,
+      "symbol": "DependencyProtocolMock.templateFolderExpectedNameCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 405,
+      "symbol": "DependencyProtocolMock.templateFolderExpectedNameCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 410,
+      "symbol": "DependencyProtocolMock.templateFolderExpectedNameReceivedExpectedName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 411,
+      "symbol": "DependencyProtocolMock.templateFolderExpectedNameReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 415,
+      "symbol": "DependencyProtocolMock.templateFolderExpectedNameClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 419,
+      "symbol": "DependencyProtocolMock.templateFolder(expectedName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 452,
+      "symbol": "DependencyProtocolMock.sourceryFolderThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 453,
+      "symbol": "DependencyProtocolMock.sourceryFolderCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 454,
+      "symbol": "DependencyProtocolMock.sourceryFolderCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 459,
+      "symbol": "DependencyProtocolMock.sourceryFolderReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 463,
+      "symbol": "DependencyProtocolMock.sourceryFolderClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 467,
+      "symbol": "DependencyProtocolMock.sourceryFolder()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 499,
+      "symbol": "DependencyProtocolMock.sourceryAutoProtocolFileThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 500,
+      "symbol": "DependencyProtocolMock.sourceryAutoProtocolFileCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 501,
+      "symbol": "DependencyProtocolMock.sourceryAutoProtocolFileCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 506,
+      "symbol": "DependencyProtocolMock.sourceryAutoProtocolFileReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 510,
+      "symbol": "DependencyProtocolMock.sourceryAutoProtocolFileClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 514,
+      "symbol": "DependencyProtocolMock.sourceryAutoProtocolFile()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 547,
+      "symbol": "DependencyServiceProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 549,
+      "symbol": "DependencyServiceProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 553,
+      "symbol": "DependencyServiceProtocolMock.generateDependencyThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 554,
+      "symbol": "DependencyServiceProtocolMock.generateDependencyCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 555,
+      "symbol": "DependencyServiceProtocolMock.generateDependencyCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 560,
+      "symbol": "DependencyServiceProtocolMock.generateDependencyReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 564,
+      "symbol": "DependencyServiceProtocolMock.generateDependencyClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 568,
+      "symbol": "DependencyServiceProtocolMock.generateDependency()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 601,
+      "symbol": "DestinationFactoryProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 603,
+      "symbol": "DestinationFactoryProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 607,
+      "symbol": "DestinationFactoryProtocolMock.macOSArchitectureCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 608,
+      "symbol": "DestinationFactoryProtocolMock.macOSArchitectureCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 613,
+      "symbol": "DestinationFactoryProtocolMock.macOSArchitectureReceivedArchitecture",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 614,
+      "symbol": "DestinationFactoryProtocolMock.macOSArchitectureReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 618,
+      "symbol": "DestinationFactoryProtocolMock.macOSArchitectureClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 622,
+      "symbol": "DestinationFactoryProtocolMock.macOS(architecture:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 650,
+      "symbol": "DestinationFactoryProtocolMock.deviceNameIsGenericIdCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 651,
+      "symbol": "DestinationFactoryProtocolMock.deviceNameIsGenericIdCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 656,
+      "symbol": "DestinationFactoryProtocolMock.deviceNameIsGenericIdReceivedArguments",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 657,
+      "symbol": "DestinationFactoryProtocolMock.deviceNameIsGenericIdReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 661,
+      "symbol": "DestinationFactoryProtocolMock.deviceNameIsGenericIdClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 665,
+      "symbol": "DestinationFactoryProtocolMock.device(_:name:isGeneric:id:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 693,
+      "symbol": "DestinationFactoryProtocolMock.simulatorNameOsIdCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 694,
+      "symbol": "DestinationFactoryProtocolMock.simulatorNameOsIdCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 699,
+      "symbol": "DestinationFactoryProtocolMock.simulatorNameOsIdReceivedArguments",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 700,
+      "symbol": "DestinationFactoryProtocolMock.simulatorNameOsIdReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 704,
+      "symbol": "DestinationFactoryProtocolMock.simulatorNameOsIdClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 708,
+      "symbol": "DestinationFactoryProtocolMock.simulator(_:name:os:id:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 737,
+      "symbol": "DestinationProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 739,
+      "symbol": "DestinationProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 741,
+      "symbol": "DestinationProtocolMock.raw",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 742,
+      "symbol": "DestinationProtocolMock.asString",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 748,
+      "symbol": "DestinationProtocolMock.underlyingAsString",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 753,
+      "symbol": "DumpProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 755,
+      "symbol": "DumpProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 757,
+      "symbol": "DumpProtocolMock.products",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 763,
+      "symbol": "DumpProtocolMock.underlyingProducts",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 764,
+      "symbol": "DumpProtocolMock.targets",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 770,
+      "symbol": "DumpProtocolMock.underlyingTargets",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 775,
+      "symbol": "DumpServiceProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 777,
+      "symbol": "DumpServiceProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 781,
+      "symbol": "DumpServiceProtocolMock.generateDumpThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 782,
+      "symbol": "DumpServiceProtocolMock.generateDumpCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 783,
+      "symbol": "DumpServiceProtocolMock.generateDumpCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 788,
+      "symbol": "DumpServiceProtocolMock.generateDumpReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 792,
+      "symbol": "DumpServiceProtocolMock.generateDumpClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 796,
+      "symbol": "DumpServiceProtocolMock.generateDump()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 829,
+      "symbol": "ExecutableProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 831,
+      "symbol": "ExecutableProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 835,
+      "symbol": "ExecutableProtocolMock.executableFileThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 836,
+      "symbol": "ExecutableProtocolMock.executableFileCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 837,
+      "symbol": "ExecutableProtocolMock.executableFileCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 842,
+      "symbol": "ExecutableProtocolMock.executableFileReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 846,
+      "symbol": "ExecutableProtocolMock.executableFileClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 850,
+      "symbol": "ExecutableProtocolMock.executableFile()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 883,
+      "symbol": "ExportArchiveOptionsProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 885,
+      "symbol": "ExportArchiveOptionsProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 887,
+      "symbol": "ExportArchiveOptionsProtocolMock.archivePath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 893,
+      "symbol": "ExportArchiveOptionsProtocolMock.underlyingArchivePath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 894,
+      "symbol": "ExportArchiveOptionsProtocolMock.exportPath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 900,
+      "symbol": "ExportArchiveOptionsProtocolMock.underlyingExportPath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 904,
+      "symbol": "ExportArchiveOptionsProtocolMock.encodeToThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 905,
+      "symbol": "ExportArchiveOptionsProtocolMock.encodeToCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 906,
+      "symbol": "ExportArchiveOptionsProtocolMock.encodeToCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 911,
+      "symbol": "ExportArchiveOptionsProtocolMock.encodeToReceivedEncoder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 915,
+      "symbol": "ExportArchiveOptionsProtocolMock.encodeToClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 919,
+      "symbol": "ExportArchiveOptionsProtocolMock.encode(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 939,
+      "symbol": "ExportProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 941,
+      "symbol": "ExportProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 943,
+      "symbol": "ExportProtocolMock.folder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 949,
+      "symbol": "ExportProtocolMock.underlyingFolder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 950,
+      "symbol": "ExportProtocolMock.ipa",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 956,
+      "symbol": "ExportProtocolMock.underlyingIpa",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 961,
+      "symbol": "GitToolProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 963,
+      "symbol": "GitToolProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 967,
+      "symbol": "GitToolProtocolMock.isCleanThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 968,
+      "symbol": "GitToolProtocolMock.isCleanCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 969,
+      "symbol": "GitToolProtocolMock.isCleanCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 974,
+      "symbol": "GitToolProtocolMock.isCleanReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 978,
+      "symbol": "GitToolProtocolMock.isCleanClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 982,
+      "symbol": "GitToolProtocolMock.isClean()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1014,
+      "symbol": "GitToolProtocolMock.statusThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1015,
+      "symbol": "GitToolProtocolMock.statusCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1016,
+      "symbol": "GitToolProtocolMock.statusCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1021,
+      "symbol": "GitToolProtocolMock.statusReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1025,
+      "symbol": "GitToolProtocolMock.statusClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1029,
+      "symbol": "GitToolProtocolMock.status()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1061,
+      "symbol": "GitToolProtocolMock.addAllThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1062,
+      "symbol": "GitToolProtocolMock.addAllCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1063,
+      "symbol": "GitToolProtocolMock.addAllCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1068,
+      "symbol": "GitToolProtocolMock.addAllReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1072,
+      "symbol": "GitToolProtocolMock.addAllClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1076,
+      "symbol": "GitToolProtocolMock.addAll()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1108,
+      "symbol": "GitToolProtocolMock.commitMessageThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1109,
+      "symbol": "GitToolProtocolMock.commitMessageCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1110,
+      "symbol": "GitToolProtocolMock.commitMessageCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1115,
+      "symbol": "GitToolProtocolMock.commitMessageReceivedMessage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1116,
+      "symbol": "GitToolProtocolMock.commitMessageReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1120,
+      "symbol": "GitToolProtocolMock.commitMessageClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1124,
+      "symbol": "GitToolProtocolMock.commit(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1157,
+      "symbol": "GitToolProtocolMock.pushToMasterThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1158,
+      "symbol": "GitToolProtocolMock.pushToMasterCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1159,
+      "symbol": "GitToolProtocolMock.pushToMasterCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1164,
+      "symbol": "GitToolProtocolMock.pushToMasterReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1168,
+      "symbol": "GitToolProtocolMock.pushToMasterClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1172,
+      "symbol": "GitToolProtocolMock.pushToMaster()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1204,
+      "symbol": "GitToolProtocolMock.pushTagsToMasterThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1205,
+      "symbol": "GitToolProtocolMock.pushTagsToMasterCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1206,
+      "symbol": "GitToolProtocolMock.pushTagsToMasterCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1211,
+      "symbol": "GitToolProtocolMock.pushTagsToMasterReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1215,
+      "symbol": "GitToolProtocolMock.pushTagsToMasterClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1219,
+      "symbol": "GitToolProtocolMock.pushTagsToMaster()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1251,
+      "symbol": "GitToolProtocolMock.pullThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1252,
+      "symbol": "GitToolProtocolMock.pullCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1253,
+      "symbol": "GitToolProtocolMock.pullCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1258,
+      "symbol": "GitToolProtocolMock.pullReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1262,
+      "symbol": "GitToolProtocolMock.pullClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1266,
+      "symbol": "GitToolProtocolMock.pull()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1298,
+      "symbol": "GitToolProtocolMock.currentTagThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1299,
+      "symbol": "GitToolProtocolMock.currentTagCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1300,
+      "symbol": "GitToolProtocolMock.currentTagCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1305,
+      "symbol": "GitToolProtocolMock.currentTagReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1309,
+      "symbol": "GitToolProtocolMock.currentTagClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1313,
+      "symbol": "GitToolProtocolMock.currentTag()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1345,
+      "symbol": "GitToolProtocolMock.cloneWithThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1346,
+      "symbol": "GitToolProtocolMock.cloneWithCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1347,
+      "symbol": "GitToolProtocolMock.cloneWithCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1352,
+      "symbol": "GitToolProtocolMock.cloneWithReceivedOptions",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1353,
+      "symbol": "GitToolProtocolMock.cloneWithReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1357,
+      "symbol": "GitToolProtocolMock.cloneWithClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1361,
+      "symbol": "GitToolProtocolMock.clone(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1395,
+      "symbol": "MinimalTestOptionsProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1397,
+      "symbol": "MinimalTestOptionsProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1399,
+      "symbol": "MinimalTestOptionsProtocolMock.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1405,
+      "symbol": "MinimalTestOptionsProtocolMock.underlyingDescription",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1409,
+      "symbol": "MinimalTestOptionsProtocolMock.argumentsThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1410,
+      "symbol": "MinimalTestOptionsProtocolMock.argumentsCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1411,
+      "symbol": "MinimalTestOptionsProtocolMock.argumentsCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1416,
+      "symbol": "MinimalTestOptionsProtocolMock.argumentsReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1420,
+      "symbol": "MinimalTestOptionsProtocolMock.argumentsClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1424,
+      "symbol": "MinimalTestOptionsProtocolMock.arguments()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1457,
+      "symbol": "PathEnvironmentParserProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1459,
+      "symbol": "PathEnvironmentParserProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1461,
+      "symbol": "PathEnvironmentParserProtocolMock.urls",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1466,
+      "symbol": "ProcessProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1468,
+      "symbol": "ProcessProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1470,
+      "symbol": "ProcessProtocolMock.standardInput",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1471,
+      "symbol": "ProcessProtocolMock.standardOutput",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1472,
+      "symbol": "ProcessProtocolMock.standardError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1473,
+      "symbol": "ProcessProtocolMock.terminationStatus",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1479,
+      "symbol": "ProcessProtocolMock.underlyingTerminationStatus",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1480,
+      "symbol": "ProcessProtocolMock.arguments",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1481,
+      "symbol": "ProcessProtocolMock.currentDirectoryPath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1487,
+      "symbol": "ProcessProtocolMock.underlyingCurrentDirectoryPath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1488,
+      "symbol": "ProcessProtocolMock.isRunning",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1494,
+      "symbol": "ProcessProtocolMock.underlyingIsRunning",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1495,
+      "symbol": "ProcessProtocolMock.terminationHandler",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1499,
+      "symbol": "ProcessProtocolMock.resumeCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1500,
+      "symbol": "ProcessProtocolMock.resumeCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1505,
+      "symbol": "ProcessProtocolMock.resumeReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1509,
+      "symbol": "ProcessProtocolMock.resumeClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1513,
+      "symbol": "ProcessProtocolMock.resume()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1540,
+      "symbol": "ProcessProtocolMock._RunThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1541,
+      "symbol": "ProcessProtocolMock._RunCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1542,
+      "symbol": "ProcessProtocolMock._RunCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1549,
+      "symbol": "ProcessProtocolMock._RunClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1553,
+      "symbol": "ProcessProtocolMock._run()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1571,
+      "symbol": "ProcessProtocolMock.waitUntilExitCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1572,
+      "symbol": "ProcessProtocolMock.waitUntilExitCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1579,
+      "symbol": "ProcessProtocolMock.waitUntilExitClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1583,
+      "symbol": "ProcessProtocolMock.waitUntilExit()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1594,
+      "symbol": "ProcessProtocolMock.executableFileThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1595,
+      "symbol": "ProcessProtocolMock.executableFileCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1596,
+      "symbol": "ProcessProtocolMock.executableFileCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1601,
+      "symbol": "ProcessProtocolMock.executableFileReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1605,
+      "symbol": "ProcessProtocolMock.executableFileClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1609,
+      "symbol": "ProcessProtocolMock.executableFile()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1642,
+      "symbol": "SwiftProductProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1644,
+      "symbol": "SwiftProductProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1646,
+      "symbol": "SwiftProductProtocolMock.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1652,
+      "symbol": "SwiftProductProtocolMock.underlyingName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1653,
+      "symbol": "SwiftProductProtocolMock.product_type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1659,
+      "symbol": "SwiftProductProtocolMock.underlyingProduct_type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1664,
+      "symbol": "SwiftTargetProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1666,
+      "symbol": "SwiftTargetProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1668,
+      "symbol": "SwiftTargetProtocolMock.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1674,
+      "symbol": "SwiftTargetProtocolMock.underlyingName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1675,
+      "symbol": "SwiftTargetProtocolMock.dependencies",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1681,
+      "symbol": "SwiftTargetProtocolMock.underlyingDependencies",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1686,
+      "symbol": "SystemProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1688,
+      "symbol": "SystemProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1690,
+      "symbol": "SystemProtocolMock.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1696,
+      "symbol": "SystemProtocolMock.underlyingShared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1697,
+      "symbol": "SystemProtocolMock.brewPath",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1703,
+      "symbol": "SystemProtocolMock.underlyingBrewPath",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1704,
+      "symbol": "SystemProtocolMock.jazzyPath",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1710,
+      "symbol": "SystemProtocolMock.underlyingJazzyPath",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1711,
+      "symbol": "SystemProtocolMock.pathEnvironmentParser",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1717,
+      "symbol": "SystemProtocolMock.underlyingPathEnvironmentParser",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1718,
+      "symbol": "SystemProtocolMock.fileSystem",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1724,
+      "symbol": "SystemProtocolMock.underlyingFileSystem",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1728,
+      "symbol": "SystemProtocolMock.rbenvProcessInThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1729,
+      "symbol": "SystemProtocolMock.rbenvProcessInCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1730,
+      "symbol": "SystemProtocolMock.rbenvProcessInCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1735,
+      "symbol": "SystemProtocolMock.rbenvProcessInReceivedFolder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1736,
+      "symbol": "SystemProtocolMock.rbenvProcessInReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1740,
+      "symbol": "SystemProtocolMock.rbenvProcessInClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1744,
+      "symbol": "SystemProtocolMock.rbenvProcess(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1777,
+      "symbol": "SystemProtocolMock.gemProcessNameInThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1778,
+      "symbol": "SystemProtocolMock.gemProcessNameInCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1779,
+      "symbol": "SystemProtocolMock.gemProcessNameInCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1784,
+      "symbol": "SystemProtocolMock.gemProcessNameInReceivedArguments",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1785,
+      "symbol": "SystemProtocolMock.gemProcessNameInReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1789,
+      "symbol": "SystemProtocolMock.gemProcessNameInClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1793,
+      "symbol": "SystemProtocolMock.gemProcess(name:in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1826,
+      "symbol": "SystemProtocolMock.rbenvWhichProcessGemNameInThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1827,
+      "symbol": "SystemProtocolMock.rbenvWhichProcessGemNameInCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1828,
+      "symbol": "SystemProtocolMock.rbenvWhichProcessGemNameInCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1833,
+      "symbol": "SystemProtocolMock.rbenvWhichProcessGemNameInReceivedArguments",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1834,
+      "symbol": "SystemProtocolMock.rbenvWhichProcessGemNameInReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1838,
+      "symbol": "SystemProtocolMock.rbenvWhichProcessGemNameInClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1842,
+      "symbol": "SystemProtocolMock.rbenvWhichProcess(gemName:in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1875,
+      "symbol": "SystemProtocolMock.installOrFindGemProcessNameInThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1876,
+      "symbol": "SystemProtocolMock.installOrFindGemProcessNameInCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1877,
+      "symbol": "SystemProtocolMock.installOrFindGemProcessNameInCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1882,
+      "symbol": "SystemProtocolMock.installOrFindGemProcessNameInReceivedArguments",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1883,
+      "symbol": "SystemProtocolMock.installOrFindGemProcessNameInReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1887,
+      "symbol": "SystemProtocolMock.installOrFindGemProcessNameInClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1891,
+      "symbol": "SystemProtocolMock.installOrFindGemProcess(name:in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1924,
+      "symbol": "SystemProtocolMock.processFromBrewFormulaInThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1925,
+      "symbol": "SystemProtocolMock.processFromBrewFormulaInCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1926,
+      "symbol": "SystemProtocolMock.processFromBrewFormulaInCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1931,
+      "symbol": "SystemProtocolMock.processFromBrewFormulaInReceivedArguments",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1932,
+      "symbol": "SystemProtocolMock.processFromBrewFormulaInReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1936,
+      "symbol": "SystemProtocolMock.processFromBrewFormulaInClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1940,
+      "symbol": "SystemProtocolMock.processFromBrew(formula:in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1973,
+      "symbol": "SystemProtocolMock.installOrGetProcessFromBrewFormulaInThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1974,
+      "symbol": "SystemProtocolMock.installOrGetProcessFromBrewFormulaInCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1975,
+      "symbol": "SystemProtocolMock.installOrGetProcessFromBrewFormulaInCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1980,
+      "symbol": "SystemProtocolMock.installOrGetProcessFromBrewFormulaInReceivedArguments",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1981,
+      "symbol": "SystemProtocolMock.installOrGetProcessFromBrewFormulaInReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1985,
+      "symbol": "SystemProtocolMock.installOrGetProcessFromBrewFormulaInClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 1989,
+      "symbol": "SystemProtocolMock.installOrGetProcessFromBrew(formula:in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2022,
+      "symbol": "SystemProtocolMock.brewListProcessForInThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2023,
+      "symbol": "SystemProtocolMock.brewListProcessForInCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2024,
+      "symbol": "SystemProtocolMock.brewListProcessForInCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2029,
+      "symbol": "SystemProtocolMock.brewListProcessForInReceivedArguments",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2030,
+      "symbol": "SystemProtocolMock.brewListProcessForInReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2034,
+      "symbol": "SystemProtocolMock.brewListProcessForInClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2038,
+      "symbol": "SystemProtocolMock.brewListProcess(for:in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2071,
+      "symbol": "SystemProtocolMock.processThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2072,
+      "symbol": "SystemProtocolMock.processCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2073,
+      "symbol": "SystemProtocolMock.processCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2078,
+      "symbol": "SystemProtocolMock.processReceivedExecutableName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2079,
+      "symbol": "SystemProtocolMock.processReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2083,
+      "symbol": "SystemProtocolMock.processClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2087,
+      "symbol": "SystemProtocolMock.process(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2120,
+      "symbol": "SystemProtocolMock.processCurrentFolderExecutablePathThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2121,
+      "symbol": "SystemProtocolMock.processCurrentFolderExecutablePathCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2122,
+      "symbol": "SystemProtocolMock.processCurrentFolderExecutablePathCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2127,
+      "symbol": "SystemProtocolMock.processCurrentFolderExecutablePathReceivedArguments",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2128,
+      "symbol": "SystemProtocolMock.processCurrentFolderExecutablePathReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2132,
+      "symbol": "SystemProtocolMock.processCurrentFolderExecutablePathClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2136,
+      "symbol": "SystemProtocolMock.process(currentFolder:executablePath:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2169,
+      "symbol": "SystemProtocolMock.processCurrentFolderExecutableFileThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2170,
+      "symbol": "SystemProtocolMock.processCurrentFolderExecutableFileCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2171,
+      "symbol": "SystemProtocolMock.processCurrentFolderExecutableFileCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2176,
+      "symbol": "SystemProtocolMock.processCurrentFolderExecutableFileReceivedArguments",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2177,
+      "symbol": "SystemProtocolMock.processCurrentFolderExecutableFileReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2181,
+      "symbol": "SystemProtocolMock.processCurrentFolderExecutableFileClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2185,
+      "symbol": "SystemProtocolMock.process(currentFolder:executableFile:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2218,
+      "symbol": "SystemProtocolMock.executableWithThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2219,
+      "symbol": "SystemProtocolMock.executableWithCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2220,
+      "symbol": "SystemProtocolMock.executableWithCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2225,
+      "symbol": "SystemProtocolMock.executableWithReceivedExecutableName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2226,
+      "symbol": "SystemProtocolMock.executableWithReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2230,
+      "symbol": "SystemProtocolMock.executableWithClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2234,
+      "symbol": "SystemProtocolMock.executable(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2268,
+      "symbol": "TaskProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2270,
+      "symbol": "TaskProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2272,
+      "symbol": "TaskProtocolMock.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2278,
+      "symbol": "TaskProtocolMock.underlyingName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2279,
+      "symbol": "TaskProtocolMock.executable",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2285,
+      "symbol": "TaskProtocolMock.underlyingExecutable",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2286,
+      "symbol": "TaskProtocolMock.arguments",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2292,
+      "symbol": "TaskProtocolMock.underlyingArguments",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2293,
+      "symbol": "TaskProtocolMock.input",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2299,
+      "symbol": "TaskProtocolMock.underlyingInput",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2300,
+      "symbol": "TaskProtocolMock.output",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2306,
+      "symbol": "TaskProtocolMock.underlyingOutput",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2307,
+      "symbol": "TaskProtocolMock.capturedOutputData",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2308,
+      "symbol": "TaskProtocolMock.readOutputString",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2309,
+      "symbol": "TaskProtocolMock.trimmedOutput",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2310,
+      "symbol": "TaskProtocolMock.capturedOutputString",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2311,
+      "symbol": "TaskProtocolMock.toProcess",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2317,
+      "symbol": "TaskProtocolMock.underlyingToProcess",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2318,
+      "symbol": "TaskProtocolMock.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2324,
+      "symbol": "TaskProtocolMock.underlyingDescription",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2328,
+      "symbol": "TaskProtocolMock.enableReadableOutputDataCapturingCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2329,
+      "symbol": "TaskProtocolMock.enableReadableOutputDataCapturingCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2336,
+      "symbol": "TaskProtocolMock.enableReadableOutputDataCapturingClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2340,
+      "symbol": "TaskProtocolMock.enableReadableOutputDataCapturing()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2352,
+      "symbol": "TerminalProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2354,
+      "symbol": "TerminalProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2358,
+      "symbol": "TerminalProtocolMock.terminalTaskThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2359,
+      "symbol": "TerminalProtocolMock.terminalTaskCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2360,
+      "symbol": "TerminalProtocolMock.terminalTaskCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2365,
+      "symbol": "TerminalProtocolMock.terminalTaskReceivedTask",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2366,
+      "symbol": "TerminalProtocolMock.terminalTaskReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2370,
+      "symbol": "TerminalProtocolMock.terminalTaskClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2374,
+      "symbol": "TerminalProtocolMock.terminal(task:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2407,
+      "symbol": "TerminalProtocolMock.runExecutableThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2408,
+      "symbol": "TerminalProtocolMock.runExecutableCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2409,
+      "symbol": "TerminalProtocolMock.runExecutableCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2414,
+      "symbol": "TerminalProtocolMock.runExecutableReceivedExecutable",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2415,
+      "symbol": "TerminalProtocolMock.runExecutableReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2419,
+      "symbol": "TerminalProtocolMock.runExecutableClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2423,
+      "symbol": "TerminalProtocolMock.runExecutable(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2456,
+      "symbol": "TerminalProtocolMock.runProcessThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2457,
+      "symbol": "TerminalProtocolMock.runProcessCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2458,
+      "symbol": "TerminalProtocolMock.runProcessCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2463,
+      "symbol": "TerminalProtocolMock.runProcessReceivedProcessTask",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2464,
+      "symbol": "TerminalProtocolMock.runProcessReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2468,
+      "symbol": "TerminalProtocolMock.runProcessClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2472,
+      "symbol": "TerminalProtocolMock.runProcess(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2506,
+      "symbol": "TestOptionsProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2508,
+      "symbol": "TestOptionsProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2510,
+      "symbol": "TestOptionsProtocolMock.scheme",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2516,
+      "symbol": "TestOptionsProtocolMock.underlyingScheme",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2517,
+      "symbol": "TestOptionsProtocolMock.project",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2523,
+      "symbol": "TestOptionsProtocolMock.underlyingProject",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2524,
+      "symbol": "TestOptionsProtocolMock.destination",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2530,
+      "symbol": "TestOptionsProtocolMock.underlyingDestination",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2531,
+      "symbol": "TestOptionsProtocolMock.resultBundlePath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2537,
+      "symbol": "TestOptionsProtocolMock.underlyingResultBundlePath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2538,
+      "symbol": "TestOptionsProtocolMock.derivedDataPath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2542,
+      "symbol": "TestOptionsProtocolMock.argumentsThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2543,
+      "symbol": "TestOptionsProtocolMock.argumentsCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2544,
+      "symbol": "TestOptionsProtocolMock.argumentsCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2549,
+      "symbol": "TestOptionsProtocolMock.argumentsReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2553,
+      "symbol": "TestOptionsProtocolMock.argumentsClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2557,
+      "symbol": "TestOptionsProtocolMock.arguments()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2589,
+      "symbol": "TestOptionsProtocolMock.executableFileThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2590,
+      "symbol": "TestOptionsProtocolMock.executableFileCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2591,
+      "symbol": "TestOptionsProtocolMock.executableFileCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2596,
+      "symbol": "TestOptionsProtocolMock.executableFileReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2600,
+      "symbol": "TestOptionsProtocolMock.executableFileClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2604,
+      "symbol": "TestOptionsProtocolMock.executableFile()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2637,
+      "symbol": "TestReportProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2639,
+      "symbol": "TestReportProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2641,
+      "symbol": "TestReportProtocolMock.testSuiteOutput",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2642,
+      "symbol": "TestReportProtocolMock.output",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2643,
+      "symbol": "TestReportProtocolMock.totalNumberOfTests",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2649,
+      "symbol": "TestReportProtocolMock.underlyingTotalNumberOfTests",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2650,
+      "symbol": "TestReportProtocolMock.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2656,
+      "symbol": "TestReportProtocolMock.underlyingDescription",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2661,
+      "symbol": "XCBuildDestinationsProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2663,
+      "symbol": "XCBuildDestinationsProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2665,
+      "symbol": "XCBuildDestinationsProtocolMock.platform",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2671,
+      "symbol": "XCBuildDestinationsProtocolMock.underlyingPlatform",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2672,
+      "symbol": "XCBuildDestinationsProtocolMock.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2678,
+      "symbol": "XCBuildDestinationsProtocolMock.underlyingId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2679,
+      "symbol": "XCBuildDestinationsProtocolMock.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2685,
+      "symbol": "XCBuildDestinationsProtocolMock.underlyingName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2686,
+      "symbol": "XCBuildDestinationsProtocolMock.os",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2692,
+      "symbol": "XCBuildDestinationsProtocolMock.underlyingOs",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2697,
+      "symbol": "XCBuildProtocolMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2699,
+      "symbol": "XCBuildProtocolMock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2703,
+      "symbol": "XCBuildProtocolMock.findPosibleDestinationsForInThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2704,
+      "symbol": "XCBuildProtocolMock.findPosibleDestinationsForInCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2705,
+      "symbol": "XCBuildProtocolMock.findPosibleDestinationsForInCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2710,
+      "symbol": "XCBuildProtocolMock.findPosibleDestinationsForInReceivedArguments",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2711,
+      "symbol": "XCBuildProtocolMock.findPosibleDestinationsForInReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2715,
+      "symbol": "XCBuildProtocolMock.findPosibleDestinationsForInClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2719,
+      "symbol": "XCBuildProtocolMock.findPosibleDestinations(for:in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2752,
+      "symbol": "XCBuildProtocolMock.archiveUsingThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2753,
+      "symbol": "XCBuildProtocolMock.archiveUsingCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2754,
+      "symbol": "XCBuildProtocolMock.archiveUsingCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2759,
+      "symbol": "XCBuildProtocolMock.archiveUsingReceivedOptions",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2760,
+      "symbol": "XCBuildProtocolMock.archiveUsingReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2764,
+      "symbol": "XCBuildProtocolMock.archiveUsingClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2768,
+      "symbol": "XCBuildProtocolMock.archive(using:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2801,
+      "symbol": "XCBuildProtocolMock.exportUsingThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2802,
+      "symbol": "XCBuildProtocolMock.exportUsingCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2803,
+      "symbol": "XCBuildProtocolMock.exportUsingCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2808,
+      "symbol": "XCBuildProtocolMock.exportUsingReceivedOptions",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2809,
+      "symbol": "XCBuildProtocolMock.exportUsingReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2813,
+      "symbol": "XCBuildProtocolMock.exportUsingClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2817,
+      "symbol": "XCBuildProtocolMock.export(using:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2850,
+      "symbol": "XCBuildProtocolMock.buildAndTestUsingThrowableError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2851,
+      "symbol": "XCBuildProtocolMock.buildAndTestUsingCallsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2852,
+      "symbol": "XCBuildProtocolMock.buildAndTestUsingCalled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2857,
+      "symbol": "XCBuildProtocolMock.buildAndTestUsingReceivedOptions",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2858,
+      "symbol": "XCBuildProtocolMock.buildAndTestUsingReturnValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2862,
+      "symbol": "XCBuildProtocolMock.buildAndTestUsingClosure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2866,
+      "symbol": "XCBuildProtocolMock.buildAndTest(using:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2902,
+      "symbol": "SourceryMockError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2904,
+      "symbol": "SourceryMockError.implementErrorCaseFor(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2905,
+      "symbol": "SourceryMockError.subclassMockBeforeUsing(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/Terminal/AutoMockable.generated.swift",
+      "line": 2907,
+      "symbol": "SourceryMockError.debugDescription",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway"
+}

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SecretsLibraryMock  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="SecretsLibraryMock  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">SecretsLibraryMock Docs</a> (0% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">SecretsLibraryMock Reference</a>
+        <img id="carat" src="img/carat.png" />
+        SecretsLibraryMock  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/SecretProtocolMock.html">SecretProtocolMock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SecretsWorkerProtocolMock.html">SecretsWorkerProtocolMock</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/SourceryMockError.html">SourceryMockError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='highway' class='heading'>Highway</h1>
+
+<blockquote>
+<p>Test - Integrate - Build status: <a href="https://app.bitrise.io/app/74c2194000b08d9d">@dooZdev <img src="https://app.bitrise.io/app/74c2194000b08d9d/status.svg?token=IqTwBXnTwOzE2pc1p3-aHw" alt="Build Status"></a> <a href="https://app.bitrise.io/app/02016c93faf5b17b">@Bolides <img src="https://app.bitrise.io/app/02016c93faf5b17b/status.svg?token=-WGqOL_RvB5Ir43fRaMd0g&branch=master" alt="Build Status"></a></p>
+</blockquote>
+
+<p>The goal is to make the test and setup run on a build server also run before every push you do. So highway can be used on your dev machine, build server both for macOS and Linux (untested -&gt; <a href="https://github.com/dooZdev/Highway/issues/26">#26</a> ).</p>
+<h2 id='what-do-you-have-to-have' class='heading'>What do you have to have</h2>
+
+<p>For now it is only tested on macOS with xcode 10.1 and swift version 4.2.1 installed. Linux and swift 5 are in the pipeline but currently on hold until this version is stable. </p>
+
+<p>Follow up</p>
+
+<ul>
+<li>swift 5 support <a href="https://github.com/dooZdev/Highway/issues/26">#26</a></li>
+<li>linux support <a href="https://github.com/dooZdev/Highway/issues/28">#28</a></li>
+</ul>
+
+<p>So for now you need to have installed</p>
+
+<ul>
+<li>macOS 10.13 or higher</li>
+<li><a href="https://github.com/Homebrew/brew">Homebrew 2.1.3</a></li>
+<li><a href="https://www.swift.org">swift version 4.2.1</a> this is the version that comes with official release of xcode 10.1</li>
+</ul>
+<h2 id='use' class='heading'>Use</h2>
+
+<p>To use in your own project you need to add it to your swift package. Highway is build to be used as a library you can use to build executables for you project. If you know <a href="https://github.com/fastlane/fastlane">fastlane</a> you could think of every executable as lane you can run.</p>
+
+<p>To get started you could do the following steps below. By the end you have a generic Highway lane to run any available terminal program you have on your system, wether it is installed or not.</p>
+
+<p>So we will add 2 executables and 1 library in an example swift package</p>
+<pre class="highlight shell"><code>
+<span class="c"># go to your project or a fresh folder</span>
+
+swift package init
+<span class="c"># will setup the </span>
+</code></pre>
+<h2 id='setup-highway' class='heading'>Setup Highway</h2>
+
+<p>After cloning </p>
+<pre class="highlight shell"><code>swift build <span class="nt">--configuration</span> release <span class="nt">--static-swift-stdlib</span> 
+<span class="c"># will output where the executable is build, usually</span>
+./.build/x86_64-apple-macosx10.10/release/HWSetup
+<span class="c"># after running this sourcery is setup too and you can generate code when needed</span>
+</code></pre>
+<h1 id='used-highway-in-your-project' class='heading'>Used Highway in your project</h1>
+
+<p>If you do not yet have a <code>Package.swift</code> run <code>swift package init</code></p>
+
+<p>add <code>.package(url: &quot;https://www.github.com/doozMen/Highway&quot;, from: &quot;2.3.0&quot;)</code></p>
+
+<p>do <code>swift build</code></p>
+
+<p>choose frameworks to add. For example HWSetup runs sourcery for highway, swiftformat and performs tests.</p>
+
+<p>Let&rsquo;s take the exampel or running sourcery</p>
+<pre class="highlight swift"><code><span class="cm">/**
+  Class can be aded to package in target and product.
+  You can run it from a main function you create
+*/</span>
+<span class="kd">public</span> <span class="kd">struct</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">Project</span><span class="err">#</span><span class="o">&gt;</span><span class="kt">Sourcery</span>
+<span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">"</span><span class="se">\(</span><span class="o">&lt;</span><span class="err">#</span><span class="kt">Project</span><span class="err">#</span><span class="o">&gt;</span><span class="kt">Sourcery</span><span class="o">.</span><span class="k">self</span><span class="se">)</span><span class="s">"</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">product</span> <span class="o">=</span> <span class="kt">Product</span><span class="o">.</span><span class="nf">executable</span><span class="p">(</span>
+        <span class="nv">name</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+        <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span><span class="n">name</span><span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">target</span> <span class="o">=</span> <span class="kt">Target</span><span class="o">.</span><span class="nf">target</span><span class="p">(</span>
+        <span class="nv">name</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+        <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span><span class="s">"Highway"</span><span class="p">]</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="k">let</span> <span class="nv">packageDependencies</span> <span class="o">=</span> 
+<span class="kd">public</span> <span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
+    <span class="nv">name</span><span class="p">:</span> <span class="s">"&lt;#Project#&gt;Sourcery"</span><span class="p">,</span>
+    <span class="nv">products</span><span class="p">:</span> <span class="p">[</span><span class="o">&lt;</span><span class="err">#</span><span class="kt">Project</span><span class="err">#</span><span class="o">&gt;</span><span class="kt">Sourcery</span><span class="o">.</span><span class="n">product</span><span class="p">],</span>
+    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://www.github.com/Bolides/Highway"</span><span class="p">,</span> <span class="s">"2.10.6"</span> <span class="o">..&lt;</span> <span class="s">"3.0.0"</span><span class="p">),],</span>
+    <span class="nv">targets</span><span class="p">:[</span><span class="o">&lt;</span><span class="err">#</span><span class="kt">Project</span><span class="err">#</span><span class="o">&gt;</span><span class="kt">Sourcery</span><span class="o">.</span><span class="n">target</span><span class="p">]</span>
+<span class="p">)</span>
+</code></pre>
+
+<p>A possible main function could be</p>
+<pre class="highlight plaintext"><code>
+import Arguments
+import Errors
+import Foundation
+import Git
+import GitHooks
+import Highway
+import HighwayDispatch
+import SignPost
+import SourceryWorker
+import SwiftFormatWorker
+import Terminal
+import XCBuild
+import ZFile
+
+// MARK: - PREPARE
+
+let highwayRunner: HighwayRunner!
+let dispatchGroup: HWDispatchGroupProtocol = DispatchGroup()
+let signPost = SignPost.shared
+
+// MARK: - RUN
+
+let dependencyService: DependencyServiceProtocol!
+
+do
+{
+    let srcRoot = try File(path: #file).parentFolder().parentFolder().parentFolder()
+    dependencyService = DependencyService(in: srcRoot)
+
+    // Swift Package
+
+    let dumpService = DumpService(swiftPackageFolder: srcRoot)
+    let package = try Highway.package(for: srcRoot, dependencyService: dependencyService, dumpService: dumpService)
+
+    let sourceryBuilder = SourceryBuilder(dependencyService: dependencyService)
+    let highway = try Highway(package: package, dependencyService: dependencyService, sourceryBuilder: sourceryBuilder, gitHooksPrePushExecutableName: "HWSetup")
+
+    highwayRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
+
+    //    // Githooks
+
+    highwayRunner.runSourcery(handleSourceryOutput)
+
+    dispatchGroup.notifyMain
+    {
+        highwayRunner.runSwiftformat(handleSwiftformat)
+        dispatchGroup.wait()
+
+        guard let errors = highwayRunner.errors, errors.count &gt; 0 else
+        {
+            signPost.message("🚀 \(HighwayRunner.self) ✅")
+            exit(EXIT_SUCCESS)
+        }
+
+        signPost.message("🚀 \(HighwayRunner.self) has \(errors.count) ❌")
+
+        for error in errors.enumerated()
+        {
+            let message = """
+            ❌ \(error.offset + 1)
+
+            \(error.element)
+
+            ---
+
+            """
+            signPost.error(message)
+        }
+
+        exit(EXIT_FAILURE)
+    }
+    dispatchMain()
+}
+catch
+{
+    signPost.error("\(error)")
+    exit(EXIT_FAILURE)
+}
+
+</code></pre>
+
+<p>Then you can build this with <code>swift build</code>. Any other products you add to your swift package will get sourcery updates if you run the <code>&lt;#Project#&gt;Sourcery</code>.</p>
+
+<p>🚀 Done</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-05-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
