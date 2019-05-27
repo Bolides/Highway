@@ -52,7 +52,7 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
         self.fileSystem = fileSystem
     }
 
-    // MARK: - Seret reveal
+    // MARK: - Secret reveal
 
     /**
      reveals secrets if they are not already revealed

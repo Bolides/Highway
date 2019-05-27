@@ -66,3 +66,5 @@ Carthage
 /Sources/.sourcery-HighwaySourcery.yml
 /Sources/.sourcery-DocumentationLibrary.yml
 /Sources/.sourcery-Documentation.yml
+/Sources/.sourcery-HighwayLibrary.yml
+/Sources/.sourcery-GitHooksLibrary.yml

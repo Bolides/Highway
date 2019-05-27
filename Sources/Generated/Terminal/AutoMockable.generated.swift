@@ -1,12 +1,102 @@
-import Arguments
+import Errors
 import Foundation
+import HighwayDispatch
+import Result
 import SignPost
+import SourceryAutoProtocols
 import Terminal
 import ZFile
 import ZFileMock
 
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
+
+// MARK: - ArchiveOptionsProtocolMock
+
+open class ArchiveOptionsProtocolMock: ArchiveOptionsProtocol
+{
+    public init() {}
+
+    public var scheme: String
+    {
+        get { return underlyingScheme }
+        set(value) { underlyingScheme = value }
+    }
+
+    public var underlyingScheme: String = "AutoMockable filled value"
+    public var project: String
+    {
+        get { return underlyingProject }
+        set(value) { underlyingProject = value }
+    }
+
+    public var underlyingProject: String = "AutoMockable filled value"
+    public var destination: DestinationProtocol
+    {
+        get { return underlyingDestination }
+        set(value) { underlyingDestination = value }
+    }
+
+    public var underlyingDestination: DestinationProtocol!
+    public var archivePath: String
+    {
+        get { return underlyingArchivePath }
+        set(value) { underlyingArchivePath = value }
+    }
+
+    public var underlyingArchivePath: String = "AutoMockable filled value"
+}
+
+// MARK: - ArchivePlistProtocolMock
+
+open class ArchivePlistProtocolMock: ArchivePlistProtocol
+{
+    public init() {}
+
+    public var applicationProperties: String
+    {
+        get { return underlyingApplicationProperties }
+        set(value) { underlyingApplicationProperties = value }
+    }
+
+    public var underlyingApplicationProperties: String = "AutoMockable filled value"
+    public var applicationPath: String
+    {
+        get { return underlyingApplicationPath }
+        set(value) { underlyingApplicationPath = value }
+    }
+
+    public var underlyingApplicationPath: String = "AutoMockable filled value"
+}
+
+// MARK: - ArchiveProtocolMock
+
+open class ArchiveProtocolMock: ArchiveProtocol
+{
+    public init() {}
+
+    public var archiveFolder: FolderProtocol
+    {
+        get { return underlyingArchiveFolder }
+        set(value) { underlyingArchiveFolder = value }
+    }
+
+    public var underlyingArchiveFolder: FolderProtocol!
+    public var appFolder: FolderProtocol
+    {
+        get { return underlyingAppFolder }
+        set(value) { underlyingAppFolder = value }
+    }
+
+    public var underlyingAppFolder: FolderProtocol!
+    public var plist: ArchivePlistProtocol
+    {
+        get { return underlyingPlist }
+        set(value) { underlyingPlist = value }
+    }
+
+    public var underlyingPlist: ArchivePlistProtocol!
+}
 
 // MARK: - ArgumentExecutableProtocolMock
 
@@ -109,6 +199,350 @@ open class ArgumentExecutableProtocolMock: ArgumentExecutableProtocol
     }
 }
 
+// MARK: - ArgumentsProtocolMock
+
+open class ArgumentsProtocolMock: ArgumentsProtocol
+{
+    public init() {}
+
+    public var all: [String] = []
+    public var description: String
+    {
+        get { return underlyingDescription }
+        set(value) { underlyingDescription = value }
+    }
+
+    public var underlyingDescription: String = "AutoMockable filled value"
+}
+
+// MARK: - DependencyProtocolMock
+
+open class DependencyProtocolMock: DependencyProtocol
+{
+    public init() {}
+
+    public var name: String
+    {
+        get { return underlyingName }
+        set(value) { underlyingName = value }
+    }
+
+    public var underlyingName: String = "AutoMockable filled value"
+    public var path: String
+    {
+        get { return underlyingPath }
+        set(value) { underlyingPath = value }
+    }
+
+    public var underlyingPath: String = "AutoMockable filled value"
+    public var url: URL
+    {
+        get { return underlyingUrl }
+        set(value) { underlyingUrl = value }
+    }
+
+    public var underlyingUrl: URL!
+    public var version: String
+    {
+        get { return underlyingVersion }
+        set(value) { underlyingVersion = value }
+    }
+
+    public var underlyingVersion: String = "AutoMockable filled value"
+    public var dependencies: [Dependency] = []
+    public var description: String
+    {
+        get { return underlyingDescription }
+        set(value) { underlyingDescription = value }
+    }
+
+    public var underlyingDescription: String = "AutoMockable filled value"
+
+    // MARK: - <gitHooks> - parameters
+
+    public var gitHooksThrowableError: Error?
+    public var gitHooksCallsCount = 0
+    public var gitHooksCalled: Bool
+    {
+        return gitHooksCallsCount > 0
+    }
+
+    public var gitHooksReturnValue: FolderProtocol?
+
+    // MARK: - <gitHooks> - closure mocks
+
+    public var gitHooksClosure: (() throws -> FolderProtocol)?
+
+    // MARK: - <gitHooks> - method mocked
+
+    open func gitHooks() throws -> FolderProtocol
+    {
+        // <gitHooks> - Throwable method implementation
+
+        if let error = gitHooksThrowableError
+        {
+            throw error
+        }
+
+        gitHooksCallsCount += 1
+
+        // <gitHooks> - Return Value mock implementation
+
+        guard let closureReturn = gitHooksClosure else
+        {
+            guard let returnValue = gitHooksReturnValue else
+            {
+                let message = "No returnValue implemented for gitHooksClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement FolderProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
+    }
+
+    // MARK: - <srcRoot> - parameters
+
+    public var srcRootThrowableError: Error?
+    public var srcRootCallsCount = 0
+    public var srcRootCalled: Bool
+    {
+        return srcRootCallsCount > 0
+    }
+
+    public var srcRootReturnValue: FolderProtocol?
+
+    // MARK: - <srcRoot> - closure mocks
+
+    public var srcRootClosure: (() throws -> FolderProtocol)?
+
+    // MARK: - <srcRoot> - method mocked
+
+    open func srcRoot() throws -> FolderProtocol
+    {
+        // <srcRoot> - Throwable method implementation
+
+        if let error = srcRootThrowableError
+        {
+            throw error
+        }
+
+        srcRootCallsCount += 1
+
+        // <srcRoot> - Return Value mock implementation
+
+        guard let closureReturn = srcRootClosure else
+        {
+            guard let returnValue = srcRootReturnValue else
+            {
+                let message = "No returnValue implemented for srcRootClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement FolderProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
+    }
+
+    // MARK: - <templateFolder> - parameters
+
+    public var templateFolderThrowableError: Error?
+    public var templateFolderCallsCount = 0
+    public var templateFolderCalled: Bool
+    {
+        return templateFolderCallsCount > 0
+    }
+
+    public var templateFolderReturnValue: FolderProtocol?
+
+    // MARK: - <templateFolder> - closure mocks
+
+    public var templateFolderClosure: (() throws -> FolderProtocol)?
+
+    // MARK: - <templateFolder> - method mocked
+
+    open func templateFolder() throws -> FolderProtocol
+    {
+        // <templateFolder> - Throwable method implementation
+
+        if let error = templateFolderThrowableError
+        {
+            throw error
+        }
+
+        templateFolderCallsCount += 1
+
+        // <templateFolder> - Return Value mock implementation
+
+        guard let closureReturn = templateFolderClosure else
+        {
+            guard let returnValue = templateFolderReturnValue else
+            {
+                let message = "No returnValue implemented for templateFolderClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement FolderProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
+    }
+
+    // MARK: - <templateFolder> - parameters
+
+    public var templateFolderExpectedNameThrowableError: Error?
+    public var templateFolderExpectedNameCallsCount = 0
+    public var templateFolderExpectedNameCalled: Bool
+    {
+        return templateFolderExpectedNameCallsCount > 0
+    }
+
+    public var templateFolderExpectedNameReceivedExpectedName: String?
+    public var templateFolderExpectedNameReturnValue: FolderProtocol?
+
+    // MARK: - <templateFolder> - closure mocks
+
+    public var templateFolderExpectedNameClosure: ((String) throws -> FolderProtocol)?
+
+    // MARK: - <templateFolder> - method mocked
+
+    open func templateFolder(expectedName: String) throws -> FolderProtocol
+    {
+        // <templateFolder> - Throwable method implementation
+
+        if let error = templateFolderExpectedNameThrowableError
+        {
+            throw error
+        }
+
+        templateFolderExpectedNameCallsCount += 1
+        templateFolderExpectedNameReceivedExpectedName = expectedName
+
+        // <templateFolder> - Return Value mock implementation
+
+        guard let closureReturn = templateFolderExpectedNameClosure else
+        {
+            guard let returnValue = templateFolderExpectedNameReturnValue else
+            {
+                let message = "No returnValue implemented for templateFolderExpectedNameClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement FolderProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(expectedName)
+    }
+
+    // MARK: - <sourceryFolder> - parameters
+
+    public var sourceryFolderThrowableError: Error?
+    public var sourceryFolderCallsCount = 0
+    public var sourceryFolderCalled: Bool
+    {
+        return sourceryFolderCallsCount > 0
+    }
+
+    public var sourceryFolderReturnValue: FolderProtocol?
+
+    // MARK: - <sourceryFolder> - closure mocks
+
+    public var sourceryFolderClosure: (() throws -> FolderProtocol)?
+
+    // MARK: - <sourceryFolder> - method mocked
+
+    open func sourceryFolder() throws -> FolderProtocol
+    {
+        // <sourceryFolder> - Throwable method implementation
+
+        if let error = sourceryFolderThrowableError
+        {
+            throw error
+        }
+
+        sourceryFolderCallsCount += 1
+
+        // <sourceryFolder> - Return Value mock implementation
+
+        guard let closureReturn = sourceryFolderClosure else
+        {
+            guard let returnValue = sourceryFolderReturnValue else
+            {
+                let message = "No returnValue implemented for sourceryFolderClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement FolderProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
+    }
+
+    // MARK: - <sourceryAutoProtocolFile> - parameters
+
+    public var sourceryAutoProtocolFileThrowableError: Error?
+    public var sourceryAutoProtocolFileCallsCount = 0
+    public var sourceryAutoProtocolFileCalled: Bool
+    {
+        return sourceryAutoProtocolFileCallsCount > 0
+    }
+
+    public var sourceryAutoProtocolFileReturnValue: FileProtocol?
+
+    // MARK: - <sourceryAutoProtocolFile> - closure mocks
+
+    public var sourceryAutoProtocolFileClosure: (() throws -> FileProtocol)?
+
+    // MARK: - <sourceryAutoProtocolFile> - method mocked
+
+    open func sourceryAutoProtocolFile() throws -> FileProtocol
+    {
+        // <sourceryAutoProtocolFile> - Throwable method implementation
+
+        if let error = sourceryAutoProtocolFileThrowableError
+        {
+            throw error
+        }
+
+        sourceryAutoProtocolFileCallsCount += 1
+
+        // <sourceryAutoProtocolFile> - Return Value mock implementation
+
+        guard let closureReturn = sourceryAutoProtocolFileClosure else
+        {
+            guard let returnValue = sourceryAutoProtocolFileReturnValue else
+            {
+                let message = "No returnValue implemented for sourceryAutoProtocolFileClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement FileProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
+    }
+}
+
 // MARK: - DependencyServiceProtocolMock
 
 open class DependencyServiceProtocolMock: DependencyServiceProtocol
@@ -161,6 +595,180 @@ open class DependencyServiceProtocolMock: DependencyServiceProtocol
 
         return try closureReturn()
     }
+}
+
+// MARK: - DestinationFactoryProtocolMock
+
+open class DestinationFactoryProtocolMock: DestinationFactoryProtocol
+{
+    public init() {}
+
+    // MARK: - <macOS> - parameters
+
+    public var macOSArchitectureCallsCount = 0
+    public var macOSArchitectureCalled: Bool
+    {
+        return macOSArchitectureCallsCount > 0
+    }
+
+    public var macOSArchitectureReceivedArchitecture: Destination.Architecture?
+    public var macOSArchitectureReturnValue: Destination?
+
+    // MARK: - <macOS> - closure mocks
+
+    public var macOSArchitectureClosure: ((Destination.Architecture) -> Destination)?
+
+    // MARK: - <macOS> - method mocked
+
+    open func macOS(architecture: Destination.Architecture) -> Destination
+    {
+        macOSArchitectureCallsCount += 1
+        macOSArchitectureReceivedArchitecture = architecture
+
+        // <macOS> - Return Value mock implementation
+
+        guard let closureReturn = macOSArchitectureClosure else
+        {
+            guard let returnValue = macOSArchitectureReturnValue else
+            {
+                let message = "No returnValue implemented for macOSArchitectureClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement Destination
+
+                print("❌ \(error)")
+
+                fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
+            }
+            return returnValue
+        }
+
+        return closureReturn(architecture)
+    }
+
+    // MARK: - <device> - parameters
+
+    public var deviceNameIsGenericIdCallsCount = 0
+    public var deviceNameIsGenericIdCalled: Bool
+    {
+        return deviceNameIsGenericIdCallsCount > 0
+    }
+
+    public var deviceNameIsGenericIdReceivedArguments: (device: Destination.Device, name: String?, isGeneric: Bool, id: String?)?
+    public var deviceNameIsGenericIdReturnValue: Destination?
+
+    // MARK: - <device> - closure mocks
+
+    public var deviceNameIsGenericIdClosure: ((Destination.Device, String?, Bool, String?) -> Destination)?
+
+    // MARK: - <device> - method mocked
+
+    open func device(_ device: Destination.Device, name: String?, isGeneric: Bool, id: String?) -> Destination
+    {
+        deviceNameIsGenericIdCallsCount += 1
+        deviceNameIsGenericIdReceivedArguments = (device: device, name: name, isGeneric: isGeneric, id: id)
+
+        // <device> - Return Value mock implementation
+
+        guard let closureReturn = deviceNameIsGenericIdClosure else
+        {
+            guard let returnValue = deviceNameIsGenericIdReturnValue else
+            {
+                let message = "No returnValue implemented for deviceNameIsGenericIdClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement Destination
+
+                print("❌ \(error)")
+
+                fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
+            }
+            return returnValue
+        }
+
+        return closureReturn(device, name, isGeneric, id)
+    }
+
+    // MARK: - <simulator> - parameters
+
+    public var simulatorNameOsIdCallsCount = 0
+    public var simulatorNameOsIdCalled: Bool
+    {
+        return simulatorNameOsIdCallsCount > 0
+    }
+
+    public var simulatorNameOsIdReceivedArguments: (simulator: Destination.Simulator, name: String, os: Destination.OS, id: String?)?
+    public var simulatorNameOsIdReturnValue: Destination?
+
+    // MARK: - <simulator> - closure mocks
+
+    public var simulatorNameOsIdClosure: ((Destination.Simulator, String, Destination.OS, String?) -> Destination)?
+
+    // MARK: - <simulator> - method mocked
+
+    open func simulator(_ simulator: Destination.Simulator, name: String, os: Destination.OS, id: String?) -> Destination
+    {
+        simulatorNameOsIdCallsCount += 1
+        simulatorNameOsIdReceivedArguments = (simulator: simulator, name: name, os: os, id: id)
+
+        // <simulator> - Return Value mock implementation
+
+        guard let closureReturn = simulatorNameOsIdClosure else
+        {
+            guard let returnValue = simulatorNameOsIdReturnValue else
+            {
+                let message = "No returnValue implemented for simulatorNameOsIdClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement Destination
+
+                print("❌ \(error)")
+
+                fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
+            }
+            return returnValue
+        }
+
+        return closureReturn(simulator, name, os, id)
+    }
+}
+
+// MARK: - DestinationProtocolMock
+
+open class DestinationProtocolMock: DestinationProtocol
+{
+    public init() {}
+
+    public var raw: [String: String] = [:]
+    public var asString: String
+    {
+        get { return underlyingAsString }
+        set(value) { underlyingAsString = value }
+    }
+
+    public var underlyingAsString: String = "AutoMockable filled value"
+}
+
+// MARK: - DumpProtocolMock
+
+open class DumpProtocolMock: DumpProtocol
+{
+    public init() {}
+
+    public var products: Set<SwiftProduct>
+    {
+        get { return underlyingProducts }
+        set(value) { underlyingProducts = value }
+    }
+
+    public var underlyingProducts: Set<SwiftProduct>!
+    public var targets: Set<SwiftTarget>
+    {
+        get { return underlyingTargets }
+        set(value) { underlyingTargets = value }
+    }
+
+    public var underlyingTargets: Set<SwiftTarget>!
 }
 
 // MARK: - DumpServiceProtocolMock
@@ -261,6 +869,580 @@ open class ExecutableProtocolMock: ExecutableProtocol
                 let error = SourceryMockError.implementErrorCaseFor(message)
 
                 // You should implement FileProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
+    }
+}
+
+// MARK: - ExportArchiveOptionsProtocolMock
+
+open class ExportArchiveOptionsProtocolMock: ExportArchiveOptionsProtocol
+{
+    public init() {}
+
+    public var archivePath: FolderProtocol
+    {
+        get { return underlyingArchivePath }
+        set(value) { underlyingArchivePath = value }
+    }
+
+    public var underlyingArchivePath: FolderProtocol!
+    public var exportPath: String
+    {
+        get { return underlyingExportPath }
+        set(value) { underlyingExportPath = value }
+    }
+
+    public var underlyingExportPath: String = "AutoMockable filled value"
+
+    // MARK: - <encode> - parameters
+
+    public var encodeToThrowableError: Error?
+    public var encodeToCallsCount = 0
+    public var encodeToCalled: Bool
+    {
+        return encodeToCallsCount > 0
+    }
+
+    public var encodeToReceivedEncoder: Encoder?
+
+    // MARK: - <encode> - closure mocks
+
+    public var encodeToClosure: ((Encoder) throws -> Void)?
+
+    // MARK: - <encode> - method mocked
+
+    open func encode(to encoder: Encoder) throws
+    {
+        // <encode> - Throwable method implementation
+
+        if let error = encodeToThrowableError
+        {
+            throw error
+        }
+
+        encodeToCallsCount += 1
+        encodeToReceivedEncoder = encoder
+
+        // <encode> - Void return mock implementation
+
+        try encodeToClosure?(encoder)
+    }
+}
+
+// MARK: - ExportProtocolMock
+
+open class ExportProtocolMock: ExportProtocol
+{
+    public init() {}
+
+    public var folder: FolderProtocol
+    {
+        get { return underlyingFolder }
+        set(value) { underlyingFolder = value }
+    }
+
+    public var underlyingFolder: FolderProtocol!
+    public var ipa: FileProtocol
+    {
+        get { return underlyingIpa }
+        set(value) { underlyingIpa = value }
+    }
+
+    public var underlyingIpa: FileProtocol!
+}
+
+// MARK: - GitToolProtocolMock
+
+open class GitToolProtocolMock: GitToolProtocol
+{
+    public init() {}
+
+    // MARK: - <isClean> - parameters
+
+    public var isCleanThrowableError: Error?
+    public var isCleanCallsCount = 0
+    public var isCleanCalled: Bool
+    {
+        return isCleanCallsCount > 0
+    }
+
+    public var isCleanReturnValue: Bool?
+
+    // MARK: - <isClean> - closure mocks
+
+    public var isCleanClosure: (() throws -> Bool)?
+
+    // MARK: - <isClean> - method mocked
+
+    open func isClean() throws -> Bool
+    {
+        // <isClean> - Throwable method implementation
+
+        if let error = isCleanThrowableError
+        {
+            throw error
+        }
+
+        isCleanCallsCount += 1
+
+        // <isClean> - Return Value mock implementation
+
+        guard let closureReturn = isCleanClosure else
+        {
+            guard let returnValue = isCleanReturnValue else
+            {
+                let message = "No returnValue implemented for isCleanClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement Bool
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
+    }
+
+    // MARK: - <status> - parameters
+
+    public var statusThrowableError: Error?
+    public var statusCallsCount = 0
+    public var statusCalled: Bool
+    {
+        return statusCallsCount > 0
+    }
+
+    public var statusReturnValue: [String]?
+
+    // MARK: - <status> - closure mocks
+
+    public var statusClosure: (() throws -> [String])?
+
+    // MARK: - <status> - method mocked
+
+    open func status() throws -> [String]
+    {
+        // <status> - Throwable method implementation
+
+        if let error = statusThrowableError
+        {
+            throw error
+        }
+
+        statusCallsCount += 1
+
+        // <status> - Return Value mock implementation
+
+        guard let closureReturn = statusClosure else
+        {
+            guard let returnValue = statusReturnValue else
+            {
+                let message = "No returnValue implemented for statusClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement [String]
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
+    }
+
+    // MARK: - <addAll> - parameters
+
+    public var addAllThrowableError: Error?
+    public var addAllCallsCount = 0
+    public var addAllCalled: Bool
+    {
+        return addAllCallsCount > 0
+    }
+
+    public var addAllReturnValue: [String]?
+
+    // MARK: - <addAll> - closure mocks
+
+    public var addAllClosure: (() throws -> [String])?
+
+    // MARK: - <addAll> - method mocked
+
+    open func addAll() throws -> [String]
+    {
+        // <addAll> - Throwable method implementation
+
+        if let error = addAllThrowableError
+        {
+            throw error
+        }
+
+        addAllCallsCount += 1
+
+        // <addAll> - Return Value mock implementation
+
+        guard let closureReturn = addAllClosure else
+        {
+            guard let returnValue = addAllReturnValue else
+            {
+                let message = "No returnValue implemented for addAllClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement [String]
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
+    }
+
+    // MARK: - <commit> - parameters
+
+    public var commitMessageThrowableError: Error?
+    public var commitMessageCallsCount = 0
+    public var commitMessageCalled: Bool
+    {
+        return commitMessageCallsCount > 0
+    }
+
+    public var commitMessageReceivedMessage: String?
+    public var commitMessageReturnValue: [String]?
+
+    // MARK: - <commit> - closure mocks
+
+    public var commitMessageClosure: ((String) throws -> [String])?
+
+    // MARK: - <commit> - method mocked
+
+    open func commit(message: String) throws -> [String]
+    {
+        // <commit> - Throwable method implementation
+
+        if let error = commitMessageThrowableError
+        {
+            throw error
+        }
+
+        commitMessageCallsCount += 1
+        commitMessageReceivedMessage = message
+
+        // <commit> - Return Value mock implementation
+
+        guard let closureReturn = commitMessageClosure else
+        {
+            guard let returnValue = commitMessageReturnValue else
+            {
+                let message = "No returnValue implemented for commitMessageClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement [String]
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(message)
+    }
+
+    // MARK: - <pushToMaster> - parameters
+
+    public var pushToMasterThrowableError: Error?
+    public var pushToMasterCallsCount = 0
+    public var pushToMasterCalled: Bool
+    {
+        return pushToMasterCallsCount > 0
+    }
+
+    public var pushToMasterReturnValue: [String]?
+
+    // MARK: - <pushToMaster> - closure mocks
+
+    public var pushToMasterClosure: (() throws -> [String])?
+
+    // MARK: - <pushToMaster> - method mocked
+
+    open func pushToMaster() throws -> [String]
+    {
+        // <pushToMaster> - Throwable method implementation
+
+        if let error = pushToMasterThrowableError
+        {
+            throw error
+        }
+
+        pushToMasterCallsCount += 1
+
+        // <pushToMaster> - Return Value mock implementation
+
+        guard let closureReturn = pushToMasterClosure else
+        {
+            guard let returnValue = pushToMasterReturnValue else
+            {
+                let message = "No returnValue implemented for pushToMasterClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement [String]
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
+    }
+
+    // MARK: - <pushTagsToMaster> - parameters
+
+    public var pushTagsToMasterThrowableError: Error?
+    public var pushTagsToMasterCallsCount = 0
+    public var pushTagsToMasterCalled: Bool
+    {
+        return pushTagsToMasterCallsCount > 0
+    }
+
+    public var pushTagsToMasterReturnValue: [String]?
+
+    // MARK: - <pushTagsToMaster> - closure mocks
+
+    public var pushTagsToMasterClosure: (() throws -> [String])?
+
+    // MARK: - <pushTagsToMaster> - method mocked
+
+    open func pushTagsToMaster() throws -> [String]
+    {
+        // <pushTagsToMaster> - Throwable method implementation
+
+        if let error = pushTagsToMasterThrowableError
+        {
+            throw error
+        }
+
+        pushTagsToMasterCallsCount += 1
+
+        // <pushTagsToMaster> - Return Value mock implementation
+
+        guard let closureReturn = pushTagsToMasterClosure else
+        {
+            guard let returnValue = pushTagsToMasterReturnValue else
+            {
+                let message = "No returnValue implemented for pushTagsToMasterClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement [String]
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
+    }
+
+    // MARK: - <pull> - parameters
+
+    public var pullThrowableError: Error?
+    public var pullCallsCount = 0
+    public var pullCalled: Bool
+    {
+        return pullCallsCount > 0
+    }
+
+    public var pullReturnValue: [String]?
+
+    // MARK: - <pull> - closure mocks
+
+    public var pullClosure: (() throws -> [String])?
+
+    // MARK: - <pull> - method mocked
+
+    open func pull() throws -> [String]
+    {
+        // <pull> - Throwable method implementation
+
+        if let error = pullThrowableError
+        {
+            throw error
+        }
+
+        pullCallsCount += 1
+
+        // <pull> - Return Value mock implementation
+
+        guard let closureReturn = pullClosure else
+        {
+            guard let returnValue = pullReturnValue else
+            {
+                let message = "No returnValue implemented for pullClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement [String]
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
+    }
+
+    // MARK: - <currentTag> - parameters
+
+    public var currentTagThrowableError: Error?
+    public var currentTagCallsCount = 0
+    public var currentTagCalled: Bool
+    {
+        return currentTagCallsCount > 0
+    }
+
+    public var currentTagReturnValue: [String]?
+
+    // MARK: - <currentTag> - closure mocks
+
+    public var currentTagClosure: (() throws -> [String])?
+
+    // MARK: - <currentTag> - method mocked
+
+    open func currentTag() throws -> [String]
+    {
+        // <currentTag> - Throwable method implementation
+
+        if let error = currentTagThrowableError
+        {
+            throw error
+        }
+
+        currentTagCallsCount += 1
+
+        // <currentTag> - Return Value mock implementation
+
+        guard let closureReturn = currentTagClosure else
+        {
+            guard let returnValue = currentTagReturnValue else
+            {
+                let message = "No returnValue implemented for currentTagClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement [String]
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
+    }
+
+    // MARK: - <clone> - parameters
+
+    public var cloneWithThrowableError: Error?
+    public var cloneWithCallsCount = 0
+    public var cloneWithCalled: Bool
+    {
+        return cloneWithCallsCount > 0
+    }
+
+    public var cloneWithReceivedOptions: CloneOptions?
+    public var cloneWithReturnValue: [String]?
+
+    // MARK: - <clone> - closure mocks
+
+    public var cloneWithClosure: ((CloneOptions) throws -> [String])?
+
+    // MARK: - <clone> - method mocked
+
+    open func clone(with options: CloneOptions) throws -> [String]
+    {
+        // <clone> - Throwable method implementation
+
+        if let error = cloneWithThrowableError
+        {
+            throw error
+        }
+
+        cloneWithCallsCount += 1
+        cloneWithReceivedOptions = options
+
+        // <clone> - Return Value mock implementation
+
+        guard let closureReturn = cloneWithClosure else
+        {
+            guard let returnValue = cloneWithReturnValue else
+            {
+                let message = "No returnValue implemented for cloneWithClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement [String]
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(options)
+    }
+}
+
+// MARK: - MinimalTestOptionsProtocolMock
+
+open class MinimalTestOptionsProtocolMock: MinimalTestOptionsProtocol
+{
+    public init() {}
+
+    public var description: String
+    {
+        get { return underlyingDescription }
+        set(value) { underlyingDescription = value }
+    }
+
+    public var underlyingDescription: String = "AutoMockable filled value"
+
+    // MARK: - <arguments> - parameters
+
+    public var argumentsThrowableError: Error?
+    public var argumentsCallsCount = 0
+    public var argumentsCalled: Bool
+    {
+        return argumentsCallsCount > 0
+    }
+
+    public var argumentsReturnValue: Arguments?
+
+    // MARK: - <arguments> - closure mocks
+
+    public var argumentsClosure: (() throws -> Arguments)?
+
+    // MARK: - <arguments> - method mocked
+
+    open func arguments() throws -> Arguments
+    {
+        // <arguments> - Throwable method implementation
+
+        if let error = argumentsThrowableError
+        {
+            throw error
+        }
+
+        argumentsCallsCount += 1
+
+        // <arguments> - Return Value mock implementation
+
+        guard let closureReturn = argumentsClosure else
+        {
+            guard let returnValue = argumentsReturnValue else
+            {
+                let message = "No returnValue implemented for argumentsClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement Arguments
 
                 throw error
             }
@@ -454,6 +1636,50 @@ open class ProcessProtocolMock: ProcessProtocol
 
         return try closureReturn()
     }
+}
+
+// MARK: - SwiftProductProtocolMock
+
+open class SwiftProductProtocolMock: SwiftProductProtocol
+{
+    public init() {}
+
+    public var name: String
+    {
+        get { return underlyingName }
+        set(value) { underlyingName = value }
+    }
+
+    public var underlyingName: String = "AutoMockable filled value"
+    public var product_type: String
+    {
+        get { return underlyingProduct_type }
+        set(value) { underlyingProduct_type = value }
+    }
+
+    public var underlyingProduct_type: String = "AutoMockable filled value"
+}
+
+// MARK: - SwiftTargetProtocolMock
+
+open class SwiftTargetProtocolMock: SwiftTargetProtocol
+{
+    public init() {}
+
+    public var name: String
+    {
+        get { return underlyingName }
+        set(value) { underlyingName = value }
+    }
+
+    public var underlyingName: String = "AutoMockable filled value"
+    public var dependencies: Set<SwiftTarget.Dependency>
+    {
+        get { return underlyingDependencies }
+        set(value) { underlyingDependencies = value }
+    }
+
+    public var underlyingDependencies: Set<SwiftTarget.Dependency>!
 }
 
 // MARK: - SystemProtocolMock
@@ -1273,6 +2499,400 @@ open class TerminalProtocolMock: TerminalProtocol
         }
 
         return try closureReturn(processTask)
+    }
+}
+
+// MARK: - TestOptionsProtocolMock
+
+open class TestOptionsProtocolMock: TestOptionsProtocol
+{
+    public init() {}
+
+    public var scheme: String
+    {
+        get { return underlyingScheme }
+        set(value) { underlyingScheme = value }
+    }
+
+    public var underlyingScheme: String = "AutoMockable filled value"
+    public var project: String
+    {
+        get { return underlyingProject }
+        set(value) { underlyingProject = value }
+    }
+
+    public var underlyingProject: String = "AutoMockable filled value"
+    public var destination: DestinationProtocol
+    {
+        get { return underlyingDestination }
+        set(value) { underlyingDestination = value }
+    }
+
+    public var underlyingDestination: DestinationProtocol!
+    public var resultBundlePath: String
+    {
+        get { return underlyingResultBundlePath }
+        set(value) { underlyingResultBundlePath = value }
+    }
+
+    public var underlyingResultBundlePath: String = "AutoMockable filled value"
+    public var derivedDataPath: FolderProtocol?
+
+    // MARK: - <arguments> - parameters
+
+    public var argumentsThrowableError: Error?
+    public var argumentsCallsCount = 0
+    public var argumentsCalled: Bool
+    {
+        return argumentsCallsCount > 0
+    }
+
+    public var argumentsReturnValue: Arguments?
+
+    // MARK: - <arguments> - closure mocks
+
+    public var argumentsClosure: (() throws -> Arguments)?
+
+    // MARK: - <arguments> - method mocked
+
+    open func arguments() throws -> Arguments
+    {
+        // <arguments> - Throwable method implementation
+
+        if let error = argumentsThrowableError
+        {
+            throw error
+        }
+
+        argumentsCallsCount += 1
+
+        // <arguments> - Return Value mock implementation
+
+        guard let closureReturn = argumentsClosure else
+        {
+            guard let returnValue = argumentsReturnValue else
+            {
+                let message = "No returnValue implemented for argumentsClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement Arguments
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
+    }
+
+    // MARK: - <executableFile> - parameters
+
+    public var executableFileThrowableError: Error?
+    public var executableFileCallsCount = 0
+    public var executableFileCalled: Bool
+    {
+        return executableFileCallsCount > 0
+    }
+
+    public var executableFileReturnValue: FileProtocol?
+
+    // MARK: - <executableFile> - closure mocks
+
+    public var executableFileClosure: (() throws -> FileProtocol)?
+
+    // MARK: - <executableFile> - method mocked
+
+    open func executableFile() throws -> FileProtocol
+    {
+        // <executableFile> - Throwable method implementation
+
+        if let error = executableFileThrowableError
+        {
+            throw error
+        }
+
+        executableFileCallsCount += 1
+
+        // <executableFile> - Return Value mock implementation
+
+        guard let closureReturn = executableFileClosure else
+        {
+            guard let returnValue = executableFileReturnValue else
+            {
+                let message = "No returnValue implemented for executableFileClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement FileProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn()
+    }
+}
+
+// MARK: - TestReportProtocolMock
+
+open class TestReportProtocolMock: TestReportProtocol
+{
+    public init() {}
+
+    public var testSuiteOutput: [String] = []
+    public var output: [String] = []
+    public var totalNumberOfTests: Int
+    {
+        get { return underlyingTotalNumberOfTests }
+        set(value) { underlyingTotalNumberOfTests = value }
+    }
+
+    public var underlyingTotalNumberOfTests: Int = -100
+    public var description: String
+    {
+        get { return underlyingDescription }
+        set(value) { underlyingDescription = value }
+    }
+
+    public var underlyingDescription: String = "AutoMockable filled value"
+}
+
+// MARK: - XCBuildDestinationsProtocolMock
+
+open class XCBuildDestinationsProtocolMock: XCBuildDestinationsProtocol
+{
+    public init() {}
+
+    public var platform: Destination.Platform
+    {
+        get { return underlyingPlatform }
+        set(value) { underlyingPlatform = value }
+    }
+
+    public var underlyingPlatform: Destination.Platform!
+    public var id: String
+    {
+        get { return underlyingId }
+        set(value) { underlyingId = value }
+    }
+
+    public var underlyingId: String = "AutoMockable filled value"
+    public var name: String
+    {
+        get { return underlyingName }
+        set(value) { underlyingName = value }
+    }
+
+    public var underlyingName: String = "AutoMockable filled value"
+    public var os: Destination.OS
+    {
+        get { return underlyingOs }
+        set(value) { underlyingOs = value }
+    }
+
+    public var underlyingOs: Destination.OS!
+}
+
+// MARK: - XCBuildProtocolMock
+
+open class XCBuildProtocolMock: XCBuildProtocol
+{
+    public init() {}
+
+    // MARK: - <findPosibleDestinations> - parameters
+
+    public var findPosibleDestinationsForInThrowableError: Error?
+    public var findPosibleDestinationsForInCallsCount = 0
+    public var findPosibleDestinationsForInCalled: Bool
+    {
+        return findPosibleDestinationsForInCallsCount > 0
+    }
+
+    public var findPosibleDestinationsForInReceivedArguments: (scheme: String, workspace: FolderProtocol)?
+    public var findPosibleDestinationsForInReturnValue: [String]?
+
+    // MARK: - <findPosibleDestinations> - closure mocks
+
+    public var findPosibleDestinationsForInClosure: ((String, FolderProtocol) throws -> [String])?
+
+    // MARK: - <findPosibleDestinations> - method mocked
+
+    open func findPosibleDestinations(for scheme: String, in workspace: FolderProtocol) throws -> [String]
+    {
+        // <findPosibleDestinations> - Throwable method implementation
+
+        if let error = findPosibleDestinationsForInThrowableError
+        {
+            throw error
+        }
+
+        findPosibleDestinationsForInCallsCount += 1
+        findPosibleDestinationsForInReceivedArguments = (scheme: scheme, workspace: workspace)
+
+        // <findPosibleDestinations> - Return Value mock implementation
+
+        guard let closureReturn = findPosibleDestinationsForInClosure else
+        {
+            guard let returnValue = findPosibleDestinationsForInReturnValue else
+            {
+                let message = "No returnValue implemented for findPosibleDestinationsForInClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement [String]
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(scheme, workspace)
+    }
+
+    // MARK: - <archive> - parameters
+
+    public var archiveUsingThrowableError: Error?
+    public var archiveUsingCallsCount = 0
+    public var archiveUsingCalled: Bool
+    {
+        return archiveUsingCallsCount > 0
+    }
+
+    public var archiveUsingReceivedOptions: ArchiveOptionsProtocol?
+    public var archiveUsingReturnValue: ArchiveProtocol?
+
+    // MARK: - <archive> - closure mocks
+
+    public var archiveUsingClosure: ((ArchiveOptionsProtocol) throws -> ArchiveProtocol)?
+
+    // MARK: - <archive> - method mocked
+
+    open func archive(using options: ArchiveOptionsProtocol) throws -> ArchiveProtocol
+    {
+        // <archive> - Throwable method implementation
+
+        if let error = archiveUsingThrowableError
+        {
+            throw error
+        }
+
+        archiveUsingCallsCount += 1
+        archiveUsingReceivedOptions = options
+
+        // <archive> - Return Value mock implementation
+
+        guard let closureReturn = archiveUsingClosure else
+        {
+            guard let returnValue = archiveUsingReturnValue else
+            {
+                let message = "No returnValue implemented for archiveUsingClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement ArchiveProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(options)
+    }
+
+    // MARK: - <export> - parameters
+
+    public var exportUsingThrowableError: Error?
+    public var exportUsingCallsCount = 0
+    public var exportUsingCalled: Bool
+    {
+        return exportUsingCallsCount > 0
+    }
+
+    public var exportUsingReceivedOptions: ExportArchiveOptionsProtocol?
+    public var exportUsingReturnValue: ExportProtocol?
+
+    // MARK: - <export> - closure mocks
+
+    public var exportUsingClosure: ((ExportArchiveOptionsProtocol) throws -> ExportProtocol)?
+
+    // MARK: - <export> - method mocked
+
+    open func export(using options: ExportArchiveOptionsProtocol) throws -> ExportProtocol
+    {
+        // <export> - Throwable method implementation
+
+        if let error = exportUsingThrowableError
+        {
+            throw error
+        }
+
+        exportUsingCallsCount += 1
+        exportUsingReceivedOptions = options
+
+        // <export> - Return Value mock implementation
+
+        guard let closureReturn = exportUsingClosure else
+        {
+            guard let returnValue = exportUsingReturnValue else
+            {
+                let message = "No returnValue implemented for exportUsingClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement ExportProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(options)
+    }
+
+    // MARK: - <buildAndTest> - parameters
+
+    public var buildAndTestUsingThrowableError: Error?
+    public var buildAndTestUsingCallsCount = 0
+    public var buildAndTestUsingCalled: Bool
+    {
+        return buildAndTestUsingCallsCount > 0
+    }
+
+    public var buildAndTestUsingReceivedOptions: MinimalTestOptionsProtocol?
+    public var buildAndTestUsingReturnValue: TestReportProtocol?
+
+    // MARK: - <buildAndTest> - closure mocks
+
+    public var buildAndTestUsingClosure: ((MinimalTestOptionsProtocol) throws -> TestReportProtocol)?
+
+    // MARK: - <buildAndTest> - method mocked
+
+    open func buildAndTest(using options: MinimalTestOptionsProtocol) throws -> TestReportProtocol
+    {
+        // <buildAndTest> - Throwable method implementation
+
+        if let error = buildAndTestUsingThrowableError
+        {
+            throw error
+        }
+
+        buildAndTestUsingCallsCount += 1
+        buildAndTestUsingReceivedOptions = options
+
+        // <buildAndTest> - Return Value mock implementation
+
+        guard let closureReturn = buildAndTestUsingClosure else
+        {
+            guard let returnValue = buildAndTestUsingReturnValue else
+            {
+                let message = "No returnValue implemented for buildAndTestUsingClosure"
+                let error = SourceryMockError.implementErrorCaseFor(message)
+
+                // You should implement TestReportProtocol
+
+                throw error
+            }
+            return returnValue
+        }
+
+        return try closureReturn(options)
     }
 }
 

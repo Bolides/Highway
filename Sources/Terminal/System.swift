@@ -2,7 +2,6 @@ import Errors
 import Foundation
 import SignPost
 import SourceryAutoProtocols
-import Url
 import ZFile
 
 /**

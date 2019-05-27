@@ -5,6 +5,7 @@ import PackageDescription
 
 // MARK: - External
 
+let quickNimble: [Target.Dependency] = ["Quick", "Nimble"]
 let external: [Package.Dependency] = [
     // MARK: - External Dependencies
 
@@ -35,9 +36,110 @@ let external: [Package.Dependency] = [
     .package(url: "https://www.github.com/doozMen/SignPost", "1.0.0" ..< "2.0.0"),
 ]
 
-public struct HWSetup
+// MARK: - Executables - Like Lanes in fastlane
+
+/**
+
+  Should be run after you cloned Highway before starting development.
+     It will:
+ 1. Generate mocks
+ 2. Generate documentation
+ 3. run tests
+ 4. generate xcodeproject
+ 5. Adds lane PR to the .git/pre-push script to be run before every push
+
+ And possibly some other checks. Checkout the terminal output for more info. You can add --verbose to have more output.
+ */
+public struct Highway
 {
-    public static let name = "\(HWSetup.self)"
+    public static let name = "\(Highway.self)"
+
+    public static let executable = Product.executable(
+        name: name,
+        targets: [name]
+    )
+
+    public static let target = Target.target(
+        name: name,
+        dependencies: [Highway.Library.product.asDependency()]
+    )
+
+    public struct Library
+    {
+        public static let nameExtension = "\(Library.self)"
+
+        public static let product = Product.library(
+            name: name + nameExtension,
+            targets: [name + nameExtension]
+        )
+
+        public static let target = Target.target(
+            name: Library.product.name,
+            dependencies: [
+                "SourceryAutoProtocols",
+                "SignPost",
+                "ZFile",
+            ]
+                +
+                [
+                    GitHooks.Library.product.asDependency(),
+                    Terminal.library.asDependency(),
+                    SourceryWorker.library.asDependency(),
+                    SwiftFormatWorker.product.asDependency(),
+                    HighwayDispatch.library.asDependency(),
+                    Secrets.Library.product.asDependency(),
+                    Documentation.Library.product.asDependency(),
+                    Errors.library.asDependency(),
+                ]
+        )
+
+        public static let tests = Target.testTarget(
+            name: Library.product.name + "Tests",
+            dependencies:
+            quickNimble
+                + [Library.product.asDependency()]
+                + [
+                    Secrets.Library.Mock.product.asDependency(),
+                    Documentation.Library.Mock.product.asDependency(),
+                    SourceryWorker.Mock.library.asDependency(),
+                    SwiftFormatWorker.Mock.product.asDependency(),
+                    Highway.Library.Mock.product.asDependency(),
+                    Terminal.Mock.library.asDependency(),
+                    GitHooks.Library.Mock.product.asDependency(),
+                    HighwayDispatch.Mock.product.asDependency(),
+                ]
+                + ["SignPostMock", "ZFileMock"]
+        )
+
+        public struct Mock
+        {
+            public static let nameExtension = "\(Mock.self)"
+
+            public static let product = Product.library(
+                name: Library.product.name + Mock.nameExtension,
+                targets: [Library.product.name + Mock.nameExtension]
+            )
+
+            public static let target = Target.target(
+                name: Mock.product.name,
+                dependencies: Highway.Library.target.dependencies + [Highway.Library.product.asDependency()],
+                path: "Sources/Generated/\(Highway.Library.product.name)"
+            )
+        }
+    }
+}
+
+/**
+ Highway itself does not have any secrets but this secrets can be added by you if needed.
+
+ It looks at any secret you added with git-secret add <#file#>
+ Because bitrise does not support git-secret for now all the secrets are also added with gpg --symmetric with dummy passphrase 123
+
+ If you run this a passphrase will be asked. This is 123
+ */
+public struct Secrets
+{
+    public static let name = "\(Secrets.self)"
 
     public static let product = Product.executable(
         name: name,
@@ -45,61 +147,130 @@ public struct HWSetup
     )
 
     public static let target = Target.target(
-        name: "HWSetup",
-        dependencies: [
-            "Arguments",
-            "Errors",
-            "Git",
-            "GitHooks",
-            HighwayDispatch.dependency,
-            "SignPost",
-            "SourceryWorker",
-            "SourceryAutoProtocols",
-            "SwiftFormatWorker",
-            "Terminal",
-            "XCBuild",
-            "ZFile",
-        ] +
-            [
-                Highway.product.asDependency(),
-            ]
+        name: name,
+        dependencies: [Library.product.asDependency(), Highway.Library.product.asDependency()]
     )
+
+    public struct Library
+    {
+        public static let nameExtension = "Library"
+
+        public static let product = Product.library(
+            name: name + nameExtension,
+            targets: [name + nameExtension]
+        )
+
+        public static let target = Target.target(
+            name: Library.product.name,
+            dependencies: [
+                "ZFile",
+                "SourceryAutoProtocols",
+                "SignPost",
+                "Terminal",
+                "Errors",
+            ]
+        )
+
+        public static let tests = Target.testTarget(
+            name: name + "Tests",
+            dependencies: [product.asDependency()] + quickNimble
+        )
+
+        public struct Mock
+        {
+            public static let name = Library.product.name + "Mock"
+
+            public static let product = Product.library(
+                name: Library.product.name + "Mock",
+                targets: [name]
+            )
+
+            public static let target = Target.target(
+                name: name,
+                dependencies: Library.target.dependencies + [Library.product.asDependency()],
+                path: "Sources/Generated/\(Secrets.Library.product.name)"
+            )
+        }
+    }
 }
 
-/// Will be used to run on .git/hooks/pre-push and on bitrise for PR's
-/// It has the same dependencies as HWSetup but does not generate an xcode project and some other setup code.
+/**
+ Will be used to run on .git/hooks/pre-push and on bitrise for PR's
+ It has the same dependencies as HWSetup but does not generate an xcode project and some other setup code.
+ */
 public struct PR
 {
     public static let name = "\(PR.self)"
 
-    public static let product = Product.executable(
+    public static let executable = Product.executable(
         name: name,
         targets: [name]
     )
 
     public static let target = Target.target(
         name: name,
-        dependencies: HWSetup.target.dependencies
+        dependencies: [Highway.Library.product.asDependency()]
     )
 }
 
-public struct HighwayDispatch
-{
-    public static let name = "\(HighwayDispatch.self)"
+/**
+ Sourcery is a lovely tool. For now the tool is only used by Highway to generate mocks of any library in the swift package.
+ It makes sure the generated mocks have the needed imports by looking at the dependcies defined ing the Mock target.
 
-    public static let product = Product.library(
+ Output can be found per libary in a folder with the library name in Sources/<#library name#>
+ */
+public struct HighwaySourcery
+{
+    public static let name = "\(HighwaySourcery.self)"
+
+    public static let executable = Product.executable(
         name: name,
         targets: [name]
     )
 
     public static let target = Target.target(
         name: name,
-        dependencies: ["SourceryAutoProtocols"]
+        dependencies: [Highway.Library.product.asDependency()]
+    )
+}
+
+public struct HighwayDocumentation
+{
+    public static let name = "\(HighwayDocumentation.self)"
+
+    public static let executable = Product.executable(
+        name: name,
+        targets: [name]
     )
 
-    public struct Mock
+    public static let target = Target.target(
+        name: name,
+        dependencies: [
+            Terminal.library.asDependency(),
+            Documentation.Library.product.asDependency(),
+        ]
+    )
+}
+
+/**
+ Can be used as a Library or as an executable
+ */
+public struct GitHooks
+{
+    public static let name = "\(GitHooks.self)"
+
+    public static let executable = Product.executable(
+        name: name,
+        targets: [name]
+    )
+    public static let target = Target.target(
+        name: name,
+        dependencies: [GitHooks.Library.product.asDependency()]
+    )
+
+    public struct Library
     {
-        public static let name = "\(HighwayDispatch.name)Mock"
+        public static let name = GitHooks.name + "Library"
 
         public static let product = Product.library(
             name: name,
@@ -108,45 +279,38 @@ public struct HighwayDispatch
 
         public static let target = Target.target(
             name: name,
-            dependencies: [HighwayDispatch.dependency] + HighwayDispatch.target.dependencies,
-            path: "Sources/Generated/\(HighwayDispatch.name)"
+            dependencies: [
+                Terminal.library.asDependency(),
+                Errors.library.asDependency(),
+            ]
         )
+
+        public static let tests = Target.testTarget(
+            name: name + "Tests",
+            dependencies:
+            [product.asDependency()]
+                + quickNimble
+        )
+
+        public struct Mock
+        {
+            public static let name = GitHooks.Library.name + "Mock"
+
+            public static let product = Product.library(
+                name: name,
+                targets: [name]
+            )
+
+            public static let target = Target.target(
+                name: name,
+                dependencies:
+                GitHooks.Library.target.dependencies
+                    + Terminal.target.dependencies
+                    + [GitHooks.Library.product.asDependency()],
+                path: "Sources/Generated/\(GitHooks.Library.product.name)"
+            )
+        }
     }
-
-    public static let mock = Mock()
-    public static let dependency = Target.Dependency(stringLiteral: name)
-}
-
-public struct Terminal
-{
-    public static let name = "\(Terminal.self)"
-
-    public static let product = Product.library(
-        name: name,
-        targets: [name]
-    )
-
-    public static let target = Target.target(
-        name: name,
-        dependencies: ["HWPOSIX", "Arguments", "Errors", HighwayDispatch.dependency]
-    )
-}
-
-// MARK: - HighwaySourcery
-
-public struct HighwaySourcery
-{
-    public static let name = "\(HighwaySourcery.self)"
-
-    public static let product = Product.executable(
-        name: name,
-        targets: [name]
-    )
-
-    public static let target = Target.target(
-        name: name,
-        dependencies: HWSetup.target.dependencies
-    )
 }
 
 // MARK: - Documentation
@@ -155,7 +319,7 @@ public struct Documentation
 {
     public static let name = "\(Documentation.self)"
 
-    public static let product = Product.executable(
+    public static let executable = Product.executable(
         name: name,
         targets: [name]
     )
@@ -182,8 +346,14 @@ public struct Documentation
                 "SignPost",
                 "Terminal",
                 "Errors",
-                "Arguments",
             ]
+        )
+
+        public static let tests = Target.testTarget(
+            name: name + "Tests",
+            dependencies:
+            [Library.product.asDependency()]
+                + quickNimble
         )
 
         public struct Mock
@@ -202,75 +372,254 @@ public struct Documentation
             )
         }
     }
-
-    public static let tests = Target.testTarget(
-        name: name + "Tests",
-        dependencies: target.dependencies
-    )
 }
 
-// MARK: - GitSecrets
+// MARK: - Mainly internal use but you can use libraries in your lanes
 
-public struct Secrets
+public struct CarthageWorker
 {
-    public static let name = "\(Secrets.self)"
+    public static let name = "\(CarthageWorker.self)"
 
-    public static let product = Product.executable(
+    public static let library = Product.library(
         name: name,
         targets: [name]
     )
 
     public static let target = Target.target(
         name: name,
-        dependencies: [Library.product.asDependency(), Highway.product.asDependency()]
+        dependencies: [
+            Terminal.library.asDependency(),
+            Highway.Library.product.asDependency(),
+        ]
     )
-
-    public struct Library
-    {
-        public static let nameExtension = "Library"
-
-        public static let product = Product.library(
-            name: name + nameExtension,
-            targets: [name + nameExtension]
-        )
-
-        public static let target = Target.target(
-            name: Library.product.name,
-            dependencies: [
-                "ZFile",
-                "SourceryAutoProtocols",
-                "SignPost",
-                "Terminal",
-                "Errors",
-            ]
-        )
-
-        public struct Mock
-        {
-            public static let name = Library.product.name + "Mock"
-
-            public static let product = Product.library(
-                name: Library.product.name + "Mock",
-                targets: [name]
-            )
-
-            public static let target = Target.target(
-                name: name,
-                dependencies: Library.target.dependencies + [Library.product.asDependency()],
-                path: "Sources/Generated/\(Secrets.Library.product.name)"
-            )
-        }
-    }
 
     public static let tests = Target.testTarget(
         name: name + "Tests",
-        dependencies: target.dependencies
+        dependencies:
+        [library.asDependency()]
+            + quickNimble
+            + [
+                Highway.Library.Mock.product.asDependency(),
+                CarthageWorker.Mock.product.asDependency(),
+            ]
+    )
+
+    public struct Mock
+    {
+        public static let name = library.name + "Mock"
+
+        public static let product = Product.library(
+            name: library.name + "Mock",
+            targets: [name]
+        )
+
+        public static let target = Target.target(
+            name: name,
+            dependencies:
+            CarthageWorker.target.dependencies
+                + Terminal.target.dependencies
+                + [CarthageWorker.library.asDependency()],
+            path: "Sources/Generated/\(CarthageWorker.library.name)"
+        )
+    }
+}
+
+public struct HighwayDispatch
+{
+    public static let name = "\(HighwayDispatch.self)"
+
+    public static let library = Product.library(
+        name: name,
+        targets: [name]
+    )
+
+    public static let target = Target.target(
+        name: name,
+        dependencies: ["SourceryAutoProtocols"]
+    )
+
+    public static let tests = Target.testTarget(
+        name: name + "Tests",
+        dependencies:
+        [HighwayDispatch.library.asDependency()]
+            + quickNimble
+    )
+
+    public struct Mock
+    {
+        public static let name = "\(HighwayDispatch.name)Mock"
+
+        public static let product = Product.library(
+            name: name,
+            targets: [name]
+        )
+
+        public static let target = Target.target(
+            name: name,
+            dependencies: [HighwayDispatch.library.asDependency()] + HighwayDispatch.target.dependencies,
+            path: "Sources/Generated/\(HighwayDispatch.name)"
+        )
+    }
+}
+
+public struct HWPod
+{
+    public static let name = "\(HWPod.self)"
+
+    public static let library = Product.library(
+        name: name,
+        targets: [name]
+    )
+
+    public static let target = Target.target(
+        name: name,
+        dependencies: [Terminal.library.asDependency(), Errors.library.asDependency()]
+            + ["ZFile", "SignPost"]
+    )
+
+    public static let tests = Target.testTarget(
+        name: name + "Tests",
+        dependencies:
+        target.dependencies
+            + [HWPod.library.asDependency()]
+            + ["SignPostMock", Terminal.Mock.library.asDependency(), "ZFileMock"]
+            + quickNimble
+    )
+
+    public struct Mock
+    {
+        public static let name = "\(HWPod.name)Mock"
+
+        public static let product = Product.library(
+            name: name,
+            targets: [name]
+        )
+
+        public static let target = Target.target(
+            name: name,
+            dependencies:
+            [HWPod.library.asDependency()]
+                + Terminal.target.dependencies
+                + HighwayDispatch.target.dependencies,
+            path: "Sources/Generated/\(HWPod.name)"
+        )
+    }
+}
+
+public struct Terminal
+{
+    public static let name = "\(Terminal.self)"
+
+    public static let library = Product.library(
+        name: name,
+        targets: [name]
+    )
+
+    public static let target = Target.target(
+        name: name,
+        dependencies:
+        ["Result", "ZFile", "SignPost", "SourceryAutoProtocols"]
+            +
+            [
+                Errors.library.asDependency(),
+                HighwayDispatch.library.asDependency(),
+            ]
+    )
+
+    public static let tests = Target.testTarget(
+        name: name + "Tests",
+        dependencies:
+        ["ZFileMock", "SignPostMock"]
+            + [
+                Terminal.library.asDependency(),
+            ]
+            + [Terminal.Mock.library.asDependency()]
+            + quickNimble
+    )
+
+    public struct Mock
+    {
+        public static let name = Terminal.library.name + "Mock"
+
+        public static let library = Product.library(
+            name: name,
+            targets: [name]
+        )
+
+        public static let target = Target.target(
+            name: name,
+            dependencies:
+            Terminal.target.dependencies
+                + [Terminal.library.asDependency()]
+                + ["ZFileMock"]
+            ,
+            path: "Sources/Generated/\(Terminal.library.name)"
+        )
+    }
+}
+
+public struct Errors
+{
+    public static let name = "\(Errors.self)"
+
+    public static let library = Product.library(
+        name: name,
+        targets: [name]
+    )
+
+    public static let target = Target.target(
+        name: name,
+        dependencies: ["ZFile"]
     )
 }
 
-public struct Highway
+public struct SourceryWorker
 {
-    public static let name = "\(Highway.self)"
+    public static let name = "\(SourceryWorker.self)"
+
+    public static let library = Product.library(
+        name: name,
+        targets: [name]
+    )
+
+    public static let target = Target.target(
+        name: name,
+        dependencies:
+        [Terminal.library.asDependency()]
+    )
+
+    public static let tests = Target.testTarget(
+        name: name + "Tests",
+        dependencies:
+        [SourceryWorker.library.asDependency()]
+            + quickNimble
+    )
+
+    public struct Mock
+    {
+        public static let name = SourceryWorker.library.name + "Mock"
+
+        public static let library = Product.library(
+            name: Mock.name,
+            targets: [Mock.name]
+        )
+
+        public static let target = Target.target(
+            name: name,
+            dependencies:
+            Terminal.target.dependencies
+                + SourceryWorker.target.dependencies
+                + [
+                    SourceryWorker.library.asDependency(),
+                ],
+            path: "Sources/Generated/\(SourceryWorker.library.name)"
+        )
+    }
+}
+
+public struct SwiftFormatWorker
+{
+    public static let name = "\(SwiftFormatWorker.self)"
 
     public static let product = Product.library(
         name: name,
@@ -279,46 +628,37 @@ public struct Highway
 
     public static let target = Target.target(
         name: name,
-        dependencies: [
-            "SourceryAutoProtocols",
-            "Terminal",
-            "Arguments",
-            "SignPost",
-            "ZFile",
-            "SourceryWorker",
-            "HighwayDispatch",
-            "GitHooks",
-            "SwiftFormatWorker",
-            "XCBuild",
-            "Errors",
-        ]
+        dependencies:
+        ["SwiftFormat"]
             +
-            [
-                Secrets.Library.product.asDependency(),
-                Documentation.Library.product.asDependency(),
-            ]
+            [Terminal.library.asDependency()]
+    )
+
+    public static let tests = Target.testTarget(
+        name: name + "Tests",
+        dependencies:
+        [Terminal.library.asDependency()]
+            + quickNimble
     )
 
     public struct Mock
     {
-        public static let name = Highway.product.name + "Mock"
+        public static let name = SwiftFormatWorker.product.name + "Mock"
 
         public static let product = Product.library(
-            name: Mock.name,
+            name: name,
             targets: [name]
         )
 
         public static let target = Target.target(
             name: name,
-            dependencies: Highway.target.dependencies + [Highway.product.asDependency()],
-            path: "Sources/Generated/\(Highway.product.name)"
+            dependencies:
+            SwiftFormatWorker.target.dependencies
+                + Terminal.target.dependencies
+                + [SwiftFormatWorker.product.asDependency()],
+            path: "Sources/Generated/\(SwiftFormatWorker.product.name)"
         )
     }
-
-    public static let tests = Target.testTarget(
-        name: name + "Tests",
-        dependencies: target.dependencies
-    )
 }
 
 // MARK: - Product extensions
@@ -331,6 +671,40 @@ extension Product
     }
 }
 
+// MARK: - Examples
+
+struct Example
+{
+    /**
+     Highway uses executables as the products you define to generate code or do some continuous integration.
+     An executable can be taught of like a lane in fastlane. It has a main and imports libraries from Highway to perform its tasks
+
+     The following example lane tests runs the tests and interprets the output in a TestReport.
+
+     Steps to add HighwayTests executable
+     1. add struct like HighwayTests with your project name to your swift package
+     2. add static properties exectable to products and target to target of swift package
+
+     Run `swift package generate-xcodeproj --xcconfig-overrides Sources/macOS.xcconfig`
+
+     Open the xcode project and put your code in Sources/HighwayTests
+     */
+    public struct HighwayTests
+    {
+        public static let name = "\(HighwayTests.self)"
+
+        public static let executable = Product.executable(
+            name: name,
+            targets: [name]
+        )
+
+        public static let target = Target.target(
+            name: name,
+            dependencies: [Terminal.library.asDependency()]
+        )
+    }
+}
+
 // MARK: - Package
 
 public let package = Package(
@@ -338,326 +712,99 @@ public let package = Package(
     products: [
         // MARK: - Executable
 
-        HWSetup.product,
+        Highway.executable,
         Secrets.product,
-        HighwaySourcery.product,
-        Documentation.product,
-        PR.product,
+        HighwaySourcery.executable,
+        Documentation.executable,
+        PR.executable,
+        GitHooks.executable,
+        HighwayDocumentation.executable,
+
+        // MARK: - Executable Examples - not needed for highway
+
+        Example.HighwayTests.executable,
 
         // MARK: - Library
 
+        Highway.Library.product,
         Secrets.Library.product,
-        Highway.product,
         Secrets.Library.Mock.product,
         Documentation.Library.Mock.product,
         Documentation.Library.product,
-
-        .library(
-            name: "HWCarthage",
-            targets: ["HWCarthage"]
-        ),
-
-        .library(
-            name: "HWPod",
-            targets: ["HWPod"]
-        ),
-        .library(
-            name: "Errors",
-            targets: ["Errors"]
-        ),
-        HighwayDispatch.product,
-
-        .library(
-            name: "GitHooks",
-            targets: ["GitHooks"]
-        ),
-        .library(
-            name: "Arguments",
-            targets: ["Arguments"]
-        ),
-        .library(
-            name: "Url",
-            targets: ["Url"]
-        ),
-        .library(
-            name: "HWPOSIX",
-            targets: ["HWPOSIX"]
-        ),
-        .library(
-            name: "XCBuild",
-            targets: ["XCBuild"]
-        ),
-        Terminal.product,
-        .library(
-            name: "Git",
-            targets: ["Git"]
-        ),
-        .library(
-            name: "SourceryWorker",
-            targets: ["SourceryWorker"]
-        ),
-        .library(
-            name: "SwiftFormatWorker",
-            targets: ["SwiftFormatWorker"]
-        ),
-        .library(
-            name: "Stub",
-            targets: ["Stub"]
-        ),
+        HighwayDispatch.library,
+        Terminal.library,
+        Errors.library,
+        SourceryWorker.library,
+        GitHooks.Library.product,
+        SwiftFormatWorker.product,
+        CarthageWorker.library,
+        HWPod.library,
 
         // MARK: - Library - Mocks
 
         HighwayDispatch.Mock.product,
-        Highway.Mock.product,
-
-        .library(
-            name: "SwiftFormatWorkerMock",
-            targets: ["SwiftFormatWorkerMock"]
-        ),
-        .library(
-            name: "SourceryWorkerMock",
-            targets: ["SourceryWorkerMock"]
-        ),
-        .library(
-            name: "TerminalMock",
-            targets: ["TerminalMock"]
-        ),
-        .library(
-            name: "XCBuildMock",
-            targets: ["XCBuildMock"]
-        ),
-        .library(
-            name: "ArgumentsMock",
-            targets: ["ArgumentsMock"]
-        ),
-        .library(
-            name: "GitHooksMock",
-            targets: ["GitHooksMock"]
-        ),
-        .library(
-            name: "HWCarthageMock",
-            targets: ["HWCarthageMock"]
-        ),
-        .library(
-            name: "HWPodMock",
-            targets: ["HWPodMock"]
-        ),
-
+        Highway.Library.Mock.product,
+        SourceryWorker.Mock.library,
+        SwiftFormatWorker.Mock.product,
+        Terminal.Mock.library,
+        GitHooks.Library.Mock.product,
+        CarthageWorker.Mock.product,
+        HWPod.Mock.product,
     ],
     dependencies: external,
     targets: [
         // MARK: - Executables
 
-        HWSetup.target,
+        Highway.target,
         Secrets.target,
         HighwaySourcery.target,
         Documentation.target,
         PR.target,
+        GitHooks.target,
+        HighwayDocumentation.target,
+        HWPod.target,
+
+        // MARK: - Executable Examples - not needed for highway
+
+        Example.HighwayTests.target,
 
         // MARK: - Libraries
 
         Secrets.Library.target,
-        Highway.target,
         Documentation.Library.target,
-
-        .target(
-            name: "HWCarthage",
-            dependencies: ["SourceryAutoProtocols", "ZFile", "SignPost", "Terminal"] + [Highway.product.asDependency()]
-        ),
-        .target(
-            name: "HWPod",
-            dependencies: ["SourceryAutoProtocols", "ZFile", "SignPost", "Terminal"]
-        ),
-        .target(
-            name: "Errors",
-            dependencies: ["SourceryAutoProtocols", "ZFile"]
-        ),
-        .target(
-            name: "Arguments",
-            dependencies: ["SourceryAutoProtocols", "ZFile", "SignPost", "Errors"]
-        ),
-        .target(
-            name: "GitHooks",
-            dependencies: [
-                "SourceryAutoProtocols",
-                "ZFile",
-                "SignPost",
-                "Terminal",
-                "Arguments",
-                "Errors",
-            ]
-        ),
-        .target(
-            name: "Url",
-            dependencies: []
-        ),
-        .target(
-            name: "HWPOSIX",
-            dependencies: ["Url"]
-        ),
-        .target(
-            name: "XCBuild",
-            dependencies: ["Arguments", "Errors", "Url", "HWPOSIX", "Terminal", "Result"]
-        ),
-        Terminal.target,
-        .target(
-            name: "Git",
-            dependencies: ["Terminal", "Url", "Arguments", "Errors"]
-        ),
-
-        .target(
-            name: "SourceryWorker",
-            dependencies: ["Terminal", "HighwayDispatch", "Errors", "ZFile", "HighwayDispatch", "SourceryAutoProtocols"]
-        ),
-        .target(
-            name: "SwiftFormatWorker",
-            dependencies: ["Errors", "Arguments", "ZFile", "SwiftFormat", "HighwayDispatch"]
-        ),
+        Highway.Library.target,
         HighwayDispatch.target,
-        .target(
-            name: "Stub",
-            dependencies: []
-        ),
+        Terminal.target,
+        Errors.target,
+        SourceryWorker.target,
+        GitHooks.Library.target,
+        SwiftFormatWorker.target,
+        CarthageWorker.target,
 
         // MARK: - Mocks
 
         Secrets.Library.Mock.target,
         Documentation.Library.Mock.target,
-
-        .target(
-            name: "HWCarthageMock",
-            dependencies: ["HighwayDispatch", "HWCarthage", "ZFileMock", "ZFile", "Errors"],
-            path: "Sources/Generated/HWCarthage"
-        ),
-        .target(
-            name: "HWPodMock",
-            dependencies: ["HighwayDispatch", "HWPod", "ZFileMock", "Errors"],
-            path: "Sources/Generated/HWPod"
-        ),
         HighwayDispatch.Mock.target,
-        .target(
-            name: "GitHooksMock",
-            dependencies: [
-                "SourceryAutoProtocols",
-                "ZFile",
-                "ZFileMock",
-                "SignPost",
-                "GitHooks",
-                "Terminal",
-                "Arguments",
-                "SignPost",
-                "Errors",
-            ],
-            path: "Sources/Generated/GitHooks"
-        ),
-        .target(
-            name: "ArgumentsMock",
-            dependencies: ["SourceryAutoProtocols", "ZFile", "ZFileMock", "SignPost", "Arguments"],
-            path: "Sources/Generated/Arguments"
-        ),
-        .target(
-            name: "XCBuildMock",
-            dependencies: ["ZFile", "ZFileMock", "XCBuild", "Arguments", "SignPost"],
-            path: "Sources/Generated/XCBuild"
-        ),
-        .target(
-            name: "TerminalMock",
-            dependencies: ["Terminal", "ZFile", "ZFileMock", "Arguments", "SignPost"],
-            path: "Sources/Generated/Terminal"
-        ),
-        .target(
-            name: "SwiftFormatWorkerMock",
-            dependencies: ["SwiftFormatWorker", "ZFileMock", "ZFile", "SwiftFormatWorker", "HighwayDispatch", "SignPost"],
-            path: "Sources/Generated/SwiftFormatWorker"
-        ),
-        .target(
-            name: "SourceryWorkerMock",
-            dependencies: ["SourceryWorker", "ZFile", "Terminal", "ZFileMock", "TerminalMock", "HighwayDispatch", "Arguments", "SignPost"],
-            path: "Sources/Generated/SourceryWorker"
-        ),
-        Highway.Mock.target,
+        Highway.Library.Mock.target,
+        SourceryWorker.Mock.target,
+        SwiftFormatWorker.Mock.target,
+        Terminal.Mock.target,
+        GitHooks.Library.Mock.target,
+        CarthageWorker.Mock.target,
+        HWPod.Mock.target,
 
         // MARK: - Tests
 
-        Secrets.tests,
-        Documentation.tests,
-
-        .testTarget(
-            name: "HWCarthageTests",
-            dependencies: ["HWCarthage", "SignPostMock", "ArgumentsMock", "Arguments", "HighwayMock", "HighwayDispatchMock", "HWCarthageMock", "Quick", "Nimble"]
-        ),
-        .testTarget(
-            name: "HWPodTests",
-            dependencies: ["HWPod", "HWPodMock", "ZFileMock", "ZFile", "TerminalMock", "Quick", "Nimble"]
-        ),
-        .testTarget(
-            name: "GitHooksTests",
-            dependencies: [
-                "GitHooks",
-                "Quick",
-                "Nimble",
-                "ArgumentsMock",
-                "ZFileMock",
-                "Errors",
-                "GitHooksMock",
-                "SignPostMock",
-            ]
-        ),
-        .testTarget(
-            name: "HWPOSIXTests",
-            dependencies: ["HWPOSIX", "Quick", "Nimble"]
-        ),
-        .testTarget(
-            name: "XCBuildTests",
-            dependencies: [
-                "Terminal",
-                "XCBuild",
-                "TerminalMock",
-                "Arguments",
-                "ArgumentsMock",
-                "XCBuildMock",
-                "ZFileMock",
-                "Quick",
-                "Nimble",
-            ]
-        ),
-        .testTarget(
-            name: "TerminalTests",
-            dependencies: ["Terminal", "TerminalMock", "Arguments", "Quick", "Nimble", "Stub"]
-        ),
-        .testTarget(
-            name: "GitTests",
-            dependencies: ["Git", "Quick", "Nimble"]
-        ),
-        .testTarget(
-            name: "SourceryWorkerTests",
-            dependencies: [
-                "SourceryWorker",
-                "SignPostMock",
-                "SourceryWorkerMock",
-                "Quick",
-                "Nimble",
-                "TerminalMock",
-                "SignPostMock",
-                "HighwayDispatchMock",
-                "ArgumentsMock",
-                "Arguments",
-                "TerminalMock",
-                "Stub",
-                "Errors",
-            ]
-        ),
-        .testTarget(
-            name: "SwiftFormatWorkerTests",
-            dependencies: [
-                "SwiftFormatWorker",
-                "SwiftFormatWorkerMock",
-                "SignPostMock",
-                "Quick",
-                "Nimble",
-                "HighwayDispatchMock",
-            ]
-        ),
-        Highway.tests,
+        Secrets.Library.tests,
+        Documentation.Library.tests,
+        Highway.Library.tests,
+        HighwayDispatch.tests,
+        Terminal.tests,
+        SourceryWorker.tests,
+        SwiftFormatWorker.tests,
+        GitHooks.Library.tests,
+        CarthageWorker.tests,
+        HWPod.tests,
     ]
 )

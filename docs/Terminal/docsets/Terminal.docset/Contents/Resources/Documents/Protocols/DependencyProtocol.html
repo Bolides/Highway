@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DependencyProtocol Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/DependencyProtocol" class="dashAnchor"></a>
+    <a title="DependencyProtocol Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Terminal Docs</a> (9% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Terminal Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        DependencyProtocol Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Channel.html">Channel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Channel/Reader.html">– Reader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Channel/Writer.html">– Writer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DependencyService.html">DependencyService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GitAutotag.html">GitAutotag</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IO.html">IO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Task.html">Task</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/XCBuild.html">XCBuild</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/XCBuild/TestRunError.html">– TestRunError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/HighwayCommandLineOption.html">HighwayCommandLineOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HighwayCommandLineOption/SingleOption.html">– SingleOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HighwayCommandLineOption/Values.html">– Values</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/State.html">State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalSysExitCode.html">TerminalSysExitCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalTask.html">TerminalTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Worker.html">Worker</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Process.html">Process</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Process/TerminationReason.html">– TerminationReason</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ArchiveOptionsProtocol.html">ArchiveOptionsProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ArchivePlistProtocol.html">ArchivePlistProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ArchiveProtocol.html">ArchiveProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ArgumentExecutableProtocol.html">ArgumentExecutableProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ArgumentsConvertible.html">ArgumentsConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ArgumentsProtocol.html">ArgumentsProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DependencyProtocol.html">DependencyProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DependencyServiceProtocol.html">DependencyServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DestinationFactoryProtocol.html">DestinationFactoryProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DestinationProtocol.html">DestinationProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DumpProtocol.html">DumpProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DumpServiceProtocol.html">DumpServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ExecutableProtocol.html">ExecutableProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ExportArchiveOptionsProtocol.html">ExportArchiveOptionsProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ExportProtocol.html">ExportProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/GitToolProtocol.html">GitToolProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MinimalTestOptionsProtocol.html">MinimalTestOptionsProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PathEnvironmentParserProtocol.html">PathEnvironmentParserProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ProcessProtocol.html">ProcessProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SwiftProductProtocol.html">SwiftProductProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SwiftTargetProtocol.html">SwiftTargetProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SystemProtocol.html">SystemProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TaskProtocol.html">TaskProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TerminalProtocol.html">TerminalProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TestOptionsProtocol.html">TestOptionsProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TestReportProtocol.html">TestReportProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/XCBuildDestinationsProtocol.html">XCBuildDestinationsProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/XCBuildProtocol.html">XCBuildProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Archive.html">Archive</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ArchiveOptions.html">ArchiveOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ArchivePlist.html">ArchivePlist</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Arguments.html">Arguments</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CDToFolderExecutable.html">CDToFolderExecutable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CloneOptions.html">CloneOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Dependency.html">Dependency</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Destination.html">Destination</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Destination/Architecture.html">– Architecture</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Destination/OS.html">– OS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Destination/PlatformType.html">– PlatformType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Destination/Simulator.html">– Simulator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Destination/Device.html">– Device</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Destination/Platform.html">– Platform</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DestinationFactory.html">DestinationFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Dump.html">Dump</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DumpService.html">DumpService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Export.html">Export</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ExportArchiveOptions.html">ExportArchiveOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ExportArchiveOptions/CodingKeys.html">– CodingKeys</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ExportOptions.html">ExportOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ExportOptions/Method.html">– Method</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ExportOptions/ProvisioningProfiles.html">– ProvisioningProfiles</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ExportOptions/SigningStyle.html">– SigningStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ExportOptions/Thinning.html">– Thinning</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/GitBranchName.html">GitBranchName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/GitRootFolder.html">GitRootFolder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/GitTool.html">GitTool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MinimalTestOptions.html">MinimalTestOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PathEnvironmentParser.html">PathEnvironmentParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PodExecutable.html">PodExecutable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftProduct.html">SwiftProduct</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftTarget.html">SwiftTarget</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftTarget/Dependency.html">– Dependency</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/System.html">System</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/System/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Terminal.html">Terminal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Terminal/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Termination.html">Termination</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TestOptions.html">TestOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TestReport.html">TestReport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TestReport/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/XCBuildDestinations.html">XCBuildDestinations</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/XCodeBuildOption.html">XCodeBuildOption</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>DependencyProtocol</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DependencyProtocol</span> <span class="p">:</span> <span class="kt">AutoMockable</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal18DependencyProtocolP4nameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal18DependencyProtocolP4nameSSvp">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal18DependencyProtocolP4pathSSvp"></a>
+                    <a name="//apple_ref/swift/Property/path" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal18DependencyProtocolP4pathSSvp">path</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal18DependencyProtocolP3url10Foundation3URLVvp"></a>
+                    <a name="//apple_ref/swift/Property/url" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal18DependencyProtocolP3url10Foundation3URLVvp">url</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal18DependencyProtocolP7versionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/version" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal18DependencyProtocolP7versionSSvp">version</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">version</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal18DependencyProtocolP12dependenciesSayAA0B0VGvp"></a>
+                    <a name="//apple_ref/swift/Property/dependencies" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal18DependencyProtocolP12dependenciesSayAA0B0VGvp">dependencies</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/Dependency.html">Dependency</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal18DependencyProtocolP11descriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal18DependencyProtocolP11descriptionSSvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal18DependencyProtocolP8gitHooks5ZFile06FolderC0_pyKF"></a>
+                    <a name="//apple_ref/swift/Method/gitHooks()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal18DependencyProtocolP8gitHooks5ZFile06FolderC0_pyKF">gitHooks()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">gitHooks</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">FolderProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal18DependencyProtocolP7srcRoot5ZFile06FolderC0_pyKF"></a>
+                    <a name="//apple_ref/swift/Method/srcRoot()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal18DependencyProtocolP7srcRoot5ZFile06FolderC0_pyKF">srcRoot()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">srcRoot</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">FolderProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal18DependencyProtocolP14templateFolder5ZFile0eC0_pyKF"></a>
+                    <a name="//apple_ref/swift/Method/templateFolder()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal18DependencyProtocolP14templateFolder5ZFile0eC0_pyKF">templateFolder()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">templateFolder</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">FolderProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal18DependencyProtocolP14templateFolder12expectedName5ZFile0eC0_pSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/templateFolder(expectedName:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal18DependencyProtocolP14templateFolder12expectedName5ZFile0eC0_pSS_tKF">templateFolder(expectedName:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">templateFolder</span><span class="p">(</span><span class="nv">expectedName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">FolderProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal18DependencyProtocolP14sourceryFolder5ZFile0eC0_pyKF"></a>
+                    <a name="//apple_ref/swift/Method/sourceryFolder()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal18DependencyProtocolP14sourceryFolder5ZFile0eC0_pyKF">sourceryFolder()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sourceryFolder</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">FolderProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Terminal18DependencyProtocolP012sourceryAutoC4File5ZFile0fC0_pyKF"></a>
+                    <a name="//apple_ref/swift/Method/sourceryAutoProtocolFile()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Terminal18DependencyProtocolP012sourceryAutoC4File5ZFile0fC0_pyKF">sourceryAutoProtocolFile()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sourceryAutoProtocolFile</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">FileProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-05-27)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

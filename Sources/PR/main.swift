@@ -1,16 +1,13 @@
 
-import Arguments
+
 import Errors
 import Foundation
-import Git
-import GitHooks
-import Highway
+
 import HighwayDispatch
+import HighwayLibrary
 import SignPost
 import SourceryWorker
-import SwiftFormatWorker
 import Terminal
-import XCBuild
 import ZFile
 
 // MARK: - PREPARE
@@ -70,7 +67,7 @@ do
             signPost.message("🚀 \(HighwayRunner.self) ✅")
             exit(EXIT_SUCCESS)
         }
-        signPost.message("🚀 \(HighwayRunner.self) has \(errors.count) ❌")
+        signPost.error("🚀 \(HighwayRunner.self) has \(errors.count) ❌")
 
         for error in errors.enumerated()
         {

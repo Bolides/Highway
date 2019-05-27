@@ -69,13 +69,108 @@
 <blockquote>
 <p>Test - Integrate - Build status: <a href="https://app.bitrise.io/app/74c2194000b08d9d">@dooZdev <img src="https://app.bitrise.io/app/74c2194000b08d9d/status.svg?token=IqTwBXnTwOzE2pc1p3-aHw" alt="Build Status"></a> <a href="https://app.bitrise.io/app/02016c93faf5b17b">@Bolides <img src="https://app.bitrise.io/app/02016c93faf5b17b/status.svg?token=-WGqOL_RvB5Ir43fRaMd0g&branch=master" alt="Build Status"></a></p>
 </blockquote>
-<h2 id='develop-on-highway' class='heading'>Develop on Highway</h2>
-<pre class="highlight shell"><code>swift build <span class="nt">--configuration</span> release <span class="nt">--static-swift-stdlib</span> <span class="nt">-Xswiftc</span> <span class="nt">-DXcode</span> <span class="nt">-Xswiftc</span> <span class="nt">-DMacOS</span>
-<span class="c"># will output where the executable is build, usually</span>
-./.build/x86_64-apple-macosx10.10/release/HWSetup
-<span class="c"># after running this sourcery is setup too and you can generate code when needed</span>
+
+<p>The goal is to make the test and setup run on a build server also run before every push you do. So highway can be used on your dev machine, build server both for macOS and Linux (untested -&gt; <a href="https://github.com/dooZdev/Highway/issues/26">#26</a> ).</p>
+
+<p>For now it is only tested on macOS with xcode 10.1 and swift version 4.2.1 installed. Linux and swift 5 are in the pipeline but currently on hold until this version is stable. </p>
+
+<p>Follow up</p>
+
+<ul>
+<li>swift 5 support <a href="https://github.com/dooZdev/Highway/issues/26">#26</a></li>
+<li>linux support <a href="https://github.com/dooZdev/Highway/issues/28">#28</a></li>
+</ul>
+
+<p>So for now you need to have installed</p>
+
+<ul>
+<li>macOS 10.13 or higher</li>
+<li><a href="https://github.com/Homebrew/brew">Homebrew 2.1.3</a></li>
+<li><a href="https://www.swift.org">swift version 4.2.1</a> this is the version that comes with official release of xcode 10.1</li>
+</ul>
+<h2 id='documentation' class='heading'>Documentation</h2>
+
+<p>Limited generated documentation is available per library in the folder docs.</p>
+
+<p>Generating documentation can be done </p>
+<pre class="highlight shell"><code>swift build <span class="nt">--product</span> HighwayDocumentation <span class="nt">--configuration</span> release
+.build/x86_64-apple-macosx10.10/release/HighwayDocumentation
 </code></pre>
-<h1 id='used-highway-in-your-project' class='heading'>Used Highway in your project</h1>
+<h2 id='use' class='heading'>Use</h2>
+
+<p>To use in your own project you need to add it to your swift package. Highway is build to be used as a library you can use to build executables for you project. If you know <a href="https://github.com/fastlane/fastlane">fastlane</a> you could think of every executable as lane you can run.</p>
+
+<p>To get started you could do the following steps below. By the end you have a generic Highway lane to run any available terminal program you have on your system.</p>
+
+<p>In the swift package you will find the following example struct</p>
+<pre class="highlight swift"><code><span class="c1">// MARK: - Examples</span>
+
+<span class="kd">struct</span> <span class="kt">Example</span>
+<span class="p">{</span>
+    <span class="cm">/**
+     Highway uses executables as the products you define to generate code or do some continuous integration.
+     An executable can be taught of like a lane in fastlane. It has a main and imports libraries from Highway to perform its tasks
+
+     The following example lane tests runs the tests and interprets the output in a TestReport.
+
+     Steps to add HighwayTests executable
+     1. add struct like HighwayTests with your project name to your swift package
+     2. add static properties exectable to products and target to target of swift package
+
+     Run `swift package generate-xcodeproj --xcconfig-overrides Sources/macOS.xcconfig`
+
+     Open the xcode project and put your code in Sources/HighwayTests
+     */</span>
+    <span class="kd">public</span> <span class="kd">struct</span> <span class="kt">HighwayTests</span>
+    <span class="p">{</span>
+        <span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">"</span><span class="se">\(</span><span class="kt">HighwayTests</span><span class="o">.</span><span class="k">self</span><span class="se">)</span><span class="s">"</span>
+
+        <span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">executable</span> <span class="o">=</span> <span class="kt">Product</span><span class="o">.</span><span class="nf">executable</span><span class="p">(</span>
+            <span class="nv">name</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+            <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span><span class="n">name</span><span class="p">]</span>
+        <span class="p">)</span>
+
+        <span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">target</span> <span class="o">=</span> <span class="kt">Target</span><span class="o">.</span><span class="nf">target</span><span class="p">(</span>
+            <span class="nv">name</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+            <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span><span class="kt">Terminal</span><span class="o">.</span><span class="n">library</span><span class="o">.</span><span class="nf">asDependency</span><span class="p">()]</span>
+        <span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>The code in main looks like</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Errors</span>
+<span class="kd">import</span> <span class="kt">Foundation</span>
+<span class="kd">import</span> <span class="kt">SignPost</span>
+<span class="kd">import</span> <span class="kt">Terminal</span>
+
+<span class="k">let</span> <span class="nv">terminal</span> <span class="o">=</span> <span class="kt">Terminal</span><span class="o">.</span><span class="n">shared</span>
+<span class="k">let</span> <span class="nv">signPost</span> <span class="o">=</span> <span class="kt">SignPost</span><span class="o">.</span><span class="n">shared</span>
+<span class="k">let</span> <span class="nv">system</span> <span class="o">=</span> <span class="kt">System</span><span class="o">.</span><span class="n">shared</span>
+
+<span class="k">do</span>
+<span class="p">{</span>
+    <span class="n">signPost</span><span class="o">.</span><span class="nf">message</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="nf">pretty_function</span><span class="p">()</span><span class="se">)</span><span class="s"> ..."</span><span class="p">)</span>
+
+    <span class="k">let</span> <span class="nv">swiftTest</span> <span class="o">=</span> <span class="k">try</span> <span class="n">system</span><span class="o">.</span><span class="nf">process</span><span class="p">(</span><span class="s">"swift"</span><span class="p">)</span>
+    <span class="n">swiftTest</span><span class="o">.</span><span class="n">arguments</span> <span class="o">=</span> <span class="p">[</span><span class="s">"test"</span><span class="p">]</span>
+
+    <span class="k">let</span> <span class="nv">output</span> <span class="o">=</span> <span class="k">try</span> <span class="n">terminal</span><span class="o">.</span><span class="nf">runProcess</span><span class="p">(</span><span class="n">swiftTest</span><span class="p">)</span>
+    <span class="k">let</span> <span class="nv">testReport</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">TestReport</span><span class="p">(</span><span class="nv">output</span><span class="p">:</span> <span class="n">output</span><span class="p">)</span>
+
+    <span class="n">signPost</span><span class="o">.</span><span class="nf">message</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">testReport</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="n">signPost</span><span class="o">.</span><span class="nf">message</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="nf">pretty_function</span><span class="p">()</span><span class="se">)</span><span class="s"> ✅"</span><span class="p">)</span>
+    <span class="nf">exit</span><span class="p">(</span><span class="kt">EXIT_SUCCESS</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="k">catch</span>
+<span class="p">{</span>
+    <span class="n">signPost</span><span class="o">.</span><span class="nf">error</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="n">signPost</span><span class="o">.</span><span class="nf">message</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="nf">pretty_function</span><span class="p">()</span><span class="se">)</span><span class="s"> ❌"</span><span class="p">)</span>
+    <span class="nf">exit</span><span class="p">(</span><span class="kt">EXIT_FAILURE</span><span class="p">)</span>
+<span class="p">}</span>
+
+</code></pre>
+<h4 id='use-highway-in-your-project' class='heading'>Use Highway in your project</h4>
 
 <p>If you do not yet have a <code>Package.swift</code> run <code>swift package init</code></p>
 
@@ -84,33 +179,67 @@
 <p>do <code>swift build</code></p>
 
 <p>choose frameworks to add. For example HWSetup runs sourcery for highway, swiftformat and performs tests.</p>
-<pre class="highlight swift"><code><span class="c1">// Add a target in Package.swift</span>
-<span class="o">.</span><span class="nf">target</span><span class="p">(</span>
-            <span class="nv">name</span><span class="p">:</span>   <span class="s">"HWSetup"</span><span class="p">,</span>
-            <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-                    <span class="s">"Arguments"</span><span class="p">,</span>
-                    <span class="s">"Errors"</span><span class="p">,</span>
-                    <span class="s">"SignPost"</span><span class="p">,</span>
-                    <span class="s">"SourceryAutoProtocols"</span><span class="p">,</span>
-                    <span class="s">"SourceryWorker"</span><span class="p">,</span>
-                    <span class="s">"SwiftFormatWorker"</span><span class="p">,</span>
-                    <span class="s">"Terminal"</span><span class="p">,</span>
-                    <span class="s">"ZFile"</span>
-            <span class="p">]</span>
+
+<p>Let&rsquo;s take the example or running sourcery</p>
+<pre class="highlight swift"><code><span class="cm">/**
+  Class can be aded to package in target and product.
+  You can run it from a main function you create
+*/</span>
+<span class="kd">public</span> <span class="kd">struct</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">Project</span><span class="err">#</span><span class="o">&gt;</span><span class="kt">Sourcery</span>
+<span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">"</span><span class="se">\(</span><span class="o">&lt;</span><span class="err">#</span><span class="kt">Project</span><span class="err">#</span><span class="o">&gt;</span><span class="kt">Sourcery</span><span class="o">.</span><span class="k">self</span><span class="se">)</span><span class="s">"</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">product</span> <span class="o">=</span> <span class="kt">Product</span><span class="o">.</span><span class="nf">executable</span><span class="p">(</span>
+        <span class="nv">name</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+        <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span><span class="n">name</span><span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">target</span> <span class="o">=</span> <span class="kt">Target</span><span class="o">.</span><span class="nf">target</span><span class="p">(</span>
+        <span class="nv">name</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+        <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span><span class="s">"Highway"</span><span class="p">]</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="k">let</span> <span class="nv">packageDependencies</span> <span class="o">=</span> 
+<span class="kd">public</span> <span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
+    <span class="nv">name</span><span class="p">:</span> <span class="s">"&lt;#Project#&gt;Sourcery"</span><span class="p">,</span>
+    <span class="nv">products</span><span class="p">:</span> <span class="p">[</span><span class="o">&lt;</span><span class="err">#</span><span class="kt">Project</span><span class="err">#</span><span class="o">&gt;</span><span class="kt">Sourcery</span><span class="o">.</span><span class="n">product</span><span class="p">],</span>
+    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://www.github.com/Bolides/Highway"</span><span class="p">,</span> <span class="s">"2.10.6"</span> <span class="o">..&lt;</span> <span class="s">"3.0.0"</span><span class="p">),],</span>
+    <span class="nv">targets</span><span class="p">:[</span><span class="o">&lt;</span><span class="err">#</span><span class="kt">Project</span><span class="err">#</span><span class="o">&gt;</span><span class="kt">Sourcery</span><span class="o">.</span><span class="n">target</span><span class="p">]</span>
+<span class="p">)</span>
 </code></pre>
 
-<p><code>swift package generate-xcodeproj</code></p>
-
-<blockquote>
-<p>You should not add the generated xcode project to git, just use it to Develop</p>
-</blockquote>
+<p>Then you can build this with <code>swift build</code>. Any other products you add to your swift package will get sourcery updates if you run the <code>&lt;#Project#&gt;Sourcery</code>.</p>
 
 <p>🚀 Done</p>
+
+<hr>
+<h1 id='contribute-to-highway' class='heading'>Contribute to Highway</h1>
+
+<p>After cloning </p>
+<pre class="highlight shell"><code>swift build <span class="nt">--configuration</span> release <span class="nt">--static-swift-stdlib</span> 
+<span class="c"># will output where the executable is build, usually</span>
+./.build/x86_64-apple-macosx10.10/release/Highway
+<span class="c"># after running this sourcery is setup too and you can generate code when needed</span>
+</code></pre>
+
+<p>Open the generated Highway.xcodeproj or open the folder in any other tool like VSCode and send us a PR.</p>
+
+<p>Thanks!</p>
+
+<hr>
+<h1 id='projects-using-highway' class='heading'>Projects using highway</h1>
+
+<ul>
+<li>Opensforyou.com</li>
+<li>Bolides.be</li>
+<li><a href="https://www.vrt.be/vrtnws">https://www.vrt.be/vrtnws</a> iOS mobile application ! Uses a very early version of highway and not sure if it is still used.</li>
+</ul>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-05-24)</p>
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-05-27)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

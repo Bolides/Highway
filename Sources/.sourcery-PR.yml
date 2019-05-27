@@ -1,8 +1,8 @@
 sources:
 - "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/PR/"
-- "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/.build/checkouts/template-sourcery-2823880972965882016/Sources/SourceryAutoProtocols/SourceryAutoProtocols.swift"
+- "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/.build/checkouts/template-sourcery--108890666365077616/Sources/SourceryAutoProtocols/SourceryAutoProtocols.swift"
 
 templates:
-- "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/.build/checkouts/template-sourcery-2823880972965882016/"
+- "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/.build/checkouts/template-sourcery--108890666365077616/"
 output:
  "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/PR/"
