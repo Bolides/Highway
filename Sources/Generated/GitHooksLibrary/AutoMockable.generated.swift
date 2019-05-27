@@ -4,6 +4,7 @@ import GitHooksLibrary
 import HighwayDispatch
 import Result
 import SignPost
+import SourceryAutoProtocols
 import Terminal
 import ZFile
 

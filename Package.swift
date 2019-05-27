@@ -387,7 +387,10 @@ public struct CarthageWorker
 
     public static let target = Target.target(
         name: name,
-        dependencies: [Terminal.library.asDependency()]
+        dependencies: [
+            Terminal.library.asDependency(),
+            Highway.Library.product.asDependency(),
+        ]
     )
 
     public static let tests = Target.testTarget(
@@ -470,13 +473,16 @@ public struct HWPod
 
     public static let target = Target.target(
         name: name,
-        dependencies: [Terminal.library.asDependency()]
+        dependencies: [Terminal.library.asDependency(), Errors.library.asDependency()]
+            + ["ZFile", "SignPost"]
     )
 
     public static let tests = Target.testTarget(
         name: name + "Tests",
         dependencies:
-        [HighwayDispatch.library.asDependency()]
+            target.dependencies
+            + [HWPod.library.asDependency()]
+            + ["SignPostMock", Terminal.Mock.library.asDependency(), "ZFileMock"]
             + quickNimble
     )
 
@@ -512,7 +518,7 @@ public struct Terminal
     public static let target = Target.target(
         name: name,
         dependencies:
-        ["Result", "ZFile", "SignPost"]
+        ["Result", "ZFile", "SignPost", "SourceryAutoProtocols"]
             +
             [
                 Errors.library.asDependency(),
@@ -798,5 +804,6 @@ public let package = Package(
         SwiftFormatWorker.tests,
         GitHooks.Library.tests,
         CarthageWorker.tests,
+        HWPod.tests,
     ]
 )

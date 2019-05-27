@@ -2,8 +2,10 @@ import CarthageWorker
 import Errors
 import Foundation
 import HighwayDispatch
+import HighwayLibrary
 import Result
 import SignPost
+import SourceryAutoProtocols
 import Terminal
 import ZFile
 

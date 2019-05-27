@@ -42,7 +42,7 @@ public struct HWPod: HWPodProtocol, AutoGenerateProtocol
     public init(
         podFolder: FolderProtocol,
         strictPodVersion: String = HWPod.expectedCocoapodsVersion,
-        commandLineOptions: Set<CommandLineOption> = Set(CommandLine.arguments.compactMap { CommandLineOption(rawValue: $0) }),
+        commandLineOptions: Set<HWPod.CommandLineOption> = Set(CommandLine.arguments.compactMap { HWPod.CommandLineOption(rawValue: $0) }),
         terminal: TerminalProtocol = Terminal.shared,
         signPost: SignPostProtocol = SignPost.shared,
         fileSystem: FileSystemProtocol = FileSystem.shared,

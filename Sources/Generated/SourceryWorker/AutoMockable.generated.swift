@@ -3,6 +3,7 @@ import Foundation
 import HighwayDispatch
 import Result
 import SignPost
+import SourceryAutoProtocols
 import SourceryWorker
 import Terminal
 import ZFile

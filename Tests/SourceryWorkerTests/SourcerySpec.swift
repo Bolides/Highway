@@ -82,7 +82,7 @@ class SourcerySpec: QuickSpec
 
                         it("has imports for automockable")
                         {
-                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "Errors,Foundation,HighwayDispatch,Result,SignPost,SourceryWorker,Terminal,ZFile"
+                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "Errors,Foundation,HighwayDispatch,Result,SignPost,SourceryAutoProtocols,SourceryWorker,Terminal,ZFile"
                         }
                     }
 
@@ -92,7 +92,7 @@ class SourcerySpec: QuickSpec
 
                         it("has imports for automockable")
                         {
-                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "Errors,Foundation,HighwayDispatch,Result,SignPost,Terminal,ZFile,ZFileMock"
+                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "Errors,Foundation,HighwayDispatch,Result,SignPost,SourceryAutoProtocols,Terminal,ZFile,ZFileMock"
                         }
                     }
 
@@ -112,7 +112,7 @@ class SourcerySpec: QuickSpec
 
                         it("has imports for automockable")
                         {
-                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "Errors,Foundation,HighwayDispatch,Result,SignPost,SwiftFormat,SwiftFormatWorker,Terminal,ZFile"
+                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "Errors,Foundation,HighwayDispatch,Result,SignPost,SourceryAutoProtocols,SwiftFormat,SwiftFormatWorker,Terminal,ZFile"
                         }
                     }
 
@@ -132,7 +132,7 @@ class SourcerySpec: QuickSpec
 
                         it("has imports for automockable")
                         {
-                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "CarthageWorker,Errors,Foundation,HighwayDispatch,Result,SignPost,Terminal,ZFile"
+                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "CarthageWorker,Errors,Foundation,HighwayDispatch,HighwayLibrary,Result,SignPost,SourceryAutoProtocols,Terminal,ZFile"
                         }
                     }
 
@@ -142,7 +142,7 @@ class SourcerySpec: QuickSpec
 
                         it("has imports for automockable")
                         {
-                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "Errors,Foundation,GitHooksLibrary,HighwayDispatch,Result,SignPost,Terminal,ZFile"
+                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "Errors,Foundation,GitHooksLibrary,HighwayDispatch,Result,SignPost,SourceryAutoProtocols,Terminal,ZFile"
                         }
                     }
 

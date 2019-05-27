@@ -4,8 +4,11 @@ import HighwayDispatch
 import HWPod
 import Result
 import SignPost
+import SignPostMock
 import SourceryAutoProtocols
+import TerminalMock
 import ZFile
+import ZFileMock
 
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
