@@ -9,7 +9,7 @@
 import Foundation
 
 import Errors
-import Highway
+import HighwayLibrary
 import HighwayDispatch
 import Result
 import SignPost
