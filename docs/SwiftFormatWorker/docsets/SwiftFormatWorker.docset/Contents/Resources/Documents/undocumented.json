@@ -1,0 +1,96 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SwiftFormatWorker/SwiftFormatWorker.swift",
+      "line": 16,
+      "symbol": "SwiftFormatWorkerProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SwiftFormatWorker/SwiftFormatWorker.swift",
+      "line": 19,
+      "symbol": "SwiftFormatWorkerProtocol.queue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SwiftFormatWorker/SwiftFormatWorker.swift",
+      "line": 21,
+      "symbol": "SwiftFormatWorkerProtocol.init(folderToFormatRecursive:queue:signPost:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SwiftFormatWorker/SwiftFormatWorker.swift",
+      "line": 26,
+      "symbol": "SwiftFormatWorkerProtocol.attempt(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SwiftFormatWorker/SwiftFormatWorker.swift",
+      "line": 30,
+      "symbol": "SwiftFormatWorker",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SwiftFormatWorker/SwiftFormatWorker.swift",
+      "line": 32,
+      "symbol": "SwiftFormatWorker.SyncOutput",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SwiftFormatWorker/SwiftFormatWorker.swift",
+      "line": 37,
+      "symbol": "SwiftFormatWorker.queue",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SwiftFormatWorker/SwiftFormatWorker.swift",
+      "line": 38,
+      "symbol": "SwiftFormatWorker.rulesPath",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SwiftFormatWorker/SwiftFormatWorker.swift",
+      "line": 39,
+      "symbol": "SwiftFormatWorker.defaultSwiftFormat",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SwiftFormatWorker/SwiftFormatWorker.swift",
+      "line": 59,
+      "symbol": "SwiftFormatWorker.queue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SwiftFormatWorker/SwiftFormatWorker.swift",
+      "line": 69,
+      "symbol": "SwiftFormatWorker.init(folderToFormatRecursive:configFile:queue:signPost:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SwiftFormatWorker/SwiftFormatWorker.swift",
+      "line": 83,
+      "symbol": "SwiftFormatWorker.init(folderToFormatRecursive:queue:signPost:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/SwiftFormatWorker/SwiftFormatWorker.swift",
+      "line": 121,
+      "symbol": "SwiftFormatWorker.attempt(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway"
+}

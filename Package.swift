@@ -785,6 +785,7 @@ public let package = Package(
         Terminal.Mock.target,
         GitHooks.Library.Mock.target,
         CarthageWorker.Mock.target,
+        HWPod.Mock.target,
 
         // MARK: - Tests
 
