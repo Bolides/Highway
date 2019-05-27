@@ -480,7 +480,7 @@ public struct HWPod
     public static let tests = Target.testTarget(
         name: name + "Tests",
         dependencies:
-            target.dependencies
+        target.dependencies
             + [HWPod.library.asDependency()]
             + ["SignPostMock", Terminal.Mock.library.asDependency(), "ZFileMock"]
             + quickNimble
@@ -749,6 +749,7 @@ public let package = Package(
         Terminal.Mock.library,
         GitHooks.Library.Mock.product,
         CarthageWorker.Mock.product,
+        HWPod.Mock.product,
     ],
     dependencies: external,
     targets: [
