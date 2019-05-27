@@ -459,6 +459,47 @@ public struct HighwayDispatch
     }
 }
 
+public struct HWPod
+{
+    public static let name = "\(HWPod.self)"
+
+    public static let library = Product.library(
+        name: name,
+        targets: [name]
+    )
+
+    public static let target = Target.target(
+        name: name,
+        dependencies: [Terminal.library.asDependency()]
+    )
+
+    public static let tests = Target.testTarget(
+        name: name + "Tests",
+        dependencies:
+        [HighwayDispatch.library.asDependency()]
+            + quickNimble
+    )
+
+    public struct Mock
+    {
+        public static let name = "\(HWPod.name)Mock"
+
+        public static let product = Product.library(
+            name: name,
+            targets: [name]
+        )
+
+        public static let target = Target.target(
+            name: name,
+            dependencies:
+            [HWPod.library.asDependency()]
+                + Terminal.target.dependencies
+                + HighwayDispatch.target.dependencies,
+            path: "Sources/Generated/\(HWPod.name)"
+        )
+    }
+}
+
 public struct Terminal
 {
     public static let name = "\(Terminal.self)"
@@ -691,6 +732,7 @@ public let package = Package(
         GitHooks.Library.product,
         SwiftFormatWorker.product,
         CarthageWorker.library,
+        HWPod.library,
 
         // MARK: - Library - Mocks
 
@@ -713,6 +755,7 @@ public let package = Package(
         PR.target,
         GitHooks.target,
         HighwayDocumentation.target,
+        HWPod.target,
 
         // MARK: - Executable Examples - not needed for highway
 

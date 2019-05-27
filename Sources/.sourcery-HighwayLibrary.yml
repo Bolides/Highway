@@ -1,8 +1,8 @@
 sources:
 - "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/HighwayLibrary/"
-- "AutoMockable filled value"
+- "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/.build/checkouts/template-sourcery--108890666365077616/Sources/SourceryAutoProtocols/SourceryAutoProtocols.swift"
 
 templates:
-- "AutoMockable filled value"
+- "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/.build/checkouts/template-sourcery--108890666365077616/"
 output:
  "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/Generated/HighwayLibrary/"
