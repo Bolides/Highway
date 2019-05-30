@@ -2,10 +2,10 @@
 import Errors
 import Foundation
 import HighwayLibrary
-
+import ZFile
 do
 {
-    try setupHighwayRunner()
+    try setupHighwayRunner(folder: try File(path: #file).parentFolder().parentFolder().parentFolder())
 
     highwayRunner.runSourcery(handleSourceryOutput)
 

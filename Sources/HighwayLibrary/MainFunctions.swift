@@ -20,7 +20,7 @@ public var highwayRunner: HighwayRunner!
 public var dispatchGroup: HWDispatchGroupProtocol = DispatchGroup()
 public var signPost = SignPost.shared
 
-public let srcRoot = try! File(path: #file).parentFolder().parentFolder().parentFolder()
+public var srcRoot: FolderProtocol!
 public let sourcesFolder = try! srcRoot.subfolder(named: "Sources")
 public let dependencyService = DependencyService(in: srcRoot)
 
@@ -33,8 +33,9 @@ public let dependencyService = DependencyService(in: srcRoot)
      - Errors from the Highway.Errors type. import Errors to inspect. Typically an error is wrapped in HighwayError enum HighwayError.highwayError(atLocation:error:). You can find the find the inderict error also with indirectError variable.
 
  */
-public func setupHighwayRunner(gitHooksPrePushExecutableName: String = "PR") throws
+public func setupHighwayRunner(folder: FolderProtocol, gitHooksPrePushExecutableName: String = "PR") throws
 {
+    srcRoot = folder
     let dumpService = DumpService(swiftPackageFolder: srcRoot)
     let package = try Highway.package(for: srcRoot, dependencyService: dependencyService, dumpService: dumpService)
 

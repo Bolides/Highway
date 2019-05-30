@@ -4,10 +4,11 @@ import Errors
 import Foundation
 import HighwayLibrary
 import Terminal
+import ZFile
 
 do
 {
-    try setupHighwayRunner()
+    try setupHighwayRunner(folder: try File(path: #file).parentFolder().parentFolder().parentFolder())
     try highwayRunner.addGithooksPrePush()
     try highwayRunner.checkIfSecretsShouldBeHidden(in: srcRoot)
 

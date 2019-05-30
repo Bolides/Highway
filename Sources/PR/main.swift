@@ -3,12 +3,13 @@ import Errors
 import Foundation
 import HighwayLibrary
 import Terminal
+import ZFile
 
 signPost.message("\(pretty_function()) ...")
 
 do
 {
-    try setupHighwayRunner()
+    try setupHighwayRunner(folder: try File(path: #file).parentFolder().parentFolder().parentFolder())
 
     highwayRunner.runSourcery(handleSourceryOutput)
 
