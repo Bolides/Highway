@@ -1,0 +1,82 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/HWPod/HWPod.swift",
+      "line": 16,
+      "symbol": "HWPodProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/HWPod/HWPod.swift",
+      "line": 19,
+      "symbol": "HWPodProtocol.expectedCocoapodsVersion",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/HWPod/HWPod.swift",
+      "line": 21,
+      "symbol": "HWPodProtocol.attemptPodInstallIfOptionAddedToCommandline()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/HWPod/HWPod.swift",
+      "line": 25,
+      "symbol": "HWPod",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/HWPod/HWPod.swift",
+      "line": 27,
+      "symbol": "HWPod.expectedCocoapodsVersion",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/HWPod/HWPod.swift",
+      "line": 36,
+      "symbol": "HWPod.CommandLineOption",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/HWPod/HWPod.swift",
+      "line": 38,
+      "symbol": "HWPod.CommandLineOption.podInstall",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/HWPod/HWPod.swift",
+      "line": 42,
+      "symbol": "HWPod.init(podFolder:strictPodVersion:commandLineOptions:terminal:signPost:fileSystem:system:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/HWPod/HWPod.swift",
+      "line": 117,
+      "symbol": "HWPod.Error",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/HWPod/HWPod.swift",
+      "line": 133,
+      "symbol": "HWPod.Error.invalidCocoapodsVersion",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway/Sources/HWPod/HWPod.swift",
+      "line": 134,
+      "symbol": "HWPod.Error.systemHasNoPodInstalled",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/stijnwillems/Documents/dev.nosync/Open/Highway"
+}

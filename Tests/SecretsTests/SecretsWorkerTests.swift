@@ -76,6 +76,10 @@ class SecretsWorkerSpec: QuickSpec
                         {
                             return expectedGitOutput
                         }
+                        else if argument == "-c"
+                        {
+                            return ["mock gpg -c success"]
+                        }
                         else
                         {
                             throw error
@@ -104,12 +108,16 @@ class SecretsWorkerSpec: QuickSpec
                         expect { try sut?.attemptHideSecrets(in: folder) } == expecteHideResponse
                     }
 
-                    it("throws for gpg")
+                    it("runs gpg")
                     {
+                        let expectedEncryptedFile = try! FileProtocolMock()
+                        expectedEncryptedFile.path = "Expected encrypted file"
+
                         let folder = try! FolderProtocolMock()
                         folder.makeFileSequenceReturnValue = try! File(path: #file).parentFolder().makeFileSequence()
+                        folder.fileNamedReturnValue = expectedEncryptedFile
 
-                        expect { try sut?.attemptHideSecretsWithgpg(in: folder) }.to(throwError(SecretsWorker.Error.location("M (268, 49) SecretsWorker.swift attemptHideSecretsWithgpg(in:)", .runSecretsExecutable)))
+                        expect { try sut?.attemptHideSecretsWithgpg(in: folder) } == [expectedEncryptedFile.path, expectedEncryptedFile.path]
                     }
                 }
 
@@ -137,7 +145,7 @@ class SecretsWorkerSpec: QuickSpec
                         let folder = try! FolderProtocolMock()
                         folder.makeFileSequenceReturnValue = try! File(path: #file).parentFolder().makeFileSequence()
 
-                        expect { try sut?.attemptHideSecretsWithgpg(in: folder) } == ["M (218, 39) SecretsWorker.swift attemptHideSecretsWithgpg(in:) no secrets changed, skipping!"]
+                        expect { try sut?.attemptHideSecretsWithgpg(in: folder) } == ["M (222, 39) SecretsWorker.swift attemptHideSecretsWithgpg(in:) no secrets changed, skipping! ✅"]
                     }
                 }
             }
