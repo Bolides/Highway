@@ -161,7 +161,7 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
         {
             signPost.error("\(pretty_function()) \n\(error)\n❌")
 
-            throw Error.location(pretty_function(), .runSecretsExecutable)
+            throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
         }
     }
 
@@ -213,13 +213,17 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
 
     public func attemptHideSecretsWithgpg(in folder: FolderProtocol) throws -> [String]
     {
-        guard try secretsChangedSinceLastPush(in: folder).count > 0 else
-        {
-            return ["\(pretty_function()) no secrets changed, skipping!"]
-        }
-
         signPost.message("\(pretty_function()) ...")
 
+        let secretFilePaths = try secretsChangedSinceLastPush(in: folder)
+        
+        guard secretFilePaths.count > 0 else
+        {
+            return ["\(pretty_function()) no secrets changed, skipping! ✅"]
+        }
+
+        signPost.message("secret files changed \n \(secretFilePaths.joined(separator: "\n"))")
+        
         do
         {
             let srcRoot: FolderProtocol = folder
@@ -265,7 +269,7 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
         catch
         {
             signPost.message("\(pretty_function()) \n \(error) \n ❌")
-            throw Error.location(pretty_function(), Error.runSecretsExecutable)
+            throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
         }
     }
 
@@ -280,15 +284,21 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
 
     public indirect enum Error: Swift.Error, Equatable, CustomStringConvertible
     {
-        case runSecretsExecutable
+        case runSecretsExecutable(missingFilePaths: [String])
         case location(String, Error)
 
         public var description: String
         {
             switch self
             {
-            case .runSecretsExecutable:
-                return "❌ secrets not commited\nYou should run ./.build/x86_64-apple-macosx10.10/release/<#Your project#>Secrets\n❌"
+            case let .runSecretsExecutable(missingFilePaths: missingFilePaths):
+                return """
+                changed secret files:
+                
+                \(missingFilePaths.map { "    * \($0)" }.joined(separator: "\n"))
+                
+                ❌ secrets not commited\nYou should run ./.build/x86_64-apple-macosx10.10/release/<#Your project#>Secrets\n❌
+                """
             case let .location(location, indirectError):
                 return """
                 
