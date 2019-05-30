@@ -85,7 +85,7 @@ public struct Highway
                     GitHooks.Library.product.asDependency(),
                     Terminal.library.asDependency(),
                     SourceryWorker.library.asDependency(),
-                    SwiftFormatWorker.product.asDependency(),
+                    SwiftFormatWorker.library.asDependency(),
                     HighwayDispatch.library.asDependency(),
                     Secrets.Library.product.asDependency(),
                     Documentation.Library.product.asDependency(),
@@ -173,7 +173,11 @@ public struct Secrets
 
         public static let tests = Target.testTarget(
             name: name + "Tests",
-            dependencies: [product.asDependency()] + quickNimble
+            dependencies:
+            [Terminal.Mock.library.asDependency(), "ZFileMock", "SignPostMock"]
+            + ["Errors"]
+            + [product.asDependency()]
+            + quickNimble
         )
 
         public struct Mock
@@ -288,8 +292,10 @@ public struct GitHooks
         public static let tests = Target.testTarget(
             name: name + "Tests",
             dependencies:
-            [product.asDependency()]
-                + quickNimble
+            [Terminal.Mock.library.asDependency(), "SignPostMock", "ZFileMock"]
+            + ["Errors"]
+            + [product.asDependency(), Terminal.library.asDependency()]
+            + quickNimble
         )
 
         public struct Mock
@@ -591,7 +597,9 @@ public struct SourceryWorker
     public static let tests = Target.testTarget(
         name: name + "Tests",
         dependencies:
-        [SourceryWorker.library.asDependency()]
+            [Terminal.Mock.library.asDependency(), "SignPostMock", "ZFileMock"]
+            + ["Errors"]
+            + [SourceryWorker.library.asDependency()]
             + quickNimble
     )
 
@@ -621,7 +629,7 @@ public struct SwiftFormatWorker
 {
     public static let name = "\(SwiftFormatWorker.self)"
 
-    public static let product = Product.library(
+    public static let library = Product.library(
         name: name,
         targets: [name]
     )
@@ -629,7 +637,7 @@ public struct SwiftFormatWorker
     public static let target = Target.target(
         name: name,
         dependencies:
-        ["SwiftFormat"]
+            ["SwiftFormat"]
             +
             [Terminal.library.asDependency()]
     )
@@ -637,13 +645,16 @@ public struct SwiftFormatWorker
     public static let tests = Target.testTarget(
         name: name + "Tests",
         dependencies:
-        [Terminal.library.asDependency()]
+            [
+                SwiftFormatWorker.library.asDependency(),
+                Terminal.library.asDependency()
+            ]
             + quickNimble
     )
 
     public struct Mock
     {
-        public static let name = SwiftFormatWorker.product.name + "Mock"
+        public static let name = SwiftFormatWorker.library.name + "Mock"
 
         public static let product = Product.library(
             name: name,
@@ -655,8 +666,8 @@ public struct SwiftFormatWorker
             dependencies:
             SwiftFormatWorker.target.dependencies
                 + Terminal.target.dependencies
-                + [SwiftFormatWorker.product.asDependency()],
-            path: "Sources/Generated/\(SwiftFormatWorker.product.name)"
+                + [SwiftFormatWorker.library.asDependency()],
+            path: "Sources/Generated/\(SwiftFormatWorker.library.name)"
         )
     }
 }
@@ -736,7 +747,7 @@ public let package = Package(
         Errors.library,
         SourceryWorker.library,
         GitHooks.Library.product,
-        SwiftFormatWorker.product,
+        SwiftFormatWorker.library,
         CarthageWorker.library,
         HWPod.library,
 
