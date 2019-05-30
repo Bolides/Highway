@@ -9,8 +9,8 @@
 import Foundation
 
 import Errors
-import Highway
 import HighwayDispatch
+import HighwayLibrary
 import Result
 import SignPost
 import SourceryAutoProtocols
