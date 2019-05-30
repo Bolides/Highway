@@ -137,6 +137,7 @@ import Foundation
  // types.implementing.AutoGenerateProtocol inline for SwiftTarget ..
  // sourcery:inline:SwiftTarget.AutoGenerateProtocol
  var name: String { get }
+ var path: String? { get }
  var dependencies: Set<SwiftTarget.Dependency> { get }
 
  // sourcery:end

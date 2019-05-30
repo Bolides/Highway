@@ -1673,6 +1673,7 @@ open class SwiftTargetProtocolMock: SwiftTargetProtocol
     }
 
     public var underlyingName: String = "AutoMockable filled value"
+    public var path: String?
     public var dependencies: Set<SwiftTarget.Dependency>
     {
         get { return underlyingDependencies }

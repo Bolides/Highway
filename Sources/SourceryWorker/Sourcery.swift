@@ -86,7 +86,16 @@ public struct Sourcery: SourceryProtocol, AutoGenerateProtocol
         do
         {
             let sourcesFolder = try swiftPackageDependencies.srcRoot().subfolder(named: "Sources")
-            let productFolder = try sourcesFolder.subfolder(named: productName)
+            var productFolder: FolderProtocol!
+
+            if let path = (swiftPackageDump.targets.first { $0.name == productName })?.path
+            {
+                productFolder = try swiftPackageDependencies.srcRoot().subfolder(named: path)
+            }
+            else
+            {
+                productFolder = try sourcesFolder.subfolder(named: productName)
+            }
             let templateFolder = try sourceryBuilder.templateFolder()
             let outputFolder = try sourcesFolder
                 .createSubfolderIfNeeded(withName: "Generated")
