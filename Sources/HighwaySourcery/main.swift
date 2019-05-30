@@ -1,39 +1,11 @@
 
 import Errors
 import Foundation
-import HighwayDispatch
 import HighwayLibrary
-import SignPost
-import SourceryWorker
-import Terminal
-import ZFile
-
-// MARK: - PREPARE
-
-let highwayRunner: HighwayRunner!
-let dispatchGroup: HWDispatchGroupProtocol = DispatchGroup()
-let signPost = SignPost.shared
-
-// MARK: - RUN
-
-let dependencyService: DependencyServiceProtocol!
 
 do
 {
-    let srcRoot = try File(path: #file).parentFolder().parentFolder().parentFolder()
-    dependencyService = DependencyService(in: srcRoot)
-
-    // Swift Package
-
-    let dumpService = DumpService(swiftPackageFolder: srcRoot)
-    let package = try Highway.package(for: srcRoot, dependencyService: dependencyService, dumpService: dumpService)
-
-    let sourceryBuilder = SourceryBuilder(dependencyService: dependencyService)
-    let highway = try Highway(package: package, dependencyService: dependencyService, sourceryBuilder: sourceryBuilder, gitHooksPrePushExecutableName: "HWSetup")
-
-    highwayRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
-
-    //    // Githooks
+    try setupHighwayRunner()
 
     highwayRunner.runSourcery(handleSourceryOutput)
 

@@ -189,7 +189,8 @@ class HighwaySpec: QuickSpec
                     self.sut = try Highway(
                         package: self.rootPackage,
                         dependencyService: self.dependencyService,
-                        sourceryBuilder: SourceryBuilderMock(), swiftformatType: SWM.self,
+                        sourceryBuilder: SourceryBuilderMock(),
+                        swiftformat: SWM(),
                         githooksType: GHWM.self,
                         sourceryWorkerType: SourceryWorkerMock.self,
                         terminal: self.terminal,
@@ -208,7 +209,7 @@ class HighwaySpec: QuickSpec
 
             context("Dependency with name")
             {
-                let location = "M (192, 72) Highway.swift dependency(with:)"
+                let location = "M (188, 72) Highway.swift dependency(with:)"
                 it("unknown")
                 {
                     let name = "unknown dependency"

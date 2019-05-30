@@ -110,7 +110,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         - githooksOption: Set<GitHooksWorker.Option> = Set(CommandLine.arguments.compactMap { GitHooksWorker.Option(rawValue: $0) }), // By default this takes arguments from command line and sees if they match anything usefull for GithookWorker
         - gitHooksPrePushExecutableName: String? = nil, // If set to nil the only product with type executable will be chosen to put a script in .git/pre-push that will run before every push
         - githooksPrePushScriptOptions: String? = nil, // Will be added after git hooks pre push script
-        - swiftformatType: SwiftFormatWorkerProtocol.Type = SwiftFormatWorker.self,
+        - swiftformatType: SwiftFormatWorkerProtocol
         - githooksType: GitHooksWorkerProtocol.Type? = GitHooksWorker.self, // if set to nil githooks will not be added
         - sourceryWorkerType: SourceryWorkerProtocol.Type = SourceryWorker.self,
         - terminal: TerminalProtocol = Terminal.shared,
@@ -126,7 +126,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
         githooksOption: Set<GitHooksWorker.Option> = Set(CommandLine.arguments.compactMap { GitHooksWorker.Option(rawValue: $0) }), // By default this takes arguments from command line and sees if they match anything usefull for GithookWorker
         gitHooksPrePushExecutableName: String? = nil, // If set to nil the only product with type executable will be chosen
         githooksPrePushScriptOptions: String? = nil, // Will be added after git hooks pre push script
-        swiftformatType: SwiftFormatWorkerProtocol.Type = SwiftFormatWorker.self,
+        swiftformat: SwiftFormatWorkerProtocol,
         githooksType: GitHooksWorkerProtocol.Type? = GitHooksWorker.self, // if set to nil githooks will not be added
         sourceryWorkerType: SourceryWorkerProtocol.Type = SourceryWorker.self,
         terminal: TerminalProtocol = Terminal.shared,
@@ -176,11 +176,7 @@ public struct Highway: HighwayProtocol, AutoGenerateProtocol
             signPost: signPost
         )
 
-        swiftformat = try swiftformatType.init(
-            folderToFormatRecursive: srcRoot,
-            queue: queue,
-            signPost: signPost
-        )
+        self.swiftformat = swiftformat
     }
 
     // MARK: - Public Functions
