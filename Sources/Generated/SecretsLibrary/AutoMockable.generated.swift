@@ -38,13 +38,6 @@ open class SecretsWorkerProtocolMock: SecretsWorkerProtocol
     }
 
     public static var underlyingGitSecretname: String = "AutoMockable filled value"
-    public static var secretFileDateChangePath: String
-    {
-        get { return underlyingSecretFileDateChangePath }
-        set(value) { underlyingSecretFileDateChangePath = value }
-    }
-
-    public static var underlyingSecretFileDateChangePath: String = "AutoMockable filled value"
 
     // MARK: - <revealSecrets> - parameters
 
@@ -95,46 +88,46 @@ open class SecretsWorkerProtocolMock: SecretsWorkerProtocol
         return try closureReturn(folder)
     }
 
-    // MARK: - <didSecretsChangeSinceLastPush> - parameters
+    // MARK: - <secretsChangedSinceLastPush> - parameters
 
-    public var didSecretsChangeSinceLastPushInThrowableError: Error?
-    public var didSecretsChangeSinceLastPushInCallsCount = 0
-    public var didSecretsChangeSinceLastPushInCalled: Bool
+    public var secretsChangedSinceLastPushInThrowableError: Error?
+    public var secretsChangedSinceLastPushInCallsCount = 0
+    public var secretsChangedSinceLastPushInCalled: Bool
     {
-        return didSecretsChangeSinceLastPushInCallsCount > 0
+        return secretsChangedSinceLastPushInCallsCount > 0
     }
 
-    public var didSecretsChangeSinceLastPushInReceivedFolder: FolderProtocol?
-    public var didSecretsChangeSinceLastPushInReturnValue: Bool?
+    public var secretsChangedSinceLastPushInReceivedFolder: FolderProtocol?
+    public var secretsChangedSinceLastPushInReturnValue: [String]?
 
-    // MARK: - <didSecretsChangeSinceLastPush> - closure mocks
+    // MARK: - <secretsChangedSinceLastPush> - closure mocks
 
-    public var didSecretsChangeSinceLastPushInClosure: ((FolderProtocol) throws -> Bool)?
+    public var secretsChangedSinceLastPushInClosure: ((FolderProtocol) throws -> [String])?
 
-    // MARK: - <didSecretsChangeSinceLastPush> - method mocked
+    // MARK: - <secretsChangedSinceLastPush> - method mocked
 
-    open func didSecretsChangeSinceLastPush(in folder: FolderProtocol) throws -> Bool
+    open func secretsChangedSinceLastPush(in folder: FolderProtocol) throws -> [String]
     {
-        // <didSecretsChangeSinceLastPush> - Throwable method implementation
+        // <secretsChangedSinceLastPush> - Throwable method implementation
 
-        if let error = didSecretsChangeSinceLastPushInThrowableError
+        if let error = secretsChangedSinceLastPushInThrowableError
         {
             throw error
         }
 
-        didSecretsChangeSinceLastPushInCallsCount += 1
-        didSecretsChangeSinceLastPushInReceivedFolder = folder
+        secretsChangedSinceLastPushInCallsCount += 1
+        secretsChangedSinceLastPushInReceivedFolder = folder
 
-        // <didSecretsChangeSinceLastPush> - Return Value mock implementation
+        // <secretsChangedSinceLastPush> - Return Value mock implementation
 
-        guard let closureReturn = didSecretsChangeSinceLastPushInClosure else
+        guard let closureReturn = secretsChangedSinceLastPushInClosure else
         {
-            guard let returnValue = didSecretsChangeSinceLastPushInReturnValue else
+            guard let returnValue = secretsChangedSinceLastPushInReturnValue else
             {
-                let message = "No returnValue implemented for didSecretsChangeSinceLastPushInClosure"
+                let message = "No returnValue implemented for secretsChangedSinceLastPushInClosure"
                 let error = SourceryMockError.implementErrorCaseFor(message)
 
-                // You should implement Bool
+                // You should implement [String]
 
                 throw error
             }
@@ -142,40 +135,6 @@ open class SecretsWorkerProtocolMock: SecretsWorkerProtocol
         }
 
         return try closureReturn(folder)
-    }
-
-    // MARK: - <writeNewSecretSavedData> - parameters
-
-    public var writeNewSecretSavedDataInThrowableError: Error?
-    public var writeNewSecretSavedDataInCallsCount = 0
-    public var writeNewSecretSavedDataInCalled: Bool
-    {
-        return writeNewSecretSavedDataInCallsCount > 0
-    }
-
-    public var writeNewSecretSavedDataInReceivedFolder: FolderProtocol?
-
-    // MARK: - <writeNewSecretSavedData> - closure mocks
-
-    public var writeNewSecretSavedDataInClosure: ((FolderProtocol) throws -> Void)?
-
-    // MARK: - <writeNewSecretSavedData> - method mocked
-
-    open func writeNewSecretSavedData(in folder: FolderProtocol) throws
-    {
-        // <writeNewSecretSavedData> - Throwable method implementation
-
-        if let error = writeNewSecretSavedDataInThrowableError
-        {
-            throw error
-        }
-
-        writeNewSecretSavedDataInCallsCount += 1
-        writeNewSecretSavedDataInReceivedFolder = folder
-
-        // <writeNewSecretSavedData> - Void return mock implementation
-
-        try writeNewSecretSavedDataInClosure?(folder)
     }
 
     // MARK: - <attemptHideSecrets> - parameters

@@ -20,6 +20,8 @@ let signPost = SignPost.shared
 
 let dependencyService: DependencyServiceProtocol!
 
+signPost.message("\(pretty_function()) ...")
+
 do
 {
     let srcRoot = try File(path: #file).parentFolder().parentFolder().parentFolder()
@@ -53,21 +55,20 @@ do
                 guard try git.isClean() else
                 {
                     signPost.error("changes not commited")
-                    signPost.message("🚀 \(HighwayRunner.self) ❌")
+                    signPost.message("\(pretty_function()) ❌")
                     exit(EXIT_FAILURE)
                 }
             }
             catch
             {
                 signPost.error("\(error)")
-                signPost.message("🚀 \(HighwayRunner.self) ❌")
+                signPost.message("\(pretty_function()) ❌")
                 exit(EXIT_FAILURE)
             }
 
-            signPost.message("🚀 \(HighwayRunner.self) ✅")
+            signPost.message("\(pretty_function()) ✅")
             exit(EXIT_SUCCESS)
         }
-        signPost.error("🚀 \(HighwayRunner.self) has \(errors.count) ❌")
 
         for error in errors.enumerated()
         {
@@ -81,7 +82,7 @@ do
             """
             signPost.error(message)
         }
-
+        signPost.error("\(pretty_function()) has \(errors.count) ❌")
         exit(EXIT_FAILURE)
     }
     dispatchMain()
@@ -89,5 +90,6 @@ do
 catch
 {
     signPost.error("\(error)")
+    signPost.error("\(pretty_function()) ❌")
     exit(EXIT_FAILURE)
 }

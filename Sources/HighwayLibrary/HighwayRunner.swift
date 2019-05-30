@@ -234,7 +234,7 @@ public class HighwayRunner: HighwayRunnerProtocol, AutoGenerateProtocol
      */
     public func checkIfSecretsShouldBeHidden(in folder: FolderProtocol) throws
     {
-        guard try secretsWorker.didSecretsChangeSinceLastPush(in: folder) else
+        guard try secretsWorker.secretsChangedSinceLastPush(in: folder).count == 0 else
         {
             signPost.message("\(pretty_function()) no secrets to hide.")
             return

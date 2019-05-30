@@ -10,14 +10,12 @@ public protocol SecretsWorkerProtocol: AutoMockable
     // sourcery:inline:SecretsWorker.AutoGenerateProtocol
     static var shared: SecretsWorker { get }
     static var gitSecretname: String { get set }
-    static var secretFileDateChangePath: String { get set }
 
     func revealSecrets(in folder: FolderProtocol) throws -> [String]
-    mutating func didSecretsChangeSinceLastPush(in folder: FolderProtocol) throws -> Bool
-    mutating func writeNewSecretSavedData(in folder: FolderProtocol) throws
-    mutating func attemptHideSecrets(in folder: FolderProtocol) throws -> [String]
+    func secretsChangedSinceLastPush(in folder: FolderProtocol) throws -> [String]
+    func attemptHideSecrets(in folder: FolderProtocol) throws -> [String]
     func commitHiddenSecrets(in folder: FolderProtocol) throws -> [String]
-    mutating func attemptHideSecretsWithgpg(in folder: FolderProtocol) throws -> [String]
+    func attemptHideSecretsWithgpg(in folder: FolderProtocol) throws -> [String]
     func gitSecretProcess(in folder: FolderProtocol) throws -> ProcessProtocol
 
     // sourcery:end
@@ -27,14 +25,12 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
 {
     public static let shared = SecretsWorker()
     public static var gitSecretname = "git-secret"
-    public static var secretFileDateChangePath = ".secretsChangeDates.json"
 
     // MARK: - Private
 
     private let terminal: TerminalProtocol
     private let system: SystemProtocol
     private let signPost: SignPostProtocol
-    private var secretSaved: Secret?
     private let fileSystem: FileSystemProtocol
 
     // MARK: - init
@@ -99,8 +95,12 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
      Returns with true if the secrets listed by git secret have changed
      It stores a file with json named SecretsWorker.secretFileDateChangePath in the root folder
      later it checks for dates with keys of the relative paths to the secrets files and returns with false if files have changed.
+
+     - parameters:
+     - folder : FolderProtocol = root git folder containing .secrets
+     - returns: list of changed files paths relative to folder
      */
-    public mutating func didSecretsChangeSinceLastPush(in folder: FolderProtocol) throws -> Bool
+    public func secretsChangedSinceLastPush(in folder: FolderProtocol) throws -> [String]
     {
         do
         {
@@ -109,42 +109,22 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
 
             let listOutput = try terminal.runProcess(gitSecretList).filter { !$0.isEmpty }
 
-            let rootPath = folder.path
-            let list = try listOutput.map { try folder.file(named: $0) }
-            var listDates = [String: Date]()
+            var changedPaths = [String]()
 
-            list.forEach
-            {
-                let relativePath = $0.path.replacingOccurrences(of: rootPath, with: "")
-                listDates[relativePath] = $0.modificationDate
-            }
+            try listOutput.forEach
+            { secretFilePath in
+                let gitSecretChanged = try gitSecretProcess(in: folder)
+                gitSecretChanged.arguments = ["changes", secretFilePath]
 
-            let fileDates = try folder.createFileIfNeeded(named: SecretsWorker.secretFileDateChangePath)
-            secretSaved = Secret(secretFileDates: listDates)
+                let output = try terminal.runProcess(gitSecretChanged).filter { !$0.isEmpty }
 
-            guard let original = (try? JSONDecoder().decode(Secret.self, from: try fileDates.read())) else
-            {
-                try writeNewSecretSavedData(in: folder)
-                return true
-            }
-
-            let result = try original.secretFileDates.filter
-            {
-                guard let date = secretSaved?.secretFileDates[$0.key] else
+                if output.count > 1
                 {
-                    throw HighwayError.highwayError(atLocation: pretty_function(), error: "missing secret file date \($0.key)")
+                    changedPaths.append(secretFilePath)
                 }
-
-                return date > $0.value
             }
 
-            guard result.keys.count > 0 else
-            {
-                secretSaved = nil
-                return false
-            }
-
-            return true
+            return changedPaths
         }
         catch
         {
@@ -152,31 +132,14 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
         }
     }
 
-    /**
-     Writes cached in memory private secretSaved to disk and sets it to nil
-     Output can be found in root folder json file named `SecretsWorker.secretFileDateChangePath.`
-     */
-    public mutating func writeNewSecretSavedData(in folder: FolderProtocol) throws
-    {
-        guard let secretSaved = secretSaved else
-        {
-            return
-        }
-
-        let secretData = try JSONEncoder().encode(secretSaved)
-        let fileDates = try folder.createFileIfNeeded(named: SecretsWorker.secretFileDateChangePath)
-        try fileDates.write(data: secretData)
-        self.secretSaved = nil
-    }
-
     // MARK: - git-secret
 
     /**
      Will throw to make you run secrets to hide secrets with git-secret ang gpg
      */
-    public mutating func attemptHideSecrets(in folder: FolderProtocol) throws -> [String]
+    public func attemptHideSecrets(in folder: FolderProtocol) throws -> [String]
     {
-        guard try didSecretsChangeSinceLastPush(in: folder) else
+        guard try secretsChangedSinceLastPush(in: folder).count > 0 else
         {
             return ["\(pretty_function()) no secret changes, skipping"]
         }
@@ -196,9 +159,9 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
         }
         catch
         {
-            signPost.message("\(pretty_function()) ❌")
+            signPost.error("\(pretty_function()) \n\(error)\n❌")
 
-            throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
+            throw Error.location(pretty_function(), .runSecretsExecutable)
         }
     }
 
@@ -225,7 +188,6 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
             list.append(contentsOf: gitSecretListPaths.map { $0 + ".secret" })
 
             gitAdd.arguments?.append(contentsOf: list)
-            gitAdd.arguments?.append(SecretsWorker.secretFileDateChangePath)
 
             try terminal.runProcess(gitAdd)
 
@@ -249,9 +211,9 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
 
     // MARK: - gpg secrets
 
-    public mutating func attemptHideSecretsWithgpg(in folder: FolderProtocol) throws -> [String]
+    public func attemptHideSecretsWithgpg(in folder: FolderProtocol) throws -> [String]
     {
-        guard try didSecretsChangeSinceLastPush(in: folder) else
+        guard try secretsChangedSinceLastPush(in: folder).count > 0 else
         {
             return ["\(pretty_function()) no secrets changed, skipping!"]
         }
@@ -274,22 +236,22 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
 
             // gpg --symetric all git secrets
 
-            let git = try gitSecretProcess(in: srcRoot)
-            git.arguments = ["list"]
+            let gitSecrets = try gitSecretProcess(in: srcRoot)
+            gitSecrets.arguments = ["list"]
 
-            var gitSecretListOutput = try terminal.runProcess(git)
+            var gitSecretListOutput = try terminal.runProcess(gitSecrets)
             gitSecretListOutput = (gitSecretListOutput.filter { $0.count > 0 })
 
             guard gitSecretListOutput.count > 0 else
             {
-                return []
+                return ["\(pretty_function()) no secrets in repo"]
             }
 
             let files = try gitSecretListOutput.map { try srcRoot.file(named: $0) }
 
             for file in files
             {
-                let gpg = try system.processFromBrew(formula: "gpg", in: srcRoot)
+                let gpg = try system.installOrGetProcessFromBrew(formula: "gpg", in: srcRoot)
                 gpg.arguments = ["-c", file.name]
 
                 let output = try terminal.runProcess(gpg)
@@ -302,8 +264,8 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
         }
         catch
         {
-            signPost.message("\(pretty_function()) ❌")
-            throw HighwayError.highwayError(atLocation: pretty_function(), error: error)
+            signPost.message("\(pretty_function()) \n \(error) \n ❌")
+            throw Error.location(pretty_function(), Error.runSecretsExecutable)
         }
     }
 
@@ -316,9 +278,10 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
 
     // MARK: - Error
 
-    public enum Error: Swift.Error, Equatable, CustomStringConvertible
+    public indirect enum Error: Swift.Error, Equatable, CustomStringConvertible
     {
         case runSecretsExecutable
+        case location(String, Error)
 
         public var description: String
         {
@@ -326,6 +289,23 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
             {
             case .runSecretsExecutable:
                 return "❌ secrets not commited\nYou should run ./.build/x86_64-apple-macosx10.10/release/<#Your project#>Secrets\n❌"
+            case let .location(location, indirectError):
+                return """
+                
+                \(indirectError)
+                
+                Location
+                \(location)
+                """
+            }
+        }
+        
+        public var indirect: Error? {
+            switch self {
+            case let .location(_, indirectError):
+                return indirectError
+            default:
+                return nil
             }
         }
     }
