@@ -175,9 +175,9 @@ public struct Secrets
             name: name + "Tests",
             dependencies:
             [Terminal.Mock.library.asDependency(), "ZFileMock", "SignPostMock"]
-            + ["Errors"]
-            + [product.asDependency()]
-            + quickNimble
+                + ["Errors"]
+                + [product.asDependency()]
+                + quickNimble
         )
 
         public struct Mock
@@ -293,9 +293,9 @@ public struct GitHooks
             name: name + "Tests",
             dependencies:
             [Terminal.Mock.library.asDependency(), "SignPostMock", "ZFileMock"]
-            + ["Errors"]
-            + [product.asDependency(), Terminal.library.asDependency()]
-            + quickNimble
+                + ["Errors"]
+                + [product.asDependency(), Terminal.library.asDependency()]
+                + quickNimble
         )
 
         public struct Mock
@@ -597,7 +597,7 @@ public struct SourceryWorker
     public static let tests = Target.testTarget(
         name: name + "Tests",
         dependencies:
-            [Terminal.Mock.library.asDependency(), "SignPostMock", "ZFileMock"]
+        [Terminal.Mock.library.asDependency(), "SignPostMock", "ZFileMock"]
             + ["Errors"]
             + [SourceryWorker.library.asDependency()]
             + quickNimble
@@ -637,7 +637,7 @@ public struct SwiftFormatWorker
     public static let target = Target.target(
         name: name,
         dependencies:
-            ["SwiftFormat"]
+        ["SwiftFormat"]
             +
             [Terminal.library.asDependency()]
     )
@@ -645,10 +645,10 @@ public struct SwiftFormatWorker
     public static let tests = Target.testTarget(
         name: name + "Tests",
         dependencies:
-            [
-                SwiftFormatWorker.library.asDependency(),
-                Terminal.library.asDependency()
-            ]
+        [
+            SwiftFormatWorker.library.asDependency(),
+            Terminal.library.asDependency(),
+        ]
             + quickNimble
     )
 
