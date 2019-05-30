@@ -30,7 +30,7 @@ secrets2.json
 /Sources/highway/.sourcery-Arguments.yml
 .gitsecret/keys/random_seed
 /Sources/highway/Sources/AutomateHighway/AuthKey_VV7NT37UVU.p8
-Carthage
+/Carthage
 /Sources/highway/.build
 /.build
 /HighwaySetup/.build
