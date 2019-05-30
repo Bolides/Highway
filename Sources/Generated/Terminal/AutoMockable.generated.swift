@@ -215,6 +215,47 @@ open class ArgumentsProtocolMock: ArgumentsProtocol
     public var underlyingDescription: String = "AutoMockable filled value"
 }
 
+// MARK: - CarthageProtocolMock
+
+open class CarthageProtocolMock: CarthageProtocol
+{
+    public init() {}
+
+    public static var queue: HighwayDispatchProtocol
+    {
+        get { return underlyingQueue }
+        set(value) { underlyingQueue = value }
+    }
+
+    public static var underlyingQueue: HighwayDispatchProtocol!
+
+    // MARK: - <attemptCarthageUpdateNoBuild> - parameters
+
+    public var attemptCarthageUpdateNoBuildInCallsCount = 0
+    public var attemptCarthageUpdateNoBuildInCalled: Bool
+    {
+        return attemptCarthageUpdateNoBuildInCallsCount > 0
+    }
+
+    public var attemptCarthageUpdateNoBuildInReceivedArguments: (folder: FolderProtocol, async: (@escaping Carthage.SyncOutput) -> Void)?
+
+    // MARK: - <attemptCarthageUpdateNoBuild> - closure mocks
+
+    public var attemptCarthageUpdateNoBuildInClosure: ((FolderProtocol, @escaping (@escaping Carthage.SyncOutput) -> Void) -> Void)?
+
+    // MARK: - <attemptCarthageUpdateNoBuild> - method mocked
+
+    open func attemptCarthageUpdateNoBuild(in folder: FolderProtocol, _ async: @escaping (@escaping Carthage.SyncOutput) -> Void)
+    {
+        attemptCarthageUpdateNoBuildInCallsCount += 1
+        attemptCarthageUpdateNoBuildInReceivedArguments = (folder: folder, async: async)
+
+        // <attemptCarthageUpdateNoBuild> - Void return mock implementation
+
+        attemptCarthageUpdateNoBuildInClosure?(folder, async)
+    }
+}
+
 // MARK: - DependencyProtocolMock
 
 open class DependencyProtocolMock: DependencyProtocol

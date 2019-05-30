@@ -47,6 +47,13 @@ import Foundation
 
  // sourcery:end
  // types.implementing.AutoGenerateProtocol inline for Arguments ✅
+ // types.implementing.AutoGenerateProtocol inline for Carthage ..
+ // sourcery:inline:Carthage.AutoGenerateProtocol
+ static var queue: HighwayDispatchProtocol { get }
+
+ func attemptCarthageUpdateNoBuild(in folder: FolderProtocol, _ async: @escaping (@escaping Carthage.SyncOutput) -> Void)
+ // sourcery:end
+ // types.implementing.AutoGenerateProtocol inline for Carthage ✅
  // types.implementing.AutoGenerateProtocol inline for Dependency ..
  // sourcery:inline:Dependency.AutoGenerateProtocol
  var name: String { get }

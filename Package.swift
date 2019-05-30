@@ -380,56 +380,6 @@ public struct Documentation
     }
 }
 
-// MARK: - Mainly internal use but you can use libraries in your lanes
-
-public struct CarthageWorker
-{
-    public static let name = "\(CarthageWorker.self)"
-
-    public static let library = Product.library(
-        name: name,
-        targets: [name]
-    )
-
-    public static let target = Target.target(
-        name: name,
-        dependencies: [
-            Terminal.library.asDependency(),
-            Highway.Library.product.asDependency(),
-        ]
-    )
-
-    public static let tests = Target.testTarget(
-        name: name + "Tests",
-        dependencies:
-        [library.asDependency()]
-            + quickNimble
-            + [
-                Highway.Library.Mock.product.asDependency(),
-                CarthageWorker.Mock.product.asDependency(),
-            ]
-    )
-
-    public struct Mock
-    {
-        public static let name = library.name + "Mock"
-
-        public static let product = Product.library(
-            name: library.name + "Mock",
-            targets: [name]
-        )
-
-        public static let target = Target.target(
-            name: name,
-            dependencies:
-            CarthageWorker.target.dependencies
-                + Terminal.target.dependencies
-                + [CarthageWorker.library.asDependency()],
-            path: "Sources/Generated/\(CarthageWorker.library.name)"
-        )
-    }
-}
-
 public struct HighwayDispatch
 {
     public static let name = "\(HighwayDispatch.self)"
@@ -748,7 +698,6 @@ public let package = Package(
         SourceryWorker.library,
         GitHooks.Library.product,
         SwiftFormatWorker.library,
-        CarthageWorker.library,
         HWPod.library,
 
         // MARK: - Library - Mocks
@@ -759,7 +708,6 @@ public let package = Package(
         SwiftFormatWorker.Mock.product,
         Terminal.Mock.library,
         GitHooks.Library.Mock.product,
-        CarthageWorker.Mock.product,
         HWPod.Mock.product,
     ],
     dependencies: external,
@@ -790,7 +738,6 @@ public let package = Package(
         SourceryWorker.target,
         GitHooks.Library.target,
         SwiftFormatWorker.target,
-        CarthageWorker.target,
 
         // MARK: - Mocks
 
@@ -802,7 +749,6 @@ public let package = Package(
         SwiftFormatWorker.Mock.target,
         Terminal.Mock.target,
         GitHooks.Library.Mock.target,
-        CarthageWorker.Mock.target,
         HWPod.Mock.target,
 
         // MARK: - Tests
@@ -815,7 +761,6 @@ public let package = Package(
         SourceryWorker.tests,
         SwiftFormatWorker.tests,
         GitHooks.Library.tests,
-        CarthageWorker.tests,
         HWPod.tests,
     ]
 )
