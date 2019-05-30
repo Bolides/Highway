@@ -595,9 +595,11 @@ public struct SwiftFormatWorker
     public static let tests = Target.testTarget(
         name: name + "Tests",
         dependencies:
-        [
+        ["ZFileMock", "ZFile", "SignPostMock"]
+        + [
             SwiftFormatWorker.library.asDependency(),
             Terminal.library.asDependency(),
+            HighwayDispatch.Mock.product.asDependency()
         ]
             + quickNimble
     )

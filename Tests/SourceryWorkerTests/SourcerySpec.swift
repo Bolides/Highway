@@ -126,16 +126,6 @@ class SourcerySpec: QuickSpec
                         }
                     }
 
-                    context("CarthageWorker")
-                    {
-                        beforeEach { setup(for: "CarthageWorker") }
-
-                        it("has imports for automockable")
-                        {
-                            expect(sut?.imports.first { $0.template == "AutoMockable" }?.names.map { $0.name }.sorted().joined(separator: ",")) == "CarthageWorker,Errors,Foundation,HighwayDispatch,HighwayLibrary,Result,SignPost,SourceryAutoProtocols,Terminal,ZFile"
-                        }
-                    }
-
                     context("GitHooksLibrary")
                     {
                         beforeEach { setup(for: "GitHooksLibrary") }
