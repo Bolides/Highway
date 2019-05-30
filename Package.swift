@@ -11,7 +11,7 @@ let external: [Package.Dependency] = [
 
     // MARK: - Filesystem
 
-    .package(url: "https://www.github.com/dooZdev/ZFile", "2.4.3" ..< "3.1.0"),
+    .package(url: "https://www.github.com/Bolides/ZFile", "2.4.3" ..< "3.1.0"),
 
     // MARK: - Sourcery
 
