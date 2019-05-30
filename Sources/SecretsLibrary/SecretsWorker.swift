@@ -216,14 +216,14 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
         signPost.message("\(pretty_function()) ...")
 
         let secretFilePaths = try secretsChangedSinceLastPush(in: folder)
-        
+
         guard secretFilePaths.count > 0 else
         {
             return ["\(pretty_function()) no secrets changed, skipping! ✅"]
         }
 
         signPost.message("secret files changed \n \(secretFilePaths.joined(separator: "\n"))")
-        
+
         do
         {
             let srcRoot: FolderProtocol = folder

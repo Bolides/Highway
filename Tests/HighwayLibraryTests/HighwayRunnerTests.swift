@@ -32,16 +32,16 @@ class HighwayRunnerSpec: QuickSpec
 
         var srcRoot: FolderProtocolMock!
         var secretWorker: SecretsWorkerProtocolMock!
-        
+
         describe("HighwayRunner")
         {
             beforeEach
             {
                 expect
                 {
-                    srcRoot = try  FolderProtocolMock()
+                    srcRoot = try FolderProtocolMock()
                     secretWorker = SecretsWorkerProtocolMock()
-                    
+
                     dispatchGroup = HWDispatchGroupProtocolMock()
 
                     package = PackageProtocolMock()
@@ -81,17 +81,19 @@ class HighwayRunnerSpec: QuickSpec
                 expect(sut).toNot(beNil())
             }
 
-            context("NO secrets to hide") {
-                
-                beforeEach {
+            context("NO secrets to hide")
+            {
+                beforeEach
+                {
                     secretWorker.secretsChangedSinceLastPushInReturnValue = []
                 }
-                
-                it("check is true") {
+
+                it("check is true")
+                {
                     expect { try sut?.checkIfSecretsShouldBeHidden(in: srcRoot) }.toNot(throwError())
                 }
             }
-            
+
             context("No throw on success")
             {
                 let successOutput = [

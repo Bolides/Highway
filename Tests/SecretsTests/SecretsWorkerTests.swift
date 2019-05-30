@@ -75,7 +75,8 @@ class SecretsWorkerSpec: QuickSpec
                         else if argument == "add" || argument == "commit"
                         {
                             return expectedGitOutput
-                        } else if argument == "-c"
+                        }
+                        else if argument == "-c"
                         {
                             return ["mock gpg -c success"]
                         }
@@ -111,7 +112,7 @@ class SecretsWorkerSpec: QuickSpec
                     {
                         let expectedEncryptedFile = try! FileProtocolMock()
                         expectedEncryptedFile.path = "Expected encrypted file"
-                        
+
                         let folder = try! FolderProtocolMock()
                         folder.makeFileSequenceReturnValue = try! File(path: #file).parentFolder().makeFileSequence()
                         folder.fileNamedReturnValue = expectedEncryptedFile
