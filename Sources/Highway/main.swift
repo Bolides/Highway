@@ -2,8 +2,8 @@
 
 import Errors
 import Foundation
-import Terminal
 import HighwayLibrary
+import Terminal
 
 do
 {
