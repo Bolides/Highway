@@ -299,9 +299,11 @@ public struct SecretsWorker: SecretsWorkerProtocol, AutoGenerateProtocol
                 """
             }
         }
-        
-        public var indirect: Error? {
-            switch self {
+
+        public var indirect: Error?
+        {
+            switch self
+            {
             case let .location(_, indirectError):
                 return indirectError
             default:
